@@ -18,7 +18,8 @@ public class Pickups implements Vehicle{
 
         Random r = new Random();
         cost = Math.round((min + (max - min) * r.nextDouble()) * 100)/ 100.0;
-
+        condition = Vehicle.getPossibleConditions().get(r.nextInt(3));
+        cleanliness = Vehicle.getPossibleCleanliness().get(r.nextInt(3));
     }
     @Override
     public void setName(String name) {
