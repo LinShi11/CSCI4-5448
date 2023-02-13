@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class PerformanceCar implements Vehicle{
     private String name;
     private double saleBonus;
@@ -7,6 +9,17 @@ public class PerformanceCar implements Vehicle{
     private double salePrice;
     private String condition;
     private String cleanliness;
+    private int min = 20000;
+    private int max = 40000;
+
+    public PerformanceCar(){
+        //https://stackoverflow.com/questions/3680637/generate-a-random-double-in-a-range
+        // https://www.geeksforgeeks.org/how-to-set-precision-for-double-values-in-java/
+
+        Random r = new Random();
+        cost = Math.round((min + (max - min) * r.nextDouble()) * 100)/ 100.0;
+
+    }
 
     @Override
     public void setName(String name) {
@@ -26,11 +39,6 @@ public class PerformanceCar implements Vehicle{
     @Override
     public void setWashBonus(double washBonus) {
         this.washBonus = washBonus;
-    }
-
-    @Override
-    public void setCost(double cost) {
-        this.cost = cost;
     }
 
     @Override

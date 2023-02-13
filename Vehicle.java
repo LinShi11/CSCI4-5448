@@ -8,7 +8,6 @@ public interface Vehicle {
     void setSaleBonus(double saleBonus);
     void setRepairBonus(double repairBonus);
     void setWashBonus(double washBonus);
-    void setCost(double cost);
     void setSalePrice(double salePrice);
     void setCondition(String condition);
     void setCleanliness(String cleanliness);
