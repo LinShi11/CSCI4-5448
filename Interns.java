@@ -7,6 +7,15 @@ public class Interns implements Staff {
     private String status;
     private int totalDaysWorked;
 
+    public Interns(String name){
+        setName(name);
+        this.totalDaysWorked = 0;
+        this.totalBonus = 0;
+        this.totalPay = 0;
+        this.dailyBonus = 0;
+        this.dailySalary = 0;
+    }
+
 
     @Override
     public void setName(String name) {

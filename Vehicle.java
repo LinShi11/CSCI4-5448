@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public interface Vehicle {
-    ArrayList<String> possibleConditions = new ArrayList<>(Arrays.asList("new", "used", "broken"));
-    ArrayList<String> possibleCleanliness = new ArrayList<>(Arrays.asList("sparkling", "clean", "dirty"));
+    final ArrayList<String> possibleConditions = new ArrayList<>(Arrays.asList("new", "used", "broken"));
+    final ArrayList<String> possibleCleanliness = new ArrayList<>(Arrays.asList("sparkling", "clean", "dirty"));
     void setName(String name);
     void setSaleBonus(double saleBonus);
     void setRepairBonus(double repairBonus);
