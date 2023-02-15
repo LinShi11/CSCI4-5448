@@ -2,8 +2,8 @@ public interface Staff {
     void setName(String name);
     void setDailySalary(int dailySalary);
     void setDailyBonus(int dailyBonus);
-    void setTotalPay(int totalPay);
-    void setTotalBonus(int totalBonus);
+    void setTotalPay();
+    void setTotalBonus();
     void setStatus(String status);
     void setTotalDaysWorked();
 

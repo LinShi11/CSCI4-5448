@@ -73,20 +73,26 @@ public class FNCD {
     }
 
     public void endDay(){
-        updateWorkDays();
-        quit();
+        dailyUpdate();
         noMoney();
+        quit();
     }
 
-    public void updateWorkDays(){
+    public void dailyUpdate(){
         for(Interns staff: internList){
             staff.setTotalDaysWorked();
+            staff.setTotalPay();
+            staff.setTotalBonus();
         }
         for(Mechanics staff: mechanicsList){
             staff.setTotalDaysWorked();
+            staff.setTotalPay();
+            staff.setTotalBonus();
         }
         for(Salesperson staff: salespeopleList){
             staff.setTotalDaysWorked();
+            staff.setTotalPay();
+            staff.setTotalBonus();
         }
     }
 

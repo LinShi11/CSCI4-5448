@@ -42,13 +42,13 @@ public class Mechanics implements Staff {
     }
 
     @Override
-    public void setTotalPay(int totalPay) {
-        this.totalPay = totalPay;
+    public void setTotalPay() {
+        this.totalPay+= this.dailySalary;
     }
 
     @Override
-    public void setTotalBonus(int totalBonus) {
-        this.totalBonus = totalBonus;
+    public void setTotalBonus() {
+        this.totalBonus+= this.dailyBonus;
     }
 
     @Override
