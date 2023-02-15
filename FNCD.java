@@ -46,7 +46,12 @@ public class FNCD {
     }
     public void startDay(){
         System.out.println("Opening... (Current budget $" + this.budget + ")");
-        System.out.println("We have " + numOfBuyer() + " Buyers");
+        int buyer = numOfBuyer();
+        System.out.println("We have " + buyer + " Buyers");
+        for(int i =0; i < buyer; i++){
+            Buyer newBuyer = new Buyer();
+            System.out.println("New buyer " + (i+1) + " " + newBuyer.getBuyingChance() + " " + newBuyer.getVehicleType() + " with a probability of " + newBuyer.getProbability(newBuyer.getBuyingChance()));
+        }
         hire();
         noMoney();
     }
