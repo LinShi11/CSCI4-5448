@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 
+
 public interface Vehicle {
     final ArrayList<String> possibleConditions = new ArrayList<>(Arrays.asList("new", "used", "broken"));
     final ArrayList<String> possibleCleanliness = new ArrayList<>(Arrays.asList("sparkling", "clean", "dirty"));

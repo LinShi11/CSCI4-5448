@@ -1,10 +1,8 @@
 import java.util.*;
-
+import java.util.Random;
 public class Buyer {
     private String buyingChance;
-
     private String vehicleType;
-
     final ArrayList<String> buying = new ArrayList<>(Arrays.asList("just looking", "wants one", "needs one"));
     final Map<String, Integer> probability = Map.of("just looking", 10, "wants one", 40, "needs one", 70);
 
@@ -36,3 +34,4 @@ public class Buyer {
         return probability.get(desire);
     }
 }
+
