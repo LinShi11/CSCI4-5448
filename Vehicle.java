@@ -9,7 +9,6 @@ public interface Vehicle {
     void setSaleBonus(int saleBonus);
     void setRepairBonus(int repairBonus);
     void setWashBonus(int washBonus);
-    void setSalePrice(int salePrice);
     void setCondition(String condition);
     void setCleanliness(String cleanliness);
     void setStatus(String status);

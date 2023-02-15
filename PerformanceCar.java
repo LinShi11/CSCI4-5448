@@ -66,10 +66,6 @@ public class PerformanceCar implements Vehicle{
         this.washBonus = washBonus;
     }
 
-    @Override
-    public void setSalePrice(int salePrice) {
-        this.salePrice = salePrice;
-    }
 
     @Override
     public void setCondition(String condition) {
@@ -113,6 +109,13 @@ public class PerformanceCar implements Vehicle{
 
     @Override
     public int getSalePrice() {
+        this.salePrice = this.cost * 2;
+        if(getCondition().equals("used")){
+            this.salePrice *= 0.8;
+        }
+        else if (getCondition().equals("broken")){
+            this.salePrice *= 0.5;
+        }
         return this.salePrice;
     }
 
