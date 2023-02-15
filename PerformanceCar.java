@@ -32,7 +32,7 @@ public class PerformanceCar implements Vehicle{
         } else if (temp < 40){
             cleanliness = Vehicle.getPossibleCleanliness().get(1);
         } else{
-            cleanliness = Vehicle.getPossibleConditions().get(2);
+            cleanliness = Vehicle.getPossibleCleanliness().get(2);
         }
         status = "in stock";
         setBrand();
