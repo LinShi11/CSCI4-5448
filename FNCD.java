@@ -134,7 +134,7 @@ public class FNCD {
     }
 
     public int numOfBuyer(){
-        int num = 0;
+        int num;
         Random random = new Random();
         if(this.date % 7 == 5 || this.date % 7 == 6){
             System.out.println("it is the weekend (Friday/Saturday)");

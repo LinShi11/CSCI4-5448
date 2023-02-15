@@ -11,7 +11,7 @@ public class Mechanics implements Staff {
         setName(name);
         this.totalBonus = 0;
         this.dailyBonus = 0;
-        this.dailySalary = 0;
+        this.dailySalary = 240;
         this.totalPay = 0;
         this.status = "Working";
         this.totalDaysWorked = 0;
