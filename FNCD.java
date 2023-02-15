@@ -17,7 +17,7 @@ public class FNCD {
     public FNCD(){
         this.budget = 500000;
         this.simTime = 30;
-        this.date = 0;
+        this.date = 1;
         this.internList = new ArrayList<>();
         this.mechanicsList = new ArrayList<>();
         this.salespeopleList = new ArrayList<>();
@@ -30,12 +30,16 @@ public class FNCD {
         }
     }
     public void simulation(){
-        while(date < simTime){
-            startDay();
-            System.out.println(date);
-            endDay();
-            printStaff();
-            date ++;
+        while(date <= simTime){
+            if(date % 7 != 0) {
+                startDay();
+                System.out.println(date);
+                endDay();
+                printStaff();
+            } else{
+                System.out.println("We are closed on Sunday");
+            }
+            date++;
         }
 
     }
