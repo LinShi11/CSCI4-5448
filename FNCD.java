@@ -177,17 +177,18 @@ public class FNCD {
     }
 
     public void printAllStaff(){
+        System.out.println(String.format("%20s %20s %20s %20s %15s", "Name", "Total Days Worked", "Total Normal Pay", "Total Bonus Pay", "Status"));
         for (Staff emp: employee){
-            System.out.println(String.format("%20s %10d %20d %20d %15s", emp.getName(), emp.getTotalDaysWorked(), emp.getTotalPay(), emp.getTotalBonus(), emp.getStatus()));
+            System.out.println(String.format("%20s %20s %20s %20s %15s", emp.getName(), emp.getTotalDaysWorked()+ " days", "$" + emp.getTotalPay(), "$" + emp.getTotalBonus(), emp.getStatus()));
         }
         for (Interns emp: internList){
-            System.out.println(String.format("%20s %10d %20d %20d %15s", emp.getName(), emp.getTotalDaysWorked(), emp.getTotalPay(), emp.getTotalBonus(), emp.getStatus()));
+            System.out.println(String.format("%20s %20s %20s %20s %15s", emp.getName(), emp.getTotalDaysWorked() + " days", "$" + emp.getTotalPay(), "$" + emp.getTotalBonus(), emp.getStatus()));
         }
         for (Mechanics emp: mechanicsList){
-            System.out.println(String.format("%20s %10d %20d %20d %15s", emp.getName(), emp.getTotalDaysWorked(), emp.getTotalPay(), emp.getTotalBonus(), emp.getStatus()));
+            System.out.println(String.format("%20s %20s %20s %20s %15s", emp.getName(), emp.getTotalDaysWorked() + " days", "$" + emp.getTotalPay(), "$" + emp.getTotalBonus(), emp.getStatus()));
         }
         for (Salesperson emp: salespeopleList){
-            System.out.println(String.format("%20s %10d %20d %20d %15s", emp.getName(), emp.getTotalDaysWorked(), emp.getTotalPay(), emp.getTotalBonus(), emp.getStatus()));
+            System.out.println(String.format("%20s %20s %20s %20s %15s", emp.getName(), emp.getTotalDaysWorked() + " days", "$" + emp.getTotalPay(), "$" + emp.getTotalBonus(), emp.getStatus()));
         }
     }
 
