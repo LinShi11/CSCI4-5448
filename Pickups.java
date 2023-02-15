@@ -23,10 +23,17 @@ public class Pickups implements Vehicle{
         //https://stackoverflow.com/questions/3680637/generate-a-random-double-in-a-range
         // https://www.geeksforgeeks.org/how-to-set-precision-for-double-values-in-java/
 
-        Random r = new Random();
-        cost = r.nextInt(max - min) + min;
-        condition = Vehicle.getPossibleConditions().get(r.nextInt(3));
-        cleanliness = Vehicle.getPossibleCleanliness().get(r.nextInt(3));
+        Random random = new Random();
+        cost = random.nextInt(max - min) + min;
+        condition = Vehicle.getPossibleConditions().get(random.nextInt(3));
+        int temp = random.nextInt(100);
+        if(temp < 5){
+            cleanliness = Vehicle.getPossibleCleanliness().get(0);
+        } else if (temp < 40){
+            cleanliness = Vehicle.getPossibleCleanliness().get(1);
+        } else{
+            cleanliness = Vehicle.getPossibleConditions().get(2);
+        }
         status = "in stock";
         setBrand();
         setName(id);
