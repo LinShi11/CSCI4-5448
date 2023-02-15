@@ -47,6 +47,7 @@ public class FNCD {
             }
             date++;
         }
+        printAllStaff();
 
     }
     public void startDay(){
@@ -98,6 +99,7 @@ public class FNCD {
 
             System.out.println("Intern " + employee.get(employee.size()-1).getName() + " has quit");
             System.out.println(employee.get(employee.size()-1).getName() + " has worked " + employee.get(employee.size()-1).getTotalDaysWorked());
+            employee.get(employee.size()-1).setStatus("quit");
         }
         if(random.nextInt(10) == 0){
             int temp = random.nextInt(3);
@@ -105,6 +107,7 @@ public class FNCD {
             mechanicsList.remove(temp);
             System.out.println("Mechanics "+ employee.get(employee.size()-1).getName() + " has quit");
             System.out.println(employee.get(employee.size()-1).getName() + " has worked " + employee.get(employee.size()-1).getTotalDaysWorked());
+            employee.get(employee.size()-1).setStatus("quit");
 
             Interns steppedUp = internList.get(0);
             String name = steppedUp.getName().split("_")[1];
@@ -122,6 +125,7 @@ public class FNCD {
             salespeopleList.remove(temp);
             System.out.println("Salesperson " + employee.get(employee.size()-1).getName() + " has quit");
             System.out.println(employee.get(employee.size()-1).getName() + " has worked " + employee.get(employee.size()-1).getTotalDaysWorked());
+            employee.get(employee.size()-1).setStatus("quit");
 
             Interns steppedUp = internList.get(0);
             String name = steppedUp.getName().split("_")[1];
@@ -170,6 +174,21 @@ public class FNCD {
         }
         return num;
 
+    }
+
+    public void printAllStaff(){
+        for (Staff emp: employee){
+            System.out.println(String.format("%20s %10d %20d %20d %15s", emp.getName(), emp.getTotalDaysWorked(), emp.getTotalPay(), emp.getTotalBonus(), emp.getStatus()));
+        }
+        for (Interns emp: internList){
+            System.out.println(String.format("%20s %10d %20d %20d %15s", emp.getName(), emp.getTotalDaysWorked(), emp.getTotalPay(), emp.getTotalBonus(), emp.getStatus()));
+        }
+        for (Mechanics emp: mechanicsList){
+            System.out.println(String.format("%20s %10d %20d %20d %15s", emp.getName(), emp.getTotalDaysWorked(), emp.getTotalPay(), emp.getTotalBonus(), emp.getStatus()));
+        }
+        for (Salesperson emp: salespeopleList){
+            System.out.println(String.format("%20s %10d %20d %20d %15s", emp.getName(), emp.getTotalDaysWorked(), emp.getTotalPay(), emp.getTotalBonus(), emp.getStatus()));
+        }
     }
 
 }
