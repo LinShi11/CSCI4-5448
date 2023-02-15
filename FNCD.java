@@ -18,9 +18,13 @@ public class FNCD {
         this.simTime = 30;
         this.date = 1;
         this.internList = new ArrayList<>();
+        this.mechanicsList = new ArrayList<>();
+        this.salespeopleList = new ArrayList<>();
         for(int i = 0; i < 3; i++){
-            Interns newIntern = new Interns(Integer.toString(i));
-            internList.add(newIntern);
+
+            internList.add(new Interns("I" + i));
+            mechanicsList.add(new Mechanics("m"+ i));
+            salespeopleList.add(new Salesperson("s" + i));
         }
         for(int j = 0; j < 3; j ++){
             System.out.println(internList.get(j).getName());

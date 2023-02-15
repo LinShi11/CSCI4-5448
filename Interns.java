@@ -9,11 +9,12 @@ public class Interns implements Staff {
 
     public Interns(String name){
         setName(name);
-        this.totalDaysWorked = 0;
         this.totalBonus = 0;
-        this.totalPay = 0;
         this.dailyBonus = 0;
         this.dailySalary = 0;
+        this.totalPay = 0;
+        this.status = "Working";
+        this.totalDaysWorked = 0;
     }
 
 
