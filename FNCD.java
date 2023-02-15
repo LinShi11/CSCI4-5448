@@ -46,6 +46,7 @@ public class FNCD {
     }
     public void startDay(){
         System.out.println("Opening... (Current budget $" + this.budget + ")");
+        System.out.println("We have " + numOfBuyer() + " Buyers");
         hire();
         noMoney();
     }
@@ -105,16 +106,16 @@ public class FNCD {
     }
 
     private void printStaff(){
-        for(int i = 0; i < internList.size(); i++){
-            System.out.print(internList.get(i).getName());
+        for (Interns interns : internList) {
+            System.out.print(interns.getName());
         }
         System.out.println();
-        for(int i = 0; i < salespeopleList.size(); i++){
-            System.out.print(salespeopleList.get(i).getName());
+        for (Salesperson salesperson : salespeopleList) {
+            System.out.print(salesperson.getName());
         }
         System.out.println();
-        for(int i =0; i < mechanicsList.size(); i++){
-            System.out.print(mechanicsList.get(i).getName());
+        for (Mechanics mechanics : mechanicsList) {
+            System.out.print(mechanics.getName());
         }
         System.out.println();
     }
@@ -128,7 +129,18 @@ public class FNCD {
     }
 
     public int numOfBuyer(){
-        return 0;
+        int num = 0;
+        Random random = new Random();
+        if(this.date % 7 == 5 || this.date % 7 == 6){
+            System.out.println("it is the weekend (Friday/Saturday)");
+            num = random.nextInt(9-2) + 2;
+        }
+        else{
+            System.out.println("It is the weekdays");
+            num = random.nextInt(6);
+        }
+        return num;
+
     }
 
 }
