@@ -1,11 +1,16 @@
+import java.util.Random;
 public class Buyer {
     private String buyingChance;
-
     private String vehicleType;
 
     public Buyer(){
-
+      
     }
+
+    
+
+    
+    
 
     public void setBuyingChance(String buyingChance) {
         this.buyingChance = buyingChance;
@@ -23,3 +28,4 @@ public class Buyer {
         return vehicleType;
     }
 }
+

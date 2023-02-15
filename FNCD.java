@@ -52,6 +52,7 @@ public class FNCD {
     }
 
     public int numOfBuyer(){
+        
         return 0;
     }
 
