@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 public class PerformanceCar implements Vehicle{
@@ -9,10 +11,15 @@ public class PerformanceCar implements Vehicle{
     private int salePrice;
     private String condition;
     private String cleanliness;
+    private String brand;
+    private String status;
     private int min = 20000;
     private int max = 40000;
 
-    public PerformanceCar(){
+
+    final ArrayList<String> brands = new ArrayList<>(Arrays.asList("Ferrari", "Lamborghini", "Aston Martin", "McLaren", "Maserati", "Porsche", "Mercedes-Benz", "BMW", "Lexus", "Audi", "Jaguar", "Acura", "Alfa Romeo"));
+
+    public PerformanceCar(String id){
         //https://stackoverflow.com/questions/3680637/generate-a-random-double-in-a-range
         // https://www.geeksforgeeks.org/how-to-set-precision-for-double-values-in-java/
 
@@ -20,11 +27,21 @@ public class PerformanceCar implements Vehicle{
         cost = r.nextInt(max - min) + min;
         condition = Vehicle.getPossibleConditions().get(r.nextInt(3));
         cleanliness = Vehicle.getPossibleCleanliness().get(r.nextInt(3));
+        status = "in stock";
+        setBrand();
+        setName(id);
+        printAction();
     }
 
     @Override
     public void setName(String name) {
-        this.name = name;
+        this.name = this.getBrand().substring(0,3).toUpperCase() + "_" + name;
+    }
+
+    @Override
+    public void setBrand(){
+        Random random = new Random();
+        this.brand = brands.get(random.nextInt(brands.size()));
     }
 
     @Override
@@ -56,12 +73,17 @@ public class PerformanceCar implements Vehicle{
     public void setCleanliness(String cleanliness) {
         this.cleanliness = cleanliness;
     }
-
+    @Override
+    public void setStatus(String status){
+        this.status = status;
+    }
     @Override
     public String getName() {
         return this.name;
     }
 
+    @Override
+    public String getBrand(){ return this.brand; }
     @Override
     public int getSaleBonus() {
         return this.saleBonus;
@@ -95,5 +117,13 @@ public class PerformanceCar implements Vehicle{
     @Override
     public String getCleanliness() {
         return this.cleanliness;
+    }
+    @Override
+    public String getStatus(){
+        return this.status;
+    }
+    @Override
+    public void printAction(){
+        System.out.println("Purchased a " + getCondition() + ", " + getCleanliness() + " Performance car " + getBrand() + ", (" + getName() + ") for $" + getCost());
     }
 }

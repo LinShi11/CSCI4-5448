@@ -3,13 +3,20 @@ import java.util.Random;
 
 public class FNCD {
     final int maxSize = 3;
+
+    final int maxInventory = 4;
     int budget;
     int dailySales;
     int date;
     int simTime;
     int id;
+    int inventoryId;
     ArrayList<Vehicle> inventory;
+    ArrayList<PerformanceCar> performanceCarList;
+    ArrayList<Cars> carsList;
+    ArrayList<Pickups> pickupsList;
     ArrayList<Staff> employee;
+
 
     ArrayList<Interns> internList;
     ArrayList<Mechanics> mechanicsList;
@@ -20,10 +27,15 @@ public class FNCD {
         this.simTime = 30;
         this.date = 1;
         this.id = 1;
+        this.inventoryId = 1;
         this.internList = new ArrayList<>();
         this.mechanicsList = new ArrayList<>();
         this.salespeopleList = new ArrayList<>();
         this.employee = new ArrayList<>();
+        this.performanceCarList = new ArrayList<>();
+        this.carsList = new ArrayList<>();
+        this.pickupsList = new ArrayList<>();
+        this.inventory = new ArrayList<>();
         for(int i = 0; i < maxSize; i++){
             internList.add(new Interns("Intern_" + updateId()));
             mechanicsList.add(new Mechanics("Mechanics_"+ updateId()));
@@ -33,6 +45,28 @@ public class FNCD {
 
     public String updateId(){
         return String.format("%03d", id++);
+    }
+
+    public String updateInventoryId(){
+        return String.format("%05d", inventoryId++);
+    }
+
+    public void setInventory(){
+        int tempLength = performanceCarList.size();
+        for(int i = 0; i < maxInventory - tempLength; i++ ){
+            performanceCarList.add(new PerformanceCar(updateInventoryId()));
+            this.budget -= performanceCarList.get(performanceCarList.size()-1).getCost();
+        }
+        tempLength = carsList.size();
+        for(int i = 0; i < maxInventory - tempLength; i++){
+            carsList.add(new Cars(updateInventoryId()));
+            this.budget -= carsList.get(carsList.size()-1).getCost();
+        }
+        tempLength = pickupsList.size();
+        for(int i = 0; i < maxInventory - tempLength; i++){
+            pickupsList.add(new Pickups(updateInventoryId()));
+            this.budget -= pickupsList.get(pickupsList.size()-1).getCost();
+        }
     }
     public void simulation(){
         while(date <= simTime){
@@ -48,6 +82,7 @@ public class FNCD {
             date++;
         }
         printAllStaff();
+        printInventory();
 
     }
     public void startDay(){
@@ -59,6 +94,7 @@ public class FNCD {
             System.out.println("New buyer " + (i+1) + " " + newBuyer.getBuyingChance() + " " + newBuyer.getVehicleType() + " with a probability of " + newBuyer.getProbability(newBuyer.getBuyingChance()));
         }
         hire();
+        setInventory();
         noMoney();
     }
 
@@ -195,6 +231,19 @@ public class FNCD {
         }
         for (Salesperson emp: salespeopleList){
             System.out.println(String.format("%20s %20s %20s %20s %15s", emp.getName(), emp.getTotalDaysWorked() + " days", "$" + emp.getTotalPay(), "$" + emp.getTotalBonus(), emp.getStatus()));
+        }
+    }
+
+    public void printInventory(){
+        System.out.println(String.format("%20s %20s %20s %20s %20s %20s %20s", "Name", "Brand", "Cost", "Sale Price", "Condition", "Cleanliness", "Status"));
+        for(PerformanceCar car: performanceCarList){
+            System.out.println(String.format("%20s %20s %20s %20s %20s %20s %20s", car.getName(), car.getBrand(), car.getCost(), car.getSalePrice(), car.getCondition(), car.getCleanliness(), car.getStatus()));
+        }
+        for(Cars car: carsList){
+            System.out.println(String.format("%20s %20s %20s %20s %20s %20s %20s", car.getName(), car.getBrand(), car.getCost(), car.getSalePrice(), car.getCondition(), car.getCleanliness(), car.getStatus()));
+        }
+        for(Pickups car: pickupsList){
+            System.out.println(String.format("%20s %20s %20s %20s %20s %20s %20s", car.getName(), car.getBrand(), car.getCost(), car.getSalePrice(), car.getCondition(), car.getCleanliness(), car.getStatus()));
         }
     }
 

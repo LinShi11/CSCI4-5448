@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 public class Cars implements Vehicle{
@@ -10,10 +12,14 @@ public class Cars implements Vehicle{
     private String condition;
     private String cleanliness;
 
+    private String brand;
+    private String status;
+
     private int min = 10000;
     private int max = 20000;
+    final ArrayList<String> brands = new ArrayList<>(Arrays.asList("Honda", "Toyota", "Mazda", "Hyundai", "Kia", "Nissan", "Subaru", "Volkswagen"));
 
-    public Cars(){
+    public Cars(String id){
         //https://stackoverflow.com/questions/3680637/generate-a-random-double-in-a-range
         // https://www.geeksforgeeks.org/how-to-set-precision-for-double-values-in-java/
 
@@ -21,11 +27,19 @@ public class Cars implements Vehicle{
         cost = r.nextInt(max - min) + min;
         condition = Vehicle.getPossibleConditions().get(r.nextInt(3));
         cleanliness = Vehicle.getPossibleCleanliness().get(r.nextInt(3));
-
+        status = "in stock";
+        setBrand();
+        setName(id);
+        printAction();
     }
     @Override
     public void setName(String name) {
-        this.name = name;
+        this.name = this.getBrand().substring(0,3).toUpperCase() + "_" + name;
+    }
+
+    public void setBrand(){
+        Random random = new Random();
+        this.brand = brands.get(random.nextInt(brands.size()));
     }
 
     @Override
@@ -57,10 +71,18 @@ public class Cars implements Vehicle{
     public void setCleanliness(String cleanliness) {
         this.cleanliness = cleanliness;
     }
-
+    @Override
+    public void setStatus(String status){
+        this.status = status;
+    }
     @Override
     public String getName() {
         return this.name;
+    }
+
+    @Override
+    public String getBrand() {
+        return brand;
     }
 
     @Override
@@ -96,5 +118,13 @@ public class Cars implements Vehicle{
     @Override
     public String getCleanliness() {
         return this.cleanliness;
+    }
+    @Override
+    public String getStatus(){
+        return this.status;
+    }
+    @Override
+    public void printAction(){
+        System.out.println("Purchased a " + getCondition() + ", " + getCleanliness() + " Car " + getBrand() + ", (" + getName() + ") for $" + getCost());
     }
 }
