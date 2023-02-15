@@ -41,6 +41,7 @@ public class FNCD {
     }
     public void startDay(){
         hire();
+        noMoney();
     }
 
     public void hire(){
@@ -55,6 +56,7 @@ public class FNCD {
 
     public void endDay(){
         quit();
+        noMoney();
     }
 
     public void quit(){
@@ -112,6 +114,10 @@ public class FNCD {
     }
 
     public void noMoney(){
+        if(this.budget <= 0){
+            this.budget += 250000;
+            System.out.println("You ran out of money, so you borrowed $250,000 from the bank");
+        }
 
     }
 
