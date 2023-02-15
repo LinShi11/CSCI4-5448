@@ -57,8 +57,8 @@ public class Mechanics implements Staff {
     }
 
     @Override
-    public void setTotalDaysWorked(int days) {
-        this.totalDaysWorked = days;
+    public void setTotalDaysWorked() {
+        this.totalDaysWorked++;
     }
 
     @Override

@@ -5,7 +5,7 @@ public interface Staff {
     void setTotalPay(int totalPay);
     void setTotalBonus(int totalBonus);
     void setStatus(String status);
-    void setTotalDaysWorked(int days);
+    void setTotalDaysWorked();
 
     String getName();
     int getDailySalary();

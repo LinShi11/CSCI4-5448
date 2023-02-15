@@ -7,6 +7,7 @@ public class FNCD {
     int dailySales;
     int date;
     int simTime;
+    int id;
     ArrayList<Vehicle> inventory;
     ArrayList<Staff> employee;
 
@@ -18,16 +19,20 @@ public class FNCD {
         this.budget = 500000;
         this.simTime = 30;
         this.date = 1;
+        this.id = 1;
         this.internList = new ArrayList<>();
         this.mechanicsList = new ArrayList<>();
         this.salespeopleList = new ArrayList<>();
         this.employee = new ArrayList<>();
         for(int i = 0; i < maxSize; i++){
-
-            internList.add(new Interns("I" + i));
-            mechanicsList.add(new Mechanics("m"+ i));
-            salespeopleList.add(new Salesperson("s" + i));
+            internList.add(new Interns("Intern_" + updateId()));
+            mechanicsList.add(new Mechanics("Mechanics_"+ updateId()));
+            salespeopleList.add(new Salesperson("Salesperson_" + updateId()));
         }
+    }
+
+    public String updateId(){
+        return String.format("%03d", id++);
     }
     public void simulation(){
         while(date <= simTime){
@@ -60,15 +65,28 @@ public class FNCD {
         if(internList.size() != 3){
             int tempLength = internList.size();
             for(int i = 0; i < maxSize-tempLength; i++){
-                internList.add(new Interns("I" + i));
-                System.out.println("hired new intern I" + i);
+                internList.add(new Interns("Intern_" + updateId()));
+                System.out.println("hired new intern " + internList.get(internList.size()-1).getName());
             }
         }
     }
 
     public void endDay(){
+        updateWorkDays();
         quit();
         noMoney();
+    }
+
+    public void updateWorkDays(){
+        for(Interns staff: internList){
+            staff.setTotalDaysWorked();
+        }
+        for(Mechanics staff: mechanicsList){
+            staff.setTotalDaysWorked();
+        }
+        for(Salesperson staff: salespeopleList){
+            staff.setTotalDaysWorked();
+        }
     }
 
     public void quit(){
@@ -79,19 +97,22 @@ public class FNCD {
             internList.remove(temp);
 
             System.out.println("Intern " + employee.get(employee.size()-1).getName() + " has quit");
+            System.out.println(employee.get(employee.size()-1).getName() + " has worked " + employee.get(employee.size()-1).getTotalDaysWorked());
         }
         if(random.nextInt(10) == 0){
             int temp = random.nextInt(3);
             employee.add(mechanicsList.get(temp));
             mechanicsList.remove(temp);
             System.out.println("Mechanics "+ employee.get(employee.size()-1).getName() + " has quit");
+            System.out.println(employee.get(employee.size()-1).getName() + " has worked " + employee.get(employee.size()-1).getTotalDaysWorked());
 
-            Interns stepup = internList.get(0);
-            Mechanics newMechanics = new Mechanics(stepup.getName(), stepup.getTotalDaysWorked());
+            Interns steppedUp = internList.get(0);
+            String name = steppedUp.getName().split("_")[1];
+            Mechanics newMechanics = new Mechanics("Mechanics_"+name, steppedUp.getTotalDaysWorked());
             mechanicsList.add(newMechanics);
             internList.remove(0);
 
-            System.out.println("Intern " + stepup.getName() + " has stepped up and took the mechanics job");
+            System.out.println("Intern " + steppedUp.getName() + " has stepped up and took the mechanics job");
 
 
         }
@@ -100,27 +121,30 @@ public class FNCD {
             employee.add(salespeopleList.get(temp));
             salespeopleList.remove(temp);
             System.out.println("Salesperson " + employee.get(employee.size()-1).getName() + " has quit");
+            System.out.println(employee.get(employee.size()-1).getName() + " has worked " + employee.get(employee.size()-1).getTotalDaysWorked());
 
-            Interns steppup = internList.get(0);
-            Salesperson newSalesperson = new Salesperson(steppup.getName(), steppup.getTotalDaysWorked());
+            Interns steppedUp = internList.get(0);
+            String name = steppedUp.getName().split("_")[1];
+            Salesperson newSalesperson = new Salesperson("Salesperson_"+name, steppedUp.getTotalDaysWorked());
             salespeopleList.add(newSalesperson);
             internList.remove(0);
 
-            System.out.println("Intern " + steppup.getName() + " has stepped up and took the salesperson job");
+            System.out.println("Intern " + steppedUp.getName() + " has stepped up and took the salesperson job");
+
         }
     }
 
     private void printStaff(){
         for (Interns interns : internList) {
-            System.out.print(interns.getName());
+            System.out.print(interns.getName() + " ");
         }
         System.out.println();
         for (Salesperson salesperson : salespeopleList) {
-            System.out.print(salesperson.getName());
+            System.out.print(salesperson.getName() + " ");
         }
         System.out.println();
         for (Mechanics mechanics : mechanicsList) {
-            System.out.print(mechanics.getName());
+            System.out.print(mechanics.getName() + " ");
         }
         System.out.println();
     }
