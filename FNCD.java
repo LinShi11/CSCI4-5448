@@ -3,8 +3,8 @@ import java.util.Random;
 
 public class FNCD {
     final int maxSize = 3;
-    double budget;
-    double dailySales;
+    int budget;
+    int dailySales;
     int date;
     int simTime;
     ArrayList<Vehicle> inventory;
@@ -32,6 +32,7 @@ public class FNCD {
     public void simulation(){
         while(date <= simTime){
             if(date % 7 != 0) {
+                System.out.println("FNCD Day " + this.date);
                 startDay();
                 System.out.println(date);
                 endDay();
@@ -44,6 +45,7 @@ public class FNCD {
 
     }
     public void startDay(){
+        System.out.println("Opening... (Current budget $" + this.budget + ")");
         hire();
         noMoney();
     }

@@ -1,17 +1,17 @@
 public interface Staff {
     void setName(String name);
-    void setDailySalary(double dailySalary);
-    void setDailyBonus(double dailyBonus);
-    void setTotalPay(double totalPay);
-    void setTotalBonus(double totalBonus);
+    void setDailySalary(int dailySalary);
+    void setDailyBonus(int dailyBonus);
+    void setTotalPay(int totalPay);
+    void setTotalBonus(int totalBonus);
     void setStatus(String status);
     void setTotalDaysWorked(int days);
 
     String getName();
-    double getDailySalary();
-    double getDailyBonus();
-    double getTotalPay();
-    double getTotalBonus();
+    int getDailySalary();
+    int getDailyBonus();
+    int getTotalPay();
+    int getTotalBonus();
     String getStatus();
     int getTotalDaysWorked();
 

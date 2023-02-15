@@ -1,9 +1,9 @@
 public class Mechanics implements Staff {
     private String name;
-    private double dailySalary;
-    private double dailyBonus;
-    private double totalPay;
-    private double totalBonus;
+    private int dailySalary;
+    private int dailyBonus;
+    private int totalPay;
+    private int totalBonus;
     private String status;
     private int totalDaysWorked;
 
@@ -32,22 +32,22 @@ public class Mechanics implements Staff {
     }
 
     @Override
-    public void setDailySalary(double dailySalary) {
+    public void setDailySalary(int dailySalary) {
         this.dailySalary = dailySalary;
     }
 
     @Override
-    public void setDailyBonus(double dailyBonus) {
+    public void setDailyBonus(int dailyBonus) {
         this.dailyBonus = dailyBonus;
     }
 
     @Override
-    public void setTotalPay(double totalPay) {
+    public void setTotalPay(int totalPay) {
         this.totalPay = totalPay;
     }
 
     @Override
-    public void setTotalBonus(double totalBonus) {
+    public void setTotalBonus(int totalBonus) {
         this.totalBonus = totalBonus;
     }
 
@@ -67,22 +67,22 @@ public class Mechanics implements Staff {
     }
 
     @Override
-    public double getDailySalary() {
+    public int getDailySalary() {
         return this.dailySalary;
     }
 
     @Override
-    public double getDailyBonus() {
+    public int getDailyBonus() {
         return this.dailyBonus;
     }
 
     @Override
-    public double getTotalPay() {
+    public int getTotalPay() {
         return this.totalPay;
     }
 
     @Override
-    public double getTotalBonus() {
+    public int getTotalBonus() {
         return this.totalBonus;
     }
 

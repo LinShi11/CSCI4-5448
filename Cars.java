@@ -2,11 +2,11 @@ import java.util.Random;
 
 public class Cars implements Vehicle{
     private String name;
-    private double saleBonus;
-    private double repairBonus;
-    private double washBonus;
-    private double cost;
-    private double salePrice;
+    private int saleBonus;
+    private int repairBonus;
+    private int washBonus;
+    private int cost;
+    private int salePrice;
     private String condition;
     private String cleanliness;
 
@@ -18,7 +18,7 @@ public class Cars implements Vehicle{
         // https://www.geeksforgeeks.org/how-to-set-precision-for-double-values-in-java/
 
         Random r = new Random();
-        cost = Math.round((min + (max - min) * r.nextDouble()) * 100)/ 100.0;
+        cost = r.nextInt(max - min) + min;
         condition = Vehicle.getPossibleConditions().get(r.nextInt(3));
         cleanliness = Vehicle.getPossibleCleanliness().get(r.nextInt(3));
 
@@ -29,22 +29,22 @@ public class Cars implements Vehicle{
     }
 
     @Override
-    public void setSaleBonus(double saleBonus) {
+    public void setSaleBonus(int saleBonus) {
         this.saleBonus = saleBonus;
     }
 
     @Override
-    public void setRepairBonus(double repairBonus) {
+    public void setRepairBonus(int repairBonus) {
         this.repairBonus = repairBonus;
     }
 
     @Override
-    public void setWashBonus(double washBonus) {
+    public void setWashBonus(int washBonus) {
         this.washBonus = washBonus;
     }
 
     @Override
-    public void setSalePrice(double salePrice) {
+    public void setSalePrice(int salePrice) {
         this.salePrice = salePrice;
     }
 
@@ -64,27 +64,27 @@ public class Cars implements Vehicle{
     }
 
     @Override
-    public double getSaleBonus() {
+    public int getSaleBonus() {
         return this.saleBonus;
     }
 
     @Override
-    public double getRepairBonus() {
+    public int getRepairBonus() {
         return this.repairBonus;
     }
 
     @Override
-    public double getWashBonus() {
+    public int getWashBonus() {
         return this.washBonus;
     }
 
     @Override
-    public double getCost() {
+    public int getCost() {
         return this.cost;
     }
 
     @Override
-    public double getSalePrice() {
+    public int getSalePrice() {
         return this.salePrice;
     }
 
