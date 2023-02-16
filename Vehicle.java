@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
 
-public class Vehicle {
+public abstract class Vehicle {
 
     private String name;
     private int saleBonus;
@@ -60,9 +60,11 @@ public class Vehicle {
     public int getRepairBonus(){
         return this.repairBonus;
     }
-    public int getWashBonus(){
-        return this.washBonus;
+
+    public int getWashBonus(int level){
+        return level*washBonus;
     }
+
     public int getCost(){
         return this.cost;
     }

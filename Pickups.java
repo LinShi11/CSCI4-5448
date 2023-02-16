@@ -41,6 +41,9 @@ public class Pickups extends Vehicle{
         type = "pickup";
         setBrand();
         setName(id);
+        repairBonus = (int)(min * .10);
+        saleBonus = (int)(min * 0.08);
+        washBonus = (int)(min * 0.01);
     }
     @Override
     public void setName(String name) {
@@ -113,10 +116,13 @@ public class Pickups extends Vehicle{
     public int getRepairBonus() {
         return this.repairBonus;
     }
-
     @Override
-    public int getWashBonus() {
-        return this.washBonus;
+    public int getWashBonus(int level) {
+        if(level == 1){
+            return this.washBonus;
+        } else{
+            return this.washBonus *2;
+        }
     }
 
     @Override

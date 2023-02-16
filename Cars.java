@@ -114,8 +114,12 @@ public class Cars extends Vehicle{
     }
 
     @Override
-    public int getWashBonus() {
-        return this.washBonus;
+    public int getWashBonus(int level) {
+        if(level == 1){
+            return this.washBonus;
+        } else{
+            return this.washBonus *2;
+        }
     }
 
     @Override

@@ -126,6 +126,7 @@ public class Mechanics implements Staff {
         int chance = random.nextInt(10);
         if(chance < 8){
             if(car.getCondition().equals("used")){
+                this.dailyBonus += car.getRepairBonus();
                 car.setCondition("like new");
                 car.setSalePrice(1.25);
             } else{

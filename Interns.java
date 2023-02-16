@@ -112,23 +112,26 @@ public class Interns implements Staff {
             for (int i = 0; i < 2; i ++) {
                 carNum = random.nextInt(dirtyCars);
                 dirtyCars--;
-                String previous = washing.get(carNum).getCleanliness();
-                washing.get(carNum).setCleanliness(washDirty());
-                System.out.println(this.getName() + " washed a " + previous +" "+ washing.get(carNum).getType()
-                        +" ("+ washing.get(carNum).getName() + ") and made it " + washing.get(carNum).getCleanliness());
+                Vehicle car = washing.get(carNum);
+                String previous = car.getCleanliness();
+                washing.get(carNum).setCleanliness(washDirty(car));
+                System.out.println(this.getName() + " washed a " + previous +" "+ car.getType()
+                        +" ("+ car.getName() + ") and made it " + car.getCleanliness());
                 washing.remove(carNum);
             }
         }else if (dirtyCars == 1 && cleanCars >= 1){
-            String previous = washing.get(0).getCleanliness();
-            washing.get(0).setCleanliness(washDirty());
-            System.out.println(this.getName() + " washed a " + previous +" "+ washing.get(0).getType()
-                    +" ("+ washing.get(0).getName() + ") and made it " + washing.get(0).getCleanliness());
+            Vehicle car = washing.get(0);
+            String previous = car.getCleanliness();
+            washing.get(0).setCleanliness(washDirty(car));
+            System.out.println(this.getName() + " washed a " + previous +" "+ car.getType()
+                    +" ("+ car.getName() + ") and made it " + car.getCleanliness());
             washing.remove(0);
             int carNum = random.nextInt(cleanCars);
-            previous = washing.get(carNum).getCleanliness();
-            washing.get(carNum).setCleanliness(washClean());
-            System.out.println(this.getName() + " washed a " + previous +" "+ washing.get(carNum).getType()
-                    +" ("+ washing.get(carNum).getName() + ") and made it " + washing.get(carNum).getCleanliness());
+            car = washing.get(carNum);
+            previous = car.getCleanliness();
+            washing.get(carNum).setCleanliness(washClean(car));
+            System.out.println(this.getName() + " washed a " + previous +" "+ car.getType()
+                    +" ("+ car.getName() + ") and made it " + car.getCleanliness());
         } else{
             int carNum;
             int temp;
@@ -140,34 +143,38 @@ public class Interns implements Staff {
             for(int i = 0; i < temp; i ++){
                 carNum = random.nextInt(cleanCars);
                 cleanCars--;
-                String previous = washing.get(carNum).getCleanliness();
-                washing.get(carNum).setCleanliness(washClean());
-                System.out.println(this.getName() + " washed a " + previous +" "+ washing.get(carNum).getType()
-                        +" ("+ washing.get(carNum).getName() + ") and made it " + washing.get(carNum).getCleanliness());
+                Vehicle car = washing.get(carNum);
+                String previous = car.getCleanliness();
+                washing.get(carNum).setCleanliness(washClean(car));
+                System.out.println(this.getName() + " washed a " + previous +" "+ car.getType()
+                        +" ("+ car.getName() + ") and made it " + car.getCleanliness());
                 washing.remove(carNum);
             }
         }
 
     }
 
-    public String washClean(){
+    public String washClean(Vehicle car){
         Random random = new Random();
         int chance = random.nextInt(100);
         if(chance < 5){
             return "dirty";
         } else if(chance < 35){
+            this.dailyBonus += car.getWashBonus(1);
             return "sparkling";
         } else{
             return "clean";
         }
     }
 
-    public String washDirty(){
+    public String washDirty(Vehicle car){
         Random random = new Random();
         int chance = random.nextInt(10);
         if (chance < 8){
+            this.dailyBonus += car.getWashBonus(1);
             return "clean";
         } else if (chance < 9){
+            this.dailyBonus += car.getWashBonus(2);
             return "sparkling";
         } else{
             return "dirty";

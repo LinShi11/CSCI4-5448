@@ -173,6 +173,7 @@ public class FNCD {
      */
     public void washing(){
         for (Interns emp: internList){
+            emp.setDailyBonus(0);
             emp.wash(inventory);
         }
     }
