@@ -4,6 +4,11 @@ This is the repository for CSCI 4/5448 OOAD. <br>
 This is the directory for project 2
 ##### Java Version: 19
 
+##### UML:
+![part1](image.png)
+![part2](image2.png)
+![part3](image3.png)
+
 ##### Assumption:
 * The intern must wash two different vehicles for each iteration. If there is just one vehicle to wash, then the intern will only wash one car. (same applies to mechanics).
 * We decided to use integer values based on the sample output. 
