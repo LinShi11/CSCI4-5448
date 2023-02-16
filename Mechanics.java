@@ -202,7 +202,8 @@ public class Mechanics implements Staff {
     }
 
     /**
-     * The fixcar function tries to fix the vehicle and determines whether it was sucessful
+     * The fixcar function tries to fix the vehicle and determines whether it was successful
+     * Drops cleanliness even if the fix was unsuccessful
      * @param car: the car we would like to fix
      */
     public void fixCar(Vehicle car){
