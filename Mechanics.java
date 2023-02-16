@@ -66,7 +66,7 @@ public class Mechanics implements Staff {
     }
 
     /**
-     * setter for daily bonus, used to reset dailybonus
+     * setter for daily bonus, used to reset daily-bonus
      * @param dailyBonus: reset it to 0 everyday
      */
     @Override

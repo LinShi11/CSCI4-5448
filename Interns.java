@@ -8,6 +8,7 @@ public class Interns implements Staff {
     private String name;
     private int dailySalary;
     private int dailyBonus;
+    private int announcementBonus;
     private int totalPay;
     private int totalBonus;
     private String status;
@@ -25,6 +26,7 @@ public class Interns implements Staff {
         this.totalPay = 0;
         this.status = "Working";
         this.totalDaysWorked = 0;
+        this.announcementBonus = 0;
     }
 
     /**
@@ -186,7 +188,7 @@ public class Interns implements Staff {
 
                 //announcement on the action
                 System.out.println(this.getName() + " washed a " + previous +" "+ car.getType()
-                        +" ("+ car.getName() + ") and made it " + car.getCleanliness());
+                        +" ("+ car.getName() + ") and made it " + car.getCleanliness()+ " (making $" + this.announcementBonus+ "). ");
                 // make sure we only wash it once
                 washing.remove(carNum);
             }
@@ -197,7 +199,7 @@ public class Interns implements Staff {
             String previous = car.getCleanliness();
             car.setCleanliness(washDirty(car));
             System.out.println(this.getName() + " washed a " + previous +" "+ car.getType()
-                    +" ("+ car.getName() + ") and made it " + car.getCleanliness());
+                    +" ("+ car.getName() + ") and made it " + car.getCleanliness()+ " (making $" + this.announcementBonus+ "). ");
             washing.remove(0);
 
             //we can still wash another car from clean
@@ -207,7 +209,7 @@ public class Interns implements Staff {
                 previous = car.getCleanliness();
                 washing.get(carNum).setCleanliness(washClean(car));
                 System.out.println(this.getName() + " washed a " + previous + " " + car.getType()
-                        + " (" + car.getName() + ") and made it " + car.getCleanliness());
+                        + " (" + car.getName() + ") and made it " + car.getCleanliness()+ " (making $" + this.announcementBonus+ "). ");
             }
         }
         // there are no dirty cars, we will count the number of clean cars we can wash
@@ -227,7 +229,7 @@ public class Interns implements Staff {
                 String previous = car.getCleanliness();
                 washing.get(carNum).setCleanliness(washClean(car));
                 System.out.println(this.getName() + " washed a " + previous +" "+ car.getType()
-                        +" ("+ car.getName() + ") and made it " + car.getCleanliness());
+                        +" ("+ car.getName() + ") and made it " + car.getCleanliness() + " (making $" + this.announcementBonus+ "). ");
                 washing.remove(carNum);
             }
         }
@@ -244,16 +246,19 @@ public class Interns implements Staff {
         int chance = random.nextInt(100);
         // 5% chance of making it dirty
         if(chance < 5){
+            this.announcementBonus = 0;
             return "dirty";
         }
         // 30% chance of making it sparkling
         else if(chance < 35){
             // add bonus
             this.dailyBonus += car.getWashBonus(1);
+            this.announcementBonus = car.getWashBonus(1);
             return "sparkling";
         }
         // stays the same
         else{
+            this.announcementBonus = 0;
             return "clean";
         }
     }
@@ -270,16 +275,19 @@ public class Interns implements Staff {
         if (chance < 8){
             // add bonus
             this.dailyBonus += car.getWashBonus(1);
+            this.announcementBonus = car.getWashBonus(1);
             return "clean";
         }
         //10 % chance of making it sparkling
         else if (chance < 9){
             // double the bonus
             this.dailyBonus += car.getWashBonus(2);
+            this.announcementBonus = car.getWashBonus(2);
             return "sparkling";
         }
         // stays the same
         else{
+            this.announcementBonus = 0;
             return "dirty";
         }
     }
