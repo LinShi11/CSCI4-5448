@@ -119,11 +119,16 @@ public class Interns implements Staff {
                 washing.remove(carNum);
             }
         }else if (dirtyCars == 1 && cleanCars >= 1){
-            System.out.println("Washing car " + washing.get(0).getName());
+            String previous = washing.get(0).getCleanliness();
             washing.get(0).setCleanliness(washDirty());
+            System.out.println(this.getName() + " washed a " + previous +" "+ washing.get(0).getType()
+                    +" ("+ washing.get(0).getName() + ") and made it " + washing.get(0).getCleanliness());
             washing.remove(0);
             int carNum = random.nextInt(cleanCars);
+            previous = washing.get(carNum).getCleanliness();
             washing.get(carNum).setCleanliness(washClean());
+            System.out.println(this.getName() + " washed a " + previous +" "+ washing.get(carNum).getType()
+                    +" ("+ washing.get(carNum).getName() + ") and made it " + washing.get(carNum).getCleanliness());
         } else{
             int carNum;
             int temp;
@@ -135,13 +140,13 @@ public class Interns implements Staff {
             for(int i = 0; i < temp; i ++){
                 carNum = random.nextInt(cleanCars);
                 cleanCars--;
-                System.out.println("Washing car " + washing.get(carNum).getName());
+                String previous = washing.get(carNum).getCleanliness();
                 washing.get(carNum).setCleanliness(washClean());
+                System.out.println(this.getName() + " washed a " + previous +" "+ washing.get(carNum).getType()
+                        +" ("+ washing.get(carNum).getName() + ") and made it " + washing.get(carNum).getCleanliness());
                 washing.remove(carNum);
             }
         }
-        System.out.println(dirtyCars);
-        System.out.println(cleanCars);
 
     }
 

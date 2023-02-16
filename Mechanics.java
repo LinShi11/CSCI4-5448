@@ -116,13 +116,13 @@ public class Mechanics implements Staff {
         int carNum;
         for(int i = 0; i < num; i ++){
             carNum = random.nextInt(fixable);
-            System.out.println("repairing " + repairing.get(carNum).getName());
             fixCar(repairing.get(carNum));
         }
     }
 
     public void fixCar(Vehicle car){
         Random random = new Random();
+        String previous = car.getCondition();
         int chance = random.nextInt(10);
         if(chance < 8){
             if(car.getCondition().equals("used")){
@@ -139,6 +139,8 @@ public class Mechanics implements Staff {
         } else if (car.getCleanliness().equals("clean")){
             car.setCleanliness("dirty");
         }
+        System.out.println(this.getName() + " fixed a " + previous +" "+ car.getType()
+                +" ("+ car.getName() + ") and made it " + car.getCondition());
 
     }
 }

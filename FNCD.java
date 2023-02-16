@@ -56,7 +56,10 @@ public class FNCD {
             }
             date++;
         }
+        System.out.println("\n******End of simulation******");
+        System.out.println("Here is a list of all the staffs: ");
         printAllStaff();
+        System.out.println("\nHere is a list of all the vehicles: ");
         printInventory();
 
     }
@@ -109,10 +112,11 @@ public class FNCD {
     public void tasks(){
         System.out.println("Washing...");
         washing();
+        System.out.println("\nRepairing...");
         repairing();
-        printInventory();
         int buyer = numOfBuyer();
-        System.out.println("We have " + buyer + " Buyers");
+        System.out.println("\nWe have " + buyer + " Buyers today");
+        System.out.println("Selling...");
         selling(buyer);
     }
 
@@ -124,7 +128,6 @@ public class FNCD {
 
     public void repairing(){
         for(Mechanics emp: mechanicsList){
-            System.out.println(emp.getName() + " is repairing cars");
             emp.repair(inventory);
         }
     }
@@ -134,88 +137,29 @@ public class FNCD {
         Salesperson representative;
         for(int i =0; i < buyer; i++){
             Buyer newBuyer = new Buyer();
-            System.out.println("New buyer " + (i+1) + " " + newBuyer.getBuyingChance() + " " + newBuyer.getVehicleType() + " with a probability of " + newBuyer.getProbability(newBuyer.getBuyingChance()));
             representative = salespeopleList.get(random.nextInt(3));
-            Vehicle car = null;
-            int price = 0;
-            switch (newBuyer.getVehicleType()) {
-                case "performance car" -> {
-                    for (PerformanceCar temp : performanceCarList) {
-                        if (temp.getSalePrice() > price && !temp.getCondition().equals("broken")) {
-                            car = temp;
-                            price = temp.getSalePrice();
-                        }
-                    }
-                }
-                case "car" -> {
-                    for (Cars temp : carsList) {
-                        if (temp.getSalePrice() > price && !temp.getCondition().equals("broken")) {
-                            car = temp;
-                            price = temp.getSalePrice();
-                        }
-                    }
-                }
-                case "pickup" -> {
-                    for (Pickups temp : pickupsList) {
-                        if (temp.getSalePrice() > price && !temp.getCondition().equals("broken")) {
-                            car = temp;
-                            price = temp.getSalePrice();
-                        }
-                    }
-                }
-            }
-            if(car == null){
-                for(Vehicle temp: inventory){
-                    if(temp.getSalePrice() > price && !temp.getCondition().equals("broken")){
-                        car = temp;
-                        price = temp.getSalePrice();
-                    }
-                }
-            }
-            int buyingChance = newBuyer.getProbability(newBuyer.getBuyingChance());
-            if(!car.getType().equals(newBuyer.getVehicleType())){
-                buyingChance -= 20;
-            }
-            if(car.getCleanliness().equals("sparkling")){
-                buyingChance += 20;
-            } else if (car.getCleanliness().equals("clean")){
-                buyingChance += 10;
-            }
-            if(buyingChance <= 0){
-                System.out.println("Buyer " + newBuyer.getBuyingChance() + " "+ newBuyer.getVehicleType()+ " " +
-                        representative.getName() + " suggested a " + car.getCleanliness() + ", " + car.getCondition() + " "
-                        + car.getType() + "(" + car.getName()+ ". Therefore, the buyer is not interested ");
-            } else{
-                int success = random.nextInt(100);
-                if(success < buyingChance){
-                    System.out.println("Buyer " + newBuyer.getBuyingChance() + " "+ newBuyer.getVehicleType()+ " " +
-                            representative.getName() + " suggested a " + car.getCleanliness() + ", " + car.getCondition() + " "
-                            + car.getType() + "(" + car.getName()+ ". The buying probability was " + buyingChance+ ". And the transaction was successful for $" +
-                            car.getSalePrice());
-                    this.budget += car.getSalePrice();
-                    this.dailySales += car.getSalePrice();
-                    inventory.remove(car);
-                    if(car.getType().equals("performance car")){
+            Vehicle car = representative.sale(newBuyer, inventory);
+            if(car.getStatus().equals("sold")){
+                soldCars.add(car);
+                inventory.remove(car);
+                this.budget += car.getSalePrice();
+                this.dailySales += car.getSalePrice();
+                if(car.getType().equals("performance car")){
                         performanceCarList.remove(car);
-                    } else if(car.getType().equals("car")){
+                } else if(car.getType().equals("car")){
                         carsList.remove(car);
-                    } else{
-                        pickupsList.remove(car);
-                    }
-                    car.setStatus("sold");
-                    soldCars.add(car);
                 } else{
-                    System.out.println("Buyer " + newBuyer.getBuyingChance() + " "+ newBuyer.getVehicleType()+ " " +
-                            representative.getName() + " suggested a " + car.getCleanliness() + ", " + car.getCondition() + " "
-                            + car.getType() + "(" + car.getName()+ ". The buying probability was " + buyingChance+ ". And the transaction was unsuccessful for $" +
-                            car.getSalePrice());
+                        pickupsList.remove(car);
                 }
             }
         }
     }
     public void endDay(){
+        System.out.println("\nClosing...");
+        System.out.println("We made $" + this.dailySales+ " today");
         dailyUpdate();
         noMoney();
+        System.out.println("\nQuitting");
         quit();
     }
 
@@ -252,14 +196,13 @@ public class FNCD {
             internList.remove(temp);
 
             System.out.println("Intern " + employee.get(employee.size()-1).getName() + " has quit");
-            quitHelper();
+            quitHelper("Intern");
         }
         if(random.nextInt(10) == 0){
             int temp = random.nextInt(3);
             employee.add(mechanicsList.get(temp));
             mechanicsList.remove(temp);
-            System.out.println("Mechanics "+ employee.get(employee.size()-1).getName() + " has quit");
-            quitHelper();
+            quitHelper("Mechanics");
 
             Interns steppedUp = internList.get(0);
             String name = steppedUp.getName().split("_")[1];
@@ -275,8 +218,7 @@ public class FNCD {
             int temp = random.nextInt(3);
             employee.add(salespeopleList.get(temp));
             salespeopleList.remove(temp);
-            System.out.println("Salesperson " + employee.get(employee.size()-1).getName() + " has quit");
-            quitHelper();
+            quitHelper("Salesperson");
 
             Interns steppedUp = internList.get(0);
             String name = steppedUp.getName().split("_")[1];
@@ -289,9 +231,9 @@ public class FNCD {
         }
     }
 
-    public void quitHelper(){
+    public void quitHelper(String title){
         employee.get(employee.size()-1).setStatus("quit");
-        System.out.println(employee.get(employee.size()-1).getName() + " has worked " + employee.get(employee.size()-1).getTotalDaysWorked());
+        System.out.println(title + " " + employee.get(employee.size()-1).getName() + " has quit after working for " + employee.get(employee.size()-1).getTotalDaysWorked() + " days");
     }
 
 
@@ -303,7 +245,6 @@ public class FNCD {
             num = random.nextInt(9-2) + 2;
         }
         else{
-            System.out.println("It is the weekdays");
             num = random.nextInt(6);
         }
         return num;
@@ -319,9 +260,6 @@ public class FNCD {
 
     public void printAllStaff(){
         System.out.println(String.format("%20s %20s %20s %20s %15s", "Name", "Total Days Worked", "Total Normal Pay", "Total Bonus Pay", "Status"));
-        for (Staff emp: employee){
-            System.out.println(String.format("%20s %20s %20s %20s %15s", emp.getName(), emp.getTotalDaysWorked()+ " days", "$" + emp.getTotalPay(), "$" + emp.getTotalBonus(), emp.getStatus()));
-        }
         for (Interns emp: internList){
             System.out.println(String.format("%20s %20s %20s %20s %15s", emp.getName(), emp.getTotalDaysWorked() + " days", "$" + emp.getTotalPay(), "$" + emp.getTotalBonus(), emp.getStatus()));
         }
@@ -330,6 +268,9 @@ public class FNCD {
         }
         for (Salesperson emp: salespeopleList){
             System.out.println(String.format("%20s %20s %20s %20s %15s", emp.getName(), emp.getTotalDaysWorked() + " days", "$" + emp.getTotalPay(), "$" + emp.getTotalBonus(), emp.getStatus()));
+        }
+        for (Staff emp: employee){
+            System.out.println(String.format("%20s %20s %20s %20s %15s", emp.getName(), emp.getTotalDaysWorked()+ " days", "$" + emp.getTotalPay(), "$" + emp.getTotalBonus(), emp.getStatus()));
         }
     }
 
