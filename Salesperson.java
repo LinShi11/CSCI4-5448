@@ -22,7 +22,7 @@ public class Salesperson implements Staff{
         setName(name);
         this.totalBonus = 0;
         this.dailyBonus = 0;
-        this.dailySalary = 0;
+        this.dailySalary = 200;
         this.totalPay = 0;
         this.status = "Working";
         this.totalDaysWorked = days;

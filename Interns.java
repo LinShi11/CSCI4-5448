@@ -1,3 +1,8 @@
+import java.sql.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Random;
+
 public class Interns implements Staff {
     private String name;
     private int dailySalary;
@@ -86,6 +91,80 @@ public class Interns implements Staff {
     @Override
     public int getTotalDaysWorked() {
         return this.totalDaysWorked;
+    }
+
+    public void wash(ArrayList<Vehicle> inventory){
+        ArrayList<Vehicle> washing = new ArrayList<>();
+        int dirtyCars = 0;
+        int cleanCars = 0;
+        for(Vehicle car : inventory){
+            if(car.getCleanliness().equals("dirty")){
+                washing.add(0, car);
+                dirtyCars += 1;
+            } else if (car.getCleanliness().equals("clean")){
+                washing.add(car);
+                cleanCars += 1;
+            }
+        }
+        Random random = new Random();
+        if(dirtyCars >= 2){
+            int carNum;
+            for (int i = 0; i < 2; i ++) {
+                carNum = random.nextInt(dirtyCars);
+                dirtyCars--;
+                System.out.println("Washing car " + washing.get(carNum).getName());
+                washing.get(carNum).setCleanliness(washDirty());
+                washing.remove(carNum);
+            }
+        }else if (dirtyCars == 1 && cleanCars >= 1){
+            System.out.println("Washing car " + washing.get(0).getName());
+            washing.get(0).setCleanliness(washDirty());
+            washing.remove(0);
+            int carNum = random.nextInt(cleanCars);
+            washing.get(carNum).setCleanliness(washClean());
+        } else{
+            int carNum;
+            int temp;
+            if(cleanCars >= 2){
+                temp = 2;
+            } else{
+                temp = cleanCars;
+            }
+            for(int i = 0; i < temp; i ++){
+                carNum = random.nextInt(cleanCars);
+                cleanCars--;
+                System.out.println("Washing car " + washing.get(carNum).getName());
+                washing.get(carNum).setCleanliness(washClean());
+                washing.remove(carNum);
+            }
+        }
+        System.out.println(dirtyCars);
+        System.out.println(cleanCars);
+
+    }
+
+    public String washClean(){
+        Random random = new Random();
+        int chance = random.nextInt(100);
+        if(chance < 5){
+            return "dirty";
+        } else if(chance < 35){
+            return "sparkling";
+        } else{
+            return "clean";
+        }
+    }
+
+    public String washDirty(){
+        Random random = new Random();
+        int chance = random.nextInt(10);
+        if (chance < 8){
+            return "clean";
+        } else if (chance < 9){
+            return "sparkling";
+        } else{
+            return "dirty";
+        }
     }
 }
 

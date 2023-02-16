@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Map;
 
 public interface Vehicle {
     final ArrayList<String> possibleConditions = new ArrayList<>(Arrays.asList("new", "used", "broken"));
@@ -31,7 +32,5 @@ public interface Vehicle {
     static ArrayList<String> getPossibleCleanliness(){
         return possibleCleanliness;
     }
-
-
 
 }

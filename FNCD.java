@@ -54,18 +54,24 @@ public class FNCD {
     public void setInventory(){
         int tempLength = performanceCarList.size();
         for(int i = 0; i < maxInventory - tempLength; i++ ){
-            performanceCarList.add(new PerformanceCar(updateInventoryId()));
-            this.budget -= performanceCarList.get(performanceCarList.size()-1).getCost();
+            PerformanceCar car = new PerformanceCar(updateInventoryId());
+            performanceCarList.add(car);
+            this.budget -= car.getCost();
+            this.inventory.add(car);
         }
         tempLength = carsList.size();
         for(int i = 0; i < maxInventory - tempLength; i++){
-            carsList.add(new Cars(updateInventoryId()));
-            this.budget -= carsList.get(carsList.size()-1).getCost();
+            Cars car = new Cars(updateInventoryId());
+            carsList.add(car);
+            this.budget -= car.getCost();
+            this.inventory.add(car);
         }
         tempLength = pickupsList.size();
         for(int i = 0; i < maxInventory - tempLength; i++){
-            pickupsList.add(new Pickups(updateInventoryId()));
-            this.budget -= pickupsList.get(pickupsList.size()-1).getCost();
+            Pickups car = new Pickups(updateInventoryId());
+            pickupsList.add(car);
+            this.budget -= car.getCost();
+            this.inventory.add(car);
         }
     }
     public void simulation(){
@@ -95,6 +101,7 @@ public class FNCD {
         }
         hire();
         setInventory();
+        tasks();
         noMoney();
     }
 
@@ -105,6 +112,15 @@ public class FNCD {
                 internList.add(new Interns("Intern_" + updateId()));
                 System.out.println("hired new intern " + internList.get(internList.size()-1).getName());
             }
+        }
+    }
+
+    public void tasks(){
+        for (Interns emp: internList){
+            System.out.println(emp.getName() + " is washing cars");
+//            printInventory();
+            emp.wash(inventory);
+//            printInventory();
         }
     }
 
