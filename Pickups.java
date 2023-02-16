@@ -5,6 +5,7 @@ import java.util.Random;
 /**
  * The pickup class includes the getter/setter for all variables,
  * The name is determined uniquely.
+ * This is an example of abstraction. As pickup extends from vehicle, we can overwrite many of the functions.
  */
 public class Pickups extends Vehicle{
     private String name;

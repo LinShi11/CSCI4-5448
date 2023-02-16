@@ -4,6 +4,7 @@ import java.util.Random;
 /**
  * The performanceCar class includes the getter/setter for all variables,
  * The name is determined uniquely.
+ * The PerformanceCar class an example of inheritance. The class inherited from class Vehicle.
  */
 public class PerformanceCar extends Vehicle{
     private String name;

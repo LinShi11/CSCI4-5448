@@ -5,6 +5,7 @@ import java.util.Random;
 /**
  * The car class includes the getter/setter for all variables,
  * The name is determined uniquely.
+ * An example of encapsulation. Where the variables are private. If we would like to access the variables, we have to use the public getter and setters.
  */
 public class Cars extends Vehicle{
     private String name;

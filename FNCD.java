@@ -172,6 +172,7 @@ public class FNCD {
 
     /**
      * washing function that iterate through each intern and ask them to wash two cars.
+     * An example of cohesion. The function only serves one purpose: for washing. 
      */
     public void washing(){
         for (Interns emp: internList){
@@ -214,6 +215,9 @@ public class FNCD {
             Vehicle car = representative.sale(newBuyer, inventory);
 
             //look at the status of the car the saleperson recommended. If it is sold then update the variables
+            /**
+             * An example of identity. The identity of the two is string is different. Therefore, we had to use .equal to compare strings.
+             */
             if(car.getStatus().equals("sold")){
                 soldCars.add(car); // add the soldcar list
                 inventory.remove(car);
@@ -399,6 +403,7 @@ public class FNCD {
 
     /**
      * The function prints all inventory using String.format to make it look nice
+     * This is an example of polymorphism. The inventory arraylist contains three different class types: Cars, PerformanceCars, and Pickup.
      */
     public void printInventory(){
         System.out.println(String.format("%20s %20s %20s %20s %20s %20s %20s", "Name", "Brand", "Cost", "Sale Price", "Condition", "Cleanliness", "Status"));
