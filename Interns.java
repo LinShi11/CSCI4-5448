@@ -112,8 +112,10 @@ public class Interns implements Staff {
             for (int i = 0; i < 2; i ++) {
                 carNum = random.nextInt(dirtyCars);
                 dirtyCars--;
-                System.out.println("Washing car " + washing.get(carNum).getName());
+                String previous = washing.get(carNum).getCleanliness();
                 washing.get(carNum).setCleanliness(washDirty());
+                System.out.println(this.getName() + " washed a " + previous +" "+ washing.get(carNum).getType()
+                        +" ("+ washing.get(carNum).getName() + ") and made it " + washing.get(carNum).getCleanliness());
                 washing.remove(carNum);
             }
         }else if (dirtyCars == 1 && cleanCars >= 1){

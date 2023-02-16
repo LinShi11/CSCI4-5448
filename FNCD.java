@@ -47,11 +47,11 @@ public class FNCD {
     public void simulation(){
         while(date <= simTime){
             if(date % 7 != 0) {
-                System.out.println("FNCD Day " + this.date);
+                System.out.println("******FNCD Day " + this.date + "******");
                 startDay();
-                System.out.println(date);
                 endDay();
             } else{
+                System.out.println("******FNCD Day " + this.date + "******");
                 System.out.println("We are closed on Sunday");
             }
             date++;
@@ -73,7 +73,7 @@ public class FNCD {
             int tempLength = internList.size();
             for(int i = 0; i < maxSize-tempLength; i++){
                 internList.add(new Interns("Intern_" + updateId()));
-                System.out.println("hired new intern " + internList.get(internList.size()-1).getName());
+                System.out.println("Hired intern " + internList.get(internList.size()-1).getName());
             }
         }
     }
@@ -97,14 +97,17 @@ public class FNCD {
             pickupsList.add(car);
             setInventoryHelper(car);
         }
+        System.out.println();
     }
 
     public void setInventoryHelper(Vehicle car){
         this.budget -= car.getCost();
         this.inventory.add(car);
+        car.printAction();
     }
 
     public void tasks(){
+        System.out.println("Washing...");
         washing();
         repairing();
         printInventory();
@@ -115,7 +118,6 @@ public class FNCD {
 
     public void washing(){
         for (Interns emp: internList){
-            System.out.println(emp.getName() + " is washing cars");
             emp.wash(inventory);
         }
     }

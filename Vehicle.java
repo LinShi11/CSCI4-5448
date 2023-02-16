@@ -7,6 +7,8 @@ public interface Vehicle {
     final ArrayList<String> possibleCleanliness = new ArrayList<>(Arrays.asList("sparkling", "clean", "dirty"));
     void setName(String name);
     void setBrand();
+    void setCost();
+    void setSalePrice(double percentage);
     void setSaleBonus(int saleBonus);
     void setRepairBonus(int repairBonus);
     void setWashBonus(int washBonus);

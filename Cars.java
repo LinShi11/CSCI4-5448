@@ -27,6 +27,8 @@ public class Cars implements Vehicle{
         Random random = new Random();
         cost = random.nextInt(max - min) + min;
         condition = Vehicle.getPossibleConditions().get(random.nextInt(3));
+        setCost();
+        salePrice = cost *2;
         int temp = random.nextInt(100);
         if(temp < 5){
             cleanliness = Vehicle.getPossibleCleanliness().get(0);
@@ -39,7 +41,6 @@ public class Cars implements Vehicle{
         type = "car";
         setBrand();
         setName(id);
-        printAction();
     }
     @Override
     public void setName(String name) {
@@ -49,6 +50,18 @@ public class Cars implements Vehicle{
     public void setBrand(){
         Random random = new Random();
         this.brand = brands.get(random.nextInt(brands.size()));
+    }
+    @Override
+    public void setCost(){
+        if(this.condition.equals("used")){
+            this.cost *= 0.8;
+        } else if(this.condition.equals("broken")){
+            this.cost *= 0.5;
+        }
+    }
+    @Override
+    public void setSalePrice(double percentage){
+        this.salePrice *= percentage;
     }
 
     @Override
@@ -112,13 +125,6 @@ public class Cars implements Vehicle{
 
     @Override
     public int getSalePrice() {
-        this.salePrice = this.cost * 2;
-        if(getCondition().equals("used")){
-            this.salePrice *= 0.8;
-        }
-        else if (getCondition().equals("broken")){
-            this.salePrice *= 0.5;
-        }
         return this.salePrice;
     }
 

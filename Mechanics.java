@@ -127,9 +127,12 @@ public class Mechanics implements Staff {
         if(chance < 8){
             if(car.getCondition().equals("used")){
                 car.setCondition("like new");
+                car.setSalePrice(1.25);
             } else{
                 car.setCondition("used");
+                car.setSalePrice(1.5);
             }
+            car.setCost();
         }
         if(car.getCleanliness().equals("sparkling")){
             car.setCleanliness("clean");
