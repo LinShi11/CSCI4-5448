@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Random;
+
 public class Mechanics implements Staff {
     private String name;
     private int dailySalary;
@@ -94,5 +97,45 @@ public class Mechanics implements Staff {
     @Override
     public int getTotalDaysWorked() {
         return this.totalDaysWorked;
+    }
+
+    public void repair(ArrayList<Vehicle> list){
+        ArrayList<Vehicle> repairing = new ArrayList<>();
+        int fixable = 0;
+        for(Vehicle car: list){
+            if(!car.getCondition().equals("like new")){
+                repairing.add(car);
+                fixable ++;
+            }
+        }
+        int num = fixable;
+        if(fixable > 2){
+            num = 2;
+        }
+        Random random = new Random();
+        int carNum;
+        for(int i = 0; i < num; i ++){
+            carNum = random.nextInt(fixable);
+            System.out.println("repairing " + repairing.get(carNum).getName());
+            fixCar(repairing.get(carNum));
+        }
+    }
+
+    public void fixCar(Vehicle car){
+        Random random = new Random();
+        int chance = random.nextInt(10);
+        if(chance < 8){
+            if(car.getCondition().equals("used")){
+                car.setCondition("like new");
+            } else{
+                car.setCondition("used");
+            }
+        }
+        if(car.getCleanliness().equals("sparkling")){
+            car.setCleanliness("clean");
+        } else if (car.getCleanliness().equals("clean")){
+            car.setCleanliness("dirty");
+        }
+
     }
 }

@@ -122,6 +122,12 @@ public class FNCD {
             emp.wash(inventory);
 //            printInventory();
         }
+        for(Mechanics emp: mechanicsList){
+            System.out.println(emp.getName() + " is repairing cars");
+//            printInventory();
+            emp.repair(inventory);
+//            printInventory();
+        }
     }
 
     public void endDay(){

@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.Map;
 
 public interface Vehicle {
-    final ArrayList<String> possibleConditions = new ArrayList<>(Arrays.asList("new", "used", "broken"));
+    final ArrayList<String> possibleConditions = new ArrayList<>(Arrays.asList("like new", "used", "broken"));
     final ArrayList<String> possibleCleanliness = new ArrayList<>(Arrays.asList("sparkling", "clean", "dirty"));
     void setName(String name);
     void setBrand();
