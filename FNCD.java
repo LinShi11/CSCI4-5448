@@ -69,7 +69,6 @@ public class FNCD {
                 System.out.println("******FNCD Day " + this.date + "******");
                 startDay();
                 endDay();
-                printAllStaff();
             } else{
                 System.out.println("******FNCD Day " + this.date + "******");
                 System.out.println("We are closed on Sunday");
