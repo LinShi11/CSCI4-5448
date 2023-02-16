@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
-public class Cars implements Vehicle{
+public class Cars extends Vehicle{
     private String name;
     private int saleBonus;
     private int repairBonus;
@@ -14,6 +14,7 @@ public class Cars implements Vehicle{
 
     private String brand;
     private String status;
+    private String type;
 
     private int min = 10000;
     private int max = 20000;
@@ -26,6 +27,8 @@ public class Cars implements Vehicle{
         Random random = new Random();
         cost = random.nextInt(max - min) + min;
         condition = Vehicle.getPossibleConditions().get(random.nextInt(3));
+        setCost();
+        salePrice = cost *2;
         int temp = random.nextInt(100);
         if(temp < 5){
             cleanliness = Vehicle.getPossibleCleanliness().get(0);
@@ -35,9 +38,12 @@ public class Cars implements Vehicle{
             cleanliness = Vehicle.getPossibleCleanliness().get(2);
         }
         status = "in stock";
+        type = "car";
         setBrand();
         setName(id);
-        printAction();
+        repairBonus = (int)(min * .10);
+        saleBonus = (int)(min * 0.08);
+        washBonus = (int)(min * 0.01);
     }
     @Override
     public void setName(String name) {
@@ -47,6 +53,18 @@ public class Cars implements Vehicle{
     public void setBrand(){
         Random random = new Random();
         this.brand = brands.get(random.nextInt(brands.size()));
+    }
+    @Override
+    public void setCost(){
+        if(this.condition.equals("used")){
+            this.cost *= 0.8;
+        } else if(this.condition.equals("broken")){
+            this.cost *= 0.5;
+        }
+    }
+    @Override
+    public void setSalePrice(double percentage){
+        this.salePrice *= percentage;
     }
 
     @Override
@@ -99,8 +117,12 @@ public class Cars implements Vehicle{
     }
 
     @Override
-    public int getWashBonus() {
-        return this.washBonus;
+    public int getWashBonus(int level) {
+        if(level == 1){
+            return this.washBonus;
+        } else{
+            return this.washBonus *2;
+        }
     }
 
     @Override
@@ -110,13 +132,6 @@ public class Cars implements Vehicle{
 
     @Override
     public int getSalePrice() {
-        this.salePrice = this.cost * 2;
-        if(getCondition().equals("used")){
-            this.salePrice *= 0.8;
-        }
-        else if (getCondition().equals("broken")){
-            this.salePrice *= 0.5;
-        }
         return this.salePrice;
     }
 
@@ -134,7 +149,11 @@ public class Cars implements Vehicle{
         return this.status;
     }
     @Override
-    public void printAction(){
-        System.out.println("Purchased a " + getCondition() + ", " + getCleanliness() + " Car " + getBrand() + ", (" + getName() + ") for $" + getCost());
+    public String getType(){
+        return this.type;
     }
+//    @Override
+//    public void printAction(){
+//        System.out.println("Purchased a " + getCondition() + ", " + getCleanliness() + " Car " + getBrand() + ", (" + getName() + ") for $" + getCost());
+//    }
 }
