@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Random;
 
 public class FNCD {
@@ -7,10 +8,13 @@ public class FNCD {
     final int maxInventory = 4;
     int budget;
     int dailySales;
-    int date;
+    Calendar date;
     int simTime;
     int id;
     int inventoryId;
+    int internBonus = 25; 
+    int mechanicBonus = 50;
+    int salesBonus = 100;
     ArrayList<Vehicle> inventory;
     ArrayList<PerformanceCar> performanceCarList;
     ArrayList<Cars> carsList;
@@ -95,9 +99,65 @@ public class FNCD {
         }
         hire();
         setInventory();
+        staffOperation();
         noMoney();
     }
 
+    public void staffOperation() {
+        
+        int index = 0;
+        for (Staff staff: this.employee) {
+            //Interns - Washing – Every working day, the Interns will wash Vehicles
+            if (staff instanceof Interns) {
+                Interns intern = (Interns)staff;	
+                //Each Intern can wash two Vehicles per day
+                for (int j = 0; j < 2; j++) {
+                    while (index < this.inventory.size() && 
+                        this.inventory.get(index).getCleanliness() != "sparkling") {						
+                        index++;
+                    }
+                    //found the dirty or clean vehicle
+                    if (index < this.inventory.size()) {
+                        intern.setDailyBonus(internBonus);
+                        index++;
+                    }
+                }
+            } else if (staff instanceof Mechanics) {
+                //Each mechanic can repair two Vehicles per day
+                index = 0;
+                Mechanics mechanic = (Mechanics)staff;
+                //Each mechanic can repair two Vehicles per day
+                for (int j = 0; j < 2; j++) {
+                    while (index < this.inventory.size() && 
+                    this.inventory.get(index).getCondition() != "new") {						
+                        index++;
+                    }
+                    //found the dirty or clean vehicle
+                    if (index < this.inventory.size()) {
+                        mechanic.setDailyBonus(mechanicBonus);
+                        index++;
+                    }
+                }
+            } else if (staff instanceof Salesperson) {
+                //Selling – Every working day, 0 to 5 Buyers will arrive to buy a 
+			    //Vehicle (2-8 Buyers on Friday/Saturday) from a Salesperson
+                Salesperson salesperson = (Salesperson)staff;
+			    int numBuyers = 0;
+                if (this.getDate().get(Calendar.DAY_OF_WEEK) == Calendar.FRIDAY ||
+                    this.getDate().get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY) {
+                    numBuyers = (int)(Math.random() * 7 + 2);
+                }else {
+                    numBuyers = (int)(Math.random() * 6);
+                }
+                salesperson.setDailyBonus(salesBonus);
+            }			
+        }
+    }
+    public Calendar getDate() {
+        return date;
+    }
+ 
+ 
     public void hire(){
         if(internList.size() != 3){
             int tempLength = internList.size();
