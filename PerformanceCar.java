@@ -13,6 +13,7 @@ public class PerformanceCar implements Vehicle{
     private String cleanliness;
     private String brand;
     private String status;
+    private String type;
     private int min = 20000;
     private int max = 40000;
 
@@ -35,6 +36,7 @@ public class PerformanceCar implements Vehicle{
             cleanliness = Vehicle.getPossibleCleanliness().get(2);
         }
         status = "in stock";
+        type = "performance car";
         setBrand();
         setName(id);
         printAction();
@@ -131,6 +133,10 @@ public class PerformanceCar implements Vehicle{
     @Override
     public String getStatus(){
         return this.status;
+    }
+    @Override
+    public String getType(){
+        return this.type;
     }
     @Override
     public void printAction(){

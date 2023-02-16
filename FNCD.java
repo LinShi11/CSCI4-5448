@@ -15,6 +15,7 @@ public class FNCD {
     ArrayList<PerformanceCar> performanceCarList;
     ArrayList<Cars> carsList;
     ArrayList<Pickups> pickupsList;
+    ArrayList<Vehicle> soldCars;
     ArrayList<Staff> employee;
 
 
@@ -36,6 +37,7 @@ public class FNCD {
         this.carsList = new ArrayList<>();
         this.pickupsList = new ArrayList<>();
         this.inventory = new ArrayList<>();
+        this.soldCars = new ArrayList<>();
         for(int i = 0; i < maxSize; i++){
             internList.add(new Interns("Intern_" + updateId()));
             mechanicsList.add(new Mechanics("Mechanics_"+ updateId()));
@@ -93,12 +95,6 @@ public class FNCD {
     }
     public void startDay(){
         System.out.println("Opening... (Current budget $" + this.budget + ")");
-        int buyer = numOfBuyer();
-        System.out.println("We have " + buyer + " Buyers");
-        for(int i =0; i < buyer; i++){
-            Buyer newBuyer = new Buyer();
-            System.out.println("New buyer " + (i+1) + " " + newBuyer.getBuyingChance() + " " + newBuyer.getVehicleType() + " with a probability of " + newBuyer.getProbability(newBuyer.getBuyingChance()));
-        }
         hire();
         setInventory();
         tasks();
@@ -127,6 +123,90 @@ public class FNCD {
 //            printInventory();
             emp.repair(inventory);
 //            printInventory();
+        }
+        printInventory();
+        int buyer = numOfBuyer();
+        Random random = new Random();
+        System.out.println("We have " + buyer + " Buyers");
+        Salesperson representative;
+        for(int i =0; i < buyer; i++){
+            Buyer newBuyer = new Buyer();
+            System.out.println("New buyer " + (i+1) + " " + newBuyer.getBuyingChance() + " " + newBuyer.getVehicleType() + " with a probability of " + newBuyer.getProbability(newBuyer.getBuyingChance()));
+            representative = salespeopleList.get(random.nextInt(3));
+            Vehicle car = null;
+            int price = 0;
+            switch (newBuyer.getVehicleType()) {
+                case "performance car" -> {
+                    for (PerformanceCar temp : performanceCarList) {
+                        if (temp.getSalePrice() > price && !temp.getCondition().equals("broken")) {
+                            car = temp;
+                            price = temp.getSalePrice();
+                        }
+                    }
+                }
+                case "car" -> {
+                    for (Cars temp : carsList) {
+                        if (temp.getSalePrice() > price && !temp.getCondition().equals("broken")) {
+                            car = temp;
+                            price = temp.getSalePrice();
+                        }
+                    }
+                }
+                case "pickup" -> {
+                    for (Pickups temp : pickupsList) {
+                        if (temp.getSalePrice() > price && !temp.getCondition().equals("broken")) {
+                            car = temp;
+                            price = temp.getSalePrice();
+                        }
+                    }
+                }
+            }
+            if(car == null){
+                for(Vehicle temp: inventory){
+                    if(temp.getSalePrice() > price && !temp.getCondition().equals("broken")){
+                        car = temp;
+                        price = temp.getSalePrice();
+                    }
+                }
+            }
+            int buyingChance = newBuyer.getProbability(newBuyer.getBuyingChance());
+            if(!car.getType().equals(newBuyer.getVehicleType())){
+                buyingChance -= 20;
+            }
+            if(car.getCleanliness().equals("sparkling")){
+                buyingChance += 20;
+            } else if (car.getCleanliness().equals("clean")){
+                buyingChance += 10;
+            }
+            if(buyingChance <= 0){
+                System.out.println("Buyer " + newBuyer.getBuyingChance() + " "+ newBuyer.getVehicleType()+ " " +
+                        representative.getName() + " suggested a " + car.getCleanliness() + ", " + car.getCondition() + " "
+                        + car.getType() + "(" + car.getName()+ ". Therefore, the buyer is not interested ");
+            } else{
+                int success = random.nextInt(100);
+                if(success < buyingChance){
+                    System.out.println("Buyer " + newBuyer.getBuyingChance() + " "+ newBuyer.getVehicleType()+ " " +
+                            representative.getName() + " suggested a " + car.getCleanliness() + ", " + car.getCondition() + " "
+                            + car.getType() + "(" + car.getName()+ ". The buying probability was " + buyingChance+ ". And the transaction was successful for $" +
+                            car.getSalePrice());
+                    this.budget += car.getSalePrice();
+                    inventory.remove(car);
+                    if(car.getType().equals("performance car")){
+                        performanceCarList.remove(car);
+                    } else if(car.getType().equals("car")){
+                        carsList.remove(car);
+                    } else{
+                        pickupsList.remove(car);
+                    }
+                    car.setStatus("sold");
+                    soldCars.add(car);
+                } else{
+                    System.out.println("Buyer " + newBuyer.getBuyingChance() + " "+ newBuyer.getVehicleType()+ " " +
+                            representative.getName() + " suggested a " + car.getCleanliness() + ", " + car.getCondition() + " "
+                            + car.getType() + "(" + car.getName()+ ". The buying probability was " + buyingChance+ ". And the transaction was unsuccessful for $" +
+                            car.getSalePrice());
+                }
+            }
         }
     }
 
@@ -258,13 +338,10 @@ public class FNCD {
 
     public void printInventory(){
         System.out.println(String.format("%20s %20s %20s %20s %20s %20s %20s", "Name", "Brand", "Cost", "Sale Price", "Condition", "Cleanliness", "Status"));
-        for(PerformanceCar car: performanceCarList){
+        for(Vehicle car: inventory){
             System.out.println(String.format("%20s %20s %20s %20s %20s %20s %20s", car.getName(), car.getBrand(), car.getCost(), car.getSalePrice(), car.getCondition(), car.getCleanliness(), car.getStatus()));
         }
-        for(Cars car: carsList){
-            System.out.println(String.format("%20s %20s %20s %20s %20s %20s %20s", car.getName(), car.getBrand(), car.getCost(), car.getSalePrice(), car.getCondition(), car.getCleanliness(), car.getStatus()));
-        }
-        for(Pickups car: pickupsList){
+        for(Vehicle car: soldCars){
             System.out.println(String.format("%20s %20s %20s %20s %20s %20s %20s", car.getName(), car.getBrand(), car.getCost(), car.getSalePrice(), car.getCondition(), car.getCleanliness(), car.getStatus()));
         }
     }

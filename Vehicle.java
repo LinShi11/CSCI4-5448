@@ -23,6 +23,7 @@ public interface Vehicle {
     String getCondition();
     String getCleanliness();
     String getStatus();
+    String getType();
     void printAction();
 
     static ArrayList<String> getPossibleConditions(){
