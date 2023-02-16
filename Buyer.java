@@ -16,14 +16,6 @@ public class Buyer {
         this.vehicleType = types.get(random.nextInt(3));
     }
 
-    public void setBuyingChance(String buyingChance) {
-        this.buyingChance = buyingChance;
-    }
-
-    public void setVehicleType(String vehicleType) {
-        this.vehicleType = vehicleType;
-    }
-
     public String getBuyingChance() {
         return buyingChance;
     }

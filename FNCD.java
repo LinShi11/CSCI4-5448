@@ -1,9 +1,9 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 public class FNCD {
     final int maxSize = 3;
-
     final int maxInventory = 4;
     int budget;
     int dailySales;
@@ -17,8 +17,6 @@ public class FNCD {
     ArrayList<Pickups> pickupsList;
     ArrayList<Vehicle> soldCars;
     ArrayList<Staff> employee;
-
-
     ArrayList<Interns> internList;
     ArrayList<Mechanics> mechanicsList;
     ArrayList<Salesperson> salespeopleList;
@@ -45,37 +43,7 @@ public class FNCD {
         }
     }
 
-    public String updateId(){
-        return String.format("%03d", id++);
-    }
 
-    public String updateInventoryId(){
-        return String.format("%05d", inventoryId++);
-    }
-
-    public void setInventory(){
-        int tempLength = performanceCarList.size();
-        for(int i = 0; i < maxInventory - tempLength; i++ ){
-            PerformanceCar car = new PerformanceCar(updateInventoryId());
-            performanceCarList.add(car);
-            this.budget -= car.getCost();
-            this.inventory.add(car);
-        }
-        tempLength = carsList.size();
-        for(int i = 0; i < maxInventory - tempLength; i++){
-            Cars car = new Cars(updateInventoryId());
-            carsList.add(car);
-            this.budget -= car.getCost();
-            this.inventory.add(car);
-        }
-        tempLength = pickupsList.size();
-        for(int i = 0; i < maxInventory - tempLength; i++){
-            Pickups car = new Pickups(updateInventoryId());
-            pickupsList.add(car);
-            this.budget -= car.getCost();
-            this.inventory.add(car);
-        }
-    }
     public void simulation(){
         while(date <= simTime){
             if(date % 7 != 0) {
@@ -83,7 +51,6 @@ public class FNCD {
                 startDay();
                 System.out.println(date);
                 endDay();
-                printStaff();
             } else{
                 System.out.println("We are closed on Sunday");
             }
@@ -111,23 +78,57 @@ public class FNCD {
         }
     }
 
+    public void setInventory(){
+        int tempLength = performanceCarList.size();
+        for(int i = 0; i < maxInventory - tempLength; i++ ){
+            PerformanceCar car = new PerformanceCar(updateInventoryId());
+            performanceCarList.add(car);
+            setInventoryHelper(car);
+        }
+        tempLength = carsList.size();
+        for(int i = 0; i < maxInventory - tempLength; i++){
+            Cars car = new Cars(updateInventoryId());
+            carsList.add(car);
+            setInventoryHelper(car);
+        }
+        tempLength = pickupsList.size();
+        for(int i = 0; i < maxInventory - tempLength; i++){
+            Pickups car = new Pickups(updateInventoryId());
+            pickupsList.add(car);
+            setInventoryHelper(car);
+        }
+    }
+
+    public void setInventoryHelper(Vehicle car){
+        this.budget -= car.getCost();
+        this.inventory.add(car);
+    }
+
     public void tasks(){
-        for (Interns emp: internList){
-            System.out.println(emp.getName() + " is washing cars");
-//            printInventory();
-            emp.wash(inventory);
-//            printInventory();
-        }
-        for(Mechanics emp: mechanicsList){
-            System.out.println(emp.getName() + " is repairing cars");
-//            printInventory();
-            emp.repair(inventory);
-//            printInventory();
-        }
+        washing();
+        repairing();
         printInventory();
         int buyer = numOfBuyer();
-        Random random = new Random();
         System.out.println("We have " + buyer + " Buyers");
+        selling(buyer);
+    }
+
+    public void washing(){
+        for (Interns emp: internList){
+            System.out.println(emp.getName() + " is washing cars");
+            emp.wash(inventory);
+        }
+    }
+
+    public void repairing(){
+        for(Mechanics emp: mechanicsList){
+            System.out.println(emp.getName() + " is repairing cars");
+            emp.repair(inventory);
+        }
+    }
+
+    public void selling(int buyer){
+        Random random = new Random();
         Salesperson representative;
         for(int i =0; i < buyer; i++){
             Buyer newBuyer = new Buyer();
@@ -190,6 +191,7 @@ public class FNCD {
                             + car.getType() + "(" + car.getName()+ ". The buying probability was " + buyingChance+ ". And the transaction was successful for $" +
                             car.getSalePrice());
                     this.budget += car.getSalePrice();
+                    this.dailySales += car.getSalePrice();
                     inventory.remove(car);
                     if(car.getType().equals("performance car")){
                         performanceCarList.remove(car);
@@ -209,7 +211,6 @@ public class FNCD {
             }
         }
     }
-
     public void endDay(){
         dailyUpdate();
         noMoney();
@@ -234,6 +235,13 @@ public class FNCD {
         }
     }
 
+    public void noMoney(){
+        if(this.budget <= 0){
+            this.budget += 250000;
+            System.out.println("You ran out of money, so you borrowed $250,000 from the bank");
+        }
+
+    }
     public void quit(){
         Random random = new Random();
         if(random.nextInt(10) == 0){
@@ -242,16 +250,14 @@ public class FNCD {
             internList.remove(temp);
 
             System.out.println("Intern " + employee.get(employee.size()-1).getName() + " has quit");
-            System.out.println(employee.get(employee.size()-1).getName() + " has worked " + employee.get(employee.size()-1).getTotalDaysWorked());
-            employee.get(employee.size()-1).setStatus("quit");
+            quitHelper();
         }
         if(random.nextInt(10) == 0){
             int temp = random.nextInt(3);
             employee.add(mechanicsList.get(temp));
             mechanicsList.remove(temp);
             System.out.println("Mechanics "+ employee.get(employee.size()-1).getName() + " has quit");
-            System.out.println(employee.get(employee.size()-1).getName() + " has worked " + employee.get(employee.size()-1).getTotalDaysWorked());
-            employee.get(employee.size()-1).setStatus("quit");
+            quitHelper();
 
             Interns steppedUp = internList.get(0);
             String name = steppedUp.getName().split("_")[1];
@@ -268,8 +274,7 @@ public class FNCD {
             employee.add(salespeopleList.get(temp));
             salespeopleList.remove(temp);
             System.out.println("Salesperson " + employee.get(employee.size()-1).getName() + " has quit");
-            System.out.println(employee.get(employee.size()-1).getName() + " has worked " + employee.get(employee.size()-1).getTotalDaysWorked());
-            employee.get(employee.size()-1).setStatus("quit");
+            quitHelper();
 
             Interns steppedUp = internList.get(0);
             String name = steppedUp.getName().split("_")[1];
@@ -282,28 +287,11 @@ public class FNCD {
         }
     }
 
-    private void printStaff(){
-        for (Interns interns : internList) {
-            System.out.print(interns.getName() + " ");
-        }
-        System.out.println();
-        for (Salesperson salesperson : salespeopleList) {
-            System.out.print(salesperson.getName() + " ");
-        }
-        System.out.println();
-        for (Mechanics mechanics : mechanicsList) {
-            System.out.print(mechanics.getName() + " ");
-        }
-        System.out.println();
+    public void quitHelper(){
+        employee.get(employee.size()-1).setStatus("quit");
+        System.out.println(employee.get(employee.size()-1).getName() + " has worked " + employee.get(employee.size()-1).getTotalDaysWorked());
     }
 
-    public void noMoney(){
-        if(this.budget <= 0){
-            this.budget += 250000;
-            System.out.println("You ran out of money, so you borrowed $250,000 from the bank");
-        }
-
-    }
 
     public int numOfBuyer(){
         int num;
@@ -318,6 +306,13 @@ public class FNCD {
         }
         return num;
 
+    }
+    public String updateId(){
+        return String.format("%03d", id++);
+    }
+
+    public String updateInventoryId(){
+        return String.format("%05d", inventoryId++);
     }
 
     public void printAllStaff(){
