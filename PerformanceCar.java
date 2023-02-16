@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
-public class PerformanceCar implements Vehicle{
+public class PerformanceCar extends Vehicle{
     private String name;
     private int saleBonus;
     private int repairBonus;
@@ -145,8 +145,8 @@ public class PerformanceCar implements Vehicle{
     public String getType(){
         return this.type;
     }
-    @Override
-    public void printAction(){
-        System.out.println("Purchased a " + getCondition() + ", " + getCleanliness() + " Performance car " + getBrand() + ", (" + getName() + ") for $" + getCost());
-    }
+//    @Override
+//    public void printAction(){
+//        System.out.println("Purchased a " + getCondition() + ", " + getCleanliness() + " Performance car " + getBrand() + ", (" + getName() + ") for $" + getCost());
+//    }
 }
