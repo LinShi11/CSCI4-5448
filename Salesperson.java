@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Random;
 
 public class Salesperson implements Staff{
@@ -52,7 +51,6 @@ public class Salesperson implements Staff{
 
     @Override
     public void setTotalBonus() {
-        System.out.println(dailyBonus);
         this.totalBonus+=this.dailyBonus;
     }
 
