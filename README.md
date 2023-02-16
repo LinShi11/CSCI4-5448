@@ -2,6 +2,7 @@
 ###### Group: Anuragini Sinha & Lin Shi
 This is the repository for CSCI 4/5448 OOAD. <br>
 This is the directory for project 2
+##### Java Version: 19
 
 ##### Assumption:
 * The intern must wash two different vehicles for each iteration. If there is just one vehicle to wash, then the intern will only wash one car. (same applies to mechanics).

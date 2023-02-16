@@ -635,7 +635,7 @@ Purchased a like new, clean Car Volkswagen, (VOL_00050) for $16349
 
 Washing...
 Intern_012 washed a dirty car (HYU_00049) and made it dirty (making $0).
-Intern_012 washed a dirty pickup (RAM_00048) and made it clean (making $100). 
+Intern_012 washed a dirty pickup (RAM_00048) and made it clean (making $100).
 Intern_014 washed a dirty car (HYU_00049) and made it dirty (making $0).
 Intern_014 washed a clean pickup (RAM_00048) and made it sparkling (making $100).
 Intern_015 washed a dirty car (HYU_00049) and made it clean (making $100).
