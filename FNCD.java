@@ -172,7 +172,7 @@ public class FNCD {
 
     /**
      * washing function that iterate through each intern and ask them to wash two cars.
-     * An example of cohesion. The function only serves one purpose: for washing. 
+     * An example of cohesion. The function only serves one purpose: for washing.
      */
     public void washing(){
         for (Interns emp: internList){
