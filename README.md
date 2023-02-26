@@ -3,9 +3,9 @@
 This is the repository for CSCI 4/5448 OOAD. <br>
 
 ### This is the directory for project 3
-Task 1 Additional vehicles and staff types
-Added classes namely ElectricCar.java, MonsterTruck.java, Motorcycle.java, StaffDriver.java
-Modified FNCD.java to account for added classes.
+- Task 1 Additional vehicles and staff types
+- Added classes namely ElectricCar.java, MonsterTruck.java, Motorcycle.java, StaffDriver.java
+- Modified FNCD.java to account for added classes.
 
 
 ### This is the directory for project 2
