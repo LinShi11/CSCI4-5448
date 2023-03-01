@@ -43,7 +43,7 @@ public class Mechanics implements Staff {
         this.dailyBonus = 0;
         this.dailySalary = 240;
         this.totalPay = pay;
-        this.status = "Working";
+        this.status = "working";
         this.totalDaysWorked = days;
     }
 

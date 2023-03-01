@@ -6,21 +6,21 @@ import java.util.Map;
  * The class vehicle contains all the variables, the getter and setter for the variables, it is uwsed as
  * part of the inheritance.
  */
-public class Vehicle {
-    private String name;
-    private int saleBonus;
-    private int repairBonus;
-    private int washBonus;
-    private int cost;
-    private int salePrice;
-    private String condition;
-    private String cleanliness;
-
-    private String brand;
-    private String status;
-    private String type;
-
-    private int winCount;
+public interface Vehicle {
+//    private String name;
+//    private int saleBonus;
+//    private int repairBonus;
+//    private int washBonus;
+//    private int cost;
+//    private int salePrice;
+//    private String condition;
+//    private String cleanliness;
+//
+//    private String brand;
+//    private String status;
+//    private String type;
+//    private double percent;
+//    private int winCount;
 
     // possible condition and cleanliness
     static final ArrayList<String> possibleConditions = new ArrayList<>(Arrays.asList("like new", "used", "broken"));
@@ -29,159 +29,115 @@ public class Vehicle {
      * setter for name
      * @param name: name of the car
      */
-    public void setName(String name){
-        this.name =name;
-    }
+    void setName(String name);
     /**
      * setter for brand
      */
-    public void setBrand(){
-        this.brand = null;
-    }
+    void setBrand();
     /**
      * setter for cost, set cost based on condition
      */
-    public void setCost(){
-        this.cost = 0;
-    }
+    void setCost();
     /**
      * setter for saleprice based on fix
      * @param percentage: the percent modify the price by
      */
-    public void setSalePrice(double percentage){
-        this.salePrice *= percentage;
-    }
+    void setSalePrice(double percentage);
+    public double getPercent();
     /**
      * setter for sale bonus
      * @param saleBonus: the new sale bonus
      */
-    public void setSaleBonus(int saleBonus){
-        this.saleBonus = saleBonus;
-    }
+    public void setSaleBonus(int saleBonus);
     /**
      * setter for repair bonus
      * @param repairBonus: new repairbonus
      */
-    public void setRepairBonus(int repairBonus){
-        this.repairBonus = repairBonus;
-    }
+    public void setRepairBonus(int repairBonus);
     /**
      * setter for wash bonus
      * @param washBonus: new wash bonus
      */
-    public void setWashBonus(int washBonus){
-        this.washBonus = washBonus;
-    }
+    public void setWashBonus(int washBonus);
     /**
      * setter for condition
      * @param condition: new condition
      */
-    public void setCondition(String condition){
-        this.condition = condition;
-    }
+    public void setCondition(String condition);
     /**
      * setter for cleanliness
      * @param cleanliness: new cleanliness
      */
-    public void setCleanliness(String cleanliness){
-        this.cleanliness = cleanliness;
-    }
+    public void setCleanliness(String cleanliness);
+
     /**
      * setter for status
      * @param status new status
      */
-    public void setStatus(String status){
-        this.status = status;
-    }
+    public void setStatus(String status);
 
-    public void setWinCount(){
-        winCount ++;
-    }
+    public void setWinCount();
     /**
      * getter for name
      * @return name
      */
-    public String getName(){
-        return this.name;
-    }
+    public String getName();
     /**
      * getter for brand
      * @return brand of the car
      */
-    public String getBrand(){
-        return this.brand;
-    }
+    public String getBrand();
     /**
      * getter for sale bonus
      * @return sale bonus
      */
-    public int getSaleBonus(){
-        return this.saleBonus;
-    }
+    public int getSaleBonus();
     /**
      * getter for repair bonus
      * @return repair bonus
      */
-    public int getRepairBonus(){
-        return this.repairBonus;
-    }
+    public int getRepairBonus();
     /**
      * getter for wash bonus
      * @param level: 1 or 2; 1 is normal, 2 is double the bonus for dirty to sparkling
      * @return the wash bonus
      */
-    public int getWashBonus(int level){
-        return level*washBonus;
-    }
+    public int getWashBonus(int level);
     /**
      * getter for cost
      * @return cost
      */
-    public int getCost(){
-        return this.cost;
-    }
+    public int getCost();
     /**
      * getter for sale price
      * @return sale price
      */
-    public int getSalePrice(){
-        return this.salePrice;
-    }
+    public int getSalePrice();
     /**
      * geter for condition
      * @return condition
      */
-    public String getCondition(){
-        return this.condition;
-    }
+    public String getCondition();
     /**
      * getter for cleanliness
      * @return cleanliness
      */
-    public String getCleanliness(){
-        return this.cleanliness;
-    }
+    public String getCleanliness();
     /**
      * getter for status
      * @return status
      */
-    public String getStatus(){
-        return this.status;
-    }
+    public String getStatus();
     /**
      * getter for type
      * @return type
      */
-    public String getType(){
-        return this.type;
-    }
+    public String getType();
 
     /**
      * prints out the action of purchase
      */
-    public void printAction(){
-        System.out.println("Purchased a " + getCondition() + ", " + getCleanliness() + " Car " + getBrand() + ", (" + getName() + ") for $" + getCost());
-    }
+    public void printAction();
 
     /**
      * getter for the arraylist of condition

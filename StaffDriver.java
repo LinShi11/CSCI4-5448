@@ -23,7 +23,7 @@ public class StaffDriver implements Staff{
         this.totalBonus = 0;
         this.dailyBonus = 0;
         this.totalPay = 0;
-        this.status = "Working";
+        this.status = "working";
         this.totalDaysWorked = 0;
         this.injured = false;
         this.winCount = 0;
@@ -115,9 +115,9 @@ public class StaffDriver implements Staff{
     public void setInjured(boolean injured) {
         this.injured = injured;
         if (injured) {
-            this.status = "Injured/quit";
+            this.status = "quit";
         }else {
-            this.status = "Working";
+            this.status = "working";
         }
     }
 

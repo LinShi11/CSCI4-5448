@@ -168,6 +168,7 @@ public class FNCD {
             System.out.println("One of the vehicle got " + (placement.get(j)+1) + " place" );
             System.out.println(staffDriverList.size());
             if (placement.get(j) == 0 || placement.get(j) == 1 || placement.get(j) == 2) {
+                System.out.println("won");
                 racing.get(j).setWinCount();
                 staffDriverList.get(j).setWinCount();
                 staffDriverList.get(j).setDailyBonus(1000);
@@ -180,6 +181,7 @@ public class FNCD {
             }
         }
         removeDriver();
+        updateRaceBonus();
     }
 
     public void removeDriver(){
@@ -191,6 +193,13 @@ public class FNCD {
             } else{
                 counter ++;
             }
+        }
+    }
+
+    public void updateRaceBonus(){
+        for(StaffDriver driver: staffDriverList){
+            driver.setTotalBonus();
+            driver.setDailyBonus(0);
         }
     }
 

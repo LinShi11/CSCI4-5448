@@ -6,7 +6,7 @@ import java.util.Random;
  * The name is determined uniquely.
  * The PerformanceCar class an example of inheritance. The class inherited from class Vehicle.
  */
-public class PerformanceCar extends Vehicle{
+public class PerformanceCar implements Vehicle{
     private String name;
     private int saleBonus;
     private int repairBonus;
@@ -19,6 +19,7 @@ public class PerformanceCar extends Vehicle{
     private String status;
     private String type;
     private int winCount;
+    private double percent;
     //min and max price
     private int min = 20000;
     private int max = 40000;
@@ -55,19 +56,20 @@ public class PerformanceCar extends Vehicle{
         saleBonus = (int)(min * 0.08);
         washBonus = (int)(min * 0.01);
         winCount = 0;
+        percent = 1;
     }
     /**
      * setter for name is first three letter of the brand + _ + id
      * @param name: name of the car
      */
-    @Override
+    
     public void setName(String name) {
         this.name = this.getBrand().substring(0,3).toUpperCase() + "_" + name;
     }
     /**
      * setter for brand, randomly choose a brand
      */
-    @Override
+    
     public void setBrand(){
         Random random = new Random();
         this.brand = brands.get(random.nextInt(brands.size()));
@@ -75,7 +77,7 @@ public class PerformanceCar extends Vehicle{
     /**
      * setter for cost, set cost based on condition
      */
-    @Override
+    
     public void setCost(){
         if(this.condition.equals("used")){
             this.cost *= 0.8;
@@ -87,7 +89,7 @@ public class PerformanceCar extends Vehicle{
      * setter for saleprice based on fix
      * @param percentage: the percent modify the price by
      */
-    @Override
+    
     public void setSalePrice(double percentage){
         this.salePrice *= percentage;
     }
@@ -95,7 +97,7 @@ public class PerformanceCar extends Vehicle{
      * setter for sale bonus
      * @param saleBonus: the new sale bonus
      */
-    @Override
+    
     public void setSaleBonus(int saleBonus) {
         this.saleBonus = saleBonus;
     }
@@ -103,7 +105,7 @@ public class PerformanceCar extends Vehicle{
      * setter for repair bonus
      * @param repairBonus: new repairbonus
      */
-    @Override
+    
     public void setRepairBonus(int repairBonus) {
         this.repairBonus = repairBonus;
     }
@@ -112,7 +114,7 @@ public class PerformanceCar extends Vehicle{
      * setter for wash bonus
      * @param washBonus: new wash bonus
      */
-    @Override
+    
     public void setWashBonus(int washBonus) {
         this.washBonus = washBonus;
     }
@@ -121,7 +123,7 @@ public class PerformanceCar extends Vehicle{
      * setter for condition
      * @param condition: new condition
      */
-    @Override
+    
     public void setCondition(String condition) {
         this.condition = condition;
     }
@@ -129,15 +131,16 @@ public class PerformanceCar extends Vehicle{
      * setter for cleanliness
      * @param cleanliness: new cleanliness
      */
-    @Override
+    
     public void setCleanliness(String cleanliness) {
         this.cleanliness = cleanliness;
     }
+
     /**
      * setter for status
      * @param status new status
      */
-    @Override
+    
     public void setStatus(String status){
         this.status = status;
     }
@@ -149,7 +152,7 @@ public class PerformanceCar extends Vehicle{
     public void setWinCount(){
         winCount ++;
     }
-    @Override
+    
     public String getName() {
         return this.name;
     }
@@ -157,13 +160,13 @@ public class PerformanceCar extends Vehicle{
      * getter for brand
      * @return brand of the car
      */
-    @Override
+    
     public String getBrand(){ return this.brand; }
     /**
      * getter for sale bonus
      * @return sale bonus
      */
-    @Override
+    
     public int getSaleBonus() {
         return this.saleBonus;
     }
@@ -172,7 +175,7 @@ public class PerformanceCar extends Vehicle{
      * @return repair bonus
      */
 
-    @Override
+    
     public int getRepairBonus() {
         return this.repairBonus;
     }
@@ -181,7 +184,7 @@ public class PerformanceCar extends Vehicle{
      * @param level: 1 or 2; 1 is normal, 2 is double the bonus for dirty to sparkling
      * @return the wash bonus
      */
-    @Override
+    
     public int getWashBonus(int level) {
         if(level == 1){
             return this.washBonus;
@@ -193,7 +196,7 @@ public class PerformanceCar extends Vehicle{
      * getter for cost
      * @return cost
      */
-    @Override
+    
     public int getCost() {
         return this.cost;
     }
@@ -201,18 +204,19 @@ public class PerformanceCar extends Vehicle{
      * getter for sale price
      * @return sale price
      */
-    @Override
+    
     public int getSalePrice() {
         if(winCount >= 1){
+            System.out.println("FNCD has at least one win with this type of vehicle");
             salePrice *= 1.1;
         }
-        return this.salePrice;
+        return (int) (this.salePrice * this.percent);
     }
     /**
      * geter for condition
      * @return condition
      */
-    @Override
+    
     public String getCondition() {
         return this.condition;
     }
@@ -220,7 +224,7 @@ public class PerformanceCar extends Vehicle{
      * getter for cleanliness
      * @return cleanliness
      */
-    @Override
+    
     public String getCleanliness() {
         return this.cleanliness;
     }
@@ -228,7 +232,7 @@ public class PerformanceCar extends Vehicle{
      * getter for status
      * @return status
      */
-    @Override
+    
     public String getStatus(){
         return this.status;
     }
@@ -236,8 +240,18 @@ public class PerformanceCar extends Vehicle{
      * getter for type
      * @return type
      */
-    @Override
+    
     public String getType(){
         return this.type;
+    }
+
+    
+    public void printAction() {
+        System.out.println("Purchased a " + getCondition() + ", " + getCleanliness() + " Car " + getBrand() + ", (" + getName() + ") for $" + getCost());
+    }
+
+    
+    public double getPercent(){
+        return this.percent;
     }
 }

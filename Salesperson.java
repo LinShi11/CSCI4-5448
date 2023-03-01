@@ -40,7 +40,7 @@ public class Salesperson implements Staff{
         this.dailyBonus = 0;
         this.dailySalary = 200;
         this.totalPay = pay;
-        this.status = "Working";
+        this.status = "working";
         this.totalDaysWorked = days;
     }
     /**
@@ -179,11 +179,40 @@ public class Salesperson implements Staff{
         if(car == null){
             System.out.println("There is no car available to the buyer. ");
         } else{
+            car = addDecorator(car);
             // determine whether they will buy the car
             buying(buyer, car);
         }
         return car;
 
+    }
+
+    public Vehicle addDecorator(Vehicle car){
+        Random random = new Random();
+        System.out.println("The original price of the car is: $" + car.getSalePrice());
+        System.out.println("The buyer has selected the following plan: ");
+        int warranty = random.nextInt(1);
+        if(warranty < 1){
+            car = new ExtendedWarranty(car);
+            System.out.print("Extended Warranty, ");
+        }
+        int coating = random.nextInt(10);
+        if(coating < 1){
+            car = new Undercoating(car);
+            System.out.print("Undercoating, ");
+        }
+        int road = random.nextInt(20);
+        if(road < 1){
+            car = new RoadRescueCoverage(car);
+            System.out.print("Road Rescue Coverage, ");
+        }
+        int radio = random.nextInt(10);
+        if(radio < 4){
+            car = new SatelliteRadio(car);
+            System.out.print("Satellite Radio");
+        }
+        System.out.print(". Making the current sale price " + (car.getPercent()*100) + "% of the original price. Therefore the current sale price is $" + (int)(car.getSalePrice() * car.getPercent()) + "\n");
+        return car;
     }
 
     /**
@@ -237,7 +266,7 @@ public class Salesperson implements Staff{
                 System.out.println("Buyer " + buyer.getBuyingChance() + " "+ buyer.getVehicleType()+ " " +
                         this.getName() + " suggested a " + car.getCleanliness() + ", " + car.getCondition() + " "
                         + car.getType() + "(" + car.getName()+ "). The buying probability was " + buyingChance+ ". And the transaction was successful for $" +
-                        car.getSalePrice() + " (making $"+ car.getSaleBonus() + ")");
+                        (int)(car.getSalePrice() * car.getPercent()) + " (making $"+ car.getSaleBonus() + ")");
                 // add bonus and change status
                 this.dailyBonus += car.getSaleBonus();
                 car.setStatus("sold");
