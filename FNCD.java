@@ -25,7 +25,11 @@ public class FNCD {
     ArrayList<Interns> internList;
     ArrayList<Mechanics> mechanicsList;
     ArrayList<Salesperson> salespeopleList;
-
+    
+    ArrayList<ElectricCar> electricCarList;
+    ArrayList<MonsterTruck> monsterTruckList;
+    ArrayList<Motorcycle> motorcycleList;
+    ArrayList<StaffDriver> staffDriverList;
     /**
      * Constructor for FNCD class
      * Initialize all variable that will be used in the simulation
@@ -47,12 +51,18 @@ public class FNCD {
         this.pickupsList = new ArrayList<>();
         this.inventory = new ArrayList<>();
         this.soldCars = new ArrayList<>();
-
-        // directly hire 3 interns, 3 mechanics, and 3 salesperson
+        this.staffDriverList = new ArrayList<>();
+        
+        this.electricCarList = new ArrayList<>();
+        this.monsterTruckList = new ArrayList<>();
+        this.motorcycleList = new ArrayList<>();
+        
+        // directly hire 3 interns, 3 mechanics, and 3 salesperson + 3 drivers (staffs)
         for(int i = 0; i < maxSize; i++){
             internList.add(new Interns("Intern_" + updateId()));
             mechanicsList.add(new Mechanics("Mechanics_"+ updateId()));
             salespeopleList.add(new Salesperson("Salesperson_" + updateId()));
+            staffDriverList.add(new StaffDriver("Salesperson_" + updateId()));
         }
     }
 
@@ -112,6 +122,16 @@ public class FNCD {
                 System.out.println("Hired intern " + internList.get(internList.size()-1).getName());
             }
         }
+        
+        if(staffDriverList.size() != maxSize){
+            // iterate maxSize(3) - currentSize so we can add more interns
+            int tempLength = staffDriverList.size();
+            for(int i = 0; i < maxSize-tempLength; i++){
+                //updateId is a helper function that keeps track of number of staffs we have hired
+            	staffDriverList.add(new StaffDriver("Salesperson_" + updateId()));
+                System.out.println("Hired driver " + staffDriverList.get(staffDriverList.size()-1).getName());
+            }
+        }
     }
 
     /**
@@ -137,6 +157,25 @@ public class FNCD {
             Pickups car = new Pickups(updateInventoryId());
             pickupsList.add(car);
             setInventoryHelper(car);
+        }
+        
+        tempLength = electricCarList.size();
+        for(int i = 0; i < maxInventory - tempLength; i++){
+        	ElectricCar car = new ElectricCar(updateInventoryId());
+        	electricCarList.add(car);
+            setInventoryHelper(car);
+        }
+        tempLength = monsterTruckList.size();
+        for(int i = 0; i < maxInventory - tempLength; i++){
+        	MonsterTruck car = new MonsterTruck(updateInventoryId());
+        	monsterTruckList.add(car);
+            setInventoryHelper(car);
+        }
+        tempLength = motorcycleList.size();
+        for(int i = 0; i < maxInventory - tempLength; i++){
+        	Motorcycle motorcycle = new Motorcycle(updateInventoryId());
+        	motorcycleList.add(motorcycle);
+            setInventoryHelper(motorcycle);
         }
         System.out.println();
     }
@@ -168,6 +207,12 @@ public class FNCD {
         System.out.println("\nWe have " + buyer + " Buyers today");
         System.out.println("Selling...");
         selling(buyer);
+        
+        //random injured
+        Random rand = new Random();
+        if (rand.nextInt(10) == 0) {
+        	staffDriverList.get(rand.nextInt(staffDriverList.size())).setInjured(true);
+        }
     }
 
     /**
@@ -268,6 +313,11 @@ public class FNCD {
             staff.setTotalPay();
             staff.setTotalBonus();
         }
+        for(StaffDriver staff: staffDriverList){
+            staff.setTotalDaysWorked();
+            staff.setTotalPay();
+            staff.setTotalBonus();
+        }
     }
 
     /**
@@ -334,6 +384,27 @@ public class FNCD {
             System.out.println("Intern " + steppedUp.getName() + " has stepped up and took the salesperson job");
 
         }
+        
+        // same as drivers, leave is injured
+        boolean foundInjured = true;
+        
+        for(int i = 0; foundInjured && i < staffDriverList.size(); i++){
+        	
+        	foundInjured = false;
+        	
+        	StaffDriver staff = staffDriverList.get(i);
+        	if (staff.isInjured()) {
+        		
+        		//add them to a list of past employees
+                employee.add(staff);
+                staffDriverList.remove(staff);
+
+                // display the information to the user using a helper function
+                quitHelper("Driver");
+                
+                foundInjured = true;
+        	}
+        }
     }
 
     /**
@@ -394,6 +465,9 @@ public class FNCD {
             System.out.println(String.format("%20s %20s %20s %20s %15s", emp.getName(), emp.getTotalDaysWorked() + " days", "$" + emp.getTotalPay(), "$" + emp.getTotalBonus(), emp.getStatus()));
         }
         for (Salesperson emp: salespeopleList){
+            System.out.println(String.format("%20s %20s %20s %20s %15s", emp.getName(), emp.getTotalDaysWorked() + " days", "$" + emp.getTotalPay(), "$" + emp.getTotalBonus(), emp.getStatus()));
+        }
+        for (StaffDriver emp: staffDriverList){
             System.out.println(String.format("%20s %20s %20s %20s %15s", emp.getName(), emp.getTotalDaysWorked() + " days", "$" + emp.getTotalPay(), "$" + emp.getTotalBonus(), emp.getStatus()));
         }
         for (Staff emp: employee){
