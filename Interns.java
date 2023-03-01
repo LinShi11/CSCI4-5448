@@ -108,28 +108,37 @@ public class Interns implements Staff {
         }
         Random random = new Random();
         if(dirtyCars >= 2){
+        	
+        	WashStrategy washStrategy = new WashCleanStrategy();
+        	
             int carNum;
             for (int i = 0; i < 2; i ++) {
                 carNum = random.nextInt(dirtyCars);
                 dirtyCars--;
                 Vehicle car = washing.get(carNum);
                 String previous = car.getCleanliness();
-                washing.get(carNum).setCleanliness(washDirty(car));
+                washing.get(carNum).setCleanliness(washStrategy.wash(this, car));
                 System.out.println(this.getName() + " washed a " + previous +" "+ car.getType()
                         +" ("+ car.getName() + ") and made it " + car.getCleanliness());
                 washing.remove(carNum);
             }
         }else if (dirtyCars == 1 && cleanCars >= 1){
+        	
+        	 WashStrategy washStrategy = new WashDirtyStrategy();
+        	 
             Vehicle car = washing.get(0);
             String previous = car.getCleanliness();
-            washing.get(0).setCleanliness(washDirty(car));
+            washing.get(0).setCleanliness(washStrategy.wash(this, car));
             System.out.println(this.getName() + " washed a " + previous +" "+ car.getType()
                     +" ("+ car.getName() + ") and made it " + car.getCleanliness());
             washing.remove(0);
             int carNum = random.nextInt(cleanCars);
             car = washing.get(carNum);
             previous = car.getCleanliness();
-            washing.get(carNum).setCleanliness(washClean(car));
+            
+            washStrategy = new WashCleanStrategy();
+            
+            washing.get(carNum).setCleanliness(washStrategy.wash(this, car));
             System.out.println(this.getName() + " washed a " + previous +" "+ car.getType()
                     +" ("+ car.getName() + ") and made it " + car.getCleanliness());
         } else{
@@ -140,45 +149,21 @@ public class Interns implements Staff {
             } else{
                 temp = cleanCars;
             }
+            
+            WashStrategy washStrategy = new WashCleanStrategy();
+            
             for(int i = 0; i < temp; i ++){
                 carNum = random.nextInt(cleanCars);
                 cleanCars--;
                 Vehicle car = washing.get(carNum);
                 String previous = car.getCleanliness();
-                washing.get(carNum).setCleanliness(washClean(car));
+                washing.get(carNum).setCleanliness(washStrategy.wash(this, car));
                 System.out.println(this.getName() + " washed a " + previous +" "+ car.getType()
                         +" ("+ car.getName() + ") and made it " + car.getCleanliness());
                 washing.remove(carNum);
             }
         }
 
-    }
-
-    public String washClean(Vehicle car){
-        Random random = new Random();
-        int chance = random.nextInt(100);
-        if(chance < 5){
-            return "dirty";
-        } else if(chance < 35){
-            this.dailyBonus += car.getWashBonus(1);
-            return "sparkling";
-        } else{
-            return "clean";
-        }
-    }
-
-    public String washDirty(Vehicle car){
-        Random random = new Random();
-        int chance = random.nextInt(10);
-        if (chance < 8){
-            this.dailyBonus += car.getWashBonus(1);
-            return "clean";
-        } else if (chance < 9){
-            this.dailyBonus += car.getWashBonus(2);
-            return "sparkling";
-        } else{
-            return "dirty";
-        }
     }
 }
 
