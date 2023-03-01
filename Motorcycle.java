@@ -23,6 +23,7 @@ public class Motorcycle extends Vehicle{
      * In no case can cc be less than 50.
      */
     private int engineSize;
+    private int winCount;
 
     private int min = 10000;
     private int max = 20000;
@@ -58,6 +59,8 @@ public class Motorcycle extends Vehicle{
         if (engineSize < 50) {
             engineSize = 50;
         }
+
+        winCount = 0;
     }
     @Override
     public void setName(String name) {
@@ -110,6 +113,10 @@ public class Motorcycle extends Vehicle{
     public void setStatus(String status){
         this.status = status;
     }
+
+    public void setWinCount(){
+        winCount++;
+    }
     @Override
     public String getName() {
         return this.name;
@@ -146,6 +153,9 @@ public class Motorcycle extends Vehicle{
 
     @Override
     public int getSalePrice() {
+        if(winCount >= 1){
+            salePrice *= 1.1;
+        }
         return this.salePrice;
     }
 

@@ -1,6 +1,9 @@
+import java.util.Random;
+
 public class StaffDriver implements Staff{
 
     private String name;
+    private int winCount;
     private int dailySalary;
     private int dailyBonus;
     private int totalPay;
@@ -19,22 +22,11 @@ public class StaffDriver implements Staff{
         setName(name);
         this.totalBonus = 0;
         this.dailyBonus = 0;
-        this.dailySalary = 200;
         this.totalPay = 0;
         this.status = "Working";
         this.totalDaysWorked = 0;
         this.injured = false;
-    }
-
-    public StaffDriver(String name, int days, int bonus, int pay){
-        setName(name);
-        this.totalBonus = bonus;
-        this.dailyBonus = 0;
-        this.dailySalary = 200;
-        this.totalPay = pay;
-        this.status = "Working";
-        this.totalDaysWorked = days;
-        this.injured = false;
+        this.winCount = 0;
     }
 
     @Override
@@ -46,6 +38,7 @@ public class StaffDriver implements Staff{
     public void setDailySalary(int dailySalary) {
         this.dailySalary = dailySalary;
     }
+
     @Override
     public void setDailyBonus(int dailyBonus){
         this.dailyBonus = dailyBonus;
@@ -53,12 +46,11 @@ public class StaffDriver implements Staff{
 
     @Override
     public void setTotalPay() {
-        this.totalPay+=this.dailySalary;
+        this.totalPay += dailySalary;
     }
 
     @Override
     public void setTotalBonus() {
-        System.out.println(dailyBonus);
         this.totalBonus+=this.dailyBonus;
     }
 
@@ -70,6 +62,9 @@ public class StaffDriver implements Staff{
     @Override
     public void setTotalDaysWorked() {
         this.totalDaysWorked++;
+    }
+    public void setWinCount(){
+        winCount++;
     }
 
     @Override
@@ -124,5 +119,15 @@ public class StaffDriver implements Staff{
         }else {
             this.status = "Working";
         }
+    }
+
+    public boolean selfExam(){
+        Random random = new Random();
+        int hurt = random.nextInt(10);
+        if(hurt < 10){
+            setInjured(true);
+            return true;
+        }
+        return false;
     }
 }

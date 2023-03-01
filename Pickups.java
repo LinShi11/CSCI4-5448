@@ -20,6 +20,8 @@ public class Pickups extends Vehicle{
 
     private String status;
     private String type;
+
+    private int winCount;
     // min and max cost
     private int min = 10000;
     private int max = 40000;
@@ -53,6 +55,7 @@ public class Pickups extends Vehicle{
         repairBonus = (int)(min * .10);
         saleBonus = (int)(min * 0.08);
         washBonus = (int)(min * 0.01);
+        winCount = 0;
     }
     /**
      * setter for name is first three letter of the brand + _ + id
@@ -142,6 +145,10 @@ public class Pickups extends Vehicle{
      * getter for name
      * @return name
      */
+
+    public void setWinCount(){
+        winCount++;
+    }
     @Override
     public String getName() {
         return this.name;
@@ -198,6 +205,9 @@ public class Pickups extends Vehicle{
      */
     @Override
     public int getSalePrice() {
+        if(winCount >= 1){
+            salePrice *= 1.1;
+        }
         return this.salePrice;
     }
     /**

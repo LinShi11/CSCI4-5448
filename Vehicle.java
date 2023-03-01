@@ -20,6 +20,8 @@ public class Vehicle {
     private String status;
     private String type;
 
+    private int winCount;
+
     // possible condition and cleanliness
     static final ArrayList<String> possibleConditions = new ArrayList<>(Arrays.asList("like new", "used", "broken"));
     static final ArrayList<String> possibleCleanliness = new ArrayList<>(Arrays.asList("sparkling", "clean", "dirty"));
@@ -90,6 +92,10 @@ public class Vehicle {
      */
     public void setStatus(String status){
         this.status = status;
+    }
+
+    public void setWinCount(){
+        winCount ++;
     }
     /**
      * getter for name

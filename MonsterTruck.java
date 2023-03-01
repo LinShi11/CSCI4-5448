@@ -16,6 +16,7 @@ public class MonsterTruck extends Vehicle{
     private String brand;
     private String status;
     private String type;
+    private int winCount;
 
     private int min = 10000;
     private int max = 20000;
@@ -91,6 +92,8 @@ public class MonsterTruck extends Vehicle{
         saleBonus = (int)(min * 0.08);
         washBonus = (int)(min * 0.01);
 
+        winCount = 0;
+
 
     }
     @Override
@@ -144,6 +147,10 @@ public class MonsterTruck extends Vehicle{
     public void setStatus(String status){
         this.status = status;
     }
+
+    public void setWinCount(){
+        winCount++;
+    }
     @Override
     public String getName() {
         return this.name;
@@ -180,6 +187,9 @@ public class MonsterTruck extends Vehicle{
 
     @Override
     public int getSalePrice() {
+        if(winCount >= 1){
+            salePrice *= 1.1;
+        }
         return this.salePrice;
     }
 

@@ -1,5 +1,7 @@
+import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Objects;
 import java.util.Random;
 
 /**
@@ -45,24 +47,24 @@ public class FNCD {
         this.internList = new ArrayList<>();
         this.mechanicsList = new ArrayList<>();
         this.salespeopleList = new ArrayList<>();
+        this.staffDriverList = new ArrayList<>();
         this.employee = new ArrayList<>();
+
         this.performanceCarList = new ArrayList<>();
         this.carsList = new ArrayList<>();
         this.pickupsList = new ArrayList<>();
-        this.inventory = new ArrayList<>();
-        this.soldCars = new ArrayList<>();
-        this.staffDriverList = new ArrayList<>();
-
         this.electricCarList = new ArrayList<>();
         this.monsterTruckList = new ArrayList<>();
         this.motorcycleList = new ArrayList<>();
+        this.inventory = new ArrayList<>();
+        this.soldCars = new ArrayList<>();
 
         // directly hire 3 interns, 3 mechanics, and 3 salesperson + 3 drivers (staffs)
         for(int i = 0; i < maxSize; i++){
             internList.add(new Interns("Intern_" + updateId()));
             mechanicsList.add(new Mechanics("Mechanics_"+ updateId()));
             salespeopleList.add(new Salesperson("Salesperson_" + updateId()));
-            staffDriverList.add(new StaffDriver("Salesperson_" + updateId()));
+            staffDriverList.add(new StaffDriver("Driver_" + updateId()));
         }
     }
 
@@ -80,9 +82,10 @@ public class FNCD {
                 startDay();
                 endDay();
                 printAllStaff();
-            } else{
-                System.out.println("******FNCD Day " + this.date + "******");
-                System.out.println("We are closed on Sunday");
+            }
+            if (date % 7 == 0 || date % 7 == 3){
+                System.out.println("******FNCD Day " + this.date + ": Race day!!!!!!!******");
+                race();
             }
             date++;
         }
@@ -93,6 +96,102 @@ public class FNCD {
         printAllStaff();
         System.out.println("\nHere is a list of all the vehicles: ");
         printInventory();
+    }
+
+    public void race(){
+        Random random = new Random();
+        int car = random.nextInt(4);
+        ArrayList<Vehicle> racing = new ArrayList<>();
+        System.out.println(car);
+        switch (car){
+            case 0:
+                for(PerformanceCar vehicle: performanceCarList){
+                    if(!vehicle.getCondition().equals("broken") ){
+                        racing.add(vehicle);
+                    }
+                }
+                raceHelper(racing);
+                break;
+            case 1:
+                for(Pickups vehicle: pickupsList){
+                    if(!vehicle.getCondition().equals("broken") ){
+                        racing.add(vehicle);
+                    }
+                }
+                raceHelper(racing);
+                break;
+            case 2:
+                for(MonsterTruck vehicle: monsterTruckList){
+                    if(!vehicle.getCondition().equals("broken") ){
+                        racing.add(vehicle);
+                    }
+                }
+                raceHelper(racing);
+                break;
+            case 3:
+                for(Motorcycle vehicle: motorcycleList){
+                    if(!vehicle.getCondition().equals("broken") ){
+                        racing.add(vehicle);
+                    }
+                }
+                raceHelper(racing);
+                break;
+            default:
+                System.out.println("error");
+        }
+
+    }
+
+    public void raceHelper(ArrayList<Vehicle> racing){
+        int count = racing.size();
+        printInventory();
+        Random random = new Random();
+        if(count == 0){
+            System.out.println("FNCD will not be participating in the race. ");
+            return;
+        } else if (count > 3 ) {
+            count = 3;
+        }
+        System.out.println("FNCD is racing with " + racing.get(0).getType());
+        System.out.println("FNCD have " + count + " vehicles in the race. ");
+        ArrayList<Integer> placement = new ArrayList<>();
+        int temp;
+        for(int i = 0; i < count; i++){
+            temp = random.nextInt(20);
+            while(placement.contains(temp)){
+                temp = random.nextInt(20);
+            }
+            placement.add(temp);
+            System.out.println(placement);
+        }
+        for(int j = 0; j < placement.size(); j++) {
+            System.out.println("One of the vehicle got " + (placement.get(j)+1) + " place" );
+            System.out.println(staffDriverList.size());
+            if (placement.get(j) == 0 || placement.get(j) == 1 || placement.get(j) == 2) {
+                racing.get(j).setWinCount();
+                staffDriverList.get(j).setWinCount();
+                staffDriverList.get(j).setDailyBonus(1000);
+            } else if (placement.get(j) == 19 ||placement.get(j) == 18 || placement.get(j) == 17){
+                racing.get(j).setCondition("broken");
+                boolean injury = staffDriverList.get(j).selfExam();
+                if(injury){
+                    System.out.println(staffDriverList.get(j).getName() + " got injured and quit FNCD");
+                }
+            }
+        }
+        removeDriver();
+    }
+
+    public void removeDriver(){
+        int counter = 0;
+        while(counter < staffDriverList.size()){
+            if(staffDriverList.get(counter).isInjured()){
+                employee.add(staffDriverList.get(counter));
+                staffDriverList.remove(counter);
+            } else{
+                counter ++;
+            }
+        }
     }
 
     /**
@@ -125,11 +224,11 @@ public class FNCD {
         }
 
         if(staffDriverList.size() != maxSize){
-            // iterate maxSize(3) - currentSize so we can add more interns
+            // iterate maxSize(3) - currentSize so we can add more driver
             int tempLength = staffDriverList.size();
             for(int i = 0; i < maxSize-tempLength; i++){
                 //updateId is a helper function that keeps track of number of staffs we have hired
-                staffDriverList.add(new StaffDriver("Salesperson_" + updateId()));
+                staffDriverList.add(new StaffDriver("Driver_" + updateId()));
                 System.out.println("Hired driver " + staffDriverList.get(staffDriverList.size()-1).getName());
             }
         }
@@ -208,12 +307,6 @@ public class FNCD {
         System.out.println("\nWe have " + buyer + " Buyers today");
         System.out.println("Selling...");
         selling(buyer);
-
-        //random injured
-        Random rand = new Random();
-        if (rand.nextInt(10) == 0) {
-            staffDriverList.get(rand.nextInt(staffDriverList.size())).setInjured(true);
-        }
     }
 
     /**
@@ -380,27 +473,6 @@ public class FNCD {
 
             System.out.println("Intern " + steppedUp.getName() + " has stepped up and took the salesperson job");
 
-        }
-
-        // same as drivers, leave is injured
-        boolean foundInjured = true;
-
-        for(int i = 0; foundInjured && i < staffDriverList.size(); i++){
-
-            foundInjured = false;
-
-            StaffDriver staff = staffDriverList.get(i);
-            if (staff.isInjured()) {
-
-                //add them to a list of past employees
-                employee.add(staff);
-                staffDriverList.remove(staff);
-
-                // display the information to the user using a helper function
-                quitHelper("Driver");
-
-                foundInjured = true;
-            }
         }
     }
 
