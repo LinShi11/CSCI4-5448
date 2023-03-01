@@ -7,7 +7,7 @@ public class StaffDriver implements Staff{
     private int totalBonus;
     private String status;
     private int totalDaysWorked;
-    
+
     /**
      * Drivers do not quit like other Staff subclasses. 
      * However, they may be Injured in a Race activity. In that case,  
@@ -36,7 +36,7 @@ public class StaffDriver implements Staff{
         this.totalDaysWorked = days;
         this.injured = false;
     }
-    
+
     @Override
     public void setName(String name) {
         this.name = name;
@@ -107,22 +107,22 @@ public class StaffDriver implements Staff{
         return this.totalDaysWorked;
     }
 
-	/**
-	 * @return the injured
-	 */
-	public boolean isInjured() {
-		return injured;
-	}
+    /**
+     * @return the injured
+     */
+    public boolean isInjured() {
+        return injured;
+    }
 
-	/**
-	 * @param injured the injured to set
-	 */
-	public void setInjured(boolean injured) {
-		this.injured = injured;
-		if (injured) {
-			this.status = "Injured/quit";
-		}else {
-			this.status = "Working";
-		}
-	}
+    /**
+     * @param injured the injured to set
+     */
+    public void setInjured(boolean injured) {
+        this.injured = injured;
+        if (injured) {
+            this.status = "Injured/quit";
+        }else {
+            this.status = "Working";
+        }
+    }
 }

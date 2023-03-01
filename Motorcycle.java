@@ -15,12 +15,12 @@ public class Motorcycle extends Vehicle{
     private String brand;
     private String status;
     private String type;
-    
+
     /*
-     * Motorcycles have an unique Engine Size rating in cubic centimeters (cc). 
-     * This value should be generated from a  
-     * truncated Normal Distribution with mean 700 std. dev. 300. 
-     * In no case can cc be less than 50. 
+     * Motorcycles have an unique Engine Size rating in cubic centimeters (cc).
+     * This value should be generated from a
+     * truncated Normal Distribution with mean 700 std. dev. 300.
+     * In no case can cc be less than 50.
      */
     private int engineSize;
 
@@ -52,11 +52,11 @@ public class Motorcycle extends Vehicle{
         repairBonus = (int)(min * .10);
         saleBonus = (int)(min * 0.08);
         washBonus = (int)(min * 0.01);
-        
+
         //https://www.javamex.com/tutorials/random_numbers/gaussian_distribution_2.shtml
         engineSize = (int)(random.nextGaussian() * 300 + 700);
         if (engineSize < 50) {
-        	engineSize = 50;
+            engineSize = 50;
         }
     }
     @Override

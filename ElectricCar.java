@@ -15,11 +15,11 @@ public class ElectricCar extends Vehicle{
     private String brand;
     private String status;
     private String type;
-    
+
     /*
-     * Electric Cars have a unique Range attribute, 
-     * initially set randomly from 60 to 400 miles. 
-     * If an Electric Car arrives  as Like New or is repaired to Like New, 
+     * Electric Cars have a unique Range attribute,
+     * initially set randomly from 60 to 400 miles.
+     * If an Electric Car arrives  as Like New or is repaired to Like New,
      * Range increases by 100 miles
      */
     private int range;
@@ -52,10 +52,10 @@ public class ElectricCar extends Vehicle{
         repairBonus = (int)(min * .10);
         saleBonus = (int)(min * 0.08);
         washBonus = (int)(min * 0.01);
-        
+
         range = random.nextInt(341) + 60;
         if (condition.contains("new")) {
-        	range += 100;
+            range += 100;
         }
     }
     @Override
@@ -99,9 +99,9 @@ public class ElectricCar extends Vehicle{
     @Override
     public void setCondition(String condition) {
         this.condition = condition;
-        
+
         if (condition.contains("new")) {
-        	range += 100;
+            range += 100;
         }
     }
 

@@ -22,31 +22,31 @@ public class MonsterTruck extends Vehicle{
     final ArrayList<String> brands = new ArrayList<>(Arrays.asList("Monster Jam Steel Titans 2", "Grave Digger", "Son-uva Digger"));
 
     final static ArrayList<String> names = new ArrayList<>(Arrays.asList(
-    "Air Force Afterburner", "Avenger", 
-    "Bad News Travels Fast", "Batman", 
-    "Backwards Bob", "Bear Foot (1979)", 
-    "Bear Foot (F-150)", "Bear Foot (2xtreme)", 
-    "Bear Foot (Silverado)", "Bear Foot USA", 
-    "Bigfoot", "Black Stallion", 
-    "Blacksmith", "Blue Thunder", 
-    "Bounty Hunter", "Brutus", 
-    "Bulldozer", "Captain's Curse", 
-    "Cyborg", "El Toro Loco", 
-    "Grave Digger", "Grinder", 
-    "Gunslinger", "Jurassic Attack", 
-    "King Krunch", "Lucas Oil Crusader", 
-    "Madusa", "Maximum Destruction (Max-D)", 
-    "Mohawk Warrior", "Monster Mutt", 
-    "Monster Mutt Dalmatian", "Predator", 
-    "Shell Camino", "Raminator", 
-    "Snake Bite", "Stone Crusher", 
-    "Sudden Impact", "Swamp Thing", 
-    "The Destroyer", "The Felon", 
-    "USA-1", "War Wizard", "WCW Nitro Machine", 
-    "Zombie"));
-    
+            "Air Force Afterburner", "Avenger",
+            "Bad News Travels Fast", "Batman",
+            "Backwards Bob", "Bear Foot (1979)",
+            "Bear Foot (F-150)", "Bear Foot (2xtreme)",
+            "Bear Foot (Silverado)", "Bear Foot USA",
+            "Bigfoot", "Black Stallion",
+            "Blacksmith", "Blue Thunder",
+            "Bounty Hunter", "Brutus",
+            "Bulldozer", "Captain's Curse",
+            "Cyborg", "El Toro Loco",
+            "Grave Digger", "Grinder",
+            "Gunslinger", "Jurassic Attack",
+            "King Krunch", "Lucas Oil Crusader",
+            "Madusa", "Maximum Destruction (Max-D)",
+            "Mohawk Warrior", "Monster Mutt",
+            "Monster Mutt Dalmatian", "Predator",
+            "Shell Camino", "Raminator",
+            "Snake Bite", "Stone Crusher",
+            "Sudden Impact", "Swamp Thing",
+            "The Destroyer", "The Felon",
+            "USA-1", "War Wizard", "WCW Nitro Machine",
+            "Zombie"));
+
     private static Hashtable<String, Integer> usedNames = new Hashtable<>();
-    
+
     public MonsterTruck(String id){
         //https://stackoverflow.com/questions/3680637/generate-a-random-double-in-a-range
         // https://www.geeksforgeeks.org/how-to-set-precision-for-double-values-in-java/
@@ -67,31 +67,31 @@ public class MonsterTruck extends Vehicle{
         status = "in stock";
         type = "car";
         setBrand();
-        
+
         if (id == null || id.equals("") || names.contains(id)) {//id is not provided, get from the list
-        	
-        	id = names.get(random.nextInt(names.size()));        	
+
+            id = names.get(random.nextInt(names.size()));
         }
-        
+
         if (names.contains(id)) {
-        	
-        	if (usedNames.containsKey(id)) { //name is used
-        		int nextNum = usedNames.get(id) + 1; 
-        		usedNames.put(id, nextNum);//increase by 1
-        		
- 	        	id = id + " " + nextNum; 	        	
- 	        }else {
- 	        	usedNames.put(id, 1); //first used
- 	        }        	
+
+            if (usedNames.containsKey(id)) { //name is used
+                int nextNum = usedNames.get(id) + 1;
+                usedNames.put(id, nextNum);//increase by 1
+
+                id = id + " " + nextNum;
+            }else {
+                usedNames.put(id, 1); //first used
+            }
         }
-        
+
         setName(id);
-        
+
         repairBonus = (int)(min * .10);
         saleBonus = (int)(min * 0.08);
         washBonus = (int)(min * 0.01);
 
-        
+
     }
     @Override
     public void setName(String name) {

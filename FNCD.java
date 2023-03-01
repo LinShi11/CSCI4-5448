@@ -25,7 +25,7 @@ public class FNCD {
     ArrayList<Interns> internList;
     ArrayList<Mechanics> mechanicsList;
     ArrayList<Salesperson> salespeopleList;
-    
+
     ArrayList<ElectricCar> electricCarList;
     ArrayList<MonsterTruck> monsterTruckList;
     ArrayList<Motorcycle> motorcycleList;
@@ -52,11 +52,11 @@ public class FNCD {
         this.inventory = new ArrayList<>();
         this.soldCars = new ArrayList<>();
         this.staffDriverList = new ArrayList<>();
-        
+
         this.electricCarList = new ArrayList<>();
         this.monsterTruckList = new ArrayList<>();
         this.motorcycleList = new ArrayList<>();
-        
+
         // directly hire 3 interns, 3 mechanics, and 3 salesperson + 3 drivers (staffs)
         for(int i = 0; i < maxSize; i++){
             internList.add(new Interns("Intern_" + updateId()));
@@ -79,6 +79,7 @@ public class FNCD {
                 System.out.println("******FNCD Day " + this.date + "******");
                 startDay();
                 endDay();
+                printAllStaff();
             } else{
                 System.out.println("******FNCD Day " + this.date + "******");
                 System.out.println("We are closed on Sunday");
@@ -122,13 +123,13 @@ public class FNCD {
                 System.out.println("Hired intern " + internList.get(internList.size()-1).getName());
             }
         }
-        
+
         if(staffDriverList.size() != maxSize){
             // iterate maxSize(3) - currentSize so we can add more interns
             int tempLength = staffDriverList.size();
             for(int i = 0; i < maxSize-tempLength; i++){
                 //updateId is a helper function that keeps track of number of staffs we have hired
-            	staffDriverList.add(new StaffDriver("Salesperson_" + updateId()));
+                staffDriverList.add(new StaffDriver("Salesperson_" + updateId()));
                 System.out.println("Hired driver " + staffDriverList.get(staffDriverList.size()-1).getName());
             }
         }
@@ -158,23 +159,23 @@ public class FNCD {
             pickupsList.add(car);
             setInventoryHelper(car);
         }
-        
+
         tempLength = electricCarList.size();
         for(int i = 0; i < maxInventory - tempLength; i++){
-        	ElectricCar car = new ElectricCar(updateInventoryId());
-        	electricCarList.add(car);
+            ElectricCar car = new ElectricCar(updateInventoryId());
+            electricCarList.add(car);
             setInventoryHelper(car);
         }
         tempLength = monsterTruckList.size();
         for(int i = 0; i < maxInventory - tempLength; i++){
-        	MonsterTruck car = new MonsterTruck(updateInventoryId());
-        	monsterTruckList.add(car);
+            MonsterTruck car = new MonsterTruck(updateInventoryId());
+            monsterTruckList.add(car);
             setInventoryHelper(car);
         }
         tempLength = motorcycleList.size();
         for(int i = 0; i < maxInventory - tempLength; i++){
-        	Motorcycle motorcycle = new Motorcycle(updateInventoryId());
-        	motorcycleList.add(motorcycle);
+            Motorcycle motorcycle = new Motorcycle(updateInventoryId());
+            motorcycleList.add(motorcycle);
             setInventoryHelper(motorcycle);
         }
         System.out.println();
@@ -207,17 +208,16 @@ public class FNCD {
         System.out.println("\nWe have " + buyer + " Buyers today");
         System.out.println("Selling...");
         selling(buyer);
-        
+
         //random injured
         Random rand = new Random();
         if (rand.nextInt(10) == 0) {
-        	staffDriverList.get(rand.nextInt(staffDriverList.size())).setInjured(true);
+            staffDriverList.get(rand.nextInt(staffDriverList.size())).setInjured(true);
         }
     }
 
     /**
      * washing function that iterate through each intern and ask them to wash two cars.
-     * An example of cohesion. The function only serves one purpose: for washing.
      */
     public void washing(){
         for (Interns emp: internList){
@@ -260,9 +260,6 @@ public class FNCD {
             Vehicle car = representative.sale(newBuyer, inventory);
 
             //look at the status of the car the saleperson recommended. If it is sold then update the variables
-            /**
-             * An example of identity. The identity of the two is string is different. Therefore, we had to use .equal to compare strings.
-             */
             if(car.getStatus().equals("sold")){
                 soldCars.add(car); // add the soldcar list
                 inventory.remove(car);
@@ -271,11 +268,11 @@ public class FNCD {
 
                 // remove them from the appropriate arraylist
                 if(car.getType().equals("performance car")){
-                        performanceCarList.remove(car);
+                    performanceCarList.remove(car);
                 } else if(car.getType().equals("car")){
-                        carsList.remove(car);
+                    carsList.remove(car);
                 } else{
-                        pickupsList.remove(car);
+                    pickupsList.remove(car);
                 }
             }
         }
@@ -384,26 +381,26 @@ public class FNCD {
             System.out.println("Intern " + steppedUp.getName() + " has stepped up and took the salesperson job");
 
         }
-        
+
         // same as drivers, leave is injured
         boolean foundInjured = true;
-        
+
         for(int i = 0; foundInjured && i < staffDriverList.size(); i++){
-        	
-        	foundInjured = false;
-        	
-        	StaffDriver staff = staffDriverList.get(i);
-        	if (staff.isInjured()) {
-        		
-        		//add them to a list of past employees
+
+            foundInjured = false;
+
+            StaffDriver staff = staffDriverList.get(i);
+            if (staff.isInjured()) {
+
+                //add them to a list of past employees
                 employee.add(staff);
                 staffDriverList.remove(staff);
 
                 // display the information to the user using a helper function
                 quitHelper("Driver");
-                
+
                 foundInjured = true;
-        	}
+            }
         }
     }
 
@@ -477,7 +474,6 @@ public class FNCD {
 
     /**
      * The function prints all inventory using String.format to make it look nice
-     * This is an example of polymorphism. The inventory arraylist contains three different class types: Cars, PerformanceCars, and Pickup.
      */
     public void printInventory(){
         System.out.println(String.format("%20s %20s %20s %20s %20s %20s %20s", "Name", "Brand", "Cost", "Sale Price", "Condition", "Cleanliness", "Status"));
@@ -490,4 +486,3 @@ public class FNCD {
     }
 
 }
-
