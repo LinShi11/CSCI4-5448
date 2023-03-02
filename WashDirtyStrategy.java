@@ -16,7 +16,6 @@ public class WashDirtyStrategy implements WashStrategy {
         } else{
             return "dirty";
         }
-
     }
 
 }

@@ -1,5 +1,6 @@
 import java.sql.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Objects;
 import java.util.Random;
@@ -34,6 +35,9 @@ public class FNCD{
     ArrayList<MonsterTruck> monsterTruckList;
     ArrayList<Motorcycle> motorcycleList;
     ArrayList<StaffDriver> staffDriverList;
+    static final ArrayList<WashingMethod> washingMethods = new ArrayList<>(Arrays.asList(
+    			new ChemicalWash(), new DetailedWash(), new ElbowGreasWash()
+    		));
     Observer observer;
     Logger logger;
     Tracker tracker;
@@ -74,10 +78,12 @@ public class FNCD{
         this.motorcycleWin = 0;
         this.pickupWin = 0;
         this.monsterTruckWin = 0;
+        Random random = new Random();
 
         // directly hire 3 interns, 3 mechanics, and 3 salesperson + 3 drivers (staffs)
         for(int i = 0; i < maxSize; i++){
-            internList.add(new Interns("Intern_" + updateId()));
+            internList.add(new Interns("Intern_" + updateId(), 
+                washingMethods.get(random.nextInt(washingMethods.size()))));
             mechanicsList.add(new Mechanics("Mechanics_"+ updateId()));
             salespeopleList.add(new Salesperson("Salesperson_" + updateId()));
             staffDriverList.add(new StaffDriver("Driver_" + updateId()));
@@ -246,13 +252,15 @@ public class FNCD{
      * hire function checks to make sure we have 3 interns.
      * If not, we will hire more interns
      */
+
     public void hire(){
+        Random random = new Random();
         if(internList.size() != maxSize){
             // iterate maxSize(3) - currentSize so we can add more interns
             int tempLength = internList.size();
             for(int i = 0; i < maxSize-tempLength; i++){
                 //updateId is a helper function that keeps track of number of staffs we have hired
-                internList.add(new Interns("Intern_" + updateId()));
+                internList.add(new Interns("Intern_" + updateId(), washingMethods.get(random.nextInt(washingMethods.size()))));
                 System.out.println("Hired intern " + internList.get(internList.size()-1).getName());
             }
         }
@@ -348,8 +356,7 @@ public class FNCD{
     public void washing(){
         for (Interns emp: internList){
             emp.setDailyBonus(0);
-            ArrayList<String> response = emp.wash(inventory);
-            notifyHelper(response);
+            emp.wash(inventory);
         }
     }
 
