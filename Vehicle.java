@@ -7,21 +7,6 @@ import java.util.Map;
  * part of the inheritance.
  */
 public interface Vehicle {
-//    private String name;
-//    private int saleBonus;
-//    private int repairBonus;
-//    private int washBonus;
-//    private int cost;
-//    private int salePrice;
-//    private String condition;
-//    private String cleanliness;
-//
-//    private String brand;
-//    private String status;
-//    private String type;
-//
-//    private int winCount;
-
     // possible condition and cleanliness
     static final ArrayList<String> possibleConditions = new ArrayList<>(Arrays.asList("like new", "used", "broken"));
     static final ArrayList<String> possibleCleanliness = new ArrayList<>(Arrays.asList("sparkling", "clean", "dirty"));
@@ -76,7 +61,6 @@ public interface Vehicle {
      */
     public void setStatus(String status);
 
-    public void setWinCount();
     /**
      * getter for name
      * @return name

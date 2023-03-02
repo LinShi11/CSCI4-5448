@@ -144,3 +144,31 @@ One of the vehicle got 4 place
 One of the vehicle got 16 place
 Driver_012 made $0
 Driver_013 made $0
+FNCD have 3 motorcycle in the race. 
+One of the vehicle got 11 place
+One of the vehicle got 3 place
+One of the vehicle got 14 place
+Driver_004 made $0
+Driver_008 made $1000
+Driver_012 made $0
+FNCD have 3 motorcycle in the race. 
+One of the vehicle got 16 place
+One of the vehicle got 18 place
+One of the vehicle got 19 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_012 made $0
+FNCD have 3 monster truck in the race. 
+One of the vehicle got 5 place
+One of the vehicle got 12 place
+One of the vehicle got 7 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_012 made $0
+FNCD have 3 motorcycle in the race. 
+One of the vehicle got 3 place
+One of the vehicle got 11 place
+One of the vehicle got 1 place
+Driver_004 made $1000
+Driver_008 made $0
+Driver_012 made $1000

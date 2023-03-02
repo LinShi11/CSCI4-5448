@@ -253,3 +253,53 @@ Salesperson_015 was not able to sell the vehicle DUC_00043
 Salesperson_015 sold a vehicle LEX_00001 for $279501
 Salesperson_011 sold a vehicle FOR_00046 for $76792
 Salesperson_011 sold a vehicle LEX_00044 for $57826
+Intern_018 washed a dirty pickup (JEE_00062) and made it clean
+Intern_018 washed a dirty monster truck (Air Force Afterburner_00063) and made it clean
+Intern_019 washed a clean performance car (ALF_00057) and made it clean
+Intern_019 washed a clean monster truck (Air Force Afterburner_00056) and made it clean
+Intern_020 washed a clean car (HON_00006) and made it clean
+Intern_020 washed a clean electric car (LUC_00060) and made it clean
+Salesperson_011 sold a vehicle JEE_00062 for $90452
+Salesperson_017 sold a vehicle APT_00048 for $32802
+Salesperson_017 was not able to sell the vehicle ALF_00057
+Salesperson_011 was not able to sell the vehicle ALF_00057
+Intern_009 washed a dirty car (MAZ_00049) and made it clean
+Intern_009 washed a clean motorcycle (SUZ_00043) and made it clean
+Intern_013 washed a clean electric car (VOL_00048) and made it clean
+Intern_013 washed a clean monster truck (Maximum Destruction (Max-D)_00020) and made it clean
+Intern_015 washed a clean pickup (JEE_00039) and made it sparkling
+Intern_015 washed a clean motorcycle (LUC_00044) and made it clean
+Mechanics_006 fixed a used car (MAZ_00049) and made it like new (made $1000)
+Mechanics_006 fixed a used monster truck (Maximum Destruction (Max-D)_00020) and made it like new (made $1000)
+Salesperson_011 was not able to sell the vehicle JEE_00039
+Salesperson_003 was not able to sell the vehicle JEE_00039
+Salesperson_011 was not able to sell the vehicle Maximum Destruction (Max-D)_00020
+Salesperson_011 was not able to sell the vehicle RIV_00014
+Salesperson_005 sold a vehicle JEE_00039 for $67141
+Salesperson_005 sold a vehicle Maximum Destruction (Max-D)_00020 for $51333
+Intern_019 washed a clean pickup (FOR_00027) and made it clean
+Intern_019 washed a clean car (KIA_00055) and made it clean
+Intern_020 washed a clean pickup (FOR_00027) and made it clean
+Intern_020 washed a clean car (KIA_00055) and made it dirty
+Intern_021 washed a dirty car (KIA_00055) and made it clean
+Intern_021 washed a clean pickup (FOR_00027) and made it sparkling
+Salesperson_016 sold a vehicle KIA_00055 for $31458
+Salesperson_018 was not able to sell the vehicle VOL_00058
+Salesperson_007 sold a vehicle ALF_00038 for $83678
+Salesperson_018 sold a vehicle VOL_00058 for $34570
+Salesperson_016 sold a vehicle FOR_00056 for $123246
+Salesperson_016 sold a vehicle TOY_00005 for $26742
+Intern_018 washed a clean car (MAZ_00057) and made it sparkling
+Intern_018 washed a clean performance car (POR_00046) and made it clean
+Intern_020 washed a clean performance car (AST_00003) and made it clean
+Intern_020 washed a clean performance car (BMW_00047) and made it clean
+Intern_021 washed a clean car (TOY_00052) and made it clean
+Intern_021 washed a clean performance car (MCL_00044) and made it sparkling
+Salesperson_007 sold a vehicle MCL_00044 for $99054
+Salesperson_009 was not able to sell the vehicle MAZ_00057
+Salesperson_009 was not able to sell the vehicle BMW_00047
+Salesperson_009 was not able to sell the vehicle MAZ_00057
+Salesperson_015 sold a vehicle GMC_00039 for $49381
+Salesperson_015 sold a vehicle Maximum Destruction (Max-D)_00031 for $31048
+Salesperson_009 sold a vehicle HON_00024 for $30495
+Salesperson_007 was not able to sell the vehicle MAZ_00057

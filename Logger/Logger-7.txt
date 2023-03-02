@@ -149,3 +149,31 @@ One of the vehicle got 18 place
 One of the vehicle got 2 place
 Driver_004 made $0
 Driver_012 made $1000
+FNCD have 3 motorcycle in the race. 
+One of the vehicle got 20 place
+One of the vehicle got 8 place
+One of the vehicle got 4 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_012 made $0
+FNCD have 3 performance car in the race. 
+One of the vehicle got 13 place
+One of the vehicle got 1 place
+One of the vehicle got 20 place
+Driver_004 made $0
+Driver_008 made $1000
+Driver_012 made $0
+FNCD have 3 motorcycle in the race. 
+One of the vehicle got 13 place
+One of the vehicle got 3 place
+One of the vehicle got 17 place
+Driver_004 made $0
+Driver_008 made $1000
+Driver_012 made $0
+FNCD have 3 performance car in the race. 
+One of the vehicle got 15 place
+One of the vehicle got 5 place
+One of the vehicle got 11 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_012 made $0

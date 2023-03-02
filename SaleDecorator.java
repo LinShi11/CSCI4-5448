@@ -60,11 +60,6 @@ public class SaleDecorator implements Vehicle {
     }
 
     @Override
-    public void setWinCount() {
-        car.setWinCount();
-    }
-
-    @Override
     public String getName() {
         return car.getName();
     }

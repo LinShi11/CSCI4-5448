@@ -239,3 +239,41 @@ Intern_016 washed a clean performance car (MCL_00028) and made it clean
 Mechanics_006 fixed a broken performance car (BMW_00048) and made it used (made $2000)
 Mechanics_006 fixed a used performance car (BMW_00048) and made it like new (made $2000)
 Mechanics_010 fixed a used electric car (LUC_00049) and made it like new (made $1000)
+Intern_015 washed a clean performance car (ACU_00003) and made it sparkling
+Intern_015 washed a clean pickup (JEE_00036) and made it sparkling
+Intern_016 washed a clean performance car (JAG_00044) and made it clean
+Intern_016 washed a clean motorcycle (YAM_00024) and made it sparkling
+Intern_017 washed a clean car (VOL_00035) and made it clean
+Intern_017 washed a clean pickup (GMC_00039) and made it sparkling
+Mechanics_006 fixed a broken pickup (RAM_00010) and made it used (made $1000)
+Mechanics_013 fixed a used pickup (RAM_00010) and made it like new (made $1000)
+Salesperson_007 was not able to sell the vehicle HON_00023
+Intern_005 washed a dirty pickup (JEE_00039) and made it sparkling
+Intern_005 washed a dirty pickup (JEE_00040) and made it clean
+Intern_009 washed a clean car (SUB_00008) and made it clean
+Intern_009 washed a clean car (VOL_00035) and made it clean
+Intern_013 washed a clean electric car (NIS_00041) and made it clean
+Intern_013 washed a clean monster truck (Bad News Travels Fast_00038) and made it dirty
+Mechanics_006 fixed a broken pickup (JEE_00039) and made it used (made $1000)
+Mechanics_006 fixed a used electric car (NIS_00041) and made it like new (made $1000)
+Mechanics_010 fixed a broken pickup (JEE_00040) and made it used (made $1000)
+Mechanics_010 fixed a used pickup (JEE_00040) and made it like new (made $1000)
+Mechanics_001 fixed a used pickup (JEE_00039) and made it like new (made $1000)
+Intern_016 washed a clean performance car (ALF_00038) and made it sparkling
+Intern_016 washed a clean car (NIS_00042) and made it sparkling
+Intern_018 washed a clean performance car (LEX_00003) and made it sparkling
+Intern_018 washed a clean motorcycle (BMW_00050) and made it clean
+Intern_019 washed a clean car (TOY_00005) and made it clean
+Intern_019 washed a clean performance car (MER_00039) and made it sparkling
+Intern_015 washed a clean monster truck (Bad News Travels Fast_00017) and made it clean
+Intern_015 washed a clean electric car (NIO_00014) and made it clean
+Intern_016 washed a clean motorcycle (HON_00024) and made it clean
+Intern_016 washed a clean pickup (JEE_00040) and made it clean
+Intern_018 washed a clean motorcycle (HON_00024) and made it clean
+Intern_018 washed a clean performance car (AST_00003) and made it clean
+Mechanics_006 fixed a broken performance car (AUD_00032) and made it used (made $2000)
+Mechanics_010 fixed a used performance car (AUD_00032) and made it like new (made $2000)
+Salesperson_009 was not able to sell the vehicle Maximum Destruction (Max-D)_00031
+Salesperson_007 sold a vehicle HON_00042 for $36216
+Salesperson_009 was not able to sell the vehicle JEE_00040
+Salesperson_014 sold a vehicle AUD_00032 for $108477

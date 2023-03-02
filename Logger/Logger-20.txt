@@ -302,3 +302,64 @@ Salesperson_011 was not able to sell the vehicle Captain's Curse_00050
 Salesperson_009 was not able to sell the vehicle LEX_00044
 Salesperson_011 sold a vehicle TES_00036 for $26730
 Salesperson_003 sold a vehicle Captain's Curse_00050 for $34784
+Intern_015 washed a dirty motorcycle (DUC_00021) and made it clean
+Intern_015 washed a dirty performance car (AST_00054) and made it sparkling
+Intern_016 washed a dirty electric car (NIS_00055) and made it clean
+Intern_016 washed a dirty monster truck (Air Force Afterburner_00056) and made it clean
+Intern_017 washed a clean motorcycle (BMW_00022) and made it sparkling
+Intern_017 washed a clean monster truck (Air Force Afterburner_00056) and made it clean
+Mechanics_006 fixed a used electric car (NIS_00055) and made it like new (made $1000)
+Mechanics_006 fixed a used monster truck (Air Force Afterburner_00056) and made it like new (made $1000)
+Salesperson_007 sold a vehicle HON_00023 for $80086
+Salesperson_009 sold a vehicle Gunslinger_00053 for $33755
+Salesperson_011 was not able to sell the vehicle BMW_00022
+Salesperson_007 was not able to sell the vehicle VOL_00035
+Salesperson_011 sold a vehicle AST_00054 for $68972
+Intern_005 washed a dirty motorcycle (SUZ_00043) and made it clean
+Intern_005 washed a dirty pickup (RAM_00042) and made it dirty
+Intern_009 washed a dirty pickup (RAM_00042) and made it clean
+Intern_009 washed a dirty motorcycle (LUC_00044) and made it sparkling
+Intern_013 washed a clean car (SUB_00008) and made it sparkling
+Intern_013 washed a clean motorcycle (SUZ_00043) and made it clean
+Mechanics_006 fixed a used motorcycle (SUZ_00043) and made it used (made $0)
+Mechanics_006 fixed a broken motorcycle (LUC_00044) and made it used (made $1000)
+Mechanics_010 fixed a used motorcycle (LUC_00044) and made it like new (made $1000)
+Mechanics_010 fixed a used motorcycle (SUZ_00043) and made it like new (made $1000)
+Salesperson_007 was not able to sell the vehicle NIS_00015
+Salesperson_003 was not able to sell the vehicle BMW_00045
+Salesperson_011 was not able to sell the vehicle NIS_00015
+Salesperson_011 sold a vehicle VOL_00035 for $38082
+Salesperson_007 sold a vehicle ALF_00034 for $77160
+Salesperson_011 was not able to sell the vehicle TOY_00007
+Intern_018 washed a clean monster truck (Jurassic Attack_00049) and made it clean
+Intern_018 washed a clean performance car (AUD_00032) and made it sparkling
+Intern_019 washed a clean monster truck (Jurassic Attack_00049) and made it clean
+Intern_019 washed a clean pickup (RAM_00054) and made it clean
+Intern_020 washed a clean monster truck (Jurassic Attack_00049) and made it dirty
+Intern_020 washed a clean pickup (RAM_00054) and made it clean
+Salesperson_015 was not able to sell the vehicle BMW_00050
+Salesperson_015 sold a vehicle HYU_00047 for $33918
+Salesperson_016 was not able to sell the vehicle RAM_00054
+Salesperson_007 was not able to sell the vehicle BMW_00050
+Salesperson_007 sold a vehicle RAM_00054 for $70066
+Salesperson_016 sold a vehicle Jurassic Attack_00049 for $37130
+Salesperson_015 was not able to sell the vehicle BMW_00050
+Intern_015 washed a dirty pickup (CHE_00049) and made it sparkling
+Intern_015 washed a dirty performance car (BMW_00047) and made it sparkling
+Intern_016 washed a dirty performance car (POR_00046) and made it clean
+Intern_016 washed a dirty performance car (MCL_00044) and made it clean
+Intern_018 washed a dirty electric car (ZOO_00050) and made it clean
+Intern_018 washed a clean monster truck (Bad News Travels Fast_00017) and made it sparkling
+Mechanics_006 fixed a broken pickup (CHE_00049) and made it used (made $1000)
+Mechanics_006 fixed a used performance car (BMW_00047) and made it like new (made $2000)
+Mechanics_010 fixed a broken performance car (POR_00046) and made it broken (made $0)
+Mechanics_010 fixed a used pickup (CHE_00049) and made it like new (made $1000)
+Mechanics_013 fixed a broken performance car (POR_00046) and made it broken (made $0)
+Salesperson_009 sold a vehicle ZOO_00050 for $36251
+Salesperson_009 was not able to sell the vehicle SUB_00048
+Salesperson_009 was not able to sell the vehicle LUC_00037
+Salesperson_009 sold a vehicle SUB_00048 for $30997
+Salesperson_007 was not able to sell the vehicle LUC_00037
+Salesperson_009 sold a vehicle CHE_00012 for $66932
+Salesperson_009 sold a vehicle APT_00015 for $28172
+Salesperson_007 sold a vehicle MAZ_00008 for $21064

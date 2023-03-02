@@ -203,3 +203,45 @@ Salesperson_011 sold a vehicle VOL_00055 for $34857
 Salesperson_003 sold a vehicle APT_00016 for $28533
 Salesperson_003 sold a vehicle Bigfoot_00052 for $30650
 Salesperson_009 was not able to sell the vehicle LEX_00001
+Intern_017 washed a dirty motorcycle (BMW_00061) and made it clean
+Intern_017 washed a dirty pickup (JEE_00062) and made it clean
+Intern_018 washed a clean pickup (FOR_00049) and made it clean
+Intern_018 washed a clean car (HON_00006) and made it clean
+Intern_019 washed a clean pickup (FOR_00049) and made it clean
+Intern_019 washed a clean car (VOL_00046) and made it sparkling
+Mechanics_006 fixed a used pickup (JEE_00062) and made it like new (made $1000)
+Salesperson_011 sold a vehicle Batman_00058 for $35892
+Intern_009 washed a dirty motorcycle (BMW_00050) and made it sparkling
+Intern_009 washed a dirty car (MAZ_00049) and made it clean
+Intern_013 washed a clean electric car (RIV_00014) and made it clean
+Intern_013 washed a clean motorcycle (SUZ_00043) and made it clean
+Intern_014 washed a clean motorcycle (TRI_00027) and made it sparkling
+Intern_014 washed a clean pickup (JEE_00039) and made it clean
+Mechanics_006 fixed a broken monster truck (Maximum Destruction (Max-D)_00020) and made it used (made $1000)
+Mechanics_006 fixed a used car (MAZ_00049) and made it used (made $0)
+Mechanics_010 fixed a used car (MAZ_00049) and made it like new (made $1000)
+Mechanics_010 fixed a like new car (MAZ_00049) and made it used (made $1000)
+Mechanics_001 fixed a used car (MAZ_00049) and made it like new (made $1000)
+Mechanics_001 fixed a like new car (MAZ_00049) and made it used (made $1000)
+Salesperson_011 was not able to sell the vehicle LEX_00001
+Salesperson_011 was not able to sell the vehicle JEE_00039
+Salesperson_005 was not able to sell the vehicle RIV_00014
+Salesperson_003 was not able to sell the vehicle Maximum Destruction (Max-D)_00020
+Intern_019 washed a clean pickup (FOR_00027) and made it clean
+Intern_019 washed a clean car (KIA_00055) and made it clean
+Intern_020 washed a clean monster truck (Bounty Hunter_00044) and made it sparkling
+Intern_020 washed a clean pickup (FOR_00027) and made it clean
+Intern_021 washed a clean car (KIA_00055) and made it clean
+Intern_021 washed a clean pickup (FOR_00027) and made it clean
+Intern_018 washed a dirty car (MAZ_00057) and made it clean
+Intern_018 washed a dirty electric car (ZOO_00056) and made it clean
+Intern_020 washed a dirty motorcycle (HON_00058) and made it sparkling
+Intern_020 washed a clean car (MAZ_00057) and made it sparkling
+Intern_021 washed a clean performance car (BMW_00047) and made it clean
+Intern_021 washed a clean car (TOY_00052) and made it clean
+Mechanics_006 fixed a used car (MAZ_00057) and made it like new (made $1000)
+Salesperson_009 sold a vehicle FOR_00053 for $54324
+Salesperson_009 was not able to sell the vehicle HON_00024
+Salesperson_015 was not able to sell the vehicle Maximum Destruction (Max-D)_00031
+Salesperson_015 was not able to sell the vehicle ZOO_00016
+Salesperson_007 was not able to sell the vehicle Maximum Destruction (Max-D)_00031

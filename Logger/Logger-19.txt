@@ -281,3 +281,58 @@ Intern_017 washed a clean electric car (APT_00016) and made it clean
 Intern_017 washed a clean car (HYU_00035) and made it clean
 Salesperson_009 was not able to sell the vehicle MAZ_00027
 Salesperson_009 sold a vehicle Bear Foot (1979)_00033 for $23688
+Intern_015 washed a dirty pickup (RAM_00010) and made it clean
+Intern_015 washed a clean car (VOL_00035) and made it sparkling
+Intern_016 washed a clean monster truck (Bear Foot (F-150)_00052) and made it clean
+Intern_016 washed a clean performance car (JAG_00044) and made it clean
+Intern_017 washed a clean motorcycle (DUC_00021) and made it dirty
+Intern_017 washed a clean motorcycle (BMW_00022) and made it clean
+Salesperson_009 sold a vehicle LUC_00051 for $32066
+Salesperson_009 was not able to sell the vehicle TES_00050
+Salesperson_009 was not able to sell the vehicle HON_00023
+Salesperson_011 was not able to sell the vehicle TES_00050
+Salesperson_007 sold a vehicle ACU_00045 for $70821
+Salesperson_007 sold a vehicle Bear Foot (F-150)_00052 for $42295
+Intern_005 washed a dirty electric car (NIS_00041) and made it clean
+Intern_005 washed a dirty pickup (JEE_00039) and made it clean
+Intern_009 washed a dirty monster truck (Bad News Travels Fast_00038) and made it sparkling
+Intern_009 washed a dirty pickup (JEE_00040) and made it sparkling
+Intern_013 washed a clean motorcycle (TRI_00027) and made it clean
+Intern_013 washed a clean car (VOL_00035) and made it clean
+Salesperson_011 sold a vehicle SUZ_00026 for $53132
+Salesperson_007 sold a vehicle HON_00024 for $38232
+Salesperson_003 was not able to sell the vehicle NIS_00015
+Salesperson_003 was not able to sell the vehicle JEE_00040
+Salesperson_003 was not able to sell the vehicle ALF_00034
+Salesperson_003 sold a vehicle KTM_00021 for $22995
+Salesperson_007 was not able to sell the vehicle JEE_00040
+Salesperson_003 sold a vehicle JEE_00040 for $101479
+Intern_016 washed a clean motorcycle (KTM_00021) and made it sparkling
+Intern_016 washed a clean monster truck (Bad News Travels Fast_00018) and made it dirty
+Intern_018 washed a dirty monster truck (Bad News Travels Fast_00018) and made it dirty
+Intern_018 washed a clean car (TOY_00005) and made it sparkling
+Intern_019 washed a dirty monster truck (Bad News Travels Fast_00018) and made it clean
+Intern_019 washed a clean electric car (NIO_00052) and made it sparkling
+Salesperson_007 was not able to sell the vehicle Jurassic Attack_00049
+Salesperson_007 was not able to sell the vehicle BMW_00050
+Salesperson_015 was not able to sell the vehicle BMW_00050
+Salesperson_007 sold a vehicle RAM_00011 for $36835
+Salesperson_007 was not able to sell the vehicle JEE_00048
+Intern_015 washed a dirty car (SUB_00045) and made it clean
+Intern_015 washed a clean monster truck (Cyborg_00026) and made it sparkling
+Intern_016 washed a clean electric car (NIO_00014) and made it clean
+Intern_016 washed a clean performance car (MCL_00044) and made it clean
+Intern_018 washed a clean performance car (MCL_00044) and made it clean
+Intern_018 washed a clean monster truck (Bad News Travels Fast_00017) and made it clean
+Mechanics_006 fixed a broken performance car (MCL_00044) and made it used (made $2000)
+Mechanics_006 fixed a used performance car (MCL_00044) and made it like new (made $2000)
+Mechanics_010 fixed a broken car (SUB_00045) and made it used (made $1000)
+Mechanics_013 fixed a used car (SUB_00045) and made it like new (made $1000)
+Salesperson_009 sold a vehicle POR_00041 for $90307
+Salesperson_014 sold a vehicle ZOO_00043 for $27692
+Salesperson_014 sold a vehicle JEE_00040 for $82573
+Salesperson_007 was not able to sell the vehicle SUB_00045
+Salesperson_009 sold a vehicle SUB_00045 for $41737
+Salesperson_009 was not able to sell the vehicle LAM_00004
+Salesperson_009 was not able to sell the vehicle Maximum Destruction (Max-D)_00031
+Salesperson_007 sold a vehicle LAM_00004 for $53611

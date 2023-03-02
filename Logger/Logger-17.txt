@@ -369,3 +369,58 @@ One of the vehicle got 11 place
 Driver_004 made $0
 Driver_012 made $0
 Driver_013 made $0
+Intern_015 washed a clean car (HON_00006) and made it clean
+Intern_015 washed a clean pickup (FOR_00049) and made it clean
+Intern_016 washed a clean monster truck (Gunslinger_00053) and made it clean
+Intern_016 washed a clean monster truck (Shell Camino_00033) and made it sparkling
+Intern_017 washed a clean electric car (NIO_00016) and made it sparkling
+Intern_017 washed a clean performance car (JAG_00044) and made it clean
+FNCD have 3 pickup in the race. 
+One of the vehicle got 18 place
+One of the vehicle got 1 place
+One of the vehicle got 12 place
+Driver_004 made $0
+Driver_008 made $1000
+Driver_012 made $0
+Intern_005 washed a dirty monster truck (Bad News Travels Fast_00038) and made it clean
+Intern_005 washed a dirty car (VOL_00035) and made it clean
+Intern_009 washed a dirty pickup (JEE_00036) and made it clean
+Intern_009 washed a clean performance car (ALF_00034) and made it sparkling
+Intern_013 washed a clean car (VOL_00035) and made it clean
+Intern_013 washed a clean motorcycle (SUZ_00026) and made it sparkling
+Salesperson_011 sold a vehicle VOL_00032 for $43687
+Salesperson_007 sold a vehicle JEE_00036 for $87417
+Salesperson_007 sold a vehicle RAM_00011 for $69637
+FNCD have 3 monster truck in the race. 
+One of the vehicle got 1 place
+One of the vehicle got 11 place
+One of the vehicle got 2 place
+Driver_004 made $1000
+Driver_008 made $0
+Driver_012 made $1000
+Intern_015 washed a dirty electric car (NIO_00052) and made it clean
+Intern_015 washed a dirty monster truck (Blacksmith_00053) and made it sparkling
+Intern_016 washed a clean motorcycle (BMW_00050) and made it clean
+Intern_016 washed a clean car (NIS_00042) and made it clean
+Intern_018 washed a clean motorcycle (BMW_00051) and made it sparkling
+Intern_018 washed a clean motorcycle (KTM_00021) and made it clean
+FNCD have 3 pickup in the race. 
+One of the vehicle got 16 place
+One of the vehicle got 5 place
+One of the vehicle got 13 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_012 made $0
+Intern_015 washed a clean pickup (CHE_00012) and made it sparkling
+Intern_015 washed a clean pickup (GMC_00010) and made it clean
+Intern_016 washed a clean car (HON_00042) and made it clean
+Intern_016 washed a clean motorcycle (HON_00024) and made it clean
+Intern_018 washed a clean performance car (AUD_00032) and made it sparkling
+Intern_018 washed a clean motorcycle (LUC_00037) and made it clean
+FNCD have 3 performance car in the race. 
+One of the vehicle got 15 place
+One of the vehicle got 14 place
+One of the vehicle got 18 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_012 made $0

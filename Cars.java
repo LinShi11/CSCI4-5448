@@ -21,7 +21,6 @@ public class Cars implements Vehicle{
     private String status;
     private String type;
     private double percent;
-    private int winCount;
 
     // min and max price
     private int min = 10000;
@@ -155,10 +154,6 @@ public class Cars implements Vehicle{
         this.status = status;
     }
 
-    
-    public void setWinCount() {
-        winCount = 0;
-    }
 
     /**
      * getter for name
