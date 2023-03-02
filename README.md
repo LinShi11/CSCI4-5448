@@ -11,7 +11,7 @@ we had to include two function, setInjuried() and selfExam(), that sets the dete
 We implemented all the methods from the subscriber class, but only onNext() and onComplete() was really used. Furthermore, there are some small modifications such as extracting some helper function in FNCD to create a Helper class. 
 
 #### Extra credit:
-I used intellij to run all my Junit tests, so it was kind of cheating in that I just clicked everywhere that gave me an error and told it to install it. 
+I used intellij to run all my Junit tests, so it was kind of cheating in that I just clicked everywhere that gave me an error and told the IDE to install it. 
 I believe Junit 4 was used. Additionally, I split my tests into two parts: the beginning of the simulation and the end of it. 
 ![part1](image/extraCreditOne.png)
 ![part2](image/extraCreditTwo.png)
