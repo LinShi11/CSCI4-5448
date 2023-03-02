@@ -245,3 +245,132 @@ Salesperson_011 was not able to sell the vehicle CHE_00010
 Salesperson_011 was not able to sell the vehicle SUB_00005
 Salesperson_001 was not able to sell the vehicle BMW_00021
 Salesperson_001 was not able to sell the vehicle BMW_00021
+Intern_001 washed a dirty car (MAZ_00007) and made it clean
+Intern_001 washed a dirty car (HYU_00008) and made it clean
+Intern_005 washed a dirty pickup (CHE_00009) and made it clean
+Intern_005 washed a dirty car (MAZ_00006) and made it clean
+Intern_009 washed a clean electric car (APT_00014) and made it clean
+Intern_009 washed a clean monster truck (Gunslinger_00017) and made it clean
+Mechanics_002 fixed a used pickup (CHE_00009) and made it like new (made $1000)
+Mechanics_002 fixed a used car (MAZ_00007) and made it used (made $0)
+Mechanics_006 fixed a used car (MAZ_00007) and made it like new (made $1000)
+Salesperson_003 sold a vehicle VOL_00026 for $37174
+Salesperson_011 was not able to sell the vehicle RAM_00010
+Salesperson_007 was not able to sell the vehicle YAM_00022
+Salesperson_003 was not able to sell the vehicle USA-1_00020
+Salesperson_003 was not able to sell the vehicle ALF_00002
+Salesperson_011 was not able to sell the vehicle YAM_00022
+Salesperson_011 sold a vehicle YAM_00022 for $185198
+Intern_001 washed a dirty pickup (FOR_00026) and made it sparkling
+Intern_001 washed a dirty motorcycle (TRI_00021) and made it clean
+Intern_005 washed a dirty motorcycle (KAW_00030) and made it clean
+Intern_005 washed a dirty pickup (FOR_00012) and made it sparkling
+Intern_009 washed a dirty electric car (ZOO_00028) and made it sparkling
+Intern_009 washed a dirty car (VOL_00006) and made it clean
+Mechanics_002 fixed a used car (HYU_00005) and made it used (made $0)
+Mechanics_002 fixed a broken monster truck (Bigfoot_00019) and made it used (made $1000)
+Mechanics_006 fixed a broken performance car (AUD_00001) and made it used (made $2000)
+Mechanics_006 fixed a broken monster truck (Shell Camino_00018) and made it used (made $1000)
+Mechanics_010 fixed a used car (VOL_00006) and made it like new (made $1000)
+Mechanics_010 fixed a used performance car (ALF_00004) and made it like new (made $2000)
+Salesperson_003 sold a vehicle VOL_00006 for $28746
+Salesperson_003 was not able to sell the vehicle HYU_00005
+Salesperson_007 was not able to sell the vehicle Jurassic Attack_00029
+Salesperson_011 was not able to sell the vehicle ALF_00004
+Intern_001 washed a dirty electric car (RIV_00027) and made it sparkling
+Intern_001 washed a dirty performance car (MCL_00001) and made it clean
+Intern_005 washed a dirty car (MAZ_00030) and made it clean
+Intern_005 washed a dirty motorcycle (LUC_00023) and made it clean
+Intern_009 washed a dirty performance car (AUD_00003) and made it clean
+Intern_009 washed a dirty monster truck (Swamp Thing_00019) and made it clean
+Mechanics_002 fixed a used monster truck (Bounty Hunter_00017) and made it like new (made $1000)
+Mechanics_002 fixed a broken monster truck (Swamp Thing_00019) and made it used (made $1000)
+Mechanics_006 fixed a used monster truck (Swamp Thing_00019) and made it like new (made $1000)
+Mechanics_006 fixed a used pickup (CHE_00012) and made it like new (made $1000)
+Mechanics_010 fixed a used motorcycle (LUC_00023) and made it like new (made $1000)
+Mechanics_010 fixed a broken car (KIA_00006) and made it broken (made $0)
+Salesperson_003 sold a vehicle KTM_00022 for $62167
+Salesperson_003 sold a vehicle CHE_00009 for $49707
+Salesperson_003 was not able to sell the vehicle VOL_00005
+Intern_005 washed a dirty monster truck (Grinder_00020) and made it dirty
+Intern_005 washed a dirty car (HON_00008) and made it sparkling
+Intern_009 washed a dirty pickup (RAM_00010) and made it clean
+Intern_009 washed a dirty car (VOL_00026) and made it sparkling
+Intern_013 washed a dirty monster truck (Grinder_00020) and made it clean
+Intern_013 washed a clean motorcycle (TRI_00022) and made it sparkling
+Mechanics_002 fixed a broken car (VOL_00007) and made it broken (made $0)
+Mechanics_002 fixed a used monster truck (Grinder_00020) and made it used (made $0)
+Mechanics_006 fixed a used monster truck (Bear Foot (Silverado)_00017) and made it like new (made $1000)
+Mechanics_006 fixed a used car (HON_00008) and made it like new (made $1000)
+Mechanics_010 fixed a used monster truck (Bear Foot (1979)_00018) and made it used (made $0)
+Mechanics_010 fixed a used car (VOL_00026) and made it like new (made $1000)
+Salesperson_003 sold a vehicle NIO_00014 for $40355
+Salesperson_007 sold a vehicle Swamp Thing_00019 for $34925
+Salesperson_007 sold a vehicle HON_00008 for $37451
+Intern_001 washed a dirty performance car (LEX_00001) and made it clean
+Intern_001 washed a dirty pickup (FOR_00010) and made it clean
+Intern_005 washed a dirty pickup (GMC_00011) and made it sparkling
+Intern_005 washed a dirty electric car (VOL_00013) and made it clean
+Intern_009 washed a dirty motorcycle (KTM_00028) and made it clean
+Intern_009 washed a dirty car (MAZ_00006) and made it clean
+Mechanics_002 fixed a broken motorcycle (KTM_00028) and made it used (made $1000)
+Mechanics_002 fixed a used performance car (MAS_00002) and made it like new (made $2000)
+Mechanics_006 fixed a broken electric car (VOL_00013) and made it used (made $1000)
+Mechanics_006 fixed a used pickup (CHE_00027) and made it used (made $0)
+Mechanics_010 fixed a used motorcycle (KTM_00028) and made it like new (made $1000)
+Mechanics_010 fixed a like new motorcycle (KTM_00028) and made it used (made $1000)
+Salesperson_003 sold a vehicle KIA_00008 for $41837
+Salesperson_003 sold a vehicle HYU_00005 for $30760
+Salesperson_007 sold a vehicle The Felon_00019 for $44607
+Salesperson_007 was not able to sell the vehicle KTM_00028
+Intern_005 washed a dirty performance car (AUD_00004) and made it sparkling
+Intern_005 washed a dirty car (MAZ_00008) and made it sparkling
+Intern_009 washed a dirty car (NIS_00027) and made it sparkling
+Intern_009 washed a dirty performance car (MAS_00002) and made it clean
+Intern_013 washed a dirty electric car (NIS_00014) and made it clean
+Intern_013 washed a dirty car (TOY_00005) and made it clean
+Mechanics_002 fixed a used pickup (GMC_00011) and made it like new (made $1000)
+Mechanics_002 fixed a broken motorcycle (YAM_00025) and made it used (made $1000)
+Mechanics_010 fixed a used performance car (MAS_00002) and made it used (made $0)
+Mechanics_010 fixed a broken performance car (LEX_00003) and made it used (made $2000)
+Mechanics_001 fixed a broken motorcycle (DUC_00021) and made it used (made $1000)
+Mechanics_001 fixed a used electric car (APT_00013) and made it like new (made $1000)
+Salesperson_007 sold a vehicle DUC_00030 for $38509
+Salesperson_003 sold a vehicle FER_00001 for $80959
+Salesperson_011 sold a vehicle RAM_00029 for $53697
+Salesperson_003 sold a vehicle YAM_00025 for $23457
+Intern_001 washed a dirty monster truck (Madusa_00017) and made it sparkling
+Intern_001 washed a dirty performance car (AST_00002) and made it dirty
+Intern_005 washed a dirty performance car (AST_00002) and made it sparkling
+Intern_005 washed a dirty electric car (NIS_00014) and made it dirty
+Intern_013 washed a dirty performance car (FER_00001) and made it clean
+Intern_013 washed a dirty pickup (GMC_00025) and made it clean
+Mechanics_002 fixed a broken pickup (GMC_00025) and made it broken (made $0)
+Mechanics_002 fixed a broken pickup (GMC_00025) and made it used (made $1000)
+Mechanics_006 fixed a used car (SUB_00008) and made it like new (made $1000)
+Mechanics_006 fixed a used electric car (APT_00016) and made it used (made $0)
+Mechanics_010 fixed a used performance car (FER_00001) and made it like new (made $2000)
+Mechanics_010 fixed a broken car (TOY_00007) and made it broken (made $0)
+Salesperson_011 sold a vehicle Bigfoot_00019 for $33870
+Salesperson_007 was not able to sell the vehicle HON_00005
+Salesperson_007 sold a vehicle APT_00016 for $36596
+Salesperson_011 was not able to sell the vehicle JEE_00012
+Salesperson_007 was not able to sell the vehicle KAW_00024
+Salesperson_011 sold a vehicle KAW_00024 for $32330
+Salesperson_007 sold a vehicle AST_00002 for $64464
+Intern_001 washed a dirty car (MAZ_00005) and made it dirty
+Intern_001 washed a dirty electric car (NIO_00029) and made it clean
+Intern_005 washed a dirty pickup (CHE_00009) and made it clean
+Intern_005 washed a dirty performance car (MCL_00004) and made it clean
+Intern_009 washed a dirty monster truck (Grave Digger_00031) and made it sparkling
+Intern_009 washed a dirty motorcycle (HON_00021) and made it sparkling
+Mechanics_002 fixed a used car (KIA_00006) and made it used (made $0)
+Mechanics_002 fixed a used electric car (NIO_00030) and made it used (made $0)
+Mechanics_006 fixed a broken motorcycle (SUZ_00024) and made it used (made $1000)
+Mechanics_006 fixed a broken monster truck (Shell Camino_00032) and made it used (made $1000)
+Mechanics_010 fixed a used motorcycle (HON_00021) and made it like new (made $1000)
+Mechanics_010 fixed a used motorcycle (SUZ_00024) and made it like new (made $1000)
+Salesperson_007 was not able to sell the vehicle CHE_00009
+Salesperson_011 sold a vehicle TRI_00022 for $39864
+Salesperson_003 sold a vehicle Grave Digger_00031 for $42790
+Salesperson_011 was not able to sell the vehicle NIO_00030
