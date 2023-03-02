@@ -6,7 +6,7 @@ import java.util.concurrent.Flow;
 public class Observer implements Flow.Subscriber<String>{
     private Flow.Subscription subscription;
     @Override
-    public void onSubscribe(Flow.Subscription subscription) {
+    public void onSubscribe(Flow.Subscription subscription) { //observer class will define 3 concrete classes
         this.subscription = subscription;
         subscription.request(1);
     }

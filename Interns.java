@@ -117,8 +117,8 @@ public class Interns implements Staff {
                 carNum = random.nextInt(dirtyCars);
                 dirtyCars--;
                 Vehicle car = washing.get(carNum);
-                String previous = car.getCleanliness();
-                washing.get(carNum).setCleanliness(washStrategy.wash(this, car));
+                String previous = car.getCleanliness(); //this line will execute the strategy based on cleanliness of car
+                washing.get(carNum).setCleanliness(washStrategy.wash(this, car)); //this is the implementation of the strategy pattern, because the behavior of the class will change at runtime.
                 String tempString = (this.getName() + " washed a " + previous +" "+ car.getType()
                         +" ("+ car.getName() + ") and made it " + car.getCleanliness());
                 System.out.println(tempString);
@@ -164,7 +164,7 @@ public class Interns implements Staff {
                 cleanCars--;
                 Vehicle car = washing.get(carNum);
                 String previous = car.getCleanliness();
-                washing.get(carNum).setCleanliness(washStrategy.wash(this, car));
+                washing.get(carNum).setCleanliness(washStrategy.wash(this, car)); //execution of strategy based on state of the car
                 String tempString = (this.getName() + " washed a " + previous +" "+ car.getType()
                         +" ("+ car.getName() + ") and made it " + car.getCleanliness());
                 System.out.println(tempString);
