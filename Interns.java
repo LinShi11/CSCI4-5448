@@ -117,7 +117,7 @@ public class Interns implements Staff {
                 dirtyCars--;
                 Vehicle car = washing.get(carNum);
                 String previous = car.getCleanliness();
-                washing.get(carNum).setCleanliness(washStrategy.wash(this, car));
+                washing.get(carNum).setCleanliness(washStrategy.wash(this, car)); //this part of the code is getting the context and passing the object
                 System.out.println(this.getName() + " washed a " + previous +" "+ car.getType()
                         +" ("+ car.getName() + ") and made it " + car.getCleanliness());
                 washing.remove(carNum);
@@ -128,7 +128,7 @@ public class Interns implements Staff {
         	 
             Vehicle car = washing.get(0);
             String previous = car.getCleanliness();
-            washing.get(0).setCleanliness(washStrategy.wash(this, car));
+            washing.get(0).setCleanliness(washStrategy.wash(this, car)); //this is the object that is changing behavior at runtime
             System.out.println(this.getName() + " washed a " + previous +" "+ car.getType()
                     +" ("+ car.getName() + ") and made it " + car.getCleanliness());
             washing.remove(0);
@@ -138,7 +138,7 @@ public class Interns implements Staff {
             
             washStrategy = new WashCleanStrategy();
             
-            washing.get(carNum).setCleanliness(washStrategy.wash(this, car));
+            washing.get(carNum).setCleanliness(washStrategy.wash(this, car)); //based on the behavior if the car is dirty or clean the strategy will execute
             System.out.println(this.getName() + " washed a " + previous +" "+ car.getType()
                     +" ("+ car.getName() + ") and made it " + car.getCleanliness());
         } else{
