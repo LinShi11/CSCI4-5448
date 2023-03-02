@@ -40,6 +40,8 @@ public class FNCD{
     Observer observer;
     Logger logger;
     Tracker tracker;
+    private int FNCDamount = 0;
+    private int employeeAmount = 0;
     /**
      * Constructor for FNCD class
      * Initialize all variable that will be used in the simulation
@@ -87,19 +89,19 @@ public class FNCD{
             // check for sundays and call startDay()/endDay() if it is not sunday
             if(date % 7 != 0) {
                 observer = new Observer();
-                observer.setDate(date);
                 logger = new Logger();
-                tracker = new Tracker();
+                tracker = new Tracker(FNCDamount, employeeAmount);
                 System.out.println("******FNCD Day " + this.date + "******");
                 startDay();
                 endDay();
-                printAllStaff();
+//                printAllStaff();
             }
             if (date % 7 == 0 || date % 7 == 3){
                 System.out.println("******FNCD Day " + this.date + ": Race day!!!!!!!******");
                 race();
             }
             date++;
+            printInventory();
         }
 
         //end of simulation, prints the details
@@ -160,12 +162,14 @@ public class FNCD{
         Random random = new Random();
         if(count == 0){
             System.out.println("FNCD will not be participating in the race. ");
+            notifyLogger("FNCD will not be participating in the race. ");
             return;
         } else if (count > 3 ) {
             count = 3;
         }
         System.out.println("FNCD is racing with " + racing.get(0).getType());
         System.out.println("FNCD have " + count + " vehicles in the race. ");
+        notifyLogger("FNCD have " + count + " " + racing.get(0).getType()+ " in the race. ");
         ArrayList<Integer> placement = new ArrayList<>();
         int temp;
         for(int i = 0; i < count; i++){
@@ -174,11 +178,10 @@ public class FNCD{
                 temp = random.nextInt(20);
             }
             placement.add(temp);
-            System.out.println(placement);
         }
         for(int j = 0; j < placement.size(); j++) {
             System.out.println("One of the vehicle got " + (placement.get(j)+1) + " place" );
-            System.out.println(staffDriverList.size());
+            notifyLogger("One of the vehicle got " + (placement.get(j)+1) + " place");
             if (placement.get(j) == 0 || placement.get(j) == 1 || placement.get(j) == 2) {
                 System.out.println("won");
                 racing.get(j).setWinCount();
@@ -211,6 +214,8 @@ public class FNCD{
     public void updateRaceBonus(){
         for(StaffDriver driver: staffDriverList){
             driver.setTotalBonus();
+            notifyLogger(driver.getName() + " made $" + driver.getDailyBonus());
+            notifyTracker("employee $"+ driver.getDailyBonus());
             driver.setDailyBonus(0);
         }
     }
@@ -279,7 +284,6 @@ public class FNCD{
             pickupsList.add(car);
             setInventoryHelper(car);
         }
-
         tempLength = electricCarList.size();
         for(int i = 0; i < maxInventory - tempLength; i++){
             ElectricCar car = new ElectricCar(updateInventoryId());
@@ -336,13 +340,9 @@ public class FNCD{
     public void washing(){
         for (Interns emp: internList){
             emp.setDailyBonus(0);
-            String response = emp.wash(inventory);
-            notifyLogger(response);
+            ArrayList<String> response = emp.wash(inventory);
+            notifyHelper(response);
         }
-    }
-
-    public void notifyLogger(String response){
-        logger.onNext(response);
     }
 
     /**
@@ -351,8 +351,14 @@ public class FNCD{
     public void repairing(){
         for(Mechanics emp: mechanicsList){
             emp.setDailyBonus(0);
-            String response = emp.repair(inventory);
-            notifyLogger(response);
+            ArrayList<String> response = emp.repair(inventory);
+            notifyHelper(response);
+        }
+    }
+
+    public void notifyHelper(ArrayList<String> response){
+        for(int i = 0; i < response.size(); i++){
+            notifyLogger(response.get(i));
         }
     }
 
@@ -384,28 +390,78 @@ public class FNCD{
             if(car.getStatus().equals("sold")){
                 response = representative.getName() + " sold a vehicle " + car.getName() + " for $" + (int)(car.getSalePrice() * car.getPercent());
                 notifyLogger(response);
+                notifyTracker(response);
 
                 soldCars.add(car); // add the soldcar list
-                inventory.remove(car);
                 this.budget += car.getSalePrice();
                 this.dailySales += car.getSalePrice();
 
                 // remove them from the appropriate arraylist
-                if(car.getType().equals("performance car")){
-                    performanceCarList.remove(car);
-                } else if(car.getType().equals("car")){
-                    carsList.remove(car);
-                } else{
-                    pickupsList.remove(car);
-                }
+                removeHelper(car);
             } else{
                 notifyLogger(representative.getName() + " was not able to sell the vehicle " + car.getName());
             }
         }
     }
 
+    public void removeHelper(Vehicle car){
+        for(Vehicle c: inventory){
+            if(c.getName().equals(car.getName())){
+                inventory.remove(c);
+                break;
+            }
+        }
+        if(car.getType().equals("performance car")){
+            for(Vehicle c: performanceCarList){
+                if(c.getName().equals(car.getName())){
+                    performanceCarList.remove(c);
+                    break;
+                }
+            }
+        } else if(car.getType().equals("car")){
+            for(Vehicle c: carsList){
+                if(c.getName().equals(car.getName())){
+                    carsList.remove(c);
+                    break;
+                }
+            }
+        } else if(car.getType().equals("electric car")){
+            for(Vehicle c: electricCarList){
+                if(c.getName().equals(car.getName())){
+                    electricCarList.remove(c);
+                    break;
+                }
+            }
+        } else if(car.getType().equals("monster truck")){
+            for(Vehicle c: monsterTruckList){
+                if(c.getName().equals(car.getName())){
+                    monsterTruckList.remove(c);
+                    break;
+                }
+            }
+        }else if(car.getType().equals("motorcycle")){
+            for(Vehicle c: motorcycleList){
+                if(c.getName().equals(car.getName())){
+                    motorcycleList.remove(c);
+                    break;
+                }
+            }
+        }else{
+            for(Vehicle c: pickupsList){
+                if(c.getName().equals(car.getName())){
+                    pickupsList.remove(c);
+                    break;
+                }
+            }
+        }
+    }
+
     public void notifyTracker(String response){
         tracker.onNext(response);
+    }
+
+    public void notifyLogger(String response){
+        logger.onNext(response, date);
     }
 
     /**
@@ -419,6 +475,10 @@ public class FNCD{
         noMoney();
         System.out.println("\nQuitting");
         quit();
+        FNCDamount = tracker.getFNCDAmount();
+        employeeAmount = tracker.getEmployeeAmount();
+        tracker.onComplete(date);
+        logger.onComplete();
     }
 
     /**
@@ -429,21 +489,29 @@ public class FNCD{
             staff.setTotalDaysWorked();
             staff.setTotalPay();
             staff.setTotalBonus();
+            notifyTracker("employee $" + staff.getDailyBonus());
+            notifyTracker("employee $" + staff.getDailySalary());
         }
         for(Mechanics staff: mechanicsList){
             staff.setTotalDaysWorked();
             staff.setTotalPay();
             staff.setTotalBonus();
+            notifyTracker("employee $" + staff.getDailyBonus());
+            notifyTracker("employee $" + staff.getDailySalary());
         }
         for(Salesperson staff: salespeopleList){
             staff.setTotalDaysWorked();
             staff.setTotalPay();
             staff.setTotalBonus();
+            notifyTracker("employee $" + staff.getDailyBonus());
+            notifyTracker("employee $" + staff.getDailySalary());
         }
         for(StaffDriver staff: staffDriverList){
             staff.setTotalDaysWorked();
             staff.setTotalPay();
             staff.setTotalBonus();
+            notifyTracker("employee $" + staff.getDailyBonus());
+            notifyTracker("employee $" + staff.getDailySalary());
         }
     }
 
@@ -586,12 +654,12 @@ public class FNCD{
      * The function prints all inventory using String.format to make it look nice
      */
     public void printInventory(){
-        System.out.println(String.format("%20s %20s %20s %20s %20s %20s %20s", "Name", "Brand", "Cost", "Sale Price", "Condition", "Cleanliness", "Status"));
+        System.out.println(String.format("%35s %30s %20s %20s %20s %20s %30s", "Name", "Brand", "Cost", "Sale Price", "Condition", "Cleanliness", "Status"));
         for(Vehicle car: inventory){
-            System.out.println(String.format("%20s %20s %20s %20s %20s %20s %20s", car.getName(), car.getBrand(), car.getCost(), car.getSalePrice(), car.getCondition(), car.getCleanliness(), car.getStatus()));
+            System.out.println(String.format("%35s %30s %20s %20s %20s %20s %30s", car.getName(), car.getBrand(), car.getCost(), car.getSalePrice(), car.getCondition(), car.getCleanliness(), car.getStatus()));
         }
         for(Vehicle car: soldCars){
-            System.out.println(String.format("%20s %20s %20s %20s %20s %20s %20s", car.getName(), car.getBrand(), car.getCost(), car.getSalePrice(), car.getCondition(), car.getCleanliness(), car.getStatus()));
+            System.out.println(String.format("%35s %30s %20s %20s %20s %20s %30s", car.getName(), car.getBrand(), car.getCost(), car.getSalePrice(), car.getCondition(), car.getCleanliness(), car.getStatus()));
         }
     }
 

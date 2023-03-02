@@ -210,7 +210,6 @@ public class Pickups implements Vehicle{
     public int getSalePrice() {
         if(winCount >= 1){
             salePrice *= 1.1;
-            System.out.println("FNCD has at least one win with this type of vehicle");
         }
         return (int) (this.salePrice * this.percent);
     }

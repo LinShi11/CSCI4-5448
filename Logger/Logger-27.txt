@@ -1,0 +1,121 @@
+Mechanics_002 fixed a broken pickup (CHE_00037) and made it used (made $1000)
+Mechanics_010 fixed a used pickup (CHE_00037) and made it like new (made $1000)
+Salesperson_005 was not able to sell the vehicle NIO_00015
+Salesperson_005 was not able to sell the vehicle NIO_00015
+Salesperson_016 was not able to sell the vehicle NIO_00015
+Salesperson_005 sold a vehicle MAS_00036 for $63427
+Salesperson_014 sold a vehicle RAM_00033 for $33442
+Salesperson_005 sold a vehicle RAM_00033 for $33442
+Salesperson_014 sold a vehicle MAS_00036 for $63427
+Salesperson_005 sold a vehicle MAS_00036 for $66447
+Salesperson_005 sold a vehicle LAM_00034 for $64060
+Salesperson_005 was not able to sell the vehicle RIV_00016
+Salesperson_011 was not able to sell the vehicle RIV_00016
+Salesperson_005 was not able to sell the vehicle CHE_00040
+Salesperson_009 sold a vehicle MER_00037 for $82685
+Salesperson_009 sold a vehicle MER_00037 for $78748
+Salesperson_011 was not able to sell the vehicle SUZ_00023
+Salesperson_009 was not able to sell the vehicle SUZ_00023
+Salesperson_011 sold a vehicle CHE_00040 for $64438
+Salesperson_009 sold a vehicle MCL_00034 for $72565
+Salesperson_009 sold a vehicle LAM_00004 for $64465
+Salesperson_015 sold a vehicle JEE_00041 for $66975
+Salesperson_009 was not able to sell the vehicle SUZ_00021
+Salesperson_001 sold a vehicle LAM_00004 for $51572
+Salesperson_015 sold a vehicle SUZ_00021 for $102634
+Salesperson_001 sold a vehicle JEE_00041 for $73064
+Intern_019 washed a dirty car (VOL_00044) and made it sparkling
+Intern_019 washed a dirty pickup (GMC_00045) and made it sparkling
+Intern_020 washed a clean pickup (RAM_00046) and made it clean
+Intern_022 washed a clean pickup (RAM_00046) and made it sparkling
+Mechanics_009 fixed a broken car (VOL_00044) and made it used (made $1000)
+Mechanics_015 fixed a used car (VOL_00044) and made it used (made $0)
+Mechanics_018 fixed a used car (VOL_00044) and made it like new (made $1000)
+Salesperson_005 sold a vehicle FER_00042 for $88255
+Salesperson_007 sold a vehicle FOR_00038 for $49006
+Salesperson_007 sold a vehicle FER_00042 for $91932
+Salesperson_007 sold a vehicle MAZ_00005 for $29238
+Salesperson_016 was not able to sell the vehicle GMC_00045
+Intern_009 washed a dirty car (TOY_00043) and made it clean
+Intern_009 washed a dirty pickup (FOR_00044) and made it sparkling
+Intern_017 washed a clean car (TOY_00043) and made it sparkling
+Mechanics_002 fixed a broken car (TOY_00043) and made it used (made $1000)
+Mechanics_002 fixed a used pickup (FOR_00044) and made it like new (made $1000)
+Mechanics_006 fixed a used car (TOY_00043) and made it like new (made $1000)
+Salesperson_001 sold a vehicle NIO_00016 for $23020
+Salesperson_001 sold a vehicle AUD_00035 for $1010145
+Salesperson_001 sold a vehicle AUD_00035 for $2577773
+Salesperson_001 sold a vehicle AUD_00035 for $4420545
+Salesperson_011 sold a vehicle HON_00023 for $27249
+Salesperson_011 sold a vehicle AST_00042 for $48456
+Salesperson_011 sold a vehicle FOR_00044 for $26735
+Intern_018 washed a clean pickup (CHE_00040) and made it sparkling
+Salesperson_007 sold a vehicle MAZ_00028 for $31365
+Salesperson_011 sold a vehicle NIO_00015 for $31878
+Salesperson_007 sold a vehicle CHE_00040 for $68716
+Salesperson_007 sold a vehicle POR_00032 for $52286
+Salesperson_007 sold a vehicle NIO_00015 for $31878
+Salesperson_011 sold a vehicle CHE_00040 for $68716
+Intern_021 washed a clean performance car (LAM_00001) and made it sparkling
+Salesperson_016 sold a vehicle LAM_00001 for $116677
+Salesperson_013 sold a vehicle Bounty Hunter_00020 for $34560
+Salesperson_020 sold a vehicle LAM_00001 for $121538
+Salesperson_016 was not able to sell the vehicle JEE_00025
+Salesperson_020 sold a vehicle LUC_00014 for $33198
+Salesperson_013 was not able to sell the vehicle Madusa_00017
+Mechanics_001 fixed a broken performance car (AUD_00038) and made it used (made $2000)
+Mechanics_009 fixed a used performance car (AUD_00038) and made it like new (made $2000)
+Salesperson_011 sold a vehicle FER_00035 for $49586
+Salesperson_011 sold a vehicle Blacksmith_00017 for $56783
+Salesperson_011 sold a vehicle FER_00035 for $49586
+Salesperson_020 sold a vehicle RAM_00027 for $94637
+Salesperson_003 sold a vehicle RAM_00027 for $87357
+Salesperson_003 sold a vehicle LUC_00022 for $28770
+Salesperson_009 sold a vehicle VOL_00028 for $32031
+Salesperson_011 sold a vehicle FER_00003 for $54497
+Salesperson_011 sold a vehicle CHE_00037 for $57909595
+Intern_020 washed a dirty pickup (RAM_00052) and made it clean
+Intern_020 washed a dirty performance car (FER_00050) and made it sparkling
+Intern_022 washed a dirty pickup (CHE_00051) and made it sparkling
+Intern_022 washed a clean pickup (RAM_00052) and made it clean
+Intern_023 washed a clean pickup (RAM_00052) and made it clean
+Intern_023 washed a clean car (VOL_00048) and made it clean
+Mechanics_005 fixed a used pickup (CHE_00051) and made it used (made $0)
+Mechanics_017 fixed a used pickup (CHE_00051) and made it like new (made $1000)
+Salesperson_007 sold a vehicle VOL_00048 for $40347
+Salesperson_015 sold a vehicle VOL_00048 for $46111
+Intern_019 washed a dirty pickup (CHE_00042) and made it clean
+Intern_019 washed a clean performance car (LEX_00041) and made it sparkling
+Intern_020 washed a clean pickup (FOR_00043) and made it clean
+Intern_020 washed a clean pickup (CHE_00042) and made it clean
+Intern_021 washed a clean pickup (FOR_00043) and made it clean
+Intern_021 washed a clean pickup (CHE_00042) and made it clean
+Mechanics_009 fixed a used pickup (CHE_00042) and made it like new (made $1000)
+Mechanics_009 fixed a used pickup (FOR_00043) and made it like new (made $1000)
+Salesperson_007 sold a vehicle KIA_00008 for $28465
+Salesperson_011 sold a vehicle LEX_00041 for $73344
+Salesperson_003 was not able to sell the vehicle FOR_00043
+Intern_024 washed a dirty motorcycle (KAW_00021) and made it sparkling
+Intern_024 washed a clean pickup (CHE_00040) and made it sparkling
+Intern_025 washed a clean electric car (APT_00043) and made it sparkling
+Intern_025 washed a clean performance car (MCL_00001) and made it clean
+Intern_026 washed a clean performance car (MCL_00001) and made it clean
+Intern_026 washed a clean car (NIS_00007) and made it clean
+Mechanics_002 fixed a used electric car (APT_00043) and made it like new (made $1000)
+Salesperson_011 sold a vehicle BMW_00022 for $2024592
+Salesperson_011 was not able to sell the vehicle KAW_00021
+Salesperson_014 sold a vehicle TOY_00008 for $43348
+Salesperson_018 sold a vehicle Bear Foot (2xtreme)_00044 for $42260
+Intern_020 washed a dirty pickup (CHE_00059) and made it clean
+Intern_020 washed a dirty car (VOL_00055) and made it clean
+Intern_022 washed a dirty motorcycle (SUZ_00056) and made it clean
+Intern_022 washed a dirty monster truck (Bear Foot (1979)_00061) and made it clean
+Intern_025 washed a dirty pickup (JEE_00058) and made it clean
+Intern_025 washed a clean monster truck (Monster Mutt Dalmatian_00019) and made it clean
+Mechanics_010 fixed a used electric car (VOL_00060) and made it like new (made $1000)
+Mechanics_010 fixed a used pickup (CHE_00059) and made it like new (made $1000)
+Mechanics_015 fixed a used pickup (JEE_00058) and made it like new (made $1000)
+Mechanics_015 fixed a used monster truck (Bear Foot (1979)_00061) and made it like new (made $1000)
+Salesperson_001 sold a vehicle Bear Foot (1979)_00061 for $37048
+Salesperson_001 was not able to sell the vehicle SUB_00035
+Salesperson_011 sold a vehicle MER_00057 for $92203

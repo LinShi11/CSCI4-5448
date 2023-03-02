@@ -12,7 +12,7 @@ public class Buyer {
     final Map<String, Integer> probability = Map.of("just looking", 10, "wants one", 40, "needs one", 70);
 
     // the different vehicle types
-    final ArrayList<String> types = new ArrayList<>(Arrays.asList("performance car", "car", "pickup"));
+    final ArrayList<String> types = new ArrayList<>(Arrays.asList("performance car", "car", "pickup", "electric car", "motorcycle", "monster truck"));
 
     /**
      * constructor that determines at random what type of car the buyer would like and how much they want it.
@@ -20,7 +20,7 @@ public class Buyer {
     public Buyer(){
         Random random = new Random();
         this.buyingChance = buying.get(random.nextInt(3));
-        this.vehicleType = types.get(random.nextInt(3));
+        this.vehicleType = types.get(random.nextInt(6));
     }
 
     /**

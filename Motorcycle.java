@@ -48,7 +48,7 @@ public class Motorcycle implements Vehicle{
             cleanliness = Vehicle.getPossibleCleanliness().get(2);
         }
         status = "in stock";
-        type = "car";
+        type = "motorcycle";
         setBrand();
         setName(id);
         repairBonus = (int)(min * .10);
@@ -157,7 +157,6 @@ public class Motorcycle implements Vehicle{
     public int getSalePrice() {
         if(winCount >= 1){
             salePrice *= 1.1;
-            System.out.println("FNCD has at least one win with this type of vehicle");
         }
         return (int) (this.salePrice * this.percent);
     }
@@ -173,6 +172,9 @@ public class Motorcycle implements Vehicle{
     }
     
     public String getStatus(){
+        if(status.equals("sold")){
+            return "sold";
+        }
         return this.status + "(engine size: " + engineSize + ")";
     }
     

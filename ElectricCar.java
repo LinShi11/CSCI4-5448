@@ -48,7 +48,7 @@ public class ElectricCar implements Vehicle{
             cleanliness = Vehicle.getPossibleCleanliness().get(2);
         }
         status = "in stock";
-        type = "car";
+        type = "electric car";
         setBrand();
         setName(id);
         repairBonus = (int)(min * .10);
@@ -177,6 +177,9 @@ public class ElectricCar implements Vehicle{
     }
     
     public String getStatus(){
+        if(status.equals("sold")){
+            return "sold";
+        }
         return this.status + "(range: "  + range + ")";
     }
     

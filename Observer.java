@@ -5,12 +5,6 @@ import java.util.concurrent.Flow;
 //https://blog.softwaremill.com/how-not-to-use-reactive-streams-in-java-9-7a39ea9c2cb3
 public class Observer implements Flow.Subscriber<String>{
     private Flow.Subscription subscription;
-    protected int date;
-
-    public void setDate(int date){
-        this.date = date;
-    }
-
     @Override
     public void onSubscribe(Flow.Subscription subscription) {
         this.subscription = subscription;
@@ -19,6 +13,10 @@ public class Observer implements Flow.Subscriber<String>{
 
     @Override
     public void onNext(String item) {
+        System.out.println(item);
+    }
+
+    public void onNext(String item, int date) {
         subscription.request(1);
     }
 
@@ -29,6 +27,10 @@ public class Observer implements Flow.Subscriber<String>{
 
     @Override
     public void onComplete() {
+        subscription.cancel();
+    }
+
+    public void onComplete(int date){
         subscription.cancel();
     }
 }

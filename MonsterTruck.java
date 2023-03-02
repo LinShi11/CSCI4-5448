@@ -21,7 +21,7 @@ public class MonsterTruck implements Vehicle{
 
     private int min = 10000;
     private int max = 20000;
-    final ArrayList<String> brands = new ArrayList<>(Arrays.asList("Monster Jam Steel Titans 2", "Grave Digger", "Son-uva Digger"));
+    final ArrayList<String> brands = new ArrayList<>(Arrays.asList("Mon. Jam Steel Titans 2", "Grave Digger", "Son-uva Digger"));
 
     final static ArrayList<String> names = new ArrayList<>(Arrays.asList(
             "Air Force Afterburner", "Avenger",
@@ -67,7 +67,7 @@ public class MonsterTruck implements Vehicle{
             cleanliness = Vehicle.getPossibleCleanliness().get(2);
         }
         status = "in stock";
-        type = "car";
+        type = "monster truck";
         setBrand();
 
         if (id == null || id.equals("") || names.contains(id)) {//id is not provided, get from the list
@@ -99,7 +99,8 @@ public class MonsterTruck implements Vehicle{
     }
     
     public void setName(String name) {
-        this.name = this.getBrand().substring(0,3).toUpperCase() + "_" + name;
+        Random random = new Random();
+        this.name =  names.get(random.nextInt(names.size()))+ "_" + name;
     }
 
     public void setBrand(){
@@ -190,7 +191,6 @@ public class MonsterTruck implements Vehicle{
     
     public int getSalePrice() {
         if(winCount >= 1){
-            System.out.println("FNCD has at least one win with this type of vehicle");
             salePrice *= 1.1;
         }
         return (int) (this.salePrice * this.percent);
