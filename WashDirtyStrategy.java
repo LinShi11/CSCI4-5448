@@ -3,7 +3,7 @@ import java.util.Random;
 public class WashDirtyStrategy implements WashStrategy {
 
     @Override
-    public String wash(Interns intern, Vehicle car) { 
+    public String wash(Interns intern, Vehicle car) { //If the chemical method of washing is implemented, these are the chances below if a car can be clean, sparking, or dirty.
 
         Random random = new Random();
         int chance = random.nextInt(10);
