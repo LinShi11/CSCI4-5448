@@ -80,6 +80,10 @@ public class StaffDriver implements Staff{
         winCount++;
     }
 
+    public int getWinCount(){
+        return winCount;
+    }
+
     @Override
     public String getName() {
         return this.name;

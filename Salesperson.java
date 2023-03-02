@@ -24,7 +24,7 @@ public class Salesperson implements Staff{
         this.dailyBonus = 0;
         this.dailySalary = 200;
         this.totalPay = 0;
-        this.status = "Working";
+        this.status = "working";
         this.totalDaysWorked = 0;
     }
     /**
