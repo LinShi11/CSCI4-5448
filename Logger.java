@@ -3,7 +3,6 @@ import java.util.concurrent.Flow;
 
 public class Logger extends Observer{
     private Flow.Subscription subscription;
-    private String fileName;
 
     public Logger(){
 

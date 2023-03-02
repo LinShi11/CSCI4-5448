@@ -117,6 +117,7 @@ public class FNCD{
     }
 
     public void race(){
+        System.out.println("Racing......");
         Random random = new Random();
         int car = random.nextInt(4);
         ArrayList<Vehicle> racing = new ArrayList<>();
