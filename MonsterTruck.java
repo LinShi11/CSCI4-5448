@@ -91,16 +91,19 @@ public class MonsterTruck implements Vehicle{
 
     }
     
+    @Override
     public void setName(String name) {
         Random random = new Random();
         this.name = names.get(random.nextInt(names.size()))+ "_" + name;
     }
 
+    @Override
     public void setBrand(){
         Random random = new Random();
         this.brand = brands.get(random.nextInt(brands.size()));
     }
     
+    @Override
     public void setCost(){
         if(this.condition.equals("used")){
             this.cost *= 0.8;
@@ -109,61 +112,73 @@ public class MonsterTruck implements Vehicle{
         }
     }
     
+    @Override
     public void setSalePrice(double percentage){
         this.salePrice *= percentage;
     }
 
     
+    @Override
     public void setSaleBonus(int saleBonus) {
         this.saleBonus = saleBonus;
     }
 
     
+    @Override
     public void setRepairBonus(int repairBonus) {
         this.repairBonus = repairBonus;
     }
 
     
+    @Override
     public void setWashBonus(int washBonus) {
         this.washBonus = washBonus;
     }
 
 
     
+    @Override
     public void setCondition(String condition) {
         this.condition = condition;
     }
 
     
+    @Override
     public void setCleanliness(String cleanliness) {
         this.cleanliness = cleanliness;
     }
 
 
+    @Override
     public void setStatus(String status){
         this.status = status;
     }
     
+    @Override
     public String getName() {
         return this.name;
     }
 
     
+    @Override
     public String getBrand() {
         return brand;
     }
 
     
+    @Override
     public int getSaleBonus() {
         return this.saleBonus;
     }
 
     
+    @Override
     public int getRepairBonus() {
         return this.repairBonus;
     }
 
     
+    @Override
     public int getWashBonus(int level) {
         if(level == 1){
             return this.washBonus;
@@ -173,29 +188,35 @@ public class MonsterTruck implements Vehicle{
     }
 
     
+    @Override
     public int getCost() {
         return this.cost;
     }
 
     
+    @Override
     public int getSalePrice() {
         return (int) (this.salePrice * this.percent);
     }
 
     
+    @Override
     public String getCondition() {
         return this.condition;
     }
 
     
+    @Override
     public String getCleanliness() {
         return this.cleanliness;
     }
     
+    @Override
     public String getStatus(){
         return this.status;
     }
     
+    @Override
     public String getType(){
         return this.type;
     }
@@ -204,6 +225,7 @@ public class MonsterTruck implements Vehicle{
         return this.percent;
     }
     
+    @Override
     public void printAction(){
         System.out.println("Purchased a " + getCondition() + ", " + getCleanliness() + " Car " + getBrand() + ", (" + getName() + ") for $" + getCost());
     }

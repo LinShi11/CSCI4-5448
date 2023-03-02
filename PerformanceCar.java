@@ -61,6 +61,7 @@ public class PerformanceCar implements Vehicle{
      * @param name: name of the car
      */
     
+    @Override
     public void setName(String name) {
         this.name = this.getBrand().substring(0,3).toUpperCase() + "_" + name;
     }
@@ -68,6 +69,7 @@ public class PerformanceCar implements Vehicle{
      * setter for brand, randomly choose a brand
      */
     
+    @Override
     public void setBrand(){
         Random random = new Random();
         this.brand = brands.get(random.nextInt(brands.size()));
@@ -76,6 +78,7 @@ public class PerformanceCar implements Vehicle{
      * setter for cost, set cost based on condition
      */
     
+    @Override
     public void setCost(){
         if(this.condition.equals("used")){
             this.cost *= 0.8;
@@ -88,6 +91,7 @@ public class PerformanceCar implements Vehicle{
      * @param percentage: the percent modify the price by
      */
     
+    @Override
     public void setSalePrice(double percentage){
         this.salePrice *= percentage;
     }
@@ -96,6 +100,7 @@ public class PerformanceCar implements Vehicle{
      * @param saleBonus: the new sale bonus
      */
     
+    @Override
     public void setSaleBonus(int saleBonus) {
         this.saleBonus = saleBonus;
     }
@@ -104,6 +109,7 @@ public class PerformanceCar implements Vehicle{
      * @param repairBonus: new repairbonus
      */
     
+    @Override
     public void setRepairBonus(int repairBonus) {
         this.repairBonus = repairBonus;
     }
@@ -113,6 +119,7 @@ public class PerformanceCar implements Vehicle{
      * @param washBonus: new wash bonus
      */
     
+    @Override
     public void setWashBonus(int washBonus) {
         this.washBonus = washBonus;
     }
@@ -122,6 +129,7 @@ public class PerformanceCar implements Vehicle{
      * @param condition: new condition
      */
     
+    @Override
     public void setCondition(String condition) {
         this.condition = condition;
     }
@@ -130,6 +138,7 @@ public class PerformanceCar implements Vehicle{
      * @param cleanliness: new cleanliness
      */
     
+    @Override
     public void setCleanliness(String cleanliness) {
         this.cleanliness = cleanliness;
     }
@@ -139,6 +148,7 @@ public class PerformanceCar implements Vehicle{
      * @param status new status
      */
     
+    @Override
     public void setStatus(String status){
         this.status = status;
     }
@@ -148,6 +158,7 @@ public class PerformanceCar implements Vehicle{
      */
 
     
+    @Override
     public String getName() {
         return this.name;
     }
@@ -156,12 +167,14 @@ public class PerformanceCar implements Vehicle{
      * @return brand of the car
      */
     
+    @Override
     public String getBrand(){ return this.brand; }
     /**
      * getter for sale bonus
      * @return sale bonus
      */
     
+    @Override
     public int getSaleBonus() {
         return this.saleBonus;
     }
@@ -171,6 +184,7 @@ public class PerformanceCar implements Vehicle{
      */
 
     
+    @Override
     public int getRepairBonus() {
         return this.repairBonus;
     }
@@ -180,6 +194,7 @@ public class PerformanceCar implements Vehicle{
      * @return the wash bonus
      */
     
+    @Override
     public int getWashBonus(int level) {
         if(level == 1){
             return this.washBonus;
@@ -192,6 +207,7 @@ public class PerformanceCar implements Vehicle{
      * @return cost
      */
     
+    @Override
     public int getCost() {
         return this.cost;
     }
@@ -200,6 +216,7 @@ public class PerformanceCar implements Vehicle{
      * @return sale price
      */
     
+    @Override
     public int getSalePrice() {
         return (int) (this.salePrice * this.percent);
     }
@@ -208,6 +225,7 @@ public class PerformanceCar implements Vehicle{
      * @return condition
      */
     
+    @Override
     public String getCondition() {
         return this.condition;
     }
@@ -216,6 +234,7 @@ public class PerformanceCar implements Vehicle{
      * @return cleanliness
      */
     
+    @Override
     public String getCleanliness() {
         return this.cleanliness;
     }
@@ -224,6 +243,7 @@ public class PerformanceCar implements Vehicle{
      * @return status
      */
     
+    @Override
     public String getStatus(){
         return this.status;
     }
@@ -232,11 +252,13 @@ public class PerformanceCar implements Vehicle{
      * @return type
      */
     
+    @Override
     public String getType(){
         return this.type;
     }
 
     
+    @Override
     public void printAction() {
         System.out.println("Purchased a " + getCondition() + ", " + getCleanliness() + " Car " + getBrand() + ", (" + getName() + ") for $" + getCost());
     }
