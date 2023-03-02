@@ -175,7 +175,8 @@ public class Mechanics implements Staff {
      * Randomly select two fixable cars and try to fix them.
      * @param list: an arraylist of all the cars in the inventory
      */
-    public void repair(ArrayList<Vehicle> list){
+    public String repair(ArrayList<Vehicle> list){
+        String response = "";
         ArrayList<Vehicle> repairing = new ArrayList<>();
         // count the number of fixable cars (not like new)
         int fixable = 0;
@@ -197,8 +198,9 @@ public class Mechanics implements Staff {
         for(int i = 0; i < num; i ++){
             carNum = random.nextInt(fixable);
             //call fix car function
-            fixCar(repairing.get(carNum));
+            response = fixCar(repairing.get(carNum));
         }
+        return response;
     }
 
     /**
@@ -206,7 +208,7 @@ public class Mechanics implements Staff {
      * Drops cleanliness even if the fix was unsuccessful
      * @param car: the car we would like to fix
      */
-    public void fixCar(Vehicle car){
+    public String fixCar(Vehicle car){
         Random random = new Random();
         String previous = car.getCondition();
         int bonus = 0;
@@ -239,8 +241,10 @@ public class Mechanics implements Staff {
             car.setCleanliness("dirty");
         }
         //make an announcement
-        System.out.println(this.getName() + " fixed a " + previous +" "+ car.getType()
+        String response = (this.getName() + " fixed a " + previous +" "+ car.getType()
                 +" ("+ car.getName() + ") and made it " + car.getCondition() + " (made $" + bonus + ")");
+        System.out.println(response);
+        return response;
 
     }
 }

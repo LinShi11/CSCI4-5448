@@ -19,7 +19,7 @@ public interface Vehicle {
 //    private String brand;
 //    private String status;
 //    private String type;
-//    private double percent;
+//
 //    private int winCount;
 
     // possible condition and cleanliness

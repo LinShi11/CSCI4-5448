@@ -93,7 +93,8 @@ public class Interns implements Staff {
         return this.totalDaysWorked;
     }
 
-    public void wash(ArrayList<Vehicle> inventory){
+    public String wash(ArrayList<Vehicle> inventory){
+        String response = "";
         ArrayList<Vehicle> washing = new ArrayList<>();
         int dirtyCars = 0;
         int cleanCars = 0;
@@ -118,8 +119,9 @@ public class Interns implements Staff {
                 Vehicle car = washing.get(carNum);
                 String previous = car.getCleanliness();
                 washing.get(carNum).setCleanliness(washStrategy.wash(this, car));
-                System.out.println(this.getName() + " washed a " + previous +" "+ car.getType()
+                response = (this.getName() + " washed a " + previous +" "+ car.getType()
                         +" ("+ car.getName() + ") and made it " + car.getCleanliness());
+                System.out.println(response);
                 washing.remove(carNum);
             }
         }else if (dirtyCars == 1 && cleanCars >= 1){
@@ -129,8 +131,9 @@ public class Interns implements Staff {
             Vehicle car = washing.get(0);
             String previous = car.getCleanliness();
             washing.get(0).setCleanliness(washStrategy.wash(this, car));
-            System.out.println(this.getName() + " washed a " + previous +" "+ car.getType()
+            response = (this.getName() + " washed a " + previous +" "+ car.getType()
                     +" ("+ car.getName() + ") and made it " + car.getCleanliness());
+            System.out.println(response);
             washing.remove(0);
             int carNum = random.nextInt(cleanCars);
             car = washing.get(carNum);
@@ -139,8 +142,9 @@ public class Interns implements Staff {
             washStrategy = new WashCleanStrategy();
 
             washing.get(carNum).setCleanliness(washStrategy.wash(this, car));
-            System.out.println(this.getName() + " washed a " + previous +" "+ car.getType()
+            response = (this.getName() + " washed a " + previous +" "+ car.getType()
                     +" ("+ car.getName() + ") and made it " + car.getCleanliness());
+            System.out.println(response);
         } else{
             int carNum;
             int temp;
@@ -158,11 +162,12 @@ public class Interns implements Staff {
                 Vehicle car = washing.get(carNum);
                 String previous = car.getCleanliness();
                 washing.get(carNum).setCleanliness(washStrategy.wash(this, car));
-                System.out.println(this.getName() + " washed a " + previous +" "+ car.getType()
+                response = (this.getName() + " washed a " + previous +" "+ car.getType()
                         +" ("+ car.getName() + ") and made it " + car.getCleanliness());
+                System.out.println(response);
                 washing.remove(carNum);
             }
         }
-
+        return response;
     }
 }

@@ -3,12 +3,14 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Objects;
 import java.util.Random;
+import java.util.concurrent.Flow;
+import java.util.concurrent.SubmissionPublisher;
 
 /**
  * FNCD holds the simulation for the program.
  */
 
-public class FNCD {
+public class FNCD{
     // final variable for number of employees(each type) and number of vehicles(each type)
     final int maxSize = 3;
     final int maxInventory = 4;
@@ -32,6 +34,12 @@ public class FNCD {
     ArrayList<MonsterTruck> monsterTruckList;
     ArrayList<Motorcycle> motorcycleList;
     ArrayList<StaffDriver> staffDriverList;
+
+    SubmissionPublisher<String> publisher = new SubmissionPublisher<>();
+
+    Observer observer;
+    Logger logger;
+    Tracker tracker;
     /**
      * Constructor for FNCD class
      * Initialize all variable that will be used in the simulation
@@ -78,6 +86,10 @@ public class FNCD {
         while(date <= simTime){
             // check for sundays and call startDay()/endDay() if it is not sunday
             if(date % 7 != 0) {
+                observer = new Observer();
+                observer.setDate(date);
+                logger = new Logger();
+                tracker = new Tracker();
                 System.out.println("******FNCD Day " + this.date + "******");
                 startDay();
                 endDay();
@@ -324,8 +336,13 @@ public class FNCD {
     public void washing(){
         for (Interns emp: internList){
             emp.setDailyBonus(0);
-            emp.wash(inventory);
+            String response = emp.wash(inventory);
+            notifyLogger(response);
         }
+    }
+
+    public void notifyLogger(String response){
+        logger.onNext(response);
     }
 
     /**
@@ -334,7 +351,8 @@ public class FNCD {
     public void repairing(){
         for(Mechanics emp: mechanicsList){
             emp.setDailyBonus(0);
-            emp.repair(inventory);
+            String response = emp.repair(inventory);
+            notifyLogger(response);
         }
     }
 
@@ -362,7 +380,11 @@ public class FNCD {
             Vehicle car = representative.sale(newBuyer, inventory);
 
             //look at the status of the car the saleperson recommended. If it is sold then update the variables
+            String response;
             if(car.getStatus().equals("sold")){
+                response = representative.getName() + " sold a vehicle " + car.getName() + " for $" + (int)(car.getSalePrice() * car.getPercent());
+                notifyLogger(response);
+
                 soldCars.add(car); // add the soldcar list
                 inventory.remove(car);
                 this.budget += car.getSalePrice();
@@ -376,8 +398,14 @@ public class FNCD {
                 } else{
                     pickupsList.remove(car);
                 }
+            } else{
+                notifyLogger(representative.getName() + " was not able to sell the vehicle " + car.getName());
             }
         }
+    }
+
+    public void notifyTracker(String response){
+        tracker.onNext(response);
     }
 
     /**
@@ -425,6 +453,7 @@ public class FNCD {
     public void noMoney(){
         while(this.budget <= 0){
             this.budget += 250000;
+            logger.onNext("You ran out of money, so you borrowed $250,000 from the bank");
             System.out.println("You ran out of money, so you borrowed $250,000 from the bank");
         }
     }

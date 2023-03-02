@@ -191,7 +191,7 @@ public class Salesperson implements Staff{
         Random random = new Random();
         System.out.println("The original price of the car is: $" + car.getSalePrice());
         System.out.println("The buyer has selected the following plan: ");
-        int warranty = random.nextInt(1);
+        int warranty = random.nextInt(4);
         if(warranty < 1){
             car = new ExtendedWarranty(car);
             System.out.print("Extended Warranty, ");
@@ -275,7 +275,7 @@ public class Salesperson implements Staff{
                 System.out.println("Buyer " + buyer.getBuyingChance() + " "+ buyer.getVehicleType()+ " " +
                         this.getName() + " suggested a " + car.getCleanliness() + ", " + car.getCondition() + " "
                         + car.getType() + "(" + car.getName()+ "). The buying probability was " + buyingChance+ ". And the transaction was unsuccessful for $" +
-                        car.getSalePrice());
+                        (int)(car.getSalePrice() * car.getPercent()));
             }
         }
     }
