@@ -3,6 +3,9 @@ import java.util.Arrays;
 import java.util.Hashtable;
 import java.util.Random;
 
+/**
+ * This class implements the monster truck. We took the naming a little different, as stated in assumption, but it follows the same name_numeric value format.
+ */
 public class MonsterTruck implements Vehicle{
     private String name;
     private int saleBonus;
@@ -90,7 +93,12 @@ public class MonsterTruck implements Vehicle{
         percent = 1;
 
     }
-    
+
+    /**
+     * A list of getter and setter for every variable. Due to time, we will not be mentioning every one of them
+     *
+     */
+
     @Override
     public void setName(String name) {
         Random random = new Random();

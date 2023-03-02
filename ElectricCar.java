@@ -2,6 +2,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
+/**
+ * This class is for the electric cars. The implementation is almost the same as all the classes before, only including a range variable.
+ */
 public class ElectricCar implements Vehicle{
     private String name;
     private int saleBonus;
@@ -17,7 +20,7 @@ public class ElectricCar implements Vehicle{
     private String type;
     private double percent;
 
-    /*
+    /**
      * Electric Cars have a unique Range attribute,
      * initially set randomly from 60 to 400 miles.
      * If an Electric Car arrives  as Like New or is repaired to Like New,
@@ -30,8 +33,6 @@ public class ElectricCar implements Vehicle{
     final ArrayList<String> brands = new ArrayList<>(Arrays.asList("Tesla", "Lucid Motors", "Zoox", "Aptiv", "Rivian", "NIO", "Nissan", "Volvo"));
 
     public ElectricCar(String id){
-        //https://stackoverflow.com/questions/3680637/generate-a-random-double-in-a-range
-        // https://www.geeksforgeeks.org/how-to-set-precision-for-double-values-in-java/
 
         Random random = new Random();
         cost = random.nextInt(max - min) + min;

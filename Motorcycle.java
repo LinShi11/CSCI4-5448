@@ -2,6 +2,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
+/**
+ * The class implements the motorcycle. The only different is a unique engine size
+ */
 public class Motorcycle implements Vehicle{
     private String name;
     private int saleBonus;

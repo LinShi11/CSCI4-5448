@@ -187,6 +187,11 @@ public class Salesperson implements Staff{
 
     }
 
+    /**
+     * Looks at each car and determine whether a package will be brought
+     * @param car: the current car
+     * @return the car after all the wrapping
+     */
     public Vehicle addDecorator(Vehicle car){
         Random random = new Random();
         System.out.println("The original price of the car is: $" + car.getSalePrice());
@@ -280,6 +285,15 @@ public class Salesperson implements Staff{
         }
     }
 
+    /**
+     * A bonus helper that determines whether the 10% increase is necessary
+     * @param type : the current type of the car
+     * @param perforamceWin: the win for performance car
+     * @param pickupWin: win for pickups
+     * @param monsterWin: win for monster trucks
+     * @param motorWin: win for motorcycles
+     * @return 1 for no change or 1.1 for 10% increase
+     */
     public static double bonusHelper(String type, int perforamceWin, int pickupWin, int monsterWin, int motorWin){
         if(type.equals("performance car")){
             if(perforamceWin >= 1){
