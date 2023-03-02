@@ -47,7 +47,7 @@ public class MonsterTruck implements Vehicle{
             "USA-1", "War Wizard", "WCW Nitro Machine",
             "Zombie"));
 
-    private static Hashtable<String, Integer> usedNames = new Hashtable<>();
+//    private static Hashtable<String, Integer> usedNames = new Hashtable<>();
 
     public MonsterTruck(String id){
         //https://stackoverflow.com/questions/3680637/generate-a-random-double-in-a-range
@@ -69,24 +69,22 @@ public class MonsterTruck implements Vehicle{
         status = "in stock";
         type = "monster truck";
         setBrand();
-
-        if (id == null || id.equals("") || names.contains(id)) {//id is not provided, get from the list
-
-            id = names.get(random.nextInt(names.size()));
-        }
-
-        if (names.contains(id)) {
-
-            if (usedNames.containsKey(id)) { //name is used
-                int nextNum = usedNames.get(id) + 1;
-                usedNames.put(id, nextNum);//increase by 1
-
-                id = id + " " + nextNum;
-            }else {
-                usedNames.put(id, 1); //first used
-            }
-        }
-
+//        if (id == null || id.equals("") || names.contains(id)) {//id is not provided, get from the list
+//
+//            id = names.get(random.nextInt(names.size()));
+//        }
+//
+//        if (names.contains(id)) {
+//
+//            if (usedNames.containsKey(id)) { //name is used
+//                int nextNum = usedNames.get(id) + 1;
+//                usedNames.put(id, nextNum);//increase by 1
+//
+//                id = id + " " + nextNum;
+//            }else {
+//                usedNames.put(id, 1); //first used
+//            }
+//        }
         setName(id);
 
         repairBonus = (int)(min * .10);
@@ -100,7 +98,7 @@ public class MonsterTruck implements Vehicle{
     
     public void setName(String name) {
         Random random = new Random();
-        this.name =  names.get(random.nextInt(names.size()))+ "_" + name;
+        this.name = names.get(random.nextInt(names.size()))+ "_" + name;
     }
 
     public void setBrand(){
