@@ -5,6 +5,9 @@ import java.util.Map;
 
 import java.util.Random;
 
+/**
+ * detail wash (part of Strategy Pattern)
+ */
 public class DetailedWash implements WashingMethod {
 
 	@Override

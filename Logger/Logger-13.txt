@@ -1,3 +1,0 @@
-Mechanics_002 fixed a used performance car (BMW_00042) and made it like new (made $2000)
-Salesperson_011 sold a vehicle KTM_00041 for $37335
-Salesperson_001 was not able to sell the vehicle TOY_00045

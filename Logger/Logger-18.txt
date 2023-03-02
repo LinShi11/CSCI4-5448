@@ -1,3 +1,0 @@
-Mechanics_002 fixed a used motorcycle (BMW_00024) and made it used (made $0)
-Mechanics_009 fixed a used motorcycle (BMW_00024) and made it used (made $0)
-Mechanics_014 fixed a used motorcycle (BMW_00024) and made it like new (made $1000)

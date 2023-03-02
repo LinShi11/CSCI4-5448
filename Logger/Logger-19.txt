@@ -1,4 +1,0 @@
-Salesperson_001 was not able to sell the vehicle Bear Foot (Silverado)_00036
-Salesperson_001 sold a vehicle BMW_00042 for $79917
-Salesperson_011 sold a vehicle Bear Foot (Silverado)_00036 for $44675
-Salesperson_011 was not able to sell the vehicle TOY_00045

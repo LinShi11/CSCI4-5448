@@ -1,9 +1,0 @@
-Mechanics_002 fixed a broken monster truck (Bear Foot (F-150)_00018) and made it used (made $1000)
-Mechanics_002 fixed a used pickup (CHE_00051) and made it used (made $0)
-Mechanics_009 fixed a used monster truck (Bear Foot (F-150)_00018) and made it like new (made $1000)
-Mechanics_009 fixed a like new monster truck (Bear Foot (F-150)_00018) and made it used (made $1000)
-Mechanics_014 fixed a used pickup (CHE_00051) and made it like new (made $1000)
-Mechanics_014 fixed a used monster truck (Bear Foot (F-150)_00018) and made it used (made $0)
-Salesperson_001 sold a vehicle Bear Foot (F-150)_00018 for $78033
-Salesperson_011 was not able to sell the vehicle TOY_00045
-Salesperson_001 was not able to sell the vehicle BMW_00024

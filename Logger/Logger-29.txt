@@ -1,6 +1,0 @@
-Mechanics_002 fixed a used motorcycle (DUC_00063) and made it like new (made $1000)
-Mechanics_002 fixed a like new motorcycle (DUC_00063) and made it used (made $1000)
-Mechanics_009 fixed a broken performance car (ALF_00062) and made it used (made $2000)
-Mechanics_009 fixed a broken motorcycle (SUZ_00061) and made it broken (made $0)
-Mechanics_014 fixed a used motorcycle (DUC_00063) and made it like new (made $1000)
-Mechanics_014 fixed a like new motorcycle (DUC_00063) and made it used (made $1000)

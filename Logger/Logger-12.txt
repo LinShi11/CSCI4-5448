@@ -1,9 +1,0 @@
-Mechanics_002 fixed a used motorcycle (KTM_00041) and made it used (made $0)
-Mechanics_002 fixed a used motorcycle (KTM_00041) and made it like new (made $1000)
-Mechanics_009 fixed a broken performance car (BMW_00042) and made it used (made $2000)
-Mechanics_009 fixed a used electric car (NIS_00044) and made it like new (made $1000)
-Mechanics_013 fixed a broken electric car (TES_00043) and made it used (made $1000)
-Mechanics_013 fixed a used electric car (TES_00043) and made it like new (made $1000)
-Salesperson_011 sold a vehicle MAZ_00005 for $39404
-Salesperson_005 was not able to sell the vehicle JEE_00038
-Salesperson_011 was not able to sell the vehicle Bear Foot (Silverado)_00036

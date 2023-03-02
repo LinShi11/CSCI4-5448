@@ -1,4 +1,0 @@
-Mechanics_002 fixed a used motorcycle (SUZ_00061) and made it used (made $0)
-Mechanics_009 fixed a used motorcycle (SUZ_00061) and made it like new (made $1000)
-Salesperson_001 sold a vehicle DUC_00022 for $28912
-Salesperson_005 sold a vehicle JAG_00055 for $78555

@@ -1,8 +1,0 @@
-Mechanics_002 fixed a used performance car (ACU_00001) and made it like new (made $2000)
-Mechanics_002 fixed a broken pickup (FOR_00009) and made it used (made $1000)
-Mechanics_006 fixed a broken performance car (AUD_00002) and made it broken (made $0)
-Mechanics_006 fixed a broken performance car (AUD_00002) and made it used (made $2000)
-Mechanics_010 fixed a broken motorcycle (BMW_00024) and made it used (made $1000)
-Mechanics_010 fixed a used performance car (AUD_00004) and made it like new (made $2000)
-Salesperson_007 was not able to sell the vehicle NIO_00015
-Salesperson_007 was not able to sell the vehicle CHE_00011

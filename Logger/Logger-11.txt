@@ -1,9 +1,0 @@
-Mechanics_002 fixed a broken motorcycle (KTM_00041) and made it broken (made $0)
-Mechanics_002 fixed a used pickup (JEE_00038) and made it like new (made $1000)
-Mechanics_006 fixed a broken motorcycle (KTM_00041) and made it used (made $1000)
-Mechanics_009 fixed a used motorcycle (KTM_00041) and made it used (made $0)
-Salesperson_001 sold a vehicle JAG_00032 for $106744
-Salesperson_001 sold a vehicle ZOO_00039 for $40194
-Salesperson_001 was not able to sell the vehicle Bear Foot (Silverado)_00036
-Salesperson_011 sold a vehicle NIO_00016 for $30059
-Salesperson_011 was not able to sell the vehicle MAZ_00005

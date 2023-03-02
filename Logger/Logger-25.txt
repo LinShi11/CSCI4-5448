@@ -1,9 +1,0 @@
-Mechanics_002 fixed a used motorcycle (SUZ_00054) and made it like new (made $1000)
-Mechanics_002 fixed a broken electric car (RIV_00057) and made it broken (made $0)
-Mechanics_009 fixed a broken performance car (JAG_00055) and made it broken (made $0)
-Mechanics_009 fixed a broken electric car (RIV_00057) and made it used (made $1000)
-Mechanics_014 fixed a broken performance car (JAG_00055) and made it used (made $2000)
-Mechanics_014 fixed a used electric car (RIV_00057) and made it like new (made $1000)
-Salesperson_001 sold a vehicle Captain's Curse_00052 for $34828
-Salesperson_011 sold a vehicle RAM_00053 for $47370
-Salesperson_001 was not able to sell the vehicle JAG_00055

@@ -1,9 +1,0 @@
-Mechanics_002 fixed a broken motorcycle (SUZ_00031) and made it used (made $1000)
-Mechanics_002 fixed a broken motorcycle (LUC_00021) and made it used (made $1000)
-Mechanics_006 fixed a used motorcycle (SUZ_00031) and made it like new (made $1000)
-Mechanics_006 fixed a used motorcycle (LUC_00021) and made it used (made $0)
-Mechanics_009 fixed a broken electric car (VOL_00030) and made it broken (made $0)
-Mechanics_009 fixed a used motorcycle (LUC_00021) and made it like new (made $1000)
-Salesperson_001 sold a vehicle Cyborg_00019 for $43319
-Salesperson_001 sold a vehicle LUC_00021 for $48927
-Salesperson_005 sold a vehicle AUD_00004 for $76994

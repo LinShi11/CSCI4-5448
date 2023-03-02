@@ -3,6 +3,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
+/**
+ * This class is for intern that implements from Staff
+ */
 public class Interns implements Staff {
     private String name;
     private int dailySalary;
@@ -11,6 +14,10 @@ public class Interns implements Staff {
     private int totalBonus;
     private String status;
     private int totalDaysWorked;
+
+    /**
+     * The washing method is different for every intern
+     */
     private WashingMethod washingMethod;
     
     public Interns(String name, WashingMethod washingMethod){
@@ -19,11 +26,15 @@ public class Interns implements Staff {
         this.dailyBonus = 0;
         this.dailySalary = 70;
         this.totalPay = 0;
-        this.status = "Working";
+        this.status = "working";
         this.totalDaysWorked = 0;
         this.washingMethod = washingMethod;
     }
 
+    /**
+     * These are the getter and setter for every variable
+     *
+     */
 
     @Override
     public void setName(String name) {
@@ -95,6 +106,10 @@ public class Interns implements Staff {
         return this.totalDaysWorked;
     }
 
+    /**
+     * wash function that does the washing 
+     * @param inventory
+     */
     public void wash(ArrayList<Vehicle> inventory){
         ArrayList<Vehicle> washing = new ArrayList<>();
         int dirtyCars = 0;

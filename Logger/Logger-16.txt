@@ -1,3 +1,0 @@
-Salesperson_005 sold a vehicle TRI_00046 for $36816
-Salesperson_005 was not able to sell the vehicle JEE_00038
-Salesperson_011 was not able to sell the vehicle VOL_00030

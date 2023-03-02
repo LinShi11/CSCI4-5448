@@ -1,5 +1,8 @@
 import java.util.Random;
 
+/**
+ * chemical wash (part of Strategy Pattern)
+ */
 public class ChemicalWash implements WashingMethod {
 
 	@Override

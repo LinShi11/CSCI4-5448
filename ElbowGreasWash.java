@@ -1,5 +1,8 @@
 import java.util.Random;
 
+/**
+ * elbow grease wash (part of strategy pattern)
+ */
 public class ElbowGreasWash implements WashingMethod {
 
 	@Override

@@ -1,8 +1,0 @@
-Mechanics_002 fixed a broken car (MAZ_00029) and made it used (made $1000)
-Mechanics_002 fixed a broken electric car (NIS_00044) and made it used (made $1000)
-Mechanics_009 fixed a used electric car (NIS_00044) and made it like new (made $1000)
-Mechanics_009 fixed a like new electric car (NIS_00044) and made it like new (made $0)
-Mechanics_014 fixed a used car (MAZ_00029) and made it like new (made $1000)
-Salesperson_005 sold a vehicle CHE_00051 for $52085
-Salesperson_001 sold a vehicle BMW_00024 for $43608
-Salesperson_011 was not able to sell the vehicle MAZ_00029

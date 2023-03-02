@@ -1,3 +1,0 @@
-Salesperson_005 sold a vehicle MCL_00048 for $82387
-Salesperson_011 was not able to sell the vehicle ACU_00001
-Salesperson_011 sold a vehicle JEE_00038 for $81635
