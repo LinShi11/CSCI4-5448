@@ -21,7 +21,6 @@ public class Pickups implements Vehicle{
     private String status;
     private String type;
 
-    private int winCount;
     private double percent;
     // min and max cost
     private int min = 10000;
@@ -56,7 +55,6 @@ public class Pickups implements Vehicle{
         repairBonus = (int)(min * .10);
         saleBonus = (int)(min * 0.08);
         washBonus = (int)(min * 0.01);
-        winCount = 0;
         percent = 1;
     }
     /**
@@ -148,11 +146,6 @@ public class Pickups implements Vehicle{
      * getter for name
      * @return name
      */
-
-    public void setWinCount(){
-        winCount++;
-    }
-
     public String getName() {
         return this.name;
     }
@@ -208,9 +201,6 @@ public class Pickups implements Vehicle{
      */
 
     public int getSalePrice() {
-        if(winCount >= 1){
-            salePrice *= 1.1;
-        }
         return (int) (this.salePrice * this.percent);
     }
     /**

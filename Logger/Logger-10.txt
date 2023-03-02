@@ -398,3 +398,80 @@ One of the vehicle got 10 place
 Driver_004 made $0
 Driver_012 made $1000
 Driver_013 made $0
+Intern_013 washed a dirty car (VOL_00035) and made it clean
+Intern_013 washed a dirty car (KIA_00030) and made it clean
+Intern_014 washed a dirty monster truck (King Krunch_00034) and made it clean
+Intern_014 washed a dirty electric car (RIV_00014) and made it clean
+Intern_015 washed a clean car (HON_00006) and made it clean
+Intern_015 washed a clean car (VOL_00035) and made it clean
+Mechanics_002 fixed a used performance car (MER_00002) and made it like new (made $2000)
+Mechanics_002 fixed a used car (KIA_00030) and made it like new (made $1000)
+Mechanics_006 fixed a used motorcycle (DUC_00021) and made it like new (made $1000)
+Mechanics_006 fixed a used performance car (ACU_00003) and made it like new (made $2000)
+Mechanics_005 fixed a used pickup (JEE_00036) and made it used (made $0)
+Mechanics_005 fixed a used pickup (JEE_00036) and made it like new (made $1000)
+Salesperson_007 sold a vehicle Madusa_00027 for $69979
+Salesperson_007 sold a vehicle LAM_00025 for $74467
+Salesperson_007 sold a vehicle CHE_00037 for $56254
+Salesperson_009 was not able to sell the vehicle Zombie_00019
+Salesperson_009 was not able to sell the vehicle HON_00023
+FNCD have 3 monster truck in the race. 
+One of the vehicle got 3 place
+One of the vehicle got 4 place
+One of the vehicle got 2 place
+Driver_004 made $1000
+Driver_008 made $0
+Driver_012 made $1000
+Intern_005 washed a dirty car (TOY_00030) and made it clean
+Intern_005 washed a clean pickup (CHE_00025) and made it clean
+Intern_009 washed a clean pickup (CHE_00025) and made it sparkling
+Intern_009 washed a clean electric car (VOL_00031) and made it clean
+Intern_013 washed a clean performance car (ACU_00003) and made it clean
+Intern_013 washed a clean monster truck (Maximum Destruction (Max-D)_00020) and made it clean
+Mechanics_006 fixed a used car (TOY_00030) and made it like new (made $1000)
+Mechanics_006 fixed a broken electric car (VOL_00031) and made it used (made $1000)
+Mechanics_010 fixed a used electric car (VOL_00031) and made it like new (made $1000)
+Salesperson_003 was not able to sell the vehicle TOY_00030
+Salesperson_007 was not able to sell the vehicle NIS_00013
+FNCD have 3 motorcycle in the race. 
+One of the vehicle got 9 place
+One of the vehicle got 16 place
+One of the vehicle got 20 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_012 made $0
+Intern_015 washed a dirty performance car (ALF_00038) and made it clean
+Intern_015 washed a dirty pickup (GMC_00036) and made it clean
+Intern_016 washed a dirty monster truck (Grinder_00040) and made it clean
+Intern_016 washed a dirty motorcycle (KAW_00041) and made it clean
+Intern_017 washed a dirty performance car (MER_00039) and made it clean
+Intern_017 washed a clean monster truck (Bad News Travels Fast_00018) and made it clean
+Mechanics_002 fixed a used monster truck (Grinder_00040) and made it like new (made $1000)
+Salesperson_007 sold a vehicle MAZ_00034 for $39469
+Salesperson_011 was not able to sell the vehicle VOL_00025
+Salesperson_007 sold a vehicle Grinder_00040 for $40271
+Salesperson_014 was not able to sell the vehicle VOL_00025
+FNCD have 3 motorcycle in the race. 
+One of the vehicle got 7 place
+One of the vehicle got 12 place
+One of the vehicle got 11 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_012 made $0
+Intern_014 washed a dirty performance car (AUD_00032) and made it clean
+Intern_014 washed a dirty monster truck (King Krunch_00035) and made it clean
+Intern_015 washed a clean pickup (CHE_00012) and made it clean
+Intern_015 washed a clean electric car (APT_00033) and made it clean
+Intern_016 washed a clean performance car (LAM_00004) and made it sparkling
+Intern_016 washed a clean pickup (CHE_00012) and made it clean
+Mechanics_006 fixed a used motorcycle (LUC_00037) and made it used (made $0)
+Mechanics_010 fixed a used motorcycle (LUC_00037) and made it used (made $0)
+Mechanics_013 fixed a used motorcycle (LUC_00037) and made it used (made $0)
+Salesperson_009 was not able to sell the vehicle Maximum Destruction (Max-D)_00031
+FNCD have 3 performance car in the race. 
+One of the vehicle got 12 place
+One of the vehicle got 11 place
+One of the vehicle got 2 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_012 made $1000

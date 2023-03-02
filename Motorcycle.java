@@ -16,14 +16,13 @@ public class Motorcycle implements Vehicle{
     private String status;
     private String type;
 
-    /*
+    /**
      * Motorcycles have an unique Engine Size rating in cubic centimeters (cc).
      * This value should be generated from a
      * truncated Normal Distribution with mean 700 std. dev. 300.
      * In no case can cc be less than 50.
      */
     private int engineSize;
-    private int winCount;
     private double percent;
 
     private int min = 10000;
@@ -31,8 +30,6 @@ public class Motorcycle implements Vehicle{
     final ArrayList<String> brands = new ArrayList<>(Arrays.asList("Honda", "Lucid Motors", "Yamaha", "Suzuki", "Kawasaki", "BMW", "Ducati", "Triumph", "KTM"));
 
     public Motorcycle(String id){
-        //https://stackoverflow.com/questions/3680637/generate-a-random-double-in-a-range
-        // https://www.geeksforgeeks.org/how-to-set-precision-for-double-values-in-java/
 
         Random random = new Random();
         cost = random.nextInt(max - min) + min;
@@ -60,8 +57,6 @@ public class Motorcycle implements Vehicle{
         if (engineSize < 50) {
             engineSize = 50;
         }
-
-        winCount = 0;
         percent = 1;
     }
     
@@ -115,10 +110,6 @@ public class Motorcycle implements Vehicle{
     public void setStatus(String status){
         this.status = status;
     }
-
-    public void setWinCount(){
-        winCount++;
-    }
     
     public String getName() {
         return this.name;
@@ -155,9 +146,6 @@ public class Motorcycle implements Vehicle{
 
     
     public int getSalePrice() {
-        if(winCount >= 1){
-            salePrice *= 1.1;
-        }
         return (int) (this.salePrice * this.percent);
     }
 

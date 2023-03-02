@@ -16,7 +16,6 @@ public class ElectricCar implements Vehicle{
     private String status;
     private String type;
     private double percent;
-    private int winCount;
 
     /*
      * Electric Cars have a unique Range attribute,
@@ -102,7 +101,6 @@ public class ElectricCar implements Vehicle{
     
     public void setCondition(String condition) {
         this.condition = condition;
-
         if (condition.contains("new")) {
             range += 100;
         }
@@ -116,11 +114,6 @@ public class ElectricCar implements Vehicle{
 
     public void setStatus(String status){
         this.status = status;
-    }
-
-    
-    public void setWinCount() {
-        winCount = 0;
     }
 
     

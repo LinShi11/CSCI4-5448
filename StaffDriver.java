@@ -124,7 +124,7 @@ public class StaffDriver implements Staff{
     public boolean selfExam(){
         Random random = new Random();
         int hurt = random.nextInt(10);
-        if(hurt < 10){
+        if(hurt < 3){
             setInjured(true);
             return true;
         }

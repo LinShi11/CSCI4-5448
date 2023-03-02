@@ -18,7 +18,6 @@ public class PerformanceCar implements Vehicle{
     private String brand;
     private String status;
     private String type;
-    private int winCount;
     private double percent;
     //min and max price
     private int min = 20000;
@@ -55,7 +54,6 @@ public class PerformanceCar implements Vehicle{
         repairBonus = (int)(min * .10);
         saleBonus = (int)(min * 0.08);
         washBonus = (int)(min * 0.01);
-        winCount = 0;
         percent = 1;
     }
     /**
@@ -149,9 +147,6 @@ public class PerformanceCar implements Vehicle{
      * @return name
      */
 
-    public void setWinCount(){
-        winCount ++;
-    }
     
     public String getName() {
         return this.name;
@@ -206,9 +201,6 @@ public class PerformanceCar implements Vehicle{
      */
     
     public int getSalePrice() {
-        if(winCount >= 1){
-            salePrice *= 1.1;
-        }
         return (int) (this.salePrice * this.percent);
     }
     /**

@@ -351,3 +351,57 @@ Salesperson_011 sold a vehicle KIA_00008 for $37040
 Salesperson_003 sold a vehicle FER_00002 for $76218
 Salesperson_007 was not able to sell the vehicle TRI_00022
 Salesperson_003 was not able to sell the vehicle KIA_00006
+Intern_005 washed a dirty motorcycle (DUC_00021) and made it clean
+Intern_005 washed a dirty monster truck (Stone Crusher_00017) and made it sparkling
+Intern_009 washed a dirty electric car (RIV_00014) and made it sparkling
+Intern_009 washed a dirty car (HYU_00007) and made it sparkling
+Intern_013 washed a dirty pickup (RAM_00010) and made it sparkling
+Intern_013 washed a dirty motorcycle (HON_00023) and made it clean
+Mechanics_002 fixed a used motorcycle (HON_00023) and made it used (made $0)
+Mechanics_002 fixed a used car (SUB_00005) and made it like new (made $1000)
+Mechanics_006 fixed a broken performance car (LAM_00025) and made it broken (made $0)
+Mechanics_006 fixed a used motorcycle (BMW_00022) and made it like new (made $1000)
+Mechanics_010 fixed a used electric car (RIV_00015) and made it like new (made $1000)
+Mechanics_010 fixed a like new electric car (RIV_00015) and made it used (made $1000)
+Salesperson_007 was not able to sell the vehicle Stone Crusher_00017
+Salesperson_003 was not able to sell the vehicle GMC_00011
+Salesperson_011 was not able to sell the vehicle HON_00008
+Salesperson_003 sold a vehicle Stone Crusher_00017 for $38265
+Intern_001 washed a dirty performance car (LEX_00001) and made it sparkling
+Intern_001 washed a dirty performance car (ACU_00003) and made it clean
+Intern_005 washed a dirty pickup (RAM_00009) and made it sparkling
+Intern_005 washed a dirty monster truck (Brutus_00018) and made it dirty
+Intern_009 washed a dirty electric car (NIS_00013) and made it clean
+Intern_009 washed a dirty performance car (LAM_00004) and made it dirty
+Mechanics_002 fixed a used electric car (NIS_00013) and made it like new (made $1000)
+Mechanics_002 fixed a used pickup (CHE_00025) and made it like new (made $1000)
+Mechanics_006 fixed a used pickup (RAM_00011) and made it like new (made $1000)
+Mechanics_006 fixed a used performance car (LAM_00004) and made it like new (made $2000)
+Mechanics_010 fixed a used monster truck (Bigfoot_00019) and made it like new (made $1000)
+Mechanics_010 fixed a used monster truck (Grave Digger_00017) and made it like new (made $1000)
+Salesperson_003 was not able to sell the vehicle RAM_00011
+Salesperson_007 was not able to sell the vehicle ALF_00002
+Intern_001 washed a dirty car (MAZ_00008) and made it clean
+Intern_001 washed a dirty monster truck (Bad News Travels Fast_00017) and made it clean
+Intern_005 washed a dirty electric car (ZOO_00016) and made it clean
+Intern_005 washed a dirty motorcycle (TRI_00024) and made it sparkling
+Intern_009 washed a dirty performance car (LEX_00003) and made it clean
+Intern_009 washed a dirty pickup (FOR_00010) and made it sparkling
+Mechanics_002 fixed a broken performance car (LAM_00002) and made it used (made $2000)
+Mechanics_002 fixed a broken monster truck (Bad News Travels Fast_00018) and made it used (made $1000)
+Mechanics_006 fixed a used monster truck (Bad News Travels Fast_00018) and made it like new (made $1000)
+Mechanics_006 fixed a broken motorcycle (BMW_00022) and made it used (made $1000)
+Mechanics_010 fixed a broken pickup (RAM_00011) and made it used (made $1000)
+Mechanics_010 fixed a used performance car (LAM_00002) and made it used (made $0)
+Intern_001 washed a dirty pickup (JEE_00025) and made it clean
+Intern_001 washed a dirty electric car (NIO_00014) and made it clean
+Intern_005 washed a dirty electric car (TES_00013) and made it sparkling
+Intern_005 washed a dirty motorcycle (BMW_00022) and made it sparkling
+Intern_009 washed a dirty motorcycle (HON_00024) and made it clean
+Intern_009 washed a dirty performance car (ALF_00001) and made it clean
+Mechanics_002 fixed a broken motorcycle (TRI_00023) and made it used (made $1000)
+Mechanics_002 fixed a used pickup (JEE_00025) and made it used (made $0)
+Mechanics_006 fixed a used motorcycle (KAW_00021) and made it like new (made $1000)
+Mechanics_006 fixed a used pickup (JEE_00025) and made it like new (made $1000)
+Mechanics_010 fixed a used performance car (LEX_00002) and made it used (made $0)
+Mechanics_010 fixed a used car (NIS_00005) and made it like new (made $1000)

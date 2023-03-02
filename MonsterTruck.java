@@ -16,7 +16,6 @@ public class MonsterTruck implements Vehicle{
     private String brand;
     private String status;
     private String type;
-    private int winCount;
     private double percent;
 
     private int min = 10000;
@@ -50,8 +49,6 @@ public class MonsterTruck implements Vehicle{
 //    private static Hashtable<String, Integer> usedNames = new Hashtable<>();
 
     public MonsterTruck(String id){
-        //https://stackoverflow.com/questions/3680637/generate-a-random-double-in-a-range
-        // https://www.geeksforgeeks.org/how-to-set-precision-for-double-values-in-java/
 
         Random random = new Random();
         cost = random.nextInt(max - min) + min;
@@ -90,8 +87,6 @@ public class MonsterTruck implements Vehicle{
         repairBonus = (int)(min * .10);
         saleBonus = (int)(min * 0.08);
         washBonus = (int)(min * 0.01);
-
-        winCount = 0;
         percent = 1;
 
     }
@@ -148,10 +143,6 @@ public class MonsterTruck implements Vehicle{
     public void setStatus(String status){
         this.status = status;
     }
-
-    public void setWinCount(){
-        winCount++;
-    }
     
     public String getName() {
         return this.name;
@@ -188,9 +179,6 @@ public class MonsterTruck implements Vehicle{
 
     
     public int getSalePrice() {
-        if(winCount >= 1){
-            salePrice *= 1.1;
-        }
         return (int) (this.salePrice * this.percent);
     }
 

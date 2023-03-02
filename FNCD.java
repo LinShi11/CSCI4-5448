@@ -37,6 +37,10 @@ public class FNCD{
     Observer observer;
     Logger logger;
     Tracker tracker;
+    int performanceCarWin;
+    int pickupWin;
+    int monsterTruckWin;
+    int motorcycleWin;
     private int FNCDamount = 0;
     private int employeeAmount = 0;
     /**
@@ -65,6 +69,11 @@ public class FNCD{
         this.motorcycleList = new ArrayList<>();
         this.inventory = new ArrayList<>();
         this.soldCars = new ArrayList<>();
+
+        this.performanceCarWin = 0;
+        this.motorcycleWin = 0;
+        this.pickupWin = 0;
+        this.monsterTruckWin = 0;
 
         // directly hire 3 interns, 3 mechanics, and 3 salesperson + 3 drivers (staffs)
         for(int i = 0; i < maxSize; i++){
@@ -111,6 +120,7 @@ public class FNCD{
         Random random = new Random();
         int car = random.nextInt(4);
         ArrayList<Vehicle> racing = new ArrayList<>();
+        int winCount ;
         switch (car){
             case 0:
                 for(PerformanceCar vehicle: performanceCarList){
@@ -118,7 +128,8 @@ public class FNCD{
                         racing.add(vehicle);
                     }
                 }
-                raceHelper(racing);
+                winCount = raceHelper(racing);
+                performanceCarWin += winCount;
                 break;
             case 1:
                 for(Pickups vehicle: pickupsList){
@@ -126,7 +137,8 @@ public class FNCD{
                         racing.add(vehicle);
                     }
                 }
-                raceHelper(racing);
+                winCount = raceHelper(racing);
+                pickupWin += winCount;
                 break;
             case 2:
                 for(MonsterTruck vehicle: monsterTruckList){
@@ -134,7 +146,8 @@ public class FNCD{
                         racing.add(vehicle);
                     }
                 }
-                raceHelper(racing);
+                winCount = raceHelper(racing);
+                monsterTruckWin += winCount;
                 break;
             case 3:
                 for(Motorcycle vehicle: motorcycleList){
@@ -142,7 +155,8 @@ public class FNCD{
                         racing.add(vehicle);
                     }
                 }
-                raceHelper(racing);
+                winCount = raceHelper(racing);
+                motorcycleWin += winCount;
                 break;
             default:
                 System.out.println("error");
@@ -150,13 +164,14 @@ public class FNCD{
 
     }
 
-    public void raceHelper(ArrayList<Vehicle> racing){
+    public int raceHelper(ArrayList<Vehicle> racing){
         int count = racing.size();
+        int winCount = 0;
         Random random = new Random();
         if(count == 0){
             System.out.println("FNCD will not be participating in the race. ");
             notifyLogger("FNCD will not be participating in the race. ");
-            return;
+            return 0;
         } else if (count > 3 ) {
             count = 3;
         }
@@ -176,7 +191,7 @@ public class FNCD{
             System.out.println("One of the vehicle got " + (placement.get(j)+1) + " place" );
             notifyLogger("One of the vehicle got " + (placement.get(j)+1) + " place");
             if (placement.get(j) == 0 || placement.get(j) == 1 || placement.get(j) == 2) {
-                racing.get(j).setWinCount();
+                winCount ++;
                 staffDriverList.get(j).setWinCount();
                 staffDriverList.get(j).setDailyBonus(1000);
             } else if (placement.get(j) == 19 ||placement.get(j) == 18 || placement.get(j) == 17){
@@ -189,6 +204,7 @@ public class FNCD{
         }
         removeDriver();
         updateRaceBonus();
+        return winCount;
     }
 
     public void removeDriver(){
@@ -375,12 +391,12 @@ public class FNCD{
             representative = salespeopleList.get(random.nextInt(3));
 
             //call the sale function in SalePerson, the function will return the car the buyer was looking at
-            Vehicle car = representative.sale(newBuyer, inventory);
+            Vehicle car = representative.sale(newBuyer, inventory, performanceCarWin, pickupWin, monsterTruckWin, motorcycleWin);
 
             //look at the status of the car the saleperson recommended. If it is sold then update the variables
             String response;
             if(car.getStatus().equals("sold")){
-                response = representative.getName() + " sold a vehicle " + car.getName() + " for $" + (int)(car.getSalePrice() * car.getPercent());
+                response = representative.getName() + " sold a vehicle " + car.getName() + " for $" + (int)(car.getSalePrice() * car.getPercent() * Salesperson.bonusHelper(car.getType(), performanceCarWin, pickupWin, monsterTruckWin, motorcycleWin));
                 notifyLogger(response);
                 notifyTracker(response);
 
