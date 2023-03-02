@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * This class includes some of the helper functions used in FNCD
+ */
 public class Helper {
 
     /**

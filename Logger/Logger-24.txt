@@ -379,3 +379,793 @@ One of the vehicle got 1 place
 Driver_004 made $1000
 Driver_008 made $0
 Driver_012 made $1000
+Intern_013 washed a dirty monster truck (Backwards Bob_00063) and made it clean
+Intern_013 washed a clean monster truck (Grave Digger_00058) and made it clean
+Intern_016 washed a clean motorcycle (KAW_00064) and made it clean
+Intern_016 washed a clean motorcycle (TRI_00045) and made it clean
+Intern_017 washed a clean car (VOL_00005) and made it clean
+Intern_017 washed a clean performance car (ACU_00055) and made it clean
+Salesperson_011 sold a vehicle SUZ_00053 for $42009
+Salesperson_001 was not able to sell the vehicle Backwards Bob_00063
+Salesperson_009 sold a vehicle MAZ_00061 for $31082
+Salesperson_011 sold a vehicle CHE_00034 for $49358
+Salesperson_009 was not able to sell the vehicle Backwards Bob_00063
+FNCD have 3 monster truck in the race. 
+One of the vehicle got 14 place
+One of the vehicle got 6 place
+One of the vehicle got 3 place
+Driver_008 made $0
+Driver_014 made $0
+Driver_015 made $1000
+Intern_022 washed a dirty monster truck (Cyborg_00057) and made it clean
+Intern_022 washed a clean performance car (LEX_00002) and made it dirty
+Intern_023 washed a dirty performance car (LEX_00002) and made it sparkling
+Intern_023 washed a clean pickup (FOR_00056) and made it sparkling
+Intern_024 washed a clean monster truck (Cyborg_00057) and made it clean
+Intern_024 washed a clean electric car (TES_00043) and made it clean
+Mechanics_010 fixed a broken motorcycle (BMW_00059) and made it used (made $1000)
+Mechanics_019 fixed a used motorcycle (BMW_00059) and made it like new (made $1000)
+Salesperson_021 sold a vehicle HYU_00058 for $36414
+Salesperson_007 sold a vehicle KTM_00055 for $54899
+Salesperson_021 was not able to sell the vehicle TES_00043
+Salesperson_007 sold a vehicle HYU_00005 for $27104
+FNCD have 3 monster truck in the race. 
+One of the vehicle got 10 place
+One of the vehicle got 11 place
+One of the vehicle got 4 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_012 made $0
+Intern_016 washed a dirty monster truck (Monster Mutt_00033) and made it sparkling
+Intern_016 washed a clean performance car (MCL_00040) and made it clean
+Intern_017 washed a clean pickup (JEE_00039) and made it clean
+Intern_017 washed a clean motorcycle (TRI_00021) and made it clean
+Intern_018 washed a clean motorcycle (YAM_00022) and made it clean
+Intern_018 washed a clean car (HYU_00046) and made it clean
+Salesperson_013 was not able to sell the vehicle LUC_00036
+Salesperson_003 sold a vehicle NIO_00047 for $29942
+Salesperson_003 sold a vehicle TOY_00006 for $29196
+Salesperson_013 sold a vehicle Monster Mutt_00033 for $83246
+FNCD have 3 pickup in the race. 
+One of the vehicle got 3 place
+One of the vehicle got 5 place
+One of the vehicle got 20 place
+Driver_004 made $1000
+Driver_012 made $0
+Driver_019 made $0
+Intern_018 washed a dirty electric car (ZOO_00065) and made it sparkling
+Intern_018 washed a dirty monster truck (Raminator_00060) and made it clean
+Intern_019 washed a clean performance car (BMW_00059) and made it clean
+Intern_019 washed a clean motorcycle (SUZ_00061) and made it clean
+Intern_020 washed a clean monster truck (Jurassic Attack_00017) and made it clean
+Intern_020 washed a clean motorcycle (SUZ_00061) and made it clean
+Mechanics_006 fixed a used electric car (ZOO_00065) and made it used (made $0)
+Mechanics_006 fixed a used monster truck (Raminator_00060) and made it like new (made $1000)
+Mechanics_005 fixed a broken car (HON_00064) and made it used (made $1000)
+Mechanics_005 fixed a used car (HON_00064) and made it like new (made $1000)
+Mechanics_014 fixed a used electric car (ZOO_00065) and made it like new (made $1000)
+FNCD have 3 motorcycle in the race. 
+One of the vehicle got 15 place
+One of the vehicle got 8 place
+One of the vehicle got 4 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_013 made $0
+Intern_017 washed a dirty performance car (MCL_00059) and made it dirty
+Intern_017 washed a dirty performance car (JAG_00052) and made it clean
+Intern_018 washed a dirty performance car (MCL_00059) and made it sparkling
+Intern_018 washed a clean electric car (LUC_00013) and made it sparkling
+Intern_020 washed a clean electric car (APT_00016) and made it clean
+Intern_020 washed a clean pickup (CHE_00053) and made it sparkling
+Mechanics_002 fixed a used performance car (MCL_00059) and made it used (made $0)
+Mechanics_001 fixed a used performance car (MCL_00059) and made it like new (made $2000)
+Salesperson_015 sold a vehicle JAG_00052 for $63388
+Salesperson_011 was not able to sell the vehicle MCL_00059
+Salesperson_011 was not able to sell the vehicle KIA_00057
+Salesperson_015 sold a vehicle NIS_00038 for $33510
+FNCD have 3 monster truck in the race. 
+One of the vehicle got 20 place
+One of the vehicle got 19 place
+One of the vehicle got 13 place
+Driver_019 made $0
+Intern_018 washed a dirty pickup (FOR_00065) and made it clean
+Intern_018 washed a dirty monster truck (Bear Foot (1979)_00066) and made it clean
+Intern_019 washed a clean motorcycle (LUC_00062) and made it clean
+Intern_019 washed a clean pickup (FOR_00065) and made it clean
+Intern_020 washed a clean pickup (FOR_00065) and made it clean
+Intern_020 washed a clean monster truck (Madusa_00060) and made it clean
+Salesperson_007 was not able to sell the vehicle VOL_00059
+Salesperson_011 sold a vehicle KIA_00055 for $25490
+Salesperson_011 sold a vehicle LUC_00062 for $40096
+Salesperson_011 sold a vehicle HON_00027 for $24622
+FNCD have 2 motorcycle in the race. 
+One of the vehicle got 18 place
+One of the vehicle got 4 place
+Driver_008 made $0
+Driver_016 made $0
+Intern_015 washed a clean motorcycle (YAM_00039) and made it clean
+Intern_015 washed a clean electric car (LUC_00049) and made it clean
+Intern_016 washed a clean motorcycle (YAM_00039) and made it sparkling
+Intern_016 washed a clean car (KIA_00063) and made it dirty
+Intern_017 washed a dirty car (KIA_00063) and made it clean
+Intern_017 washed a clean monster truck (USA-1_00020) and made it clean
+Mechanics_010 fixed a broken car (KIA_00063) and made it used (made $1000)
+Mechanics_001 fixed a used car (KIA_00063) and made it used (made $0)
+Mechanics_005 fixed a used car (KIA_00063) and made it like new (made $1000)
+Salesperson_013 was not able to sell the vehicle AUD_00062
+Salesperson_007 was not able to sell the vehicle RAM_00064
+Salesperson_013 was not able to sell the vehicle RAM_00064
+FNCD have 3 monster truck in the race. 
+One of the vehicle got 15 place
+One of the vehicle got 19 place
+One of the vehicle got 12 place
+Driver_008 made $0
+Driver_012 made $0
+Driver_014 made $0
+Intern_019 washed a dirty monster truck (Air Force Afterburner_00064) and made it sparkling
+Intern_019 washed a clean motorcycle (BMW_00059) and made it sparkling
+Intern_020 washed a clean electric car (NIS_00051) and made it clean
+Intern_020 washed a clean monster truck (Madusa_00030) and made it dirty
+Intern_021 washed a dirty monster truck (Madusa_00030) and made it sparkling
+Intern_021 washed a clean electric car (NIS_00051) and made it clean
+Salesperson_001 sold a vehicle BMW_00059 for $66523
+Salesperson_017 sold a vehicle GMC_00063 for $55432
+FNCD have 3 motorcycle in the race. 
+One of the vehicle got 1 place
+One of the vehicle got 9 place
+One of the vehicle got 10 place
+Driver_004 made $1000
+Driver_008 made $0
+Driver_012 made $0
+Intern_017 washed a dirty car (TOY_00056) and made it clean
+Intern_017 washed a clean pickup (JEE_00053) and made it dirty
+Intern_019 washed a dirty pickup (JEE_00053) and made it sparkling
+Intern_019 washed a clean monster truck (Monster Mutt Dalmatian_00049) and made it clean
+Intern_022 washed a clean monster truck (Blue Thunder_00048) and made it sparkling
+Intern_022 washed a clean motorcycle (SUZ_00050) and made it sparkling
+Salesperson_016 sold a vehicle Blue Thunder_00048 for $30087
+FNCD have 3 pickup in the race. 
+One of the vehicle got 10 place
+One of the vehicle got 5 place
+One of the vehicle got 3 place
+Driver_008 made $0
+Driver_020 made $0
+Driver_021 made $1000
+Intern_016 washed a dirty monster truck (Madusa_00062) and made it clean
+Intern_016 washed a clean performance car (LEX_00053) and made it clean
+Intern_017 washed a clean electric car (RIV_00059) and made it clean
+Intern_017 washed a clean performance car (LEX_00053) and made it clean
+Intern_018 washed a clean monster truck (Madusa_00062) and made it clean
+Intern_018 washed a clean performance car (LEX_00053) and made it sparkling
+Salesperson_001 sold a vehicle NIS_00037 for $26743
+Salesperson_003 sold a vehicle BMW_00024 for $29740
+Salesperson_001 was not able to sell the vehicle Zombie_00019
+Salesperson_003 sold a vehicle SUZ_00056 for $25820
+Salesperson_003 sold a vehicle FOR_00054 for $83583
+FNCD have 2 motorcycle in the race. 
+One of the vehicle got 14 place
+One of the vehicle got 16 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_012 made $0
+Intern_023 washed a dirty motorcycle (HON_00050) and made it dirty
+Intern_023 washed a dirty car (NIS_00049) and made it clean
+Intern_024 washed a dirty motorcycle (HON_00050) and made it clean
+Intern_024 washed a clean performance car (JAG_00040) and made it clean
+Intern_025 washed a clean motorcycle (TRI_00045) and made it clean
+Intern_025 washed a clean electric car (TES_00048) and made it clean
+Mechanics_010 fixed a used motorcycle (HON_00050) and made it like new (made $1000)
+Mechanics_010 fixed a like new motorcycle (HON_00050) and made it used (made $1000)
+Mechanics_014 fixed a broken car (NIS_00049) and made it used (made $1000)
+Mechanics_014 fixed a used motorcycle (HON_00050) and made it like new (made $1000)
+Mechanics_021 fixed a used car (NIS_00049) and made it like new (made $1000)
+Salesperson_022 sold a vehicle RAM_00046 for $79392
+Salesperson_022 sold a vehicle LEX_00004 for $78423
+Salesperson_022 was not able to sell the vehicle GMC_00011
+FNCD have 3 pickup in the race. 
+One of the vehicle got 8 place
+One of the vehicle got 16 place
+One of the vehicle got 7 place
+Driver_012 made $0
+Driver_015 made $0
+Driver_016 made $0
+Intern_015 washed a dirty motorcycle (YAM_00057) and made it clean
+Intern_015 washed a dirty pickup (FOR_00058) and made it clean
+Intern_018 washed a clean pickup (FOR_00058) and made it clean
+Intern_018 washed a clean electric car (RIV_00056) and made it clean
+Intern_020 washed a clean performance car (LAM_00054) and made it sparkling
+Intern_020 washed a clean motorcycle (YAM_00057) and made it dirty
+Mechanics_006 fixed a used car (HON_00055) and made it like new (made $1000)
+Mechanics_006 fixed a like new car (HON_00055) and made it used (made $1000)
+Mechanics_010 fixed a used car (HON_00055) and made it like new (made $1000)
+Mechanics_010 fixed a like new car (HON_00055) and made it used (made $1000)
+Mechanics_014 fixed a broken pickup (FOR_00058) and made it broken (made $0)
+Mechanics_014 fixed a used car (HON_00055) and made it used (made $0)
+FNCD have 3 performance car in the race. 
+One of the vehicle got 6 place
+One of the vehicle got 15 place
+One of the vehicle got 1 place
+Driver_004 made $0
+Driver_012 made $0
+Driver_016 made $1000
+Intern_019 washed a dirty electric car (RIV_00050) and made it dirty
+Intern_019 washed a dirty performance car (MAS_00047) and made it clean
+Intern_020 washed a dirty pickup (GMC_00053) and made it sparkling
+Intern_020 washed a dirty car (HYU_00052) and made it clean
+Intern_023 washed a dirty monster truck (Bad News Travels Fast_00029) and made it sparkling
+Intern_023 washed a dirty electric car (RIV_00050) and made it clean
+Mechanics_001 fixed a used performance car (MAS_00047) and made it like new (made $2000)
+Mechanics_001 fixed a broken car (HYU_00052) and made it broken (made $0)
+Mechanics_013 fixed a broken car (HYU_00052) and made it used (made $1000)
+Mechanics_014 fixed a used car (HYU_00052) and made it like new (made $1000)
+Salesperson_003 was not able to sell the vehicle RIV_00050
+FNCD have 3 motorcycle in the race. 
+One of the vehicle got 2 place
+One of the vehicle got 4 place
+One of the vehicle got 11 place
+Driver_004 made $1000
+Driver_012 made $0
+Driver_021 made $0
+Intern_001 washed a dirty car (NIS_00054) and made it dirty
+Intern_001 washed a clean pickup (JEE_00050) and made it sparkling
+Intern_005 washed a dirty car (NIS_00054) and made it clean
+Intern_005 washed a clean monster truck (Monster Mutt Dalmatian_00046) and made it clean
+Intern_013 washed a clean electric car (NIS_00015) and made it clean
+Intern_013 washed a clean performance car (ACU_00048) and made it clean
+Salesperson_007 sold a vehicle KAW_00022 for $32051
+FNCD have 3 pickup in the race. 
+One of the vehicle got 1 place
+One of the vehicle got 6 place
+One of the vehicle got 12 place
+Driver_008 made $1000
+Driver_012 made $0
+Driver_014 made $0
+Intern_018 washed a dirty car (NIS_00046) and made it sparkling
+Intern_018 washed a dirty pickup (CHE_00050) and made it clean
+Intern_019 washed a clean performance car (MAS_00028) and made it sparkling
+Intern_019 washed a clean monster truck (Bear Foot (2xtreme)_00040) and made it clean
+Intern_020 washed a clean monster truck (Bear Foot (2xtreme)_00040) and made it clean
+Intern_020 washed a clean car (NIS_00051) and made it clean
+Salesperson_013 sold a vehicle KTM_00043 for $49540
+Salesperson_013 sold a vehicle MAS_00028 for $71887
+Salesperson_003 sold a vehicle AST_00004 for $61581
+Salesperson_014 sold a vehicle Bear Foot (2xtreme)_00040 for $45586
+Salesperson_003 sold a vehicle KAW_00023 for $36333
+FNCD have 3 monster truck in the race. 
+One of the vehicle got 1 place
+One of the vehicle got 18 place
+One of the vehicle got 14 place
+Driver_004 made $1000
+Driver_012 made $0
+Intern_018 washed a dirty motorcycle (KAW_00063) and made it clean
+Intern_018 washed a dirty motorcycle (DUC_00062) and made it clean
+Intern_019 washed a dirty electric car (APT_00061) and made it clean
+Intern_019 washed a clean motorcycle (KAW_00063) and made it clean
+Intern_021 washed a clean electric car (APT_00061) and made it clean
+Intern_021 washed a clean performance car (LEX_00053) and made it clean
+Salesperson_011 was not able to sell the vehicle APT_00061
+Salesperson_005 was not able to sell the vehicle CHE_00059
+Salesperson_001 sold a vehicle MER_00003 for $108468
+Salesperson_001 was not able to sell the vehicle KAW_00063
+Salesperson_011 was not able to sell the vehicle APT_00061
+FNCD have 3 pickup in the race. 
+One of the vehicle got 18 place
+One of the vehicle got 16 place
+One of the vehicle got 15 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_017 made $0
+Intern_017 washed a dirty monster truck (Grave Digger_00051) and made it clean
+Intern_017 washed a dirty motorcycle (HON_00057) and made it clean
+Intern_020 washed a clean motorcycle (BMW_00034) and made it sparkling
+Intern_020 washed a clean performance car (MCL_00041) and made it sparkling
+Intern_021 washed a clean electric car (VOL_00058) and made it sparkling
+Intern_021 washed a clean pickup (CHE_00047) and made it clean
+Mechanics_002 fixed a broken electric car (VOL_00058) and made it used (made $1000)
+Mechanics_002 fixed a used electric car (VOL_00058) and made it like new (made $1000)
+Mechanics_006 fixed a broken monster truck (Monster Mutt_00059) and made it used (made $1000)
+Mechanics_013 fixed a used monster truck (Monster Mutt_00059) and made it like new (made $1000)
+Salesperson_011 was not able to sell the vehicle HON_00057
+FNCD have 3 pickup in the race. 
+One of the vehicle got 18 place
+One of the vehicle got 5 place
+One of the vehicle got 8 place
+Driver_008 made $0
+Driver_019 made $0
+Intern_009 washed a dirty performance car (ALF_00055) and made it clean
+Intern_009 washed a clean pickup (CHE_00053) and made it sparkling
+Intern_013 washed a clean electric car (LUC_00016) and made it clean
+Intern_013 washed a clean pickup (FOR_00052) and made it clean
+Intern_014 washed a clean electric car (VOL_00056) and made it sparkling
+Intern_014 washed a clean electric car (LUC_00045) and made it sparkling
+Mechanics_006 fixed a broken electric car (VOL_00056) and made it used (made $1000)
+Mechanics_010 fixed a used electric car (VOL_00056) and made it like new (made $1000)
+Salesperson_005 was not able to sell the vehicle ALF_00055
+Salesperson_005 was not able to sell the vehicle ALF_00055
+FNCD have 3 motorcycle in the race. 
+One of the vehicle got 15 place
+One of the vehicle got 7 place
+One of the vehicle got 13 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_012 made $0
+Intern_016 washed a dirty monster truck (Sudden Impact_00063) and made it clean
+Intern_016 washed a clean performance car (AST_00059) and made it clean
+Intern_017 washed a clean monster truck (Captain's Curse_00062) and made it clean
+Intern_017 washed a clean monster truck (Sudden Impact_00063) and made it clean
+Intern_018 washed a clean monster truck (Sudden Impact_00063) and made it sparkling
+Intern_018 washed a clean monster truck (War Wizard_00017) and made it sparkling
+Mechanics_002 fixed a broken monster truck (Sudden Impact_00063) and made it used (made $1000)
+Mechanics_006 fixed a used monster truck (Sudden Impact_00063) and made it like new (made $1000)
+Salesperson_001 sold a vehicle TRI_00021 for $30264
+Salesperson_001 was not able to sell the vehicle KIA_00008
+FNCD have 3 pickup in the race. 
+One of the vehicle got 1 place
+One of the vehicle got 19 place
+One of the vehicle got 5 place
+Driver_004 made $1000
+Driver_012 made $0
+Intern_014 washed a dirty pickup (FOR_00046) and made it sparkling
+Intern_014 washed a dirty pickup (RAM_00054) and made it sparkling
+Intern_015 washed a clean electric car (VOL_00050) and made it clean
+Intern_015 washed a clean monster truck (WCW Nitro Machine_00051) and made it clean
+Intern_016 washed a clean electric car (VOL_00050) and made it sparkling
+Intern_016 washed a clean car (MAZ_00005) and made it clean
+FNCD have 3 performance car in the race. 
+One of the vehicle got 15 place
+One of the vehicle got 3 place
+One of the vehicle got 14 place
+Driver_004 made $0
+Driver_008 made $1000
+Driver_012 made $0
+Intern_014 washed a dirty performance car (ALF_00060) and made it clean
+Intern_014 washed a clean pickup (FOR_00049) and made it clean
+Intern_016 washed a clean electric car (NIS_00054) and made it clean
+Intern_016 washed a clean motorcycle (KAW_00033) and made it clean
+Intern_017 washed a clean pickup (FOR_00049) and made it clean
+Intern_017 washed a clean electric car (TES_00055) and made it clean
+Salesperson_007 was not able to sell the vehicle KAW_00033
+FNCD have 3 monster truck in the race. 
+One of the vehicle got 6 place
+One of the vehicle got 18 place
+One of the vehicle got 17 place
+Driver_004 made $0
+Driver_012 made $0
+Intern_018 washed a dirty pickup (GMC_00055) and made it clean
+Intern_018 washed a dirty car (MAZ_00054) and made it clean
+Intern_021 washed a dirty electric car (VOL_00056) and made it clean
+Intern_021 washed a dirty motorcycle (SUZ_00051) and made it clean
+Intern_022 washed a clean performance car (BMW_00033) and made it clean
+Intern_022 washed a clean motorcycle (BMW_00045) and made it clean
+Mechanics_001 fixed a used car (SUB_00052) and made it like new (made $1000)
+Mechanics_001 fixed a used car (MAZ_00054) and made it like new (made $1000)
+Salesperson_009 sold a vehicle MAZ_00054 for $45036
+Salesperson_003 sold a vehicle VOL_00056 for $39319
+Salesperson_009 sold a vehicle LUC_00030 for $24372
+Salesperson_009 was not able to sell the vehicle BMW_00033
+FNCD have 3 performance car in the race. 
+One of the vehicle got 2 place
+One of the vehicle got 13 place
+One of the vehicle got 1 place
+Driver_004 made $1000
+Driver_008 made $0
+Driver_020 made $1000
+Intern_019 washed a dirty electric car (TES_00055) and made it clean
+Intern_019 washed a dirty pickup (CHE_00053) and made it clean
+Intern_020 washed a dirty car (HON_00052) and made it clean
+Intern_020 washed a clean pickup (RAM_00031) and made it clean
+Intern_021 washed a clean monster truck (Avenger_00033) and made it clean
+Intern_021 washed a clean performance car (LAM_00028) and made it clean
+Mechanics_001 fixed a used motorcycle (LUC_00057) and made it like new (made $1000)
+Mechanics_001 fixed a broken electric car (TES_00055) and made it used (made $1000)
+Mechanics_016 fixed a used electric car (TES_00055) and made it like new (made $1000)
+Salesperson_017 was not able to sell the vehicle HON_00052
+Salesperson_017 sold a vehicle LUC_00057 for $43494
+Salesperson_003 was not able to sell the vehicle Mohawk Warrior_00051
+FNCD have 3 motorcycle in the race. 
+One of the vehicle got 7 place
+One of the vehicle got 6 place
+One of the vehicle got 8 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_015 made $0
+Intern_015 washed a dirty electric car (ZOO_00058) and made it clean
+Intern_015 washed a dirty performance car (LAM_00044) and made it clean
+Intern_016 washed a clean monster truck (Jurassic Attack_00051) and made it clean
+Intern_016 washed a clean car (MAZ_00031) and made it clean
+Intern_017 washed a clean performance car (FER_00026) and made it sparkling
+Intern_017 washed a clean electric car (VOL_00025) and made it clean
+Salesperson_007 was not able to sell the vehicle NIS_00038
+Salesperson_001 sold a vehicle YAM_00043 for $39156
+Salesperson_007 was not able to sell the vehicle Predator_00057
+FNCD have 3 performance car in the race. 
+One of the vehicle got 3 place
+One of the vehicle got 12 place
+One of the vehicle got 2 place
+Driver_004 made $1000
+Driver_008 made $0
+Driver_012 made $1000
+Intern_015 washed a dirty motorcycle (KAW_00057) and made it clean
+Intern_015 washed a dirty pickup (CHE_00032) and made it clean
+Intern_016 washed a dirty pickup (CHE_00055) and made it clean
+Intern_016 washed a dirty performance car (ALF_00053) and made it sparkling
+Intern_017 washed a clean electric car (RIV_00013) and made it clean
+Intern_017 washed a clean monster truck (Swamp Thing_00028) and made it clean
+Mechanics_002 fixed a used motorcycle (KAW_00057) and made it used (made $0)
+Mechanics_005 fixed a used motorcycle (KAW_00057) and made it like new (made $1000)
+Salesperson_009 sold a vehicle KIA_00048 for $44514
+Salesperson_009 sold a vehicle NIS_00052 for $45027
+Salesperson_011 was not able to sell the vehicle ALF_00053
+Salesperson_011 was not able to sell the vehicle Swamp Thing_00028
+FNCD have 3 motorcycle in the race. 
+One of the vehicle got 12 place
+One of the vehicle got 6 place
+One of the vehicle got 16 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_012 made $0
+Intern_005 washed a dirty car (HON_00055) and made it clean
+Intern_005 washed a dirty pickup (JEE_00053) and made it sparkling
+Intern_015 washed a clean motorcycle (SUZ_00054) and made it sparkling
+Intern_015 washed a clean electric car (ZOO_00013) and made it clean
+Intern_016 washed a clean performance car (FER_00027) and made it clean
+Intern_016 washed a clean monster truck (Bad News Travels Fast_00036) and made it clean
+Mechanics_002 fixed a used car (HON_00055) and made it like new (made $1000)
+Salesperson_007 was not able to sell the vehicle MAS_00052
+Salesperson_007 was not able to sell the vehicle HON_00007
+FNCD have 3 performance car in the race. 
+One of the vehicle got 11 place
+One of the vehicle got 20 place
+One of the vehicle got 17 place
+Driver_004 made $0
+Driver_013 made $0
+Intern_018 washed a dirty monster truck (Grinder_00029) and made it clean
+Intern_018 washed a clean performance car (BMW_00003) and made it sparkling
+Intern_019 washed a clean car (MAZ_00033) and made it sparkling
+Intern_019 washed a clean monster truck (Stone Crusher_00047) and made it clean
+Intern_020 washed a clean motorcycle (KTM_00055) and made it clean
+Intern_020 washed a clean motorcycle (DUC_00042) and made it clean
+Mechanics_002 fixed a broken pickup (FOR_00054) and made it used (made $1000)
+Mechanics_006 fixed a used pickup (FOR_00054) and made it like new (made $1000)
+Salesperson_005 was not able to sell the vehicle SUB_00052
+Salesperson_016 was not able to sell the vehicle LAM_00027
+Salesperson_005 was not able to sell the vehicle SUB_00052
+Salesperson_015 sold a vehicle ZOO_00050 for $36011
+FNCD have 3 motorcycle in the race. 
+One of the vehicle got 5 place
+One of the vehicle got 14 place
+One of the vehicle got 17 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_012 made $0
+Intern_015 washed a clean car (KIA_00041) and made it sparkling
+Intern_015 washed a clean electric car (RIV_00061) and made it sparkling
+Intern_017 washed a clean performance car (BMW_00001) and made it sparkling
+Intern_017 washed a clean monster truck (El Toro Loco_00025) and made it clean
+Intern_018 washed a clean monster truck (Lucas Oil Crusader_00055) and made it sparkling
+Intern_018 washed a clean motorcycle (DUC_00033) and made it sparkling
+Salesperson_013 was not able to sell the vehicle CHE_00059
+FNCD have 3 pickup in the race. 
+One of the vehicle got 3 place
+One of the vehicle got 1 place
+One of the vehicle got 9 place
+Driver_004 made $1000
+Driver_008 made $1000
+Driver_012 made $0
+Intern_018 washed a dirty performance car (FER_00055) and made it clean
+Intern_018 washed a dirty car (HON_00056) and made it sparkling
+Intern_019 washed a dirty electric car (TES_00053) and made it clean
+Intern_019 washed a clean motorcycle (SUZ_00021) and made it clean
+Intern_020 washed a clean monster truck (Monster Mutt Dalmatian_00018) and made it clean
+Intern_020 washed a clean motorcycle (SUZ_00021) and made it clean
+Mechanics_002 fixed a used car (HON_00056) and made it used (made $0)
+Mechanics_002 fixed a broken performance car (FER_00055) and made it used (made $2000)
+Mechanics_010 fixed a used performance car (FER_00055) and made it like new (made $2000)
+Mechanics_010 fixed a used car (HON_00056) and made it like new (made $1000)
+Mechanics_017 fixed a broken monster truck (Bounty Hunter_00057) and made it broken (made $0)
+Salesperson_001 was not able to sell the vehicle Monster Mutt Dalmatian_00018
+Salesperson_009 sold a vehicle LUC_00031 for $31687
+Salesperson_003 was not able to sell the vehicle HON_00056
+FNCD have 3 motorcycle in the race. 
+One of the vehicle got 5 place
+One of the vehicle got 4 place
+One of the vehicle got 8 place
+Driver_008 made $0
+Driver_012 made $0
+Driver_014 made $0
+Intern_018 washed a dirty motorcycle (SUZ_00022) and made it sparkling
+Intern_018 washed a dirty electric car (RIV_00061) and made it clean
+Intern_019 washed a dirty electric car (TES_00062) and made it clean
+Intern_019 washed a clean electric car (RIV_00061) and made it sparkling
+Intern_020 washed a clean motorcycle (YAM_00052) and made it clean
+Intern_020 washed a clean electric car (NIO_00015) and made it clean
+Mechanics_010 fixed a used car (TOY_00060) and made it like new (made $1000)
+Mechanics_010 fixed a broken performance car (MCL_00059) and made it used (made $2000)
+Mechanics_009 fixed a used performance car (MCL_00059) and made it like new (made $2000)
+Mechanics_009 fixed a like new performance car (MCL_00059) and made it used (made $2000)
+Mechanics_013 fixed a used electric car (RIV_00061) and made it like new (made $1000)
+Mechanics_013 fixed a like new electric car (RIV_00061) and made it used (made $1000)
+Salesperson_003 was not able to sell the vehicle MCL_00059
+Salesperson_003 was not able to sell the vehicle Maximum Destruction (Max-D)_00028
+Salesperson_003 sold a vehicle TOY_00060 for $28838
+FNCD have 3 performance car in the race. 
+One of the vehicle got 10 place
+One of the vehicle got 4 place
+One of the vehicle got 3 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_012 made $1000
+Intern_015 washed a dirty car (VOL_00052) and made it sparkling
+Intern_015 washed a dirty performance car (LAM_00056) and made it clean
+Intern_017 washed a clean performance car (LAM_00056) and made it clean
+Intern_017 washed a clean monster truck (Snake Bite_00053) and made it clean
+Intern_018 washed a clean monster truck (Bigfoot_00017) and made it sparkling
+Intern_018 washed a clean monster truck (Sudden Impact_00054) and made it clean
+Mechanics_002 fixed a used performance car (LAM_00056) and made it like new (made $2000)
+Salesperson_011 sold a vehicle GMC_00041 for $202091
+Salesperson_003 was not able to sell the vehicle ZOO_00050
+Salesperson_003 sold a vehicle LEX_00003 for $83128
+FNCD have 3 monster truck in the race. 
+One of the vehicle got 8 place
+One of the vehicle got 14 place
+One of the vehicle got 7 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_012 made $0
+Intern_013 washed a dirty car (SUB_00068) and made it clean
+Intern_013 washed a dirty motorcycle (LUC_00023) and made it clean
+Intern_014 washed a dirty performance car (MCL_00067) and made it clean
+Intern_014 washed a dirty car (VOL_00069) and made it clean
+Intern_015 washed a clean pickup (JEE_00009) and made it clean
+Intern_015 washed a clean car (SUB_00068) and made it sparkling
+Mechanics_006 fixed a broken car (SUB_00068) and made it used (made $1000)
+Mechanics_006 fixed a used car (SUB_00068) and made it like new (made $1000)
+Mechanics_010 fixed a broken performance car (MCL_00067) and made it used (made $2000)
+Mechanics_010 fixed a used performance car (MCL_00067) and made it like new (made $2000)
+Mechanics_005 fixed a broken car (VOL_00069) and made it used (made $1000)
+Salesperson_009 sold a vehicle LUC_00023 for $49252
+Salesperson_009 was not able to sell the vehicle MCL_00067
+Salesperson_003 sold a vehicle TOY_00061 for $24183
+Salesperson_011 sold a vehicle ZOO_00048 for $30865
+Salesperson_003 sold a vehicle Blue Thunder_00062 for $44022
+FNCD have 3 pickup in the race. 
+One of the vehicle got 19 place
+One of the vehicle got 10 place
+One of the vehicle got 14 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_012 made $0
+Intern_017 washed a dirty motorcycle (LUC_00049) and made it sparkling
+Intern_017 washed a dirty monster truck (Avenger_00048) and made it clean
+Intern_018 washed a clean monster truck (Avenger_00048) and made it sparkling
+Intern_018 washed a clean electric car (TES_00014) and made it clean
+Intern_019 washed a clean performance car (ALF_00035) and made it clean
+Intern_019 washed a clean car (MAZ_00042) and made it clean
+Mechanics_005 fixed a used motorcycle (LUC_00049) and made it used (made $0)
+Mechanics_005 fixed a used motorcycle (LUC_00049) and made it used (made $0)
+Mechanics_013 fixed a used monster truck (Avenger_00048) and made it used (made $0)
+Mechanics_013 fixed a used monster truck (Avenger_00048) and made it like new (made $1000)
+Mechanics_015 fixed a used motorcycle (LUC_00049) and made it used (made $0)
+Salesperson_011 was not able to sell the vehicle Avenger_00048
+FNCD have 3 monster truck in the race. 
+One of the vehicle got 14 place
+One of the vehicle got 2 place
+One of the vehicle got 12 place
+Driver_004 made $0
+Driver_008 made $1000
+Driver_012 made $0
+Intern_016 washed a dirty pickup (RAM_00058) and made it clean
+Intern_016 washed a clean performance car (MER_00003) and made it dirty
+Intern_017 washed a dirty performance car (MER_00003) and made it dirty
+Intern_017 washed a clean motorcycle (KTM_00047) and made it clean
+Intern_018 washed a dirty performance car (MER_00003) and made it clean
+Intern_018 washed a clean pickup (RAM_00058) and made it clean
+Salesperson_011 was not able to sell the vehicle RAM_00058
+Salesperson_014 was not able to sell the vehicle KAW_00055
+FNCD have 3 pickup in the race. 
+One of the vehicle got 2 place
+One of the vehicle got 10 place
+One of the vehicle got 7 place
+Driver_008 made $1000
+Driver_012 made $0
+Driver_015 made $0
+Intern_014 washed a dirty car (HON_00060) and made it sparkling
+Intern_014 washed a clean motorcycle (BMW_00024) and made it clean
+Intern_018 washed a clean monster truck (Grinder_00053) and made it sparkling
+Intern_018 washed a clean pickup (GMC_00058) and made it sparkling
+Intern_019 washed a clean motorcycle (BMW_00024) and made it clean
+Intern_019 washed a clean electric car (NIO_00015) and made it clean
+Mechanics_002 fixed a broken electric car (RIV_00061) and made it used (made $1000)
+Mechanics_010 fixed a used electric car (RIV_00061) and made it like new (made $1000)
+FNCD have 3 performance car in the race. 
+One of the vehicle got 20 place
+One of the vehicle got 11 place
+One of the vehicle got 12 place
+Driver_012 made $0
+Driver_013 made $0
+Intern_014 washed a dirty performance car (BMW_00053) and made it sparkling
+Intern_014 washed a dirty electric car (RIV_00057) and made it clean
+Intern_017 washed a clean pickup (JEE_00048) and made it clean
+Intern_017 washed a clean car (HYU_00047) and made it clean
+Intern_018 washed a clean motorcycle (TRI_00055) and made it clean
+Intern_018 washed a clean motorcycle (KAW_00040) and made it clean
+Salesperson_009 sold a vehicle HYU_00047 for $31550
+Salesperson_009 was not able to sell the vehicle JEE_00048
+FNCD have 3 motorcycle in the race. 
+One of the vehicle got 20 place
+One of the vehicle got 11 place
+One of the vehicle got 19 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_012 made $0
+Intern_019 washed a dirty electric car (VOL_00046) and made it clean
+Intern_019 washed a clean motorcycle (TRI_00024) and made it sparkling
+Intern_020 washed a clean electric car (RIV_00044) and made it sparkling
+Intern_020 washed a clean electric car (VOL_00046) and made it clean
+Intern_021 washed a clean pickup (GMC_00036) and made it clean
+Intern_021 washed a clean performance car (POR_00002) and made it sparkling
+Salesperson_009 was not able to sell the vehicle GMC_00036
+Salesperson_009 sold a vehicle Blacksmith_00019 for $101401
+Salesperson_009 was not able to sell the vehicle MAZ_00043
+Salesperson_016 sold a vehicle GMC_00036 for $65941
+Salesperson_013 sold a vehicle RAM_00045 for $54862
+FNCD have 3 motorcycle in the race. 
+One of the vehicle got 16 place
+One of the vehicle got 6 place
+One of the vehicle got 10 place
+Driver_008 made $0
+Driver_012 made $0
+Driver_018 made $0
+Intern_023 washed a dirty motorcycle (LUC_00046) and made it sparkling
+Intern_023 washed a dirty electric car (RIV_00066) and made it clean
+Intern_024 washed a dirty performance car (LAM_00064) and made it clean
+Intern_024 washed a clean electric car (RIV_00066) and made it sparkling
+Intern_025 washed a clean car (SUB_00065) and made it clean
+Intern_025 washed a clean car (SUB_00050) and made it clean
+Mechanics_015 fixed a used monster truck (Blue Thunder_00063) and made it like new (made $1000)
+Mechanics_015 fixed a broken car (SUB_00065) and made it broken (made $0)
+Mechanics_017 fixed a broken car (SUB_00065) and made it used (made $1000)
+Mechanics_018 fixed a used car (SUB_00065) and made it like new (made $1000)
+Salesperson_020 was not able to sell the vehicle GMC_00043
+Salesperson_013 was not able to sell the vehicle RIV_00066
+Salesperson_019 sold a vehicle LUC_00046 for $52406
+FNCD have 3 pickup in the race. 
+One of the vehicle got 5 place
+One of the vehicle got 2 place
+One of the vehicle got 20 place
+Driver_004 made $0
+Driver_008 made $1000
+Intern_019 washed a dirty monster truck (USA-1_00061) and made it clean
+Intern_019 washed a dirty motorcycle (YAM_00060) and made it sparkling
+Intern_020 washed a dirty pickup (FOR_00057) and made it clean
+Intern_020 washed a clean motorcycle (SUZ_00054) and made it clean
+Intern_021 washed a clean pickup (FOR_00057) and made it dirty
+Intern_021 washed a clean motorcycle (SUZ_00053) and made it sparkling
+Mechanics_005 fixed a used motorcycle (YAM_00060) and made it like new (made $1000)
+Salesperson_003 sold a vehicle USA-1_00061 for $32176
+Salesperson_011 sold a vehicle MAZ_00027 for $107748
+FNCD have 3 monster truck in the race. 
+One of the vehicle got 5 place
+One of the vehicle got 14 place
+One of the vehicle got 13 place
+Driver_004 made $0
+Driver_012 made $0
+Driver_014 made $0
+Intern_018 washed a dirty performance car (JAG_00045) and made it clean
+Intern_018 washed a dirty motorcycle (SUZ_00048) and made it sparkling
+Intern_019 washed a dirty pickup (FOR_00047) and made it clean
+Intern_019 washed a clean motorcycle (KAW_00024) and made it clean
+Intern_020 washed a clean electric car (NIS_00037) and made it clean
+Intern_020 washed a clean monster truck (Lucas Oil Crusader_00041) and made it clean
+Mechanics_013 fixed a used pickup (FOR_00047) and made it like new (made $1000)
+Mechanics_013 fixed a like new pickup (FOR_00047) and made it like new (made $0)
+Mechanics_014 fixed a broken car (HON_00049) and made it broken (made $0)
+Mechanics_016 fixed a broken car (HON_00049) and made it used (made $1000)
+Salesperson_007 sold a vehicle SUZ_00048 for $39506
+Salesperson_007 was not able to sell the vehicle KAW_00021
+Salesperson_011 was not able to sell the vehicle FOR_00047
+Salesperson_007 sold a vehicle NIS_00043 for $28080
+Salesperson_011 sold a vehicle HON_00049 for $25374
+FNCD have 3 performance car in the race. 
+One of the vehicle got 7 place
+One of the vehicle got 8 place
+One of the vehicle got 5 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_012 made $0
+Intern_014 washed a dirty motorcycle (KAW_00059) and made it clean
+Intern_014 washed a clean car (KIA_00054) and made it clean
+Intern_015 washed a clean car (NIS_00049) and made it clean
+Intern_015 washed a clean motorcycle (YAM_00052) and made it clean
+Intern_016 washed a clean monster truck (Batman_00047) and made it clean
+Intern_016 washed a clean motorcycle (YAM_00052) and made it clean
+Salesperson_013 sold a vehicle TRI_00021 for $35273
+Salesperson_013 was not able to sell the vehicle LEX_00044
+FNCD have 3 performance car in the race. 
+One of the vehicle got 5 place
+One of the vehicle got 11 place
+One of the vehicle got 16 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_012 made $0
+Intern_013 washed a dirty performance car (ACU_00060) and made it clean
+Intern_013 washed a clean pickup (GMC_00032) and made it sparkling
+Intern_014 washed a clean performance car (ACU_00060) and made it sparkling
+Intern_014 washed a clean motorcycle (SUZ_00039) and made it clean
+Intern_015 washed a clean motorcycle (SUZ_00039) and made it clean
+Intern_015 washed a clean car (NIS_00055) and made it clean
+Salesperson_003 sold a vehicle NIO_00033 for $28472
+Salesperson_009 was not able to sell the vehicle FOR_00056
+Salesperson_009 sold a vehicle USA-1_00025 for $49822
+Salesperson_009 sold a vehicle HON_00059 for $45079
+FNCD have 3 monster truck in the race. 
+One of the vehicle got 20 place
+One of the vehicle got 5 place
+One of the vehicle got 7 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_012 made $0
+Intern_015 washed a dirty pickup (JEE_00060) and made it clean
+Intern_015 washed a dirty pickup (GMC_00061) and made it sparkling
+Intern_016 washed a dirty performance car (MER_00059) and made it clean
+Intern_016 washed a clean monster truck (Captain's Curse_00062) and made it sparkling
+Intern_018 washed a clean car (TOY_00034) and made it sparkling
+Intern_018 washed a clean performance car (MER_00059) and made it sparkling
+Mechanics_010 fixed a broken monster truck (Captain's Curse_00062) and made it used (made $1000)
+Mechanics_010 fixed a used pickup (JEE_00060) and made it used (made $0)
+Mechanics_005 fixed a used monster truck (Captain's Curse_00062) and made it like new (made $1000)
+Mechanics_005 fixed a used pickup (GMC_00061) and made it like new (made $1000)
+Mechanics_014 fixed a used pickup (JEE_00060) and made it like new (made $1000)
+Salesperson_009 was not able to sell the vehicle Captain's Curse_00062
+Salesperson_009 sold a vehicle LUC_00015 for $34164
+Salesperson_001 sold a vehicle VOL_00026 for $28299
+Salesperson_009 was not able to sell the vehicle NIS_00005
+FNCD have 3 pickup in the race. 
+One of the vehicle got 11 place
+One of the vehicle got 17 place
+One of the vehicle got 1 place
+Driver_008 made $0
+Driver_012 made $0
+Driver_017 made $1000
+Intern_014 washed a dirty electric car (RIV_00065) and made it sparkling
+Intern_014 washed a dirty performance car (LAM_00036) and made it clean
+Intern_015 washed a dirty car (VOL_00064) and made it dirty
+Intern_015 washed a dirty electric car (LUC_00068) and made it clean
+Intern_016 washed a dirty car (VOL_00064) and made it clean
+Intern_016 washed a clean electric car (LUC_00068) and made it sparkling
+Mechanics_002 fixed a broken electric car (RIV_00065) and made it used (made $1000)
+Mechanics_002 fixed a used electric car (LUC_00068) and made it like new (made $1000)
+Mechanics_010 fixed a used car (VOL_00064) and made it used (made $0)
+Mechanics_010 fixed a used electric car (RIV_00065) and made it like new (made $1000)
+Mechanics_001 fixed a used performance car (LAM_00036) and made it like new (made $2000)
+Mechanics_001 fixed a like new performance car (LAM_00036) and made it used (made $2000)
+Salesperson_007 sold a vehicle RAM_00058 for $81702
+Salesperson_007 was not able to sell the vehicle JEE_00069
+Salesperson_011 was not able to sell the vehicle LUC_00068
+Salesperson_007 was not able to sell the vehicle HYU_00049
+FNCD have 3 monster truck in the race. 
+One of the vehicle got 14 place
+One of the vehicle got 18 place
+One of the vehicle got 10 place
+Driver_004 made $0
+Driver_012 made $0
+Driver_017 made $0
+Intern_013 washed a dirty electric car (APT_00052) and made it clean
+Intern_013 washed a dirty car (MAZ_00053) and made it sparkling
+Intern_015 washed a clean motorcycle (YAM_00049) and made it clean
+Intern_015 washed a clean pickup (FOR_00050) and made it sparkling
+Intern_016 washed a clean performance car (LAM_00038) and made it clean
+Intern_016 washed a clean car (HYU_00042) and made it clean
+Mechanics_002 fixed a broken motorcycle (KAW_00055) and made it used (made $1000)
+Mechanics_002 fixed a used car (MAZ_00053) and made it like new (made $1000)
+Mechanics_006 fixed a used motorcycle (KAW_00055) and made it used (made $0)
+Mechanics_010 fixed a used motorcycle (KAW_00055) and made it like new (made $1000)
+Salesperson_003 was not able to sell the vehicle LAM_00038
+Salesperson_011 sold a vehicle LAM_00038 for $61807
+FNCD have 3 motorcycle in the race. 
+One of the vehicle got 1 place
+One of the vehicle got 2 place
+One of the vehicle got 10 place
+Driver_004 made $1000
+Driver_008 made $1000
+Driver_012 made $0

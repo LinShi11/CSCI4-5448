@@ -122,12 +122,19 @@ public class FNCD{
         Helper.printInventory(inventory, soldCars);
     }
 
+    /**
+     * This is the race function.
+     * The function determines which type of car to race and generate a list of usable car. Then will add to the winCount based on the results.
+     */
     public void race(){
+        System.out.println("Racing......");
         Random random = new Random();
+        // what type of car to use
         int car = random.nextInt(4);
         ArrayList<Vehicle> racing = new ArrayList<>();
         int winCount ;
         switch (car){
+            // generate the usable car arraylist
             case 0:
                 for(PerformanceCar vehicle: performanceCarList){
                     if(!vehicle.getCondition().equals("broken") ){
@@ -170,15 +177,24 @@ public class FNCD{
 
     }
 
+    /**
+     * The function will look at all race-able cars, determine the placement and make appropriate actions.
+     * @param racing: an arraylist of usable cars for racing
+     * @return : the number of winner for FNCD racers
+     */
     public int raceHelper(ArrayList<Vehicle> racing){
         int count = racing.size();
         int winCount = 0;
         Random random = new Random();
+
+        // if we have no race-able cars
         if(count == 0){
             System.out.println("FNCD will not be participating in the race. ");
             notifyLogger("FNCD will not be participating in the race. ");
             return 0;
-        } else if (count > 3 ) {
+        }
+        // if all the cars are race-able, we will only pick the first three
+        else if (count > 3 ) {
             count = 3;
         }
         System.out.println("FNCD is racing with " + racing.get(0).getType());
@@ -186,6 +202,7 @@ public class FNCD{
         notifyLogger("FNCD have " + count + " " + racing.get(0).getType()+ " in the race. ");
         ArrayList<Integer> placement = new ArrayList<>();
         int temp;
+        // determine the placement, will continue to run if we are getting the same numbers
         for(int i = 0; i < count; i++){
             temp = random.nextInt(20);
             while(placement.contains(temp)){
@@ -193,14 +210,20 @@ public class FNCD{
             }
             placement.add(temp);
         }
+
+        // look at the placement and determine action
         for(int j = 0; j < placement.size(); j++) {
             System.out.println("One of the vehicle got " + (placement.get(j)+1) + " place" );
             notifyLogger("One of the vehicle got " + (placement.get(j)+1) + " place");
+
+            // if we won
             if (placement.get(j) == 0 || placement.get(j) == 1 || placement.get(j) == 2) {
                 winCount ++;
                 staffDriverList.get(j).setWinCount();
                 staffDriverList.get(j).setDailyBonus(1000);
-            } else if (placement.get(j) == 19 ||placement.get(j) == 18 || placement.get(j) == 17){
+            }
+            // if we lost
+            else if (placement.get(j) == 19 ||placement.get(j) == 18 || placement.get(j) == 17){
                 racing.get(j).setCondition("broken");
                 boolean injury = staffDriverList.get(j).selfExam();
                 if(injury){
@@ -208,11 +231,15 @@ public class FNCD{
                 }
             }
         }
+        // remove the drivers and update their bonus
         removeDriver();
         updateRaceBonus();
         return winCount;
     }
 
+    /**
+     * this function removes the drivers after the race
+     */
     public void removeDriver(){
         int counter = 0;
         while(counter < staffDriverList.size()){
@@ -225,6 +252,9 @@ public class FNCD{
         }
     }
 
+    /**
+     * this function updated the bonuses for the drivers who won
+     */
     public void updateRaceBonus(){
         for(StaffDriver driver: staffDriverList){
             driver.setTotalBonus();
@@ -567,14 +597,26 @@ public class FNCD{
         return String.format("%05d", inventoryId++);
     }
 
+    /**
+     * calls the observers and give it the text (part of the observer pattern)
+     * @param response: the text to send
+     */
     public void notifyTracker(String response){
         tracker.onNext(response);
     }
 
+    /**
+     * calls the observer and give it the text (part of the observer pattern)
+     * @param response: the text to send
+     */
     public void notifyLogger(String response){
         logger.onNext(response, date);
     }
 
+    /**
+     * helper to remove the cars from the inventory
+     * @param car: the car to remove
+     */
     public void removeHelper(Vehicle car){
         for(Vehicle c: inventory){
             if(c.getName().equals(car.getName())){
