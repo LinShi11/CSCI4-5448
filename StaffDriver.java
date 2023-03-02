@@ -1,13 +1,16 @@
+import java.util.Random;
+
 public class StaffDriver implements Staff{
 
     private String name;
+    private int winCount;
     private int dailySalary;
     private int dailyBonus;
     private int totalPay;
     private int totalBonus;
     private String status;
     private int totalDaysWorked;
-    
+
     /**
      * Drivers do not quit like other Staff subclasses. 
      * However, they may be Injured in a Race activity. In that case,  
@@ -19,24 +22,13 @@ public class StaffDriver implements Staff{
         setName(name);
         this.totalBonus = 0;
         this.dailyBonus = 0;
-        this.dailySalary = 200;
         this.totalPay = 0;
-        this.status = "Working";
+        this.status = "working";
         this.totalDaysWorked = 0;
         this.injured = false;
+        this.winCount = 0;
     }
 
-    public StaffDriver(String name, int days, int bonus, int pay){
-        setName(name);
-        this.totalBonus = bonus;
-        this.dailyBonus = 0;
-        this.dailySalary = 200;
-        this.totalPay = pay;
-        this.status = "Working";
-        this.totalDaysWorked = days;
-        this.injured = false;
-    }
-    
     @Override
     public void setName(String name) {
         this.name = name;
@@ -46,6 +38,7 @@ public class StaffDriver implements Staff{
     public void setDailySalary(int dailySalary) {
         this.dailySalary = dailySalary;
     }
+
     @Override
     public void setDailyBonus(int dailyBonus){
         this.dailyBonus = dailyBonus;
@@ -53,12 +46,11 @@ public class StaffDriver implements Staff{
 
     @Override
     public void setTotalPay() {
-        this.totalPay+=this.dailySalary;
+        this.totalPay += dailySalary;
     }
 
     @Override
     public void setTotalBonus() {
-        System.out.println(dailyBonus);
         this.totalBonus+=this.dailyBonus;
     }
 
@@ -70,6 +62,9 @@ public class StaffDriver implements Staff{
     @Override
     public void setTotalDaysWorked() {
         this.totalDaysWorked++;
+    }
+    public void setWinCount(){
+        winCount++;
     }
 
     @Override
@@ -107,22 +102,32 @@ public class StaffDriver implements Staff{
         return this.totalDaysWorked;
     }
 
-	/**
-	 * @return the injured
-	 */
-	public boolean isInjured() {
-		return injured;
-	}
+    /**
+     * @return the injured
+     */
+    public boolean isInjured() {
+        return injured;
+    }
 
-	/**
-	 * @param injured the injured to set
-	 */
-	public void setInjured(boolean injured) {
-		this.injured = injured;
-		if (injured) {
-			this.status = "Injured/quit";
-		}else {
-			this.status = "Working";
-		}
-	}
+    /**
+     * @param injured the injured to set
+     */
+    public void setInjured(boolean injured) {
+        this.injured = injured;
+        if (injured) {
+            this.status = "quit";
+        }else {
+            this.status = "working";
+        }
+    }
+
+    public boolean selfExam(){
+        Random random = new Random();
+        int hurt = random.nextInt(10);
+        if(hurt < 10){
+            setInjured(true);
+            return true;
+        }
+        return false;
+    }
 }
