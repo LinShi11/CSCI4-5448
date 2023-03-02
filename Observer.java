@@ -18,7 +18,7 @@ public class Observer implements Flow.Subscriber<String>{
     }
 
     @Override
-    public void onNext(String item) {
+    public void onNext(String item) { //observer class will define 3 concrete classes
         subscription.request(1);
     }
 

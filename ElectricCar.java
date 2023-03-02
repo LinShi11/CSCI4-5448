@@ -29,6 +29,7 @@ public class ElectricCar implements Vehicle{
     private int min = 10000;
     private int max = 20000;
     final ArrayList<String> brands = new ArrayList<>(Arrays.asList("Tesla", "Lucid Motors", "Zoox", "Aptiv", "Rivian", "NIO", "Nissan", "Volvo"));
+    
 
     public ElectricCar(String id){
         //https://stackoverflow.com/questions/3680637/generate-a-random-double-in-a-range

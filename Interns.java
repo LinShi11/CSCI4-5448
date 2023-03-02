@@ -96,12 +96,12 @@ public class Interns implements Staff {
     public String wash(ArrayList<Vehicle> inventory){
         String response = "";
         ArrayList<Vehicle> washing = new ArrayList<>();
-        int dirtyCars = 0;
+        int dirtyCars = 0; //this function is the context for the stratgies
         int cleanCars = 0;
         for(Vehicle car : inventory){
             if(car.getCleanliness().equals("dirty")){
                 washing.add(0, car);
-                dirtyCars += 1;
+                dirtyCars += 1; 
             } else if (car.getCleanliness().equals("clean")){
                 washing.add(car);
                 cleanCars += 1;
@@ -110,7 +110,7 @@ public class Interns implements Staff {
         Random random = new Random();
         if(dirtyCars >= 2){
 
-            WashStrategy washStrategy = new WashCleanStrategy();
+            WashStrategy washStrategy = new WashCleanStrategy(); //this is the new object that is being passed
 
             int carNum;
             for (int i = 0; i < 2; i ++) {
@@ -118,8 +118,8 @@ public class Interns implements Staff {
                 dirtyCars--;
                 Vehicle car = washing.get(carNum);
                 String previous = car.getCleanliness();
-                washing.get(carNum).setCleanliness(washStrategy.wash(this, car));
-                response = (this.getName() + " washed a " + previous +" "+ car.getType()
+                washing.get(carNum).setCleanliness(washStrategy.wash(this, car));//this line will execute the strategy based on cleanliness of car
+                response = (this.getName() + " washed a " + previous +" "+ car.getType() //this is the implementation of the strategy pattern, because the behavior of the class will change at runtime.
                         +" ("+ car.getName() + ") and made it " + car.getCleanliness());
                 System.out.println(response);
                 washing.remove(carNum);
@@ -161,7 +161,7 @@ public class Interns implements Staff {
                 cleanCars--;
                 Vehicle car = washing.get(carNum);
                 String previous = car.getCleanliness();
-                washing.get(carNum).setCleanliness(washStrategy.wash(this, car));
+                washing.get(carNum).setCleanliness(washStrategy.wash(this, car)); //execution of strategy based on state of the car
                 response = (this.getName() + " washed a " + previous +" "+ car.getType()
                         +" ("+ car.getName() + ") and made it " + car.getCleanliness());
                 System.out.println(response);

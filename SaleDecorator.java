@@ -1,7 +1,7 @@
 public class SaleDecorator implements Vehicle {
     protected Vehicle car;
 
-    public SaleDecorator(Vehicle car) {
+    public SaleDecorator(Vehicle car) { //this decorator strategy will implement the VVehicle interface
         this.car = car;
     }
 
