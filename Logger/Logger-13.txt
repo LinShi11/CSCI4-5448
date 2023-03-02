@@ -1,0 +1,9 @@
+Mechanics_002 fixed a used monster truck (Shell Camino_00034) and made it like new (made $1000)
+Salesperson_013 sold a vehicle KIA_00031 for $38364
+Salesperson_013 sold a vehicle AST_00001 for $85332
+Salesperson_013 was not able to sell the vehicle Shell Camino_00034
+Salesperson_013 sold a vehicle Shell Camino_00034 for $40467
+Salesperson_009 sold a vehicle NIO_00029 for $40729
+Salesperson_009 was not able to sell the vehicle VOL_00015
+Salesperson_009 sold a vehicle SUZ_00021 for $44077
+Salesperson_013 sold a vehicle FOR_00032 for $104738

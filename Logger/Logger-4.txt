@@ -1,0 +1,7 @@
+Mechanics_002 fixed a broken motorcycle (YAM_00024) and made it used (made $1000)
+Mechanics_002 fixed a broken pickup (JEE_00010) and made it used (made $1000)
+Mechanics_006 fixed a used motorcycle (BMW_00026) and made it like new (made $1000)
+Mechanics_006 fixed a broken electric car (LUC_00025) and made it used (made $1000)
+Mechanics_010 fixed a used motorcycle (LUC_00022) and made it like new (made $1000)
+Mechanics_010 fixed a used pickup (JEE_00010) and made it like new (made $1000)
+Salesperson_003 sold a vehicle Avenger_00017 for $54117

@@ -1,0 +1,10 @@
+Mechanics_002 fixed a used motorcycle (HON_00040) and made it used (made $0)
+Mechanics_002 fixed a used electric car (APT_00038) and made it like new (made $1000)
+Mechanics_010 fixed a used pickup (JEE_00037) and made it like new (made $1000)
+Mechanics_010 fixed a broken performance car (ACU_00004) and made it used (made $2000)
+Mechanics_014 fixed a used motorcycle (HON_00040) and made it like new (made $1000)
+Mechanics_014 fixed a broken monster truck (Backwards Bob_00039) and made it broken (made $0)
+Salesperson_009 was not able to sell the vehicle APT_00038
+Salesperson_005 sold a vehicle KTM_00030 for $50474
+Salesperson_009 sold a vehicle The Destroyer_00018 for $38314
+Salesperson_005 was not able to sell the vehicle LUC_00022

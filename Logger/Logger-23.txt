@@ -1,0 +1,9 @@
+Mechanics_002 fixed a broken car (HON_00047) and made it used (made $1000)
+Mechanics_002 fixed a broken motorcycle (BMW_00026) and made it used (made $1000)
+Mechanics_014 fixed a broken electric car (LUC_00048) and made it used (made $1000)
+Mechanics_014 fixed a used motorcycle (BMW_00026) and made it like new (made $1000)
+Mechanics_015 fixed a used car (HON_00047) and made it like new (made $1000)
+Mechanics_015 fixed a like new car (HON_00047) and made it like new (made $0)
+Salesperson_005 was not able to sell the vehicle HON_00047
+Salesperson_013 was not able to sell the vehicle VOL_00015
+Salesperson_009 sold a vehicle ACU_00004 for $64042

@@ -1,0 +1,5 @@
+Salesperson_021 sold a vehicle FOR_00056 for $72987
+Salesperson_005 sold a vehicle HON_00047 for $56714
+Salesperson_021 sold a vehicle NIS_00059 for $32617
+Salesperson_018 sold a vehicle TRI_00055 for $34689
+Salesperson_018 was not able to sell the vehicle HON_00005

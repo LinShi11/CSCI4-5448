@@ -10,6 +10,21 @@ we had to add a addDecorator() function to make Salesperson work. Third, for the
 we had to include two function, setInjuried() and selfExam(), that sets the determines whether a driver is injured and set the appropriate settings. Fourth, the functions in observer is changed after implementing the Flow Api.
 We implemented all the methods from the subscriber class, but only onNext() and onComplete() was really used. Furthermore, there are some small modifications such as extracting some helper function in FNCD to create a Helper class. 
 
+#### UML: 
+##### The whole UML diagram:
+![uml_whole](image/uml_whole.png)
+##### UML for Staff:
+![uml_staff](image/uml_staff.png)
+##### UML for Vehicle:
+![uml_Vehicle](image/uml_vehicle.png)
+##### UML for Observer:
+![uml_observer](image/uml_observer.png)
+##### UML for Strategy:
+![uml_strategy](image/uml_strategy.png)
+##### UML for decorator:
+![uml_decorator](image/uml_decorator.png)
+
+
 #### Extra credit:
 I used intellij to run all my Junit tests, so it was kind of cheating in that I just clicked everywhere that gave me an error and told the IDE to install it. 
 I believe Junit 4 was used. Additionally, I split my tests into two parts: the beginning of the simulation and the end of it. 

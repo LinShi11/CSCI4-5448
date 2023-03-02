@@ -1,0 +1,17 @@
+Mechanics_002 fixed a broken pickup (JEE_00010) and made it used (made $1000)
+Mechanics_002 fixed a broken motorcycle (LUC_00022) and made it used (made $1000)
+Mechanics_006 fixed a used electric car (NIO_00013) and made it like new (made $1000)
+Mechanics_006 fixed a used electric car (RIV_00016) and made it like new (made $1000)
+Mechanics_010 fixed a used monster truck (Shell Camino_00019) and made it like new (made $1000)
+Mechanics_010 fixed a broken performance car (AST_00003) and made it used (made $2000)
+Salesperson_001 sold a vehicle NIO_00013 for $33345
+Salesperson_007 was not able to sell the vehicle AST_00001
+Salesperson_007 was not able to sell the vehicle JEE_00010
+Salesperson_003 sold a vehicle HON_00023 for $39704
+FNCD have 3 motorcycle in the race. 
+One of the vehicle got 17 place
+One of the vehicle got 4 place
+One of the vehicle got 19 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_012 made $0

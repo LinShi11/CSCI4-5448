@@ -1,0 +1,13 @@
+Mechanics_002 fixed a used monster truck (Backwards Bob_00039) and made it like new (made $1000)
+Salesperson_009 sold a vehicle Maximum Destruction (Max-D)_00041 for $44591
+Salesperson_013 was not able to sell the vehicle HON_00005
+Salesperson_013 was not able to sell the vehicle Backwards Bob_00039
+Salesperson_005 sold a vehicle ACU_00002 for $65004
+Salesperson_005 sold a vehicle LUC_00022 for $35289
+FNCD have 3 monster truck in the race. 
+One of the vehicle got 1 place
+One of the vehicle got 8 place
+One of the vehicle got 9 place
+Driver_004 made $1000
+Driver_008 made $0
+Driver_012 made $0

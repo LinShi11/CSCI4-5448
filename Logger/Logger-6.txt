@@ -1,0 +1,9 @@
+Mechanics_002 fixed a broken car (HON_00005) and made it used (made $1000)
+Mechanics_002 fixed a broken car (NIS_00028) and made it used (made $1000)
+Mechanics_006 fixed a used car (HON_00005) and made it like new (made $1000)
+Mechanics_006 fixed a used car (NIS_00028) and made it like new (made $1000)
+Salesperson_007 was not able to sell the vehicle Shell Camino_00019
+Salesperson_007 sold a vehicle YAM_00024 for $54877
+Salesperson_001 was not able to sell the vehicle AST_00003
+Salesperson_005 sold a vehicle LUC_00025 for $35400
+Salesperson_001 was not able to sell the vehicle JEE_00010

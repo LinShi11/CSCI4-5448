@@ -1,0 +1,16 @@
+Mechanics_002 fixed a broken performance car (AUD_00051) and made it broken (made $0)
+Mechanics_002 fixed a used electric car (LUC_00048) and made it like new (made $1000)
+Mechanics_014 fixed a broken performance car (AUD_00051) and made it used (made $2000)
+Mechanics_015 fixed a used performance car (AUD_00051) and made it used (made $0)
+Salesperson_005 sold a vehicle LUC_00048 for $37790
+Salesperson_017 sold a vehicle VOL_00015 for $29085
+Salesperson_017 was not able to sell the vehicle Avenger_00050
+Salesperson_017 sold a vehicle BMW_00026 for $59730
+Salesperson_017 sold a vehicle FER_00035 for $53610
+FNCD have 3 monster truck in the race. 
+One of the vehicle got 20 place
+One of the vehicle got 1 place
+One of the vehicle got 6 place
+Driver_004 made $0
+Driver_008 made $1000
+Driver_012 made $0

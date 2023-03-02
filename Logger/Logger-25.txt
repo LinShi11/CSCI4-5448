@@ -1,0 +1,9 @@
+Mechanics_002 fixed a broken monster truck (Zombie_00020) and made it used (made $1000)
+Mechanics_002 fixed a used performance car (AUD_00051) and made it like new (made $2000)
+Mechanics_014 fixed a used monster truck (Zombie_00020) and made it like new (made $1000)
+Mechanics_014 fixed a broken electric car (RIV_00053) and made it used (made $1000)
+Mechanics_015 fixed a used electric car (RIV_00053) and made it like new (made $1000)
+Salesperson_005 sold a vehicle RAM_00046 for $74410
+Salesperson_018 sold a vehicle Zombie_00020 for $39247
+Salesperson_005 sold a vehicle BMW_00045 for $47727
+Salesperson_017 was not able to sell the vehicle Avenger_00050

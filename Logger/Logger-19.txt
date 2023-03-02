@@ -1,0 +1,4 @@
+Salesperson_013 was not able to sell the vehicle HON_00005
+Salesperson_005 was not able to sell the vehicle BMW_00045
+Salesperson_013 sold a vehicle JEE_00037 for $77033
+Salesperson_013 was not able to sell the vehicle FOR_00011
