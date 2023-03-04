@@ -45,7 +45,7 @@ public class Motorcycle implements Vehicle{
         } else if (temp < 40){
             cleanliness = Vehicle.getPossibleCleanliness().get(1);
         } else{
-            cleanliness = Vehicle.getPossibleCleanliness().get(2);
+            cleanliness = Vehicle.getPossibleCleanliness().get(2); 
         }
         status = "in stock";
         type = "motorcycle";
@@ -57,7 +57,7 @@ public class Motorcycle implements Vehicle{
 
         //https://www.javamex.com/tutorials/random_numbers/gaussian_distribution_2.shtml
         engineSize = (int)(random.nextGaussian() * 300 + 700);
-        if (engineSize < 50) {
+        if (engineSize < 50) { //if the engine size is less than 50 it is equal to 50
             engineSize = 50;
         }
         percent = 1;
