@@ -1,0 +1,7 @@
+FNCD have 3 performance car in the race. 
+One of the vehicle got 1 place
+One of the vehicle got 19 place
+One of the vehicle got 17 place
+Driver_004 made $1000
+Driver_008 made $0
+Driver_012 made $0

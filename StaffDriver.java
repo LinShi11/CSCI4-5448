@@ -1,5 +1,9 @@
 import java.util.Random;
 
+/**
+ * This class implements the driver. Everything is the same aside from win count and injured status
+ */
+
 public class StaffDriver implements Staff{
 
     private String name;
@@ -28,6 +32,11 @@ public class StaffDriver implements Staff{
         this.injured = false;
         this.winCount = 0;
     }
+
+    /**
+     * All getter and setter are the same.
+     *
+     */
 
     @Override
     public void setName(String name) {
@@ -63,8 +72,16 @@ public class StaffDriver implements Staff{
     public void setTotalDaysWorked() {
         this.totalDaysWorked++;
     }
+
+    /**
+     * set the win count if the driver won
+     */
     public void setWinCount(){
         winCount++;
+    }
+
+    public int getWinCount(){
+        return winCount;
     }
 
     @Override
@@ -121,10 +138,14 @@ public class StaffDriver implements Staff{
         }
     }
 
+    /**
+     * use the 30% of injured after driver lost.
+     * @return whether the dirver is hurt or not
+     */
     public boolean selfExam(){
         Random random = new Random();
         int hurt = random.nextInt(10);
-        if(hurt < 10){
+        if(hurt < 3){
             setInjured(true);
             return true;
         }

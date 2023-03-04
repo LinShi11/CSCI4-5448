@@ -26,7 +26,7 @@ public class Mechanics implements Staff {
         this.dailyBonus = 0;
         this.dailySalary = 240;
         this.totalPay = 0;
-        this.status = "Working";
+        this.status = "working";
         this.totalDaysWorked = 0;
     }
 
@@ -175,8 +175,8 @@ public class Mechanics implements Staff {
      * Randomly select two fixable cars and try to fix them.
      * @param list: an arraylist of all the cars in the inventory
      */
-    public String repair(ArrayList<Vehicle> list){
-        String response = "";
+    public ArrayList<String> repair(ArrayList<Vehicle> list){
+        ArrayList<String> response = new ArrayList<>();
         ArrayList<Vehicle> repairing = new ArrayList<>();
         // count the number of fixable cars (not like new)
         int fixable = 0;
@@ -198,7 +198,7 @@ public class Mechanics implements Staff {
         for(int i = 0; i < num; i ++){
             carNum = random.nextInt(fixable);
             //call fix car function
-            response = fixCar(repairing.get(carNum));
+            response.add(fixCar(repairing.get(carNum)));
         }
         return response;
     }

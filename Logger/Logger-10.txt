@@ -1,0 +1,12 @@
+Mechanics_002 fixed a used performance car (BMW_00033) and made it like new (made $2000)
+Salesperson_007 was not able to sell the vehicle KIA_00031
+Salesperson_007 was not able to sell the vehicle KIA_00031
+Salesperson_007 was not able to sell the vehicle KIA_00031
+Salesperson_005 was not able to sell the vehicle Shell Camino_00019
+FNCD have 3 performance car in the race. 
+One of the vehicle got 9 place
+One of the vehicle got 1 place
+One of the vehicle got 4 place
+Driver_004 made $0
+Driver_008 made $1000
+Driver_012 made $0

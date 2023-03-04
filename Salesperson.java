@@ -24,7 +24,7 @@ public class Salesperson implements Staff{
         this.dailyBonus = 0;
         this.dailySalary = 200;
         this.totalPay = 0;
-        this.status = "Working";
+        this.status = "working";
         this.totalDaysWorked = 0;
     }
     /**
@@ -159,7 +159,7 @@ public class Salesperson implements Staff{
      * @param inventory: the list of all vehicles in stock
      * @return the car salesperson recommended
      */
-    public Vehicle sale(Buyer buyer, ArrayList<Vehicle> inventory){
+    public Vehicle sale(Buyer buyer, ArrayList<Vehicle> inventory, int perforamceWin, int pickupWin, int monsterWin, int motorWin){
         Vehicle car = null;
         int price = 0;
         // search through inventory for a non-broken vehicle that matches the type and is most expensive
@@ -181,12 +181,17 @@ public class Salesperson implements Staff{
         } else{
             car = addDecorator(car);
             // determine whether they will buy the car
-            buying(buyer, car);
+            buying(buyer, car, perforamceWin, pickupWin, monsterWin, motorWin);
         }
         return car;
 
     }
 
+    /**
+     * Looks at each car and determine whether a package will be brought
+     * @param car: the current car
+     * @return the car after all the wrapping
+     */
     public Vehicle addDecorator(Vehicle car){
         Random random = new Random();
         System.out.println("The original price of the car is: $" + car.getSalePrice());
@@ -239,7 +244,7 @@ public class Salesperson implements Staff{
      * @param buyer: the person who wants to buy a car
      * @param car: the car that we recommended
      */
-    public void buying(Buyer buyer, Vehicle car){
+    public void buying(Buyer buyer, Vehicle car, int perforamceWin, int pickupWin, int monsterWin, int motorWin){
         // start with their buying chance
         int buyingChance = buyer.getProbability(buyer.getBuyingChance());
         Random random = new Random();
@@ -266,7 +271,7 @@ public class Salesperson implements Staff{
                 System.out.println("Buyer " + buyer.getBuyingChance() + " "+ buyer.getVehicleType()+ " " +
                         this.getName() + " suggested a " + car.getCleanliness() + ", " + car.getCondition() + " "
                         + car.getType() + "(" + car.getName()+ "). The buying probability was " + buyingChance+ ". And the transaction was successful for $" +
-                        (int)(car.getSalePrice() * car.getPercent()) + " (making $"+ car.getSaleBonus() + ")");
+                        (int)(car.getSalePrice() * car.getPercent() * bonusHelper(car.getType(), perforamceWin, pickupWin, monsterWin, motorWin)) + " (making $"+ car.getSaleBonus() + ")");
                 // add bonus and change status
                 this.dailyBonus += car.getSaleBonus();
                 car.setStatus("sold");
@@ -275,8 +280,46 @@ public class Salesperson implements Staff{
                 System.out.println("Buyer " + buyer.getBuyingChance() + " "+ buyer.getVehicleType()+ " " +
                         this.getName() + " suggested a " + car.getCleanliness() + ", " + car.getCondition() + " "
                         + car.getType() + "(" + car.getName()+ "). The buying probability was " + buyingChance+ ". And the transaction was unsuccessful for $" +
-                        (int)(car.getSalePrice() * car.getPercent()));
+                        (int)(car.getSalePrice() * car.getPercent()* bonusHelper(car.getType(), perforamceWin, pickupWin, monsterWin, motorWin)));
             }
         }
+    }
+
+    /**
+     * A bonus helper that determines whether the 10% increase is necessary
+     * @param type : the current type of the car
+     * @param perforamceWin: the win for performance car
+     * @param pickupWin: win for pickups
+     * @param monsterWin: win for monster trucks
+     * @param motorWin: win for motorcycles
+     * @return 1 for no change or 1.1 for 10% increase
+     */
+    public static double bonusHelper(String type, int perforamceWin, int pickupWin, int monsterWin, int motorWin){
+        if(type.equals("performance car")){
+            if(perforamceWin >= 1){
+                return 1;
+            }else{
+                return 1.1;
+            }
+        } else if (type.equals("pickup")){
+            if(pickupWin >= 1){
+                return 1;
+            } else{
+                return 1.1;
+            }
+        } else if(type.equals("monster truck")){
+            if(monsterWin >= 1){
+                return 1;
+            } else{
+                return 1.1;
+            }
+        } else if (type.equals("motorcycle")){
+            if(motorWin >= 1){
+                return 1;
+            } else{
+                return 1.1;
+            }
+        }
+        return 1;
     }
 }

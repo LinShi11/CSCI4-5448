@@ -1,0 +1,6 @@
+Mechanics_002 fixed a used electric car (NIO_00029) and made it like new (made $1000)
+Salesperson_005 was not able to sell the vehicle Shell Camino_00019
+Salesperson_009 was not able to sell the vehicle AST_00003
+Salesperson_005 sold a vehicle JEE_00010 for $121057
+Salesperson_009 was not able to sell the vehicle SUZ_00021
+Salesperson_005 sold a vehicle NIS_00028 for $40639

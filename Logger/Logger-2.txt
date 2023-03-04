@@ -1,0 +1,8 @@
+Mechanics_002 fixed a used car (SUB_00006) and made it like new (made $1000)
+Mechanics_002 fixed a used electric car (VOL_00015) and made it like new (made $1000)
+Mechanics_006 fixed a broken electric car (RIV_00016) and made it used (made $1000)
+Mechanics_006 fixed a broken motorcycle (SUZ_00021) and made it used (made $1000)
+Mechanics_010 fixed a used monster truck (Shell Camino_00019) and made it used (made $0)
+Mechanics_010 fixed a used motorcycle (SUZ_00021) and made it like new (made $1000)
+Salesperson_003 was not able to sell the vehicle SUB_00006
+Salesperson_007 was not able to sell the vehicle HON_00023

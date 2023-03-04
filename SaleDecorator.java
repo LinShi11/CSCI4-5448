@@ -1,10 +1,22 @@
+/**
+ * This class is the class that holds all the packages (part of the decorator pattern)
+ * It implements the vehicle class by classing the super for the car that we are on
+ */
 public class SaleDecorator implements Vehicle {
     protected Vehicle car;
 
-    public SaleDecorator(Vehicle car) { //this decorator strategy will implement the VVehicle interface
+    /**
+     * stores the current car
+     * @param car: current car
+     */
+    public SaleDecorator(Vehicle car) {
         this.car = car;
     }
 
+    /**
+     * All functions just call the same function from the car variable that is stored. No actions will be conducted here.
+     *
+     */
     @Override
     public void setName(String name) {
         car.setName(name);
@@ -57,11 +69,6 @@ public class SaleDecorator implements Vehicle {
     @Override
     public void setStatus(String status) {
         car.setStatus(status);
-    }
-
-    @Override
-    public void setWinCount() {
-        car.setWinCount();
     }
 
     @Override

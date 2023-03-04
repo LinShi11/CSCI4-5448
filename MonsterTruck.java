@@ -3,6 +3,9 @@ import java.util.Arrays;
 import java.util.Hashtable;
 import java.util.Random;
 
+/**
+ * This class implements the monster truck. We took the naming a little different, as stated in assumption, but it follows the same name_numeric value format.
+ */
 public class MonsterTruck implements Vehicle{
     private String name;
     private int saleBonus;
@@ -16,12 +19,11 @@ public class MonsterTruck implements Vehicle{
     private String brand;
     private String status;
     private String type;
-    private int winCount;
     private double percent;
 
     private int min = 10000;
     private int max = 20000;
-    final ArrayList<String> brands = new ArrayList<>(Arrays.asList("Monster Jam Steel Titans 2", "Grave Digger", "Son-uva Digger"));
+    final ArrayList<String> brands = new ArrayList<>(Arrays.asList("Mon. Jam Steel Titans 2", "Grave Digger", "Son-uva Digger"));
 
     final static ArrayList<String> names = new ArrayList<>(Arrays.asList(
             "Air Force Afterburner", "Avenger",
@@ -47,11 +49,9 @@ public class MonsterTruck implements Vehicle{
             "USA-1", "War Wizard", "WCW Nitro Machine",
             "Zombie"));
 
-    private static Hashtable<String, Integer> usedNames = new Hashtable<>();
+//    private static Hashtable<String, Integer> usedNames = new Hashtable<>();
 
     public MonsterTruck(String id){
-        //https://stackoverflow.com/questions/3680637/generate-a-random-double-in-a-range
-        // https://www.geeksforgeeks.org/how-to-set-precision-for-double-values-in-java/
 
         Random random = new Random();
         cost = random.nextInt(max - min) + min;
@@ -67,46 +67,51 @@ public class MonsterTruck implements Vehicle{
             cleanliness = Vehicle.getPossibleCleanliness().get(2);
         }
         status = "in stock";
-        type = "car";
+        type = "monster truck";
         setBrand();
-
-        if (id == null || id.equals("") || names.contains(id)) {//id is not provided, get from the list
-
-            id = names.get(random.nextInt(names.size()));
-        }
-
-        if (names.contains(id)) {
-
-            if (usedNames.containsKey(id)) { //name is used
-                int nextNum = usedNames.get(id) + 1;
-                usedNames.put(id, nextNum);//increase by 1
-
-                id = id + " " + nextNum;
-            }else {
-                usedNames.put(id, 1); //first used
-            }
-        }
-
+//        if (id == null || id.equals("") || names.contains(id)) {//id is not provided, get from the list
+//
+//            id = names.get(random.nextInt(names.size()));
+//        }
+//
+//        if (names.contains(id)) {
+//
+//            if (usedNames.containsKey(id)) { //name is used
+//                int nextNum = usedNames.get(id) + 1;
+//                usedNames.put(id, nextNum);//increase by 1
+//
+//                id = id + " " + nextNum;
+//            }else {
+//                usedNames.put(id, 1); //first used
+//            }
+//        }
         setName(id);
 
         repairBonus = (int)(min * .10);
         saleBonus = (int)(min * 0.08);
         washBonus = (int)(min * 0.01);
-
-        winCount = 0;
         percent = 1;
 
     }
-    
+
+    /**
+     * A list of getter and setter for every variable. Due to time, we will not be mentioning every one of them
+     *
+     */
+
+    @Override
     public void setName(String name) {
-        this.name = this.getBrand().substring(0,3).toUpperCase() + "_" + name;
+        Random random = new Random();
+        this.name = names.get(random.nextInt(names.size()))+ "_" + name;
     }
 
+    @Override
     public void setBrand(){
         Random random = new Random();
         this.brand = brands.get(random.nextInt(brands.size()));
     }
     
+    @Override
     public void setCost(){
         if(this.condition.equals("used")){
             this.cost *= 0.8;
@@ -115,65 +120,73 @@ public class MonsterTruck implements Vehicle{
         }
     }
     
+    @Override
     public void setSalePrice(double percentage){
         this.salePrice *= percentage;
     }
 
     
+    @Override
     public void setSaleBonus(int saleBonus) {
         this.saleBonus = saleBonus;
     }
 
     
+    @Override
     public void setRepairBonus(int repairBonus) {
         this.repairBonus = repairBonus;
     }
 
     
+    @Override
     public void setWashBonus(int washBonus) {
         this.washBonus = washBonus;
     }
 
 
     
+    @Override
     public void setCondition(String condition) {
         this.condition = condition;
     }
 
     
+    @Override
     public void setCleanliness(String cleanliness) {
         this.cleanliness = cleanliness;
     }
 
 
+    @Override
     public void setStatus(String status){
         this.status = status;
     }
-
-    public void setWinCount(){
-        winCount++;
-    }
     
+    @Override
     public String getName() {
         return this.name;
     }
 
     
+    @Override
     public String getBrand() {
         return brand;
     }
 
     
+    @Override
     public int getSaleBonus() {
         return this.saleBonus;
     }
 
     
+    @Override
     public int getRepairBonus() {
         return this.repairBonus;
     }
 
     
+    @Override
     public int getWashBonus(int level) {
         if(level == 1){
             return this.washBonus;
@@ -183,33 +196,35 @@ public class MonsterTruck implements Vehicle{
     }
 
     
+    @Override
     public int getCost() {
         return this.cost;
     }
 
     
+    @Override
     public int getSalePrice() {
-        if(winCount >= 1){
-            System.out.println("FNCD has at least one win with this type of vehicle");
-            salePrice *= 1.1;
-        }
         return (int) (this.salePrice * this.percent);
     }
 
     
+    @Override
     public String getCondition() {
         return this.condition;
     }
 
     
+    @Override
     public String getCleanliness() {
         return this.cleanliness;
     }
     
+    @Override
     public String getStatus(){
         return this.status;
     }
     
+    @Override
     public String getType(){
         return this.type;
     }
@@ -218,6 +233,7 @@ public class MonsterTruck implements Vehicle{
         return this.percent;
     }
     
+    @Override
     public void printAction(){
         System.out.println("Purchased a " + getCondition() + ", " + getCleanliness() + " Car " + getBrand() + ", (" + getName() + ") for $" + getCost());
     }

@@ -3,6 +3,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
+/**
+ * This class is for intern that implements from Staff
+ */
 public class Interns implements Staff {
     private String name;
     private int dailySalary;
@@ -12,7 +15,12 @@ public class Interns implements Staff {
     private String status;
     private int totalDaysWorked;
 
-    public Interns(String name){
+    /**
+     * The washing method is different for every intern
+     */
+    private WashingMethod washingMethod;
+    
+    public Interns(String name, WashingMethod washingMethod){
         setName(name);
         this.totalBonus = 0;
         this.dailyBonus = 0;
@@ -20,8 +28,13 @@ public class Interns implements Staff {
         this.totalPay = 0;
         this.status = "working";
         this.totalDaysWorked = 0;
+        this.washingMethod = washingMethod;
     }
 
+    /**
+     * These are the getter and setter for every variable
+     *
+     */
 
     @Override
     public void setName(String name) {
@@ -93,15 +106,18 @@ public class Interns implements Staff {
         return this.totalDaysWorked;
     }
 
-    public String wash(ArrayList<Vehicle> inventory){
-        String response = "";
+    /**
+     * wash function that does the washing 
+     * @param inventory
+     */
+    public void wash(ArrayList<Vehicle> inventory){
         ArrayList<Vehicle> washing = new ArrayList<>();
-        int dirtyCars = 0; //this function is the context for the stratgies
+        int dirtyCars = 0;
         int cleanCars = 0;
         for(Vehicle car : inventory){
             if(car.getCleanliness().equals("dirty")){
                 washing.add(0, car);
-                dirtyCars += 1; 
+                dirtyCars += 1;
             } else if (car.getCleanliness().equals("clean")){
                 washing.add(car);
                 cleanCars += 1;
@@ -109,42 +125,32 @@ public class Interns implements Staff {
         }
         Random random = new Random();
         if(dirtyCars >= 2){
-
-            WashStrategy washStrategy = new WashCleanStrategy(); //this is the new object that is being passed
-
             int carNum;
             for (int i = 0; i < 2; i ++) {
                 carNum = random.nextInt(dirtyCars);
                 dirtyCars--;
                 Vehicle car = washing.get(carNum);
                 String previous = car.getCleanliness();
-                washing.get(carNum).setCleanliness(washStrategy.wash(this, car));//this line will execute the strategy based on cleanliness of car
-                response = (this.getName() + " washed a " + previous +" "+ car.getType() //this is the implementation of the strategy pattern, because the behavior of the class will change at runtime.
+                washing.get(carNum).setCleanliness(washDirty(car));
+                
+                
+                System.out.println(this.getName() + " washed a " + previous +" "+ car.getType()
                         +" ("+ car.getName() + ") and made it " + car.getCleanliness());
-                System.out.println(response);
                 washing.remove(carNum);
             }
         }else if (dirtyCars == 1 && cleanCars >= 1){
-
-            WashStrategy washStrategy = new WashDirtyStrategy();
-
             Vehicle car = washing.get(0);
             String previous = car.getCleanliness();
-            washing.get(0).setCleanliness(washStrategy.wash(this, car));
-            response = (this.getName() + " washed a " + previous +" "+ car.getType()
+            washing.get(0).setCleanliness(washDirty(car));
+            System.out.println(this.getName() + " washed a " + previous +" "+ car.getType()
                     +" ("+ car.getName() + ") and made it " + car.getCleanliness());
-            System.out.println(response);
             washing.remove(0);
             int carNum = random.nextInt(cleanCars);
             car = washing.get(carNum);
             previous = car.getCleanliness();
-
-            washStrategy = new WashCleanStrategy();
-
-            washing.get(carNum).setCleanliness(washStrategy.wash(this, car));
-            response = (this.getName() + " washed a " + previous +" "+ car.getType()
+            washing.get(carNum).setCleanliness(washClean(car));
+            System.out.println(this.getName() + " washed a " + previous +" "+ car.getType()
                     +" ("+ car.getName() + ") and made it " + car.getCleanliness());
-            System.out.println(response);
         } else{
             int carNum;
             int temp;
@@ -153,21 +159,50 @@ public class Interns implements Staff {
             } else{
                 temp = cleanCars;
             }
-
-            WashStrategy washStrategy = new WashCleanStrategy();
-
             for(int i = 0; i < temp; i ++){
                 carNum = random.nextInt(cleanCars);
                 cleanCars--;
                 Vehicle car = washing.get(carNum);
                 String previous = car.getCleanliness();
-                washing.get(carNum).setCleanliness(washStrategy.wash(this, car)); //execution of strategy based on state of the car
-                response = (this.getName() + " washed a " + previous +" "+ car.getType()
+                washing.get(carNum).setCleanliness(washClean(car));
+                System.out.println(this.getName() + " washed a " + previous +" "+ car.getType()
                         +" ("+ car.getName() + ") and made it " + car.getCleanliness());
-                System.out.println(response);
                 washing.remove(carNum);
             }
         }
-        return response;
+
+    }
+
+    public String washClean(Vehicle car){
+//        Random random = new Random();
+//        int chance = random.nextInt(100);
+//        if(chance < 5){
+//            return "dirty";
+//        } else if(chance < 35){
+//            this.dailyBonus += car.getWashBonus(1);
+//            return "sparkling";
+//        } else{
+//            return "clean";
+//        }
+    	
+    	washingMethod.wash(car);
+    	return car.getCleanliness();
+    }
+
+    public String washDirty(Vehicle car){
+//        Random random = new Random();
+//        int chance = random.nextInt(10);
+//        if (chance < 8){
+//            this.dailyBonus += car.getWashBonus(1);
+//            return "clean";
+//        } else if (chance < 9){
+//            this.dailyBonus += car.getWashBonus(2);
+//            return "sparkling";
+//        } else{
+//            return "dirty";
+//        }
+    	washingMethod.wash(car);
+    	return car.getCleanliness();
     }
 }
+

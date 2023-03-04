@@ -1,0 +1,7 @@
+FNCD have 3 monster truck in the race. 
+One of the vehicle got 7 place
+One of the vehicle got 1 place
+One of the vehicle got 15 place
+Driver_004 made $0
+Driver_008 made $1000
+Driver_012 made $0

@@ -1,0 +1,8 @@
+Mechanics_002 fixed a used performance car (AST_00003) and made it like new (made $2000)
+Mechanics_002 fixed a used electric car (LUC_00025) and made it like new (made $1000)
+Mechanics_006 fixed a used motorcycle (YAM_00024) and made it like new (made $1000)
+Mechanics_006 fixed a broken motorcycle (SUZ_00021) and made it used (made $1000)
+Mechanics_010 fixed a used motorcycle (SUZ_00021) and made it like new (made $1000)
+Mechanics_010 fixed a used car (TOY_00008) and made it like new (made $1000)
+Salesperson_001 sold a vehicle TOY_00008 for $41235
+Salesperson_003 was not able to sell the vehicle SUB_00006

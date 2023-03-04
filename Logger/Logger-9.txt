@@ -1,0 +1,4 @@
+Mechanics_002 fixed a used pickup (FOR_00032) and made it used (made $0)
+Mechanics_006 fixed a used pickup (FOR_00032) and made it like new (made $1000)
+Salesperson_007 sold a vehicle AST_00003 for $80800
+Salesperson_007 was not able to sell the vehicle Shell Camino_00019

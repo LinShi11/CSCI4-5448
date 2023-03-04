@@ -1,0 +1,6 @@
+Mechanics_002 fixed a broken electric car (NIO_00013) and made it used (made $1000)
+Mechanics_002 fixed a used motorcycle (YAM_00024) and made it like new (made $1000)
+Mechanics_006 fixed a broken monster truck (Zombie_00020) and made it used (made $1000)
+Mechanics_006 fixed a broken monster truck (Shell Camino_00019) and made it used (made $1000)
+Mechanics_010 fixed a used monster truck (Zombie_00020) and made it like new (made $1000)
+Mechanics_010 fixed a used pickup (RAM_00009) and made it like new (made $1000)

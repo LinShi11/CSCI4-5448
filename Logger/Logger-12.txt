@@ -1,0 +1,3 @@
+Salesperson_007 was not able to sell the vehicle AST_00001
+Salesperson_009 sold a vehicle Shell Camino_00019 for $38936
+Salesperson_009 was not able to sell the vehicle SUZ_00021

@@ -1,0 +1,5 @@
+Mechanics_002 fixed a used monster truck (Maximum Destruction (Max-D)_00041) and made it like new (made $1000)
+Mechanics_002 fixed a broken monster truck (Backwards Bob_00039) and made it broken (made $0)
+Mechanics_010 fixed a used motorcycle (KAW_00042) and made it like new (made $1000)
+Mechanics_010 fixed a used performance car (ACU_00004) and made it like new (made $2000)
+Mechanics_014 fixed a broken monster truck (Backwards Bob_00039) and made it used (made $1000)

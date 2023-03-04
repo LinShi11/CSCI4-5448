@@ -1,5 +1,6 @@
 import java.sql.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Objects;
 import java.util.Random;
@@ -34,12 +35,18 @@ public class FNCD{
     ArrayList<MonsterTruck> monsterTruckList;
     ArrayList<Motorcycle> motorcycleList;
     ArrayList<StaffDriver> staffDriverList;
-
-    SubmissionPublisher<String> publisher = new SubmissionPublisher<>();
-
+    static final ArrayList<WashingMethod> washingMethods = new ArrayList<>(Arrays.asList(
+    			new ChemicalWash(), new DetailedWash(), new ElbowGreasWash()
+    		));
     Observer observer;
     Logger logger;
     Tracker tracker;
+    int performanceCarWin;
+    int pickupWin;
+    int monsterTruckWin;
+    int motorcycleWin;
+    private int FNCDamount = 0;
+    private int employeeAmount = 0;
     /**
      * Constructor for FNCD class
      * Initialize all variable that will be used in the simulation
@@ -67,9 +74,16 @@ public class FNCD{
         this.inventory = new ArrayList<>();
         this.soldCars = new ArrayList<>();
 
+        this.performanceCarWin = 0;
+        this.motorcycleWin = 0;
+        this.pickupWin = 0;
+        this.monsterTruckWin = 0;
+        Random random = new Random();
+
         // directly hire 3 interns, 3 mechanics, and 3 salesperson + 3 drivers (staffs)
         for(int i = 0; i < maxSize; i++){
-            internList.add(new Interns("Intern_" + updateId()));
+            internList.add(new Interns("Intern_" + updateId(), 
+                washingMethods.get(random.nextInt(washingMethods.size()))));
             mechanicsList.add(new Mechanics("Mechanics_"+ updateId()));
             salespeopleList.add(new Salesperson("Salesperson_" + updateId()));
             staffDriverList.add(new StaffDriver("Driver_" + updateId()));
@@ -87,13 +101,11 @@ public class FNCD{
             // check for sundays and call startDay()/endDay() if it is not sunday
             if(date % 7 != 0) {
                 observer = new Observer();
-                observer.setDate(date);
                 logger = new Logger();
-                tracker = new Tracker();
+                tracker = new Tracker(FNCDamount, employeeAmount);
                 System.out.println("******FNCD Day " + this.date + "******");
                 startDay();
                 endDay();
-                printAllStaff();
             }
             if (date % 7 == 0 || date % 7 == 3){
                 System.out.println("******FNCD Day " + this.date + ": Race day!!!!!!!******");
@@ -105,24 +117,32 @@ public class FNCD{
         //end of simulation, prints the details
         System.out.println("\n******End of simulation******");
         System.out.println("Here is a list of all the staffs: ");
-        printAllStaff();
+        Helper.printAllStaff(internList, mechanicsList, salespeopleList, employee, staffDriverList);
         System.out.println("\nHere is a list of all the vehicles: ");
-        printInventory();
+        Helper.printInventory(inventory, soldCars);
     }
 
+    /**
+     * This is the race function.
+     * The function determines which type of car to race and generate a list of usable car. Then will add to the winCount based on the results.
+     */
     public void race(){
+        System.out.println("Racing......");
         Random random = new Random();
+        // what type of car to use
         int car = random.nextInt(4);
         ArrayList<Vehicle> racing = new ArrayList<>();
-        System.out.println(car);
+        int winCount ;
         switch (car){
+            // generate the usable car arraylist
             case 0:
                 for(PerformanceCar vehicle: performanceCarList){
                     if(!vehicle.getCondition().equals("broken") ){
                         racing.add(vehicle);
                     }
                 }
-                raceHelper(racing);
+                winCount = raceHelper(racing);
+                performanceCarWin += winCount;
                 break;
             case 1:
                 for(Pickups vehicle: pickupsList){
@@ -130,7 +150,8 @@ public class FNCD{
                         racing.add(vehicle);
                     }
                 }
-                raceHelper(racing);
+                winCount = raceHelper(racing);
+                pickupWin += winCount;
                 break;
             case 2:
                 for(MonsterTruck vehicle: monsterTruckList){
@@ -138,7 +159,8 @@ public class FNCD{
                         racing.add(vehicle);
                     }
                 }
-                raceHelper(racing);
+                winCount = raceHelper(racing);
+                monsterTruckWin += winCount;
                 break;
             case 3:
                 for(Motorcycle vehicle: motorcycleList){
@@ -146,7 +168,8 @@ public class FNCD{
                         racing.add(vehicle);
                     }
                 }
-                raceHelper(racing);
+                winCount = raceHelper(racing);
+                motorcycleWin += winCount;
                 break;
             default:
                 System.out.println("error");
@@ -154,37 +177,53 @@ public class FNCD{
 
     }
 
-    public void raceHelper(ArrayList<Vehicle> racing){
+    /**
+     * The function will look at all race-able cars, determine the placement and make appropriate actions.
+     * @param racing: an arraylist of usable cars for racing
+     * @return : the number of winner for FNCD racers
+     */
+    public int raceHelper(ArrayList<Vehicle> racing){
         int count = racing.size();
-        printInventory();
+        int winCount = 0;
         Random random = new Random();
+
+        // if we have no race-able cars
         if(count == 0){
             System.out.println("FNCD will not be participating in the race. ");
-            return;
-        } else if (count > 3 ) {
+            notifyLogger("FNCD will not be participating in the race. ");
+            return 0;
+        }
+        // if all the cars are race-able, we will only pick the first three
+        else if (count > 3 ) {
             count = 3;
         }
         System.out.println("FNCD is racing with " + racing.get(0).getType());
         System.out.println("FNCD have " + count + " vehicles in the race. ");
+        notifyLogger("FNCD have " + count + " " + racing.get(0).getType()+ " in the race. ");
         ArrayList<Integer> placement = new ArrayList<>();
         int temp;
+        // determine the placement, will continue to run if we are getting the same numbers
         for(int i = 0; i < count; i++){
             temp = random.nextInt(20);
             while(placement.contains(temp)){
                 temp = random.nextInt(20);
             }
             placement.add(temp);
-            System.out.println(placement);
         }
+
+        // look at the placement and determine action
         for(int j = 0; j < placement.size(); j++) {
             System.out.println("One of the vehicle got " + (placement.get(j)+1) + " place" );
-            System.out.println(staffDriverList.size());
+            notifyLogger("One of the vehicle got " + (placement.get(j)+1) + " place");
+
+            // if we won
             if (placement.get(j) == 0 || placement.get(j) == 1 || placement.get(j) == 2) {
-                System.out.println("won");
-                racing.get(j).setWinCount();
+                winCount ++;
                 staffDriverList.get(j).setWinCount();
                 staffDriverList.get(j).setDailyBonus(1000);
-            } else if (placement.get(j) == 19 ||placement.get(j) == 18 || placement.get(j) == 17){
+            }
+            // if we lost
+            else if (placement.get(j) == 19 ||placement.get(j) == 18 || placement.get(j) == 17){
                 racing.get(j).setCondition("broken");
                 boolean injury = staffDriverList.get(j).selfExam();
                 if(injury){
@@ -192,10 +231,15 @@ public class FNCD{
                 }
             }
         }
+        // remove the drivers and update their bonus
         removeDriver();
         updateRaceBonus();
+        return winCount;
     }
 
+    /**
+     * this function removes the drivers after the race
+     */
     public void removeDriver(){
         int counter = 0;
         while(counter < staffDriverList.size()){
@@ -208,9 +252,14 @@ public class FNCD{
         }
     }
 
+    /**
+     * this function updated the bonuses for the drivers who won
+     */
     public void updateRaceBonus(){
         for(StaffDriver driver: staffDriverList){
             driver.setTotalBonus();
+            notifyLogger(driver.getName() + " made $" + driver.getDailyBonus());
+            notifyTracker("employee $"+ driver.getDailyBonus());
             driver.setDailyBonus(0);
         }
     }
@@ -233,13 +282,15 @@ public class FNCD{
      * hire function checks to make sure we have 3 interns.
      * If not, we will hire more interns
      */
+
     public void hire(){
+        Random random = new Random();
         if(internList.size() != maxSize){
             // iterate maxSize(3) - currentSize so we can add more interns
             int tempLength = internList.size();
             for(int i = 0; i < maxSize-tempLength; i++){
                 //updateId is a helper function that keeps track of number of staffs we have hired
-                internList.add(new Interns("Intern_" + updateId()));
+                internList.add(new Interns("Intern_" + updateId(), washingMethods.get(random.nextInt(washingMethods.size()))));
                 System.out.println("Hired intern " + internList.get(internList.size()-1).getName());
             }
         }
@@ -279,7 +330,6 @@ public class FNCD{
             pickupsList.add(car);
             setInventoryHelper(car);
         }
-
         tempLength = electricCarList.size();
         for(int i = 0; i < maxInventory - tempLength; i++){
             ElectricCar car = new ElectricCar(updateInventoryId());
@@ -324,7 +374,7 @@ public class FNCD{
         repairing();
 
         //find the number of buyer for the day
-        int buyer = numOfBuyer();
+        int buyer = Helper.numOfBuyer(date);
         System.out.println("\nWe have " + buyer + " Buyers today");
         System.out.println("Selling...");
         selling(buyer);
@@ -336,13 +386,8 @@ public class FNCD{
     public void washing(){
         for (Interns emp: internList){
             emp.setDailyBonus(0);
-            String response = emp.wash(inventory);
-            notifyLogger(response);
+            emp.wash(inventory);
         }
-    }
-
-    public void notifyLogger(String response){
-        logger.onNext(response);
     }
 
     /**
@@ -351,8 +396,14 @@ public class FNCD{
     public void repairing(){
         for(Mechanics emp: mechanicsList){
             emp.setDailyBonus(0);
-            String response = emp.repair(inventory);
-            notifyLogger(response);
+            ArrayList<String> response = emp.repair(inventory);
+            notifyHelper(response);
+        }
+    }
+
+    public void notifyHelper(ArrayList<String> response){
+        for(int i = 0; i < response.size(); i++){
+            notifyLogger(response.get(i));
         }
     }
 
@@ -377,36 +428,30 @@ public class FNCD{
             representative = salespeopleList.get(random.nextInt(3));
 
             //call the sale function in SalePerson, the function will return the car the buyer was looking at
-            Vehicle car = representative.sale(newBuyer, inventory);
+            Vehicle car = representative.sale(newBuyer, inventory, performanceCarWin, pickupWin, monsterTruckWin, motorcycleWin);
 
             //look at the status of the car the saleperson recommended. If it is sold then update the variables
             String response;
             if(car.getStatus().equals("sold")){
-                response = representative.getName() + " sold a vehicle " + car.getName() + " for $" + (int)(car.getSalePrice() * car.getPercent());
+                response = representative.getName() + " sold a vehicle " + car.getName() + " for $" + (int)(car.getSalePrice() * car.getPercent() * Salesperson.bonusHelper(car.getType(), performanceCarWin, pickupWin, monsterTruckWin, motorcycleWin));
                 notifyLogger(response);
+                notifyTracker(response);
 
                 soldCars.add(car); // add the soldcar list
-                inventory.remove(car);
                 this.budget += car.getSalePrice();
                 this.dailySales += car.getSalePrice();
 
                 // remove them from the appropriate arraylist
-                if(car.getType().equals("performance car")){
-                    performanceCarList.remove(car);
-                } else if(car.getType().equals("car")){
-                    carsList.remove(car);
-                } else{
-                    pickupsList.remove(car);
-                }
+                removeHelper(car);
             } else{
                 notifyLogger(representative.getName() + " was not able to sell the vehicle " + car.getName());
             }
         }
     }
 
-    public void notifyTracker(String response){
-        tracker.onNext(response);
-    }
+
+
+
 
     /**
      * end of the day function.
@@ -419,6 +464,10 @@ public class FNCD{
         noMoney();
         System.out.println("\nQuitting");
         quit();
+        FNCDamount = tracker.getFNCDAmount();
+        employeeAmount = tracker.getEmployeeAmount();
+        tracker.onComplete(date);
+        logger.onComplete();
     }
 
     /**
@@ -429,21 +478,29 @@ public class FNCD{
             staff.setTotalDaysWorked();
             staff.setTotalPay();
             staff.setTotalBonus();
+            notifyTracker("employee $" + staff.getDailyBonus());
+            notifyTracker("employee $" + staff.getDailySalary());
         }
         for(Mechanics staff: mechanicsList){
             staff.setTotalDaysWorked();
             staff.setTotalPay();
             staff.setTotalBonus();
+            notifyTracker("employee $" + staff.getDailyBonus());
+            notifyTracker("employee $" + staff.getDailySalary());
         }
         for(Salesperson staff: salespeopleList){
             staff.setTotalDaysWorked();
             staff.setTotalPay();
             staff.setTotalBonus();
+            notifyTracker("employee $" + staff.getDailyBonus());
+            notifyTracker("employee $" + staff.getDailySalary());
         }
         for(StaffDriver staff: staffDriverList){
             staff.setTotalDaysWorked();
             staff.setTotalPay();
             staff.setTotalBonus();
+            notifyTracker("employee $" + staff.getDailyBonus());
+            notifyTracker("employee $" + staff.getDailySalary());
         }
     }
 
@@ -525,26 +582,6 @@ public class FNCD{
     }
 
     /**
-     * The function finds the number of Buyers for the day
-     * 0 - 5 buyers for weekdays, 2-8 buyers for weekends
-     * @return the number of buyers for the day
-     */
-    public int numOfBuyer(){
-        int num;
-        Random random = new Random();
-        // checks for friday and Saturday
-        if(this.date % 7 == 5 || this.date % 7 == 6){
-            System.out.println("it is the weekend (Friday/Saturday)");
-            num = random.nextInt(9-2) + 2; // since max is exclusive, we make max = 9 to include 8 buyer
-        }
-        else{
-            num = random.nextInt(6); // weekdays
-        }
-        return num;
-
-    }
-
-    /**
      * helper function to keep track the staff id such as 001
      * @return the id in string type and in 3 places.
      */
@@ -561,37 +598,74 @@ public class FNCD{
     }
 
     /**
-     * The function print all employees using String.format to make it look nice
+     * calls the observers and give it the text (part of the observer pattern)
+     * @param response: the text to send
      */
-    public void printAllStaff(){
-        System.out.println(String.format("%20s %20s %20s %20s %15s", "Name", "Total Days Worked", "Total Normal Pay", "Total Bonus Pay", "Status"));
-        for (Interns emp: internList){
-            System.out.println(String.format("%20s %20s %20s %20s %15s", emp.getName(), emp.getTotalDaysWorked() + " days", "$" + emp.getTotalPay(), "$" + emp.getTotalBonus(), emp.getStatus()));
-        }
-        for (Mechanics emp: mechanicsList){
-            System.out.println(String.format("%20s %20s %20s %20s %15s", emp.getName(), emp.getTotalDaysWorked() + " days", "$" + emp.getTotalPay(), "$" + emp.getTotalBonus(), emp.getStatus()));
-        }
-        for (Salesperson emp: salespeopleList){
-            System.out.println(String.format("%20s %20s %20s %20s %15s", emp.getName(), emp.getTotalDaysWorked() + " days", "$" + emp.getTotalPay(), "$" + emp.getTotalBonus(), emp.getStatus()));
-        }
-        for (StaffDriver emp: staffDriverList){
-            System.out.println(String.format("%20s %20s %20s %20s %15s", emp.getName(), emp.getTotalDaysWorked() + " days", "$" + emp.getTotalPay(), "$" + emp.getTotalBonus(), emp.getStatus()));
-        }
-        for (Staff emp: employee){
-            System.out.println(String.format("%20s %20s %20s %20s %15s", emp.getName(), emp.getTotalDaysWorked()+ " days", "$" + emp.getTotalPay(), "$" + emp.getTotalBonus(), emp.getStatus()));
-        }
+    public void notifyTracker(String response){
+        tracker.onNext(response);
     }
 
     /**
-     * The function prints all inventory using String.format to make it look nice
+     * calls the observer and give it the text (part of the observer pattern)
+     * @param response: the text to send
      */
-    public void printInventory(){
-        System.out.println(String.format("%20s %20s %20s %20s %20s %20s %20s", "Name", "Brand", "Cost", "Sale Price", "Condition", "Cleanliness", "Status"));
-        for(Vehicle car: inventory){
-            System.out.println(String.format("%20s %20s %20s %20s %20s %20s %20s", car.getName(), car.getBrand(), car.getCost(), car.getSalePrice(), car.getCondition(), car.getCleanliness(), car.getStatus()));
+    public void notifyLogger(String response){
+        logger.onNext(response, date);
+    }
+
+    /**
+     * helper to remove the cars from the inventory
+     * @param car: the car to remove
+     */
+    public void removeHelper(Vehicle car){
+        for(Vehicle c: inventory){
+            if(c.getName().equals(car.getName())){
+                inventory.remove(c);
+                break;
+            }
         }
-        for(Vehicle car: soldCars){
-            System.out.println(String.format("%20s %20s %20s %20s %20s %20s %20s", car.getName(), car.getBrand(), car.getCost(), car.getSalePrice(), car.getCondition(), car.getCleanliness(), car.getStatus()));
+        if(car.getType().equals("performance car")){
+            for(Vehicle c: performanceCarList){
+                if(c.getName().equals(car.getName())){
+                    performanceCarList.remove(c);
+                    break;
+                }
+            }
+        } else if(car.getType().equals("car")){
+            for(Vehicle c: carsList){
+                if(c.getName().equals(car.getName())){
+                    carsList.remove(c);
+                    break;
+                }
+            }
+        } else if(car.getType().equals("electric car")){
+            for(Vehicle c: electricCarList){
+                if(c.getName().equals(car.getName())){
+                    electricCarList.remove(c);
+                    break;
+                }
+            }
+        } else if(car.getType().equals("monster truck")){
+            for(Vehicle c: monsterTruckList){
+                if(c.getName().equals(car.getName())){
+                    monsterTruckList.remove(c);
+                    break;
+                }
+            }
+        }else if(car.getType().equals("motorcycle")){
+            for(Vehicle c: motorcycleList){
+                if(c.getName().equals(car.getName())){
+                    motorcycleList.remove(c);
+                    break;
+                }
+            }
+        }else{
+            for(Vehicle c: pickupsList){
+                if(c.getName().equals(car.getName())){
+                    pickupsList.remove(c);
+                    break;
+                }
+            }
         }
     }
 

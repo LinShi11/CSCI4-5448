@@ -1,0 +1,10 @@
+Mechanics_014 fixed a broken pickup (FOR_00056) and made it broken (made $0)
+Mechanics_014 fixed a broken motorcycle (BMW_00058) and made it used (made $1000)
+Mechanics_015 fixed a used motorcycle (BMW_00058) and made it used (made $0)
+Mechanics_015 fixed a broken pickup (FOR_00056) and made it broken (made $0)
+Mechanics_019 fixed a used motorcycle (BMW_00058) and made it used (made $0)
+Mechanics_019 fixed a used motorcycle (BMW_00058) and made it like new (made $1000)
+Salesperson_017 was not able to sell the vehicle HON_00047
+Salesperson_017 was not able to sell the vehicle RIV_00053
+Salesperson_018 was not able to sell the vehicle RIV_00053
+Salesperson_017 was not able to sell the vehicle El Toro Loco_00057

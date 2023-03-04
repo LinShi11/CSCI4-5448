@@ -21,7 +21,6 @@ public class Pickups implements Vehicle{
     private String status;
     private String type;
 
-    private int winCount;
     private double percent;
     // min and max cost
     private int min = 10000;
@@ -56,7 +55,6 @@ public class Pickups implements Vehicle{
         repairBonus = (int)(min * .10);
         saleBonus = (int)(min * 0.08);
         washBonus = (int)(min * 0.01);
-        winCount = 0;
         percent = 1;
     }
     /**
@@ -64,6 +62,7 @@ public class Pickups implements Vehicle{
      * @param name: name of the car
      */
 
+    @Override
     public void setName(String name) {
         this.name = this.getBrand().substring(0,3).toUpperCase() + "_" + name;
     }
@@ -71,6 +70,7 @@ public class Pickups implements Vehicle{
      * setter for brand, randomly choose a brand
      */
 
+    @Override
     public void setBrand() {
         Random random = new Random();
         this.brand = brands.get(random.nextInt(brands.size()));
@@ -79,6 +79,7 @@ public class Pickups implements Vehicle{
      * setter for cost, set cost based on condition
      */
 
+    @Override
     public void setCost(){
         if(this.condition.equals("used")){
             this.cost *= 0.8;
@@ -91,6 +92,7 @@ public class Pickups implements Vehicle{
      * @param percentage: the percent modify the price by
      */
 
+    @Override
     public void setSalePrice(double percentage){
         this.salePrice *= percentage;
     }
@@ -99,6 +101,7 @@ public class Pickups implements Vehicle{
      * @param saleBonus: the new sale bonus
      */
 
+    @Override
     public void setSaleBonus(int saleBonus) {
         this.saleBonus = saleBonus;
     }
@@ -108,6 +111,7 @@ public class Pickups implements Vehicle{
      * @param repairBonus: new repairbonus
      */
 
+    @Override
     public void setRepairBonus(int repairBonus) {
         this.repairBonus = repairBonus;
     }
@@ -116,6 +120,7 @@ public class Pickups implements Vehicle{
      * @param washBonus: new wash bonus
      */
 
+    @Override
     public void setWashBonus(int washBonus) {
         this.washBonus = washBonus;
     }
@@ -124,6 +129,7 @@ public class Pickups implements Vehicle{
      * @param condition: new condition
      */
 
+    @Override
     public void setCondition(String condition) {
         this.condition = condition;
     }
@@ -132,6 +138,7 @@ public class Pickups implements Vehicle{
      * @param cleanliness: new cleanliness
      */
 
+    @Override
     public void setCleanliness(String cleanliness) {
         this.cleanliness = cleanliness;
     }
@@ -141,6 +148,7 @@ public class Pickups implements Vehicle{
      * @param status new status
      */
 
+    @Override
     public void setStatus(String status){
         this.status = status;
     }
@@ -148,11 +156,7 @@ public class Pickups implements Vehicle{
      * getter for name
      * @return name
      */
-
-    public void setWinCount(){
-        winCount++;
-    }
-
+    @Override
     public String getName() {
         return this.name;
     }
@@ -161,6 +165,7 @@ public class Pickups implements Vehicle{
      * @return brand of the car
      */
 
+    @Override
     public String getBrand() {
         return brand;
     }
@@ -169,6 +174,7 @@ public class Pickups implements Vehicle{
      * @return sale bonus
      */
 
+    @Override
     public int getSaleBonus() {
         System.out.println(saleBonus);
         return this.saleBonus;
@@ -178,6 +184,7 @@ public class Pickups implements Vehicle{
      * @return repair bonus
      */
 
+    @Override
     public int getRepairBonus() {
         return this.repairBonus;
     }
@@ -187,6 +194,7 @@ public class Pickups implements Vehicle{
      * @return the wash bonus
      */
 
+    @Override
     public int getWashBonus(int level) {
         if(level == 1){
             return this.washBonus;
@@ -199,6 +207,7 @@ public class Pickups implements Vehicle{
      * @return cost
      */
 
+    @Override
     public int getCost() {
         return this.cost;
     }
@@ -207,11 +216,8 @@ public class Pickups implements Vehicle{
      * @return sale price
      */
 
+    @Override
     public int getSalePrice() {
-        if(winCount >= 1){
-            salePrice *= 1.1;
-            System.out.println("FNCD has at least one win with this type of vehicle");
-        }
         return (int) (this.salePrice * this.percent);
     }
     /**
@@ -219,6 +225,7 @@ public class Pickups implements Vehicle{
      * @return condition
      */
 
+    @Override
     public String getCondition() {
         return this.condition;
     }
@@ -227,6 +234,7 @@ public class Pickups implements Vehicle{
      * @return cleanliness
      */
 
+    @Override
     public String getCleanliness() {
         return this.cleanliness;
     }
@@ -235,6 +243,7 @@ public class Pickups implements Vehicle{
      * @return status
      */
 
+    @Override
     public String getStatus(){
         return this.status;
     }
@@ -243,11 +252,13 @@ public class Pickups implements Vehicle{
      * @return type
      */
 
+    @Override
     public String getType(){
         return this.type;
     }
 
 
+    @Override
     public void printAction() {
         System.out.println("Purchased a " + getCondition() + ", " + getCleanliness() + " Car " + getBrand() + ", (" + getName() + ") for $" + getCost());
     }

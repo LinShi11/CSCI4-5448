@@ -2,6 +2,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
+/**
+ * The class implements the motorcycle. The only different is a unique engine size
+ */
 public class Motorcycle implements Vehicle{
     private String name;
     private int saleBonus;
@@ -16,14 +19,13 @@ public class Motorcycle implements Vehicle{
     private String status;
     private String type;
 
-    /*
+    /**
      * Motorcycles have an unique Engine Size rating in cubic centimeters (cc).
      * This value should be generated from a
      * truncated Normal Distribution with mean 700 std. dev. 300.
      * In no case can cc be less than 50.
      */
     private int engineSize;
-    private int winCount;
     private double percent;
 
     private int min = 10000;
@@ -31,8 +33,6 @@ public class Motorcycle implements Vehicle{
     final ArrayList<String> brands = new ArrayList<>(Arrays.asList("Honda", "Lucid Motors", "Yamaha", "Suzuki", "Kawasaki", "BMW", "Ducati", "Triumph", "KTM"));
 
     public Motorcycle(String id){
-        //https://stackoverflow.com/questions/3680637/generate-a-random-double-in-a-range
-        // https://www.geeksforgeeks.org/how-to-set-precision-for-double-values-in-java/
 
         Random random = new Random();
         cost = random.nextInt(max - min) + min;
@@ -48,7 +48,7 @@ public class Motorcycle implements Vehicle{
             cleanliness = Vehicle.getPossibleCleanliness().get(2); 
         }
         status = "in stock";
-        type = "car";
+        type = "motorcycle";
         setBrand();
         setName(id);
         repairBonus = (int)(min * .10);
@@ -60,20 +60,21 @@ public class Motorcycle implements Vehicle{
         if (engineSize < 50) { //if the engine size is less than 50 it is equal to 50
             engineSize = 50;
         }
-
-        winCount = 0;
         percent = 1;
     }
     
+    @Override
     public void setName(String name) {
         this.name = this.getBrand().substring(0,3).toUpperCase() + "_" + name;
     }
 
+    @Override
     public void setBrand(){
         Random random = new Random();
         this.brand = brands.get(random.nextInt(brands.size()));
     }
     
+    @Override
     public void setCost(){
         if(this.condition.equals("used")){
             this.cost *= 0.8;
@@ -82,64 +83,72 @@ public class Motorcycle implements Vehicle{
         }
     }
     
+    @Override
     public void setSalePrice(double percentage){
         this.salePrice *= percentage;
     }
 
     
+    @Override
     public void setSaleBonus(int saleBonus) {
         this.saleBonus = saleBonus;
     }
 
     
+    @Override
     public void setRepairBonus(int repairBonus) {
         this.repairBonus = repairBonus;
     }
 
     
+    @Override
     public void setWashBonus(int washBonus) {
         this.washBonus = washBonus;
     }
 
 
     
+    @Override
     public void setCondition(String condition) {
         this.condition = condition;
     }
 
     
+    @Override
     public void setCleanliness(String cleanliness) {
         this.cleanliness = cleanliness;
     }
 
+    @Override
     public void setStatus(String status){
         this.status = status;
     }
-
-    public void setWinCount(){
-        winCount++;
-    }
     
+    @Override
     public String getName() {
         return this.name;
     }
 
     
+    @Override
     public String getBrand() {
         return brand;
     }
 
     
+    @Override
     public int getSaleBonus() {
         return this.saleBonus;
     }
 
     
+    @Override
     public int getRepairBonus() {
         return this.repairBonus;
     }
 
     
+    @Override
     public int getWashBonus(int level) {
         if(level == 1){
             return this.washBonus;
@@ -149,33 +158,38 @@ public class Motorcycle implements Vehicle{
     }
 
     
+    @Override
     public int getCost() {
         return this.cost;
     }
 
     
+    @Override
     public int getSalePrice() {
-        if(winCount >= 1){
-            salePrice *= 1.1;
-            System.out.println("FNCD has at least one win with this type of vehicle");
-        }
         return (int) (this.salePrice * this.percent);
     }
 
     
+    @Override
     public String getCondition() {
         return this.condition;
     }
 
     
+    @Override
     public String getCleanliness() {
         return this.cleanliness;
     }
     
+    @Override
     public String getStatus(){
+        if(status.equals("sold")){
+            return "sold";
+        }
         return this.status + "(engine size: " + engineSize + ")";
     }
     
+    @Override
     public String getType(){
         return this.type;
     }
@@ -184,6 +198,7 @@ public class Motorcycle implements Vehicle{
         return this.percent;
     }
     
+    @Override
     public void printAction(){
         System.out.println("Purchased a " + getCondition() + ", " + getCleanliness() + " Car " + getBrand() + ", (" + getName() + ") for $" + getCost());
     }

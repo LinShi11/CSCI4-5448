@@ -1,0 +1,5 @@
+Mechanics_002 fixed a broken performance car (MCL_00043) and made it used (made $2000)
+Mechanics_002 fixed a used performance car (MCL_00043) and made it used (made $0)
+Mechanics_010 fixed a broken motorcycle (BMW_00045) and made it used (made $1000)
+Mechanics_010 fixed a used performance car (MCL_00043) and made it like new (made $2000)
+Mechanics_014 fixed a used motorcycle (BMW_00045) and made it like new (made $1000)
