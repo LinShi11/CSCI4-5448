@@ -30,12 +30,12 @@ public class FNCDBeginningTest {
     @Test
     public void inventory(){
         fncd.setInventory();
-        Assertions.assertEquals(fncd.performanceCarList.size(), 4);
-        Assertions.assertEquals(fncd.carsList.size(), 4);
-        Assertions.assertEquals(fncd.pickupsList.size(), 4);
-        Assertions.assertEquals(fncd.electricCarList.size(), 4);
-        Assertions.assertEquals(fncd.motorcycleList.size(), 4);
-        Assertions.assertEquals(fncd.monsterTruckList.size(), 4);
+        Assertions.assertEquals(fncd.performanceCarList.size(), 6);
+        Assertions.assertEquals(fncd.carsList.size(), 6);
+        Assertions.assertEquals(fncd.pickupsList.size(), 6);
+        Assertions.assertEquals(fncd.electricCarList.size(), 6);
+        Assertions.assertEquals(fncd.motorcycleList.size(), 6);
+        Assertions.assertEquals(fncd.monsterTruckList.size(), 6);
     }
 
     /**

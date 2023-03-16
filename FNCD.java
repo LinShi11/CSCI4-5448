@@ -1,20 +1,25 @@
 import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Calendar;
 import java.util.Objects;
+import java.util.Queue;
 import java.util.Random;
+import java.util.Scanner;
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.Flow;
 import java.util.concurrent.SubmissionPublisher;
 
-/**
+/**	
  * FNCD holds the simulation for the program.
  */
 
-public class FNCD{
+public class FNCD{	
+
     // final variable for number of employees(each type) and number of vehicles(each type)
     final int maxSize = 3;
-    final int maxInventory = 4;
+    final int maxInventory = 6;
     int budget;
     int dailySales;
     int date;
@@ -35,6 +40,14 @@ public class FNCD{
     ArrayList<MonsterTruck> monsterTruckList;
     ArrayList<Motorcycle> motorcycleList;
     ArrayList<StaffDriver> staffDriverList;
+    
+    //3 new types
+    ArrayList<Tractor> tractorList;
+    ArrayList<Van> vanList;
+    ArrayList<Crane> craneList;
+    
+    Queue<Command> commandQueue = new ConcurrentLinkedQueue<>();
+    
     static final ArrayList<WashingMethod> washingMethods = new ArrayList<>(Arrays.asList(
     			new ChemicalWash(), new DetailedWash(), new ElbowGreasWash()
     		));
@@ -47,11 +60,34 @@ public class FNCD{
     int motorcycleWin;
     private int FNCDamount = 0;
     private int employeeAmount = 0;
+    
+    private String name; //Such as North or South
+    private CyclicBarrier barrier;
+    private boolean cmdInterface;
+    
+    //first sales person for asking name
+    private Salesperson firstSalesperson = null;
+    
+    //first sales person for transaction
+    private Salesperson secondSalesperson = null;
+    
     /**
      * Constructor for FNCD class
      * Initialize all variable that will be used in the simulation
      */
     public FNCD(){
+    	this(null, null, false);
+    }
+    
+    /**
+     * Constructor for FNCD class
+     * Initialize all variable that will be used in the simulation
+     */
+    public FNCD(String name, CyclicBarrier barrier, boolean cmdInterface){
+    	this.name = name;
+    	this.barrier = barrier;
+    	this.cmdInterface = cmdInterface;
+    	
         this.budget = 500000;
         this.simTime = 30;
         this.date = 1;
@@ -73,7 +109,11 @@ public class FNCD{
         this.motorcycleList = new ArrayList<>();
         this.inventory = new ArrayList<>();
         this.soldCars = new ArrayList<>();
-
+        
+        this.tractorList = new ArrayList<>();
+        this.vanList = new ArrayList<>();
+        this.craneList = new ArrayList<>();
+        
         this.performanceCarWin = 0;
         this.motorcycleWin = 0;
         this.pickupWin = 0;
@@ -90,36 +130,81 @@ public class FNCD{
         }
     }
 
-
     /**
      * Simulation function that simulate for 30 days.
      * Prints the final staff and inventory when simulation is completed
      */
     public void simulation(){
 
-        while(date <= simTime){
+    	boolean tempCmdInterface = cmdInterface;    	
+    	cmdInterface = false;
+    	
+        while(date <= simTime){ 
+        	
             // check for sundays and call startDay()/endDay() if it is not sunday
             if(date % 7 != 0) {
                 observer = new Observer();
                 logger = new Logger();
                 tracker = new Tracker(FNCDamount, employeeAmount);
-                System.out.println("******FNCD Day " + this.date + "******");
+                System.out.println((name != null?name + ":":"") + "******FNCD Day " + this.date + "******");
                 startDay();
                 endDay();
             }
             if (date % 7 == 0 || date % 7 == 3){
-                System.out.println("******FNCD Day " + this.date + ": Race day!!!!!!!******");
+                System.out.println((name != null?name + ":":"") + "******FNCD Day " + this.date + ": Race day!!!!!!!******");
                 race();
             }
-            date++;
+            date++; 
+            
+            if (barrier != null) {
+	            try {
+					barrier.await();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+            }
+		}
+        
+        cmdInterface = tempCmdInterface;
+        if (cmdInterface) {
+        	
+        	
+			/*
+			 * day 31 will start as normal until the beginning of sales at each FNCD. At
+			 * that point, you will present a command line interface to allow a user to
+			 * interact with the FNCD of their choosing (there will be no random customers
+			 * for this day)
+			 */
+	        if (date % 7 == 0 || date % 7 == 3){
+	            System.out.println((name != null?name + ":":"") + "******FNCD Day " + this.date + ": Race day!!!!!!!******");
+	            race();
+	        }
+	        date++;
+	        
+	        observer = new Observer();
+	        logger = new Logger();
+	        tracker = new Tracker(FNCDamount, employeeAmount);
+	        System.out.println((name != null?name + ":":"") + "******FNCD Day " + this.date + "******");
+	        startDay();
+	        endDay();
         }
 
-        //end of simulation, prints the details
-        System.out.println("\n******End of simulation******");
-        System.out.println("Here is a list of all the staffs: ");
-        Helper.printAllStaff(internList, mechanicsList, salespeopleList, employee, staffDriverList);
-        System.out.println("\nHere is a list of all the vehicles: ");
-        Helper.printInventory(inventory, soldCars);
+        synchronized (washingMethods) {
+        	
+        	if (name != null) {
+        		System.out.println("\n" + name + ":");
+        	}
+        	
+        	//end of simulation, prints the details
+            System.out.println("\n******End of simulation******");
+            System.out.println("Here is a list of all the staffs: ");
+            Helper.printAllStaff(internList, mechanicsList, salespeopleList, employee, staffDriverList);
+            System.out.println("\nHere is a list of all the vehicles: ");
+            Helper.printInventory(inventory, soldCars);
+            
+        	washingMethods.notifyAll();
+		}        
+        
     }
 
     /**
@@ -348,6 +433,28 @@ public class FNCD{
             motorcycleList.add(motorcycle);
             setInventoryHelper(motorcycle);
         }
+        
+
+        tempLength = tractorList.size();
+        for(int i = 0; i < maxInventory - tempLength; i++){
+            Tractor tractor = new Tractor(updateInventoryId());
+            tractorList.add(tractor);
+            setInventoryHelper(tractor);
+        }
+        
+        tempLength = vanList.size();
+        for(int i = 0; i < maxInventory - tempLength; i++){
+        	Van van = new Van(updateInventoryId());
+        	vanList.add(van);
+            setInventoryHelper(van);
+        }
+
+        tempLength = craneList.size();
+        for(int i = 0; i < maxInventory - tempLength; i++){
+        	Crane crane = new Crane(updateInventoryId());
+        	craneList.add(crane);
+            setInventoryHelper(crane);
+        }
         System.out.println();
     }
 
@@ -368,16 +475,86 @@ public class FNCD{
      * We also get the number of buyer for each day.
      */
     public void tasks(){
+    	
+    	Random rand = new Random();
+    	
         System.out.println("Washing...");
         washing();
         System.out.println("\nRepairing...");
         repairing();
+        
+        if (cmdInterface) { //command interface
+        	
+        	//wait for process command
+        	while (true) {
+        		
+        		Command command = null;
+        		
+        		synchronized (commandQueue) {
+				
+        			while (commandQueue.isEmpty()) {
+        				try {
+							commandQueue.wait();
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+        			}
+        			
+        			if (!commandQueue.isEmpty()) {
+        				
+        				command = commandQueue.poll();
+        			}
+        			
+        			commandQueue.notifyAll();
+				}
+        		
+        		if (command != null) {
+        		
+        			if (command instanceof QuitCommand) {
+        				break; //exit the while
+        			}else if (command instanceof SalespersonNameCommand) {
+        				
+        				firstSalesperson = salespeopleList.get(rand.nextInt(salespeopleList.size()));
+        				System.out.println("Salesperson's name: " + firstSalesperson.getName());
+        				
+        			}else if (command instanceof SecondSalespersonCommand) {
+        				
+        				secondSalesperson = salespeopleList.get(rand.nextInt(salespeopleList.size()));
+        				while (secondSalesperson == firstSalesperson) {
+        					secondSalesperson = salespeopleList.get(rand.nextInt(salespeopleList.size()));
+        				}
+        				
+        				System.out.println("Second salesperson's name: " + secondSalesperson.getName());
+        				
+        			}else if (command instanceof CurrentStoreInventoryCommand) {
+        				
+        				Helper.printInventory(inventory);
+        				
+        			}else if (command instanceof BuyNormalInventoryItem) {
+        				
+        				BuyNormalInventoryItem buyCmd = (BuyNormalInventoryItem)command;
+        				
+        				if (secondSalesperson == null) {
+        					System.out.println("Please choose the second salesperson");
+        				}else {
+        					selling(secondSalesperson, buyCmd.getChosenVehicle());
+        				}
+        				
+        				
+        			}else { //time, vehicle details command
+        				command.execute();
+        			}
+        		}        		
+        	}
+        	
+        }else {
 
-        //find the number of buyer for the day
-        int buyer = Helper.numOfBuyer(date);
-        System.out.println("\nWe have " + buyer + " Buyers today");
-        System.out.println("Selling...");
-        selling(buyer);
+	        //find the number of buyer for the day
+	        int buyer = Helper.numOfBuyer(date);
+	        System.out.println("\nWe have " + buyer + " Buyers today");
+	        System.out.println("Selling...");
+	        selling(buyer);
+        }
     }
 
     /**
@@ -449,8 +626,33 @@ public class FNCD{
         }
     }
 
+    public void selling(Salesperson salesperson, Vehicle car){
+    	
+        Buyer newBuyer = new Buyer();
 
+        car = salesperson.addDecorator(car);
+        
+        // determine whether they will buy the car
+        salesperson.buying(newBuyer, car, performanceCarWin, pickupWin, monsterTruckWin, motorcycleWin);
+        
+        //look at the status of the car the saleperson recommended. If it is sold then update the variables
+        String response;
+        if(car.getStatus().equals("sold")){
+            response = salesperson.getName() + " sold a vehicle " + car.getName() + " for $" + (int)(car.getSalePrice() * car.getPercent() * Salesperson.bonusHelper(car.getType(), performanceCarWin, pickupWin, monsterTruckWin, motorcycleWin));
+            notifyLogger(response);
+            notifyTracker(response);
 
+            soldCars.add(car); // add the soldcar list
+            this.budget += car.getSalePrice();
+            this.dailySales += car.getSalePrice();
+
+            // remove them from the appropriate arraylist
+            removeHelper(car);
+        } else{
+            notifyLogger(salesperson.getName() + " was not able to sell the vehicle " + car.getName());
+        }
+    }
+    
 
 
     /**
@@ -668,5 +870,29 @@ public class FNCD{
             }
         }
     }
+
+	/**
+	 * @return the commandQueue
+	 */
+	public Queue<Command> getCommandQueue() {
+		return commandQueue;
+	}
+
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+	}
+	
+	//get vehicle by name
+	public Vehicle getVehicle(String name) {
+		for(Vehicle car: inventory){
+			if (car.getName().equalsIgnoreCase(name)) {
+				return car;
+			}
+		}
+		return null;
+	}
 
 }

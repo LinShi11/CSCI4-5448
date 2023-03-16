@@ -19,6 +19,29 @@ public class Helper {
         }
     }
 
+    /**
+     * The function prints all inventory using String.format to make it look nice
+     */
+    public static void printInventory(ArrayList<Vehicle> inventory){
+        System.out.println(String.format("%35s %30s %20s %20s %20s %20s %30s", "Name", "Brand", "Cost", "Sale Price", "Condition", "Cleanliness", "Status"));
+        for(Vehicle car: inventory){
+            System.out.println(String.format("%35s %30s %20s %20s %20s %20s %30s", car.getName(), car.getBrand(), car.getCost(), car.getSalePrice(), car.getCondition(), car.getCleanliness(), car.getStatus()));
+        }
+    }
+
+    /**
+     * The function print vehicle
+     */
+    public static void printVehicle(Vehicle vehicle){
+    	
+    	 System.out.println("Name: " + vehicle.getName());
+    	 System.out.println("Brand: " + vehicle.getBrand());
+    	 System.out.println("Cost: " + vehicle.getCost());
+    	 System.out.println("Sale Price: " + vehicle.getSalePrice());
+    	 System.out.println("Condition: " + vehicle.getCondition());
+    	 System.out.println("Cleanliness: " + vehicle.getCleanliness());
+    	 System.out.println("Status: " + vehicle.getStatus());
+    }
 
     /**
      * The function print all employees using String.format to make it look nice
