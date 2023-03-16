@@ -34,7 +34,7 @@ public class Observer implements Flow.Subscriber<String>{
      * @param item the item to add
      * @param date the date for file
      */
-    public void onNext(String item, int date) {
+    public void onNext(String item, int date, String name) {
         subscription.request(1);
     }
 
@@ -59,7 +59,7 @@ public class Observer implements Flow.Subscriber<String>{
      * used for tracker, so the correct format can be displayed
      * @param date: the current date
      */
-    public void onComplete(int date){
+    public void onComplete(int date, String name){
         subscription.cancel();
     }
 }

@@ -116,7 +116,7 @@ public interface Vehicle {
      * getter for type
      * @return type
      */
-    public String getType();
+    public Enum.VehicleType getType();
 
     /**
      * prints out the action of purchase

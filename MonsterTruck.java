@@ -18,7 +18,7 @@ public class MonsterTruck implements Vehicle{
 
     private String brand;
     private String status;
-    private String type;
+    private Enum.VehicleType type;
     private double percent;
 
     private int min = 10000;
@@ -67,7 +67,7 @@ public class MonsterTruck implements Vehicle{
             cleanliness = Vehicle.getPossibleCleanliness().get(2);
         }
         status = "in stock";
-        type = "monster truck";
+        type = Enum.VehicleType.MonsterTrucks;
         setBrand();
 //        if (id == null || id.equals("") || names.contains(id)) {//id is not provided, get from the list
 //
@@ -225,7 +225,7 @@ public class MonsterTruck implements Vehicle{
     }
     
     @Override
-    public String getType(){
+    public Enum.VehicleType getType(){
         return this.type;
     }
     

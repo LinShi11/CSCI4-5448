@@ -122,7 +122,7 @@ public class SaleDecorator implements Vehicle {
     }
 
     @Override
-    public String getType() {
+    public Enum.VehicleType getType() {
         return car.getType();
     }
 

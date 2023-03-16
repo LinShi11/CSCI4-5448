@@ -19,7 +19,7 @@ public class Pickups implements Vehicle{
     private String brand;
 
     private String status;
-    private String type;
+    private Enum.VehicleType type;
 
     private double percent;
     // min and max cost
@@ -49,7 +49,7 @@ public class Pickups implements Vehicle{
 
         // assign other variables
         status = "in stock";
-        type = "pickup";
+        type = Enum.VehicleType.Pickups;
         setBrand();
         setName(id);
         repairBonus = (int)(min * .10);
@@ -253,7 +253,7 @@ public class Pickups implements Vehicle{
      */
 
     @Override
-    public String getType(){
+    public Enum.VehicleType getType(){
         return this.type;
     }
 

@@ -1,4 +1,137 @@
-Salesperson_013 was not able to sell the vehicle HON_00005
-Salesperson_005 was not able to sell the vehicle BMW_00045
-Salesperson_013 sold a vehicle JEE_00037 for $77033
-Salesperson_013 was not able to sell the vehicle FOR_00011
+North: Mechanics_006 fixed a used pickup (FOR_00075) and made it used (made $0)
+South: Mechanics_002 fixed a used car (HYU_00043) and made it like new (made $1000)
+South: Mechanics_002 fixed a used car (JOH_00039) and made it like new (made $2000)
+North: Mechanics_006 fixed a used performance car (JAG_00079) and made it like new (made $2000)
+South: Mechanics_010 fixed a used monster truck (Captain's Curse_00028) and made it like new (made $1000)
+North: Mechanics_001 fixed a used pickup (FOR_00075) and made it like new (made $1000)
+South: Mechanics_010 fixed a like new monster truck (Captain's Curse_00028) and made it used (made $1000)
+North: Mechanics_001 fixed a broken motorcycle (LUC_00031) and made it used (made $1000)
+South: Mechanics_009 fixed a used monster truck (Captain's Curse_00026) and made it like new (made $1000)
+North: Mechanics_005 fixed a used electric car (LUC_00021) and made it like new (made $1000)
+South: Mechanics_009 fixed a used performance car (ALF_00072) and made it like new (made $2000)
+North: Mechanics_005 fixed a like new electric car (LUC_00021) and made it used (made $1000)
+South: Salesperson_011 sold a vehicle TES_00071 for $37210
+North: Salesperson_007 sold a vehicle LIE_00054 for $138954
+South: Salesperson_001 sold a vehicle Captain's Curse_00028 for $124522
+North: Salesperson_007 was not able to sell the vehicle JAG_00002
+South: Salesperson_005 sold a vehicle APT_00023 for $37945
+North: Salesperson_007 sold a vehicle Stone Crusher_00058 for $39727
+South: Salesperson_005 sold a vehicle FOR_00016 for $48013
+North: Salesperson_011 was not able to sell the vehicle BMW_00059
+South: Salesperson_001 was not able to sell the vehicle JAG_00001
+North: Salesperson_011 was not able to sell the vehicle LUC_00021
+North: Salesperson_009 sold a vehicle Stone Crusher_00071 for $37919
+North: Salesperson_009 sold a vehicle BMW_00059 for $37616
+North: Salesperson_009 was not able to sell the vehicle KAW_00077
+South: Salesperson_003 sold a vehicle Maximum Destruction (Max-D)_00029 for $35589
+North: Salesperson_001 was not able to sell the vehicle USA-1_00025
+South: Salesperson_005 sold a vehicle VOL_00021 for $29520
+North: Salesperson_001 was not able to sell the vehicle GMC_00014
+South: Salesperson_005 sold a vehicle FOR_00056 for $52772
+South: Salesperson_003 sold a vehicle PAL_00049 for $118110
+South: Salesperson_005 sold a vehicle LAM_00055 for $63252
+South: Salesperson_003 sold a vehicle MAN_00052 for $112944
+South: Salesperson_007 was not able to sell the vehicle RIV_00020
+North: Mechanics_010 fixed a broken monster truck (Gunslinger_00067) and made it broken (made $0)
+South: Mechanics_006 fixed a broken performance car (AST_00073) and made it broken (made $0)
+South: Mechanics_006 fixed a used monster truck (Bulldozer_00058) and made it like new (made $1000)
+North: Mechanics_010 fixed a broken monster truck (Gunslinger_00067) and made it used (made $1000)
+North: Mechanics_009 fixed a used monster truck (Gunslinger_00067) and made it like new (made $1000)
+South: Mechanics_001 fixed a broken motorcycle (KTM_00032) and made it used (made $1000)
+North: Mechanics_009 fixed a like new monster truck (Gunslinger_00067) and made it used (made $1000)
+South: Mechanics_001 fixed a used monster truck (Snake Bite_00028) and made it like new (made $1000)
+North: Mechanics_013 fixed a used monster truck (Gunslinger_00067) and made it like new (made $1000)
+South: Mechanics_009 fixed a used car (SON_00039) and made it like new (made $2000)
+North: Mechanics_013 fixed a broken monster truck (Bear Foot USA_00066) and made it used (made $1000)
+South: Mechanics_009 fixed a broken pickup (CHE_00075) and made it broken (made $0)
+North: Salesperson_003 sold a vehicle Gunslinger_00067 for $67365
+South: Salesperson_011 was not able to sell the vehicle APT_00023
+North: Salesperson_011 sold a vehicle MAN_00053 for $130405
+South: Salesperson_011 sold a vehicle MAS_00006 for $79641
+North: Salesperson_011 sold a vehicle Bear Foot USA_00066 for $51595
+North: Salesperson_007 was not able to sell the vehicle BMW_00058
+North: Salesperson_011 was not able to sell the vehicle RAM_00017
+North: Salesperson_003 was not able to sell the vehicle VOL_00019
+North: Salesperson_003 was not able to sell the vehicle RAM_00017
+South: Mechanics_006 fixed a used motorcycle (YAM_00068) and made it like new (made $1000)
+North: Salesperson_014 was not able to sell the vehicle APT_00020
+South: Mechanics_006 fixed a like new motorcycle (YAM_00068) and made it used (made $1000)
+North: Salesperson_001 was not able to sell the vehicle King Krunch_00060
+South: Mechanics_001 fixed a used monster truck (Air Force Afterburner_00025) and made it like new (made $1000)
+South: Mechanics_001 fixed a used performance car (ALF_00065) and made it like new (made $2000)
+North: Salesperson_005 sold a vehicle APT_00020 for $37745
+South: Mechanics_013 fixed a broken pickup (CHE_00069) and made it used (made $1000)
+North: Salesperson_014 was not able to sell the vehicle King Krunch_00060
+South: Mechanics_013 fixed a used motorcycle (YAM_00068) and made it like new (made $1000)
+North: Salesperson_005 was not able to sell the vehicle King Krunch_00060
+South: Salesperson_007 was not able to sell the vehicle YAM_00057
+North: Salesperson_005 was not able to sell the vehicle HON_00036
+South: Salesperson_011 sold a vehicle JAG_00003 for $84547
+South: Salesperson_011 was not able to sell the vehicle JEE_00067
+South: Salesperson_011 sold a vehicle JEE_00067 for $81909
+South: Salesperson_005 sold a vehicle YAM_00057 for $72454
+South: Salesperson_005 sold a vehicle Air Force Afterburner_00025 for $70980
+South: Mechanics_006 fixed a used performance car (LEX_00003) and made it like new (made $2000)
+North: Mechanics_006 fixed a used performance car (MCL_00002) and made it like new (made $2000)
+South: Mechanics_006 fixed a used monster truck (Predator_00070) and made it like new (made $1000)
+North: Mechanics_006 fixed a used motorcycle (KTM_00032) and made it like new (made $1000)
+South: Mechanics_010 fixed a used performance car (MER_00074) and made it used (made $0)
+North: Mechanics_010 fixed a used car (MAS_00038) and made it like new (made $2000)
+South: Mechanics_010 fixed a used pickup (JEE_00069) and made it like new (made $1000)
+North: Mechanics_010 fixed a broken monster truck (Backwards Bob_00075) and made it used (made $1000)
+South: Mechanics_009 fixed a broken pickup (JEE_00067) and made it used (made $1000)
+North: Mechanics_001 fixed a used monster truck (Backwards Bob_00075) and made it like new (made $1000)
+South: Mechanics_009 fixed a used pickup (JEE_00067) and made it like new (made $1000)
+North: Mechanics_001 fixed a used car (HYU_00010) and made it like new (made $1000)
+South: Salesperson_013 sold a vehicle Predator_00070 for $36551
+North: Salesperson_009 sold a vehicle KTM_00032 for $61743
+South: Salesperson_013 sold a vehicle TES_00075 for $28114
+North: Salesperson_011 was not able to sell the vehicle RAM_00017
+South: Salesperson_014 was not able to sell the vehicle Bear Foot (1979)_00027
+South: Salesperson_013 was not able to sell the vehicle FOR_00017
+South: Salesperson_014 was not able to sell the vehicle LEX_00003
+South: Mechanics_002 fixed a used pickup (FOR_00018) and made it like new (made $1000)
+North: Salesperson_007 sold a vehicle Swamp Thing_00075 for $40441
+South: Mechanics_002 fixed a used electric car (ZOO_00020) and made it like new (made $1000)
+South: Salesperson_009 was not able to sell the vehicle KON_00052
+North: Salesperson_001 sold a vehicle NIO_00020 for $36045
+South: Salesperson_007 sold a vehicle KON_00052 for $152808
+North: Salesperson_001 was not able to sell the vehicle Grave Digger_00026
+North: Salesperson_001 sold a vehicle RAM_00073 for $61327
+North: Salesperson_001 sold a vehicle Grave Digger_00026 for $45026
+North: Salesperson_007 was not able to sell the vehicle FOR_00062
+South: Mechanics_006 fixed a used pickup (JEE_00066) and made it used (made $0)
+North: Salesperson_005 was not able to sell the vehicle YAM_00073
+South: Mechanics_006 fixed a used monster truck (War Wizard_00072) and made it like new (made $1000)
+North: Salesperson_007 sold a vehicle Stone Crusher_00063 for $41514
+South: Mechanics_010 fixed a broken pickup (CHE_00065) and made it used (made $1000)
+South: Mechanics_010 fixed a used pickup (CHE_00065) and made it like new (made $1000)
+North: Salesperson_011 sold a vehicle YAM_00073 for $34381
+South: Mechanics_009 fixed a used pickup (JEE_00066) and made it like new (made $1000)
+North: Salesperson_005 was not able to sell the vehicle KTM_00071
+South: Mechanics_009 fixed a used pickup (CHE_00014) and made it like new (made $1000)
+North: Salesperson_007 was not able to sell the vehicle ALF_00078
+South: Salesperson_001 was not able to sell the vehicle FOR_00017
+North: Salesperson_007 was not able to sell the vehicle TES_00057
+South: Salesperson_001 was not able to sell the vehicle TES_00067
+South: Salesperson_017 was not able to sell the vehicle Snake Bite_00028
+South: Salesperson_001 was not able to sell the vehicle MAN_00051
+South: Salesperson_017 sold a vehicle MAN_00051 for $101332
+South: Salesperson_017 sold a vehicle TRI_00032 for $69997
+South: Salesperson_017 was not able to sell the vehicle TES_00067
+South: Mechanics_006 fixed a broken PerformanceCar (AUD_00067) and made it used (made $2000)
+North: Mechanics_010 fixed a used PerformanceCar (AST_00073) and made it used (made $0)
+South: Mechanics_010 fixed a used PerformanceCar (AUD_00067) and made it like new (made $2000)
+North: Mechanics_010 fixed a used MonsterTrucks (Bear Foot (1979)_00050) and made it used (made $0)
+North: Mechanics_001 fixed a used MonsterTrucks (Bear Foot (1979)_00050) and made it like new (made $1000)
+South: Salesperson_009 was not able to sell the vehicle JOH_00021
+North: Mechanics_001 fixed a used PerformanceCar (BMW_00063) and made it like new (made $2000)
+South: Salesperson_005 sold a vehicle JOH_00021 for $59597
+North: Mechanics_013 fixed a used MonsterTrucks (Predator_00013) and made it like new (made $1000)
+North: Mechanics_013 fixed a used Tractor (JOH_00072) and made it like new (made $2000)
+North: Salesperson_009 sold a vehicle BMW_00063 for $85366
+North: Salesperson_009 sold a vehicle JOH_00072 for $69912
+North: Salesperson_003 sold a vehicle Bear Foot (1979)_00050 for $61936
+North: Salesperson_011 was not able to sell the vehicle SON_00071
+North: Salesperson_011 was not able to sell the vehicle SON_00071
+North: Salesperson_009 was not able to sell the vehicle SON_00071

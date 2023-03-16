@@ -27,24 +27,24 @@ public class FNCD{
     int id;
     int inventoryId;
     ArrayList<Vehicle> inventory;
-    ArrayList<PerformanceCar> performanceCarList;
-    ArrayList<Cars> carsList;
-    ArrayList<Pickups> pickupsList;
+    int performanceCarCount;
+    int carsCount;
+    int pickupsCount;
     ArrayList<Vehicle> soldCars;
     ArrayList<Staff> employee;
     ArrayList<Interns> internList;
     ArrayList<Mechanics> mechanicsList;
     ArrayList<Salesperson> salespeopleList;
 
-    ArrayList<ElectricCar> electricCarList;
-    ArrayList<MonsterTruck> monsterTruckList;
-    ArrayList<Motorcycle> motorcycleList;
+    int electricCarCount;
+    int monsterTruckCount;
+    int motorcycleCount;
     ArrayList<StaffDriver> staffDriverList;
     
     //3 new types
-    ArrayList<Tractor> tractorList;
-    ArrayList<Van> vanList;
-    ArrayList<Crane> craneList;
+    int tractorCount;
+    int vanCount;
+    int craneCount;
     
     Queue<Command> commandQueue = new ConcurrentLinkedQueue<>();
     
@@ -58,8 +58,8 @@ public class FNCD{
     int pickupWin;
     int monsterTruckWin;
     int motorcycleWin;
-    private int FNCDamount = 0;
-    private int employeeAmount = 0;
+    private int FNCDamount;
+    private int employeeAmount;
     
     private String name; //Such as North or South
     private CyclicBarrier barrier;
@@ -70,6 +70,7 @@ public class FNCD{
     
     //first sales person for transaction
     private Salesperson secondSalesperson = null;
+    private VehicleFactory vehicleFactory;
     
     /**
      * Constructor for FNCD class
@@ -101,24 +102,28 @@ public class FNCD{
         this.staffDriverList = new ArrayList<>();
         this.employee = new ArrayList<>();
 
-        this.performanceCarList = new ArrayList<>();
-        this.carsList = new ArrayList<>();
-        this.pickupsList = new ArrayList<>();
-        this.electricCarList = new ArrayList<>();
-        this.monsterTruckList = new ArrayList<>();
-        this.motorcycleList = new ArrayList<>();
+        this.performanceCarCount = 0;
+        this.carsCount = 0;
+        this.pickupsCount = 0;
+        this.electricCarCount = 0;
+        this.monsterTruckCount = 0;
+        this.motorcycleCount = 0;
         this.inventory = new ArrayList<>();
         this.soldCars = new ArrayList<>();
         
-        this.tractorList = new ArrayList<>();
-        this.vanList = new ArrayList<>();
-        this.craneList = new ArrayList<>();
+        this.tractorCount = 0;
+        this.vanCount = 0;
+        this.craneCount = 0;
         
         this.performanceCarWin = 0;
         this.motorcycleWin = 0;
         this.pickupWin = 0;
         this.monsterTruckWin = 0;
         Random random = new Random();
+        this.FNCDamount = 0;
+        this.employeeAmount = 0;
+
+        vehicleFactory = new VehicleFactory();
 
         // directly hire 3 interns, 3 mechanics, and 3 salesperson + 3 drivers (staffs)
         for(int i = 0; i < maxSize; i++){
@@ -143,9 +148,9 @@ public class FNCD{
         	
             // check for sundays and call startDay()/endDay() if it is not sunday
             if(date % 7 != 0) {
-                observer = new Observer();
-                logger = new Logger();
-                tracker = new Tracker(FNCDamount, employeeAmount);
+//                observer = new Observer();
+                logger = Logger.getInstance();
+                tracker = Tracker.getInstance(FNCDamount, employeeAmount);
                 System.out.println((name != null?name + ":":"") + "******FNCD Day " + this.date + "******");
                 startDay();
                 endDay();
@@ -181,9 +186,9 @@ public class FNCD{
 	        }
 	        date++;
 	        
-	        observer = new Observer();
-	        logger = new Logger();
-	        tracker = new Tracker(FNCDamount, employeeAmount);
+//	        observer = new Observer();
+	        logger = Logger.getInstance();
+	        tracker = Tracker.getInstance(FNCDamount, employeeAmount);
 	        System.out.println((name != null?name + ":":"") + "******FNCD Day " + this.date + "******");
 	        startDay();
 	        endDay();
@@ -221,8 +226,8 @@ public class FNCD{
         switch (car){
             // generate the usable car arraylist
             case 0:
-                for(PerformanceCar vehicle: performanceCarList){
-                    if(!vehicle.getCondition().equals("broken") ){
+                for(Vehicle vehicle: inventory){
+                    if(vehicle.getType() == Enum.VehicleType.PerformanceCar && !vehicle.getCondition().equals("broken") ){
                         racing.add(vehicle);
                     }
                 }
@@ -230,8 +235,8 @@ public class FNCD{
                 performanceCarWin += winCount;
                 break;
             case 1:
-                for(Pickups vehicle: pickupsList){
-                    if(!vehicle.getCondition().equals("broken") ){
+                for(Vehicle vehicle: inventory){
+                    if(vehicle.getType() == Enum.VehicleType.Pickups && !vehicle.getCondition().equals("broken") ){
                         racing.add(vehicle);
                     }
                 }
@@ -239,8 +244,8 @@ public class FNCD{
                 pickupWin += winCount;
                 break;
             case 2:
-                for(MonsterTruck vehicle: monsterTruckList){
-                    if(!vehicle.getCondition().equals("broken") ){
+                for(Vehicle vehicle: inventory){
+                    if(vehicle.getType() == Enum.VehicleType.MonsterTrucks && !vehicle.getCondition().equals("broken") ){
                         racing.add(vehicle);
                     }
                 }
@@ -248,8 +253,8 @@ public class FNCD{
                 monsterTruckWin += winCount;
                 break;
             case 3:
-                for(Motorcycle vehicle: motorcycleList){
-                    if(!vehicle.getCondition().equals("broken") ){
+                for(Vehicle vehicle: inventory){
+                    if(vehicle.getType() == Enum.VehicleType.Motorcycles && !vehicle.getCondition().equals("broken") ){
                         racing.add(vehicle);
                     }
                 }
@@ -344,7 +349,6 @@ public class FNCD{
         for(StaffDriver driver: staffDriverList){
             driver.setTotalBonus();
             notifyLogger(driver.getName() + " made $" + driver.getDailyBonus());
-            notifyTracker("employee $"+ driver.getDailyBonus());
             driver.setDailyBonus(0);
         }
     }
@@ -396,64 +400,69 @@ public class FNCD{
      * Three different arrayList are used so the checking process is easier.
      */
     public void setInventory(){
-        int tempLength = performanceCarList.size();
-        for(int i = 0; i < maxInventory - tempLength; i++ ){
-            PerformanceCar car = new PerformanceCar(updateInventoryId());
-            performanceCarList.add(car);
-            // helper function to modify budge, inventory, and print. To make thing clearer
-            setInventoryHelper(car);
+        for(int i = 0; i < maxInventory - performanceCarCount; i++ ){
+            Vehicle car = vehicleFactory.buildVehicle(Enum.VehicleType.PerformanceCar, updateInventoryId());
+            if(car != null) {
+                performanceCarCount++;
+                // helper function to modify budge, inventory, and print. To make thing clearer
+                setInventoryHelper(car);
+            }
         }
-        tempLength = carsList.size();
-        for(int i = 0; i < maxInventory - tempLength; i++){
-            Cars car = new Cars(updateInventoryId());
-            carsList.add(car);
-            setInventoryHelper(car);
+        for(int i = 0; i < maxInventory - carsCount; i++){
+            Vehicle car = vehicleFactory.buildVehicle(Enum.VehicleType.Cars, updateInventoryId());
+            if(car != null) {
+                carsCount ++;
+                setInventoryHelper(car);
+            }
         }
-        tempLength = pickupsList.size();
-        for(int i = 0; i < maxInventory - tempLength; i++){
-            Pickups car = new Pickups(updateInventoryId());
-            pickupsList.add(car);
-            setInventoryHelper(car);
+        for(int i = 0; i < maxInventory - pickupsCount; i++){
+            Vehicle car = vehicleFactory.buildVehicle(Enum.VehicleType.Pickups, updateInventoryId());
+            if(car != null) {
+                pickupsCount++;
+                setInventoryHelper(car);
+            }
         }
-        tempLength = electricCarList.size();
-        for(int i = 0; i < maxInventory - tempLength; i++){
-            ElectricCar car = new ElectricCar(updateInventoryId());
-            electricCarList.add(car);
-            setInventoryHelper(car);
+        for(int i = 0; i < maxInventory - electricCarCount; i++){
+            Vehicle car = vehicleFactory.buildVehicle(Enum.VehicleType.ElectricCars, updateInventoryId());
+            if(car != null) {
+                electricCarCount++;
+                setInventoryHelper(car);
+            }
         }
-        tempLength = monsterTruckList.size();
-        for(int i = 0; i < maxInventory - tempLength; i++){
-            MonsterTruck car = new MonsterTruck(updateInventoryId());
-            monsterTruckList.add(car);
-            setInventoryHelper(car);
+        for(int i = 0; i < maxInventory - monsterTruckCount; i++){
+            Vehicle car = vehicleFactory.buildVehicle(Enum.VehicleType.MonsterTrucks, updateInventoryId());
+            if(car != null) {
+                monsterTruckCount++;
+                setInventoryHelper(car);
+            }
         }
-        tempLength = motorcycleList.size();
-        for(int i = 0; i < maxInventory - tempLength; i++){
-            Motorcycle motorcycle = new Motorcycle(updateInventoryId());
-            motorcycleList.add(motorcycle);
-            setInventoryHelper(motorcycle);
+        for(int i = 0; i < maxInventory - motorcycleCount; i++){
+            Vehicle car = vehicleFactory.buildVehicle(Enum.VehicleType.Motorcycles, updateInventoryId());
+            if(car != null) {
+                motorcycleCount++;
+                setInventoryHelper(car);
+            }
         }
-        
-
-        tempLength = tractorList.size();
-        for(int i = 0; i < maxInventory - tempLength; i++){
-            Tractor tractor = new Tractor(updateInventoryId());
-            tractorList.add(tractor);
-            setInventoryHelper(tractor);
+        for(int i = 0; i < maxInventory - tractorCount; i++){
+            Vehicle car = vehicleFactory.buildVehicle(Enum.VehicleType.Tractor, updateInventoryId());
+            if(car != null) {
+                tractorCount++;
+                setInventoryHelper(car);
+            }
         }
-        
-        tempLength = vanList.size();
-        for(int i = 0; i < maxInventory - tempLength; i++){
-        	Van van = new Van(updateInventoryId());
-        	vanList.add(van);
-            setInventoryHelper(van);
+        for(int i = 0; i < maxInventory - vanCount; i++){
+            Vehicle car = vehicleFactory.buildVehicle(Enum.VehicleType.Van, updateInventoryId());
+            if(car != null) {
+                vanCount++;
+                setInventoryHelper(car);
+            }
         }
-
-        tempLength = craneList.size();
-        for(int i = 0; i < maxInventory - tempLength; i++){
-        	Crane crane = new Crane(updateInventoryId());
-        	craneList.add(crane);
-            setInventoryHelper(crane);
+        for(int i = 0; i < maxInventory - craneCount; i++){
+            Vehicle car = vehicleFactory.buildVehicle(Enum.VehicleType.Crane, updateInventoryId());
+            if(car != null) {
+                craneCount++;
+                setInventoryHelper(car);
+            }
         }
         System.out.println();
     }
@@ -478,9 +487,9 @@ public class FNCD{
     	
     	Random rand = new Random();
     	
-        System.out.println("Washing...");
+        System.out.println("Washing..." + name);
         washing();
-        System.out.println("\nRepairing...");
+        System.out.println("\nRepairing..."+ name);
         repairing();
         
         if (cmdInterface) { //command interface
@@ -552,7 +561,7 @@ public class FNCD{
 	        //find the number of buyer for the day
 	        int buyer = Helper.numOfBuyer(date);
 	        System.out.println("\nWe have " + buyer + " Buyers today");
-	        System.out.println("Selling...");
+	        System.out.println("Selling..."+ name);
 	        selling(buyer);
         }
     }
@@ -612,7 +621,7 @@ public class FNCD{
             if(car.getStatus().equals("sold")){
                 response = representative.getName() + " sold a vehicle " + car.getName() + " for $" + (int)(car.getSalePrice() * car.getPercent() * Salesperson.bonusHelper(car.getType(), performanceCarWin, pickupWin, monsterTruckWin, motorcycleWin));
                 notifyLogger(response);
-                notifyTracker(response);
+                FNCDamount += (int)(car.getSalePrice() * car.getPercent() * Salesperson.bonusHelper(car.getType(), performanceCarWin, pickupWin, monsterTruckWin, motorcycleWin));
 
                 soldCars.add(car); // add the soldcar list
                 this.budget += car.getSalePrice();
@@ -640,7 +649,7 @@ public class FNCD{
         if(car.getStatus().equals("sold")){
             response = salesperson.getName() + " sold a vehicle " + car.getName() + " for $" + (int)(car.getSalePrice() * car.getPercent() * Salesperson.bonusHelper(car.getType(), performanceCarWin, pickupWin, monsterTruckWin, motorcycleWin));
             notifyLogger(response);
-            notifyTracker(response);
+            FNCDamount += (int)(car.getSalePrice() * car.getPercent() * Salesperson.bonusHelper(car.getType(), performanceCarWin, pickupWin, monsterTruckWin, motorcycleWin));
 
             soldCars.add(car); // add the soldcar list
             this.budget += car.getSalePrice();
@@ -664,11 +673,11 @@ public class FNCD{
         System.out.println("We made $" + this.dailySales+ " today");
         dailyUpdate();
         noMoney();
+        notifyTracker("employee $" + employeeAmount);
+        notifyTracker("FNCD $" + FNCDamount);
         System.out.println("\nQuitting");
         quit();
-        FNCDamount = tracker.getFNCDAmount();
-        employeeAmount = tracker.getEmployeeAmount();
-        tracker.onComplete(date);
+        tracker.onComplete(date, name);
         logger.onComplete();
     }
 
@@ -680,29 +689,31 @@ public class FNCD{
             staff.setTotalDaysWorked();
             staff.setTotalPay();
             staff.setTotalBonus();
-            notifyTracker("employee $" + staff.getDailyBonus());
-            notifyTracker("employee $" + staff.getDailySalary());
+            employeeAmount += staff.getDailyBonus();
+            employeeAmount += staff.getDailySalary();
+//            notifyTracker("employee $" + staff.getDailyBonus());
+//            notifyTracker("employee $" + staff.getDailySalary());
         }
         for(Mechanics staff: mechanicsList){
             staff.setTotalDaysWorked();
             staff.setTotalPay();
             staff.setTotalBonus();
-            notifyTracker("employee $" + staff.getDailyBonus());
-            notifyTracker("employee $" + staff.getDailySalary());
+            employeeAmount += staff.getDailyBonus();
+            employeeAmount += staff.getDailySalary();
         }
         for(Salesperson staff: salespeopleList){
             staff.setTotalDaysWorked();
             staff.setTotalPay();
             staff.setTotalBonus();
-            notifyTracker("employee $" + staff.getDailyBonus());
-            notifyTracker("employee $" + staff.getDailySalary());
+            employeeAmount += staff.getDailyBonus();
+            employeeAmount += staff.getDailySalary();
         }
         for(StaffDriver staff: staffDriverList){
             staff.setTotalDaysWorked();
             staff.setTotalPay();
             staff.setTotalBonus();
-            notifyTracker("employee $" + staff.getDailyBonus());
-            notifyTracker("employee $" + staff.getDailySalary());
+            employeeAmount += staff.getDailyBonus();
+            employeeAmount += staff.getDailySalary();
         }
     }
 
@@ -712,7 +723,7 @@ public class FNCD{
     public void noMoney(){
         while(this.budget <= 0){
             this.budget += 250000;
-            logger.onNext("You ran out of money, so you borrowed $250,000 from the bank");
+            logger.onNext("You ran out of money, so you borrowed $250,000 from the bank", date, name);
             System.out.println("You ran out of money, so you borrowed $250,000 from the bank");
         }
     }
@@ -812,7 +823,7 @@ public class FNCD{
      * @param response: the text to send
      */
     public void notifyLogger(String response){
-        logger.onNext(response, date);
+        logger.onNext(response, date, name);
     }
 
     /**
@@ -826,48 +837,24 @@ public class FNCD{
                 break;
             }
         }
-        if(car.getType().equals("performance car")){
-            for(Vehicle c: performanceCarList){
-                if(c.getName().equals(car.getName())){
-                    performanceCarList.remove(c);
-                    break;
-                }
-            }
-        } else if(car.getType().equals("car")){
-            for(Vehicle c: carsList){
-                if(c.getName().equals(car.getName())){
-                    carsList.remove(c);
-                    break;
-                }
-            }
-        } else if(car.getType().equals("electric car")){
-            for(Vehicle c: electricCarList){
-                if(c.getName().equals(car.getName())){
-                    electricCarList.remove(c);
-                    break;
-                }
-            }
-        } else if(car.getType().equals("monster truck")){
-            for(Vehicle c: monsterTruckList){
-                if(c.getName().equals(car.getName())){
-                    monsterTruckList.remove(c);
-                    break;
-                }
-            }
-        }else if(car.getType().equals("motorcycle")){
-            for(Vehicle c: motorcycleList){
-                if(c.getName().equals(car.getName())){
-                    motorcycleList.remove(c);
-                    break;
-                }
-            }
-        }else{
-            for(Vehicle c: pickupsList){
-                if(c.getName().equals(car.getName())){
-                    pickupsList.remove(c);
-                    break;
-                }
-            }
+        if(car.getType() == Enum.VehicleType.PerformanceCar){
+            performanceCarCount --;
+        } else if(car.getType() == Enum.VehicleType.Cars){
+            carsCount--;
+        } else if(car.getType() == Enum.VehicleType.ElectricCars){
+            electricCarCount --;
+        } else if(car.getType() == Enum.VehicleType.MonsterTrucks){
+            monsterTruckCount --;
+        }else if(car.getType() == Enum.VehicleType.Motorcycles){
+            motorcycleCount --;
+        }else if(car.getType() == Enum.VehicleType.Pickups){
+            pickupsCount --;
+        }else if(car.getType() == Enum.VehicleType.Van){
+            vanCount --;
+        }else if(car.getType() == Enum.VehicleType.Crane){
+            craneCount --;
+        }else if(car.getType() == Enum.VehicleType.Tractor){
+            tractorCount --;
         }
     }
 

@@ -8,6 +8,7 @@ public class Tracker extends Observer{
     private int FNCDamount;
     private int employeeAmount;
     private Flow.Subscription subscription;
+    private static Tracker uniqueTracker;
 
     /**
      * constructor
@@ -17,6 +18,14 @@ public class Tracker extends Observer{
     public Tracker(int FNCDamount, int employeeAmount){
         this.FNCDamount = FNCDamount;
         this.employeeAmount = employeeAmount;
+    }
+
+    // lazy
+    public static Tracker getInstance(int FNCDamount, int employeeAmount){
+        if(uniqueTracker == null){
+            uniqueTracker = new Tracker(FNCDamount, employeeAmount);
+        }
+        return uniqueTracker;
     }
 
     /**
@@ -67,8 +76,8 @@ public class Tracker extends Observer{
      * @param date: the current date
      */
     @Override
-    public void onComplete(int date) {
-        System.out.println("Tracker: Day " + (date));
+    public void onComplete(int date, String name) {
+        System.out.println("Tracker: Day " + (date) + " (" + name + ")");
         System.out.println("Total money earned by all Staff: $" + employeeAmount);
         System.out.println("Total money earned by FNCD: $" + FNCDamount);
     }

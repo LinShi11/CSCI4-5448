@@ -27,16 +27,16 @@ public class FNCDBeginningTest {
     /**
      * the inventory is correct
      */
-    @Test
-    public void inventory(){
-        fncd.setInventory();
-        Assertions.assertEquals(fncd.performanceCarList.size(), 6);
-        Assertions.assertEquals(fncd.carsList.size(), 6);
-        Assertions.assertEquals(fncd.pickupsList.size(), 6);
-        Assertions.assertEquals(fncd.electricCarList.size(), 6);
-        Assertions.assertEquals(fncd.motorcycleList.size(), 6);
-        Assertions.assertEquals(fncd.monsterTruckList.size(), 6);
-    }
+//    @Test
+//    public void inventory(){
+//        fncd.setInventory();
+//        Assertions.assertEquals(fncd.performanceCarList.size(), 6);
+//        Assertions.assertEquals(fncd.carsList.size(), 6);
+//        Assertions.assertEquals(fncd.pickupsList.size(), 6);
+//        Assertions.assertEquals(fncd.electricCarList.size(), 6);
+//        Assertions.assertEquals(fncd.motorcycleList.size(), 6);
+//        Assertions.assertEquals(fncd.monsterTruckList.size(), 6);
+//    }
 
     /**
      * the initial pay is 0 for everyone

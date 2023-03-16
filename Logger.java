@@ -7,9 +7,13 @@ import java.util.concurrent.Flow;
  */
 public class Logger extends Observer{
     private Flow.Subscription subscription;
-
+    private static Logger uniqueLogger = new Logger();
     public Logger(){
 
+    }
+    // eager
+    public static Logger getInstance(){
+        return uniqueLogger;
     }
 
     /**
@@ -28,7 +32,7 @@ public class Logger extends Observer{
      * @param date: the date, to keep the structure
      */
     @Override
-    public void onNext(String item, int date) {
+    public void onNext(String item, int date, String name) {
         // to ensure the text is not empty
         if(!item.equals("")){
             try
@@ -36,7 +40,7 @@ public class Logger extends Observer{
                 // stored it in a file so things are not as messy
                 String filename= "Logger/Logger-" + (date) + ".txt";
                 FileWriter fw = new FileWriter(filename,true);
-                fw.write(item+"\n");
+                fw.write(name + ": " + item+"\n");
                 fw.close();
             }
             catch(IOException ioe)

@@ -17,7 +17,7 @@ public class PerformanceCar implements Vehicle{
     private String cleanliness;
     private String brand;
     private String status;
-    private String type;
+    private Enum.VehicleType type;
     private double percent;
     //min and max price
     private int min = 20000;
@@ -48,7 +48,7 @@ public class PerformanceCar implements Vehicle{
 
         // set the other variables
         status = "in stock";
-        type = "performance car";
+        type = Enum.VehicleType.PerformanceCar;
         setBrand();
         setName(id);
         repairBonus = (int)(min * .10);
@@ -253,7 +253,7 @@ public class PerformanceCar implements Vehicle{
      */
     
     @Override
-    public String getType(){
+    public Enum.VehicleType getType(){
         return this.type;
     }
 

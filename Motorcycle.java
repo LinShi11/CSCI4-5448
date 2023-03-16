@@ -17,7 +17,7 @@ public class Motorcycle implements Vehicle{
 
     private String brand;
     private String status;
-    private String type;
+    private Enum.VehicleType type;
 
     /**
      * Motorcycles have an unique Engine Size rating in cubic centimeters (cc).
@@ -48,7 +48,7 @@ public class Motorcycle implements Vehicle{
             cleanliness = Vehicle.getPossibleCleanliness().get(2); 
         }
         status = "in stock";
-        type = "motorcycle";
+        type = Enum.VehicleType.Motorcycles;
         setBrand();
         setName(id);
         repairBonus = (int)(min * .10);
@@ -190,7 +190,7 @@ public class Motorcycle implements Vehicle{
     }
     
     @Override
-    public String getType(){
+    public Enum.VehicleType getType(){
         return this.type;
     }
     

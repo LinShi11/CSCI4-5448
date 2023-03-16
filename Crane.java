@@ -19,7 +19,7 @@ public class Crane implements Vehicle{
 
     private String brand;
     private String status;
-    private String type;
+    private Enum.VehicleType type;
     private double percent;
 
     // min and max price
@@ -54,7 +54,7 @@ public class Crane implements Vehicle{
 
         // set other variables
         status = "in stock";
-        type = "car";
+        type = Enum.VehicleType.Tractor;
         setBrand();
         setName(id);
         repairBonus = (int)(min * .10);
@@ -276,7 +276,7 @@ public class Crane implements Vehicle{
      */
     
     @Override
-    public String getType(){
+    public Enum.VehicleType getType(){
         return this.type;
     }
 

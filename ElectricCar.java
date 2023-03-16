@@ -17,7 +17,7 @@ public class ElectricCar implements Vehicle{
 
     private String brand;
     private String status;
-    private String type;
+    private Enum.VehicleType type;
     private double percent;
 
     /**
@@ -49,7 +49,7 @@ public class ElectricCar implements Vehicle{
             cleanliness = Vehicle.getPossibleCleanliness().get(2);
         }
         status = "in stock";
-        type = "electric car";
+        type = Enum.VehicleType.ElectricCars;
         setBrand();
         setName(id);
         repairBonus = (int)(min * .10);
@@ -199,7 +199,7 @@ public class ElectricCar implements Vehicle{
     }
     
     @Override
-    public String getType(){
+    public Enum.VehicleType getType(){
         return this.type;
     }
     

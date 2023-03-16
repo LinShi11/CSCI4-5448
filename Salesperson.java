@@ -294,26 +294,26 @@ public class Salesperson implements Staff{
      * @param motorWin: win for motorcycles
      * @return 1 for no change or 1.1 for 10% increase
      */
-    public static double bonusHelper(String type, int perforamceWin, int pickupWin, int monsterWin, int motorWin){
-        if(type.equals("performance car")){
+    public static double bonusHelper(Enum.VehicleType type, int perforamceWin, int pickupWin, int monsterWin, int motorWin){
+        if(type == Enum.VehicleType.PerformanceCar){
             if(perforamceWin >= 1){
                 return 1;
             }else{
                 return 1.1;
             }
-        } else if (type.equals("pickup")){
+        } else if (type == Enum.VehicleType.Pickups){
             if(pickupWin >= 1){
                 return 1;
             } else{
                 return 1.1;
             }
-        } else if(type.equals("monster truck")){
+        } else if(type == Enum.VehicleType.MonsterTrucks){
             if(monsterWin >= 1){
                 return 1;
             } else{
                 return 1.1;
             }
-        } else if (type.equals("motorcycle")){
+        } else if (type == Enum.VehicleType.Motorcycles){
             if(motorWin >= 1){
                 return 1;
             } else{
