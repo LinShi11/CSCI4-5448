@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.concurrent.CyclicBarrier;
@@ -53,7 +54,17 @@ public class Driver {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-    }
+		ArrayList<Integer> northCount = north.getCount();
+		ArrayList<Integer> northEmployee = north.getEmployeeMoney();
+		ArrayList<Integer> northFNCD = north.getFNCDMoney();
+
+		ArrayList<Integer> southCount = south.getCount();
+		ArrayList<Integer> southEmployee = south.getEmployeeMoney();
+		ArrayList<Integer> southFNCD = south.getFNCDMoney();
+
+		new JFreeChartGraph(northCount, northEmployee, northFNCD, southCount, southEmployee, southFNCD).setVisible(true);
+    	new JFreeChartGraph(northCount, southCount).setVisible(true);
+	}
 }
 
 class FNCDThead extends Thread{

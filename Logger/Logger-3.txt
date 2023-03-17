@@ -210,3 +210,481 @@ South: SouthDriver_008 made $0
 North: NorthDriver_008 made $0
 North: NorthDriver_012 made $0
 South: SouthDriver_012 made $0
+North: NorthMechanics_002 fixed a broken Pickups (JEE_00015) and made it broken (made $0)
+South: SouthMechanics_002 fixed a broken Pickups (GMC_00017) and made it used (made $1000)
+North: NorthMechanics_002 fixed a broken Pickups (JEE_00015) and made it used (made $1000)
+South: SouthMechanics_002 fixed a used Van (JEE_00043) and made it used (made $0)
+North: NorthMechanics_006 fixed a used Motorcycles (KTM_00034) and made it like new (made $1000)
+South: SouthMechanics_006 fixed a used Pickups (GMC_00017) and made it used (made $0)
+North: NorthMechanics_006 fixed a used Crane (KON_00049) and made it like new (made $5000)
+South: SouthMechanics_006 fixed a used Pickups (CHE_00015) and made it used (made $0)
+South: SouthMechanics_010 fixed a used Motorcycles (DUC_00035) and made it used (made $0)
+North: NorthMechanics_010 fixed a broken Tractor (SON_00038) and made it broken (made $0)
+North: NorthMechanics_010 fixed a used Pickups (FOR_00013) and made it like new (made $1000)
+South: SouthMechanics_010 fixed a used Motorcycles (TRI_00032) and made it like new (made $1000)
+North: NorthSalesperson_003 sold a vehicle CAR_00056 for $139964
+South: SouthSalesperson_003 was not able to sell the vehicle LIE_00050
+South: SouthSalesperson_003 was not able to sell the vehicle LIE_00050
+North: NorthSalesperson_003 was not able to sell the vehicle MAN_00055
+South: SouthSalesperson_003 was not able to sell the vehicle LIE_00050
+North: NorthSalesperson_003 was not able to sell the vehicle MAN_00055
+North: FNCD have 3 Pickups in the race. 
+South: FNCD have 3 Pickups in the race. 
+North: North: One of the vehicle got 15 place
+South: South: One of the vehicle got 18 place
+North: North: One of the vehicle got 7 place
+South: South: One of the vehicle got 14 place
+North: North: One of the vehicle got 1 place
+South: South: One of the vehicle got 7 place
+South: SouthDriver_008 made $0
+North: NorthDriver_004 made $0
+South: SouthDriver_012 made $0
+North: NorthDriver_008 made $0
+North: NorthDriver_012 made $1000
+North: NorthMechanics_002 fixed a used Tractor (JOH_00039) and made it used (made $0)
+South: SouthMechanics_002 fixed a used MonsterTrucks (The Destroyer_00027) and made it like new (made $1000)
+North: NorthMechanics_002 fixed a broken Crane (MAN_00051) and made it used (made $5000)
+South: SouthMechanics_002 fixed a used Tractor (JOH_00042) and made it like new (made $2000)
+North: NorthMechanics_006 fixed a used Motorcycles (KAW_00034) and made it like new (made $1000)
+South: SouthMechanics_006 fixed a used Van (IVE_00047) and made it like new (made $1000)
+North: NorthMechanics_006 fixed a used Crane (PAL_00053) and made it like new (made $5000)
+South: SouthMechanics_006 fixed a used Crane (PAL_00056) and made it like new (made $5000)
+North: NorthMechanics_010 fixed a used Van (KIA_00043) and made it used (made $0)
+South: SouthMechanics_010 fixed a broken PerformanceCar (LEX_00003) and made it used (made $2000)
+North: NorthMechanics_010 fixed a broken Cars (TOY_00009) and made it used (made $1000)
+South: SouthMechanics_010 fixed a used Crane (CAR_00054) and made it like new (made $5000)
+North: NorthSalesperson_001 was not able to sell the vehicle PAL_00053
+South: SouthSalesperson_007 was not able to sell the vehicle PAL_00056
+South: SouthSalesperson_007 was not able to sell the vehicle PAL_00056
+North: NorthSalesperson_011 was not able to sell the vehicle PAL_00053
+North: NorthSalesperson_003 was not able to sell the vehicle PAL_00053
+North: NorthSalesperson_003 was not able to sell the vehicle PAL_00053
+South: SouthFNCD have 3 PerformanceCar in the race. 
+North: NorthFNCD have 3 Pickups in the race. 
+North: North: One of the vehicle got 7 place
+South: South: One of the vehicle got 19 place
+North: North: One of the vehicle got 14 place
+South: South: One of the vehicle got 5 place
+North: North: One of the vehicle got 17 place
+South: South: One of the vehicle got 13 place
+North: NorthDriver_004 made $0
+South: SouthDriver_008 made $0
+North: NorthDriver_008 made $0
+South: SouthDriver_012 made $0
+North: NorthDriver_012 made $0
+North: NorthMechanics_002 fixed a broken Cars (SUB_00008) and made it used (made $1000)
+South: SouthMechanics_002 fixed a broken Van (IVE_00043) and made it used (made $1000)
+North: NorthMechanics_002 fixed a broken Van (KIA_00044) and made it used (made $1000)
+South: SouthMechanics_002 fixed a used ElectricCars (LUC_00021) and made it like new (made $1000)
+North: NorthMechanics_006 fixed a broken Cars (HYU_00010) and made it used (made $1000)
+South: SouthMechanics_006 fixed a broken ElectricCars (ZOO_00024) and made it used (made $1000)
+North: NorthMechanics_006 fixed a used Van (KIA_00047) and made it like new (made $1000)
+South: SouthMechanics_006 fixed a broken Tractor (CAS_00039) and made it used (made $2000)
+North: NorthMechanics_010 fixed a broken MonsterTrucks (Monster Mutt Dalmatian_00028) and made it broken (made $0)
+South: SouthMechanics_010 fixed a used Tractor (SON_00038) and made it like new (made $2000)
+North: NorthMechanics_010 fixed a broken PerformanceCar (MER_00004) and made it used (made $2000)
+South: SouthMechanics_010 fixed a broken ElectricCars (NIO_00023) and made it used (made $1000)
+South: SouthSalesperson_003 was not able to sell the vehicle CAR_00058
+North: NorthSalesperson_011 sold a vehicle LIE_00053 for $153321
+South: SouthSalesperson_001 was not able to sell the vehicle CAR_00058
+North: NorthSalesperson_007 sold a vehicle PAL_00050 for $154356
+North: NorthFNCD have 3 MonsterTrucks in the race. 
+South: SouthFNCD have 3 Motorcycles in the race. 
+South: South: One of the vehicle got 6 place
+North: North: One of the vehicle got 9 place
+North: North: One of the vehicle got 7 place
+South: South: One of the vehicle got 3 place
+North: North: One of the vehicle got 11 place
+South: South: One of the vehicle got 13 place
+North: NorthDriver_004 made $0
+South: SouthDriver_004 made $0
+South: SouthDriver_008 made $1000
+North: NorthDriver_008 made $0
+North: NorthDriver_012 made $0
+South: SouthDriver_012 made $0
+North: NorthMechanics_002 fixed a broken ElectricCars (RIV_00023) and made it used (made $1000)
+South: SouthMechanics_002 fixed a broken Van (HYU_00045) and made it used (made $1000)
+North: NorthMechanics_002 fixed a broken Tractor (MAH_00040) and made it used (made $2000)
+South: SouthMechanics_002 fixed a used MonsterTrucks (Bounty Hunter_00030) and made it like new (made $1000)
+South: SouthMechanics_006 fixed a broken Tractor (MAS_00039) and made it broken (made $0)
+North: NorthMechanics_006 fixed a used Tractor (MAS_00037) and made it like new (made $2000)
+North: NorthMechanics_006 fixed a broken Tractor (CAS_00042) and made it used (made $2000)
+South: SouthMechanics_006 fixed a used Crane (CAR_00053) and made it like new (made $5000)
+North: NorthMechanics_010 fixed a broken PerformanceCar (POR_00006) and made it used (made $2000)
+South: SouthMechanics_010 fixed a used Crane (KON_00051) and made it like new (made $5000)
+North: NorthMechanics_010 fixed a used PerformanceCar (POR_00006) and made it like new (made $2000)
+South: SouthMechanics_010 fixed a used ElectricCars (APT_00023) and made it like new (made $1000)
+North: NorthSalesperson_011 was not able to sell the vehicle LIE_00054
+South: SouthSalesperson_007 was not able to sell the vehicle CAR_00055
+North: NorthSalesperson_003 was not able to sell the vehicle LIE_00054
+South: SouthFNCD have 3 Motorcycles in the race. 
+North: NorthFNCD have 3 MonsterTrucks in the race. 
+South: South: One of the vehicle got 17 place
+North: North: One of the vehicle got 12 place
+South: South: One of the vehicle got 1 place
+North: North: One of the vehicle got 11 place
+South: South: One of the vehicle got 20 place
+North: North: One of the vehicle got 8 place
+South: SouthDriver_004 made $0
+North: NorthDriver_004 made $0
+South: SouthDriver_008 made $1000
+North: NorthDriver_008 made $0
+North: NorthDriver_012 made $0
+North: NorthMechanics_002 fixed a used Van (IVE_00045) and made it like new (made $1000)
+South: SouthMechanics_002 fixed a used PerformanceCar (ACU_00006) and made it like new (made $2000)
+North: NorthMechanics_002 fixed a like new Van (IVE_00045) and made it used (made $1000)
+South: SouthMechanics_002 fixed a used Van (ISU_00044) and made it like new (made $1000)
+North: NorthMechanics_006 fixed a broken MonsterTrucks (Stone Crusher_00028) and made it used (made $1000)
+South: SouthMechanics_006 fixed a used Van (JEE_00045) and made it like new (made $1000)
+North: NorthMechanics_006 fixed a used Crane (MAN_00050) and made it like new (made $5000)
+South: SouthMechanics_006 fixed a broken MonsterTrucks (Cyborg_00026) and made it used (made $1000)
+North: NorthMechanics_010 fixed a broken Cars (TOY_00008) and made it used (made $1000)
+South: SouthMechanics_010 fixed a used MonsterTrucks (Cyborg_00026) and made it like new (made $1000)
+North: NorthMechanics_010 fixed a broken Cars (KIA_00007) and made it used (made $1000)
+South: SouthMechanics_010 fixed a used PerformanceCar (POR_00003) and made it like new (made $2000)
+South: SouthSalesperson_011 was not able to sell the vehicle MAN_00053
+South: SouthSalesperson_011 was not able to sell the vehicle MAN_00053
+South: SouthSalesperson_003 sold a vehicle MAN_00053 for $189600
+South: SouthFNCD have 3 Pickups in the race. 
+North: NorthFNCD have 3 MonsterTrucks in the race. 
+South: South: One of the vehicle got 8 place
+North: North: One of the vehicle got 6 place
+South: South: One of the vehicle got 15 place
+North: North: One of the vehicle got 10 place
+South: South: One of the vehicle got 3 place
+North: North: One of the vehicle got 3 place
+South: SouthDriver_004 made $0
+North: NorthDriver_004 made $0
+South: SouthDriver_008 made $0
+North: NorthDriver_008 made $0
+South: SouthDriver_012 made $1000
+North: NorthDriver_012 made $1000
+North: NorthMechanics_002 fixed a used Pickups (GMC_00018) and made it used (made $0)
+South: SouthMechanics_002 fixed a used Crane (LIE_00052) and made it like new (made $5000)
+North: NorthMechanics_002 fixed a used Tractor (MAS_00041) and made it like new (made $2000)
+South: SouthMechanics_002 fixed a broken MonsterTrucks (Stone Crusher_00026) and made it broken (made $0)
+North: NorthMechanics_006 fixed a used Crane (LIE_00049) and made it like new (made $5000)
+South: SouthMechanics_006 fixed a used Van (KIA_00044) and made it like new (made $1000)
+North: NorthMechanics_006 fixed a broken Crane (LIE_00055) and made it used (made $5000)
+South: SouthMechanics_006 fixed a broken ElectricCars (TES_00021) and made it used (made $1000)
+North: NorthMechanics_010 fixed a used Motorcycles (DUC_00034) and made it like new (made $1000)
+North: NorthMechanics_010 fixed a broken Crane (LIE_00051) and made it broken (made $0)
+South: SouthMechanics_010 fixed a used MonsterTrucks (Bulldozer_00030) and made it like new (made $1000)
+South: SouthMechanics_010 fixed a broken Cars (SUB_00007) and made it used (made $1000)
+South: SouthSalesperson_007 was not able to sell the vehicle KON_00053
+North: NorthSalesperson_007 sold a vehicle KON_00056 for $132804
+South: SouthSalesperson_007 was not able to sell the vehicle KON_00053
+North: NorthSalesperson_011 was not able to sell the vehicle LIE_00049
+North: NorthSalesperson_011 was not able to sell the vehicle LIE_00049
+South: SouthFNCD have 3 MonsterTrucks in the race. 
+North: NorthFNCD have 3 Motorcycles in the race. 
+South: South: One of the vehicle got 2 place
+North: North: One of the vehicle got 1 place
+North: North: One of the vehicle got 5 place
+South: South: One of the vehicle got 6 place
+North: North: One of the vehicle got 17 place
+South: South: One of the vehicle got 19 place
+South: SouthDriver_004 made $1000
+North: NorthDriver_004 made $1000
+South: SouthDriver_008 made $0
+North: NorthDriver_008 made $0
+North: NorthDriver_012 made $0
+North: NorthMechanics_002 fixed a used Cars (MAZ_00008) and made it like new (made $1000)
+South: SouthMechanics_002 fixed a used Cars (VOL_00008) and made it like new (made $1000)
+South: SouthMechanics_002 fixed a broken Crane (CAR_00049) and made it used (made $5000)
+North: NorthMechanics_002 fixed a used Van (ISU_00048) and made it like new (made $1000)
+North: NorthMechanics_006 fixed a used Pickups (FOR_00017) and made it used (made $0)
+South: SouthMechanics_006 fixed a used ElectricCars (NIO_00022) and made it like new (made $1000)
+North: NorthMechanics_006 fixed a used ElectricCars (TES_00023) and made it like new (made $1000)
+South: SouthMechanics_006 fixed a broken MonsterTrucks (Lucas Oil Crusader_00030) and made it used (made $1000)
+North: NorthMechanics_010 fixed a used Crane (CAR_00054) and made it like new (made $5000)
+South: SouthMechanics_010 fixed a used ElectricCars (RIV_00019) and made it like new (made $1000)
+North: NorthMechanics_010 fixed a used Crane (CAR_00049) and made it used (made $0)
+South: SouthMechanics_010 fixed a broken MonsterTrucks (Grinder_00027) and made it broken (made $0)
+South: SouthSalesperson_007 was not able to sell the vehicle CAR_00052
+North: NorthSalesperson_003 was not able to sell the vehicle CAR_00054
+North: NorthSalesperson_011 was not able to sell the vehicle CAR_00054
+North: NorthSalesperson_003 was not able to sell the vehicle CAR_00054
+North: NorthSalesperson_003 sold a vehicle CAR_00054 for $145687
+North: NorthFNCD have 3 PerformanceCar in the race. 
+South: SouthFNCD have 3 Pickups in the race. 
+North: North: One of the vehicle got 14 place
+South: South: One of the vehicle got 12 place
+South: South: One of the vehicle got 6 place
+North: North: One of the vehicle got 15 place
+South: South: One of the vehicle got 4 place
+North: North: One of the vehicle got 3 place
+South: SouthDriver_004 made $0
+North: NorthDriver_004 made $0
+South: SouthDriver_008 made $0
+North: NorthDriver_008 made $0
+South: SouthDriver_012 made $0
+North: NorthDriver_012 made $1000
+South: SouthMechanics_002 fixed a broken MonsterTrucks (Bear Foot (F-150)_00027) and made it used (made $1000)
+North: NorthMechanics_002 fixed a broken Cars (MAZ_00007) and made it used (made $1000)
+North: NorthMechanics_002 fixed a broken MonsterTrucks (Avenger_00027) and made it used (made $1000)
+South: SouthMechanics_002 fixed a broken ElectricCars (NIO_00023) and made it broken (made $0)
+North: NorthMechanics_006 fixed a used Van (JOW_00045) and made it used (made $0)
+South: SouthMechanics_006 fixed a used Cars (NIS_00008) and made it used (made $0)
+North: NorthMechanics_006 fixed a used Cars (TOY_00012) and made it like new (made $1000)
+South: SouthMechanics_006 fixed a used MonsterTrucks (Bear Foot (F-150)_00027) and made it like new (made $1000)
+South: SouthMechanics_010 fixed a broken Motorcycles (DUC_00032) and made it used (made $1000)
+North: NorthMechanics_010 fixed a broken PerformanceCar (AST_00003) and made it used (made $2000)
+South: SouthMechanics_010 fixed a broken Crane (MAN_00049) and made it used (made $5000)
+North: NorthMechanics_010 fixed a used Van (JOW_00046) and made it like new (made $1000)
+North: NorthSalesperson_007 was not able to sell the vehicle KON_00052
+South: SouthSalesperson_007 was not able to sell the vehicle CAR_00053
+North: NorthSalesperson_011 was not able to sell the vehicle KON_00052
+South: SouthSalesperson_011 was not able to sell the vehicle CAR_00053
+North: NorthSalesperson_007 was not able to sell the vehicle KON_00052
+South: SouthSalesperson_003 was not able to sell the vehicle CAR_00053
+North: NorthSalesperson_011 was not able to sell the vehicle KON_00052
+North: NorthFNCD have 3 PerformanceCar in the race. 
+South: SouthFNCD have 3 Pickups in the race. 
+South: South: One of the vehicle got 1 place
+North: North: One of the vehicle got 6 place
+North: North: One of the vehicle got 12 place
+South: South: One of the vehicle got 14 place
+North: North: One of the vehicle got 5 place
+South: South: One of the vehicle got 10 place
+South: SouthDriver_004 made $1000
+North: NorthDriver_004 made $0
+South: SouthDriver_008 made $0
+North: NorthDriver_008 made $0
+North: NorthDriver_012 made $0
+South: SouthDriver_012 made $0
+South: SouthMechanics_002 fixed a broken Tractor (JOH_00041) and made it used (made $2000)
+North: NorthMechanics_002 fixed a broken Pickups (RAM_00014) and made it used (made $1000)
+South: SouthMechanics_002 fixed a used ElectricCars (TES_00024) and made it like new (made $1000)
+North: NorthMechanics_002 fixed a used Pickups (RAM_00015) and made it like new (made $1000)
+North: NorthMechanics_006 fixed a broken Motorcycles (HON_00031) and made it broken (made $0)
+South: SouthMechanics_006 fixed a broken MonsterTrucks (Cyborg_00025) and made it used (made $1000)
+North: NorthMechanics_006 fixed a broken Cars (HYU_00009) and made it used (made $1000)
+South: SouthMechanics_006 fixed a broken Pickups (FOR_00014) and made it used (made $1000)
+North: NorthMechanics_010 fixed a used MonsterTrucks (Captain's Curse_00030) and made it used (made $0)
+South: SouthMechanics_010 fixed a used Tractor (CAS_00042) and made it like new (made $2000)
+North: NorthMechanics_010 fixed a broken Cars (HON_00007) and made it used (made $1000)
+South: SouthMechanics_010 fixed a used Motorcycles (LUC_00031) and made it like new (made $1000)
+North: NorthSalesperson_001 sold a vehicle PAL_00055 for $153500
+South: SouthSalesperson_007 was not able to sell the vehicle KON_00051
+South: SouthSalesperson_003 was not able to sell the vehicle KON_00051
+North: NorthFNCD have 2 Pickups in the race. 
+South: SouthFNCD have 3 MonsterTrucks in the race. 
+South: South: One of the vehicle got 8 place
+North: North: One of the vehicle got 17 place
+South: South: One of the vehicle got 14 place
+North: North: One of the vehicle got 15 place
+South: South: One of the vehicle got 17 place
+South: SouthDriver_004 made $0
+North: NorthDriver_004 made $0
+South: SouthDriver_008 made $0
+North: NorthDriver_008 made $0
+South: SouthDriver_012 made $0
+North: NorthDriver_012 made $0
+North: NorthMechanics_002 fixed a used Van (JEE_00047) and made it like new (made $1000)
+South: SouthMechanics_002 fixed a used MonsterTrucks (Bear Foot (2xtreme)_00027) and made it used (made $0)
+North: NorthMechanics_002 fixed a used Pickups (GMC_00013) and made it like new (made $1000)
+South: SouthMechanics_002 fixed a broken Pickups (RAM_00018) and made it used (made $1000)
+North: NorthMechanics_006 fixed a used Tractor (MAS_00041) and made it used (made $0)
+South: SouthMechanics_006 fixed a used MonsterTrucks (Bear Foot (2xtreme)_00027) and made it used (made $0)
+North: NorthMechanics_006 fixed a used PerformanceCar (MAS_00002) and made it like new (made $2000)
+South: SouthMechanics_006 fixed a used PerformanceCar (ACU_00005) and made it like new (made $2000)
+North: NorthMechanics_010 fixed a used Tractor (MAS_00041) and made it like new (made $2000)
+South: SouthMechanics_010 fixed a broken Pickups (FOR_00017) and made it used (made $1000)
+North: NorthMechanics_010 fixed a used MonsterTrucks (Jurassic Attack_00025) and made it like new (made $1000)
+South: SouthMechanics_010 fixed a used Van (IVE_00047) and made it like new (made $1000)
+South: SouthSalesperson_011 was not able to sell the vehicle CAR_00054
+North: NorthSalesperson_007 sold a vehicle CAR_00049 for $149775
+South: SouthSalesperson_003 was not able to sell the vehicle CAR_00054
+South: SouthFNCD have 3 PerformanceCar in the race. 
+North: NorthFNCD have 3 MonsterTrucks in the race. 
+South: South: One of the vehicle got 12 place
+North: North: One of the vehicle got 16 place
+South: South: One of the vehicle got 2 place
+North: North: One of the vehicle got 18 place
+South: South: One of the vehicle got 11 place
+North: North: One of the vehicle got 2 place
+South: SouthDriver_004 made $0
+North: NorthDriver_004 made $0
+South: SouthDriver_008 made $1000
+South: SouthDriver_012 made $0
+North: NorthDriver_012 made $1000
+South: SouthMechanics_002 fixed a broken PerformanceCar (LEX_00001) and made it broken (made $0)
+North: NorthMechanics_002 fixed a used Crane (LIE_00049) and made it like new (made $5000)
+South: SouthMechanics_002 fixed a used MonsterTrucks (Bear Foot (Silverado)_00027) and made it like new (made $1000)
+North: NorthMechanics_002 fixed a broken Van (HYU_00043) and made it broken (made $0)
+South: SouthMechanics_006 fixed a used Motorcycles (BMW_00032) and made it like new (made $1000)
+North: NorthMechanics_006 fixed a broken Van (HYU_00043) and made it used (made $1000)
+South: SouthMechanics_006 fixed a broken PerformanceCar (AST_00003) and made it used (made $2000)
+North: NorthMechanics_006 fixed a used Pickups (CHE_00015) and made it used (made $0)
+South: SouthMechanics_010 fixed a broken Pickups (FOR_00017) and made it used (made $1000)
+North: NorthMechanics_010 fixed a broken MonsterTrucks (Batman_00027) and made it used (made $1000)
+South: SouthMechanics_010 fixed a broken PerformanceCar (ACU_00002) and made it broken (made $0)
+North: NorthMechanics_010 fixed a used Crane (MAN_00052) and made it used (made $0)
+North: NorthSalesperson_007 was not able to sell the vehicle LIE_00049
+North: NorthSalesperson_007 was not able to sell the vehicle LIE_00049
+South: SouthSalesperson_003 sold a vehicle MAN_00053 for $148932
+South: SouthSalesperson_003 sold a vehicle PAL_00054 for $137663
+South: SouthSalesperson_003 sold a vehicle LIE_00049 for $158905
+South: SouthSalesperson_003 was not able to sell the vehicle KON_00050
+South: SouthFNCD have 3 Pickups in the race. 
+North: NorthFNCD have 3 PerformanceCar in the race. 
+North: North: One of the vehicle got 18 place
+South: South: One of the vehicle got 4 place
+North: North: One of the vehicle got 8 place
+South: South: One of the vehicle got 14 place
+North: North: One of the vehicle got 14 place
+South: South: One of the vehicle got 12 place
+North: NorthDriver_008 made $0
+South: SouthDriver_004 made $0
+South: SouthDriver_008 made $0
+North: NorthDriver_012 made $0
+South: SouthDriver_012 made $0
+South: SouthMechanics_002 fixed a used Motorcycles (LUC_00033) and made it like new (made $1000)
+South: SouthMechanics_002 fixed a broken PerformanceCar (JAG_00005) and made it used (made $2000)
+North: NorthMechanics_002 fixed a used PerformanceCar (ALF_00001) and made it used (made $0)
+South: SouthMechanics_006 fixed a broken ElectricCars (RIV_00022) and made it used (made $1000)
+North: NorthMechanics_002 fixed a used Cars (HON_00010) and made it used (made $0)
+South: SouthMechanics_006 fixed a used Cars (TOY_00011) and made it like new (made $1000)
+South: SouthMechanics_010 fixed a used Pickups (RAM_00017) and made it like new (made $1000)
+South: SouthMechanics_010 fixed a used PerformanceCar (JAG_00005) and made it like new (made $2000)
+North: NorthMechanics_006 fixed a broken MonsterTrucks (Snake Bite_00028) and made it used (made $1000)
+North: NorthMechanics_006 fixed a broken MonsterTrucks (Raminator_00027) and made it used (made $1000)
+North: NorthMechanics_010 fixed a used Crane (KON_00054) and made it like new (made $5000)
+North: NorthMechanics_010 fixed a broken Cars (VOL_00008) and made it used (made $1000)
+North: NorthSalesperson_003 sold a vehicle CAR_00052 for $159348
+North: NorthSalesperson_011 was not able to sell the vehicle PAL_00050
+South: SouthFNCD have 3 MonsterTrucks in the race. 
+South: South: One of the vehicle got 7 place
+South: South: One of the vehicle got 20 place
+North: NorthFNCD have 3 MonsterTrucks in the race. 
+South: South: One of the vehicle got 2 place
+South: SouthDriver_004 made $0
+North: North: One of the vehicle got 6 place
+South: SouthDriver_012 made $1000
+North: North: One of the vehicle got 11 place
+North: North: One of the vehicle got 10 place
+North: NorthDriver_004 made $0
+North: NorthDriver_008 made $0
+North: NorthDriver_012 made $0
+North: NorthMechanics_002 fixed a used Crane (KON_00050) and made it like new (made $5000)
+South: SouthMechanics_002 fixed a used Cars (HON_00011) and made it like new (made $1000)
+North: NorthMechanics_002 fixed a broken Pickups (GMC_00015) and made it used (made $1000)
+South: SouthMechanics_002 fixed a used Cars (TOY_00008) and made it like new (made $1000)
+North: NorthMechanics_006 fixed a used ElectricCars (APT_00019) and made it used (made $0)
+South: SouthMechanics_006 fixed a used PerformanceCar (AST_00002) and made it like new (made $2000)
+North: NorthMechanics_006 fixed a broken Tractor (MAS_00038) and made it broken (made $0)
+South: SouthMechanics_006 fixed a broken Tractor (SON_00041) and made it used (made $2000)
+North: NorthMechanics_010 fixed a broken Tractor (SON_00041) and made it used (made $2000)
+South: SouthMechanics_010 fixed a broken ElectricCars (APT_00020) and made it used (made $1000)
+North: NorthMechanics_010 fixed a broken Cars (NIS_00012) and made it used (made $1000)
+South: SouthMechanics_010 fixed a used Tractor (JOH_00038) and made it like new (made $2000)
+South: SouthSalesperson_007 was not able to sell the vehicle MAN_00053
+North: NorthSalesperson_003 sold a vehicle KON_00050 for $184612
+North: NorthFNCD have 3 PerformanceCar in the race. 
+South: SouthFNCD have 3 Pickups in the race. 
+North: North: One of the vehicle got 12 place
+South: South: One of the vehicle got 5 place
+North: North: One of the vehicle got 17 place
+South: South: One of the vehicle got 6 place
+North: North: One of the vehicle got 14 place
+South: South: One of the vehicle got 15 place
+North: NorthDriver_004 made $0
+South: SouthDriver_004 made $0
+North: NorthDriver_008 made $0
+South: SouthDriver_008 made $0
+South: SouthDriver_012 made $0
+North: NorthDriver_012 made $0
+North: NorthMechanics_002 fixed a broken MonsterTrucks (Bigfoot_00026) and made it broken (made $0)
+South: SouthMechanics_002 fixed a used Motorcycles (LUC_00032) and made it like new (made $1000)
+North: NorthMechanics_002 fixed a broken ElectricCars (RIV_00020) and made it broken (made $0)
+South: SouthMechanics_002 fixed a broken MonsterTrucks (Bounty Hunter_00026) and made it used (made $1000)
+North: NorthMechanics_006 fixed a used Crane (MAN_00054) and made it like new (made $5000)
+South: SouthMechanics_006 fixed a broken Tractor (MAS_00042) and made it used (made $2000)
+North: NorthMechanics_006 fixed a used Van (KIA_00043) and made it like new (made $1000)
+South: SouthMechanics_006 fixed a broken Cars (KIA_00012) and made it used (made $1000)
+North: NorthMechanics_010 fixed a used Motorcycles (YAM_00033) and made it like new (made $1000)
+South: SouthMechanics_010 fixed a used Cars (HON_00010) and made it like new (made $1000)
+North: NorthMechanics_010 fixed a broken Pickups (GMC_00016) and made it used (made $1000)
+South: SouthMechanics_010 fixed a used MonsterTrucks (Bigfoot_00029) and made it like new (made $1000)
+South: SouthSalesperson_011 was not able to sell the vehicle KON_00051
+North: You ran out of money, so you borrowed $250,000 from the bank
+North: NorthFNCD have 3 Motorcycles in the race. 
+South: SouthFNCD have 3 Motorcycles in the race. 
+North: North: One of the vehicle got 2 place
+South: South: One of the vehicle got 5 place
+South: South: One of the vehicle got 10 place
+North: North: One of the vehicle got 3 place
+South: South: One of the vehicle got 16 place
+North: North: One of the vehicle got 8 place
+North: NorthDriver_004 made $1000
+South: SouthDriver_004 made $0
+North: NorthDriver_008 made $1000
+South: SouthDriver_008 made $0
+South: SouthDriver_012 made $0
+North: NorthDriver_012 made $0
+South: SouthMechanics_002 fixed a broken MonsterTrucks (King Krunch_00030) and made it used (made $1000)
+North: NorthMechanics_002 fixed a used Crane (MAN_00058) and made it like new (made $5000)
+South: SouthMechanics_002 fixed a broken PerformanceCar (ACU_00003) and made it used (made $2000)
+North: NorthMechanics_002 fixed a broken Pickups (JEE_00013) and made it broken (made $0)
+South: SouthMechanics_006 fixed a broken Crane (KON_00052) and made it used (made $5000)
+North: NorthMechanics_006 fixed a broken MonsterTrucks (Monster Mutt Dalmatian_00030) and made it used (made $1000)
+South: SouthMechanics_006 fixed a used MonsterTrucks (King Krunch_00030) and made it used (made $0)
+North: NorthMechanics_006 fixed a broken Cars (TOY_00012) and made it broken (made $0)
+South: SouthMechanics_001 fixed a broken MonsterTrucks (Black Stallion_00026) and made it used (made $1000)
+North: NorthMechanics_010 fixed a broken Pickups (JEE_00013) and made it used (made $1000)
+South: SouthMechanics_001 fixed a used PerformanceCar (LAM_00002) and made it like new (made $2000)
+North: NorthMechanics_010 fixed a used Crane (KON_00057) and made it like new (made $5000)
+North: NorthSalesperson_011 was not able to sell the vehicle KON_00057
+North: NorthSalesperson_007 was not able to sell the vehicle KON_00057
+South: SouthSalesperson_007 sold a vehicle KON_00055 for $199630
+North: NorthSalesperson_007 sold a vehicle KON_00057 for $158893
+South: SouthSalesperson_003 sold a vehicle KON_00049 for $127001
+North: NorthSalesperson_011 was not able to sell the vehicle MAN_00058
+South: SouthSalesperson_007 was not able to sell the vehicle CAR_00053
+North: NorthSalesperson_007 was not able to sell the vehicle MAN_00058
+South: SouthSalesperson_007 sold a vehicle CAR_00053 for $112452
+South: SouthSalesperson_011 was not able to sell the vehicle MAN_00050
+North: NorthFNCD have 3 Motorcycles in the race. 
+South: SouthFNCD have 3 Pickups in the race. 
+South: South: One of the vehicle got 1 place
+North: North: One of the vehicle got 9 place
+South: South: One of the vehicle got 20 place
+North: North: One of the vehicle got 10 place
+South: South: One of the vehicle got 18 place
+North: North: One of the vehicle got 6 place
+North: NorthDriver_004 made $0
+South: SouthDriver_004 made $1000
+North: NorthDriver_008 made $0
+North: NorthDriver_012 made $0
+South: SouthMechanics_002 fixed a used Motorcycles (BMW_00031) and made it used (made $0)
+North: NorthMechanics_002 fixed a broken Cars (MAZ_00009) and made it broken (made $0)
+South: SouthMechanics_002 fixed a used Crane (LIE_00050) and made it used (made $0)
+North: NorthMechanics_002 fixed a used PerformanceCar (JAG_00002) and made it like new (made $2000)
+South: SouthMechanics_006 fixed a used Motorcycles (BMW_00034) and made it like new (made $1000)
+North: NorthMechanics_006 fixed a used Crane (PAL_00054) and made it like new (made $5000)
+South: SouthMechanics_006 fixed a used Pickups (GMC_00018) and made it like new (made $1000)
+North: NorthMechanics_006 fixed a broken MonsterTrucks (Bear Foot (1979)_00025) and made it broken (made $0)
+South: SouthMechanics_010 fixed a used Tractor (JOH_00040) and made it used (made $0)
+North: NorthMechanics_005 fixed a used Tractor (SON_00037) and made it like new (made $2000)
+South: SouthMechanics_010 fixed a used Van (JOW_00048) and made it like new (made $1000)
+North: NorthMechanics_005 fixed a used Motorcycles (KTM_00032) and made it like new (made $1000)
+South: SouthSalesperson_011 was not able to sell the vehicle KON_00054
+North: NorthSalesperson_007 was not able to sell the vehicle LIE_00049
+North: NorthSalesperson_003 was not able to sell the vehicle LIE_00049
+South: SouthSalesperson_011 was not able to sell the vehicle KON_00054
+North: NorthSalesperson_003 was not able to sell the vehicle LIE_00049
+South: SouthSalesperson_007 was not able to sell the vehicle KON_00054
+North: NorthSalesperson_011 was not able to sell the vehicle LIE_00049
+South: SouthSalesperson_003 was not able to sell the vehicle KON_00054
+South: SouthFNCD have 3 Motorcycles in the race. 
+North: NorthFNCD have 3 PerformanceCar in the race. 
+South: South: One of the vehicle got 2 place
+North: North: One of the vehicle got 20 place
+South: South: One of the vehicle got 20 place
+North: North: One of the vehicle got 18 place
+South: South: One of the vehicle got 8 place
+North: North: One of the vehicle got 9 place
+South: SouthDriver_004 made $1000
+North: NorthDriver_012 made $0
+South: SouthDriver_012 made $0

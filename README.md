@@ -37,3 +37,4 @@ This is the directory for project 4
 * We include a numeric ending to all the vehicles in the order that it was purchased. Therefore, we thought it was okay to use that for the numeric ending for monster truck. 
 * Based on the requirement, it seems that the use of Flow API was not required, so I used the Flow API, but we do not think that it was utilized correctly. 
 * The tracker is used to keep track of both FNCD income at the end of the day. 
+* We used the multi-threading to run the simulation in parallel. Therefore, instead of North complete all washing then South starting. Both of the FNCD are completing and announcing the task. Therefore, we added the name of the FNCD to try and distinguish that. 

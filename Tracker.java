@@ -83,7 +83,7 @@ public class Tracker extends Observer{
         if(count % 2 == 0) {
             System.out.println("Tracker: Day " + (date) + " (from both locations)");
             System.out.println("Total money earned by all Staff: $" + employeeAmount);
-            System.out.println("Total money earned by FNCD: $" + FNCDamount);
+            System.out.println("Total money earned by both FNCD: $" + FNCDamount);
         }
     }
 

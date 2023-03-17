@@ -71,6 +71,12 @@ public class FNCD{
     private Salesperson secondSalesperson = null;
     private VehicleFactory vehicleFactory;
     private StaffFactory staffFactory;
+
+    private ArrayList<Integer> count;
+    private ArrayList<Integer> employeeMoney;
+    private ArrayList<Integer> FNCDMoney;
+
+    private int dailyEmployeePay;
     
     /**
      * Constructor for FNCD class
@@ -126,6 +132,10 @@ public class FNCD{
 
         vehicleFactory = new VehicleFactory();
         staffFactory = new StaffFactory();
+
+        FNCDMoney = new ArrayList<>(Arrays.asList(0));
+        employeeMoney = new ArrayList<>(Arrays.asList(0));
+        count = new ArrayList<>(Arrays.asList(0));
 
         // directly hire 3 interns, 3 mechanics, and 3 salesperson + 3 drivers (staffs)
         for(int i = 0; i < maxSize; i++){
@@ -277,17 +287,17 @@ public class FNCD{
 
         // if we have no race-able cars
         if(count == 0){
-            System.out.println("FNCD will not be participating in the race. ");
-            notifyLogger("FNCD will not be participating in the race. ");
+            System.out.println(name + "FNCD will not be participating in the race. ");
+            notifyLogger(name + "FNCD will not be participating in the race. ");
             return 0;
         }
         // if all the cars are race-able, we will only pick the first three
         else if (count > 3 ) {
             count = 3;
         }
-        System.out.println("FNCD is racing with " + racing.get(0).getType());
-        System.out.println("FNCD have " + count + " vehicles in the race. ");
-        notifyLogger("FNCD have " + count + " " + racing.get(0).getType()+ " in the race. ");
+        System.out.println(name + " FNCD is racing with " + racing.get(0).getType());
+        System.out.println(name + " FNCD have " + count + " vehicles in the race. ");
+        notifyLogger(name + "FNCD have " + count + " " + racing.get(0).getType()+ " in the race. ");
         ArrayList<Integer> placement = new ArrayList<>();
         int temp;
         // determine the placement, will continue to run if we are getting the same numbers
@@ -348,12 +358,18 @@ public class FNCD{
      * this function updated the bonuses for the drivers who won
      */
     public void updateRaceBonus(){
+        this.dailyEmployeePay= 0 ;
+        this.dailySales = 0;
         ArrayList<StaffDriver> staffDriverList = Helper.getAllDriver(currentEmployee);
         for(StaffDriver driver: staffDriverList){
             driver.setTotalBonus();
             notifyLogger(driver.getName() + " made $" + driver.getDailyBonus());
+            dailyEmployeePay += driver.getDailyBonus();
             driver.setDailyBonus(0);
         }
+        employeeMoney.add(employeeMoney.get(employeeMoney.size()-1) + dailyEmployeePay);
+        FNCDMoney.add((FNCDMoney.get(FNCDMoney.size()-1) + dailySales));
+        count.add(count.get(count.size()-1));
     }
 
     /**
@@ -363,6 +379,7 @@ public class FNCD{
     public void startDay(){
         System.out.println(name + " opening... (Current budget $" + this.budget + ")");
         this.dailySales = 0;
+        this.dailyEmployeePay = 0;
         hire();
         endOfEvents();
         setInventory();
@@ -632,6 +649,7 @@ public class FNCD{
      * @param buyer: the number of buyer for the day
      */
     public void selling(int buyer){
+        int tempSale = 0;
         ArrayList<Salesperson> salespeopleList = Helper.getAllSalesperson(currentEmployee);
         for(Salesperson emp: salespeopleList){
             emp.setDailyBonus(0);
@@ -651,6 +669,7 @@ public class FNCD{
             //look at the status of the car the saleperson recommended. If it is sold then update the variables
             String response;
             if(car.getStatus().equals("sold")){
+                tempSale ++;
                 response = representative.getName() + " sold a vehicle " + car.getName() + " for $" + (int)(car.getSalePrice() * car.getPercent() * Salesperson.bonusHelper(car.getType(), performanceCarWin, pickupWin, monsterTruckWin, motorcycleWin));
                 notifyLogger(response);
                 notifyTracker(response);
@@ -666,10 +685,10 @@ public class FNCD{
                 notifyLogger(representative.getName() + " was not able to sell the vehicle " + car.getName());
             }
         }
+        count.add(count.get(count.size()-1) + tempSale);
     }
 
     public void selling(Salesperson salesperson, Vehicle car){
-    	
         Buyer newBuyer = new Buyer();
 
         car = salesperson.addDecorator(car);
@@ -711,8 +730,8 @@ public class FNCD{
         endOfEvents();
         employeeAmount = tracker.getEmployeeAmount();
         FNCDamount = tracker.getFNCDAmount();
-//        notifyTracker("employee $" + employeeAmount);
-//        notifyTracker("FNCD $" + FNCDamount);
+        employeeMoney.add(employeeMoney.get(employeeMoney.size()-1) + dailyEmployeePay);
+        FNCDMoney.add((FNCDMoney.get(FNCDMoney.size()-1) + dailySales));
         System.out.println("Quitting");
         quit();
         endOfEvents();
@@ -731,16 +750,9 @@ public class FNCD{
             staff.setTotalBonus();
             notifyTracker("employee $" + staff.getDailyBonus());
             notifyTracker("employee $" + staff.getDailySalary());
+            dailyEmployeePay += staff.getDailyBonus();
+            dailyEmployeePay += staff.getDailySalary();
         }
-//        for(Interns staff: internList){
-//            staff.setTotalDaysWorked();
-//            staff.setTotalPay();
-//            staff.setTotalBonus();
-//            employeeAmount += staff.getDailyBonus();
-//            employeeAmount += staff.getDailySalary();
-//            notifyTracker("employee $" + staff.getDailyBonus());
-//            notifyTracker("employee $" + staff.getDailySalary());
-//        }
     }
 
     /**
@@ -923,4 +935,21 @@ public class FNCD{
 		return null;
 	}
 
+    public ArrayList<Integer> getCount(){
+        return count;
+    }
+
+    public ArrayList<Integer> getEmployeeMoney() {
+        if(count.size() < employeeMoney.size()){
+            employeeMoney.remove(employeeMoney.size()-1);
+        }
+        return employeeMoney;
+    }
+
+    public ArrayList<Integer> getFNCDMoney() {
+        if(count.size() < FNCDMoney.size()){
+            FNCDMoney.remove(FNCDMoney.size()-1);
+        }
+        return FNCDMoney;
+    }
 }

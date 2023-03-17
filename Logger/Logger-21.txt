@@ -87,3 +87,158 @@ North: NorthDriver_004 made $0
 South: SouthDriver_021 made $1000
 North: NorthDriver_018 made $0
 North: NorthDriver_019 made $0
+South: FNCD have 3 MonsterTrucks in the race. 
+North: FNCD have 3 Motorcycles in the race. 
+North: North: One of the vehicle got 19 place
+South: South: One of the vehicle got 12 place
+North: North: One of the vehicle got 8 place
+South: South: One of the vehicle got 8 place
+North: North: One of the vehicle got 20 place
+South: South: One of the vehicle got 10 place
+South: SouthDriver_008 made $0
+North: NorthDriver_008 made $0
+South: SouthDriver_013 made $0
+South: SouthDriver_018 made $0
+North: NorthFNCD have 3 Motorcycles in the race. 
+South: SouthFNCD have 3 Pickups in the race. 
+North: North: One of the vehicle got 10 place
+South: South: One of the vehicle got 19 place
+North: North: One of the vehicle got 3 place
+South: South: One of the vehicle got 6 place
+North: North: One of the vehicle got 12 place
+South: South: One of the vehicle got 20 place
+North: NorthDriver_008 made $0
+South: SouthDriver_016 made $0
+North: NorthDriver_018 made $1000
+North: NorthDriver_019 made $0
+South: SouthFNCD have 3 MonsterTrucks in the race. 
+North: NorthFNCD have 3 Pickups in the race. 
+South: South: One of the vehicle got 12 place
+North: North: One of the vehicle got 1 place
+South: South: One of the vehicle got 5 place
+North: North: One of the vehicle got 6 place
+North: North: One of the vehicle got 15 place
+South: South: One of the vehicle got 16 place
+South: SouthDriver_004 made $0
+North: NorthDriver_004 made $1000
+North: NorthDriver_008 made $0
+South: SouthDriver_008 made $0
+South: SouthDriver_017 made $0
+North: NorthDriver_012 made $0
+South: SouthFNCD have 3 PerformanceCar in the race. 
+North: NorthFNCD have 3 MonsterTrucks in the race. 
+North: North: One of the vehicle got 4 place
+South: South: One of the vehicle got 11 place
+North: North: One of the vehicle got 8 place
+South: South: One of the vehicle got 12 place
+North: North: One of the vehicle got 19 place
+South: South: One of the vehicle got 15 place
+South: SouthDriver_004 made $0
+North: NorthDriver_012 made $0
+South: SouthDriver_008 made $0
+North: NorthDriver_016 made $0
+South: SouthDriver_014 made $0
+South: SouthFNCD have 3 Pickups in the race. 
+North: NorthFNCD have 3 PerformanceCar in the race. 
+South: South: One of the vehicle got 15 place
+North: North: One of the vehicle got 6 place
+South: South: One of the vehicle got 5 place
+North: North: One of the vehicle got 8 place
+South: South: One of the vehicle got 18 place
+North: North: One of the vehicle got 13 place
+South: SouthDriver_004 made $0
+North: NorthDriver_004 made $0
+South: SouthDriver_008 made $0
+North: NorthDriver_008 made $0
+North: NorthDriver_018 made $0
+North: NorthFNCD have 3 Pickups in the race. 
+South: SouthFNCD have 3 PerformanceCar in the race. 
+North: North: One of the vehicle got 19 place
+South: South: One of the vehicle got 10 place
+North: North: One of the vehicle got 3 place
+South: South: One of the vehicle got 7 place
+North: North: One of the vehicle got 8 place
+South: South: One of the vehicle got 18 place
+South: SouthDriver_008 made $0
+North: NorthDriver_008 made $1000
+South: SouthDriver_012 made $0
+North: NorthDriver_012 made $0
+North: NorthFNCD have 3 Pickups in the race. 
+South: SouthFNCD have 3 PerformanceCar in the race. 
+South: South: One of the vehicle got 9 place
+North: North: One of the vehicle got 7 place
+North: North: One of the vehicle got 10 place
+South: South: One of the vehicle got 14 place
+North: North: One of the vehicle got 9 place
+South: South: One of the vehicle got 2 place
+North: NorthDriver_012 made $0
+South: SouthDriver_004 made $0
+South: SouthDriver_019 made $0
+North: NorthDriver_014 made $0
+South: SouthDriver_022 made $1000
+North: NorthDriver_018 made $0
+South: SouthFNCD have 3 MonsterTrucks in the race. 
+North: NorthFNCD have 3 MonsterTrucks in the race. 
+South: South: One of the vehicle got 2 place
+North: North: One of the vehicle got 8 place
+South: South: One of the vehicle got 14 place
+North: North: One of the vehicle got 13 place
+South: South: One of the vehicle got 13 place
+North: North: One of the vehicle got 7 place
+South: SouthDriver_013 made $1000
+North: NorthDriver_014 made $0
+North: NorthDriver_018 made $0
+South: SouthDriver_016 made $0
+South: SouthDriver_020 made $0
+North: NorthDriver_023 made $0
+South: SouthFNCD have 3 MonsterTrucks in the race. 
+North: NorthFNCD have 3 PerformanceCar in the race. 
+North: North: One of the vehicle got 12 place
+South: South: One of the vehicle got 4 place
+North: North: One of the vehicle got 4 place
+South: South: One of the vehicle got 14 place
+North: North: One of the vehicle got 7 place
+South: South: One of the vehicle got 7 place
+South: SouthDriver_004 made $0
+North: NorthDriver_012 made $0
+South: SouthDriver_008 made $0
+North: NorthDriver_015 made $0
+South: SouthDriver_014 made $0
+North: NorthDriver_017 made $0
+North: NorthFNCD have 3 MonsterTrucks in the race. 
+South: SouthFNCD have 3 Motorcycles in the race. 
+North: North: One of the vehicle got 17 place
+South: South: One of the vehicle got 11 place
+North: North: One of the vehicle got 9 place
+South: South: One of the vehicle got 19 place
+North: North: One of the vehicle got 19 place
+South: South: One of the vehicle got 13 place
+North: NorthDriver_004 made $0
+South: SouthDriver_012 made $0
+North: NorthDriver_012 made $0
+South: SouthDriver_014 made $0
+North: NorthFNCD have 3 MonsterTrucks in the race. 
+South: SouthFNCD have 3 Motorcycles in the race. 
+North: North: One of the vehicle got 2 place
+South: South: One of the vehicle got 20 place
+North: North: One of the vehicle got 7 place
+South: South: One of the vehicle got 19 place
+North: North: One of the vehicle got 18 place
+South: South: One of the vehicle got 6 place
+North: NorthDriver_008 made $1000
+South: SouthDriver_020 made $0
+North: NorthDriver_012 made $0
+South: SouthFNCD have 3 PerformanceCar in the race. 
+North: NorthFNCD have 3 MonsterTrucks in the race. 
+South: South: One of the vehicle got 3 place
+North: North: One of the vehicle got 15 place
+North: North: One of the vehicle got 11 place
+South: South: One of the vehicle got 10 place
+North: North: One of the vehicle got 7 place
+South: South: One of the vehicle got 16 place
+South: SouthDriver_004 made $1000
+North: NorthDriver_012 made $0
+North: NorthDriver_023 made $0
+South: SouthDriver_012 made $0
+North: NorthDriver_027 made $0
+South: SouthDriver_021 made $0
