@@ -59,7 +59,7 @@ public class Observer implements Flow.Subscriber<String>{
      * used for tracker, so the correct format can be displayed
      * @param date: the current date
      */
-    public void onComplete(int date, String name){
+    public void onComplete(int date){
         subscription.cancel();
     }
 }

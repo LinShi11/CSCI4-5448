@@ -370,6 +370,7 @@ public class FNCD{
         tasks();
         endOfEvents();
         noMoney();
+        endOfEvents();
     }
 
     public void endOfEvents(){
@@ -652,11 +653,12 @@ public class FNCD{
             if(car.getStatus().equals("sold")){
                 response = representative.getName() + " sold a vehicle " + car.getName() + " for $" + (int)(car.getSalePrice() * car.getPercent() * Salesperson.bonusHelper(car.getType(), performanceCarWin, pickupWin, monsterTruckWin, motorcycleWin));
                 notifyLogger(response);
-                FNCDamount += (int)(car.getSalePrice() * car.getPercent() * Salesperson.bonusHelper(car.getType(), performanceCarWin, pickupWin, monsterTruckWin, motorcycleWin));
+                notifyTracker(response);
+//                FNCDamount += (int)(car.getSalePrice() * car.getPercent() * Salesperson.bonusHelper(car.getType(), performanceCarWin, pickupWin, monsterTruckWin, motorcycleWin));
 
                 soldCars.add(car); // add the soldcar list
-                this.budget += car.getSalePrice();
-                this.dailySales += car.getSalePrice();
+                this.budget += (int)(car.getSalePrice() * car.getPercent() * Salesperson.bonusHelper(car.getType(), performanceCarWin, pickupWin, monsterTruckWin, motorcycleWin));
+                this.dailySales += (int)(car.getSalePrice() * car.getPercent() * Salesperson.bonusHelper(car.getType(), performanceCarWin, pickupWin, monsterTruckWin, motorcycleWin));
 
                 // remove them from the appropriate arraylist
                 removeHelper(car);
@@ -680,11 +682,12 @@ public class FNCD{
         if(car.getStatus().equals("sold")){
             response = salesperson.getName() + " sold a vehicle " + car.getName() + " for $" + (int)(car.getSalePrice() * car.getPercent() * Salesperson.bonusHelper(car.getType(), performanceCarWin, pickupWin, monsterTruckWin, motorcycleWin));
             notifyLogger(response);
-            FNCDamount += (int)(car.getSalePrice() * car.getPercent() * Salesperson.bonusHelper(car.getType(), performanceCarWin, pickupWin, monsterTruckWin, motorcycleWin));
+            notifyTracker(response);
+//            FNCDamount += (int)(car.getSalePrice() * car.getPercent() * Salesperson.bonusHelper(car.getType(), performanceCarWin, pickupWin, monsterTruckWin, motorcycleWin));
 
             soldCars.add(car); // add the soldcar list
-            this.budget += car.getSalePrice();
-            this.dailySales += car.getSalePrice();
+            this.budget += (int)(car.getSalePrice() * car.getPercent() * Salesperson.bonusHelper(car.getType(), performanceCarWin, pickupWin, monsterTruckWin, motorcycleWin));
+            this.dailySales += (int)(car.getSalePrice() * car.getPercent() * Salesperson.bonusHelper(car.getType(), performanceCarWin, pickupWin, monsterTruckWin, motorcycleWin));
 
             // remove them from the appropriate arraylist
             removeHelper(car);
@@ -700,16 +703,22 @@ public class FNCD{
      * Updates the employees, checks the budget, and determine whether anyone quit.
      */
     public void endDay(){
-        System.out.println("\nClosing...");
+        System.out.println("Closing...");
         System.out.println("We made $" + this.dailySales+ " today");
         dailyUpdate();
+        endOfEvents();
         noMoney();
-        notifyTracker("employee $" + employeeAmount);
-        notifyTracker("FNCD $" + FNCDamount);
-        System.out.println("\nQuitting");
+        endOfEvents();
+        employeeAmount = tracker.getEmployeeAmount();
+        FNCDamount = tracker.getFNCDAmount();
+//        notifyTracker("employee $" + employeeAmount);
+//        notifyTracker("FNCD $" + FNCDamount);
+        System.out.println("Quitting");
         quit();
-        tracker.onComplete(date, name);
+        endOfEvents();
+        tracker.onComplete(date);
         logger.onComplete();
+        endOfEvents();
     }
 
     /**
@@ -739,6 +748,7 @@ public class FNCD{
      */
     public void noMoney(){
         while(this.budget <= 0){
+            System.out.println(name + " You currently have " + budget);
             this.budget += 250000;
             logger.onNext("You ran out of money, so you borrowed $250,000 from the bank", date, name);
             System.out.println("You ran out of money, so you borrowed $250,000 from the bank");

@@ -19,6 +19,8 @@ public class Driver {
     	
     	
     	CyclicBarrier barrier = new CyclicBarrier(2);
+		Logger logger = new Logger();
+		Tracker tracker = new Tracker(0,0);
     	
     	FNCD north = new FNCD("North", barrier, true);
     	FNCD south = new FNCD("South", barrier, true);
