@@ -5,6 +5,7 @@
 
 ##### UML for Vehicle (factory):
 Note: FNCD is connected with VehicleFactory; however, since FNCD is all the way on the top right, I cannot include it. That is what the Vehicle Factory is connected to.
+
 ![vehicle-factory-pattern](images/vehicle.png)
 
 ##### UML for Singleton:
