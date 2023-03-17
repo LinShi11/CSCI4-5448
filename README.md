@@ -11,7 +11,7 @@ We had minimum changes in the Staff and Vehicle between 4.1 UML and 4.2 UML. Whe
 Furthermore, there has been some changes in the naming portion, such as from buildCars() to buildVehicle(). We created Tractor and Crane instead of Suv and Convertibles. In Logger and Tracker, only some naming has been modified, the overall structure of the singleton pattern has stayed the same.  
 
 #### UML: 
-The UML diagram for 4.2 could be found in [UML.md](UML.md). 
+The UML diagram for 4.2 could be found in [UML.md](uml.md). 
 
 #### Junit Tests:
 The Junit Test results could be found in [JunitResults.md](JUnitResults.md). 
