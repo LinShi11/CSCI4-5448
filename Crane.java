@@ -54,7 +54,7 @@ public class Crane implements Vehicle{
 
         // set other variables
         status = "in stock";
-        type = Enum.VehicleType.Tractor;
+        type = Enum.VehicleType.Crane;
         setBrand();
         setName(id);
         repairBonus = (int)(min * .10);

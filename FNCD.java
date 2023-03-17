@@ -184,7 +184,6 @@ public class FNCD{
 	            System.out.println((name != null?name + ":":"") + "******FNCD Day " + this.date + ": Race day!!!!!!!******");
 	            race();
 	        }
-	        date++;
 
 	        logger = Logger.getInstance();
 	        tracker = Tracker.getInstance(FNCDamount, employeeAmount);
@@ -299,12 +298,12 @@ public class FNCD{
             }
             placement.add(temp);
         }
-
+        ArrayList<StaffDriver> staffDriverList = Helper.getAllDriver(currentEmployee);
         // look at the placement and determine action
         for(int j = 0; j < placement.size(); j++) {
             System.out.println(name + ": One of the vehicle got " + (placement.get(j)+1) + " place" );
             notifyLogger(name + ": One of the vehicle got " + (placement.get(j)+1) + " place");
-            ArrayList<StaffDriver> staffDriverList = Helper.getAllDriver(currentEmployee);
+
             // if we won
             if (placement.get(j) == 0 || placement.get(j) == 1 || placement.get(j) == 2) {
                 winCount ++;
@@ -332,21 +331,17 @@ public class FNCD{
     public void removeDriver(){
         int counter = 0;
         ArrayList<StaffDriver> staffDriverList = Helper.getAllDriver(currentEmployee);
-        System.out.println(staffDriverList.size());
-        System.out.println(staffDriverList);
-        System.out.println(staffDriverCount);
-        System.out.println(currentEmployee.size());
         while(counter < staffDriverList.size()){
             if(staffDriverList.get(counter).isInjured()){
                 StaffDriver driver = staffDriverList.get(counter);
                 employee.add(driver);
+                staffDriverList.remove(driver);
                 currentEmployee.remove(driver);
                 staffDriverCount--;
             } else{
                 counter ++;
             }
         }
-        System.out.println(currentEmployee.size());
     }
 
     /**
@@ -398,7 +393,8 @@ public class FNCD{
         Random random = new Random();
         if(internCount != maxSize){
             // iterate maxSize(3) - currentSize so we can add more interns
-            for(int i = 0; i < maxSize-internCount; i++){
+            int temp = internCount;
+            for(int i = 0; i < maxSize-temp; i++){
                 //updateId is a helper function that keeps track of number of staffs we have hired
                 currentEmployee.add(staffFactory.hireStaff(Enum.StaffType.Intern, name+"Intern_" + updateId(), washingMethods.get(random.nextInt(washingMethods.size()))));
                 System.out.println("Hired intern " + currentEmployee.get(currentEmployee.size()-1).getName());
@@ -408,7 +404,8 @@ public class FNCD{
 
         if(staffDriverCount != maxSize){
             // iterate maxSize(3) - currentSize so we can add more driver
-            for(int i = 0; i < maxSize-staffDriverCount; i++){
+            int temp = staffDriverCount;
+            for(int i = 0; i < maxSize-temp; i++){
                 //updateId is a helper function that keeps track of number of staffs we have hired
                 currentEmployee.add(staffFactory.hireStaff(Enum.StaffType.Driver,name+"Driver_" + updateId(), null));
                 System.out.println("Hired driver " + currentEmployee.get(currentEmployee.size()-1).getName());
@@ -422,7 +419,8 @@ public class FNCD{
      * Three different arrayList are used so the checking process is easier.
      */
     public void setInventory(){
-        for(int i = 0; i < maxInventory - performanceCarCount; i++ ){
+        int temp = performanceCarCount;
+        for(int i = 0; i < maxInventory - temp; i++ ){
             Vehicle car = vehicleFactory.buildVehicle(Enum.VehicleType.PerformanceCar, updateInventoryId());
             if(car != null) {
                 performanceCarCount++;
@@ -430,56 +428,64 @@ public class FNCD{
                 setInventoryHelper(car);
             }
         }
-        for(int i = 0; i < maxInventory - carsCount; i++){
+        temp = carsCount;
+        for(int i = 0; i < maxInventory - temp; i++){
             Vehicle car = vehicleFactory.buildVehicle(Enum.VehicleType.Cars, updateInventoryId());
             if(car != null) {
                 carsCount ++;
                 setInventoryHelper(car);
             }
         }
-        for(int i = 0; i < maxInventory - pickupsCount; i++){
+        temp= pickupsCount;
+        for(int i = 0; i < maxInventory - temp; i++){
             Vehicle car = vehicleFactory.buildVehicle(Enum.VehicleType.Pickups, updateInventoryId());
             if(car != null) {
                 pickupsCount++;
                 setInventoryHelper(car);
             }
         }
-        for(int i = 0; i < maxInventory - electricCarCount; i++){
+        temp = electricCarCount;
+        for(int i = 0; i < maxInventory - temp; i++){
             Vehicle car = vehicleFactory.buildVehicle(Enum.VehicleType.ElectricCars, updateInventoryId());
             if(car != null) {
                 electricCarCount++;
                 setInventoryHelper(car);
             }
         }
-        for(int i = 0; i < maxInventory - monsterTruckCount; i++){
+        temp = monsterTruckCount;
+        for(int i = 0; i < maxInventory - temp; i++){
             Vehicle car = vehicleFactory.buildVehicle(Enum.VehicleType.MonsterTrucks, updateInventoryId());
             if(car != null) {
                 monsterTruckCount++;
                 setInventoryHelper(car);
             }
         }
-        for(int i = 0; i < maxInventory - motorcycleCount; i++){
+        temp = motorcycleCount;
+        for(int i = 0; i < maxInventory - temp; i++){
             Vehicle car = vehicleFactory.buildVehicle(Enum.VehicleType.Motorcycles, updateInventoryId());
             if(car != null) {
                 motorcycleCount++;
                 setInventoryHelper(car);
             }
         }
-        for(int i = 0; i < maxInventory - tractorCount; i++){
+        temp = tractorCount;
+        for(int i = 0; i < maxInventory - temp; i++){
             Vehicle car = vehicleFactory.buildVehicle(Enum.VehicleType.Tractor, updateInventoryId());
             if(car != null) {
                 tractorCount++;
                 setInventoryHelper(car);
             }
         }
-        for(int i = 0; i < maxInventory - vanCount; i++){
+        temp = vanCount;
+        for(int i = 0; i < maxInventory - temp; i++){
             Vehicle car = vehicleFactory.buildVehicle(Enum.VehicleType.Van, updateInventoryId());
             if(car != null) {
                 vanCount++;
                 setInventoryHelper(car);
             }
         }
-        for(int i = 0; i < maxInventory - craneCount; i++){
+        temp = craneCount;
+        for(int i = 0; i < maxInventory - temp; i++){
             Vehicle car = vehicleFactory.buildVehicle(Enum.VehicleType.Crane, updateInventoryId());
             if(car != null) {
                 craneCount++;

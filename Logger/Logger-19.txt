@@ -715,3 +715,127 @@ South: SouthSalesperson_003 was not able to sell the vehicle AST_00066
 North: NorthSalesperson_001 was not able to sell the vehicle LAM_00068
 North: NorthSalesperson_001 was not able to sell the vehicle LAM_00068
 North: NorthSalesperson_007 was not able to sell the vehicle LAM_00068
+South: SouthMechanics_001 fixed a used Van (JEE_00042) and made it like new (made $1000)
+South: SouthMechanics_001 fixed a broken Pickups (GMC_00056) and made it used (made $1000)
+South: SouthMechanics_013 fixed a used Tractor (SON_00060) and made it like new (made $2000)
+North: NorthMechanics_002 fixed a broken MonsterTrucks (El Toro Loco_00014) and made it broken (made $0)
+South: SouthMechanics_013 fixed a used Pickups (GMC_00056) and made it used (made $0)
+South: SouthMechanics_014 fixed a used Pickups (GMC_00056) and made it like new (made $1000)
+North: NorthMechanics_002 fixed a broken MonsterTrucks (El Toro Loco_00014) and made it used (made $1000)
+North: NorthMechanics_006 fixed a broken Motorcycles (DUC_00016) and made it used (made $1000)
+North: NorthMechanics_006 fixed a used Tractor (SON_00064) and made it like new (made $2000)
+North: NorthMechanics_010 fixed a used Motorcycles (DUC_00016) and made it used (made $0)
+North: NorthMechanics_010 fixed a used MonsterTrucks (El Toro Loco_00014) and made it like new (made $1000)
+South: SouthSalesperson_007 sold a vehicle LIE_00054 for $142601
+South: SouthSalesperson_011 was not able to sell the vehicle GMC_00056
+North: NorthSalesperson_003 sold a vehicle SON_00056 for $102483
+South: SouthSalesperson_011 sold a vehicle GMC_00056 for $99832
+South: SouthSalesperson_011 was not able to sell the vehicle JEE_00007
+North: NorthSalesperson_003 was not able to sell the vehicle MAH_00067
+North: NorthSalesperson_003 sold a vehicle MAH_00067 for $97412
+North: NorthMechanics_002 fixed a broken Crane (PAL_00077) and made it used (made $5000)
+North: NorthMechanics_002 fixed a used Crane (PAL_00077) and made it like new (made $5000)
+North: NorthMechanics_006 fixed a broken PerformanceCar (MAS_00076) and made it used (made $2000)
+North: NorthMechanics_010 fixed a used PerformanceCar (MAS_00076) and made it used (made $0)
+South: SouthSalesperson_011 was not able to sell the vehicle PAL_00065
+North: NorthSalesperson_007 was not able to sell the vehicle PAL_00074
+North: NorthSalesperson_013 sold a vehicle PAL_00074 for $130683
+South: SouthSalesperson_015 was not able to sell the vehicle PAL_00065
+South: SouthSalesperson_015 sold a vehicle PAL_00065 for $132791
+North: NorthSalesperson_013 was not able to sell the vehicle PAL_00071
+North: NorthSalesperson_003 sold a vehicle PAL_00071 for $118636
+North: NorthSalesperson_013 was not able to sell the vehicle MAN_00075
+North: NorthMechanics_002 fixed a broken Crane (KON_00067) and made it broken (made $0)
+South: SouthMechanics_002 fixed a used Crane (PAL_00058) and made it like new (made $5000)
+North: NorthMechanics_002 fixed a used Cars (NIS_00007) and made it like new (made $1000)
+South: SouthMechanics_002 fixed a used PerformanceCar (LAM_00004) and made it used (made $0)
+North: NorthMechanics_005 fixed a used Tractor (MAS_00039) and made it used (made $0)
+South: SouthMechanics_006 fixed a broken Crane (LIE_00063) and made it used (made $5000)
+South: SouthMechanics_006 fixed a used Crane (PAL_00069) and made it used (made $0)
+North: NorthMechanics_005 fixed a broken Crane (KON_00067) and made it used (made $5000)
+South: SouthMechanics_010 fixed a broken MonsterTrucks (Brutus_00027) and made it used (made $1000)
+North: NorthMechanics_017 fixed a broken PerformanceCar (FER_00003) and made it used (made $2000)
+South: SouthMechanics_010 fixed a used PerformanceCar (JAG_00071) and made it like new (made $2000)
+North: NorthMechanics_017 fixed a used PerformanceCar (MER_00004) and made it like new (made $2000)
+North: NorthSalesperson_011 was not able to sell the vehicle FER_00003
+South: SouthSalesperson_007 was not able to sell the vehicle GMC_00015
+North: NorthSalesperson_001 sold a vehicle FER_00003 for $165237
+South: SouthSalesperson_003 was not able to sell the vehicle GMC_00015
+North: NorthSalesperson_011 was not able to sell the vehicle PAL_00068
+North: NorthSalesperson_011 was not able to sell the vehicle PAL_00068
+North: NorthSalesperson_007 was not able to sell the vehicle PAL_00068
+North: NorthSalesperson_007 sold a vehicle PAL_00068 for $146738
+North: NorthSalesperson_007 was not able to sell the vehicle PAL_00069
+North: NorthSalesperson_011 sold a vehicle PAL_00069 for $137712
+South: SouthMechanics_002 fixed a broken Crane (LIE_00060) and made it used (made $5000)
+North: NorthMechanics_002 fixed a used Crane (LIE_00063) and made it like new (made $5000)
+South: SouthMechanics_002 fixed a used PerformanceCar (BMW_00006) and made it like new (made $2000)
+North: NorthMechanics_002 fixed a broken Pickups (RAM_00018) and made it used (made $1000)
+North: NorthMechanics_010 fixed a used Crane (PAL_00065) and made it like new (made $5000)
+South: SouthMechanics_006 fixed a used Crane (LIE_00060) and made it like new (made $5000)
+North: NorthMechanics_010 fixed a used Pickups (RAM_00013) and made it like new (made $1000)
+South: SouthMechanics_006 fixed a broken PerformanceCar (LAM_00063) and made it used (made $2000)
+South: SouthMechanics_010 fixed a used Van (JOW_00046) and made it like new (made $1000)
+North: NorthMechanics_009 fixed a broken Pickups (GMC_00014) and made it used (made $1000)
+South: SouthMechanics_010 fixed a used PerformanceCar (AUD_00062) and made it like new (made $2000)
+North: NorthMechanics_009 fixed a used Pickups (GMC_00014) and made it like new (made $1000)
+South: SouthSalesperson_007 was not able to sell the vehicle KON_00061
+North: NorthSalesperson_005 was not able to sell the vehicle LIE_00063
+South: SouthSalesperson_007 was not able to sell the vehicle KON_00061
+North: NorthSalesperson_007 was not able to sell the vehicle LIE_00063
+South: SouthSalesperson_011 was not able to sell the vehicle KON_00061
+North: NorthSalesperson_005 was not able to sell the vehicle LIE_00063
+South: SouthSalesperson_007 sold a vehicle KON_00061 for $267187
+South: SouthMechanics_002 fixed a used Cars (HYU_00009) and made it used (made $0)
+North: NorthMechanics_010 fixed a broken Pickups (RAM_00013) and made it used (made $1000)
+North: NorthMechanics_010 fixed a used ElectricCars (APT_00020) and made it used (made $0)
+South: SouthMechanics_002 fixed a broken Motorcycles (BMW_00033) and made it broken (made $0)
+North: NorthMechanics_016 fixed a used MonsterTrucks (Maximum Destruction (Max-D)_00029) and made it like new (made $1000)
+South: SouthMechanics_006 fixed a used Tractor (MAS_00037) and made it like new (made $2000)
+North: NorthMechanics_016 fixed a used MonsterTrucks (The Destroyer_00028) and made it like new (made $1000)
+South: SouthMechanics_006 fixed a broken Crane (MAN_00055) and made it used (made $5000)
+North: NorthMechanics_019 fixed a used MonsterTrucks (Bulldozer_00030) and made it used (made $0)
+South: SouthMechanics_010 fixed a used Van (ISU_00048) and made it like new (made $1000)
+North: NorthMechanics_019 fixed a used ElectricCars (APT_00020) and made it like new (made $1000)
+South: SouthMechanics_010 fixed a used ElectricCars (NIS_00023) and made it like new (made $1000)
+North: NorthSalesperson_014 sold a vehicle The Destroyer_00028 for $172503
+South: SouthSalesperson_011 was not able to sell the vehicle MER_00003
+South: SouthSalesperson_001 sold a vehicle MER_00003 for $186743
+North: NorthSalesperson_009 was not able to sell the vehicle LIE_00059
+North: NorthSalesperson_014 was not able to sell the vehicle LIE_00059
+South: SouthSalesperson_001 was not able to sell the vehicle MAN_00058
+South: SouthSalesperson_001 was not able to sell the vehicle MAN_00058
+North: NorthSalesperson_009 was not able to sell the vehicle LIE_00059
+South: SouthSalesperson_005 was not able to sell the vehicle MAN_00058
+North: NorthSalesperson_009 was not able to sell the vehicle LIE_00059
+South: SouthSalesperson_001 sold a vehicle MAN_00058 for $116128
+North: NorthSalesperson_003 was not able to sell the vehicle LIE_00059
+North: NorthSalesperson_003 was not able to sell the vehicle LIE_00059
+North: NorthSalesperson_003 was not able to sell the vehicle LIE_00059
+North: NorthMechanics_010 fixed a used Crane (CAR_00053) and made it used (made $0)
+North: NorthMechanics_010 fixed a used Crane (CAR_00053) and made it like new (made $5000)
+North: NorthMechanics_013 fixed a broken MonsterTrucks (Cyborg_00029) and made it used (made $1000)
+North: NorthMechanics_014 fixed a used MonsterTrucks (Cyborg_00029) and made it like new (made $1000)
+South: SouthSalesperson_007 was not able to sell the vehicle KON_00063
+North: NorthSalesperson_001 sold a vehicle PAL_00071 for $156845
+South: SouthSalesperson_011 was not able to sell the vehicle KON_00063
+North: NorthSalesperson_003 was not able to sell the vehicle LIE_00070
+South: SouthSalesperson_003 was not able to sell the vehicle KON_00063
+North: NorthSalesperson_001 was not able to sell the vehicle LIE_00070
+North: NorthSalesperson_003 sold a vehicle LIE_00070 for $173636
+South: SouthSalesperson_007 sold a vehicle KON_00063 for $151940
+South: SouthSalesperson_007 was not able to sell the vehicle LIE_00058
+North: NorthSalesperson_003 was not able to sell the vehicle CAR_00069
+South: SouthSalesperson_007 was not able to sell the vehicle LIE_00058
+North: NorthSalesperson_003 sold a vehicle CAR_00069 for $142850
+South: SouthSalesperson_007 sold a vehicle LIE_00058 for $123079
+South: SouthSalesperson_007 was not able to sell the vehicle KON_00055
+North: NorthMechanics_010 fixed a used Crane (PAL_00066) and made it like new (made $5000)
+North: NorthSalesperson_013 sold a vehicle KON_00064 for $132912
+South: SouthSalesperson_005 sold a vehicle MAN_00066 for $483995
+North: NorthSalesperson_013 was not able to sell the vehicle PAL_00066
+South: SouthSalesperson_001 was not able to sell the vehicle PAL_00065
+South: SouthSalesperson_005 sold a vehicle PAL_00065 for $142135
+South: SouthSalesperson_001 was not able to sell the vehicle LIE_00064
+South: SouthSalesperson_005 sold a vehicle LIE_00064 for $130937
+South: SouthSalesperson_001 was not able to sell the vehicle MAN_00063

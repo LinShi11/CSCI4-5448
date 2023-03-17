@@ -600,3 +600,69 @@ South: SouthDriver_008 made $0
 North: NorthDriver_008 made $0
 North: NorthDriver_012 made $0
 South: SouthDriver_012 made $0
+North: FNCD have 3 Motorcycles in the race. 
+South: FNCD have 3 Motorcycles in the race. 
+South: South: One of the vehicle got 7 place
+North: North: One of the vehicle got 3 place
+South: South: One of the vehicle got 16 place
+North: North: One of the vehicle got 11 place
+South: South: One of the vehicle got 19 place
+North: North: One of the vehicle got 17 place
+South: SouthDriver_004 made $0
+North: NorthDriver_004 made $1000
+South: SouthDriver_008 made $0
+North: NorthDriver_008 made $0
+South: SouthDriver_012 made $0
+North: NorthDriver_012 made $0
+North: FNCD have 3 Pickups in the race. 
+South: FNCD have 3 MonsterTrucks in the race. 
+North: North: One of the vehicle got 19 place
+South: South: One of the vehicle got 6 place
+North: North: One of the vehicle got 3 place
+South: South: One of the vehicle got 15 place
+North: North: One of the vehicle got 12 place
+South: South: One of the vehicle got 3 place
+North: NorthDriver_039 made $1000
+South: SouthDriver_038 made $1000
+South: FNCD have 3 PerformanceCar in the race. 
+North: FNCD have 3 Pickups in the race. 
+South: South: One of the vehicle got 10 place
+North: North: One of the vehicle got 14 place
+North: North: One of the vehicle got 17 place
+South: South: One of the vehicle got 18 place
+North: North: One of the vehicle got 6 place
+South: South: One of the vehicle got 14 place
+South: FNCD have 3 PerformanceCar in the race. 
+North: FNCD have 3 Pickups in the race. 
+South: South: One of the vehicle got 15 place
+North: North: One of the vehicle got 5 place
+South: South: One of the vehicle got 16 place
+North: North: One of the vehicle got 13 place
+South: South: One of the vehicle got 13 place
+North: North: One of the vehicle got 17 place
+North: FNCD have 3 PerformanceCar in the race. 
+South: FNCD have 3 MonsterTrucks in the race. 
+South: South: One of the vehicle got 8 place
+North: North: One of the vehicle got 2 place
+South: South: One of the vehicle got 18 place
+North: North: One of the vehicle got 11 place
+North: North: One of the vehicle got 8 place
+South: South: One of the vehicle got 1 place
+North: NorthDriver_019 made $1000
+South: SouthDriver_008 made $0
+North: NorthDriver_021 made $0
+South: SouthDriver_017 made $1000
+North: NorthDriver_026 made $0
+South: FNCD have 3 Pickups in the race. 
+North: FNCD have 3 Motorcycles in the race. 
+North: North: One of the vehicle got 2 place
+South: South: One of the vehicle got 8 place
+North: North: One of the vehicle got 18 place
+South: South: One of the vehicle got 13 place
+South: South: One of the vehicle got 14 place
+North: North: One of the vehicle got 14 place
+North: NorthDriver_008 made $1000
+South: SouthDriver_008 made $0
+North: NorthDriver_020 made $0
+South: SouthDriver_014 made $0
+South: SouthDriver_020 made $0
