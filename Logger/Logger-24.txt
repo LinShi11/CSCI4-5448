@@ -950,3 +950,54 @@ South: SouthDriver_008 made $0
 North: NorthDriver_008 made $0
 South: SouthDriver_012 made $0
 North: NorthDriver_012 made $0
+South: SouthMechanics_010 fixed a used MonsterTrucks (Bear Foot (Silverado)_00076) and made it like new (made $1000)
+North: NorthSalesperson_005 was not able to sell the vehicle RAM_00078
+South: SouthSalesperson_005 sold a vehicle LUC_00017 for $61395
+South: SouthSalesperson_003 was not able to sell the vehicle MAH_00040
+South: SouthSalesperson_011 was not able to sell the vehicle MAH_00040
+South: SouthSalesperson_011 sold a vehicle MAH_00040 for $62233
+South: SouthSalesperson_011 sold a vehicle JAG_00001 for $68385
+North: FNCD have 3 MonsterTrucks in the race. 
+South: FNCD have 3 MonsterTrucks in the race. 
+South: South: One of the vehicle got 7 place
+North: North: One of the vehicle got 13 place
+South: South: One of the vehicle got 1 place
+North: North: One of the vehicle got 3 place
+South: South: One of the vehicle got 14 place
+North: North: One of the vehicle got 20 place
+South: SouthDriver_004 made $0
+North: NorthDriver_004 made $0
+South: SouthDriver_008 made $1000
+North: NorthDriver_008 made $1000
+South: SouthDriver_012 made $0
+North: NorthDriver_012 made $0
+North: NorthMechanics_006 fixed a broken Tractor (MAH_00063) and made it used (made $2000)
+South: SouthMechanics_002 fixed a broken MonsterTrucks (Bigfoot_00050) and made it broken (made $0)
+South: SouthMechanics_002 fixed a used Tractor (CAS_00070) and made it like new (made $2000)
+North: NorthMechanics_005 fixed a used Tractor (MAH_00063) and made it like new (made $2000)
+South: SouthMechanics_010 fixed a broken MonsterTrucks (Bigfoot_00050) and made it broken (made $0)
+South: SouthMechanics_010 fixed a broken MonsterTrucks (Bigfoot_00050) and made it used (made $1000)
+South: SouthMechanics_001 fixed a used PerformanceCar (MCL_00068) and made it used (made $0)
+South: SouthMechanics_001 fixed a used MonsterTrucks (Bigfoot_00050) and made it like new (made $1000)
+South: SouthSalesperson_005 was not able to sell the vehicle KAW_00039
+North: NorthSalesperson_014 sold a vehicle MAH_00063 for $83628
+South: SouthSalesperson_003 was not able to sell the vehicle KAW_00039
+North: NorthSalesperson_014 was not able to sell the vehicle SON_00067
+South: SouthSalesperson_003 was not able to sell the vehicle KAW_00039
+North: NorthSalesperson_001 was not able to sell the vehicle SON_00067
+South: SouthSalesperson_003 was not able to sell the vehicle KAW_00039
+South: SouthSalesperson_005 sold a vehicle KAW_00039 for $79471
+South: FNCD have 3 Motorcycles in the race. 
+North: FNCD have 3 PerformanceCar in the race. 
+South: South: One of the vehicle got 5 place
+North: North: One of the vehicle got 3 place
+North: North: One of the vehicle got 1 place
+South: South: One of the vehicle got 19 place
+North: North: One of the vehicle got 4 place
+South: South: One of the vehicle got 11 place
+South: SouthDriver_004 made $0
+North: NorthDriver_004 made $1000
+North: NorthDriver_008 made $1000
+South: SouthDriver_008 made $0
+South: SouthDriver_012 made $0
+North: NorthDriver_012 made $0

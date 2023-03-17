@@ -872,3 +872,137 @@ South: SouthSalesperson_001 was not able to sell the vehicle LIE_00044
 South: You ran out of money, so you borrowed $250,000 from the bank
 North: You ran out of money, so you borrowed $250,000 from the bank
 South: You ran out of money, so you borrowed $250,000 from the bank
+North: NorthMechanics_002 fixed a used Tractor (CAR_00025) and made it like new (made $5000)
+South: SouthMechanics_002 fixed a broken Motorcycles (TRI_00039) and made it broken (made $0)
+North: NorthMechanics_002 fixed a used MonsterTrucks (Brutus_00014) and made it like new (made $1000)
+South: SouthMechanics_002 fixed a used Pickups (FOR_00032) and made it like new (made $1000)
+North: NorthMechanics_006 fixed a used Motorcycles (HON_00039) and made it like new (made $1000)
+South: SouthMechanics_006 fixed a used Tractor (CAS_00020) and made it like new (made $2000)
+North: NorthMechanics_006 fixed a broken ElectricCars (RIV_00011) and made it used (made $1000)
+South: SouthMechanics_006 fixed a used ElectricCars (TES_00011) and made it used (made $0)
+North: NorthMechanics_010 fixed a broken Cars (TOY_00005) and made it used (made $1000)
+South: SouthMechanics_001 fixed a used Van (IVE_00023) and made it like new (made $1000)
+North: NorthMechanics_010 fixed a used ElectricCars (RIV_00011) and made it like new (made $1000)
+South: SouthMechanics_001 fixed a broken PerformanceCar (POR_00028) and made it used (made $2000)
+North: NorthSalesperson_003 was not able to sell the vehicle CAR_00025
+South: SouthSalesperson_007 was not able to sell the vehicle CAR_00044
+North: NorthSalesperson_011 was not able to sell the vehicle CAR_00025
+North: NorthSalesperson_003 sold a vehicle CAR_00025 for $114164
+North: NorthSalesperson_007 was not able to sell the vehicle CAR_00045
+North: NorthSalesperson_003 sold a vehicle CAR_00045 for $83164
+South: You ran out of money, so you borrowed $250,000 from the bank
+North: NorthMechanics_002 fixed a broken Motorcycles (SUZ_00038) and made it broken (made $0)
+South: SouthMechanics_002 fixed a used Motorcycles (SUZ_00038) and made it like new (made $1000)
+North: NorthMechanics_002 fixed a broken Cars (VOL_00006) and made it used (made $1000)
+South: SouthMechanics_002 fixed a used Tractor (SON_00041) and made it like new (made $2000)
+North: NorthMechanics_006 fixed a used PerformanceCar (ALF_00029) and made it like new (made $2000)
+South: SouthMechanics_006 fixed a broken Motorcycles (LUC_00039) and made it used (made $1000)
+South: SouthMechanics_006 fixed a broken Tractor (JOH_00040) and made it used (made $2000)
+North: NorthMechanics_006 fixed a used Motorcycles (DUC_00016) and made it used (made $0)
+South: SouthMechanics_010 fixed a used Pickups (CHE_00032) and made it like new (made $1000)
+North: NorthMechanics_010 fixed a used ElectricCars (NIS_00010) and made it like new (made $1000)
+North: NorthMechanics_010 fixed a broken Cars (HON_00004) and made it used (made $1000)
+South: SouthMechanics_010 fixed a broken Tractor (MAH_00020) and made it used (made $2000)
+South: SouthSalesperson_003 was not able to sell the vehicle KON_00027
+North: NorthSalesperson_011 was not able to sell the vehicle CAR_00044
+North: NorthSalesperson_007 was not able to sell the vehicle CAR_00044
+South: SouthSalesperson_003 sold a vehicle KON_00027 for $127493
+North: NorthSalesperson_011 sold a vehicle CAR_00044 for $140009
+North: NorthSalesperson_011 was not able to sell the vehicle CAR_00045
+North: NorthSalesperson_007 sold a vehicle CAR_00045 for $84952
+South: You ran out of money, so you borrowed $250,000 from the bank
+North: You ran out of money, so you borrowed $250,000 from the bank
+South: SouthMechanics_002 fixed a broken Cars (VOL_00006) and made it used (made $1000)
+North: NorthMechanics_002 fixed a used Pickups (CHE_00009) and made it like new (made $1000)
+South: SouthMechanics_002 fixed a broken Van (KIA_00024) and made it used (made $1000)
+North: NorthMechanics_002 fixed a used Cars (SUB_00031) and made it like new (made $1000)
+South: SouthMechanics_006 fixed a broken Pickups (JEE_00008) and made it broken (made $0)
+North: NorthMechanics_010 fixed a broken Van (IVE_00042) and made it used (made $1000)
+North: NorthMechanics_010 fixed a broken PerformanceCar (JAG_00003) and made it used (made $2000)
+South: SouthMechanics_006 fixed a used ElectricCars (RIV_00034) and made it used (made $0)
+North: NorthMechanics_001 fixed a broken Cars (NIS_00005) and made it used (made $1000)
+South: SouthMechanics_010 fixed a broken MonsterTrucks (Maximum Destruction (Max-D)_00014) and made it used (made $1000)
+North: NorthMechanics_001 fixed a broken Cars (VOL_00004) and made it used (made $1000)
+South: SouthMechanics_010 fixed a used PerformanceCar (MAS_00003) and made it like new (made $2000)
+South: SouthSalesperson_007 was not able to sell the vehicle CAR_00026
+South: SouthSalesperson_007 sold a vehicle CAR_00026 for $113950
+South: SouthSalesperson_007 sold a vehicle LIE_00027 for $107140
+South: SouthSalesperson_003 was not able to sell the vehicle CAR_00044
+South: SouthSalesperson_011 sold a vehicle CAR_00044 for $106333
+North: You ran out of money, so you borrowed $250,000 from the bank
+North: NorthMechanics_002 fixed a broken Tractor (LIE_00044) and made it used (made $5000)
+South: SouthMechanics_002 fixed a broken MonsterTrucks (Blue Thunder_00015) and made it used (made $1000)
+North: NorthMechanics_002 fixed a used Motorcycles (SUZ_00016) and made it used (made $0)
+South: SouthMechanics_002 fixed a broken Van (IVE_00044) and made it broken (made $0)
+North: NorthMechanics_006 fixed a used Motorcycles (KTM_00018) and made it used (made $0)
+South: SouthMechanics_006 fixed a used Motorcycles (KAW_00016) and made it used (made $0)
+North: NorthMechanics_006 fixed a broken MonsterTrucks (Predator_00014) and made it used (made $1000)
+South: SouthMechanics_006 fixed a broken ElectricCars (ZOO_00011) and made it used (made $1000)
+North: NorthMechanics_010 fixed a broken Pickups (JEE_00008) and made it used (made $1000)
+North: NorthMechanics_010 fixed a used ElectricCars (ZOO_00035) and made it like new (made $1000)
+South: SouthMechanics_010 fixed a used Motorcycles (KAW_00016) and made it like new (made $1000)
+South: SouthMechanics_010 fixed a broken ElectricCars (VOL_00012) and made it used (made $1000)
+South: SouthSalesperson_003 was not able to sell the vehicle PAL_00046
+North: NorthSalesperson_007 sold a vehicle CAR_00026 for $137574
+South: SouthSalesperson_011 was not able to sell the vehicle PAL_00046
+South: SouthSalesperson_011 sold a vehicle PAL_00046 for $140384
+South: SouthSalesperson_011 was not able to sell the vehicle CHE_00033
+South: SouthSalesperson_011 sold a vehicle CHE_00033 for $82478
+North: You ran out of money, so you borrowed $250,000 from the bank
+South: SouthMechanics_002 fixed a broken ElectricCars (TES_00034) and made it broken (made $0)
+North: NorthMechanics_002 fixed a used Pickups (GMC_00009) and made it like new (made $1000)
+South: SouthMechanics_002 fixed a used Van (JOW_00042) and made it like new (made $1000)
+North: NorthMechanics_002 fixed a broken Tractor (SON_00021) and made it used (made $2000)
+South: SouthMechanics_006 fixed a broken Van (IVE_00023) and made it used (made $1000)
+North: NorthMechanics_006 fixed a broken Cars (HON_00005) and made it used (made $1000)
+South: SouthMechanics_006 fixed a broken Tractor (PAL_00025) and made it used (made $5000)
+North: NorthMechanics_006 fixed a used PerformanceCar (LAM_00003) and made it like new (made $2000)
+South: SouthMechanics_010 fixed a used Cars (KIA_00004) and made it like new (made $1000)
+North: NorthMechanics_010 fixed a used MonsterTrucks (Cyborg_00014) and made it like new (made $1000)
+South: SouthMechanics_010 fixed a used Motorcycles (LUC_00018) and made it like new (made $1000)
+North: NorthMechanics_010 fixed a used PerformanceCar (MAS_00028) and made it used (made $0)
+South: SouthSalesperson_003 was not able to sell the vehicle PAL_00025
+South: SouthSalesperson_003 was not able to sell the vehicle PAL_00025
+South: SouthSalesperson_003 was not able to sell the vehicle PAL_00025
+South: SouthSalesperson_003 was not able to sell the vehicle PAL_00025
+South: You ran out of money, so you borrowed $250,000 from the bank
+North: You ran out of money, so you borrowed $250,000 from the bank
+South: You ran out of money, so you borrowed $250,000 from the bank
+North: You ran out of money, so you borrowed $250,000 from the bank
+South: SouthMechanics_002 fixed a broken Tractor (MAS_00041) and made it used (made $2000)
+North: NorthMechanics_002 fixed a used Cars (MAZ_00030) and made it like new (made $1000)
+North: NorthMechanics_002 fixed a used Van (IVE_00024) and made it like new (made $1000)
+South: SouthMechanics_002 fixed a used Tractor (MAH_00021) and made it like new (made $2000)
+South: SouthMechanics_006 fixed a broken PerformanceCar (ALF_00029) and made it used (made $2000)
+North: NorthMechanics_006 fixed a used ElectricCars (LUC_00034) and made it like new (made $1000)
+South: SouthMechanics_006 fixed a used Tractor (MAN_00026) and made it like new (made $5000)
+North: NorthMechanics_006 fixed a like new ElectricCars (LUC_00034) and made it like new (made $0)
+South: SouthMechanics_010 fixed a used Motorcycles (HON_00018) and made it like new (made $1000)
+North: NorthMechanics_010 fixed a used Tractor (MAS_00040) and made it like new (made $2000)
+South: SouthMechanics_010 fixed a used Pickups (RAM_00032) and made it like new (made $1000)
+North: NorthMechanics_010 fixed a broken Cars (MAZ_00004) and made it used (made $1000)
+South: You ran out of money, so you borrowed $250,000 from the bank
+North: You ran out of money, so you borrowed $250,000 from the bank
+South: You ran out of money, so you borrowed $250,000 from the bank
+North: NorthMechanics_002 fixed a broken Cars (SUB_00031) and made it used (made $1000)
+South: SouthMechanics_002 fixed a used Pickups (CHE_00032) and made it used (made $0)
+South: SouthMechanics_002 fixed a used Motorcycles (KTM_00016) and made it like new (made $1000)
+North: NorthMechanics_002 fixed a used Cars (MAZ_00030) and made it like new (made $1000)
+North: NorthMechanics_006 fixed a broken PerformanceCar (FER_00002) and made it used (made $2000)
+South: SouthMechanics_006 fixed a used Tractor (MAN_00027) and made it like new (made $5000)
+South: SouthMechanics_006 fixed a broken Cars (SUB_00031) and made it used (made $1000)
+North: NorthMechanics_006 fixed a used PerformanceCar (ALF_00028) and made it like new (made $2000)
+South: SouthMechanics_010 fixed a used Tractor (PAL_00045) and made it like new (made $5000)
+North: NorthMechanics_010 fixed a used ElectricCars (APT_00035) and made it used (made $0)
+North: NorthMechanics_010 fixed a used PerformanceCar (FER_00002) and made it like new (made $2000)
+South: SouthMechanics_010 fixed a broken PerformanceCar (MAS_00028) and made it used (made $2000)
+South: SouthSalesperson_011 was not able to sell the vehicle PAL_00045
+North: NorthSalesperson_003 was not able to sell the vehicle KON_00027
+North: NorthSalesperson_003 was not able to sell the vehicle KON_00027
+South: SouthSalesperson_003 was not able to sell the vehicle PAL_00045
+South: SouthSalesperson_007 was not able to sell the vehicle PAL_00045
+North: NorthSalesperson_007 was not able to sell the vehicle KON_00027
+South: SouthSalesperson_007 sold a vehicle PAL_00045 for $156427
+South: SouthSalesperson_007 was not able to sell the vehicle KON_00044
+South: You ran out of money, so you borrowed $250,000 from the bank
+North: You ran out of money, so you borrowed $250,000 from the bank

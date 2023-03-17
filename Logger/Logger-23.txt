@@ -419,3 +419,21 @@ South: SouthSalesperson_011 was not able to sell the vehicle MAH_00056
 South: SouthSalesperson_016 was not able to sell the vehicle MAH_00056
 North: NorthSalesperson_011 was not able to sell the vehicle JEE_00065
 South: SouthSalesperson_016 was not able to sell the vehicle MAH_00056
+South: SouthMechanics_006 fixed a used PerformanceCar (ALF_00067) and made it like new (made $2000)
+South: SouthMechanics_006 fixed a used Motorcycles (YAM_00038) and made it like new (made $1000)
+South: SouthMechanics_010 fixed a used MonsterTrucks (Monster Mutt Dalmatian_00070) and made it like new (made $1000)
+South: SouthSalesperson_011 was not able to sell the vehicle Monster Mutt Dalmatian_00070
+North: NorthSalesperson_001 was not able to sell the vehicle GMC_00076
+South: SouthSalesperson_005 was not able to sell the vehicle Monster Mutt Dalmatian_00070
+North: NorthSalesperson_001 sold a vehicle GMC_00076 for $68103
+South: SouthSalesperson_011 sold a vehicle Monster Mutt Dalmatian_00070 for $76781
+South: SouthMechanics_002 fixed a broken Tractor (CAS_00074) and made it used (made $2000)
+South: SouthMechanics_002 fixed a used Tractor (CAS_00074) and made it like new (made $2000)
+South: SouthMechanics_010 fixed a used PerformanceCar (AUD_00073) and made it like new (made $2000)
+South: SouthMechanics_010 fixed a broken MonsterTrucks (Bigfoot_00050) and made it broken (made $0)
+South: SouthMechanics_001 fixed a broken Tractor (CAS_00070) and made it used (made $2000)
+South: SouthMechanics_001 fixed a used Motorcycles (KAW_00039) and made it like new (made $1000)
+South: SouthSalesperson_009 sold a vehicle AUD_00073 for $82852
+North: NorthSalesperson_013 was not able to sell the vehicle LAM_00068
+North: NorthSalesperson_001 sold a vehicle LAM_00068 for $167155
+North: NorthSalesperson_014 was not able to sell the vehicle SON_00067

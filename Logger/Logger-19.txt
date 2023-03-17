@@ -665,3 +665,53 @@ North: NorthSalesperson_011 was not able to sell the vehicle CAS_00062
 North: NorthSalesperson_007 sold a vehicle CAS_00062 for $57508
 North: NorthSalesperson_007 sold a vehicle FOR_00033 for $56504
 North: NorthSalesperson_003 was not able to sell the vehicle LEX_00060
+North: NorthMechanics_010 fixed a broken Tractor (JOH_00072) and made it used (made $2000)
+South: SouthMechanics_006 fixed a used Tractor (JOH_00020) and made it like new (made $2000)
+North: NorthMechanics_010 fixed a used Tractor (JOH_00072) and made it like new (made $2000)
+South: SouthMechanics_006 fixed a like new Tractor (JOH_00020) and made it used (made $2000)
+South: SouthMechanics_010 fixed a used Tractor (SON_00069) and made it like new (made $2000)
+North: NorthMechanics_013 fixed a used MonsterTrucks (Grave Digger_00013) and made it used (made $0)
+South: SouthMechanics_010 fixed a broken PerformanceCar (ALF_00067) and made it used (made $2000)
+North: NorthMechanics_013 fixed a used Pickups (GMC_00068) and made it like new (made $1000)
+North: NorthMechanics_014 fixed a used MonsterTrucks (Grave Digger_00013) and made it like new (made $1000)
+South: SouthMechanics_001 fixed a used ElectricCars (RIV_00049) and made it like new (made $1000)
+South: SouthMechanics_001 fixed a broken Motorcycles (YAM_00038) and made it used (made $1000)
+North: NorthMechanics_014 fixed a used MonsterTrucks (Cyborg_00014) and made it like new (made $1000)
+North: NorthSalesperson_001 was not able to sell the vehicle GMC_00068
+South: SouthSalesperson_003 sold a vehicle The Felon_00014 for $83430
+South: SouthSalesperson_011 sold a vehicle CAS_00056 for $73503
+North: NorthSalesperson_007 was not able to sell the vehicle GMC_00068
+North: NorthSalesperson_005 sold a vehicle GMC_00068 for $218181
+South: SouthSalesperson_003 was not able to sell the vehicle JOH_00020
+North: NorthSalesperson_005 sold a vehicle SON_00071 for $73670
+North: NorthSalesperson_007 sold a vehicle BMW_00016 for $63814
+North: NorthSalesperson_005 sold a vehicle MAH_00070 for $57463
+North: NorthSalesperson_001 was not able to sell the vehicle MAH_00059
+North: NorthSalesperson_001 was not able to sell the vehicle MAH_00059
+South: SouthMechanics_002 fixed a used Van (ISU_00024) and made it like new (made $1000)
+North: NorthMechanics_006 fixed a used Motorcycles (KAW_00017) and made it like new (made $1000)
+South: SouthMechanics_002 fixed a broken Pickups (GMC_00065) and made it used (made $1000)
+North: NorthMechanics_006 fixed a like new Motorcycles (KAW_00017) and made it used (made $1000)
+North: NorthMechanics_005 fixed a used Motorcycles (KAW_00017) and made it like new (made $1000)
+South: SouthMechanics_010 fixed a used PerformanceCar (LAM_00064) and made it like new (made $2000)
+North: NorthMechanics_005 fixed a like new Motorcycles (KAW_00017) and made it like new (made $0)
+South: SouthMechanics_010 fixed a used Pickups (GMC_00065) and made it like new (made $1000)
+North: NorthMechanics_009 fixed a used Van (ISU_00024) and made it like new (made $1000)
+South: SouthMechanics_001 fixed a used ElectricCars (APT_00012) and made it like new (made $1000)
+North: NorthMechanics_009 fixed a broken PerformanceCar (LAM_00068) and made it used (made $2000)
+South: SouthMechanics_001 fixed a broken PerformanceCar (JAG_00029) and made it used (made $2000)
+South: SouthSalesperson_005 was not able to sell the vehicle JAG_00029
+North: NorthSalesperson_007 was not able to sell the vehicle KAW_00017
+South: SouthSalesperson_007 sold a vehicle JAG_00029 for $107959
+North: NorthSalesperson_001 sold a vehicle KAW_00017 for $142908
+South: SouthSalesperson_005 sold a vehicle LAM_00063 for $56414
+North: NorthSalesperson_001 was not able to sell the vehicle LAM_00068
+South: SouthSalesperson_003 was not able to sell the vehicle MAH_00019
+North: NorthSalesperson_013 was not able to sell the vehicle LAM_00068
+South: SouthSalesperson_005 was not able to sell the vehicle MAH_00019
+South: SouthSalesperson_005 sold a vehicle MAH_00019 for $55677
+North: NorthSalesperson_001 was not able to sell the vehicle LAM_00068
+South: SouthSalesperson_003 was not able to sell the vehicle AST_00066
+North: NorthSalesperson_001 was not able to sell the vehicle LAM_00068
+North: NorthSalesperson_001 was not able to sell the vehicle LAM_00068
+North: NorthSalesperson_007 was not able to sell the vehicle LAM_00068

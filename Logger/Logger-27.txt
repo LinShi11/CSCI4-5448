@@ -610,3 +610,34 @@ South: SouthSalesperson_016 sold a vehicle MAH_00056 for $202831
 North: NorthSalesperson_013 was not able to sell the vehicle MAS_00055
 South: SouthSalesperson_007 was not able to sell the vehicle Bounty Hunter_00015
 South: SouthSalesperson_011 was not able to sell the vehicle Bounty Hunter_00015
+South: SouthMechanics_010 fixed a broken Motorcycles (KAW_00080) and made it used (made $1000)
+North: NorthMechanics_010 fixed a used Tractor (SON_00081) and made it like new (made $2000)
+North: NorthMechanics_010 fixed a like new Tractor (SON_00081) and made it used (made $2000)
+South: SouthMechanics_010 fixed a used Motorcycles (KAW_00080) and made it like new (made $1000)
+North: NorthMechanics_013 fixed a used Pickups (CHE_00079) and made it used (made $0)
+South: SouthMechanics_014 fixed a used PerformanceCar (BMW_00081) and made it like new (made $2000)
+North: NorthMechanics_013 fixed a used Pickups (CHE_00079) and made it like new (made $1000)
+South: SouthMechanics_014 fixed a like new PerformanceCar (BMW_00081) and made it used (made $2000)
+North: NorthMechanics_016 fixed a used Tractor (SON_00081) and made it used (made $0)
+South: SouthMechanics_016 fixed a broken Tractor (JOH_00082) and made it used (made $2000)
+South: SouthMechanics_016 fixed a used PerformanceCar (BMW_00081) and made it like new (made $2000)
+North: NorthSalesperson_005 was not able to sell the vehicle SON_00081
+South: SouthSalesperson_005 was not able to sell the vehicle BMW_00081
+North: NorthSalesperson_007 was not able to sell the vehicle SON_00081
+South: SouthSalesperson_003 was not able to sell the vehicle BMW_00081
+North: NorthSalesperson_001 was not able to sell the vehicle SON_00081
+South: SouthSalesperson_003 sold a vehicle BMW_00081 for $99705
+North: NorthSalesperson_005 was not able to sell the vehicle SON_00081
+North: NorthSalesperson_001 sold a vehicle SON_00081 for $105344
+North: NorthSalesperson_007 sold a vehicle CHE_00079 for $87637
+North: NorthSalesperson_005 sold a vehicle Grave Digger_00013 for $50527
+South: SouthSalesperson_014 was not able to sell the vehicle FOR_00069
+North: NorthSalesperson_001 was not able to sell the vehicle ISU_00024
+South: SouthSalesperson_005 was not able to sell the vehicle FOR_00069
+North: NorthSalesperson_013 sold a vehicle ISU_00024 for $59546
+South: SouthSalesperson_014 was not able to sell the vehicle FOR_00069
+North: NorthSalesperson_001 was not able to sell the vehicle MAH_00066
+South: SouthSalesperson_014 sold a vehicle FOR_00069 for $65418
+North: NorthSalesperson_001 was not able to sell the vehicle MAH_00066
+South: SouthSalesperson_014 sold a vehicle MCL_00075 for $60547
+North: NorthSalesperson_001 was not able to sell the vehicle MAH_00066

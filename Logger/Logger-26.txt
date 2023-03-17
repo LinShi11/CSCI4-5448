@@ -559,3 +559,28 @@ North: NorthSalesperson_007 was not able to sell the vehicle LEX_00060
 North: NorthSalesperson_007 sold a vehicle LEX_00060 for $66834
 North: NorthSalesperson_007 sold a vehicle CHE_00072 for $68825
 North: NorthSalesperson_007 sold a vehicle MAH_00059 for $65728
+South: SouthMechanics_010 fixed a broken Motorcycles (KAW_00080) and made it broken (made $0)
+South: SouthMechanics_014 fixed a broken Motorcycles (KAW_00080) and made it broken (made $0)
+South: SouthMechanics_016 fixed a broken Motorcycles (KAW_00080) and made it used (made $1000)
+North: NorthSalesperson_001 was not able to sell the vehicle RAM_00078
+South: SouthSalesperson_011 was not able to sell the vehicle AST_00077
+North: NorthSalesperson_007 sold a vehicle RAM_00078 for $83550
+South: SouthSalesperson_011 sold a vehicle AST_00077 for $84037
+North: NorthSalesperson_005 was not able to sell the vehicle Bad News Travels Fast_00015
+South: SouthSalesperson_011 was not able to sell the vehicle POR_00074
+North: NorthSalesperson_007 sold a vehicle Bad News Travels Fast_00015 for $83706
+South: SouthSalesperson_003 sold a vehicle POR_00074 for $77589
+North: NorthSalesperson_007 was not able to sell the vehicle MAS_00077
+South: SouthSalesperson_011 sold a vehicle MAH_00062 for $56819
+North: NorthSalesperson_007 sold a vehicle MAS_00077 for $54996
+South: SouthSalesperson_003 was not able to sell the vehicle ALF_00067
+North: NorthSalesperson_001 was not able to sell the vehicle MAH_00059
+North: NorthSalesperson_007 sold a vehicle MAH_00059 for $53140
+North: NorthMechanics_006 fixed a used Tractor (SON_00072) and made it like new (made $2000)
+South: SouthSalesperson_009 was not able to sell the vehicle MCL_00068
+North: NorthSalesperson_001 sold a vehicle MER_00064 for $65493
+South: SouthSalesperson_014 was not able to sell the vehicle MCL_00068
+North: NorthSalesperson_014 was not able to sell the vehicle MAH_00061
+South: SouthSalesperson_005 sold a vehicle MCL_00068 for $65958
+North: NorthSalesperson_013 sold a vehicle MAH_00061 for $59847
+South: SouthSalesperson_014 was not able to sell the vehicle FOR_00069

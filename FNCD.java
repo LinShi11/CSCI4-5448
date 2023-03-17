@@ -1,7 +1,5 @@
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Objects;
 import java.util.Queue;
 import java.util.Random;
 import java.util.Scanner;
@@ -175,9 +173,8 @@ public class FNCD{
         
         cmdInterface = tempCmdInterface;
         if (cmdInterface) {
-        	
-        	
-			/*
+
+			/**
 			 * day 31 will start as normal until the beginning of sales at each FNCD. At
 			 * that point, you will present a command line interface to allow a user to
 			 * interact with the FNCD of their choosing (there will be no random customers
@@ -335,15 +332,21 @@ public class FNCD{
     public void removeDriver(){
         int counter = 0;
         ArrayList<StaffDriver> staffDriverList = Helper.getAllDriver(currentEmployee);
+        System.out.println(staffDriverList.size());
+        System.out.println(staffDriverList);
+        System.out.println(staffDriverCount);
+        System.out.println(currentEmployee.size());
         while(counter < staffDriverList.size()){
             if(staffDriverList.get(counter).isInjured()){
                 StaffDriver driver = staffDriverList.get(counter);
                 employee.add(driver);
                 currentEmployee.remove(driver);
+                staffDriverCount--;
             } else{
                 counter ++;
             }
         }
+        System.out.println(currentEmployee.size());
     }
 
     /**
@@ -399,6 +402,7 @@ public class FNCD{
                 //updateId is a helper function that keeps track of number of staffs we have hired
                 currentEmployee.add(staffFactory.hireStaff(Enum.StaffType.Intern, name+"Intern_" + updateId(), washingMethods.get(random.nextInt(washingMethods.size()))));
                 System.out.println("Hired intern " + currentEmployee.get(currentEmployee.size()-1).getName());
+                internCount++;
             }
         }
 
@@ -408,6 +412,7 @@ public class FNCD{
                 //updateId is a helper function that keeps track of number of staffs we have hired
                 currentEmployee.add(staffFactory.hireStaff(Enum.StaffType.Driver,name+"Driver_" + updateId(), null));
                 System.out.println("Hired driver " + currentEmployee.get(currentEmployee.size()-1).getName());
+                staffDriverCount++;
             }
         }
     }
