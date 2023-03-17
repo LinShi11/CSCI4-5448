@@ -121,7 +121,7 @@ public interface Vehicle {
     /**
      * prints out the action of purchase
      */
-    public void printAction();
+    public void printAction(String name);
 
     /**
      * getter for the arraylist of condition

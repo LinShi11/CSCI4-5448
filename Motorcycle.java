@@ -197,9 +197,9 @@ public class Motorcycle implements Vehicle{
     public double getPercent(){
         return this.percent;
     }
-    
+
     @Override
-    public void printAction(){
-        System.out.println("Purchased a " + getCondition() + ", " + getCleanliness() + " Car " + getBrand() + ", (" + getName() + ") for $" + getCost());
+    public void printAction(String name) {
+        System.out.println(name + " Purchased a " + getCondition() + ", " + getCleanliness() + " Car " + getBrand() + ", (" + getName() + ") for $" + getCost());
     }
 }

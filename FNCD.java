@@ -127,11 +127,11 @@ public class FNCD{
 
         // directly hire 3 interns, 3 mechanics, and 3 salesperson + 3 drivers (staffs)
         for(int i = 0; i < maxSize; i++){
-            internList.add(new Interns("Intern_" + updateId(), 
+            internList.add(new Interns(name+"Intern_" + updateId(),
                 washingMethods.get(random.nextInt(washingMethods.size()))));
-            mechanicsList.add(new Mechanics("Mechanics_"+ updateId()));
-            salespeopleList.add(new Salesperson("Salesperson_" + updateId()));
-            staffDriverList.add(new StaffDriver("Driver_" + updateId()));
+            mechanicsList.add(new Mechanics(name+"Mechanics_"+ updateId()));
+            salespeopleList.add(new Salesperson(name+"Salesperson_" + updateId()));
+            staffDriverList.add(new StaffDriver(name+"Driver_" + updateId()));
         }
     }
 
@@ -303,8 +303,8 @@ public class FNCD{
 
         // look at the placement and determine action
         for(int j = 0; j < placement.size(); j++) {
-            System.out.println("One of the vehicle got " + (placement.get(j)+1) + " place" );
-            notifyLogger("One of the vehicle got " + (placement.get(j)+1) + " place");
+            System.out.println(name + ": One of the vehicle got " + (placement.get(j)+1) + " place" );
+            notifyLogger(name + ": One of the vehicle got " + (placement.get(j)+1) + " place");
 
             // if we won
             if (placement.get(j) == 0 || placement.get(j) == 1 || placement.get(j) == 2) {
@@ -358,12 +358,26 @@ public class FNCD{
      * hire interns, buy more vehicles, complete tasks (washing, repairing, selling), and checks to make sure we have enough money
      */
     public void startDay(){
-        System.out.println("Opening... (Current budget $" + this.budget + ")");
+        System.out.println(name + " opening... (Current budget $" + this.budget + ")");
         this.dailySales = 0;
         hire();
+        endOfEvents();
         setInventory();
+        endOfEvents();
         tasks();
+        endOfEvents();
         noMoney();
+    }
+
+    public void endOfEvents(){
+        if (barrier != null) {
+            try {
+                barrier.await();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println();
     }
 
 
@@ -379,7 +393,7 @@ public class FNCD{
             int tempLength = internList.size();
             for(int i = 0; i < maxSize-tempLength; i++){
                 //updateId is a helper function that keeps track of number of staffs we have hired
-                internList.add(new Interns("Intern_" + updateId(), washingMethods.get(random.nextInt(washingMethods.size()))));
+                internList.add(new Interns(name+"Intern_" + updateId(), washingMethods.get(random.nextInt(washingMethods.size()))));
                 System.out.println("Hired intern " + internList.get(internList.size()-1).getName());
             }
         }
@@ -389,7 +403,7 @@ public class FNCD{
             int tempLength = staffDriverList.size();
             for(int i = 0; i < maxSize-tempLength; i++){
                 //updateId is a helper function that keeps track of number of staffs we have hired
-                staffDriverList.add(new StaffDriver("Driver_" + updateId()));
+                staffDriverList.add(new StaffDriver(name+"Driver_" + updateId()));
                 System.out.println("Hired driver " + staffDriverList.get(staffDriverList.size()-1).getName());
             }
         }
@@ -464,7 +478,6 @@ public class FNCD{
                 setInventoryHelper(car);
             }
         }
-        System.out.println();
     }
 
     /**
@@ -476,7 +489,7 @@ public class FNCD{
     public void setInventoryHelper(Vehicle car){
         this.budget -= car.getCost();
         this.inventory.add(car);
-        car.printAction();
+        car.printAction(name);
     }
 
     /**
@@ -486,12 +499,11 @@ public class FNCD{
     public void tasks(){
     	
     	Random rand = new Random();
-    	
-        System.out.println("Washing..." + name);
         washing();
-        System.out.println("\nRepairing..."+ name);
+        endOfEvents();
+
         repairing();
-        
+        endOfEvents();
         if (cmdInterface) { //command interface
         	
         	//wait for process command
@@ -563,6 +575,7 @@ public class FNCD{
 	        System.out.println("\nWe have " + buyer + " Buyers today");
 	        System.out.println("Selling..."+ name);
 	        selling(buyer);
+            endOfEvents();
         }
     }
 
@@ -570,6 +583,7 @@ public class FNCD{
      * washing function that iterate through each intern and ask them to wash two cars.
      */
     public void washing(){
+        System.out.println("Washing..." + name);
         for (Interns emp: internList){
             emp.setDailyBonus(0);
             emp.wash(inventory);
@@ -580,6 +594,7 @@ public class FNCD{
      * repairing function that iterate through each mechanic and ask them to repair two cars.
      */
     public void repairing(){
+        System.out.println("Repairing..."+ name);
         for(Mechanics emp: mechanicsList){
             emp.setDailyBonus(0);
             ArrayList<String> response = emp.repair(inventory);
@@ -756,8 +771,8 @@ public class FNCD{
             Interns steppedUp = internList.get(0);
 
             // extract their unique id and use Mechanics_<id> as the new name and pass in the number of days they have worked already
-            String name = steppedUp.getName().split("_")[1];
-            Mechanics newMechanics = new Mechanics("Mechanics_"+name, steppedUp.getTotalDaysWorked(), steppedUp.getTotalBonus(), steppedUp.getTotalPay());
+            String tempId = steppedUp.getName().split("_")[1];
+            Mechanics newMechanics = new Mechanics(name+"Mechanics_"+tempId, steppedUp.getTotalDaysWorked(), steppedUp.getTotalBonus(), steppedUp.getTotalPay());
 
             //modify arraylists
             mechanicsList.add(newMechanics);
@@ -774,8 +789,8 @@ public class FNCD{
             quitHelper("Salesperson");
 
             Interns steppedUp = internList.get(0);
-            String name = steppedUp.getName().split("_")[1];
-            Salesperson newSalesperson = new Salesperson("Salesperson_"+name, steppedUp.getTotalDaysWorked(), steppedUp.getTotalBonus(), steppedUp.getTotalPay());
+            String tempId = steppedUp.getName().split("_")[1];
+            Salesperson newSalesperson = new Salesperson(name+"Salesperson_"+tempId, steppedUp.getTotalDaysWorked(), steppedUp.getTotalBonus(), steppedUp.getTotalPay());
             salespeopleList.add(newSalesperson);
             internList.remove(0);
 

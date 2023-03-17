@@ -127,7 +127,7 @@ public class SaleDecorator implements Vehicle {
     }
 
     @Override
-    public void printAction() {
+    public void printAction(String name) {
 
     }
 }

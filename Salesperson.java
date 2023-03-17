@@ -216,7 +216,7 @@ public class Salesperson implements Staff{
             car = new SatelliteRadio(car);
             System.out.print("Satellite Radio");
         }
-        System.out.print(". Making the current sale price " + (car.getPercent()*100) + "% of the original price. Therefore the current sale price is $" + (int)(car.getSalePrice() * car.getPercent()) + "\n");
+        System.out.print("The current sale price " + (car.getPercent()*100) + "% of the original price. Therefore the current sale price is $" + (int)(car.getSalePrice() * car.getPercent()) + "\n");
         return car;
     }
 

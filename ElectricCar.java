@@ -202,9 +202,9 @@ public class ElectricCar implements Vehicle{
     public Enum.VehicleType getType(){
         return this.type;
     }
-    
+
     @Override
-    public void printAction(){
-        System.out.println("Purchased a " + getCondition() + ", " + getCleanliness() + " Car " + getBrand() + ", (" + getName() + ") for $" + getCost());
+    public void printAction(String name) {
+        System.out.println(name + " Purchased a " + getCondition() + ", " + getCleanliness() + " Car " + getBrand() + ", (" + getName() + ") for $" + getCost());
     }
 }
