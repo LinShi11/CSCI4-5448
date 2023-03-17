@@ -1,4 +1,8 @@
+/**
+ * This class contains the two enums used for the factory pattern.
+ */
 public class Enum {
+    // vehicle enum
     enum VehicleType{
         PerformanceCar,
         Pickups,
@@ -10,7 +14,7 @@ public class Enum {
         Van,
         Crane
     }
-
+    // staff enum
     enum StaffType{
         Intern,
         Mechanic,

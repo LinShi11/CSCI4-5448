@@ -12,7 +12,7 @@ import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 
 /**
- * This class tests for all the beginning values
+ * This class tests for threading
  */
 public class FNCDTest {
 	FNCD north;
@@ -25,12 +25,19 @@ public class FNCDTest {
     	south = new FNCD("South", barrier, true);
 
 	}
+
+	/**
+	 * make sure both FNCDs are set up correctly
+	 */
 	@Test
 	public void testThreadingStartEmployee(){
 		Assertions.assertEquals(north.currentEmployee.size(), 12);
 		Assertions.assertEquals(south.currentEmployee.size(), 12);
 	}
 
+	/**
+	 * make sure both FNCD have ended correctly
+	 */
 	@Test
 	public void testThreadEnd(){
 		Thread northThread = new FNCDThead(north);
@@ -47,6 +54,9 @@ public class FNCDTest {
 		Assertions.assertTrue(south.currentEmployee.get(0).getTotalDaysWorked() > 1);
 	}
 
+	/**
+	 * both FNCD has sold some cars.
+	 */
 	@Test
 	public void testSellingCars(){
 		Thread northThread = new FNCDThead(north);

@@ -76,6 +76,12 @@ public class Helper {
         return num;
 
     }
+
+    /**
+     * returns all interns
+     * @param employee: arraylist of all the current staff
+     * @return arraylist of all the intern
+     */
     public static ArrayList<Interns> getAllIntern(ArrayList<Staff> employee){
         ArrayList<Interns> staffList = new ArrayList<>();
         for(Staff staff: employee){
@@ -85,7 +91,11 @@ public class Helper {
         }
         return staffList;
     }
-
+    /**
+     * returns all mechanics
+     * @param employee: arraylist of all the current staff
+     * @return arraylist of all the mechanics
+     */
     public static ArrayList<Mechanics> getAllMechanics(ArrayList<Staff> employee){
         ArrayList<Mechanics> staffList = new ArrayList<>();
         for(Staff staff: employee){
@@ -96,6 +106,11 @@ public class Helper {
         return staffList;
     }
 
+    /**
+     * returns all salespeople
+     * @param employee: arraylist of all the current staff
+     * @return arraylist of all the salespeople
+     */
     public static ArrayList<Salesperson> getAllSalesperson(ArrayList<Staff> employee){
         ArrayList<Salesperson> staffList = new ArrayList<>();
         for(Staff staff: employee){
@@ -106,6 +121,11 @@ public class Helper {
         return staffList;
     }
 
+    /**
+     * returns all driver
+     * @param employee: arraylist of all the current staff
+     * @return arraylist of all the driver
+     */
     public static ArrayList<StaffDriver> getAllDriver(ArrayList<Staff> employee){
         ArrayList<StaffDriver> staffList = new ArrayList<>();
         for(Staff staff: employee){

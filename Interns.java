@@ -180,34 +180,22 @@ public class Interns implements Staff {
 
     }
 
+    /**
+     * wash clean
+     * @param car
+     * @return
+     */
     public String washClean(Vehicle car){
-//        Random random = new Random();
-//        int chance = random.nextInt(100);
-//        if(chance < 5){
-//            return "dirty";
-//        } else if(chance < 35){
-//            this.dailyBonus += car.getWashBonus(1);
-//            return "sparkling";
-//        } else{
-//            return "clean";
-//        }
-    	
     	washingMethod.wash(car);
     	return car.getCleanliness();
     }
 
+    /**
+     * wash dirty
+     * @param car
+     * @return
+     */
     public String washDirty(Vehicle car){
-//        Random random = new Random();
-//        int chance = random.nextInt(10);
-//        if (chance < 8){
-//            this.dailyBonus += car.getWashBonus(1);
-//            return "clean";
-//        } else if (chance < 9){
-//            this.dailyBonus += car.getWashBonus(2);
-//            return "sparkling";
-//        } else{
-//            return "dirty";
-//        }
     	washingMethod.wash(car);
     	return car.getCleanliness();
     }

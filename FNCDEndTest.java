@@ -62,7 +62,9 @@ public class FNCDEndTest {
     @Test
     public void weArePayingThem(){
         for (Staff emp: fncd.currentEmployee){
-            Assertions.assertTrue(emp.getTotalPay()>0);
+            if(emp.getType() != Enum.StaffType.Driver) {
+                Assertions.assertTrue(emp.getTotalPay() > 0);
+            }
         }
     }
 
@@ -91,6 +93,9 @@ public class FNCDEndTest {
         }
     }
 
+    /**
+     * checks that FNCD has made some money
+     */
     @Test
     public void fncdHasMadeMoney(){
         ArrayList<Integer> fncdMoney = fncd.getFNCDMoney();

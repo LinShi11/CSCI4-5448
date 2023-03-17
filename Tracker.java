@@ -3,6 +3,7 @@ import java.util.concurrent.Flow;
 /**
  * This class extends from the observer (part of the Observer pattern)
  * It takes the text for each time, parse it and store it. the final calculation will be made by the end of the day
+ * Additionally, this represents a Singleton pattern. In this case, it is a lazy instantiation. Where we do not instantiate the tracker until it is needed
  */
 public class Tracker extends Observer{
     private int FNCDamount;
@@ -22,7 +23,12 @@ public class Tracker extends Observer{
         this.count = 0;
     }
 
-    // lazy
+    /**
+     * lazy instantiation. When the function is first called, we will check to see if there is a Tracker, if not, we will create one
+     * @param FNCDamount: the current amount for both FNCD
+     * @param employeeAmount: the current amount for both FNCD employee
+     * @return The tracker
+     */
     public static Tracker getInstance(int FNCDamount, int employeeAmount){
         if(uniqueTracker == null){
             uniqueTracker = new Tracker(FNCDamount, employeeAmount);

@@ -39,18 +39,16 @@ public class FNCD{
     int monsterTruckCount;
     int motorcycleCount;
     int staffDriverCount;
-    
-    //3 new types
+
+    // three new types
     int tractorCount;
     int vanCount;
     int craneCount;
     
     Queue<Command> commandQueue = new ConcurrentLinkedQueue<>();
-    
     static final ArrayList<WashingMethod> washingMethods = new ArrayList<>(Arrays.asList(
     			new ChemicalWash(), new DetailedWash(), new ElbowGreasWash()
     		));
-    Observer observer;
     Logger logger;
     Tracker tracker;
     int performanceCarWin;
@@ -69,6 +67,7 @@ public class FNCD{
     
     //first sales person for transaction
     private Salesperson secondSalesperson = null;
+    // two factories
     private VehicleFactory vehicleFactory;
     private StaffFactory staffFactory;
 
@@ -166,6 +165,7 @@ public class FNCD{
                 startDay();
                 endDay();
             }
+            // race day
             if (date % 7 == 0 || date % 7 == 3){
                 System.out.println((name != null?name + ":":"") + "******FNCD Day " + this.date + ": Race day!!!!!!!******");
                 race();
@@ -232,7 +232,7 @@ public class FNCD{
         ArrayList<Vehicle> racing = new ArrayList<>();
         int winCount ;
         switch (car){
-            // generate the usable car arraylist
+            // generate the usable car arraylist for each type of possible cars
             case 0:
                 for(Vehicle vehicle: inventory){
                     if(vehicle.getType() == Enum.VehicleType.PerformanceCar && !vehicle.getCondition().equals("broken") ){
@@ -390,23 +390,10 @@ public class FNCD{
         endOfEvents();
     }
 
-    public void endOfEvents(){
-        if (barrier != null) {
-            try {
-                barrier.await();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-        System.out.println();
-    }
-
-
     /**
      * hire function checks to make sure we have 3 interns.
      * If not, we will hire more interns
      */
-
     public void hire(){
         Random random = new Random();
         if(internCount != maxSize){
@@ -439,6 +426,8 @@ public class FNCD{
     public void setInventory(){
         int temp = performanceCarCount;
         for(int i = 0; i < maxInventory - temp; i++ ){
+
+            // we are calling the factory instead of the performance car constructor itself.
             Vehicle car = vehicleFactory.buildVehicle(Enum.VehicleType.PerformanceCar, updateInventoryId());
             if(car != null) {
                 performanceCarCount++;
@@ -636,6 +625,10 @@ public class FNCD{
         }
     }
 
+    /**
+     * Helper function that splits the arraylist and notifies logger
+     * @param response: an arraylist of responses
+     */
     public void notifyHelper(ArrayList<String> response){
         for(int i = 0; i < response.size(); i++){
             notifyLogger(response.get(i));
@@ -688,6 +681,11 @@ public class FNCD{
         count.add(count.get(count.size()-1) + tempSale);
     }
 
+    /**
+     * selling in at day 31st
+     * @param salesperson
+     * @param car
+     */
     public void selling(Salesperson salesperson, Vehicle car){
         Buyer newBuyer = new Buyer();
 
@@ -702,7 +700,6 @@ public class FNCD{
             response = salesperson.getName() + " sold a vehicle " + car.getName() + " for $" + (int)(car.getSalePrice() * car.getPercent() * Salesperson.bonusHelper(car.getType(), performanceCarWin, pickupWin, monsterTruckWin, motorcycleWin));
             notifyLogger(response);
             notifyTracker(response);
-//            FNCDamount += (int)(car.getSalePrice() * car.getPercent() * Salesperson.bonusHelper(car.getType(), performanceCarWin, pickupWin, monsterTruckWin, motorcycleWin));
 
             soldCars.add(car); // add the soldcar list
             this.budget += (int)(car.getSalePrice() * car.getPercent() * Salesperson.bonusHelper(car.getType(), performanceCarWin, pickupWin, monsterTruckWin, motorcycleWin));
@@ -924,8 +921,12 @@ public class FNCD{
 	public String getName() {
 		return name;
 	}
-	
-	//get vehicle by name
+
+    /**
+     * return the vehicle
+     * @param name: given the name of the vehicle
+     * @return return the vehicle that we are looking for
+     */
 	public Vehicle getVehicle(String name) {
 		for(Vehicle car: inventory){
 			if (car.getName().equalsIgnoreCase(name)) {
@@ -935,10 +936,18 @@ public class FNCD{
 		return null;
 	}
 
+    /**
+     * Helper function to draw graph, keep count of the number of sold cars
+     * @return arraylist of sold cars from day 0
+     */
     public ArrayList<Integer> getCount(){
         return count;
     }
 
+    /**
+     * Helper function to draw graph, keep count of the total money the employee made
+     * @return employee salary + bonuses from day 0
+     */
     public ArrayList<Integer> getEmployeeMoney() {
         if(count.size() < employeeMoney.size()){
             employeeMoney.remove(employeeMoney.size()-1);
@@ -946,10 +955,28 @@ public class FNCD{
         return employeeMoney;
     }
 
+    /**
+     * Helper function to draw graph, keep count of the total money the FNCD made
+     * @return the money the FNCD made from day 0, not including the money added when it runs out of money
+     */
     public ArrayList<Integer> getFNCDMoney() {
         if(count.size() < FNCDMoney.size()){
             FNCDMoney.remove(FNCDMoney.size()-1);
         }
         return FNCDMoney;
+    }
+
+    /**
+     * Helper function to use the barrier to prevent one thread from moving too fast.
+     */
+    public void endOfEvents(){
+        if (barrier != null) {
+            try {
+                barrier.await();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println();
     }
 }

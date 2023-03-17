@@ -4,14 +4,20 @@ import java.util.concurrent.Flow;
 /**
  * This class extends from observer (part of the Observer Pattern).
  * It takes the text for each time and write it to a text file.
+ * Additionally, this is part of the singleton pattern, where it demonstrates eager instantiation
  */
 public class Logger extends Observer{
     private Flow.Subscription subscription;
+    // eager instantiation, where the logger is created
     private static Logger uniqueLogger = new Logger();
     public Logger(){
 
     }
-    // eager
+
+    /**
+     * returns the unique logger when the instance is asked
+     * @return
+     */
     public static Logger getInstance(){
         return uniqueLogger;
     }

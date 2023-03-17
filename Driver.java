@@ -9,26 +9,27 @@ import java.util.concurrent.CyclicBarrier;
 /**
  * @author Lin Shi
  * @author Anuragini Sinha
- * This is Project 2 for CSCI 4/5448 OOAD
+ * This is Project 4 for CSCI 4/5448 OOAD
  *
  * This program is a simulation of the Friendly Neighborhood Car Dealership (FNCD).
- * The driver class only holds an instance of fncd and calls simulation.
+ * The driver class contains both FNCDs, we used CyclicBarrier for threading.
  */
 public class Driver {
-	
-    public static void main(String[] args){   	    	
+	private static Boolean tests = true;
+    public static void main(String[] args){
     	
-    	
+    	// threading purposes
     	CyclicBarrier barrier = new CyclicBarrier(2);
-		Logger logger = new Logger();
-		Tracker tracker = new Tracker(0,0);
-    	
+
+		// create the two FNCD
     	FNCD north = new FNCD("North", barrier, true);
     	FNCD south = new FNCD("South", barrier, true);
-    	
+
+		// create the thread
     	Thread northThread = new FNCDThead(north);    	
     	Thread southThread = new FNCDThead(south);
-    	
+
+		//start
     	northThread.start();
     	southThread.start();
     	
@@ -37,7 +38,7 @@ public class Driver {
 		} catch (InterruptedException e1) {
 			e1.printStackTrace();
 		}
-    	
+
     	CommandLineInterface inf = new CommandLineInterface(
     			 Arrays.asList(new FNCD[] {north, south}));
     	    	
@@ -54,6 +55,8 @@ public class Driver {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+
+		// gets all the information from both FNCD for graphing
 		ArrayList<Integer> northCount = north.getCount();
 		ArrayList<Integer> northEmployee = north.getEmployeeMoney();
 		ArrayList<Integer> northFNCD = north.getFNCDMoney();
@@ -62,6 +65,7 @@ public class Driver {
 		ArrayList<Integer> southEmployee = south.getEmployeeMoney();
 		ArrayList<Integer> southFNCD = south.getFNCDMoney();
 
+		// draws both charts
 		new JFreeChartGraph(northCount, northEmployee, northFNCD, southCount, southEmployee, southFNCD).setVisible(true);
     	new JFreeChartGraph(northCount, southCount).setVisible(true);
 	}
