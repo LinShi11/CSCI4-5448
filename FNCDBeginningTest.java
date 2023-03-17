@@ -16,43 +16,37 @@ public class FNCDBeginningTest {
     /**
      * the employee is correct
      */
-//    @Test
-//    public void initial(){
-//        Assertions.assertEquals(fncd.internList.size(), 3);
-//        Assertions.assertEquals(fncd.mechanicsList.size(), 3);
-//        Assertions.assertEquals(fncd.salespeopleList.size(), 3);
-//        Assertions.assertEquals(fncd.staffDriverList.size(), 3);
-//    }
+    @Test
+    public void initial(){
+        Assertions.assertEquals(Helper.getAllIntern(fncd.currentEmployee).size(), 3);
+        Assertions.assertEquals(Helper.getAllSalesperson(fncd.currentEmployee).size(), 3);
+        Assertions.assertEquals(Helper.getAllMechanics(fncd.currentEmployee).size(), 3);
+        Assertions.assertEquals(Helper.getAllDriver(fncd.currentEmployee).size(), 3);
+    }
+
+    @Test
+    public void budget(){
+        Assertions.assertEquals(500000, fncd.budget);
+    }
 
     /**
      * the inventory is correct
      */
-//    @Test
-//    public void inventory(){
-//        fncd.setInventory();
-//        Assertions.assertEquals(fncd.performanceCarList.size(), 6);
-//        Assertions.assertEquals(fncd.carsList.size(), 6);
-//        Assertions.assertEquals(fncd.pickupsList.size(), 6);
-//        Assertions.assertEquals(fncd.electricCarList.size(), 6);
-//        Assertions.assertEquals(fncd.motorcycleList.size(), 6);
-//        Assertions.assertEquals(fncd.monsterTruckList.size(), 6);
-//    }
+    @Test
+    public void inventory(){
+        fncd.setInventory();
+        Assertions.assertEquals(fncd.inventory.size(), 54);
+    }
 
     /**
      * the initial pay is 0 for everyone
      */
-//    @Test
-//    public void initialPayisCorrect(){
-//        for (Interns emp: fncd.internList){
-//            Assertions.assertTrue(emp.getTotalPay()==0);
-//        }
-//        for (Mechanics emp: fncd.mechanicsList){
-//            Assertions.assertTrue(emp.getTotalPay()==0);
-//        }
-//        for (Salesperson emp: fncd.salespeopleList){
-//            Assertions.assertTrue(emp.getTotalPay()==0);
-//        }
-//    }
+    @Test
+    public void initialPayisCorrect(){
+        for (Staff emp: fncd.currentEmployee){
+            Assertions.assertTrue(emp.getTotalPay()==0);
+        }
+    }
 
     /**
      * The car sale price is not 0
