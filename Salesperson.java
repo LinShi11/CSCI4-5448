@@ -13,6 +13,7 @@ public class Salesperson implements Staff{
     private int totalBonus;
     private String status;
     private int totalDaysWorked;
+    private Enum.StaffType type;
 
     /**
      * Constructor for Salesperson. Everything is set to 0, dailySalary is 200
@@ -26,6 +27,7 @@ public class Salesperson implements Staff{
         this.totalPay = 0;
         this.status = "working";
         this.totalDaysWorked = 0;
+        this.type = Enum.StaffType.Salesperson;
     }
     /**
      * Constructor for Interns to Salesperson. Set the previous total bonus, total pay, and totalDays worked.
@@ -42,6 +44,7 @@ public class Salesperson implements Staff{
         this.totalPay = pay;
         this.status = "working";
         this.totalDaysWorked = days;
+        this.type = Enum.StaffType.Salesperson;
     }
     /**
      * setter for name
@@ -151,6 +154,11 @@ public class Salesperson implements Staff{
     @Override
     public int getTotalDaysWorked() {
         return this.totalDaysWorked;
+    }
+
+    @Override
+    public Enum.StaffType getType() {
+        return type;
     }
 
     /**

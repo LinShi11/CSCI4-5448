@@ -10,4 +10,11 @@ public class Enum {
         Van,
         Crane
     }
+
+    enum StaffType{
+        Intern,
+        Mechanic,
+        Salesperson,
+        Driver
+    }
 }

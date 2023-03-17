@@ -46,18 +46,9 @@ public class Helper {
     /**
      * The function print all employees using String.format to make it look nice
      */
-    public static void printAllStaff(ArrayList<Interns> internList, ArrayList<Mechanics> mechanicsList, ArrayList<Salesperson> salespeopleList, ArrayList<Staff> employee, ArrayList<StaffDriver> staffDriverList){
+    public static void printAllStaff(ArrayList<Staff> currentEmployee, ArrayList<Staff> employee){
         System.out.println(String.format("%20s %20s %20s %20s %15s", "Name", "Total Days Worked", "Total Normal Pay", "Total Bonus Pay", "Status"));
-        for (Interns emp: internList){
-            System.out.println(String.format("%20s %20s %20s %20s %15s", emp.getName(), emp.getTotalDaysWorked() + " days", "$" + emp.getTotalPay(), "$" + emp.getTotalBonus(), emp.getStatus()));
-        }
-        for (Mechanics emp: mechanicsList){
-            System.out.println(String.format("%20s %20s %20s %20s %15s", emp.getName(), emp.getTotalDaysWorked() + " days", "$" + emp.getTotalPay(), "$" + emp.getTotalBonus(), emp.getStatus()));
-        }
-        for (Salesperson emp: salespeopleList){
-            System.out.println(String.format("%20s %20s %20s %20s %15s", emp.getName(), emp.getTotalDaysWorked() + " days", "$" + emp.getTotalPay(), "$" + emp.getTotalBonus(), emp.getStatus()));
-        }
-        for (StaffDriver emp: staffDriverList){
+        for (Staff emp: currentEmployee){
             System.out.println(String.format("%20s %20s %20s %20s %15s", emp.getName(), emp.getTotalDaysWorked() + " days", "$" + emp.getTotalPay(), "$" + emp.getTotalBonus(), emp.getStatus()));
         }
         for (Staff emp: employee){
@@ -84,6 +75,45 @@ public class Helper {
         }
         return num;
 
+    }
+    public static ArrayList<Interns> getAllIntern(ArrayList<Staff> employee){
+        ArrayList<Interns> staffList = new ArrayList<>();
+        for(Staff staff: employee){
+            if(staff.getType() == Enum.StaffType.Intern){
+                staffList.add((Interns) staff);
+            }
+        }
+        return staffList;
+    }
+
+    public static ArrayList<Mechanics> getAllMechanics(ArrayList<Staff> employee){
+        ArrayList<Mechanics> staffList = new ArrayList<>();
+        for(Staff staff: employee){
+            if(staff.getType() == Enum.StaffType.Mechanic){
+                staffList.add((Mechanics) staff);
+            }
+        }
+        return staffList;
+    }
+
+    public static ArrayList<Salesperson> getAllSalesperson(ArrayList<Staff> employee){
+        ArrayList<Salesperson> staffList = new ArrayList<>();
+        for(Staff staff: employee){
+            if(staff.getType() == Enum.StaffType.Salesperson){
+                staffList.add((Salesperson) staff);
+            }
+        }
+        return staffList;
+    }
+
+    public static ArrayList<StaffDriver> getAllDriver(ArrayList<Staff> employee){
+        ArrayList<StaffDriver> staffList = new ArrayList<>();
+        for(Staff staff: employee){
+            if(staff.getType() == Enum.StaffType.Driver){
+                staffList.add((StaffDriver) staff);
+            }
+        }
+        return staffList;
     }
 
 }

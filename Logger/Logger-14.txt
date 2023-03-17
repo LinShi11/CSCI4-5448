@@ -576,3 +576,17 @@ South: SouthDriver_008 made $0
 South: SouthDriver_012 made $0
 North: NorthDriver_008 made $0
 North: NorthDriver_012 made $0
+South: FNCD have 3 Motorcycles in the race. 
+North: FNCD have 3 Motorcycles in the race. 
+South: South: One of the vehicle got 18 place
+North: North: One of the vehicle got 8 place
+South: South: One of the vehicle got 14 place
+North: North: One of the vehicle got 1 place
+South: South: One of the vehicle got 17 place
+North: North: One of the vehicle got 7 place
+South: SouthDriver_004 made $0
+North: NorthDriver_004 made $0
+South: SouthDriver_008 made $0
+North: NorthDriver_008 made $1000
+South: SouthDriver_012 made $0
+North: NorthDriver_012 made $0

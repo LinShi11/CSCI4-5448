@@ -21,5 +21,6 @@ public interface Staff {
     int getTotalBonus();
     String getStatus();
     int getTotalDaysWorked();
+    Enum.StaffType getType();
 
 }

@@ -671,3 +671,24 @@ South: SouthSalesperson_014 was not able to sell the vehicle AST_00028
 North: NorthSalesperson_011 was not able to sell the vehicle ACU_00001
 South: SouthSalesperson_014 was not able to sell the vehicle AST_00028
 North: NorthSalesperson_007 was not able to sell the vehicle ACU_00001
+North: NorthMechanics_002 fixed a used Motorcycles (YAM_00016) and made it like new (made $1000)
+South: SouthMechanics_002 fixed a used Cars (NIS_00030) and made it like new (made $1000)
+North: NorthMechanics_002 fixed a like new Motorcycles (YAM_00016) and made it used (made $1000)
+South: SouthMechanics_002 fixed a broken Motorcycles (KTM_00016) and made it used (made $1000)
+South: SouthMechanics_006 fixed a used PerformanceCar (ALF_00066) and made it like new (made $2000)
+North: NorthMechanics_006 fixed a broken Pickups (RAM_00009) and made it broken (made $0)
+North: NorthMechanics_006 fixed a broken Pickups (RAM_00009) and made it used (made $1000)
+South: SouthMechanics_006 fixed a used MonsterTrucks (Grinder_00014) and made it like new (made $1000)
+North: NorthMechanics_005 fixed a broken PerformanceCar (AST_00062) and made it broken (made $0)
+South: SouthMechanics_005 fixed a used Motorcycles (KTM_00016) and made it like new (made $1000)
+North: NorthMechanics_005 fixed a broken PerformanceCar (AST_00062) and made it used (made $2000)
+South: SouthMechanics_005 fixed a broken Tractor (MAH_00069) and made it used (made $2000)
+South: SouthSalesperson_001 sold a vehicle KTM_00016 for $128656
+North: NorthSalesperson_007 was not able to sell the vehicle YAM_00016
+South: SouthSalesperson_001 was not able to sell the vehicle Grinder_00014
+North: NorthSalesperson_007 was not able to sell the vehicle YAM_00016
+South: SouthSalesperson_001 was not able to sell the vehicle Grinder_00014
+North: NorthSalesperson_007 was not able to sell the vehicle YAM_00016
+South: SouthSalesperson_011 sold a vehicle Grinder_00014 for $84330
+North: NorthSalesperson_007 sold a vehicle YAM_00016 for $97216
+South: SouthSalesperson_003 was not able to sell the vehicle ALF_00066

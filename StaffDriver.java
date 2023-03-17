@@ -14,6 +14,7 @@ public class StaffDriver implements Staff{
     private int totalBonus;
     private String status;
     private int totalDaysWorked;
+    private Enum.StaffType type;
 
     /**
      * Drivers do not quit like other Staff subclasses. 
@@ -31,6 +32,7 @@ public class StaffDriver implements Staff{
         this.totalDaysWorked = 0;
         this.injured = false;
         this.winCount = 0;
+        this.type = Enum.StaffType.Driver;
     }
 
     /**
@@ -117,6 +119,11 @@ public class StaffDriver implements Staff{
     @Override
     public int getTotalDaysWorked() {
         return this.totalDaysWorked;
+    }
+
+    @Override
+    public Enum.StaffType getType() {
+        return type;
     }
 
     /**

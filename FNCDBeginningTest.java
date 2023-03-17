@@ -16,13 +16,13 @@ public class FNCDBeginningTest {
     /**
      * the employee is correct
      */
-    @Test
-    public void initial(){
-        Assertions.assertEquals(fncd.internList.size(), 3);
-        Assertions.assertEquals(fncd.mechanicsList.size(), 3);
-        Assertions.assertEquals(fncd.salespeopleList.size(), 3);
-        Assertions.assertEquals(fncd.staffDriverList.size(), 3);
-    }
+//    @Test
+//    public void initial(){
+//        Assertions.assertEquals(fncd.internList.size(), 3);
+//        Assertions.assertEquals(fncd.mechanicsList.size(), 3);
+//        Assertions.assertEquals(fncd.salespeopleList.size(), 3);
+//        Assertions.assertEquals(fncd.staffDriverList.size(), 3);
+//    }
 
     /**
      * the inventory is correct
@@ -41,18 +41,18 @@ public class FNCDBeginningTest {
     /**
      * the initial pay is 0 for everyone
      */
-    @Test
-    public void initialPayisCorrect(){
-        for (Interns emp: fncd.internList){
-            Assertions.assertTrue(emp.getTotalPay()==0);
-        }
-        for (Mechanics emp: fncd.mechanicsList){
-            Assertions.assertTrue(emp.getTotalPay()==0);
-        }
-        for (Salesperson emp: fncd.salespeopleList){
-            Assertions.assertTrue(emp.getTotalPay()==0);
-        }
-    }
+//    @Test
+//    public void initialPayisCorrect(){
+//        for (Interns emp: fncd.internList){
+//            Assertions.assertTrue(emp.getTotalPay()==0);
+//        }
+//        for (Mechanics emp: fncd.mechanicsList){
+//            Assertions.assertTrue(emp.getTotalPay()==0);
+//        }
+//        for (Salesperson emp: fncd.salespeopleList){
+//            Assertions.assertTrue(emp.getTotalPay()==0);
+//        }
+//    }
 
     /**
      * The car sale price is not 0

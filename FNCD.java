@@ -32,14 +32,15 @@ public class FNCD{
     int pickupsCount;
     ArrayList<Vehicle> soldCars;
     ArrayList<Staff> employee;
-    ArrayList<Interns> internList;
-    ArrayList<Mechanics> mechanicsList;
-    ArrayList<Salesperson> salespeopleList;
+    ArrayList<Staff> currentEmployee;
+    int internCount;
+    int mechanicsCount;
+    int salespeopleCount;
 
     int electricCarCount;
     int monsterTruckCount;
     int motorcycleCount;
-    ArrayList<StaffDriver> staffDriverList;
+    int staffDriverCount;
     
     //3 new types
     int tractorCount;
@@ -71,6 +72,7 @@ public class FNCD{
     //first sales person for transaction
     private Salesperson secondSalesperson = null;
     private VehicleFactory vehicleFactory;
+    private StaffFactory staffFactory;
     
     /**
      * Constructor for FNCD class
@@ -96,11 +98,12 @@ public class FNCD{
         this.inventoryId = 1;
 
         // arraylist that will be used to hold information
-        this.internList = new ArrayList<>();
-        this.mechanicsList = new ArrayList<>();
-        this.salespeopleList = new ArrayList<>();
-        this.staffDriverList = new ArrayList<>();
+        this.internCount = 3;
+        this.mechanicsCount = 3;
+        this.salespeopleCount = 3;
+        this.staffDriverCount = 3;
         this.employee = new ArrayList<>();
+        this.currentEmployee = new ArrayList<>();
 
         this.performanceCarCount = 0;
         this.carsCount = 0;
@@ -124,14 +127,15 @@ public class FNCD{
         this.employeeAmount = 0;
 
         vehicleFactory = new VehicleFactory();
+        staffFactory = new StaffFactory();
 
         // directly hire 3 interns, 3 mechanics, and 3 salesperson + 3 drivers (staffs)
         for(int i = 0; i < maxSize; i++){
-            internList.add(new Interns(name+"Intern_" + updateId(),
+            currentEmployee.add(staffFactory.hireStaff(Enum.StaffType.Intern, name+"Intern_" + updateId(),
                 washingMethods.get(random.nextInt(washingMethods.size()))));
-            mechanicsList.add(new Mechanics(name+"Mechanics_"+ updateId()));
-            salespeopleList.add(new Salesperson(name+"Salesperson_" + updateId()));
-            staffDriverList.add(new StaffDriver(name+"Driver_" + updateId()));
+            currentEmployee.add(staffFactory.hireStaff(Enum.StaffType.Mechanic,name+"Mechanics_"+ updateId(), null));
+            currentEmployee.add(staffFactory.hireStaff(Enum.StaffType.Salesperson,name+"Salesperson_" + updateId(), null));
+            currentEmployee.add(staffFactory.hireStaff(Enum.StaffType.Driver, name+"Driver_" + updateId(), null));
         }
     }
 
@@ -148,7 +152,6 @@ public class FNCD{
         	
             // check for sundays and call startDay()/endDay() if it is not sunday
             if(date % 7 != 0) {
-//                observer = new Observer();
                 logger = Logger.getInstance();
                 tracker = Tracker.getInstance(FNCDamount, employeeAmount);
                 System.out.println((name != null?name + ":":"") + "******FNCD Day " + this.date + "******");
@@ -185,8 +188,7 @@ public class FNCD{
 	            race();
 	        }
 	        date++;
-	        
-//	        observer = new Observer();
+
 	        logger = Logger.getInstance();
 	        tracker = Tracker.getInstance(FNCDamount, employeeAmount);
 	        System.out.println((name != null?name + ":":"") + "******FNCD Day " + this.date + "******");
@@ -203,7 +205,7 @@ public class FNCD{
         	//end of simulation, prints the details
             System.out.println("\n******End of simulation******");
             System.out.println("Here is a list of all the staffs: ");
-            Helper.printAllStaff(internList, mechanicsList, salespeopleList, employee, staffDriverList);
+            Helper.printAllStaff(currentEmployee, employee);
             System.out.println("\nHere is a list of all the vehicles: ");
             Helper.printInventory(inventory, soldCars);
             
@@ -305,7 +307,7 @@ public class FNCD{
         for(int j = 0; j < placement.size(); j++) {
             System.out.println(name + ": One of the vehicle got " + (placement.get(j)+1) + " place" );
             notifyLogger(name + ": One of the vehicle got " + (placement.get(j)+1) + " place");
-
+            ArrayList<StaffDriver> staffDriverList = Helper.getAllDriver(currentEmployee);
             // if we won
             if (placement.get(j) == 0 || placement.get(j) == 1 || placement.get(j) == 2) {
                 winCount ++;
@@ -332,10 +334,12 @@ public class FNCD{
      */
     public void removeDriver(){
         int counter = 0;
+        ArrayList<StaffDriver> staffDriverList = Helper.getAllDriver(currentEmployee);
         while(counter < staffDriverList.size()){
             if(staffDriverList.get(counter).isInjured()){
-                employee.add(staffDriverList.get(counter));
-                staffDriverList.remove(counter);
+                StaffDriver driver = staffDriverList.get(counter);
+                employee.add(driver);
+                currentEmployee.remove(driver);
             } else{
                 counter ++;
             }
@@ -346,6 +350,7 @@ public class FNCD{
      * this function updated the bonuses for the drivers who won
      */
     public void updateRaceBonus(){
+        ArrayList<StaffDriver> staffDriverList = Helper.getAllDriver(currentEmployee);
         for(StaffDriver driver: staffDriverList){
             driver.setTotalBonus();
             notifyLogger(driver.getName() + " made $" + driver.getDailyBonus());
@@ -388,23 +393,21 @@ public class FNCD{
 
     public void hire(){
         Random random = new Random();
-        if(internList.size() != maxSize){
+        if(internCount != maxSize){
             // iterate maxSize(3) - currentSize so we can add more interns
-            int tempLength = internList.size();
-            for(int i = 0; i < maxSize-tempLength; i++){
+            for(int i = 0; i < maxSize-internCount; i++){
                 //updateId is a helper function that keeps track of number of staffs we have hired
-                internList.add(new Interns(name+"Intern_" + updateId(), washingMethods.get(random.nextInt(washingMethods.size()))));
-                System.out.println("Hired intern " + internList.get(internList.size()-1).getName());
+                currentEmployee.add(staffFactory.hireStaff(Enum.StaffType.Intern, name+"Intern_" + updateId(), washingMethods.get(random.nextInt(washingMethods.size()))));
+                System.out.println("Hired intern " + currentEmployee.get(currentEmployee.size()-1).getName());
             }
         }
 
-        if(staffDriverList.size() != maxSize){
+        if(staffDriverCount != maxSize){
             // iterate maxSize(3) - currentSize so we can add more driver
-            int tempLength = staffDriverList.size();
-            for(int i = 0; i < maxSize-tempLength; i++){
+            for(int i = 0; i < maxSize-staffDriverCount; i++){
                 //updateId is a helper function that keeps track of number of staffs we have hired
-                staffDriverList.add(new StaffDriver(name+"Driver_" + updateId()));
-                System.out.println("Hired driver " + staffDriverList.get(staffDriverList.size()-1).getName());
+                currentEmployee.add(staffFactory.hireStaff(Enum.StaffType.Driver,name+"Driver_" + updateId(), null));
+                System.out.println("Hired driver " + currentEmployee.get(currentEmployee.size()-1).getName());
             }
         }
     }
@@ -530,7 +533,7 @@ public class FNCD{
 				}
         		
         		if (command != null) {
-        		
+        		    ArrayList<Salesperson> salespeopleList = Helper.getAllSalesperson(currentEmployee);
         			if (command instanceof QuitCommand) {
         				break; //exit the while
         			}else if (command instanceof SalespersonNameCommand) {
@@ -583,6 +586,7 @@ public class FNCD{
      * washing function that iterate through each intern and ask them to wash two cars.
      */
     public void washing(){
+        ArrayList<Interns> internList = Helper.getAllIntern(currentEmployee);
         System.out.println("Washing..." + name);
         for (Interns emp: internList){
             emp.setDailyBonus(0);
@@ -594,6 +598,7 @@ public class FNCD{
      * repairing function that iterate through each mechanic and ask them to repair two cars.
      */
     public void repairing(){
+        ArrayList<Mechanics> mechanicsList = Helper.getAllMechanics(currentEmployee);
         System.out.println("Repairing..."+ name);
         for(Mechanics emp: mechanicsList){
             emp.setDailyBonus(0);
@@ -615,6 +620,7 @@ public class FNCD{
      * @param buyer: the number of buyer for the day
      */
     public void selling(int buyer){
+        ArrayList<Salesperson> salespeopleList = Helper.getAllSalesperson(currentEmployee);
         for(Salesperson emp: salespeopleList){
             emp.setDailyBonus(0);
         }
@@ -624,9 +630,8 @@ public class FNCD{
         //iterate through number of buyers
         for(int i =0; i < buyer; i++){
             Buyer newBuyer = new Buyer();
-
             //randomly choose a salesperson
-            representative = salespeopleList.get(random.nextInt(3));
+            representative = salespeopleList.get(random.nextInt(salespeopleCount));
 
             //call the sale function in SalePerson, the function will return the car the buyer was looking at
             Vehicle car = representative.sale(newBuyer, inventory, performanceCarWin, pickupWin, monsterTruckWin, motorcycleWin);
@@ -700,36 +705,22 @@ public class FNCD{
      * dailyUpdate required for each employee, such as days worked, total pay, and bonus
      */
     public void dailyUpdate(){
-        for(Interns staff: internList){
+        for(Staff staff: currentEmployee){
             staff.setTotalDaysWorked();
             staff.setTotalPay();
             staff.setTotalBonus();
-            employeeAmount += staff.getDailyBonus();
-            employeeAmount += staff.getDailySalary();
+            notifyTracker("employee $" + staff.getDailyBonus());
+            notifyTracker("employee $" + staff.getDailySalary());
+        }
+//        for(Interns staff: internList){
+//            staff.setTotalDaysWorked();
+//            staff.setTotalPay();
+//            staff.setTotalBonus();
+//            employeeAmount += staff.getDailyBonus();
+//            employeeAmount += staff.getDailySalary();
 //            notifyTracker("employee $" + staff.getDailyBonus());
 //            notifyTracker("employee $" + staff.getDailySalary());
-        }
-        for(Mechanics staff: mechanicsList){
-            staff.setTotalDaysWorked();
-            staff.setTotalPay();
-            staff.setTotalBonus();
-            employeeAmount += staff.getDailyBonus();
-            employeeAmount += staff.getDailySalary();
-        }
-        for(Salesperson staff: salespeopleList){
-            staff.setTotalDaysWorked();
-            staff.setTotalPay();
-            staff.setTotalBonus();
-            employeeAmount += staff.getDailyBonus();
-            employeeAmount += staff.getDailySalary();
-        }
-        for(StaffDriver staff: staffDriverList){
-            staff.setTotalDaysWorked();
-            staff.setTotalPay();
-            staff.setTotalBonus();
-            employeeAmount += staff.getDailyBonus();
-            employeeAmount += staff.getDailySalary();
-        }
+//        }
     }
 
     /**
@@ -752,31 +743,38 @@ public class FNCD{
         Random random = new Random();
         // 10% chance of quitting
         if(random.nextInt(10) == 0){
+            ArrayList<Interns> internList = Helper.getAllIntern(currentEmployee);
             int temp = random.nextInt(3);
-
+            Staff quitter = internList.get(temp);
             //add them to a list of past employees
-            employee.add(internList.get(temp));
-            internList.remove(temp);
+            employee.add(quitter);
+            currentEmployee.remove(quitter);
+            internCount--;
 
             // display the information to the user using a helper function
             quitHelper("Intern");
         }
         if(random.nextInt(10) == 0){
+            ArrayList<Mechanics> mechanicsList = Helper.getAllMechanics(currentEmployee);
             int temp = random.nextInt(3);
-            employee.add(mechanicsList.get(temp));
-            mechanicsList.remove(temp);
+            Staff quitter = mechanicsList.get(temp);
+            employee.add(quitter);
+            currentEmployee.remove(quitter);
+            mechanicsCount--;
             quitHelper("Mechanics");
 
             // ask one of the intern to step up
-            Interns steppedUp = internList.get(0);
+            Interns steppedUp = Helper.getAllIntern(currentEmployee).get(0);
 
             // extract their unique id and use Mechanics_<id> as the new name and pass in the number of days they have worked already
             String tempId = steppedUp.getName().split("_")[1];
-            Mechanics newMechanics = new Mechanics(name+"Mechanics_"+tempId, steppedUp.getTotalDaysWorked(), steppedUp.getTotalBonus(), steppedUp.getTotalPay());
+            Staff newMechanics = staffFactory.promotion(Enum.StaffType.Mechanic,name+"Mechanics_"+tempId, steppedUp.getTotalDaysWorked(), steppedUp.getTotalBonus(), steppedUp.getTotalPay());
 
             //modify arraylists
-            mechanicsList.add(newMechanics);
-            internList.remove(0);
+            currentEmployee.add(newMechanics);
+            mechanicsCount ++;
+            currentEmployee.remove(steppedUp);
+            internCount--;
 
             // announce event
             System.out.println("Intern " + steppedUp.getName() + " has stepped up and took the mechanics job");
@@ -784,15 +782,22 @@ public class FNCD{
         // same as mechanics
         if(random.nextInt(10) == 0){
             int temp = random.nextInt(3);
-            employee.add(salespeopleList.get(temp));
-            salespeopleList.remove(temp);
+            ArrayList<Salesperson> salespeopleList = Helper.getAllSalesperson(currentEmployee);
+            Staff quitter = salespeopleList.get(temp);
+            employee.add(quitter);
+            currentEmployee.remove(quitter);
+            salespeopleCount--;
             quitHelper("Salesperson");
 
-            Interns steppedUp = internList.get(0);
+            Interns steppedUp = Helper.getAllIntern(currentEmployee).get(0);
+
             String tempId = steppedUp.getName().split("_")[1];
-            Salesperson newSalesperson = new Salesperson(name+"Salesperson_"+tempId, steppedUp.getTotalDaysWorked(), steppedUp.getTotalBonus(), steppedUp.getTotalPay());
-            salespeopleList.add(newSalesperson);
-            internList.remove(0);
+            Staff newSalesperson = staffFactory.promotion(Enum.StaffType.Salesperson, name + "Salesperson_" + tempId, steppedUp.getTotalDaysWorked(), steppedUp.getTotalBonus(), steppedUp.getTotalPay());
+
+            currentEmployee.add(newSalesperson);
+            salespeopleCount++;
+            currentEmployee.remove(steppedUp);
+            internCount--;
 
             System.out.println("Intern " + steppedUp.getName() + " has stepped up and took the salesperson job");
 

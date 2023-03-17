@@ -14,6 +14,7 @@ public class Interns implements Staff {
     private int totalBonus;
     private String status;
     private int totalDaysWorked;
+    private Enum.StaffType type;
 
     /**
      * The washing method is different for every intern
@@ -29,6 +30,7 @@ public class Interns implements Staff {
         this.status = "working";
         this.totalDaysWorked = 0;
         this.washingMethod = washingMethod;
+        this.type = Enum.StaffType.Intern;
     }
 
     /**
@@ -104,6 +106,11 @@ public class Interns implements Staff {
     @Override
     public int getTotalDaysWorked() {
         return this.totalDaysWorked;
+    }
+
+    @Override
+    public Enum.StaffType getType() {
+        return type;
     }
 
     /**

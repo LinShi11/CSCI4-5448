@@ -15,6 +15,7 @@ public class Mechanics implements Staff {
     private int totalBonus;
     private String status;
     private int totalDaysWorked;
+    private Enum.StaffType type;
 
     /**
      * Constructor for Mechanics. Everything is set to 0, dailySalary is 240
@@ -28,6 +29,7 @@ public class Mechanics implements Staff {
         this.totalPay = 0;
         this.status = "working";
         this.totalDaysWorked = 0;
+        this.type = Enum.StaffType.Mechanic;
     }
 
     /**
@@ -45,6 +47,7 @@ public class Mechanics implements Staff {
         this.totalPay = pay;
         this.status = "working";
         this.totalDaysWorked = days;
+        this.type = Enum.StaffType.Mechanic;
     }
 
     /**
@@ -168,6 +171,11 @@ public class Mechanics implements Staff {
     @Override
     public int getTotalDaysWorked() {
         return this.totalDaysWorked;
+    }
+
+    @Override
+    public Enum.StaffType getType() {
+        return type;
     }
 
     /**

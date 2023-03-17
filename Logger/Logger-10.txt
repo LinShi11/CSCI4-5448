@@ -1332,3 +1332,32 @@ North: NorthDriver_008 made $1000
 South: SouthDriver_008 made $0
 South: SouthDriver_012 made $0
 North: NorthDriver_012 made $0
+South: SouthMechanics_002 fixed a used PerformanceCar (JAG_00059) and made it used (made $0)
+North: NorthMechanics_002 fixed a broken PerformanceCar (MAS_00002) and made it used (made $2000)
+South: SouthMechanics_002 fixed a broken Motorcycles (KTM_00016) and made it used (made $1000)
+North: NorthMechanics_002 fixed a used MonsterTrucks (War Wizard_00014) and made it like new (made $1000)
+South: SouthMechanics_006 fixed a used Cars (MAZ_00005) and made it like new (made $1000)
+North: NorthMechanics_006 fixed a used PerformanceCar (LAM_00028) and made it like new (made $2000)
+South: SouthMechanics_006 fixed a used MonsterTrucks (Blue Thunder_00037) and made it like new (made $1000)
+North: NorthMechanics_006 fixed a used Van (ISU_00023) and made it like new (made $1000)
+South: SouthMechanics_005 fixed a used Tractor (CAS_00055) and made it like new (made $2000)
+North: NorthMechanics_005 fixed a broken Tractor (MAH_00020) and made it used (made $2000)
+South: SouthMechanics_005 fixed a used PerformanceCar (AUD_00003) and made it used (made $0)
+North: NorthMechanics_005 fixed a broken Van (HYU_00043) and made it used (made $1000)
+North: NorthSalesperson_013 was not able to sell the vehicle LAM_00028
+South: SouthSalesperson_011 was not able to sell the vehicle FER_00001
+South: SouthSalesperson_011 sold a vehicle FER_00001 for $80985
+South: FNCD have 3 PerformanceCar in the race. 
+North: FNCD have 3 Pickups in the race. 
+South: South: One of the vehicle got 9 place
+North: North: One of the vehicle got 11 place
+South: South: One of the vehicle got 7 place
+North: North: One of the vehicle got 6 place
+South: South: One of the vehicle got 16 place
+North: North: One of the vehicle got 18 place
+South: SouthDriver_004 made $0
+North: NorthDriver_004 made $0
+South: SouthDriver_008 made $0
+North: NorthDriver_008 made $0
+South: SouthDriver_012 made $0
+North: NorthDriver_012 made $0

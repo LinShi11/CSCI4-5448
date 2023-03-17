@@ -946,3 +946,29 @@ North: NorthSalesperson_011 was not able to sell the vehicle RAM_00032
 North: NorthSalesperson_011 was not able to sell the vehicle RAM_00032
 North: NorthSalesperson_011 was not able to sell the vehicle RAM_00032
 North: NorthSalesperson_011 was not able to sell the vehicle RAM_00032
+North: NorthMechanics_002 fixed a broken PerformanceCar (AST_00029) and made it broken (made $0)
+South: SouthMechanics_002 fixed a used Tractor (CAS_00062) and made it like new (made $2000)
+North: NorthMechanics_002 fixed a used Van (HYU_00043) and made it like new (made $1000)
+South: SouthMechanics_002 fixed a broken MonsterTrucks (Grinder_00014) and made it used (made $1000)
+North: NorthMechanics_006 fixed a broken Van (KIA_00042) and made it used (made $1000)
+South: SouthMechanics_006 fixed a broken PerformanceCar (ALF_00066) and made it used (made $2000)
+South: SouthMechanics_006 fixed a used MonsterTrucks (Grinder_00014) and made it used (made $0)
+North: NorthMechanics_006 fixed a broken Tractor (MAS_00041) and made it used (made $2000)
+South: SouthMechanics_005 fixed a broken Motorcycles (SUZ_00051) and made it broken (made $0)
+South: SouthMechanics_005 fixed a broken Motorcycles (SUZ_00051) and made it broken (made $0)
+North: NorthMechanics_005 fixed a broken PerformanceCar (AST_00029) and made it used (made $2000)
+North: NorthMechanics_005 fixed a used Cars (NIS_00030) and made it like new (made $1000)
+North: NorthSalesperson_003 sold a vehicle AST_00029 for $93507
+South: SouthSalesperson_001 sold a vehicle AUD_00003 for $75443
+North: NorthSalesperson_003 was not able to sell the vehicle NIS_00030
+South: SouthSalesperson_003 was not able to sell the vehicle SON_00019
+North: NorthSalesperson_007 was not able to sell the vehicle NIS_00030
+South: SouthSalesperson_011 sold a vehicle SON_00019 for $59407
+North: NorthSalesperson_007 was not able to sell the vehicle NIS_00030
+South: SouthSalesperson_003 sold a vehicle JOH_00041 for $68775
+North: NorthSalesperson_003 was not able to sell the vehicle NIS_00030
+South: SouthSalesperson_003 was not able to sell the vehicle MAS_00060
+North: NorthSalesperson_016 was not able to sell the vehicle NIS_00030
+South: SouthSalesperson_001 was not able to sell the vehicle MAS_00060
+North: NorthSalesperson_003 sold a vehicle NIS_00030 for $89553
+South: SouthSalesperson_011 sold a vehicle MAS_00060 for $60000
