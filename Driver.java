@@ -15,7 +15,6 @@ import java.util.concurrent.CyclicBarrier;
  * The driver class contains both FNCDs, we used CyclicBarrier for threading.
  */
 public class Driver {
-	private static Boolean tests = true;
     public static void main(String[] args){
     	
     	// threading purposes

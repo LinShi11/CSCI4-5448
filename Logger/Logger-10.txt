@@ -1,0 +1,30 @@
+North: NorthMechanics_002 fixed a used PerformanceCar (AUD_00006) and made it like new (made $2000)
+South: SouthMechanics_006 fixed a broken Cars (HON_00008) and made it used (made $1000)
+North: NorthMechanics_002 fixed a used Van (KIA_00048) and made it like new (made $1000)
+South: SouthMechanics_006 fixed a broken PerformanceCar (LAM_00002) and made it broken (made $0)
+North: NorthMechanics_006 fixed a broken Motorcycles (KTM_00031) and made it used (made $1000)
+South: SouthMechanics_010 fixed a used ElectricCars (NIS_00020) and made it like new (made $1000)
+North: NorthMechanics_006 fixed a used Motorcycles (KTM_00031) and made it like new (made $1000)
+South: SouthMechanics_010 fixed a broken MonsterTrucks (Bulldozer_00030) and made it used (made $1000)
+South: SouthMechanics_005 fixed a used PerformanceCar (BMW_00001) and made it like new (made $2000)
+North: NorthMechanics_010 fixed a used MonsterTrucks (Captain's Curse_00029) and made it like new (made $1000)
+South: SouthMechanics_005 fixed a used Van (KIA_00044) and made it like new (made $1000)
+North: NorthMechanics_010 fixed a like new MonsterTrucks (Captain's Curse_00029) and made it used (made $1000)
+South: SouthSalesperson_003 was not able to sell the vehicle CAR_00064
+North: NorthSalesperson_007 sold a vehicle MAN_00050 for $112278
+North: NorthSalesperson_007 was not able to sell the vehicle CAR_00059
+North: NorthSalesperson_007 was not able to sell the vehicle CAR_00059
+North: NorthSalesperson_007 was not able to sell the vehicle CAR_00059
+North: NorthFNCD have 3 Pickups in the race. 
+South: SouthFNCD have 3 PerformanceCar in the race. 
+North: North: One of the vehicle got 8 place
+South: South: One of the vehicle got 16 place
+North: North: One of the vehicle got 6 place
+South: South: One of the vehicle got 17 place
+South: South: One of the vehicle got 6 place
+North: North: One of the vehicle got 18 place
+South: SouthDriver_012 made $0
+North: NorthDriver_004 made $0
+North: NorthDriver_008 made $0
+South: SouthDriver_015 made $0
+South: SouthDriver_016 made $0

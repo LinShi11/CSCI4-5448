@@ -101,7 +101,6 @@ public class JFreeChartGraph extends JFrame {
 
         // add each value in the dataset
         for(int i = 0; i < northCount.size(); i++){
-            System.out.println(northCount.get(i));
             dataset.addValue((int)northCount.get(i), series1, String.valueOf(i));
             dataset.addValue((int)northEmployee.get(i), series2, String.valueOf(i));
             dataset.addValue((int)northFNCD.get(i), series3, String.valueOf(i));

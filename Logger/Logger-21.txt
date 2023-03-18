@@ -1,0 +1,14 @@
+North: NorthFNCD have 3 PerformanceCar in the race. 
+South: SouthFNCD have 3 PerformanceCar in the race. 
+North: North: One of the vehicle got 9 place
+South: South: One of the vehicle got 17 place
+North: North: One of the vehicle got 5 place
+South: South: One of the vehicle got 13 place
+North: North: One of the vehicle got 10 place
+South: South: One of the vehicle got 5 place
+North: NorthDriver_004 made $0
+South: SouthDriver_012 made $0
+South: SouthDriver_015 made $0
+North: NorthDriver_008 made $0
+South: SouthDriver_016 made $0
+North: NorthDriver_015 made $0

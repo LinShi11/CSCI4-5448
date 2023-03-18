@@ -1,0 +1,5 @@
+South: SouthMechanics_006 fixed a used Crane (CAR_00076) and made it like new (made $5000)
+North: NorthMechanics_002 fixed a used Crane (PAL_00075) and made it like new (made $5000)
+North: NorthSalesperson_005 was not able to sell the vehicle PAL_00071
+South: SouthSalesperson_013 was not able to sell the vehicle CAR_00076
+North: NorthSalesperson_007 sold a vehicle PAL_00071 for $178718

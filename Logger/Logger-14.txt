@@ -1,0 +1,14 @@
+North: NorthFNCD have 3 Pickups in the race. 
+South: SouthFNCD have 3 Motorcycles in the race. 
+North: North: One of the vehicle got 9 place
+South: South: One of the vehicle got 11 place
+South: South: One of the vehicle got 2 place
+North: North: One of the vehicle got 4 place
+North: North: One of the vehicle got 14 place
+South: South: One of the vehicle got 12 place
+South: SouthDriver_012 made $0
+North: NorthDriver_004 made $0
+North: NorthDriver_008 made $0
+South: SouthDriver_015 made $1000
+South: SouthDriver_016 made $0
+North: NorthDriver_015 made $0

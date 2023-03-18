@@ -1,0 +1,27 @@
+North: NorthMechanics_002 fixed a used PerformanceCar (LEX_00005) and made it used (made $0)
+South: SouthMechanics_006 fixed a used Crane (LIE_00049) and made it like new (made $5000)
+North: NorthMechanics_002 fixed a broken Tractor (MAH_00041) and made it used (made $2000)
+South: SouthMechanics_006 fixed a used MonsterTrucks (Bulldozer_00030) and made it like new (made $1000)
+North: NorthMechanics_006 fixed a broken PerformanceCar (AUD_00006) and made it used (made $2000)
+South: SouthMechanics_010 fixed a used Tractor (CAS_00040) and made it like new (made $2000)
+North: NorthMechanics_006 fixed a used Van (KIA_00048) and made it used (made $0)
+South: SouthMechanics_010 fixed a used Cars (MAZ_00012) and made it like new (made $1000)
+North: NorthMechanics_010 fixed a used Motorcycles (DUC_00033) and made it like new (made $1000)
+South: SouthMechanics_005 fixed a used ElectricCars (NIO_00021) and made it like new (made $1000)
+North: NorthMechanics_010 fixed a broken PerformanceCar (LAM_00004) and made it used (made $2000)
+South: SouthMechanics_005 fixed a broken ElectricCars (TES_00019) and made it broken (made $0)
+South: SouthSalesperson_007 sold a vehicle CAR_00053 for $149706
+North: NorthSalesperson_003 was not able to sell the vehicle PAL_00053
+North: NorthSalesperson_011 was not able to sell the vehicle PAL_00053
+South: SouthSalesperson_007 sold a vehicle KON_00054 for $133728
+North: NorthSalesperson_011 sold a vehicle PAL_00053 for $119306
+South: SouthSalesperson_007 was not able to sell the vehicle MAN_00050
+North: NorthSalesperson_011 was not able to sell the vehicle KON_00051
+South: SouthSalesperson_001 was not able to sell the vehicle MAN_00050
+South: SouthSalesperson_001 sold a vehicle MAN_00050 for $108344
+South: SouthSalesperson_001 was not able to sell the vehicle LIE_00049
+North: NorthSalesperson_011 sold a vehicle KON_00051 for $115606
+South: SouthSalesperson_003 was not able to sell the vehicle LIE_00049
+North: NorthSalesperson_007 was not able to sell the vehicle MAN_00050
+South: SouthSalesperson_003 was not able to sell the vehicle LIE_00049
+North: NorthSalesperson_007 was not able to sell the vehicle MAN_00050

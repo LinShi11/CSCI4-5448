@@ -1,0 +1,17 @@
+North: NorthMechanics_002 fixed a broken Van (IVE_00047) and made it used (made $1000)
+South: SouthMechanics_006 fixed a used Pickups (JEE_00014) and made it like new (made $1000)
+North: NorthMechanics_002 fixed a broken Crane (KON_00058) and made it used (made $5000)
+South: SouthMechanics_006 fixed a broken Motorcycles (SUZ_00036) and made it used (made $1000)
+South: SouthMechanics_010 fixed a broken ElectricCars (ZOO_00022) and made it used (made $1000)
+North: NorthMechanics_006 fixed a used Tractor (CAS_00040) and made it like new (made $2000)
+South: SouthMechanics_010 fixed a used Van (HYU_00043) and made it like new (made $1000)
+North: NorthMechanics_006 fixed a broken Tractor (JOH_00038) and made it used (made $2000)
+South: SouthMechanics_005 fixed a broken ElectricCars (NIS_00020) and made it used (made $1000)
+North: NorthMechanics_010 fixed a used Van (IVE_00047) and made it like new (made $1000)
+South: SouthMechanics_005 fixed a used Crane (PAL_00055) and made it like new (made $5000)
+North: NorthMechanics_010 fixed a like new Van (IVE_00047) and made it used (made $1000)
+South: SouthSalesperson_013 was not able to sell the vehicle PAL_00055
+South: SouthSalesperson_003 sold a vehicle PAL_00055 for $135200
+South: SouthSalesperson_001 was not able to sell the vehicle LIE_00060
+South: SouthSalesperson_013 was not able to sell the vehicle LIE_00060
+South: SouthSalesperson_013 sold a vehicle LIE_00060 for $104408

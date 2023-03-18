@@ -1,0 +1,9 @@
+South: SouthMechanics_006 fixed a used Crane (MAN_00072) and made it like new (made $5000)
+North: NorthSalesperson_007 was not able to sell the vehicle LIE_00067
+South: SouthSalesperson_003 sold a vehicle CAR_00071 for $144450
+South: SouthSalesperson_003 was not able to sell the vehicle LIE_00067
+North: NorthSalesperson_003 was not able to sell the vehicle LIE_00067
+South: SouthSalesperson_003 was not able to sell the vehicle LIE_00067
+North: NorthSalesperson_011 sold a vehicle LIE_00067 for $162012
+South: SouthSalesperson_001 was not able to sell the vehicle LIE_00067
+North: NorthSalesperson_003 sold a vehicle LIE_00066 for $130570
