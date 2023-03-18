@@ -16,6 +16,6 @@ Note: FNCD is connected with VehicleFactory; however, since FNCD is all the way 
 ![command-pattern](images/command.png)
 
 ###### Old UML Just in Case (strategy and decorator):
-![strategy-pattern](images/strategy.png)
+![strategy-pattern](images/strategyPattern.png)
 
 ![decorator-pattern](images/decorator.png)
