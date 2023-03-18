@@ -1,4 +1,5 @@
 ##### The whole UML diagram:
+![wholeUML](images/wholeUML.png)
 
 ##### UML for Staff (factory):
 ![Staff-factory-pattern](images/staff.png)
@@ -11,7 +12,8 @@ Note: FNCD is connected with VehicleFactory; however, since FNCD is all the way 
 ##### UML for Singleton:
 ![observer-singleton-pattern](images/observer-singleton.png)
 
-##### UML for decorator:
+##### UML for Command:
+![command-pattern](image/command.png)
 
 ###### Old UML Just in Case (strategy and decorator):
 ![strategy-pattern](images/strategy.png)
