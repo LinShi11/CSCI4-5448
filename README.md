@@ -31,3 +31,5 @@ The extra credit (line graphs) could be found in [ExtraCredit.md](ExtraCredit.md
 * The tracker is used to keep track of both FNCD income at the end of the day. 
 * We used the multi-threading to run the simulation in parallel. Therefore, instead of North complete all washing then South starting. Both of the FNCD are completing and announcing the task. Therefore, we added the name of the FNCD to try and distinguish that. 
 * We used the cumulative vehicle sold, money earned by staff, and money earned by FNCD. Additionally, since the cumulative vehicle sold is very hard to see, we created its own graph to demonstrate the changes. 
+
+A few changes were made in the UML for the command pattern. The basic structure of the UML is intact, but a few variable names did change to selectFNCDLocation,secondSalesPerson, veichleDetials and quit are all new variables added or modified.Addtionally the name of the command interface class did change to CommandInterface.
