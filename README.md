@@ -9,6 +9,7 @@ This is the directory for project 4
 #### What has changed between 4.1 UML and 4.2 UML
 We had minimum changes in the Staff and Vehicle between 4.1 UML and 4.2 UML. When implementing the design, it was clear that all the factory pattern methods needs to return either Staff or Vehicle. Additionally, StaffFactory has another methods that accounts for promotion from intern to mechanics/salesperson. 
 Furthermore, there has been some changes in the naming portion, such as from buildCars() to buildVehicle(). We created Tractor and Crane instead of Suv and Convertibles. In Logger and Tracker, only some naming has been modified, the overall structure of the singleton pattern has stayed the same.  
+A few changes were made in the UML for the command pattern. The basic structure of the UML is intact, but a few variable names did change to selectFNCDLocation,secondSalesPerson, veichleDetials and quit are all new variables added or modified. Addtionally the name of the command interface class did change to CommandInterface.
 
 #### UML: 
 The UML diagram for 4.2 could be found in [uml.md](uml.md). 
@@ -32,4 +33,3 @@ The extra credit (line graphs) could be found in [ExtraCredit.md](ExtraCredit.md
 * We used the multi-threading to run the simulation in parallel. Therefore, instead of North complete all washing then South starting. Both of the FNCD are completing and announcing the task. Therefore, we added the name of the FNCD to try and distinguish that. 
 * We used the cumulative vehicle sold, money earned by staff, and money earned by FNCD. Additionally, since the cumulative vehicle sold is very hard to see, we created its own graph to demonstrate the changes. 
 
-A few changes were made in the UML for the command pattern. The basic structure of the UML is intact, but a few variable names did change to selectFNCDLocation,secondSalesPerson, veichleDetials and quit are all new variables added or modified.Addtionally the name of the command interface class did change to CommandInterface.
