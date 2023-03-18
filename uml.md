@@ -13,7 +13,7 @@ Note: FNCD is connected with VehicleFactory; however, since FNCD is all the way 
 ![observer-singleton-pattern](images/observer-singleton.png)
 
 ##### UML for Command:
-![command-pattern](image/command.png)
+![command-pattern](images/command.png)
 
 ###### Old UML Just in Case (strategy and decorator):
 ![strategy-pattern](images/strategy.png)
