@@ -9,6 +9,11 @@ import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.Flow;
 import java.util.concurrent.SubmissionPublisher;
 
+/*A "CyclicBarrier" is a synchronization mechanism that allows a set number of threads to wait for each other to reach a common point before continuing execution.
+ When a thread reaches the barrier point, it waits for all other threads to arrive at the same point before continuing execution. 
+ Once all threads have reached the barrier, the "barrier action" is executed, and all threads are released to continue execution.
+ */
+
 /**	
  * FNCD holds the simulation for the program.
  */
@@ -59,7 +64,7 @@ public class FNCD{
     private int employeeAmount;
     
     private String name; //Such as North or South
-    private CyclicBarrier barrier;
+    private CyclicBarrier barrier; 
     private boolean cmdInterface;
     
     //first sales person for asking name

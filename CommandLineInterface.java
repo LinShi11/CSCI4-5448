@@ -1,7 +1,9 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.List;
-
+/*
+ * Input from user is taken via the commandline in this class and will execute corresponding methods in the FNCD instances
+ */
 public class CommandLineInterface {
 
 	private List<FNCD> FNCDs;
@@ -145,11 +147,15 @@ public class CommandLineInterface {
 			}
 			break;
 			}
-
+/*
+ * Purpose of sleeping a thread is to introduce a delay in the execution of the program. 
+ * This is useful in situations where you need to wait for a certain event to occur, 
+ * or if you want to limit the rate at which a piece of code is executed.
+ */
 			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
+				Thread.sleep(1000); // will pause execution of current thread for 1000 milliseconds, sleeping thread used to delay execution of program 
+			} catch (InterruptedException e) { //exception thrown if sleeping thread is interupted by another thread
+				e.printStackTrace(); //
 			}
 
 			// display menu and read selection
