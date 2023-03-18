@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.List;
 /**
- * This class is part of the Command Pattern. 
+ * This class is part of the Command Pattern.
  * Input from user is taken via the commandline in this class and will execute corresponding methods in the FNCD instances
  */
 public class CommandLineInterface {
