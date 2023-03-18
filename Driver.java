@@ -29,12 +29,13 @@ public class Driver {
     	Thread northThread = new FNCDThead(north);    	
     	Thread southThread = new FNCDThead(south);
 
-		//start
+		//start both north and south threads
     	northThread.start();
     	southThread.start();
     	
+		// Sleep for 1 sec so other threads can work too
     	try {
-			Thread.sleep(1000);
+			Thread.sleep(1000); 
 		} catch (InterruptedException e1) {
 			e1.printStackTrace();
 		}
@@ -49,6 +50,11 @@ public class Driver {
 		}
     	
     	//wait for complete
+		
+		 //The join method is called on each thread he calling thread (in this case, the main thread) 
+		 // to pause its execution and wait for the target thread (either "northThread" or "southThread") to complete before resuming its own execution.
+
+		 
     	try {
 			northThread.join();
 			southThread.join();
@@ -70,6 +76,10 @@ public class Driver {
     	new JFreeChartGraph(northCount, southCount).setVisible(true);
 	}
 }
+/**
+  * FNCDThread class is a wrapper class for the FNCD class which is responsible for running the simulation method
+  of the FNCD instance which is passed in as a parameter when the thread starts.
+  */
 
 class FNCDThead extends Thread{
 	
