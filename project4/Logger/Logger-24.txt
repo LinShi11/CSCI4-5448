@@ -1,0 +1,51 @@
+North: NorthMechanics_002 fixed a used Tractor (MAH_00041) and made it used (made $0)
+North: NorthMechanics_002 fixed a broken Crane (MAN_00074) and made it used (made $5000)
+North: NorthMechanics_006 fixed a used Tractor (MAH_00041) and made it like new (made $2000)
+North: NorthMechanics_006 fixed a like new Tractor (MAH_00041) and made it like new (made $0)
+North: NorthMechanics_010 fixed a used Crane (MAN_00074) and made it like new (made $5000)
+North: NorthMechanics_010 fixed a broken Crane (PAL_00075) and made it used (made $5000)
+North: NorthSalesperson_007 was not able to sell the vehicle MAN_00074
+South: SouthSalesperson_001 sold a vehicle LIE_00075 for $158515
+South: SouthSalesperson_013 was not able to sell the vehicle MAN_00072
+North: NorthSalesperson_003 was not able to sell the vehicle MAN_00074
+North: NorthSalesperson_005 was not able to sell the vehicle MAN_00074
+North: NorthSalesperson_007 sold a vehicle MAN_00074 for $213226
+North: NorthSalesperson_007 was not able to sell the vehicle PAL_00071
+South: SouthFNCD have 3 Motorcycles in the race. 
+North: NorthFNCD have 3 MonsterTrucks in the race. 
+North: North: One of the vehicle got 8 place
+South: South: One of the vehicle got 10 place
+South: South: One of the vehicle got 11 place
+North: North: One of the vehicle got 13 place
+South: South: One of the vehicle got 16 place
+North: North: One of the vehicle got 16 place
+South: SouthDriver_012 made $0
+North: NorthDriver_004 made $0
+South: SouthDriver_015 made $0
+North: NorthDriver_008 made $0
+South: SouthDriver_016 made $0
+North: NorthDriver_015 made $0
+South: SouthSalesperson_011 was not able to sell the vehicle MAN_00063
+North: NorthSalesperson_003 sold a vehicle CAR_00069 for $125990
+South: SouthSalesperson_011 sold a vehicle MAN_00063 for $383534
+North: NorthSalesperson_009 sold a vehicle MAN_00064 for $157190
+North: NorthSalesperson_013 was not able to sell the vehicle MAN_00065
+South: SouthSalesperson_007 sold a vehicle LIE_00061 for $147726
+North: NorthSalesperson_003 was not able to sell the vehicle MAN_00065
+South: SouthSalesperson_001 was not able to sell the vehicle LIE_00053
+North: NorthSalesperson_009 was not able to sell the vehicle MAN_00065
+South: SouthSalesperson_011 was not able to sell the vehicle LIE_00053
+South: SouthFNCD have 3 Motorcycles in the race. 
+North: NorthFNCD have 3 PerformanceCar in the race. 
+North: North: One of the vehicle got 4 place
+South: South: One of the vehicle got 9 place
+North: North: One of the vehicle got 11 place
+South: South: One of the vehicle got 3 place
+North: North: One of the vehicle got 12 place
+South: South: One of the vehicle got 7 place
+North: NorthDriver_012 made $0
+South: SouthDriver_004 made $0
+North: NorthDriver_014 made $0
+South: SouthDriver_012 made $1000
+North: NorthDriver_020 made $0
+South: SouthDriver_015 made $0
