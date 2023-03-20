@@ -1,0 +1,15 @@
+Mechanics_006 fixed a broken monster truck (Bad News Travels Fast_00035) and made it used (made $1000)
+Mechanics_006 fixed a broken performance car (LAM_00003) and made it used (made $2000)
+Mechanics_010 fixed a used monster truck (Bear Foot (2xtreme)_00019) and made it like new (made $1000)
+Mechanics_010 fixed a like new monster truck (Bear Foot (2xtreme)_00019) and made it like new (made $0)
+Mechanics_001 fixed a broken performance car (FER_00034) and made it used (made $2000)
+Mechanics_001 fixed a used monster truck (Bad News Travels Fast_00035) and made it like new (made $1000)
+Salesperson_007 was not able to sell the vehicle Bear Foot (2xtreme)_00019
+Salesperson_011 sold a vehicle LAM_00003 for $80415
+Mechanics_002 fixed a broken performance car (MER_00001) and made it used (made $2000)
+Mechanics_006 fixed a used performance car (MER_00001) and made it like new (made $2000)
+Salesperson_007 sold a vehicle FOR_00031 for $128344
+Salesperson_007 sold a vehicle KTM_00023 for $34770
+Salesperson_011 was not able to sell the vehicle LUC_00024
+Salesperson_009 sold a vehicle Snake Bite_00017 for $50228
+Salesperson_009 was not able to sell the vehicle TOY_00036

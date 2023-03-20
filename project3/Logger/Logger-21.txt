@@ -1,0 +1,21 @@
+FNCD have 3 pickup in the race. 
+One of the vehicle got 16 place
+One of the vehicle got 15 place
+One of the vehicle got 11 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_012 made $0
+FNCD have 3 pickup in the race. 
+One of the vehicle got 16 place
+One of the vehicle got 17 place
+One of the vehicle got 15 place
+Driver_008 made $0
+Driver_012 made $0
+Driver_015 made $0
+FNCD have 3 motorcycle in the race. 
+One of the vehicle got 5 place
+One of the vehicle got 16 place
+One of the vehicle got 12 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_012 made $0

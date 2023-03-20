@@ -1,0 +1,36 @@
+Mechanics_002 fixed a used performance car (BMW_00033) and made it like new (made $2000)
+Salesperson_007 was not able to sell the vehicle KIA_00031
+Salesperson_007 was not able to sell the vehicle KIA_00031
+Salesperson_007 was not able to sell the vehicle KIA_00031
+Salesperson_005 was not able to sell the vehicle Shell Camino_00019
+FNCD have 3 performance car in the race. 
+One of the vehicle got 9 place
+One of the vehicle got 1 place
+One of the vehicle got 4 place
+Driver_004 made $0
+Driver_008 made $1000
+Driver_012 made $0
+Mechanics_006 fixed a used pickup (GMC_00033) and made it like new (made $1000)
+Mechanics_006 fixed a used performance car (ALF_00004) and made it like new (made $2000)
+Mechanics_010 fixed a broken monster truck (Bear Foot (2xtreme)_00019) and made it used (made $1000)
+Mechanics_010 fixed a used motorcycle (HON_00024) and made it like new (made $1000)
+Mechanics_001 fixed a broken electric car (NIS_00025) and made it used (made $1000)
+Mechanics_001 fixed a used electric car (NIS_00025) and made it like new (made $1000)
+Salesperson_003 sold a vehicle ALF_00004 for $66142
+Salesperson_011 was not able to sell the vehicle MAS_00031
+Salesperson_011 sold a vehicle Bear Foot (Silverado)_00020 for $36577
+FNCD have 3 performance car in the race. 
+One of the vehicle got 20 place
+One of the vehicle got 5 place
+One of the vehicle got 17 place
+Driver_008 made $0
+Driver_012 made $0
+Mechanics_002 fixed a broken electric car (TES_00028) and made it used (made $1000)
+Mechanics_006 fixed a used electric car (TES_00028) and made it like new (made $1000)
+FNCD have 3 performance car in the race. 
+One of the vehicle got 18 place
+One of the vehicle got 8 place
+One of the vehicle got 9 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_012 made $0
