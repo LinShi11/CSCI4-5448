@@ -1,8 +1,0 @@
-Mechanics_002 fixed a used car (MAZ_00065) and made it used (made $0)
-Mechanics_002 fixed a used performance car (AUD_00064) and made it like new (made $2000)
-Mechanics_005 fixed a used performance car (LEX_00060) and made it like new (made $2000)
-Mechanics_005 fixed a used car (MAZ_00065) and made it like new (made $1000)
-Mechanics_014 fixed a used performance car (ACU_00003) and made it like new (made $2000)
-Mechanics_014 fixed a broken motorcycle (LUC_00045) and made it used (made $1000)
-Salesperson_015 sold a vehicle KAW_00067 for $33390
-Salesperson_009 was not able to sell the vehicle Bear Foot (1979)_00056
