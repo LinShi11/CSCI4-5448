@@ -84,23 +84,42 @@ public class Game {
         eventAnnouncerPanel.add(announcer);
 
         buildingButtonPanel = new JPanel();
-        buildingButtonPanel.setBounds(400, 200, 200, 1000);
+        buildingButtonPanel.setBounds(400, 200, 200, 400);
         buildingButtonPanel.setBackground(Color.black);
         buildingButtonPanel.setLayout(new GridLayout(7,1));
         con.add(buildingButtonPanel);
 
         hutButton = new JButton("Hut");
-        hutButton.setBackground(Color.black);
-        hutButton.setForeground(Color.white);
-        hutButton.setFont(normalFont);
-        hutButton.setFocusPainted(false);
-        hutButton.addActionListener(choiceHandler);
-        hutButton.setActionCommand("hut");
-        buildingButtonPanel.add(hutButton);
+        buttonHelper(hutButton, "hut");
 
         smokeHouseButton = new JButton("SmokeHouse");
-        smokeHouseButton = new
+        buttonHelper(smokeHouseButton, "smokehouse");
 
+        minesButton = new JButton("Mines");
+        buttonHelper(minesButton, "mines");
+
+        factoryButton = new JButton("Factory");
+        buttonHelper(factoryButton, "factory");
+
+        blacksmithButton = new JButton("Blacksmith");
+        buttonHelper(blacksmithButton, "blacksmith");
+
+        bucketButton = new JButton("Bucket");
+        buttonHelper(bucketButton, "bucket");
+
+        trapButton = new JButton("Trap");
+        buttonHelper(trapButton, "trap");
+
+    }
+
+    public void buttonHelper(JButton button, String command){
+        button.setBackground(Color.black);
+        button.setForeground(Color.white);
+        button.setFont(normalFont);
+        button.setFocusPainted(false);
+        button.addActionListener(choiceHandler);
+        button.setActionCommand(command);
+        buildingButtonPanel.add(button);
 
     }
 
@@ -120,6 +139,26 @@ public class Game {
                 case "hut":
                     System.out.println("You create a hut");
                     break;
+                case "smokehouse":
+                    System.out.println("You create a smokehouse");
+                    break;
+                case "mines":
+                    System.out.println("You create a mine");
+                    break;
+                case "factory":
+                    System.out.println("You create a factory");
+                    break;
+                case "blacksmith":
+                    System.out.println("You create a blacksmith");
+                    break;
+                case "bucket":
+                    System.out.println("You create a bucket");
+                    break;
+                case "trap":
+                    System.out.println("You create a trap");
+                    break;
+                default:
+                    System.out.println("I am not sure what you created");
             }
         }
     }
