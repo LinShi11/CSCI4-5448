@@ -2,6 +2,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Vector;
 
 /**
  * citation: use https://www.ryisnow.online/2021/04/java-for-beginner-text-adventure-game.html as reference to jFrame start ups
@@ -12,13 +15,14 @@ public class Game {
     Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
     Font normalFont = new Font("Times New Roman", Font.PLAIN, 28);
 
-    JPanel titlePanel, startButtonPanel, eventAnnouncerPanel, buildingButtonPanel;
+    JPanel titlePanel, startButtonPanel, eventAnnouncerPanel, buildingButtonPanel, resourcesPanel;
     JLabel titleLabel;
     JButton startButton, hutButton, smokeHouseButton, minesButton, factoryButton, blacksmithButton, bucketButton, trapButton;
-    JTextArea announcer;
+    JTextArea announcer, resources;
 
     TitleScreenHandler tsHandler = new TitleScreenHandler();
     ChoiceHandler choiceHandler = new ChoiceHandler();
+    HashMap<String, Integer> resourceMap;
 
     public Game(){
         window = new JFrame();
@@ -27,6 +31,15 @@ public class Game {
         window.getContentPane().setBackground(Color.black);
         window.setLayout(null);
         con = window.getContentPane();
+
+        resourceMap = new HashMap<>();
+        resourceMap.put("Food", 0);
+        resourceMap.put("Meat", 0);
+        resourceMap.put("Wood", 0);
+        resourceMap.put("Water", 0);
+        resourceMap.put("Fur", 0);
+        resourceMap.put("Rock", 0);
+        resourceMap.put("Clothes", 0);
 
         login();
 
@@ -91,24 +104,39 @@ public class Game {
 
         hutButton = new JButton("Hut");
         buttonHelper(hutButton, "hut");
-
         smokeHouseButton = new JButton("SmokeHouse");
         buttonHelper(smokeHouseButton, "smokehouse");
-
         minesButton = new JButton("Mines");
         buttonHelper(minesButton, "mines");
-
         factoryButton = new JButton("Factory");
         buttonHelper(factoryButton, "factory");
-
         blacksmithButton = new JButton("Blacksmith");
         buttonHelper(blacksmithButton, "blacksmith");
-
         bucketButton = new JButton("Bucket");
         buttonHelper(bucketButton, "bucket");
-
         trapButton = new JButton("Trap");
         buttonHelper(trapButton, "trap");
+
+        resourcesPanel = new JPanel();
+        resourcesPanel.setBounds(1000, 100, 400, 1000);
+        resourcesPanel.setBackground(Color.BLACK);
+
+        con.add(resourcesPanel);
+        resources = new JTextArea();
+
+        resources.setBounds(1000,100,400,1000);
+        resources.setBackground(Color.black);
+        resources.setForeground(Color.white);
+        resources.setFont(normalFont);
+
+        resources.setText("Resources \t Amount\n");
+        for(Map.Entry<String, Integer> elements: resourceMap.entrySet()){
+            resources.append(elements.getKey() + "\t" + elements.getValue() + "\n");
+        }
+        resources.setEditable(false);
+        resourcesPanel.add(resources);
+
+
 
     }
 
