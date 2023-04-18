@@ -15,9 +15,9 @@ public class Game {
     Container con;
     Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
     Font normalFont = new Font("Times New Roman", Font.PLAIN, 28);
-    Font jobFont = new Font("Times New Roman", Font.PLAIN, 32);
+    Font arrowFont = new Font("Times New Roman", Font.PLAIN, 12);
 
-    JPanel titlePanel, startButtonPanel, eventAnnouncerPanel, buildingButtonPanel, resourcesPanel, buildingPanel, peoplePanel;
+    JPanel titlePanel, startButtonPanel, eventAnnouncerPanel, buildingButtonPanel, resourcesPanel, buildingPanel, peoplePanel, numberPanel, arrowPanel;
     JLabel titleLabel;
     JButton startButton, hutButton, smokeHouseButton, minesButton, factoryButton, blacksmithButton, bucketButton, trapButton;
     JTextArea announcer, resources, buildings;
@@ -28,7 +28,7 @@ public class Game {
     HashMap<String, Integer> buildingMap;
 
     HashMap<String, Integer> jobMap;
-    ArrayList<JButton> people;
+    ArrayList<JButton> peopleArrow;
 
     public Game(){
         window = new JFrame();
@@ -180,20 +180,54 @@ public class Game {
         peoplePanel.setBackground(Color.black);
         peoplePanel.setLayout(new GridLayout(jobMap.size(),1));
         con.add(peoplePanel);
+
+        numberPanel = new JPanel();
+        numberPanel.setBounds(850, 200, 80, 550);
+        numberPanel.setBackground(Color.black);
+        numberPanel.setLayout(new GridLayout(jobMap.size(), 1));
+        con.add(numberPanel);
+
+        arrowPanel = new JPanel();
+        arrowPanel.setBounds(930, 200, 50, 500);
+        arrowPanel.setBackground(Color.black);
+        arrowPanel.setLayout(new GridLayout((jobMap.size()-1)*2, 1 ));
+        con.add(arrowPanel);
+
         JButton temp;
         for(Map.Entry<String, Integer> elements: jobMap.entrySet()){
-            temp = new JButton(elements.getKey());
-            buttonAdd(temp);
+            if(!elements.getKey().equals("Villager")) {
+                temp = new JButton(elements.getKey());
+                buttonAdd(temp, peoplePanel);
+                temp = new JButton(elements.getValue().toString());
+                buttonAdd(temp, numberPanel);
+                temp = new JButton(">");
+                arrowButtonAdd(temp, elements.getKey()+"_up");
+                temp = new JButton("<");
+                arrowButtonAdd(temp, elements.getKey()+"_down");
+            }
         }
-        
+        buttonAdd(new JButton("Villager"), peoplePanel);
+        buttonAdd(new JButton(jobMap.get("Villager").toString()), numberPanel);
+
+
     }
 
-    public void buttonAdd(JButton button){
+    public void arrowButtonAdd(JButton button, String command){
+        button.setBackground(Color.black);
+        button.setForeground(Color.white);
+        button.setFont(arrowFont);
+        button.setFocusPainted(false);
+        button.addActionListener(choiceHandler);
+        button.setActionCommand(command);
+        arrowPanel.add(button);
+    }
+
+    public void buttonAdd(JButton button, JPanel panel){
         button.setBackground(Color.black);
         button.setForeground(Color.white);
         button.setFont(normalFont);
         button.setFocusPainted(false);
-        peoplePanel.add(button);
+        panel.add(button);
     }
 
     public void textColorHelper(JTextArea area){
@@ -251,6 +285,66 @@ public class Game {
                     break;
                 case "void":
                     System.out.println("no action needed");
+                    break;
+                case "Hunter_up":
+                    System.out.println("Added a hunter");
+                    break;
+                case "Hunter_down":
+                    System.out.println("Deleted a hunter");
+                    break;
+                case "Miner_up":
+                    System.out.println("Added a miner");
+                    break;
+                case "Miner_down":
+                    System.out.println("Deleted a miner");
+                    break;
+                case "Lumberjack_up":
+                    System.out.println("Added a lumberjack");
+                    break;
+                case "Lumberjack_down":
+                    System.out.println("Deleted a lumberjack");
+                    break;
+                case "Weaponsmith_up":
+                    System.out.println("Added a Weaponsmith");
+                    break;
+                case "Weaponsmith_down":
+                    System.out.println("Deleted a Weaponsmith");
+                    break;
+                case "Repairer_up":
+                    System.out.println("Added a Repairer");
+                    break;
+                case "Repairer_down":
+                    System.out.println("Deleted a Repairer");
+                    break;
+                case "Cook_up":
+                    System.out.println("Added a Cook");
+                    break;
+                case "Cook_down":
+                    System.out.println("Deleted a Cook");
+                    break;
+                case "Waterman_up":
+                    System.out.println("Added a Waterman");
+                    break;
+                case "Waterman_down":
+                    System.out.println("Deleted a Waterman");
+                    break;
+                case "Tailor_up":
+                    System.out.println("Added a Tailor");
+                    break;
+                case "Tailor_down":
+                    System.out.println("Deleted a Tailor");
+                    break;
+                case "Gather_up":
+                    System.out.println("Added a Gather");
+                    break;
+                case "Gather_down":
+                    System.out.println("Deleted a Gather");
+                    break;
+                case "Trapper_up":
+                    System.out.println("Added a Trapper");
+                    break;
+                case "Trapper_down":
+                    System.out.println("Deleted a Trapper");
                     break;
                 default:
                     System.out.println("I am not sure what you created");
