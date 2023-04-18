@@ -17,10 +17,10 @@ public class Game {
     Font normalFont = new Font("Times New Roman", Font.PLAIN, 28);
     Font arrowFont = new Font("Times New Roman", Font.PLAIN, 12);
 
-    JPanel titlePanel, startButtonPanel, eventAnnouncerPanel, buildingButtonPanel, resourcesPanel, buildingPanel, peoplePanel, numberPanel, arrowPanel;
+    JPanel titlePanel, startButtonPanel, eventAnnouncerPanel, buildingButtonPanel, resourcesPanel, buildingPanel, peoplePanel, numberPanel, arrowPanel, healthPanel;
     JLabel titleLabel;
     JButton startButton, hutButton, smokeHouseButton, minesButton, factoryButton, blacksmithButton, bucketButton, trapButton;
-    JTextArea announcer, resources, buildings;
+    JTextArea announcer, resources, buildings, health;
 
     TitleScreenHandler tsHandler = new TitleScreenHandler();
     ChoiceHandler choiceHandler = new ChoiceHandler();
@@ -209,6 +209,19 @@ public class Game {
         buttonAdd(new JButton("Villager"), peoplePanel);
         buttonAdd(new JButton(jobMap.get("Villager").toString()), numberPanel);
 
+        healthPanel = new JPanel();
+        healthPanel.setBounds(1000, 900, 400, 200);
+        healthPanel.setBackground(Color.black);
+
+        con.add(healthPanel);
+
+        health = new JTextArea();
+        health.setBounds(1000,900,400,200);
+
+        health.append("Health\t 100\n");
+        health.append("Defense\t 100\n");
+        textColorHelper(health);
+        healthPanel.add(health);
 
     }
 
