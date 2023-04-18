@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Vector;
@@ -14,8 +15,9 @@ public class Game {
     Container con;
     Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
     Font normalFont = new Font("Times New Roman", Font.PLAIN, 28);
+    Font jobFont = new Font("Times New Roman", Font.PLAIN, 32);
 
-    JPanel titlePanel, startButtonPanel, eventAnnouncerPanel, buildingButtonPanel, resourcesPanel, buildingPanel;
+    JPanel titlePanel, startButtonPanel, eventAnnouncerPanel, buildingButtonPanel, resourcesPanel, buildingPanel, peoplePanel;
     JLabel titleLabel;
     JButton startButton, hutButton, smokeHouseButton, minesButton, factoryButton, blacksmithButton, bucketButton, trapButton;
     JTextArea announcer, resources, buildings;
@@ -24,6 +26,9 @@ public class Game {
     ChoiceHandler choiceHandler = new ChoiceHandler();
     HashMap<String, Integer> resourceMap;
     HashMap<String, Integer> buildingMap;
+
+    HashMap<String, Integer> jobMap;
+    ArrayList<JButton> people;
 
     public Game(){
         window = new JFrame();
@@ -50,6 +55,19 @@ public class Game {
         buildingMap.put("Blacksmith", 0);
         buildingMap.put("Mines", 0);
         buildingMap.put("Tradecart", 0);
+
+        jobMap = new HashMap<>();
+        jobMap.put("Gather", 0);
+        jobMap.put("Hunter", 0);
+        jobMap.put("Trapper", 0);
+        jobMap.put("Waterman", 0);
+        jobMap.put("Tailor", 0);
+        jobMap.put("Miner", 0);
+        jobMap.put("Weaponsmith", 0);
+        jobMap.put("Lumberjack", 0);
+        jobMap.put("Cook", 0);
+        jobMap.put("Repairer", 0);
+        jobMap.put("Villager", 0);
 
 
         login();
@@ -105,7 +123,7 @@ public class Game {
         eventAnnouncerPanel.add(announcer);
 
         buildingButtonPanel = new JPanel();
-        buildingButtonPanel.setBounds(400, 200, 200, 400);
+        buildingButtonPanel.setBounds(400, 200, 200, 350);
         buildingButtonPanel.setBackground(Color.black);
         buildingButtonPanel.setLayout(new GridLayout(7,1));
         con.add(buildingButtonPanel);
@@ -157,8 +175,25 @@ public class Game {
         textColorHelper(buildings);
         buildingPanel.add(buildings);
 
+        peoplePanel = new JPanel();
+        peoplePanel.setBounds(650, 200, 200, 550);
+        peoplePanel.setBackground(Color.black);
+        peoplePanel.setLayout(new GridLayout(jobMap.size(),1));
+        con.add(peoplePanel);
+        JButton temp;
+        for(Map.Entry<String, Integer> elements: jobMap.entrySet()){
+            temp = new JButton(elements.getKey());
+            buttonAdd(temp);
+        }
+        
+    }
 
-
+    public void buttonAdd(JButton button){
+        button.setBackground(Color.black);
+        button.setForeground(Color.white);
+        button.setFont(normalFont);
+        button.setFocusPainted(false);
+        peoplePanel.add(button);
     }
 
     public void textColorHelper(JTextArea area){
@@ -213,6 +248,9 @@ public class Game {
                     break;
                 case "trap":
                     System.out.println("You create a trap");
+                    break;
+                case "void":
+                    System.out.println("no action needed");
                     break;
                 default:
                     System.out.println("I am not sure what you created");
