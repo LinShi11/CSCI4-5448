@@ -16,9 +16,9 @@ public class GameUI {
     Font normalFont = new Font("Times New Roman", Font.PLAIN, 28);
     Font arrowFont = new Font("Times New Roman", Font.PLAIN, 12);
 
-    JPanel titlePanel, startButtonPanel, eventAnnouncerPanel, buildingButtonPanel, resourcesPanel, buildingPanel, peoplePanel, numberPanel, arrowPanel, healthPanel;
+    JPanel titlePanel, startButtonPanel, eventAnnouncerPanel, buildingButtonPanel, resourcesPanel, buildingPanel, peoplePanel, numberPanel, arrowPanel, healthPanel, mapPanel;
     JLabel titleLabel;
-    JButton startButton, hutButton, smokeHouseButton, minesButton, factoryButton, blacksmithButton, bucketButton, trapButton;
+    JButton startButton, hutButton, smokeHouseButton, minesButton, factoryButton, blacksmithButton, bucketButton, trapButton, villageButton, actionButton, tradecartMenu;
     JTextArea announcer, resources, buildings, health;
 
     TitleScreenHandler tsHandler = new TitleScreenHandler();
@@ -26,6 +26,7 @@ public class GameUI {
 
     ArrayList<JButton> peopleArrow;
     Game game;
+    Enum.mapLocationType mapLocation;
 
     public GameUI(Game tempGame){
         game = tempGame;
@@ -35,6 +36,7 @@ public class GameUI {
         window.getContentPane().setBackground(Color.black);
         window.setLayout(null);
         con = window.getContentPane();
+        mapLocation = Enum.mapLocationType.village;
 
         login();
 
@@ -88,27 +90,6 @@ public class GameUI {
 
         eventAnnouncerPanel.add(announcer);
 
-        buildingButtonPanel = new JPanel();
-        buildingButtonPanel.setBounds(400, 200, 200, 350);
-        buildingButtonPanel.setBackground(Color.black);
-        buildingButtonPanel.setLayout(new GridLayout(7,1));
-        con.add(buildingButtonPanel);
-
-        hutButton = new JButton("Hut");
-        buttonHelper(hutButton, "hut");
-        smokeHouseButton = new JButton("SmokeHouse");
-        buttonHelper(smokeHouseButton, "smokehouse");
-        minesButton = new JButton("Mines");
-        buttonHelper(minesButton, "mines");
-        factoryButton = new JButton("Factory");
-        buttonHelper(factoryButton, "factory");
-        blacksmithButton = new JButton("Blacksmith");
-        buttonHelper(blacksmithButton, "blacksmith");
-        bucketButton = new JButton("Bucket");
-        buttonHelper(bucketButton, "bucket");
-        trapButton = new JButton("Trap");
-        buttonHelper(trapButton, "trap");
-
         resourcesPanel = new JPanel();
         resourcesPanel.setBounds(1000, 100, 400, 300);
         resourcesPanel.setBackground(Color.BLACK);
@@ -140,6 +121,88 @@ public class GameUI {
         }
         textColorHelper(buildings);
         buildingPanel.add(buildings);
+
+        healthPanel = new JPanel();
+        healthPanel.setBounds(1000, 900, 400, 200);
+        healthPanel.setBackground(Color.black);
+
+        con.add(healthPanel);
+
+        health = new JTextArea();
+        health.setBounds(1000,900,400,200);
+
+        health.append("Health\t 100\n");
+        health.append("Defense\t 100\n");
+        textColorHelper(health);
+        healthPanel.add(health);
+
+        mapPanel = new JPanel();
+        mapPanel.setBounds(400, 100, 600, 50);
+        mapPanel.setBackground(Color.black);
+        mapPanel.setLayout(new GridLayout(1, 3));
+
+        villageButton = new JButton("Village");
+        mapButtonAdd(villageButton, "village");
+        actionButton = new JButton("User Action");
+        mapButtonAdd(actionButton, "action");
+        tradecartMenu = new JButton("Tradecart");
+        mapButtonAdd(tradecartMenu, "tradecart");
+
+        con.add(mapPanel);
+
+        switch (mapLocation){
+            case village:
+                stopAllButton();
+                villageButtons();
+                break;
+            case action:
+                stopAllButton();
+                placeHolder();
+                break;
+            case tradecart:
+                stopAllButton();
+                placeHolder();
+                break;
+            default:
+                placeHolder();
+        }
+
+
+
+    }
+
+    public void placeHolder(){
+
+    }
+
+    public void stopAllButton(){
+        buildingButtonPanel.setVisible(false);
+        peoplePanel.setVisible(false);
+        numberPanel.setVisible(false);
+        arrowPanel.setVisible(false);
+    }
+
+    public void villageButtons(){
+        buildingButtonPanel = new JPanel();
+        buildingButtonPanel.setBounds(400, 200, 200, 350);
+        buildingButtonPanel.setBackground(Color.black);
+        buildingButtonPanel.setLayout(new GridLayout(7,1));
+        con.add(buildingButtonPanel);
+
+        hutButton = new JButton("Hut");
+        buttonHelper(hutButton, "hut");
+        smokeHouseButton = new JButton("SmokeHouse");
+        buttonHelper(smokeHouseButton, "smokehouse");
+        minesButton = new JButton("Mines");
+        buttonHelper(minesButton, "mines");
+        factoryButton = new JButton("Factory");
+        buttonHelper(factoryButton, "factory");
+        blacksmithButton = new JButton("Blacksmith");
+        buttonHelper(blacksmithButton, "blacksmith");
+        bucketButton = new JButton("Bucket");
+        buttonHelper(bucketButton, "bucket");
+        trapButton = new JButton("Trap");
+        buttonHelper(trapButton, "trap");
 
         peoplePanel = new JPanel();
         peoplePanel.setBounds(650, 200, 200, 550);
@@ -174,21 +237,16 @@ public class GameUI {
         }
         buttonAdd(new JButton("Villager"), peoplePanel);
         buttonAdd(new JButton(game.getJobMap().get("Villager").toString()), numberPanel);
+    }
 
-        healthPanel = new JPanel();
-        healthPanel.setBounds(1000, 900, 400, 200);
-        healthPanel.setBackground(Color.black);
-
-        con.add(healthPanel);
-
-        health = new JTextArea();
-        health.setBounds(1000,900,400,200);
-
-        health.append("Health\t 100\n");
-        health.append("Defense\t 100\n");
-        textColorHelper(health);
-        healthPanel.add(health);
-
+    public void mapButtonAdd(JButton button, String command){
+        button.setBackground(Color.black);
+        button.setForeground(Color.white);
+        button.setFont(normalFont);
+        button.setFocusPainted(false);
+        button.addActionListener(choiceHandler);
+        button.setActionCommand(command);
+        mapPanel.add(button);
     }
 
     public void arrowButtonAdd(JButton button, String command){
@@ -324,6 +382,15 @@ public class GameUI {
                     break;
                 case "Trapper_down":
                     System.out.println("Deleted a Trapper");
+                    break;
+                case "village":
+                    System.out.println("village map");
+                    break;
+                case "action":
+                    System.out.println("user actions map");
+                    break;
+                case "tradecart":
+                    System.out.println("tradecart map");
                     break;
                 default:
                     System.out.println("I am not sure what you created");

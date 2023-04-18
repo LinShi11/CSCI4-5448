@@ -37,4 +37,10 @@ public class Enum {
         sword,
         gunpowder
     }
+
+    enum mapLocationType{
+        village,
+        action,
+        tradecart
+    }
 }

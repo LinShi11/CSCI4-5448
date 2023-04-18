@@ -19,7 +19,7 @@ public class BuildingFactory {
             case Tradecart:
                 return new Tradecart();
             default:
-                return null; 
+                return null;
         }
     }
 }
