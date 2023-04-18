@@ -16,15 +16,12 @@ public class GameUI {
     Font normalFont = new Font("Times New Roman", Font.PLAIN, 28);
     Font arrowFont = new Font("Times New Roman", Font.PLAIN, 12);
 
-    JPanel titlePanel, startButtonPanel, eventAnnouncerPanel, buildingButtonPanel, resourcesPanel, buildingPanel, peoplePanel, numberPanel, arrowPanel, healthPanel, mapPanel;
+    JPanel titlePanel, startButtonPanel, eventAnnouncerPanel, buildingButtonPanel, resourcesPanel, buildingPanel, peoplePanel, numberPanel, arrowPanel, healthPanel, mapPanel, userActionPanel;
     JLabel titleLabel;
     JButton startButton, hutButton, smokeHouseButton, minesButton, factoryButton, blacksmithButton, bucketButton, trapButton, villageButton, actionButton, tradecartMenu;
     JTextArea announcer, resources, buildings, health;
-
     TitleScreenHandler tsHandler = new TitleScreenHandler();
     ChoiceHandler choiceHandler = new ChoiceHandler();
-
-    ArrayList<JButton> peopleArrow;
     Game game;
     Enum.mapLocationType mapLocation;
 
@@ -38,13 +35,14 @@ public class GameUI {
         con = window.getContentPane();
         mapLocation = Enum.mapLocationType.village;
 
+        createAllChangablePanels();
+        stopAllButton();
         login();
-
         window.setVisible(true);
 
     }
 
-    public void login(){
+    public void createAllChangablePanels(){
         titlePanel = new JPanel();
         titlePanel.setBounds(350,100,800,150);
         titlePanel.setBackground(Color.black);
@@ -70,25 +68,115 @@ public class GameUI {
         con.add(titlePanel);
         con.add(startButtonPanel);
 
+        mapPanel = new JPanel();
+        mapPanel.setBounds(400, 100, 600, 50);
+        mapPanel.setBackground(Color.black);
+        mapPanel.setLayout(new GridLayout(1, 3));
+
+        villageButton = new JButton("Village");
+        mapButtonAdd(villageButton, "village");
+        actionButton = new JButton("User Action");
+        mapButtonAdd(actionButton, "action");
+        tradecartMenu = new JButton("Tradecart");
+        mapButtonAdd(tradecartMenu, "tradecart");
+
+        con.add(mapPanel);
+
+        userActionPanel = new JPanel();
+        userActionPanel.setBounds(400, 200, 200,350);
+        userActionPanel.setBackground(Color.black);
+        userActionPanel.setLayout(new GridLayout(7, 1));
+
+        JButton temp;
+        temp = new JButton("Wood");
+        userActionButtons(temp, "gatherWood");
+        temp = new JButton("Food");
+        userActionButtons(temp, "gatherFood");
+        temp = new JButton("Meat");
+        userActionButtons(temp, "gatherMeat");
+        temp = new JButton("Rock");
+        userActionButtons(temp, "gatherRocks");
+        temp = new JButton("Water");
+        userActionButtons(temp, "gatherWater");
+        temp = new JButton("Clothes");
+        userActionButtons(temp, "gatherClothes");
+        temp = new JButton("Fur");
+        userActionButtons(temp, "gatherFur");
+        con.add(userActionPanel);
+
+        buildingButtonPanel = new JPanel();
+        buildingButtonPanel.setBounds(400, 200, 200, 350);
+        buildingButtonPanel.setBackground(Color.black);
+        buildingButtonPanel.setLayout(new GridLayout(7,1));
+        con.add(buildingButtonPanel);
+
+        hutButton = new JButton("Hut");
+        buttonHelper(hutButton, "hut");
+        smokeHouseButton = new JButton("SmokeHouse");
+        buttonHelper(smokeHouseButton, "smokehouse");
+        minesButton = new JButton("Mines");
+        buttonHelper(minesButton, "mines");
+        factoryButton = new JButton("Factory");
+        buttonHelper(factoryButton, "factory");
+        blacksmithButton = new JButton("Blacksmith");
+        buttonHelper(blacksmithButton, "blacksmith");
+        bucketButton = new JButton("Bucket");
+        buttonHelper(bucketButton, "bucket");
+        trapButton = new JButton("Trap");
+        buttonHelper(trapButton, "trap");
+
+        peoplePanel = new JPanel();
+        peoplePanel.setBounds(650, 200, 200, 550);
+        peoplePanel.setBackground(Color.black);
+        peoplePanel.setLayout(new GridLayout(game.getJobMap().size(),1));
+        con.add(peoplePanel);
+
+        numberPanel = new JPanel();
+        numberPanel.setBounds(850, 200, 80, 550);
+        numberPanel.setBackground(Color.black);
+        numberPanel.setLayout(new GridLayout(game.getJobMap().size(), 1));
+        con.add(numberPanel);
+
+        arrowPanel = new JPanel();
+        arrowPanel.setBounds(930, 200, 50, 500);
+        arrowPanel.setBackground(Color.black);
+        arrowPanel.setLayout(new GridLayout((game.getJobMap().size()-1)*2, 1 ));
+        con.add(arrowPanel);
+
+        for(Map.Entry<String, Integer> elements: game.getJobMap().entrySet()){
+            if(!elements.getKey().equals("Villager")) {
+                temp = new JButton(elements.getKey());
+                buttonAdd(temp, peoplePanel);
+                temp = new JButton(elements.getValue().toString());
+                buttonAdd(temp, numberPanel);
+                temp = new JButton(">");
+                arrowButtonAdd(temp, elements.getKey()+"_up");
+                temp = new JButton("<");
+                arrowButtonAdd(temp, elements.getKey()+"_down");
+            }
+        }
+        buttonAdd(new JButton("Villager"), peoplePanel);
+        buttonAdd(new JButton(game.getJobMap().get("Villager").toString()), numberPanel);
+
+    }
+    public void login(){
+        mapPanel.setVisible(false);
+        startButtonPanel.setVisible(true);
+        titlePanel.setVisible(true);
     }
 
     public void gamePlayScreen(){
-        titlePanel.setVisible(false);
-        startButtonPanel.setVisible(false);
 
         eventAnnouncerPanel = new JPanel();
         eventAnnouncerPanel.setBounds(100, 100, 200, 1000);
         eventAnnouncerPanel.setBackground(Color.black);
-
-        con.add(eventAnnouncerPanel);
-
         announcer = new JTextArea("This is the event Announcer");
         announcer.setBounds(100, 100, 200, 1000);
         textColorHelper(announcer);
         announcer.setLineWrap(true);
         announcer.setWrapStyleWord(true);
-
         eventAnnouncerPanel.add(announcer);
+        con.add(eventAnnouncerPanel);
 
         resourcesPanel = new JPanel();
         resourcesPanel.setBounds(1000, 100, 400, 300);
@@ -136,20 +224,11 @@ public class GameUI {
         textColorHelper(health);
         healthPanel.add(health);
 
-        mapPanel = new JPanel();
-        mapPanel.setBounds(400, 100, 600, 50);
-        mapPanel.setBackground(Color.black);
-        mapPanel.setLayout(new GridLayout(1, 3));
+        map();
 
-        villageButton = new JButton("Village");
-        mapButtonAdd(villageButton, "village");
-        actionButton = new JButton("User Action");
-        mapButtonAdd(actionButton, "action");
-        tradecartMenu = new JButton("Tradecart");
-        mapButtonAdd(tradecartMenu, "tradecart");
+    }
 
-        con.add(mapPanel);
-
+    public void map(){
         switch (mapLocation){
             case village:
                 stopAllButton();
@@ -157,7 +236,7 @@ public class GameUI {
                 break;
             case action:
                 stopAllButton();
-                placeHolder();
+                userActions();
                 break;
             case tradecart:
                 stopAllButton();
@@ -166,9 +245,10 @@ public class GameUI {
             default:
                 placeHolder();
         }
+    }
 
-
-
+    public void userActions(){
+        userActionPanel.setVisible(true);
     }
 
     public void placeHolder(){
@@ -176,67 +256,31 @@ public class GameUI {
     }
 
     public void stopAllButton(){
+        titlePanel.setVisible(false);
+        startButtonPanel.setVisible(false);
         buildingButtonPanel.setVisible(false);
         peoplePanel.setVisible(false);
         numberPanel.setVisible(false);
         arrowPanel.setVisible(false);
+        mapPanel.setVisible(true);
+        userActionPanel.setVisible(false);
     }
 
     public void villageButtons(){
-        buildingButtonPanel = new JPanel();
-        buildingButtonPanel.setBounds(400, 200, 200, 350);
-        buildingButtonPanel.setBackground(Color.black);
-        buildingButtonPanel.setLayout(new GridLayout(7,1));
-        con.add(buildingButtonPanel);
+        buildingButtonPanel.setVisible(true);
+        peoplePanel.setVisible(true);
+        numberPanel.setVisible(true);
+        arrowPanel.setVisible(true);
+    }
 
-        hutButton = new JButton("Hut");
-        buttonHelper(hutButton, "hut");
-        smokeHouseButton = new JButton("SmokeHouse");
-        buttonHelper(smokeHouseButton, "smokehouse");
-        minesButton = new JButton("Mines");
-        buttonHelper(minesButton, "mines");
-        factoryButton = new JButton("Factory");
-        buttonHelper(factoryButton, "factory");
-        blacksmithButton = new JButton("Blacksmith");
-        buttonHelper(blacksmithButton, "blacksmith");
-        bucketButton = new JButton("Bucket");
-        buttonHelper(bucketButton, "bucket");
-        trapButton = new JButton("Trap");
-        buttonHelper(trapButton, "trap");
-
-        peoplePanel = new JPanel();
-        peoplePanel.setBounds(650, 200, 200, 550);
-        peoplePanel.setBackground(Color.black);
-        peoplePanel.setLayout(new GridLayout(game.getJobMap().size(),1));
-        con.add(peoplePanel);
-
-        numberPanel = new JPanel();
-        numberPanel.setBounds(850, 200, 80, 550);
-        numberPanel.setBackground(Color.black);
-        numberPanel.setLayout(new GridLayout(game.getJobMap().size(), 1));
-        con.add(numberPanel);
-
-        arrowPanel = new JPanel();
-        arrowPanel.setBounds(930, 200, 50, 500);
-        arrowPanel.setBackground(Color.black);
-        arrowPanel.setLayout(new GridLayout((game.getJobMap().size()-1)*2, 1 ));
-        con.add(arrowPanel);
-
-        JButton temp;
-        for(Map.Entry<String, Integer> elements: game.getJobMap().entrySet()){
-            if(!elements.getKey().equals("Villager")) {
-                temp = new JButton(elements.getKey());
-                buttonAdd(temp, peoplePanel);
-                temp = new JButton(elements.getValue().toString());
-                buttonAdd(temp, numberPanel);
-                temp = new JButton(">");
-                arrowButtonAdd(temp, elements.getKey()+"_up");
-                temp = new JButton("<");
-                arrowButtonAdd(temp, elements.getKey()+"_down");
-            }
-        }
-        buttonAdd(new JButton("Villager"), peoplePanel);
-        buttonAdd(new JButton(game.getJobMap().get("Villager").toString()), numberPanel);
+    public void userActionButtons(JButton button, String command){
+        button.setBackground(Color.black);
+        button.setForeground(Color.white);
+        button.setFont(normalFont);
+        button.setFocusPainted(false);
+        button.addActionListener(choiceHandler);
+        button.setActionCommand(command);
+        userActionPanel.add(button);
     }
 
     public void mapButtonAdd(JButton button, String command){
@@ -289,7 +333,6 @@ public class GameUI {
     public class TitleScreenHandler implements ActionListener {
 
         public void actionPerformed(ActionEvent event){
-
             gamePlayScreen();
         }
     }
@@ -385,12 +428,37 @@ public class GameUI {
                     break;
                 case "village":
                     System.out.println("village map");
+                    mapLocation = Enum.mapLocationType.village;
+                    map();
                     break;
                 case "action":
                     System.out.println("user actions map");
+                    mapLocation = Enum.mapLocationType.action;
+                    map();
                     break;
                 case "tradecart":
                     System.out.println("tradecart map");
+                    break;
+                case "gatherWood":
+                    System.out.println("You are gathering wood");
+                    break;
+                case "gatherFood":
+                    System.out.println("You are gathering food");
+                    break;
+                case "gatherMeat":
+                    System.out.println("You are gathering meat");
+                    break;
+                case "gatherRocks":
+                    System.out.println("You are gathering rocks");
+                    break;
+                case "gatherWater":
+                    System.out.println("You are gathering water");
+                    break;
+                case "gatherClothes":
+                    System.out.println("You are gathering Clothes");
+                    break;
+                case "gatherFur":
+                    System.out.println("You are gathering Fur");
                     break;
                 default:
                     System.out.println("I am not sure what you created");
