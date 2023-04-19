@@ -26,7 +26,7 @@ public class Enum {
         Trapper,
         Waterman,
         Tailor,
-        Mines,
+        Miner,
         Weaponsmith,
         Villager,
         Lumberjack,

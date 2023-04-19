@@ -7,12 +7,14 @@ public class Game {
     HashMap<Enum.resourceType, Integer> resourceMap;
     HashMap<Enum.buildingType, Integer> buildingMap;
 
-    HashMap<String, Integer> jobMap;
+    HashMap<Enum.jobType, Integer> jobMap;
     ArrayList<Enum.magicItems> magicItemsArrayList;
     ArrayList<Enum.resourceType> dailyAgenda;
+    ArrayList<People> peopleArrayList;
     int totalMagicItemCount = 10;
     UserActions userActions;
-    BuildingFactory buildingFactory;
+    BuildingFactory buildingFactory = new BuildingFactory();
+    JobFactory jobFactory = new JobFactory();
 
     public Game(){
         resourceMap = new HashMap<>();
@@ -35,24 +37,23 @@ public class Game {
         buildingMap.put(Enum.buildingType.Hut, 0);
 
         jobMap = new HashMap<>();
-        jobMap.put("Gather", 0);
-        jobMap.put("Hunter", 0);
-        jobMap.put("Trapper", 0);
-        jobMap.put("Waterman", 0);
-        jobMap.put("Tailor", 0);
-        jobMap.put("Miner", 0);
-        jobMap.put("Weaponsmith", 0);
-        jobMap.put("Lumberjack", 0);
-        jobMap.put("Cook", 0);
-        jobMap.put("Repairer", 0);
-        jobMap.put("Villager", 0);
+        jobMap.put(Enum.jobType.Gather, 0);
+        jobMap.put(Enum.jobType.Hunter, 0);
+        jobMap.put(Enum.jobType.Trapper, 0);
+        jobMap.put(Enum.jobType.Waterman, 0);
+        jobMap.put(Enum.jobType.Tailor, 0);
+        jobMap.put(Enum.jobType.Miner, 0);
+        jobMap.put(Enum.jobType.Weaponsmith, 0);
+        jobMap.put(Enum.jobType.Lumberjack, 0);
+        jobMap.put(Enum.jobType.Cook, 0);
+        jobMap.put(Enum.jobType.Repairer, 0);
+        jobMap.put(Enum.jobType.Villager, 10);
 
         magicItemsArrayList = new ArrayList<>();
         dailyAgenda = new ArrayList<>();
+        peopleArrayList = new ArrayList<>();
 
         userActions = new UserActions();
-
-        buildingFactory = new BuildingFactory();
 
     }
 
@@ -88,6 +89,27 @@ public class Game {
         buildingMap.put(building.getType(), (buildingMap.get(building.getType()) + 1));
     }
 
+    public void assignJobs(Enum.jobType type){
+        People person = jobFactory.assignJob(type);
+        peopleArrayList.add(person);
+        jobMap.put(person.getType(), (jobMap.get(person.getType()) + 1));
+        System.out.println(jobMap.get(person.getType()));
+    }
+
+    public void removeJobs(Enum.jobType type){
+        if(jobMap.get(type) > 0){
+            jobMap.put(type, (jobMap.get(type)-1));
+            for(People person: peopleArrayList){
+                if(person.getType() == type){
+                    peopleArrayList.remove(person);
+                    break;
+                }
+            }
+            assignJobs(Enum.jobType.Villager);
+        }
+    }
+
+
     public void dailyUpdate(){
         for(Enum.resourceType agenda: dailyAgenda){
             switch (agenda){
@@ -122,7 +144,7 @@ public class Game {
         return buildingMap;
     }
 
-    public HashMap<String, Integer> getJobMap(){
+    public HashMap<Enum.jobType, Integer> getJobMap(){
         return jobMap;
     }
 

@@ -151,20 +151,20 @@ public class GameUI {
         arrowPanel.setLayout(new GridLayout((game.getJobMap().size()-1)*2, 1 ));
         con.add(arrowPanel);
 
-        for(Map.Entry<String, Integer> elements: game.getJobMap().entrySet()){
-            if(!elements.getKey().equals("Villager")) {
-                temp = new JButton(elements.getKey());
+        for(Map.Entry<Enum.jobType, Integer> elements: game.getJobMap().entrySet()){
+            if(elements.getKey()!= Enum.jobType.Villager) {
+                temp = new JButton(elements.getKey().toString());
                 noActionButtonAdd(temp, peoplePanel);
                 temp = new JButton(elements.getValue().toString());
                 noActionButtonAdd(temp, numberPanel);
                 temp = new JButton(">");
-                arrowButtonAdd(temp, elements.getKey()+"_up");
+                arrowButtonAdd(temp, elements.getKey().toString()+"_up");
                 temp = new JButton("<");
-                arrowButtonAdd(temp, elements.getKey()+"_down");
+                arrowButtonAdd(temp, elements.getKey().toString()+"_down");
             }
         }
         noActionButtonAdd(new JButton("Villager"), peoplePanel);
-        noActionButtonAdd(new JButton(game.getJobMap().get("Villager").toString()), numberPanel);
+        noActionButtonAdd(new JButton(game.getJobMap().get(Enum.jobType.Villager).toString()), numberPanel);
 
         dailyTaskPanel = new JPanel();
         dailyTaskPanel.setBackground(Color.black);
@@ -194,6 +194,21 @@ public class GameUI {
 
     public void createTradecartItems(boolean newDay){
         // skip for rn
+    }
+
+    public void jobRepaint(){
+        numberPanel.removeAll();
+        numberPanel.revalidate();
+        System.out.println(numberPanel.getComponentCount());
+        JButton temp;
+        for(Map.Entry<Enum.jobType, Integer> elements: game.getJobMap().entrySet()){
+            if(elements.getKey()!= Enum.jobType.Villager) {
+                temp = new JButton(elements.getValue().toString());
+                noActionButtonAdd(temp, numberPanel);
+            }
+        }
+        noActionButtonAdd(new JButton(game.getJobMap().get(Enum.jobType.Villager).toString()), numberPanel);
+        numberPanel.repaint();
     }
 
     public void dailyTasksScreen(){
@@ -524,67 +539,88 @@ public class GameUI {
             switch(choice){
                 case "Hunter_up":
                     System.out.println("Added a hunter");
+                    game.assignJobs(Enum.jobType.Hunter);
                     break;
                 case "Hunter_down":
                     System.out.println("Deleted a hunter");
+                    game.removeJobs(Enum.jobType.Hunter);
                     break;
                 case "Miner_up":
                     System.out.println("Added a miner");
+                    game.assignJobs(Enum.jobType.Miner);
                     break;
                 case "Miner_down":
                     System.out.println("Deleted a miner");
+                    game.removeJobs(Enum.jobType.Miner);
                     break;
                 case "Lumberjack_up":
                     System.out.println("Added a lumberjack");
+                    game.assignJobs(Enum.jobType.Lumberjack);
                     break;
                 case "Lumberjack_down":
                     System.out.println("Deleted a lumberjack");
+                    game.removeJobs(Enum.jobType.Lumberjack);
                     break;
                 case "Weaponsmith_up":
                     System.out.println("Added a Weaponsmith");
+                    game.assignJobs(Enum.jobType.Weaponsmith);
                     break;
                 case "Weaponsmith_down":
                     System.out.println("Deleted a Weaponsmith");
+                    game.removeJobs(Enum.jobType.Weaponsmith);
                     break;
                 case "Repairer_up":
                     System.out.println("Added a Repairer");
+                    game.assignJobs(Enum.jobType.Repairer);
                     break;
                 case "Repairer_down":
                     System.out.println("Deleted a Repairer");
+                    game.removeJobs(Enum.jobType.Repairer);
                     break;
                 case "Cook_up":
                     System.out.println("Added a Cook");
+                    game.assignJobs(Enum.jobType.Cook);
                     break;
                 case "Cook_down":
                     System.out.println("Deleted a Cook");
+                    game.removeJobs(Enum.jobType.Cook);
                     break;
                 case "Waterman_up":
                     System.out.println("Added a Waterman");
+                    game.assignJobs(Enum.jobType.Waterman);
                     break;
                 case "Waterman_down":
                     System.out.println("Deleted a Waterman");
+                    game.removeJobs(Enum.jobType.Waterman);
                     break;
                 case "Tailor_up":
                     System.out.println("Added a Tailor");
+                    game.assignJobs(Enum.jobType.Tailor);
                     break;
                 case "Tailor_down":
                     System.out.println("Deleted a Tailor");
+                    game.removeJobs(Enum.jobType.Tailor);
                     break;
                 case "Gather_up":
                     System.out.println("Added a Gather");
+                    game.assignJobs(Enum.jobType.Gather);
                     break;
                 case "Gather_down":
                     System.out.println("Deleted a Gather");
+                    game.removeJobs(Enum.jobType.Gather);
                     break;
                 case "Trapper_up":
                     System.out.println("Added a Trapper");
+                    game.assignJobs(Enum.jobType.Trapper);
                     break;
                 case "Trapper_down":
                     System.out.println("Deleted a Trapper");
+                    game.removeJobs(Enum.jobType.Trapper);
                     break;
                 default:
                     System.out.println("I am not sure what you created");
             }
+            jobRepaint();
         }
     }
 

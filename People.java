@@ -1,67 +1,35 @@
 import java.util.List;
 
-public class People{
+public interface People{
 
-	private int count;
-	private boolean status;
-	private int limit;
+	int getFood();
+
+	int getMeat();
+
+	int getWater();
+
+	int getFur();
+
+	int getWood();
+
+	int getRock();
+
+	int getClothes();
 	
-	private List<MagicItemDecorator> component;
+	int getHealth();
 
-	public int getFood() {
-		return 0;
-	}
-
-	public int getMeat() {
-		return 0;
-	}
-
-	public int getWater() {
-		return 0;
-	}
-
-	public int getFur() {
-		return 0;
-	}
-
-	public int getWood() {
-		return 0;
-	}
-
-	public int getRock() {
-		return 0;
-	}
-
-	public int getClothes() {
-		return 0;
-	}
+	boolean getStatus();
 	
-	public int getHealth() {
-		return 0;
-	}
+	void setStatus(boolean status);
 
-	public boolean getStatus() {
-		return status;
-	}
+	int getLimit();
 	
-	public void setStatus(boolean status) {
-		this.status = status;
-	}
+	void setLimit(int limit);
 
-	public int getLimit() {
-		return limit;
-	}
-	
-	public void setLimit(int limit) {
-		this.limit = limit;
-	}
+	int getCount();
 
-	public int getCount() {
-		return count;
-	}
+	void setCount(int count);
 
-	public void setCount(int count) {
-		this.count = count;
-	}
+	Enum.jobType getType();
 
 }
