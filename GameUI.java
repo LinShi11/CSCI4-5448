@@ -16,12 +16,15 @@ public class GameUI {
     Font normalFont = new Font("Times New Roman", Font.PLAIN, 28);
     Font arrowFont = new Font("Times New Roman", Font.PLAIN, 12);
 
-    JPanel titlePanel, startButtonPanel, eventAnnouncerPanel, buildingButtonPanel, resourcesPanel, buildingPanel, peoplePanel, numberPanel, arrowPanel, healthPanel, mapPanel, userActionPanel;
+    JPanel titlePanel, startButtonPanel, eventAnnouncerPanel, buildingButtonPanel, resourcesPanel, buildingPanel, peoplePanel, numberPanel, arrowPanel, healthPanel, mapPanel, userActionPanel, cartItemsPanel, magicItemPanel;
     JLabel titleLabel;
-    JButton startButton, hutButton, smokeHouseButton, minesButton, factoryButton, blacksmithButton, bucketButton, trapButton, villageButton, actionButton, tradecartMenu;
-    JTextArea announcer, resources, buildings, health;
+    JButton villageButton, actionButton, tradecartMenu;
+    JTextArea announcer, resources, buildings, health, magicItems;
     TitleScreenHandler tsHandler = new TitleScreenHandler();
     ChoiceHandler choiceHandler = new ChoiceHandler();
+    UserActionHandler userActionHandler = new UserActionHandler();
+    MapNavigationHandler mapNavigationHandler = new MapNavigationHandler();
+    VillagerAssignmentHandler villagerAssignmentHandler = new VillagerAssignmentHandler();
     Game game;
     Enum.mapLocationType mapLocation;
 
@@ -54,16 +57,16 @@ public class GameUI {
         startButtonPanel = new JPanel();
         startButtonPanel.setBounds(400, 300, 200, 100);
         startButtonPanel.setBackground(Color.black);
-
-        startButton = new JButton("Start");
-        startButton.setBackground(Color.black);
-        startButton.setForeground(Color.white);
-        startButton.setFont(normalFont);
-        startButton.addActionListener(tsHandler);
-        startButton.setFocusPainted(false);
+        JButton temp;
+        temp = new JButton("Start");
+        temp.setBackground(Color.black);
+        temp.setForeground(Color.white);
+        temp.setFont(normalFont);
+        temp.addActionListener(tsHandler);
+        temp.setFocusPainted(false);
 
         titlePanel.add(titleLabel);
-        startButtonPanel.add(startButton);
+        startButtonPanel.add(temp);
 
         con.add(titlePanel);
         con.add(startButtonPanel);
@@ -87,7 +90,6 @@ public class GameUI {
         userActionPanel.setBackground(Color.black);
         userActionPanel.setLayout(new GridLayout(7, 1));
 
-        JButton temp;
         temp = new JButton("Wood");
         userActionButtons(temp, "gatherWood");
         temp = new JButton("Food");
@@ -110,20 +112,20 @@ public class GameUI {
         buildingButtonPanel.setLayout(new GridLayout(7,1));
         con.add(buildingButtonPanel);
 
-        hutButton = new JButton("Hut");
-        buttonHelper(hutButton, "hut");
-        smokeHouseButton = new JButton("SmokeHouse");
-        buttonHelper(smokeHouseButton, "smokehouse");
-        minesButton = new JButton("Mines");
-        buttonHelper(minesButton, "mines");
-        factoryButton = new JButton("Factory");
-        buttonHelper(factoryButton, "factory");
-        blacksmithButton = new JButton("Blacksmith");
-        buttonHelper(blacksmithButton, "blacksmith");
-        bucketButton = new JButton("Bucket");
-        buttonHelper(bucketButton, "bucket");
-        trapButton = new JButton("Trap");
-        buttonHelper(trapButton, "trap");
+        temp = new JButton("Hut");
+        buttonHelper(temp, "hut");
+        temp = new JButton("SmokeHouse");
+        buttonHelper(temp, "smokehouse");
+        temp = new JButton("Mines");
+        buttonHelper(temp, "mines");
+        temp = new JButton("Factory");
+        buttonHelper(temp, "factory");
+        temp = new JButton("Blacksmith");
+        buttonHelper(temp, "blacksmith");
+        temp = new JButton("Bucket");
+        buttonHelper(temp, "bucket");
+        temp = new JButton("Trap");
+        buttonHelper(temp, "trap");
 
         peoplePanel = new JPanel();
         peoplePanel.setBounds(650, 200, 200, 550);
@@ -146,18 +148,22 @@ public class GameUI {
         for(Map.Entry<String, Integer> elements: game.getJobMap().entrySet()){
             if(!elements.getKey().equals("Villager")) {
                 temp = new JButton(elements.getKey());
-                buttonAdd(temp, peoplePanel);
+                noActionButtonAdd(temp, peoplePanel);
                 temp = new JButton(elements.getValue().toString());
-                buttonAdd(temp, numberPanel);
+                noActionButtonAdd(temp, numberPanel);
                 temp = new JButton(">");
                 arrowButtonAdd(temp, elements.getKey()+"_up");
                 temp = new JButton("<");
                 arrowButtonAdd(temp, elements.getKey()+"_down");
             }
         }
-        buttonAdd(new JButton("Villager"), peoplePanel);
-        buttonAdd(new JButton(game.getJobMap().get("Villager").toString()), numberPanel);
+        noActionButtonAdd(new JButton("Villager"), peoplePanel);
+        noActionButtonAdd(new JButton(game.getJobMap().get("Villager").toString()), numberPanel);
 
+    }
+
+    public void createTradecartItems(boolean newDay){
+        // skip for rn
     }
     public void login(){
         mapPanel.setVisible(false);
@@ -224,7 +230,6 @@ public class GameUI {
         textColorHelper(health);
         healthPanel.add(health);
 
-        map();
 
     }
 
@@ -240,19 +245,15 @@ public class GameUI {
                 break;
             case tradecart:
                 stopAllButton();
-                placeHolder();
+                createTradecartItems(true);
                 break;
             default:
-                placeHolder();
+                System.out.println("The map navigation is incorrect");
         }
     }
 
     public void userActions(){
         userActionPanel.setVisible(true);
-    }
-
-    public void placeHolder(){
-
     }
 
     public void stopAllButton(){
@@ -278,7 +279,7 @@ public class GameUI {
         button.setForeground(Color.white);
         button.setFont(normalFont);
         button.setFocusPainted(false);
-        button.addActionListener(choiceHandler);
+        button.addActionListener(userActionHandler);
         button.setActionCommand(command);
         userActionPanel.add(button);
     }
@@ -288,7 +289,7 @@ public class GameUI {
         button.setForeground(Color.white);
         button.setFont(normalFont);
         button.setFocusPainted(false);
-        button.addActionListener(choiceHandler);
+        button.addActionListener(mapNavigationHandler);
         button.setActionCommand(command);
         mapPanel.add(button);
     }
@@ -298,12 +299,12 @@ public class GameUI {
         button.setForeground(Color.white);
         button.setFont(arrowFont);
         button.setFocusPainted(false);
-        button.addActionListener(choiceHandler);
+        button.addActionListener(villagerAssignmentHandler);
         button.setActionCommand(command);
         arrowPanel.add(button);
     }
 
-    public void buttonAdd(JButton button, JPanel panel){
+    public void noActionButtonAdd(JButton button, JPanel panel){
         button.setBackground(Color.black);
         button.setForeground(Color.white);
         button.setFont(normalFont);
@@ -334,38 +335,68 @@ public class GameUI {
 
         public void actionPerformed(ActionEvent event){
             gamePlayScreen();
+            map();
         }
     }
 
-    public class ChoiceHandler implements ActionListener{
+    public class MapNavigationHandler implements ActionListener{
+        public void actionPerformed(ActionEvent event) {
+            String choice = event.getActionCommand();
+            switch (choice) {
+                case "village":
+                    System.out.println("village map");
+                    mapLocation = Enum.mapLocationType.village;
+                    map();
+                    break;
+                case "action":
+                    System.out.println("user actions map");
+                    mapLocation = Enum.mapLocationType.action;
+                    map();
+                    break;
+                case "tradecart":
+                    System.out.println("tradecart map");
+                    break;
+                default:
+                    System.out.println("I am not sure what you created");
+            }
+        }
+    }
+
+    public class UserActionHandler implements ActionListener{
         public void actionPerformed(ActionEvent event){
             String choice = event.getActionCommand();
+            switch (choice){
+                case "gatherWood":
+                    System.out.println("You are gathering wood");
+                    break;
+                case "gatherFood":
+                    System.out.println("You are gathering food");
+                    break;
+                case "gatherMeat":
+                    System.out.println("You are gathering meat");
+                    break;
+                case "gatherRocks":
+                    System.out.println("You are gathering rocks");
+                    break;
+                case "gatherWater":
+                    System.out.println("You are gathering water");
+                    break;
+                case "gatherClothes":
+                    System.out.println("You are gathering Clothes");
+                    break;
+                case "gatherFur":
+                    System.out.println("You are gathering Fur");
+                    break;
+                default:
+                    System.out.println("I am not sure what you created");
+            }
+        }
+    }
 
+    public class VillagerAssignmentHandler implements ActionListener{
+        public void actionPerformed(ActionEvent event){
+            String choice = event.getActionCommand();
             switch(choice){
-                case "hut":
-                    System.out.println("You create a hut");
-                    break;
-                case "smokehouse":
-                    System.out.println("You create a smokehouse");
-                    break;
-                case "mines":
-                    System.out.println("You create a mine");
-                    break;
-                case "factory":
-                    System.out.println("You create a factory");
-                    break;
-                case "blacksmith":
-                    System.out.println("You create a blacksmith");
-                    break;
-                case "bucket":
-                    System.out.println("You create a bucket");
-                    break;
-                case "trap":
-                    System.out.println("You create a trap");
-                    break;
-                case "void":
-                    System.out.println("no action needed");
-                    break;
                 case "Hunter_up":
                     System.out.println("Added a hunter");
                     break;
@@ -426,39 +457,37 @@ public class GameUI {
                 case "Trapper_down":
                     System.out.println("Deleted a Trapper");
                     break;
-                case "village":
-                    System.out.println("village map");
-                    mapLocation = Enum.mapLocationType.village;
-                    map();
+                default:
+                    System.out.println("I am not sure what you created");
+            }
+        }
+    }
+
+    public class ChoiceHandler implements ActionListener{
+        public void actionPerformed(ActionEvent event){
+            String choice = event.getActionCommand();
+
+            switch(choice){
+                case "hut":
+                    System.out.println("You create a hut");
                     break;
-                case "action":
-                    System.out.println("user actions map");
-                    mapLocation = Enum.mapLocationType.action;
-                    map();
+                case "smokehouse":
+                    System.out.println("You create a smokehouse");
                     break;
-                case "tradecart":
-                    System.out.println("tradecart map");
+                case "mines":
+                    System.out.println("You create a mine");
                     break;
-                case "gatherWood":
-                    System.out.println("You are gathering wood");
+                case "factory":
+                    System.out.println("You create a factory");
                     break;
-                case "gatherFood":
-                    System.out.println("You are gathering food");
+                case "blacksmith":
+                    System.out.println("You create a blacksmith");
                     break;
-                case "gatherMeat":
-                    System.out.println("You are gathering meat");
+                case "bucket":
+                    System.out.println("You create a bucket");
                     break;
-                case "gatherRocks":
-                    System.out.println("You are gathering rocks");
-                    break;
-                case "gatherWater":
-                    System.out.println("You are gathering water");
-                    break;
-                case "gatherClothes":
-                    System.out.println("You are gathering Clothes");
-                    break;
-                case "gatherFur":
-                    System.out.println("You are gathering Fur");
+                case "trap":
+                    System.out.println("You create a trap");
                     break;
                 default:
                     System.out.println("I am not sure what you created");

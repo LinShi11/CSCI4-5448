@@ -1,3 +1,5 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Game {
@@ -6,6 +8,8 @@ public class Game {
     HashMap<String, Integer> buildingMap;
 
     HashMap<String, Integer> jobMap;
+    ArrayList<Enum.magicItems> magicItemsArrayList;
+    int totalMagicItemCount = 10;
 
     public Game(){
         resourceMap = new HashMap<>();
@@ -38,6 +42,11 @@ public class Game {
         jobMap.put("Cook", 0);
         jobMap.put("Repairer", 0);
         jobMap.put("Villager", 0);
+
+        magicItemsArrayList = new ArrayList<>();
+    }
+    public int getTotalMagicItemCount(){
+        return totalMagicItemCount;
     }
 
     public HashMap<String, Integer> getResourceMap(){
@@ -50,5 +59,9 @@ public class Game {
 
     public HashMap<String, Integer> getJobMap(){
         return jobMap;
+    }
+
+    public ArrayList<Enum.magicItems> getMagicItemsArrayList(){
+        return magicItemsArrayList;
     }
 }
