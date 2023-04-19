@@ -497,31 +497,24 @@ public class GameUI {
             String choice = event.getActionCommand();
             switch (choice){
                 case "gatherWood":
-                    System.out.println("You are gathering wood");
                     game.setDailyAgenda(Enum.resourceType.wood);
                     break;
                 case "gatherFood":
-                    System.out.println("You are gathering food");
                     game.setDailyAgenda(Enum.resourceType.food);
                     break;
                 case "gatherMeat":
-                    System.out.println("You are gathering meat");
                     game.setDailyAgenda(Enum.resourceType.meat);
                     break;
                 case "gatherRocks":
-                    System.out.println("You are gathering rocks");
                     game.setDailyAgenda(Enum.resourceType.rock);
                     break;
                 case "gatherWater":
-                    System.out.println("You are gathering water");
                     game.setDailyAgenda(Enum.resourceType.water);
                     break;
                 case "gatherClothes":
-                    System.out.println("You are gathering Clothes");
                     game.setDailyAgenda(Enum.resourceType.clothes);
                     break;
                 case "gatherFur":
-                    System.out.println("You are gathering Fur");
                     game.setDailyAgenda(Enum.resourceType.fur);
                     break;
                 default:
@@ -538,83 +531,63 @@ public class GameUI {
             String choice = event.getActionCommand();
             switch(choice){
                 case "Hunter_up":
-                    System.out.println("Added a hunter");
                     game.assignJobs(Enum.jobType.Hunter);
                     break;
                 case "Hunter_down":
-                    System.out.println("Deleted a hunter");
                     game.removeJobs(Enum.jobType.Hunter);
                     break;
                 case "Miner_up":
-                    System.out.println("Added a miner");
                     game.assignJobs(Enum.jobType.Miner);
                     break;
                 case "Miner_down":
-                    System.out.println("Deleted a miner");
                     game.removeJobs(Enum.jobType.Miner);
                     break;
                 case "Lumberjack_up":
-                    System.out.println("Added a lumberjack");
                     game.assignJobs(Enum.jobType.Lumberjack);
                     break;
                 case "Lumberjack_down":
-                    System.out.println("Deleted a lumberjack");
                     game.removeJobs(Enum.jobType.Lumberjack);
                     break;
                 case "Weaponsmith_up":
-                    System.out.println("Added a Weaponsmith");
                     game.assignJobs(Enum.jobType.Weaponsmith);
                     break;
                 case "Weaponsmith_down":
-                    System.out.println("Deleted a Weaponsmith");
                     game.removeJobs(Enum.jobType.Weaponsmith);
                     break;
                 case "Repairer_up":
-                    System.out.println("Added a Repairer");
                     game.assignJobs(Enum.jobType.Repairer);
                     break;
                 case "Repairer_down":
-                    System.out.println("Deleted a Repairer");
                     game.removeJobs(Enum.jobType.Repairer);
                     break;
                 case "Cook_up":
-                    System.out.println("Added a Cook");
                     game.assignJobs(Enum.jobType.Cook);
                     break;
                 case "Cook_down":
-                    System.out.println("Deleted a Cook");
                     game.removeJobs(Enum.jobType.Cook);
                     break;
                 case "Waterman_up":
-                    System.out.println("Added a Waterman");
                     game.assignJobs(Enum.jobType.Waterman);
                     break;
                 case "Waterman_down":
-                    System.out.println("Deleted a Waterman");
                     game.removeJobs(Enum.jobType.Waterman);
                     break;
                 case "Tailor_up":
-                    System.out.println("Added a Tailor");
                     game.assignJobs(Enum.jobType.Tailor);
                     break;
                 case "Tailor_down":
-                    System.out.println("Deleted a Tailor");
                     game.removeJobs(Enum.jobType.Tailor);
                     break;
                 case "Gather_up":
-                    System.out.println("Added a Gather");
                     game.assignJobs(Enum.jobType.Gather);
                     break;
                 case "Gather_down":
-                    System.out.println("Deleted a Gather");
                     game.removeJobs(Enum.jobType.Gather);
                     break;
                 case "Trapper_up":
-                    System.out.println("Added a Trapper");
                     game.assignJobs(Enum.jobType.Trapper);
                     break;
                 case "Trapper_down":
-                    System.out.println("Deleted a Trapper");
                     game.removeJobs(Enum.jobType.Trapper);
                     break;
                 default:
