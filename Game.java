@@ -4,23 +4,24 @@ import java.util.HashMap;
 
 public class Game {
 
-    HashMap<String, Integer> resourceMap;
+    HashMap<Enum.resourceType, Integer> resourceMap;
     HashMap<String, Integer> buildingMap;
 
     HashMap<String, Integer> jobMap;
     ArrayList<Enum.magicItems> magicItemsArrayList;
     ArrayList<Enum.resourceType> dailyAgenda;
     int totalMagicItemCount = 10;
+    UserActions userActions;
 
     public Game(){
         resourceMap = new HashMap<>();
-        resourceMap.put("Food", 0);
-        resourceMap.put("Meat", 0);
-        resourceMap.put("Wood", 0);
-        resourceMap.put("Water", 0);
-        resourceMap.put("Fur", 0);
-        resourceMap.put("Rock", 0);
-        resourceMap.put("Clothes", 0);
+        resourceMap.put(Enum.resourceType.food, 0);
+        resourceMap.put(Enum.resourceType.meat, 0);
+        resourceMap.put(Enum.resourceType.wood, 0);
+        resourceMap.put(Enum.resourceType.water, 0);
+        resourceMap.put(Enum.resourceType.fur, 0);
+        resourceMap.put(Enum.resourceType.rock, 0);
+        resourceMap.put(Enum.resourceType.clothes, 0);
 
         buildingMap = new HashMap<>();
         buildingMap.put("Trap", 0);
@@ -46,6 +47,8 @@ public class Game {
 
         magicItemsArrayList = new ArrayList<>();
         dailyAgenda = new ArrayList<>();
+
+        userActions = new UserActions();
 
     }
 
@@ -73,8 +76,38 @@ public class Game {
         return totalMagicItemCount;
     }
 
-    public HashMap<String, Integer> getResourceMap(){
+    public HashMap<Enum.resourceType, Integer> getResourceMap(){
         return resourceMap;
+    }
+
+    public void dailyUpdate(){
+        for(Enum.resourceType agenda: dailyAgenda){
+            switch (agenda){
+                case wood:
+                    resourceMap.put(Enum.resourceType.wood, (resourceMap.get(Enum.resourceType.wood) + userActions.getWood()));
+                    break;
+                case food:
+                    resourceMap.put(Enum.resourceType.food, (resourceMap.get(Enum.resourceType.food) + userActions.getFood()));
+                    break;
+                case meat:
+                    resourceMap.put(Enum.resourceType.meat, (resourceMap.get(Enum.resourceType.meat) + userActions.getMeat()));
+                    break;
+                case rock:
+                    resourceMap.put(Enum.resourceType.rock, (resourceMap.get(Enum.resourceType.rock) + userActions.getRock()));
+                    break;
+                case water:
+                    resourceMap.put(Enum.resourceType.water, (resourceMap.get(Enum.resourceType.water) + userActions.getWater()));
+                    break;
+                case clothes:
+                    resourceMap.put(Enum.resourceType.clothes, (resourceMap.get(Enum.resourceType.clothes) + userActions.getClothes()));
+                    break;
+                case fur:
+                    resourceMap.put(Enum.resourceType.fur, (resourceMap.get(Enum.resourceType.fur) + userActions.getFur()));
+                    break; 
+                default:
+                    System.out.println("nothing");
+            }
+        }
     }
 
     public HashMap<String, Integer> getBuildingMap(){

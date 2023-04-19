@@ -198,10 +198,12 @@ public class GameUI {
         dailyTaskPanel.setVisible(true);
         JButton temp;
         ArrayList<Enum.resourceType> agenda = game.getDailyAgenda();
-        for(int i = 0; i < agenda.size(); i++){
-            temp = new JButton(agenda.get(i).toString());
-            dailyTasksButtons.add(temp);
-            addDailyTasksButton(temp, "delete_"+ agenda.get(i).toString());
+        if(dailyTasksButtons.size() != agenda.size()) {
+            for (int i = 0; i < agenda.size(); i++) {
+                temp = new JButton(agenda.get(i).toString());
+                dailyTasksButtons.add(temp);
+                addDailyTasksButton(temp, "delete_" + agenda.get(i).toString());
+            }
         }
     }
 
@@ -251,7 +253,7 @@ public class GameUI {
         resources.setBounds(1000,100,400,300);
 
         resources.setText("Resources \t Amount\n");
-        for(Map.Entry<String, Integer> elements: game.getResourceMap().entrySet()){
+        for(Map.Entry<Enum.resourceType, Integer> elements: game.getResourceMap().entrySet()){
             resources.append(elements.getKey() + "\t" + elements.getValue() + "\n");
         }
         textColorHelper(resources);
@@ -288,6 +290,15 @@ public class GameUI {
         healthPanel.add(health);
 
 
+    }
+
+    public void dailyRepaint(){
+        eventAnnouncerPanel.removeAll();
+        resourcesPanel.removeAll();
+        buildingPanel.removeAll();
+        healthPanel.removeAll();
+        con.repaint();
+        gamePlayScreen();
     }
 
     public void map(){
@@ -401,6 +412,9 @@ public class GameUI {
     public class NextDayHandler implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
+            game.dailyUpdate();
+            dailyRepaint();
+
             System.out.println("Next day");
         }
     }

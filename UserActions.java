@@ -4,6 +4,10 @@ public class UserActions{
 	
 	private Random random = new Random();
 
+	public UserActions(){
+
+	}
+
 	public int getFood() {
 		return random.nextInt(11) + 5; //5-15 pounds
 	}
@@ -17,8 +21,8 @@ public class UserActions{
 	}
 
 	public int getFur() {
-		
-		//0, 1, 2 for "sheep", "bear", "lynx"		
+
+		//0, 1, 2 for "sheep", "bear", "lynx"
 		return random.nextInt(3);
 	}
 
