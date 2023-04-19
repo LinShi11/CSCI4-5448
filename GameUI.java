@@ -16,7 +16,7 @@ public class GameUI {
     Font normalFont = new Font("Times New Roman", Font.PLAIN, 28);
     Font arrowFont = new Font("Times New Roman", Font.PLAIN, 12);
 
-    JPanel titlePanel, startButtonPanel, eventAnnouncerPanel, buildingButtonPanel, resourcesPanel, buildingPanel, peoplePanel, numberPanel, arrowPanel, healthPanel, mapPanel, userActionPanel, dailyTaskPanel, cartItemsPanel, magicItemPanel;
+    JPanel titlePanel, startButtonPanel, eventAnnouncerPanel, buildingButtonPanel, resourcesPanel, buildingPanel, peoplePanel, numberPanel, arrowPanel, healthPanel, mapPanel, userActionPanel, dailyTaskPanel, nextDayPanel, cartItemsPanel, magicItemPanel;
     JLabel titleLabel;
     JButton villageButton, actionButton, tradecartMenu;
     JTextArea announcer, resources, buildings, health, dailyTaskInfo, magicItems;
@@ -26,6 +26,7 @@ public class GameUI {
     MapNavigationHandler mapNavigationHandler = new MapNavigationHandler();
     VillagerAssignmentHandler villagerAssignmentHandler = new VillagerAssignmentHandler();
     DeleteAgendaHandler deleteAgendaHandler = new DeleteAgendaHandler();
+    NextDayHandler nextDayHandler = new NextDayHandler();
     Game game;
     Enum.mapLocationType mapLocation;
     ArrayList<JButton> dailyTasksButtons;
@@ -172,6 +173,21 @@ public class GameUI {
 
         dailyTaskPanel.add(dailyTaskInfo);
         con.add(dailyTaskPanel);
+
+        nextDayPanel = new JPanel();
+        nextDayPanel.setBounds(600, 900, 200, 100);
+        nextDayPanel.setBackground(Color.black);
+
+        temp = new JButton("Next Day");
+        temp.setBackground(Color.black);
+        temp.setForeground(Color.white);
+        temp.setFont(normalFont);
+        temp.addActionListener(nextDayHandler);
+        temp.setFocusPainted(false);
+        nextDayPanel.add(temp);
+
+        con.add(nextDayPanel);
+
     }
 
     public void createTradecartItems(boolean newDay){
@@ -207,6 +223,7 @@ public class GameUI {
     }
     public void login(){
         mapPanel.setVisible(false);
+        nextDayPanel.setVisible(false);
         startButtonPanel.setVisible(true);
         titlePanel.setVisible(true);
     }
@@ -304,9 +321,10 @@ public class GameUI {
         peoplePanel.setVisible(false);
         numberPanel.setVisible(false);
         arrowPanel.setVisible(false);
-        mapPanel.setVisible(true);
         userActionPanel.setVisible(false);
         dailyTaskPanel.setVisible(false);
+        mapPanel.setVisible(true);
+        nextDayPanel.setVisible(true);
     }
 
     public void villageButtons(){
@@ -380,6 +398,13 @@ public class GameUI {
         }
     }
 
+    public class NextDayHandler implements ActionListener{
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            System.out.println("Next day");
+        }
+    }
+
     public class DeleteAgendaHandler implements  ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -402,8 +427,6 @@ public class GameUI {
                     break;
                 case "delete_clothes":
                     game.deleteDailyAgenda(Enum.resourceType.clothes);
-                    System.out.println("delete");
-                    System.out.println(game.getDailyAgenda().size());
                     break;
                 case "delete_fur":
                     game.deleteDailyAgenda(Enum.resourceType.fur);
@@ -421,12 +444,10 @@ public class GameUI {
             String choice = event.getActionCommand();
             switch (choice) {
                 case "village":
-                    System.out.println("village map");
                     mapLocation = Enum.mapLocationType.village;
                     map();
                     break;
                 case "action":
-                    System.out.println("user actions map");
                     mapLocation = Enum.mapLocationType.action;
                     map();
                     break;
