@@ -5,13 +5,14 @@ import java.util.HashMap;
 public class Game {
 
     HashMap<Enum.resourceType, Integer> resourceMap;
-    HashMap<String, Integer> buildingMap;
+    HashMap<Enum.buildingType, Integer> buildingMap;
 
     HashMap<String, Integer> jobMap;
     ArrayList<Enum.magicItems> magicItemsArrayList;
     ArrayList<Enum.resourceType> dailyAgenda;
     int totalMagicItemCount = 10;
     UserActions userActions;
+    BuildingFactory buildingFactory;
 
     public Game(){
         resourceMap = new HashMap<>();
@@ -24,13 +25,14 @@ public class Game {
         resourceMap.put(Enum.resourceType.clothes, 0);
 
         buildingMap = new HashMap<>();
-        buildingMap.put("Trap", 0);
-        buildingMap.put("Bucket", 0);
-        buildingMap.put("Smokehouse", 0);
-        buildingMap.put("Factory", 0);
-        buildingMap.put("Blacksmith", 0);
-        buildingMap.put("Mines", 0);
-        buildingMap.put("Tradecart", 0);
+        buildingMap.put(Enum.buildingType.Trap, 0);
+        buildingMap.put(Enum.buildingType.Bucket, 0);
+        buildingMap.put(Enum.buildingType.Smokehouse, 0);
+        buildingMap.put(Enum.buildingType.Factory, 0);
+        buildingMap.put(Enum.buildingType.Blacksmith, 0);
+        buildingMap.put(Enum.buildingType.Mines, 0);
+        buildingMap.put(Enum.buildingType.Tradecart, 0);
+        buildingMap.put(Enum.buildingType.Hut, 0);
 
         jobMap = new HashMap<>();
         jobMap.put("Gather", 0);
@@ -49,6 +51,8 @@ public class Game {
         dailyAgenda = new ArrayList<>();
 
         userActions = new UserActions();
+
+        buildingFactory = new BuildingFactory();
 
     }
 
@@ -79,6 +83,10 @@ public class Game {
     public HashMap<Enum.resourceType, Integer> getResourceMap(){
         return resourceMap;
     }
+    public void addBuildings(Enum.buildingType type){
+        Building building = buildingFactory.constructBuilding(type);
+        buildingMap.put(building.getType(), (buildingMap.get(building.getType()) + 1));
+    }
 
     public void dailyUpdate(){
         for(Enum.resourceType agenda: dailyAgenda){
@@ -103,14 +111,14 @@ public class Game {
                     break;
                 case fur:
                     resourceMap.put(Enum.resourceType.fur, (resourceMap.get(Enum.resourceType.fur) + userActions.getFur()));
-                    break; 
+                    break;
                 default:
                     System.out.println("nothing");
             }
         }
     }
 
-    public HashMap<String, Integer> getBuildingMap(){
+    public HashMap<Enum.buildingType, Integer> getBuildingMap(){
         return buildingMap;
     }
 

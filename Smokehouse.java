@@ -1,10 +1,15 @@
 public class Smokehouse implements Building{
-    int buildingCount = 0;
+    Enum.buildingType type;
     public Smokehouse(){
-        buildingCount++;
+        type = Enum.buildingType.Smokehouse;
     }
     @Override
     public void getLimit() {
 
+    }
+
+    @Override
+    public Enum.buildingType getType() {
+        return type;
     }
 }

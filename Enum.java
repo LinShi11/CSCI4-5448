@@ -2,7 +2,7 @@ public class Enum {
 
     enum buildingType{
         Smokehouse,
-        ClothesFactory,
+        Factory,
         Bucket,
         Trap,
         Hut,

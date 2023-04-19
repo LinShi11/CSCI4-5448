@@ -4,7 +4,7 @@ public class BuildingFactory {
         switch (type){
             case Smokehouse:
                 return new Smokehouse();
-            case ClothesFactory:
+            case Factory:
                 return new ClothesFactory();
             case Bucket:
                 return new Bucket();

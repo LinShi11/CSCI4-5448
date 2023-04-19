@@ -111,9 +111,9 @@ public class GameUI {
         con.add(userActionPanel);
 
         buildingButtonPanel = new JPanel();
-        buildingButtonPanel.setBounds(400, 200, 200, 350);
+        buildingButtonPanel.setBounds(400, 200, 200, 400);
         buildingButtonPanel.setBackground(Color.black);
-        buildingButtonPanel.setLayout(new GridLayout(7,1));
+        buildingButtonPanel.setLayout(new GridLayout(8,1));
         con.add(buildingButtonPanel);
 
         temp = new JButton("Hut");
@@ -130,6 +130,8 @@ public class GameUI {
         buttonHelper(temp, "bucket");
         temp = new JButton("Trap");
         buttonHelper(temp, "trap");
+        temp = new JButton("Tradecart");
+        buttonHelper(temp, "tradecart");
 
         peoplePanel = new JPanel();
         peoplePanel.setBounds(650, 200, 200, 550);
@@ -269,7 +271,7 @@ public class GameUI {
         buildings.setBounds(1000,500,400,300);
 
         buildings.setText("Building\t Amount\n");
-        for(Map.Entry<String, Integer> elements: game.getBuildingMap().entrySet()){
+        for(Map.Entry<Enum.buildingType, Integer> elements: game.getBuildingMap().entrySet()){
             buildings.append(elements.getKey() + "\t" + elements.getValue() + "\n");
         }
         textColorHelper(buildings);
@@ -592,29 +594,33 @@ public class GameUI {
 
             switch(choice){
                 case "hut":
-                    System.out.println("You create a hut");
+                    game.addBuildings(Enum.buildingType.Hut);
                     break;
                 case "smokehouse":
-                    System.out.println("You create a smokehouse");
+                    game.addBuildings(Enum.buildingType.Smokehouse);
                     break;
                 case "mines":
-                    System.out.println("You create a mine");
+                    game.addBuildings(Enum.buildingType.Mines);
                     break;
                 case "factory":
-                    System.out.println("You create a factory");
+                    game.addBuildings(Enum.buildingType.Factory);
                     break;
                 case "blacksmith":
-                    System.out.println("You create a blacksmith");
+                    game.addBuildings(Enum.buildingType.Blacksmith);
                     break;
                 case "bucket":
-                    System.out.println("You create a bucket");
+                    game.addBuildings(Enum.buildingType.Bucket);
                     break;
                 case "trap":
-                    System.out.println("You create a trap");
+                    game.addBuildings(Enum.buildingType.Trap);
+                    break;
+                case "tradecart":
+                    game.addBuildings(Enum.buildingType.Tradecart);
                     break;
                 default:
                     System.out.println("I am not sure what you created");
             }
+            dailyRepaint();
         }
     }
 }
