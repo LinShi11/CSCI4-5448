@@ -436,6 +436,7 @@ public class GameUI {
                 default:
                     System.out.println("I am not sure what you created");
             }
+
         }
     }
 
@@ -445,28 +446,38 @@ public class GameUI {
             switch (choice){
                 case "gatherWood":
                     System.out.println("You are gathering wood");
+                    game.setDailyAgenda(Enum.resourceType.wood);
                     break;
                 case "gatherFood":
                     System.out.println("You are gathering food");
+                    game.setDailyAgenda(Enum.resourceType.food);
                     break;
                 case "gatherMeat":
                     System.out.println("You are gathering meat");
+                    game.setDailyAgenda(Enum.resourceType.meat);
                     break;
                 case "gatherRocks":
                     System.out.println("You are gathering rocks");
+                    game.setDailyAgenda(Enum.resourceType.rock);
                     break;
                 case "gatherWater":
                     System.out.println("You are gathering water");
+                    game.setDailyAgenda(Enum.resourceType.water);
                     break;
                 case "gatherClothes":
                     System.out.println("You are gathering Clothes");
+                    game.setDailyAgenda(Enum.resourceType.clothes);
                     break;
                 case "gatherFur":
                     System.out.println("You are gathering Fur");
+                    game.setDailyAgenda(Enum.resourceType.fur);
                     break;
                 default:
                     System.out.println("I am not sure what you created");
             }
+            removeTaskButtons();
+            dailyTaskPanel.repaint();
+            map();
         }
     }
 

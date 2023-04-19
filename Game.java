@@ -47,9 +47,6 @@ public class Game {
         magicItemsArrayList = new ArrayList<>();
         dailyAgenda = new ArrayList<>();
 
-        setDailyAgenda(Enum.resourceType.clothes);
-        setDailyAgenda(Enum.resourceType.clothes);
-        setDailyAgenda(Enum.resourceType.clothes);
     }
 
     public boolean deleteDailyAgenda(Enum.resourceType type){
