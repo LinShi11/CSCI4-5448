@@ -16,17 +16,19 @@ public class GameUI {
     Font normalFont = new Font("Times New Roman", Font.PLAIN, 28);
     Font arrowFont = new Font("Times New Roman", Font.PLAIN, 12);
 
-    JPanel titlePanel, startButtonPanel, eventAnnouncerPanel, buildingButtonPanel, resourcesPanel, buildingPanel, peoplePanel, numberPanel, arrowPanel, healthPanel, mapPanel, userActionPanel, cartItemsPanel, magicItemPanel;
+    JPanel titlePanel, startButtonPanel, eventAnnouncerPanel, buildingButtonPanel, resourcesPanel, buildingPanel, peoplePanel, numberPanel, arrowPanel, healthPanel, mapPanel, userActionPanel, dailyTaskPanel, cartItemsPanel, magicItemPanel;
     JLabel titleLabel;
     JButton villageButton, actionButton, tradecartMenu;
-    JTextArea announcer, resources, buildings, health, magicItems;
+    JTextArea announcer, resources, buildings, health, dailyTaskInfo, magicItems;
     TitleScreenHandler tsHandler = new TitleScreenHandler();
     ChoiceHandler choiceHandler = new ChoiceHandler();
     UserActionHandler userActionHandler = new UserActionHandler();
     MapNavigationHandler mapNavigationHandler = new MapNavigationHandler();
     VillagerAssignmentHandler villagerAssignmentHandler = new VillagerAssignmentHandler();
+    DeleteAgendaHandler deleteAgendaHandler = new DeleteAgendaHandler();
     Game game;
     Enum.mapLocationType mapLocation;
+    ArrayList<JButton> dailyTasksButtons;
 
     public GameUI(Game tempGame){
         game = tempGame;
@@ -37,6 +39,7 @@ public class GameUI {
         window.setLayout(null);
         con = window.getContentPane();
         mapLocation = Enum.mapLocationType.village;
+        dailyTasksButtons = new ArrayList<>();
 
         createAllChangablePanels();
         stopAllButton();
@@ -160,10 +163,47 @@ public class GameUI {
         noActionButtonAdd(new JButton("Villager"), peoplePanel);
         noActionButtonAdd(new JButton(game.getJobMap().get("Villager").toString()), numberPanel);
 
+        dailyTaskPanel = new JPanel();
+        dailyTaskPanel.setBackground(Color.black);
+        dailyTaskPanel.setBounds(700, 200, 200, 500);
+        dailyTaskInfo = new JTextArea("Daily TODO's ");
+        dailyTaskInfo.setBounds(700, 200, 200, 500);
+        textColorHelper(dailyTaskInfo);
+
+        dailyTaskPanel.add(dailyTaskInfo);
+        con.add(dailyTaskPanel);
     }
 
     public void createTradecartItems(boolean newDay){
         // skip for rn
+    }
+
+    public void dailyTasksScreen(){
+        dailyTaskPanel.setVisible(true);
+        JButton temp;
+        ArrayList<Enum.resourceType> agenda = game.getDailyAgenda();
+        for(int i = 0; i < agenda.size(); i++){
+            temp = new JButton(agenda.get(i).toString());
+            dailyTasksButtons.add(temp);
+            addDailyTasksButton(temp, "delete_"+ agenda.get(i).toString());
+        }
+    }
+
+    public void removeTaskButtons(){
+        while(dailyTasksButtons.size() > 0){
+            dailyTaskPanel.remove(dailyTasksButtons.get(0));
+            dailyTasksButtons.remove(0);
+        }
+    }
+
+    public void addDailyTasksButton(JButton button, String command){
+        button.setBackground(Color.black);
+        button.setForeground(Color.white);
+        button.setFont(normalFont);
+        button.setFocusPainted(false);
+        button.addActionListener(deleteAgendaHandler);
+        button.setActionCommand(command);
+        dailyTaskPanel.add(button);
     }
     public void login(){
         mapPanel.setVisible(false);
@@ -242,6 +282,7 @@ public class GameUI {
             case action:
                 stopAllButton();
                 userActions();
+                dailyTasksScreen();
                 break;
             case tradecart:
                 stopAllButton();
@@ -265,6 +306,7 @@ public class GameUI {
         arrowPanel.setVisible(false);
         mapPanel.setVisible(true);
         userActionPanel.setVisible(false);
+        dailyTaskPanel.setVisible(false);
     }
 
     public void villageButtons(){
@@ -328,7 +370,6 @@ public class GameUI {
         button.addActionListener(choiceHandler);
         button.setActionCommand(command);
         buildingButtonPanel.add(button);
-
     }
 
     public class TitleScreenHandler implements ActionListener {
@@ -339,6 +380,42 @@ public class GameUI {
         }
     }
 
+    public class DeleteAgendaHandler implements  ActionListener{
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            String choice = e.getActionCommand();
+            switch(choice){
+                case "delete_wood":
+                    game.deleteDailyAgenda(Enum.resourceType.wood);
+                    break;
+                case "delete_food":
+                    game.deleteDailyAgenda(Enum.resourceType.food);
+                    break;
+                case "delete_meat":
+                    game.deleteDailyAgenda(Enum.resourceType.meat);
+                    break;
+                case "delete_rock":
+                    game.deleteDailyAgenda(Enum.resourceType.rock);
+                    break;
+                case "delete_water":
+                    game.deleteDailyAgenda(Enum.resourceType.water);
+                    break;
+                case "delete_clothes":
+                    game.deleteDailyAgenda(Enum.resourceType.clothes);
+                    System.out.println("delete");
+                    System.out.println(game.getDailyAgenda().size());
+                    break;
+                case "delete_fur":
+                    game.deleteDailyAgenda(Enum.resourceType.fur);
+                    break;
+                default:
+                    System.out.println("I am not sure what you are trying to delete");
+            }
+            removeTaskButtons();
+            dailyTaskPanel.repaint();
+            map();
+        }
+    }
     public class MapNavigationHandler implements ActionListener{
         public void actionPerformed(ActionEvent event) {
             String choice = event.getActionCommand();

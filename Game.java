@@ -9,6 +9,7 @@ public class Game {
 
     HashMap<String, Integer> jobMap;
     ArrayList<Enum.magicItems> magicItemsArrayList;
+    ArrayList<Enum.resourceType> dailyAgenda;
     int totalMagicItemCount = 10;
 
     public Game(){
@@ -44,7 +45,33 @@ public class Game {
         jobMap.put("Villager", 0);
 
         magicItemsArrayList = new ArrayList<>();
+        dailyAgenda = new ArrayList<>();
+
+        setDailyAgenda(Enum.resourceType.clothes);
+        setDailyAgenda(Enum.resourceType.clothes);
+        setDailyAgenda(Enum.resourceType.clothes);
     }
+
+    public boolean deleteDailyAgenda(Enum.resourceType type){
+        for(int i = 0; i < dailyAgenda.size(); i++){
+            if(dailyAgenda.get(i) == type){
+                dailyAgenda.remove(i);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void setDailyAgenda(Enum.resourceType type) {
+        if(dailyAgenda.size() < 3){
+            dailyAgenda.add(type);
+        }
+    }
+
+    public ArrayList<Enum.resourceType> getDailyAgenda(){
+        return dailyAgenda;
+    }
+
     public int getTotalMagicItemCount(){
         return totalMagicItemCount;
     }

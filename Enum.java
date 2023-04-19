@@ -10,6 +10,15 @@ public class Enum {
         Mines,
         Tradecart
     }
+    enum resourceType{
+        wood,
+        food,
+        meat,
+        fur,
+        rock,
+        water,
+        clothes
+    }
 
     enum jobType{
         Gather,
