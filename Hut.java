@@ -4,8 +4,8 @@ public class Hut implements Building{
         type = Enum.buildingType.Hut;
     }
     @Override
-    public void getLimit() {
-
+    public int getLimit() {
+        return 5;
     }
 
     @Override

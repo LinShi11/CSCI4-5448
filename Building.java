@@ -1,4 +1,4 @@
 public interface Building {
-    void getLimit();
+    int getLimit();
     Enum.buildingType getType();
 }

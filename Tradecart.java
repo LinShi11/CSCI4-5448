@@ -12,8 +12,8 @@ public class Tradecart implements Building{
         return tradecart;
     }
     @Override
-    public void getLimit() {
-
+    public int getLimit() {
+        return 0;
     }
     @Override
     public Enum.buildingType getType() {

@@ -4,8 +4,8 @@ public class ClothesFactory implements Building{
         type = Enum.buildingType.Factory;
     }
     @Override
-    public void getLimit() {
-
+    public int getLimit() {
+        return 3;
     }
 
     @Override

@@ -4,8 +4,8 @@ public class Smokehouse implements Building{
         type = Enum.buildingType.Smokehouse;
     }
     @Override
-    public void getLimit() {
-
+    public int getLimit() {
+        return 5;
     }
 
     @Override

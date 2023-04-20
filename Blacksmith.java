@@ -4,8 +4,8 @@ public class Blacksmith implements Building{
         type = Enum.buildingType.Blacksmith;
     }
     @Override
-    public void getLimit() {
-
+    public int getLimit() {
+        return 2;
     }
     @Override
     public Enum.buildingType getType() {

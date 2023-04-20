@@ -4,8 +4,8 @@ public class Mines implements Building{
         type = Enum.buildingType.Mines;
     }
     @Override
-    public void getLimit() {
-
+    public int getLimit() {
+        return 3;
     }
 
     @Override

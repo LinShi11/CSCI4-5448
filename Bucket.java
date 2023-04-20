@@ -4,8 +4,8 @@ public class Bucket implements Building{
         type = Enum.buildingType.Bucket;
     }
     @Override
-    public void getLimit() {
-
+    public int getLimit() {
+        return 2;
     }
 
     @Override

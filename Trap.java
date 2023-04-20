@@ -5,8 +5,8 @@ public class Trap implements Building{
         type = Enum.buildingType.Trap;
     }
     @Override
-    public void getLimit() {
-
+    public int getLimit() {
+        return 1;
     }
 
     @Override

@@ -199,7 +199,6 @@ public class GameUI {
     public void jobRepaint(){
         numberPanel.removeAll();
         numberPanel.revalidate();
-        System.out.println(numberPanel.getComponentCount());
         JButton temp;
         for(Map.Entry<Enum.jobType, Integer> elements: game.getJobMap().entrySet()){
             if(elements.getKey()!= Enum.jobType.Villager) {

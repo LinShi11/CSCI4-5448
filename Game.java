@@ -97,7 +97,6 @@ public class Game {
             buildingMap.put(building.getType(), (buildingMap.get(building.getType()) + 1));
         }
     }
-
     public void assignJobs(Enum.jobType type){
         if(jobMap.get(Enum.jobType.Villager) > 0) {
             People person = jobFactory.assignJob(type);
@@ -112,6 +111,20 @@ public class Game {
             jobMap.put(Enum.jobType.Villager, (jobMap.get(Enum.jobType.Villager)) - 1);
         }
     }
+
+//    public boolean checkLimit(Enum.jobType type){
+//        switch(type) {
+//            case Weaponsmith:
+//                if(jobMap.get(Enum.jobType.Weaponsmith) < )
+//            case Waterman:
+//            case Tailor:
+//            case Miner:
+//            case Cook:
+//            case Trapper:
+//            case Villager:
+//
+//        }
+//    }
 
     public void removeJobs(Enum.jobType type){
         if(jobMap.get(type) > 0){
