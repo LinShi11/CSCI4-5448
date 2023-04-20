@@ -49,10 +49,15 @@ public class Game {
         jobMap.put(Enum.jobType.Repairer, 0);
         jobMap.put(Enum.jobType.Villager, 10);
 
+
+
         magicItemsArrayList = new ArrayList<>();
         dailyAgenda = new ArrayList<>();
         peopleArrayList = new ArrayList<>();
 
+        for(int i = 0; i < 10; i ++){
+            peopleArrayList.add(jobFactory.assignJob(Enum.jobType.Villager));
+        }
         userActions = new UserActions();
 
     }
@@ -90,10 +95,18 @@ public class Game {
     }
 
     public void assignJobs(Enum.jobType type){
-        People person = jobFactory.assignJob(type);
-        peopleArrayList.add(person);
-        jobMap.put(person.getType(), (jobMap.get(person.getType()) + 1));
-        System.out.println(jobMap.get(person.getType()));
+        if(jobMap.get(Enum.jobType.Villager) > 0) {
+            People person = jobFactory.assignJob(type);
+            peopleArrayList.add(person);
+            jobMap.put(person.getType(), (jobMap.get(person.getType()) + 1));
+            for(People p: peopleArrayList){
+                if(p.getType() == Enum.jobType.Villager){
+                    peopleArrayList.remove(p);
+                    break;
+                }
+            }
+            jobMap.put(Enum.jobType.Villager, (jobMap.get(Enum.jobType.Villager)) - 1);
+        }
     }
 
     public void removeJobs(Enum.jobType type){
@@ -105,7 +118,10 @@ public class Game {
                     break;
                 }
             }
-            assignJobs(Enum.jobType.Villager);
+            People person = jobFactory.assignJob(Enum.jobType.Villager);
+            peopleArrayList.add(person);
+            jobMap.put(Enum.jobType.Villager, (jobMap.get(Enum.jobType.Villager)) + 1);
+
         }
     }
 
