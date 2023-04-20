@@ -1,0 +1,46 @@
+Mechanics_002 fixed a broken pickup (JEE_00010) and made it used (made $1000)
+Mechanics_002 fixed a broken motorcycle (LUC_00022) and made it used (made $1000)
+Mechanics_006 fixed a used electric car (NIO_00013) and made it like new (made $1000)
+Mechanics_006 fixed a used electric car (RIV_00016) and made it like new (made $1000)
+Mechanics_010 fixed a used monster truck (Shell Camino_00019) and made it like new (made $1000)
+Mechanics_010 fixed a broken performance car (AST_00003) and made it used (made $2000)
+Salesperson_001 sold a vehicle NIO_00013 for $33345
+Salesperson_007 was not able to sell the vehicle AST_00001
+Salesperson_007 was not able to sell the vehicle JEE_00010
+Salesperson_003 sold a vehicle HON_00023 for $39704
+FNCD have 3 motorcycle in the race. 
+One of the vehicle got 17 place
+One of the vehicle got 4 place
+One of the vehicle got 19 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_012 made $0
+Mechanics_002 fixed a used monster truck (Batman_00018) and made it like new (made $1000)
+Mechanics_002 fixed a used motorcycle (KTM_00022) and made it like new (made $1000)
+Mechanics_006 fixed a used pickup (GMC_00012) and made it like new (made $1000)
+Mechanics_006 fixed a used monster truck (Avenger_00017) and made it like new (made $1000)
+Mechanics_010 fixed a used pickup (GMC_00010) and made it used (made $0)
+Mechanics_010 fixed a used performance car (ALF_00004) and made it used (made $0)
+FNCD have 3 monster truck in the race. 
+One of the vehicle got 11 place
+One of the vehicle got 2 place
+One of the vehicle got 14 place
+Driver_004 made $0
+Driver_008 made $1000
+Driver_012 made $0
+Mechanics_002 fixed a used pickup (CHE_00012) and made it like new (made $1000)
+Mechanics_002 fixed a used car (VOL_00005) and made it like new (made $1000)
+Mechanics_006 fixed a used motorcycle (KTM_00023) and made it like new (made $1000)
+Mechanics_006 fixed a used car (KIA_00008) and made it used (made $0)
+Mechanics_010 fixed a used car (KIA_00008) and made it like new (made $1000)
+Salesperson_011 sold a vehicle VOL_00005 for $35082
+Salesperson_003 was not able to sell the vehicle KTM_00023
+Salesperson_003 sold a vehicle POR_00004 for $91217
+Salesperson_011 was not able to sell the vehicle Predator_00018
+FNCD have 3 pickup in the race. 
+One of the vehicle got 4 place
+One of the vehicle got 10 place
+One of the vehicle got 14 place
+Driver_004 made $0
+Driver_008 made $0
+Driver_012 made $0

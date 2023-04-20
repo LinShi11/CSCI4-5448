@@ -1,0 +1,3223 @@
+North:******FNCD Day 1******
+South:******FNCD Day 1******
+North opening... (Current budget $500000)
+South opening... (Current budget $500000)
+
+
+North Purchased a like new, dirty Car Mercedes-Benz, (MER_00001) for $26452
+South Purchased a used, clean Car BMW, (BMW_00001) for $24202
+North Purchased a used, dirty Car BMW, (BMW_00002) for $19902
+South Purchased a used, clean Car Lamborghini, (LAM_00002) for $17895
+North Purchased a used, clean Car Ferrari, (FER_00003) for $18905
+South Purchased a used, dirty Car McLaren, (MCL_00003) for $19680
+North Purchased a broken, dirty Car Lamborghini, (LAM_00004) for $14846
+South Purchased a like new, dirty Car Acura, (ACU_00004) for $34612
+North Purchased a used, dirty Car Lexus, (LEX_00005) for $16945
+South Purchased a broken, dirty Car Lamborghini, (LAM_00005) for $12219
+North Purchased a broken, clean Car Audi, (AUD_00006) for $16428
+South Purchased a like new, clean Car Mercedes-Benz, (MER_00006) for $22015
+North Purchased a like new, clean Car Subaru, (SUB_00007) for $13603
+South Purchased a broken, clean Car Honda, (HON_00007) for $8306
+North Purchased a broken, dirty Car Subaru, (SUB_00008) for $9205
+South Purchased a broken, dirty Car Honda, (HON_00008) for $6571
+North Purchased a like new, dirty Car Nissan, (NIS_00009) for $11435
+South Purchased a like new, clean Car Honda, (HON_00009) for $10834
+North Purchased a like new, dirty Car Subaru, (SUB_00010) for $17418
+South Purchased a used, clean Car Mazda, (MAZ_00010) for $10066
+North Purchased a used, clean Car Subaru, (SUB_00011) for $13876
+South Purchased a like new, dirty Car Honda, (HON_00011) for $13047
+North Purchased a used, dirty Car Hyundai, (HYU_00012) for $10513
+South Purchased a broken, dirty Car Mazda, (MAZ_00012) for $5242
+North Purchased a like new, dirty Car Chevrolet, (CHE_00013) for $32036
+South Purchased a used, dirty Car Chevrolet, (CHE_00013) for $10335
+North Purchased a used, clean Car Ram, (RAM_00014) for $16197
+North Purchased a used, dirty Car GMC, (GMC_00015) for $19824
+South Purchased a used, clean Car Jeep, (JEE_00014) for $22339
+South Purchased a broken, dirty Car Ram, (RAM_00015) for $8219
+North Purchased a broken, dirty Car GMC, (GMC_00016) for $12530
+South Purchased a broken, clean Car GMC, (GMC_00016) for $13266
+North Purchased a used, clean Car Ford, (FOR_00017) for $26631
+South Purchased a like new, dirty Car Ram, (RAM_00017) for $27398
+North Purchased a like new, clean Car GMC, (GMC_00018) for $39712
+South Purchased a used, dirty Car Ram, (RAM_00018) for $26584
+South Purchased a broken, clean Car Tesla, (TES_00019) for $6304
+North Purchased a broken, dirty Car Lucid Motors, (LUC_00019) for $6808
+South Purchased a broken, dirty Car Nissan, (NIS_00020) for $7826
+South Purchased a used, clean Car NIO, (NIO_00021) for $15555
+North Purchased a like new, clean Car Lucid Motors, (LUC_00020) for $14489
+South Purchased a broken, dirty Car Zoox, (ZOO_00022) for $5198
+North Purchased a used, dirty Car Lucid Motors, (LUC_00021) for $9389
+South Purchased a used, clean Car NIO, (NIO_00023) for $8224
+North Purchased a broken, dirty Car Nissan, (NIS_00022) for $9180
+South Purchased a like new, clean Car Lucid Motors, (LUC_00024) for $13210
+North Purchased a broken, clean Car Nissan, (NIS_00023) for $9240
+North Purchased a like new, dirty Car NIO, (NIO_00024) for $19479
+South Purchased a like new, dirty Car Son-uva Digger, (Shell Camino_00025) for $19803
+North Purchased a used, clean Car Son-uva Digger, (King Krunch_00025) for $11678
+South Purchased a like new, dirty Car Son-uva Digger, (Grave Digger_00026) for $17735
+North Purchased a like new, dirty Car Mon. Jam Steel Titans 2, (Bounty Hunter_00026) for $10290
+South Purchased a like new, dirty Car Mon. Jam Steel Titans 2, (Blue Thunder_00027) for $14069
+North Purchased a like new, clean Car Mon. Jam Steel Titans 2, (King Krunch_00027) for $14206
+South Purchased a like new, dirty Car Mon. Jam Steel Titans 2, (Monster Mutt_00028) for $13513
+North Purchased a broken, dirty Car Mon. Jam Steel Titans 2, (Air Force Afterburner_00028) for $7213
+South Purchased a used, dirty Car Son-uva Digger, (Stone Crusher_00029) for $9913
+North Purchased a broken, clean Car Son-uva Digger, (Captain's Curse_00029) for $8616
+South Purchased a used, dirty Car Son-uva Digger, (Bulldozer_00030) for $14696
+North Purchased a used, dirty Car Grave Digger, (Brutus_00030) for $14627
+North Purchased a broken, dirty Car KTM, (KTM_00031) for $5733
+South Purchased a like new, dirty Car Honda, (HON_00031) for $12109
+North Purchased a like new, dirty Car Honda, (HON_00032) for $16030
+South Purchased a like new, clean Car Ducati, (DUC_00032) for $16407
+North Purchased a broken, dirty Car Ducati, (DUC_00033) for $6017
+North Purchased a like new, clean Car Ducati, (DUC_00034) for $15948
+South Purchased a used, dirty Car Kawasaki, (KAW_00033) for $11545
+North Purchased a used, dirty Car Lucid Motors, (LUC_00035) for $15592
+South Purchased a broken, dirty Car BMW, (BMW_00034) for $6296
+North Purchased a used, dirty Car Lucid Motors, (LUC_00036) for $10805
+South Purchased a used, sparkling Car Yamaha, (YAM_00035) for $12803
+South Purchased a broken, dirty Car Suzuki, (SUZ_00036) for $9984
+South Purchased a used, clean Car Case IH, (CAS_00037) for $20815
+North Purchased a like new, dirty Car Sonalika International, (SON_00037) for $26974
+South Purchased a like new, dirty Car Case IH, (CAS_00038) for $27824
+North Purchased a broken, sparkling Car John Deere, (JOH_00038) for $10410
+South Purchased a like new, dirty Car Sonalika International, (SON_00039) for $29435
+South Purchased a broken, dirty Car Case IH, (CAS_00040) for $13982
+North Purchased a used, dirty Car Massey Ferguson, (MAS_00039) for $22060
+South Purchased a broken, dirty Car Sonalika International, (SON_00041) for $11569
+North Purchased a broken, dirty Car Case IH, (CAS_00040) for $13671
+South Purchased a like new, sparkling Car Case IH, (CAS_00042) for $26670
+North Purchased a broken, clean Car Mahindra, (MAH_00041) for $10047
+North Purchased a broken, dirty Car Massey Ferguson, (MAS_00042) for $14842
+North Purchased a like new, dirty Car Jeep, (JEE_00043) for $14893
+South Purchased a used, dirty Car Hyundai, (HYU_00043) for $9256
+South Purchased a used, dirty Car Kia, (KIA_00044) for $10404
+North Purchased a broken, clean Car Hyundai, (HYU_00044) for $5113
+South Purchased a broken, dirty Car Jeep, (JEE_00045) for $5217
+North Purchased a used, clean Car Isuzu, (ISU_00045) for $9499
+South Purchased a like new, dirty Car Isuzu, (ISU_00046) for $12245
+North Purchased a like new, dirty Car Jowett, (JOW_00046) for $14754
+South Purchased a used, dirty Car Iveco, (IVE_00047) for $9450
+North Purchased a broken, dirty Car Iveco, (IVE_00047) for $5791
+South Purchased a broken, clean Car Hyundai, (HYU_00048) for $6030
+North Purchased a used, clean Car Kia, (KIA_00048) for $10154
+South Purchased a broken, clean Car Liebherr, (LIE_00049) for $27436
+North Purchased a like new, dirty Car Liebherr, (LIE_00049) for $78783
+South Purchased a used, clean Car Manitowoc Cranes, (MAN_00050) for $41274
+North Purchased a broken, clean Car Manitowoc Cranes, (MAN_00050) for $29941
+South Purchased a like new, sparkling Car Palfinger, (PAL_00051) for $79851
+North Purchased a used, clean Car Konecranes, (KON_00051) for $45336
+South Purchased a used, clean Car Liebherr, (LIE_00052) for $59896
+North Purchased a like new, dirty Car Cargotec, (CAR_00052) for $63970
+South Purchased a broken, dirty Car Cargotec, (CAR_00053) for $38021
+North Purchased a broken, dirty Car Palfinger, (PAL_00053) for $37875
+South Purchased a used, dirty Car Konecranes, (KON_00054) for $50944
+North Purchased a like new, dirty Car Manitowoc Cranes, (MAN_00054) for $51460
+
+
+Washing...South
+Washing...North
+SouthIntern_001 washed a dirty Crane (KON_00054) and made it dirty
+NorthIntern_001 washed a dirty ElectricCars (NIO_00024) and made it sparkling
+SouthIntern_001 washed a dirty Crane (CAR_00053) and made it clean
+NorthIntern_001 washed a dirty ElectricCars (LUC_00019) and made it clean
+SouthIntern_005 washed a dirty Cars (HON_00011) and made it sparkling
+NorthIntern_005 washed a dirty Motorcycles (KTM_00031) and made it clean
+SouthIntern_005 washed a dirty Pickups (CHE_00013) and made it sparkling
+NorthIntern_005 washed a dirty Crane (CAR_00052) and made it clean
+SouthIntern_009 washed a dirty MonsterTrucks (Grave Digger_00026) and made it clean
+NorthIntern_009 washed a dirty Tractor (MAS_00042) and made it dirty
+SouthIntern_009 washed a dirty MonsterTrucks (Stone Crusher_00029) and made it clean
+NorthIntern_009 washed a dirty PerformanceCar (LEX_00005) and made it sparkling
+
+
+Repairing...North
+Repairing...South
+SouthMechanics_002 fixed a used Crane (MAN_00050) and made it like new (made $5000)
+SouthMechanics_002 fixed a used Van (IVE_00047) and made it like new (made $1000)
+NorthMechanics_002 fixed a broken ElectricCars (NIS_00023) and made it broken (made $0)
+NorthMechanics_002 fixed a broken Motorcycles (KTM_00031) and made it broken (made $0)
+SouthMechanics_006 fixed a broken Crane (CAR_00053) and made it used (made $5000)
+SouthMechanics_006 fixed a broken Tractor (CAS_00040) and made it used (made $2000)
+NorthMechanics_006 fixed a used Pickups (RAM_00014) and made it like new (made $1000)
+NorthMechanics_006 fixed a broken Crane (MAN_00050) and made it used (made $5000)
+SouthMechanics_010 fixed a broken Cars (MAZ_00012) and made it used (made $1000)
+SouthMechanics_010 fixed a used ElectricCars (NIO_00021) and made it used (made $0)
+NorthMechanics_010 fixed a broken Van (HYU_00044) and made it used (made $1000)
+NorthMechanics_010 fixed a broken MonsterTrucks (Captain's Curse_00029) and made it used (made $1000)
+
+
+
+We have 3 Buyers today
+
+We have 3 Buyers today
+Selling...South
+Selling...North
+The original price of the car is: $159702
+The buyer has selected the following plan:
+The original price of the car is: $157566
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $157566
+The current sale price 100.0% of the original price. Therefore the current sale price is $159702
+Buyer wants one monster truck NorthSalesperson_003 suggested a dirty, like new Crane(LIE_00049). The buying probability was 20. And the transaction was unsuccessful for $157566
+Buyer wants one electric car SouthSalesperson_011 suggested a sparkling, like new Crane(PAL_00051). The buying probability was 40. And the transaction was unsuccessful for $159702
+The original price of the car is: $159702
+The buyer has selected the following plan:
+The original price of the car is: $157566
+The buyer has selected the following plan:
+Satellite RadioExtended Warranty, Satellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $167687
+The current sale price 125.0% of the original price. Therefore the current sale price is $196957
+Buyer needs one electric car NorthSalesperson_011 suggested a dirty, like new Crane(LIE_00049). The buying probability was 50. And the transaction was unsuccessful for $196957
+The original price of the car is: $157566
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $165444
+Buyer needs one monster truck NorthSalesperson_011 suggested a dirty, like new Crane(LIE_00049). The buying probability was 50. And the transaction was unsuccessful for $165444
+Buyer wants one car SouthSalesperson_007 suggested a sparkling, like new Crane(PAL_00051). The buying probability was 40. And the transaction was successful for $167687 (making $4000)
+The original price of the car is: $119792
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $125781
+Buyer just looking car SouthSalesperson_003 suggested a clean, used Crane(LIE_00052). Therefore, the buyer is not interested
+
+
+
+
+North You currently have -507371
+South You currently have -320652
+You ran out of money, so you borrowed $250,000 from the bank
+South You currently have -70652
+You ran out of money, so you borrowed $250,000 from the bank
+North You currently have -257371
+You ran out of money, so you borrowed $250,000 from the bank
+You ran out of money, so you borrowed $250,000 from the bank
+North You currently have -7371
+You ran out of money, so you borrowed $250,000 from the bank
+
+
+Closing...
+Closing...
+We made $167687 today
+We made $0 today
+
+
+
+
+Quitting
+Quitting
+Intern NorthIntern_009 has quit after working for 1 days
+
+
+End of the day
+Tracker: Day 1 (from both locations)
+Total money earned by all Staff: $28620
+Total money earned by both FNCD: $167687
+End of the day
+
+
+North:******FNCD Day 2******
+South:******FNCD Day 2******
+North opening... (Current budget $242629)
+South opening... (Current budget $179348)
+Hired intern NorthIntern_013
+
+
+South Purchased a used, dirty Car Palfinger, (PAL_00055) for $43264
+
+
+Washing...South
+Washing...North
+SouthIntern_001 washed a dirty Cars (MAZ_00012) and made it clean
+NorthIntern_001 washed a dirty Cars (NIS_00009) and made it clean
+SouthIntern_001 washed a dirty Motorcycles (KAW_00033) and made it sparkling
+NorthIntern_001 washed a dirty Crane (LIE_00049) and made it clean
+SouthIntern_005 washed a dirty MonsterTrucks (Bulldozer_00030) and made it clean
+SouthIntern_005 washed a dirty Van (HYU_00043) and made it clean
+NorthIntern_005 washed a dirty Cars (SUB_00010) and made it clean
+SouthIntern_009 washed a dirty Tractor (SON_00041) and made it clean
+NorthIntern_005 washed a dirty ElectricCars (NIS_00023) and made it dirty
+SouthIntern_009 washed a dirty Van (JEE_00045) and made it clean
+NorthIntern_013 washed a dirty ElectricCars (NIS_00022) and made it clean
+NorthIntern_013 washed a dirty Cars (SUB_00008) and made it sparkling
+
+
+Repairing...North
+Repairing...South
+NorthMechanics_002 fixed a used Crane (MAN_00050) and made it used (made $0)
+SouthMechanics_002 fixed a broken PerformanceCar (LAM_00005) and made it used (made $2000)
+NorthMechanics_002 fixed a used Crane (KON_00051) and made it like new (made $5000)
+SouthMechanics_002 fixed a used PerformanceCar (MCL_00003) and made it like new (made $2000)
+NorthMechanics_006 fixed a used Pickups (FOR_00017) and made it like new (made $1000)
+SouthMechanics_006 fixed a used Van (HYU_00043) and made it used (made $0)
+NorthMechanics_006 fixed a broken ElectricCars (NIS_00023) and made it used (made $1000)
+SouthMechanics_006 fixed a used Crane (LIE_00052) and made it like new (made $5000)
+SouthMechanics_010 fixed a broken Van (JEE_00045) and made it broken (made $0)
+NorthMechanics_010 fixed a broken Crane (PAL_00053) and made it used (made $5000)
+NorthMechanics_010 fixed a used Tractor (MAS_00039) and made it like new (made $2000)
+SouthMechanics_010 fixed a broken Tractor (SON_00041) and made it used (made $2000)
+
+
+
+We have 0 Buyers today
+Selling...North
+
+We have 1 Buyers today
+Selling...South
+The original price of the car is: $149740
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $157227
+Buyer just looking performance car SouthSalesperson_011 suggested a dirty, like new Crane(LIE_00052). Therefore, the buyer is not interested
+
+
+
+
+
+
+Closing...
+Closing...
+We made $0 today
+We made $0 today
+
+
+
+
+Quitting
+Quitting
+Intern NorthIntern_001 has quit after working for 2 days
+
+
+Tracker: Day 2 (from both locations)
+Total money earned by all Staff: $56680
+Total money earned by both FNCD: $167687
+End of the day
+End of the day
+
+
+South:******FNCD Day 3******
+North:******FNCD Day 3******
+North opening... (Current budget $242629)
+South opening... (Current budget $136084)
+Hired intern NorthIntern_014
+
+
+
+
+Washing...South
+Washing...North
+SouthIntern_001 washed a dirty Tractor (CAS_00038) and made it dirty
+NorthIntern_005 washed a dirty Van (HYU_00044) and made it clean
+NorthIntern_005 washed a dirty Crane (KON_00051) and made it clean
+SouthIntern_001 washed a dirty Crane (MAN_00050) and made it clean
+NorthIntern_013 washed a dirty Pickups (FOR_00017) and made it clean
+NorthIntern_013 washed a dirty Tractor (MAS_00039) and made it clean
+SouthIntern_005 washed a dirty Pickups (RAM_00017) and made it dirty
+SouthIntern_005 washed a dirty Crane (CAR_00053) and made it sparkling
+NorthIntern_014 washed a dirty MonsterTrucks (Air Force Afterburner_00028) and made it clean
+SouthIntern_009 washed a dirty Crane (LIE_00052) and made it clean
+NorthIntern_014 washed a dirty Tractor (SON_00037) and made it dirty
+SouthIntern_009 washed a dirty PerformanceCar (LAM_00005) and made it clean
+
+
+Repairing...South
+Repairing...North
+SouthMechanics_002 fixed a broken Crane (LIE_00049) and made it used (made $5000)
+NorthMechanics_002 fixed a used ElectricCars (LUC_00021) and made it like new (made $1000)
+SouthMechanics_002 fixed a broken Pickups (GMC_00016) and made it used (made $1000)
+NorthMechanics_002 fixed a like new ElectricCars (LUC_00021) and made it like new (made $0)
+NorthMechanics_006 fixed a used Van (HYU_00044) and made it like new (made $1000)
+SouthMechanics_006 fixed a used Crane (CAR_00053) and made it like new (made $5000)
+NorthMechanics_006 fixed a used PerformanceCar (BMW_00002) and made it like new (made $2000)
+SouthMechanics_006 fixed a used MonsterTrucks (Stone Crusher_00029) and made it like new (made $1000)
+SouthMechanics_010 fixed a used Crane (KON_00054) and made it used (made $0)
+NorthMechanics_010 fixed a used MonsterTrucks (King Krunch_00025) and made it like new (made $1000)
+SouthMechanics_010 fixed a used Crane (KON_00054) and made it like new (made $5000)
+NorthMechanics_010 fixed a broken Tractor (CAS_00040) and made it used (made $2000)
+
+
+
+We have 1 Buyers today
+Selling...North
+
+We have 2 Buyers today
+Selling...South
+The original price of the car is: $157566
+The buyer has selected the following plan:
+The original price of the car is: $149740
+The current sale price 100.0% of the original price. Therefore the current sale price is $157566
+The buyer has selected the following plan:
+Buyer needs one pickup NorthSalesperson_011 suggested a clean, like new Crane(LIE_00049). The buying probability was 60. And the transaction was successful for $157566 (making $4000)
+The current sale price 100.0% of the original price. Therefore the current sale price is $149740
+Buyer just looking monster truck SouthSalesperson_011 suggested a clean, like new Crane(LIE_00052). Therefore, the buyer is not interested
+The original price of the car is: $149740
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $157227
+Buyer wants one pickup SouthSalesperson_003 suggested a clean, like new Crane(LIE_00052). The buying probability was 30. And the transaction was unsuccessful for $157227
+
+
+
+
+
+Closing...
+We made $0 today
+
+Closing...
+We made $157566 today
+
+
+
+
+Quitting
+Quitting
+Intern SouthIntern_009 has quit after working for 3 days
+Salesperson SouthSalesperson_011 has quit after working for 3 days
+Intern SouthIntern_001 has stepped up and took the salesperson job
+
+
+End of the day
+Tracker: Day 3 (from both locations)
+Total money earned by all Staff: $87670
+Total money earned by both FNCD: $325253
+End of the day
+
+
+North:******FNCD Day 3: Race day!!!!!!!******
+South:******FNCD Day 3: Race day!!!!!!!******
+Racing......
+Racing......
+South FNCD is racing with PerformanceCar
+South FNCD have 3 vehicles in the race.
+North FNCD is racing with Pickups
+North FNCD have 3 vehicles in the race.
+North: One of the vehicle got 3 place
+South: One of the vehicle got 20 place
+North: One of the vehicle got 17 place
+SouthDriver_004 got injured and quit FNCD
+South: One of the vehicle got 18 place
+North: One of the vehicle got 7 place
+SouthDriver_008 got injured and quit FNCD
+South: One of the vehicle got 16 place
+North:******FNCD Day 4******
+South:******FNCD Day 4******
+North opening... (Current budget $400195)
+South opening... (Current budget $136084)
+Hired intern SouthIntern_013
+Hired intern SouthIntern_014
+Hired driver SouthDriver_015
+Hired driver SouthDriver_016
+
+
+North Purchased a broken, dirty Car Liebherr, (LIE_00055) for $27292
+
+Washing...North
+
+Washing...South
+NorthIntern_005 washed a dirty MonsterTrucks (Captain's Curse_00029) and made it clean
+NorthIntern_005 washed a dirty Crane (LIE_00055) and made it clean
+SouthIntern_005 washed a dirty Pickups (RAM_00018) and made it sparkling
+SouthIntern_005 washed a dirty MonsterTrucks (Monster Mutt_00028) and made it dirty
+NorthIntern_013 washed a dirty Motorcycles (KTM_00031) and made it dirty
+NorthIntern_013 washed a dirty Motorcycles (HON_00032) and made it dirty
+SouthIntern_013 washed a dirty Tractor (SON_00041) and made it clean
+SouthIntern_013 washed a dirty ElectricCars (NIS_00020) and made it dirty
+NorthIntern_014 washed a dirty Pickups (RAM_00014) and made it clean
+NorthIntern_014 washed a dirty ElectricCars (NIS_00023) and made it clean
+SouthIntern_014 washed a dirty ElectricCars (NIS_00020) and made it sparkling
+SouthIntern_014 washed a dirty MonsterTrucks (Monster Mutt_00028) and made it clean
+
+
+Repairing...South
+Repairing...North
+SouthMechanics_002 fixed a broken Cars (HON_00008) and made it used (made $1000)
+SouthMechanics_002 fixed a used PerformanceCar (LAM_00005) and made it like new (made $2000)
+NorthMechanics_002 fixed a used Crane (MAN_00050) and made it like new (made $5000)
+NorthMechanics_002 fixed a broken Tractor (MAS_00042) and made it used (made $2000)
+SouthMechanics_006 fixed a broken PerformanceCar (BMW_00001) and made it used (made $2000)
+NorthMechanics_006 fixed a broken ElectricCars (NIS_00022) and made it used (made $1000)
+SouthMechanics_006 fixed a used Tractor (CAS_00037) and made it like new (made $2000)
+NorthMechanics_006 fixed a broken Motorcycles (DUC_00033) and made it used (made $1000)
+SouthMechanics_010 fixed a used Pickups (RAM_00018) and made it like new (made $1000)
+NorthMechanics_010 fixed a used Pickups (GMC_00015) and made it like new (made $1000)
+SouthMechanics_010 fixed a used Cars (HON_00008) and made it like new (made $1000)
+NorthMechanics_010 fixed a used Tractor (MAS_00042) and made it like new (made $2000)
+
+
+
+We have 3 Buyers today
+
+We have 5 Buyers today
+Selling...South
+Selling...North
+The original price of the car is: $149740
+The buyer has selected the following plan:
+The original price of the car is: $127940
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 100.0% of the original price. Therefore the current sale price is $149740
+The current sale price 105.0% of the original price. Therefore the current sale price is $134337
+Buyer wants one electric car SouthSalesperson_007 suggested a clean, like new Crane(LIE_00052). The buying probability was 30. And the transaction was unsuccessful for $149740
+Buyer just looking car NorthSalesperson_011 suggested a clean, like new Crane(CAR_00052). Therefore, the buyer is not interested
+The original price of the car is: $149740
+The buyer has selected the following plan:
+The original price of the car is: $127940
+The buyer has selected the following plan:
+Extended Warranty, Satellite RadioThe current sale price 120.0% of the original price. Therefore the current sale price is $153528
+Buyer needs one performance car NorthSalesperson_011 suggested a clean, like new Crane(CAR_00052). The buying probability was 60. And the transaction was unsuccessful for $153528
+The current sale price 105.0% of the original price. Therefore the current sale price is $157227
+Buyer needs one motorcycle SouthSalesperson_001 suggested a clean, like new Crane(LIE_00052). The buying probability was 60. And the transaction was successful for $157227 (making $4000)
+The original price of the car is: $127940
+The buyer has selected the following plan:
+Extended Warranty, The current sale price 120.0% of the original price. Therefore the current sale price is $153528
+Buyer needs one car NorthSalesperson_011 suggested a clean, like new Crane(CAR_00052). The buying probability was 60. And the transaction was unsuccessful for $153528
+The original price of the car is: $142578
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $142578
+Buyer wants one electric car SouthSalesperson_003 suggested a clean, like new Crane(CAR_00053). The buying probability was 30. And the transaction was unsuccessful for $142578
+The original price of the car is: $127940
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $127940
+Buyer wants one performance car NorthSalesperson_011 suggested a clean, like new Crane(CAR_00052). The buying probability was 30. And the transaction was unsuccessful for $127940
+The original price of the car is: $127940
+The buyer has selected the following plan:
+Undercoating, Satellite RadioThe current sale price 110.00000000000001% of the original price. Therefore the current sale price is $140734
+Buyer wants one motorcycle NorthSalesperson_011 suggested a clean, like new Crane(CAR_00052). The buying probability was 30. And the transaction was unsuccessful for $140734
+
+
+
+
+
+Closing...
+
+We made $0 today
+Closing...
+We made $157227 today
+
+
+
+
+Quitting
+Quitting
+Mechanics SouthMechanics_002 has quit after working for 4 days
+Intern SouthIntern_005 has stepped up and took the mechanics job
+
+End of the day
+
+Tracker: Day 4 (from both locations)
+Total money earned by all Staff: $113220
+Total money earned by both FNCD: $482480
+End of the day
+
+
+South:******FNCD Day 5******
+South opening... (Current budget $293311)
+North:******FNCD Day 5******
+North opening... (Current budget $372903)
+Hired intern SouthIntern_017
+
+
+South Purchased a like new, dirty Car Palfinger, (PAL_00056) for $79793
+
+
+Washing...South
+Washing...North
+SouthIntern_013 washed a dirty Pickups (RAM_00017) and made it clean
+NorthIntern_005 washed a dirty MonsterTrucks (Bounty Hunter_00026) and made it dirty
+SouthIntern_013 washed a dirty Crane (KON_00054) and made it sparkling
+NorthIntern_005 washed a dirty Van (JEE_00043) and made it clean
+SouthIntern_014 washed a dirty Motorcycles (BMW_00034) and made it dirty
+NorthIntern_013 washed a dirty PerformanceCar (MER_00001) and made it clean
+NorthIntern_013 washed a dirty Tractor (CAS_00040) and made it clean
+SouthIntern_014 washed a dirty ElectricCars (NIO_00021) and made it clean
+NorthIntern_014 washed a dirty Pickups (CHE_00013) and made it clean
+NorthIntern_014 washed a dirty Van (HYU_00044) and made it clean
+SouthIntern_017 washed a dirty MonsterTrucks (Shell Camino_00025) and made it clean
+SouthIntern_017 washed a dirty Van (KIA_00044) and made it clean
+
+
+Repairing...South
+Repairing...North
+SouthMechanics_006 fixed a broken Motorcycles (BMW_00034) and made it used (made $1000)
+SouthMechanics_006 fixed a broken ElectricCars (NIS_00020) and made it broken (made $0)
+NorthMechanics_002 fixed a used ElectricCars (NIS_00023) and made it like new (made $1000)
+NorthMechanics_002 fixed a broken Crane (LIE_00055) and made it used (made $5000)
+SouthMechanics_010 fixed a used Motorcycles (BMW_00034) and made it like new (made $1000)
+NorthMechanics_006 fixed a used Cars (HYU_00012) and made it like new (made $1000)
+SouthMechanics_010 fixed a used Cars (MAZ_00010) and made it used (made $0)
+NorthMechanics_006 fixed a used PerformanceCar (LEX_00005) and made it used (made $0)
+NorthMechanics_010 fixed a used Motorcycles (LUC_00035) and made it used (made $0)
+SouthMechanics_005 fixed a used Motorcycles (YAM_00035) and made it like new (made $1000)
+NorthMechanics_010 fixed a broken ElectricCars (LUC_00019) and made it used (made $1000)
+SouthMechanics_005 fixed a used Cars (MAZ_00010) and made it like new (made $1000)
+
+
+it is the weekend (Friday/Saturday)
+
+We have 4 Buyers today
+it is the weekend (Friday/Saturday)
+
+We have 2 Buyers today
+Selling...North
+Selling...South
+The original price of the car is: $127940
+The buyer has selected the following plan:
+Satellite RadioThe original price of the car is: $159586
+The buyer has selected the following plan:
+Extended Warranty, Satellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $134337
+The current sale price 125.0% of the original price. Therefore the current sale price is $199482
+Buyer needs one performance car NorthSalesperson_003 suggested a clean, like new Crane(CAR_00052). The buying probability was 60. And the transaction was successful for $134337 (making $4000)
+Buyer wants one electric car SouthSalesperson_007 suggested a dirty, like new Crane(PAL_00056). The buying probability was 20. And the transaction was unsuccessful for $199482
+The original price of the car is: $113625
+The buyer has selected the following plan:
+The original price of the car is: $159586
+The buyer has selected the following plan:
+Satellite RadioSatellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $167565
+The current sale price 105.0% of the original price. Therefore the current sale price is $119306
+Buyer just looking pickup NorthSalesperson_011 suggested a dirty, used Crane(PAL_00053). Therefore, the buyer is not interested
+Buyer wants one electric car SouthSalesperson_003 suggested a dirty, like new Crane(PAL_00056). The buying probability was 20. And the transaction was successful for $167565 (making $4000)
+The original price of the car is: $142578
+The buyer has selected the following plan:
+Extended Warranty, The current sale price 120.0% of the original price. Therefore the current sale price is $171093
+Buyer just looking monster truck SouthSalesperson_003 suggested a clean, like new Crane(CAR_00053). Therefore, the buyer is not interested
+The original price of the car is: $142578
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $142578
+Buyer just looking car SouthSalesperson_003 suggested a clean, like new Crane(CAR_00053). Therefore, the buyer is not interested
+
+
+
+
+
+Closing...
+
+Closing...
+We made $134337 today
+We made $167565 today
+
+
+
+
+Quitting
+Quitting
+
+
+End of the day
+Tracker: Day 5 (from both locations)
+Total money earned by all Staff: $136080
+Total money earned by both FNCD: $784382
+End of the day
+
+
+South:******FNCD Day 6******
+South opening... (Current budget $381083)
+North:******FNCD Day 6******
+North opening... (Current budget $507240)
+
+
+North Purchased a used, clean Car Konecranes, (KON_00056) for $52363
+South Purchased a broken, dirty Car Palfinger, (PAL_00057) for $28172
+
+
+Washing...South
+Washing...North
+SouthIntern_013 washed a dirty Pickups (GMC_00016) and made it dirty
+NorthIntern_005 washed a dirty MonsterTrucks (Brutus_00030) and made it clean
+SouthIntern_013 washed a dirty Van (JEE_00045) and made it sparkling
+NorthIntern_005 washed a dirty Tractor (SON_00037) and made it dirty
+SouthIntern_014 washed a dirty ElectricCars (ZOO_00022) and made it clean
+NorthIntern_013 washed a dirty Pickups (GMC_00016) and made it sparkling
+SouthIntern_014 washed a dirty MonsterTrucks (Blue Thunder_00027) and made it clean
+NorthIntern_013 washed a dirty Crane (MAN_00054) and made it dirty
+SouthIntern_017 washed a dirty Van (ISU_00046) and made it clean
+NorthIntern_014 washed a dirty Crane (MAN_00054) and made it clean
+SouthIntern_017 washed a dirty Pickups (GMC_00016) and made it clean
+NorthIntern_014 washed a dirty Crane (MAN_00050) and made it dirty
+
+
+Repairing...South
+Repairing...North
+SouthMechanics_006 fixed a used Crane (LIE_00049) and made it like new (made $5000)
+NorthMechanics_002 fixed a used PerformanceCar (LEX_00005) and made it used (made $0)
+SouthMechanics_006 fixed a used MonsterTrucks (Bulldozer_00030) and made it like new (made $1000)
+NorthMechanics_002 fixed a broken Tractor (MAH_00041) and made it used (made $2000)
+NorthMechanics_006 fixed a broken PerformanceCar (AUD_00006) and made it used (made $2000)
+NorthMechanics_006 fixed a used Van (KIA_00048) and made it used (made $0)
+SouthMechanics_010 fixed a used Tractor (CAS_00040) and made it like new (made $2000)
+SouthMechanics_010 fixed a used Cars (MAZ_00012) and made it like new (made $1000)
+NorthMechanics_010 fixed a used Motorcycles (DUC_00033) and made it like new (made $1000)
+NorthMechanics_010 fixed a broken PerformanceCar (LAM_00004) and made it used (made $2000)
+SouthMechanics_005 fixed a used ElectricCars (NIO_00021) and made it like new (made $1000)
+SouthMechanics_005 fixed a broken ElectricCars (TES_00019) and made it broken (made $0)
+
+it is the weekend (Friday/Saturday)
+
+We have 8 Buyers today
+Selling...South
+
+it is the weekend (Friday/Saturday)
+
+We have 7 Buyers today
+Selling...North
+The original price of the car is: $142578
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $149706
+Buyer wants one performance car SouthSalesperson_007 suggested a clean, like new Crane(CAR_00053). The buying probability was 30. And the transaction was successful for $149706 (making $4000)
+The original price of the car is: $113625
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $113625
+Buyer just looking motorcycle NorthSalesperson_003 suggested a dirty, used Crane(PAL_00053). Therefore, the buyer is not interested
+The original price of the car is: $127360
+The buyer has selected the following plan:
+The original price of the car is: $113625
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 100.0% of the original price. Therefore the current sale price is $113625
+Buyer wants one electric car NorthSalesperson_011 suggested a dirty, used Crane(PAL_00053). The buying probability was 20. And the transaction was unsuccessful for $113625
+The current sale price 105.0% of the original price. Therefore the current sale price is $133728
+Buyer wants one monster truck SouthSalesperson_007 suggested a sparkling, like new Crane(KON_00054). The buying probability was 40. And the transaction was successful for $133728 (making $4000)
+The original price of the car is: $113625
+The buyer has selected the following plan:
+Undercoating, The current sale price 105.0% of the original price. Therefore the current sale price is $119306
+Buyer needs one monster truck NorthSalesperson_011 suggested a dirty, used Crane(PAL_00053). The buying probability was 50. And the transaction was successful for $119306 (making $4000)
+The original price of the car is: $103185
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $103185
+Buyer wants one car SouthSalesperson_007 suggested a clean, like new Crane(MAN_00050). The buying probability was 30. And the transaction was unsuccessful for $103185
+The original price of the car is: $113340
+The buyer has selected the following plan:
+Undercoating, The current sale price 105.0% of the original price. Therefore the current sale price is $119007
+Buyer needs one motorcycle NorthSalesperson_011 suggested a clean, like new Crane(KON_00051). The buying probability was 60. And the transaction was unsuccessful for $119007
+The original price of the car is: $103185
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $103185
+Buyer just looking performance car SouthSalesperson_001 suggested a clean, like new Crane(MAN_00050). Therefore, the buyer is not interested
+The original price of the car is: $113340
+The buyer has selected the following plan:
+The original price of the car is: $103185
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $108344
+Buyer needs one monster truck SouthSalesperson_001 suggested a clean, like new Crane(MAN_00050). The buying probability was 60. And the transaction was successful for $108344 (making $4000)
+The original price of the car is: $102885
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $102885
+Buyer wants one electric car SouthSalesperson_001 suggested a dirty, like new Crane(LIE_00049). The buying probability was 20. And the transaction was unsuccessful for $102885
+Road Rescue Coverage, The current sale price 102.0% of the original price. Therefore the current sale price is $115606
+Buyer needs one motorcycle NorthSalesperson_011 suggested a clean, like new Crane(KON_00051). The buying probability was 60. And the transaction was successful for $115606 (making $4000)
+The original price of the car is: $102885
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $102885
+Buyer needs one monster truck SouthSalesperson_003 suggested a dirty, like new Crane(LIE_00049). The buying probability was 50. And the transaction was unsuccessful for $102885
+The original price of the car is: $112278
+The buyer has selected the following plan:
+Extended Warranty, Road Rescue Coverage, The current sale price 122.0% of the original price. Therefore the current sale price is $136979
+Buyer just looking motorcycle NorthSalesperson_007 suggested a dirty, like new Crane(MAN_00050). Therefore, the buyer is not interested
+The original price of the car is: $102885
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $102885
+Buyer wants one performance car SouthSalesperson_003 suggested a dirty, like new Crane(LIE_00049). The buying probability was 20. And the transaction was unsuccessful for $102885
+The original price of the car is: $112278
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $117891
+Buyer just looking performance car NorthSalesperson_007 suggested a dirty, like new Crane(MAN_00050). Therefore, the buyer is not interested
+
+
+
+
+
+Closing...
+We made $234912 today
+
+Closing...
+We made $391778 today
+
+
+
+Quitting
+
+Quitting
+Salesperson SouthSalesperson_007 has quit after working for 6 days
+Intern SouthIntern_013 has stepped up and took the salesperson job
+
+End of the day
+
+Tracker: Day 6 (from both locations)
+Total money earned by all Staff: $174140
+Total money earned by both FNCD: $1411072
+End of the day
+
+
+South:******FNCD Day 7: Race day!!!!!!!******
+Racing......
+North:******FNCD Day 7: Race day!!!!!!!******
+Racing......
+South FNCD is racing with Pickups
+North FNCD is racing with MonsterTrucks
+South FNCD have 3 vehicles in the race.
+North FNCD have 3 vehicles in the race.
+North: One of the vehicle got 1 place
+South: One of the vehicle got 10 place
+North: One of the vehicle got 9 place
+South: One of the vehicle got 7 place
+North: One of the vehicle got 5 place
+South: One of the vehicle got 13 place
+North:******FNCD Day 8******
+North opening... (Current budget $689789)
+South:******FNCD Day 8******
+South opening... (Current budget $744689)
+Hired intern SouthIntern_018
+
+
+South Purchased a broken, dirty Car Manitowoc Cranes, (MAN_00058) for $29750
+North Purchased a broken, dirty Car Palfinger, (PAL_00057) for $29087
+South Purchased a used, dirty Car Palfinger, (PAL_00059) for $50490
+North Purchased a broken, dirty Car Konecranes, (KON_00058) for $37444
+South Purchased a used, clean Car Liebherr, (LIE_00060) for $52204
+
+
+Washing...South
+Washing...North
+NorthIntern_005 washed a dirty Crane (PAL_00057) and made it dirty
+NorthIntern_005 washed a dirty PerformanceCar (AUD_00006) and made it clean
+SouthIntern_014 washed a dirty MonsterTrucks (Bulldozer_00030) and made it clean
+SouthIntern_014 washed a dirty Tractor (CAS_00038) and made it sparkling
+NorthIntern_013 washed a dirty Motorcycles (LUC_00035) and made it clean
+NorthIntern_013 washed a dirty Van (KIA_00048) and made it sparkling
+SouthIntern_017 washed a dirty PerformanceCar (BMW_00001) and made it clean
+SouthIntern_017 washed a dirty Crane (PAL_00059) and made it dirty
+NorthIntern_014 washed a dirty Pickups (GMC_00015) and made it clean
+NorthIntern_014 washed a dirty Cars (HYU_00012) and made it dirty
+SouthIntern_018 washed a dirty PerformanceCar (MCL_00003) and made it clean
+SouthIntern_018 washed a dirty Motorcycles (BMW_00034) and made it sparkling
+
+
+Repairing...South
+Repairing...North
+SouthMechanics_006 fixed a used Pickups (JEE_00014) and made it like new (made $1000)
+NorthMechanics_002 fixed a broken Van (IVE_00047) and made it used (made $1000)
+SouthMechanics_006 fixed a broken Motorcycles (SUZ_00036) and made it used (made $1000)
+NorthMechanics_002 fixed a broken Crane (KON_00058) and made it used (made $5000)
+NorthMechanics_006 fixed a used Tractor (CAS_00040) and made it like new (made $2000)
+SouthMechanics_010 fixed a broken ElectricCars (ZOO_00022) and made it used (made $1000)
+SouthMechanics_010 fixed a used Van (HYU_00043) and made it like new (made $1000)
+NorthMechanics_006 fixed a broken Tractor (JOH_00038) and made it used (made $2000)
+NorthMechanics_010 fixed a used Van (IVE_00047) and made it like new (made $1000)
+SouthMechanics_005 fixed a broken ElectricCars (NIS_00020) and made it used (made $1000)
+SouthMechanics_005 fixed a used Crane (PAL_00055) and made it like new (made $5000)
+NorthMechanics_010 fixed a like new Van (IVE_00047) and made it used (made $1000)
+
+
+
+We have 0 Buyers today
+Selling...North
+
+We have 5 Buyers today
+Selling...South
+The original price of the car is: $108160
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $108160
+Buyer just looking car SouthSalesperson_013 suggested a dirty, like new Crane(PAL_00055). Therefore, the buyer is not interested
+The original price of the car is: $108160
+The buyer has selected the following plan:
+Extended Warranty, Satellite RadioThe current sale price 125.0% of the original price. Therefore the current sale price is $135200
+Buyer needs one car SouthSalesperson_003 suggested a dirty, like new Crane(PAL_00055). The buying probability was 50. And the transaction was successful for $135200 (making $4000)
+The original price of the car is: $104408
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $104408
+Buyer wants one pickup SouthSalesperson_001 suggested a clean, used Crane(LIE_00060). The buying probability was 30. And the transaction was unsuccessful for $104408
+The original price of the car is: $104408
+The buyer has selected the following plan:
+Extended Warranty, The current sale price 120.0% of the original price. Therefore the current sale price is $125289
+Buyer just looking car SouthSalesperson_013 suggested a clean, used Crane(LIE_00060). Therefore, the buyer is not interested
+The original price of the car is: $104408
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $104408
+Buyer needs one performance car SouthSalesperson_013 suggested a clean, used Crane(LIE_00060). The buying probability was 60. And the transaction was successful for $104408 (making $4000)
+
+
+
+
+
+
+Closing...
+Closing...
+We made $239608 today
+We made $0 today
+
+
+
+
+Quitting
+Quitting
+
+End of the day
+
+Tracker: Day 8 (from both locations)
+Total money earned by all Staff: $195000
+Total money earned by both FNCD: $1650680
+End of the day
+
+
+North:******FNCD Day 9******
+South:******FNCD Day 9******
+North opening... (Current budget $623258)
+South opening... (Current budget $851853)
+
+
+South Purchased a like new, clean Car Manitowoc Cranes, (MAN_00061) for $60985
+South Purchased a used, clean Car Palfinger, (PAL_00062) for $57683
+
+
+Washing...South
+Washing...North
+SouthIntern_014 washed a dirty Van (IVE_00047) and made it clean
+NorthIntern_005 washed a dirty ElectricCars (LUC_00019) and made it dirty
+SouthIntern_014 washed a dirty ElectricCars (TES_00019) and made it clean
+NorthIntern_005 washed a dirty Crane (LIE_00055) and made it dirty
+SouthIntern_017 washed a dirty ElectricCars (ZOO_00022) and made it dirty
+SouthIntern_017 washed a dirty Pickups (RAM_00015) and made it dirty
+NorthIntern_013 washed a dirty Tractor (CAS_00040) and made it clean
+NorthIntern_013 washed a dirty PerformanceCar (LEX_00005) and made it clean
+SouthIntern_018 washed a dirty Cars (HON_00008) and made it clean
+SouthIntern_018 washed a dirty Tractor (CAS_00037) and made it clean
+NorthIntern_014 washed a dirty MonsterTrucks (Bounty Hunter_00026) and made it clean
+NorthIntern_014 washed a dirty Tractor (SON_00037) and made it clean
+
+
+Repairing...South
+Repairing...North
+SouthMechanics_006 fixed a used Pickups (CHE_00013) and made it like new (made $1000)
+NorthMechanics_002 fixed a used MonsterTrucks (Brutus_00030) and made it used (made $0)
+SouthMechanics_006 fixed a broken ElectricCars (TES_00019) and made it used (made $1000)
+NorthMechanics_002 fixed a used ElectricCars (LUC_00019) and made it like new (made $1000)
+SouthMechanics_010 fixed a used Motorcycles (KAW_00033) and made it used (made $0)
+SouthMechanics_010 fixed a broken Van (JEE_00045) and made it used (made $1000)
+NorthMechanics_006 fixed a used Van (ISU_00045) and made it like new (made $1000)
+NorthMechanics_006 fixed a used PerformanceCar (AUD_00006) and made it used (made $0)
+SouthMechanics_005 fixed a used Van (JEE_00045) and made it like new (made $1000)
+NorthMechanics_010 fixed a used Motorcycles (LUC_00035) and made it like new (made $1000)
+SouthMechanics_005 fixed a broken Crane (PAL_00057) and made it used (made $5000)
+NorthMechanics_010 fixed a like new Motorcycles (LUC_00035) and made it used (made $1000)
+
+
+We have 3 Buyers today
+Selling...North
+
+
+We have 5 Buyers today
+Selling...South
+The original price of the car is: $112332
+The buyer has selected the following plan:
+Satellite RadioThe original price of the car is: $121970
+The buyer has selected the following plan:
+The current sale price 105.0% of the original price. Therefore the current sale price is $117948
+The current sale price 100.0% of the original price. Therefore the current sale price is $121970
+Buyer wants one car NorthSalesperson_011 suggested a dirty, used Crane(KON_00058). The buying probability was 20. And the transaction was unsuccessful for $117948
+Buyer needs one car SouthSalesperson_003 suggested a clean, like new Crane(MAN_00061). The buying probability was 60. And the transaction was unsuccessful for $121970
+The original price of the car is: $112332
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $117948
+The original price of the car is: $121970
+The buyer has selected the following plan:
+Extended Warranty, Satellite RadioBuyer wants one pickup NorthSalesperson_011 suggested a dirty, used Crane(KON_00058). The buying probability was 20. And the transaction was successful for $117948 (making $4000)
+The current sale price 125.0% of the original price. Therefore the current sale price is $152462
+Buyer wants one electric car SouthSalesperson_013 suggested a clean, like new Crane(MAN_00061). The buying probability was 30. And the transaction was successful for $152462 (making $4000)
+The original price of the car is: $115366
+The buyer has selected the following plan:
+The original price of the car is: $112278
+Extended Warranty, Undercoating, Satellite RadioThe buyer has selected the following plan:
+The current sale price 130.0% of the original price. Therefore the current sale price is $149975
+The current sale price 100.0% of the original price. Therefore the current sale price is $112278
+Buyer just looking monster truck NorthSalesperson_007 suggested a dirty, like new Crane(MAN_00050). Therefore, the buyer is not interested
+Buyer needs one monster truck SouthSalesperson_003 suggested a clean, used Crane(PAL_00062). The buying probability was 60. And the transaction was successful for $149975 (making $4000)
+The original price of the car is: $102885
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $102885
+Buyer wants one electric car SouthSalesperson_001 suggested a dirty, like new Crane(LIE_00049). The buying probability was 20. And the transaction was successful for $102885 (making $4000)
+The original price of the car is: $100980
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $106029
+Buyer just looking performance car SouthSalesperson_001 suggested a dirty, used Crane(PAL_00059). Therefore, the buyer is not interested
+
+
+
+
+
+Closing...
+
+Closing...
+We made $405322 today
+We made $117948 today
+
+
+
+Quitting
+
+Quitting
+
+End of the day
+
+Tracker: Day 9 (from both locations)
+Total money earned by all Staff: $225860
+Total money earned by both FNCD: $2056002
+End of the day
+
+
+North:******FNCD Day 10******
+South:******FNCD Day 10******
+South opening... (Current budget $1138507)
+North opening... (Current budget $741206)
+
+
+North Purchased a used, dirty Car Cargotec, (CAR_00059) for $54785
+South Purchased a broken, clean Car Liebherr, (LIE_00063) for $27765
+South Purchased a like new, dirty Car Cargotec, (CAR_00064) for $54455
+South Purchased a broken, dirty Car Cargotec, (CAR_00065) for $37920
+
+
+Washing...South
+Washing...North
+SouthIntern_014 washed a dirty PerformanceCar (LAM_00005) and made it clean
+NorthIntern_005 washed a dirty PerformanceCar (BMW_00002) and made it clean
+SouthIntern_014 washed a dirty Crane (MAN_00058) and made it dirty
+NorthIntern_005 washed a dirty MonsterTrucks (King Krunch_00025) and made it dirty
+SouthIntern_017 washed a dirty Crane (MAN_00058) and made it dirty
+NorthIntern_013 washed a dirty Crane (PAL_00057) and made it dirty
+SouthIntern_017 washed a dirty Van (JEE_00045) and made it dirty
+NorthIntern_013 washed a dirty PerformanceCar (AUD_00006) and made it clean
+NorthIntern_014 washed a dirty ElectricCars (LUC_00019) and made it clean
+SouthIntern_018 washed a dirty Cars (MAZ_00012) and made it clean
+NorthIntern_014 washed a dirty Crane (PAL_00057) and made it clean
+SouthIntern_018 washed a dirty ElectricCars (TES_00019) and made it sparkling
+
+
+Repairing...South
+Repairing...North
+SouthMechanics_006 fixed a broken Cars (HON_00008) and made it used (made $1000)
+SouthMechanics_006 fixed a broken PerformanceCar (LAM_00002) and made it broken (made $0)
+NorthMechanics_002 fixed a used PerformanceCar (AUD_00006) and made it like new (made $2000)
+NorthMechanics_002 fixed a used Van (KIA_00048) and made it like new (made $1000)
+NorthMechanics_006 fixed a broken Motorcycles (KTM_00031) and made it used (made $1000)
+NorthMechanics_006 fixed a used Motorcycles (KTM_00031) and made it like new (made $1000)
+SouthMechanics_010 fixed a used ElectricCars (NIS_00020) and made it like new (made $1000)
+SouthMechanics_010 fixed a broken MonsterTrucks (Bulldozer_00030) and made it used (made $1000)
+SouthMechanics_005 fixed a used PerformanceCar (BMW_00001) and made it like new (made $2000)
+SouthMechanics_005 fixed a used Van (KIA_00044) and made it like new (made $1000)
+NorthMechanics_010 fixed a used MonsterTrucks (Captain's Curse_00029) and made it like new (made $1000)
+NorthMechanics_010 fixed a like new MonsterTrucks (Captain's Curse_00029) and made it used (made $1000)
+
+
+
+We have 1 Buyers today
+
+We have 4 Buyers today
+Selling...South
+Selling...North
+The original price of the car is: $108910
+The buyer has selected the following plan:
+Satellite RadioThe original price of the car is: $112278
+The buyer has selected the following plan:
+The current sale price 105.0% of the original price. Therefore the current sale price is $114355
+The current sale price 100.0% of the original price. Therefore the current sale price is $112278
+Buyer wants one monster truck SouthSalesperson_003 suggested a dirty, like new Crane(CAR_00064). The buying probability was 20. And the transaction was unsuccessful for $114355
+Buyer needs one motorcycle NorthSalesperson_007 suggested a dirty, like new Crane(MAN_00050). The buying probability was 50. And the transaction was successful for $112278 (making $4000)
+The original price of the car is: $109570
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $115048
+Buyer wants one pickup NorthSalesperson_007 suggested a dirty, used Crane(CAR_00059). The buying probability was 20. And the transaction was unsuccessful for $115048
+The original price of the car is: $109570
+The buyer has selected the following plan:
+Undercoating, The current sale price 105.0% of the original price. Therefore the current sale price is $115048
+Buyer just looking motorcycle NorthSalesperson_007 suggested a dirty, used Crane(CAR_00059). Therefore, the buyer is not interested
+The original price of the car is: $109570
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $115048
+Buyer needs one car NorthSalesperson_007 suggested a dirty, used Crane(CAR_00059). The buying probability was 50. And the transaction was unsuccessful for $115048
+
+
+
+
+
+Closing...
+
+We made $112278 today
+Closing...
+We made $0 today
+
+
+
+Quitting
+
+Quitting
+
+End of the day
+
+Tracker: Day 10 (from both locations)
+Total money earned by all Staff: $245920
+Total money earned by both FNCD: $2168280
+End of the day
+
+
+North:******FNCD Day 10: Race day!!!!!!!******
+Racing......
+South:******FNCD Day 10: Race day!!!!!!!******
+North FNCD is racing with Pickups
+North FNCD have 3 vehicles in the race.
+Racing......
+South FNCD is racing with PerformanceCar
+South FNCD have 3 vehicles in the race.
+South: One of the vehicle got 16 place
+North: One of the vehicle got 8 place
+North: One of the vehicle got 6 place
+South: One of the vehicle got 17 place
+South: One of the vehicle got 6 place
+North: One of the vehicle got 18 place
+NorthDriver_012 got injured and quit FNCD
+South:******FNCD Day 11******
+North:******FNCD Day 11******
+North opening... (Current budget $798699)
+South opening... (Current budget $1018367)
+Hired driver NorthDriver_015
+
+
+North Purchased a broken, dirty Car Liebherr, (LIE_00060) for $30686
+
+
+Washing...North
+Washing...South
+NorthIntern_005 washed a dirty Van (IVE_00047) and made it clean
+SouthIntern_014 washed a dirty MonsterTrucks (Bulldozer_00030) and made it dirty
+NorthIntern_005 washed a dirty PerformanceCar (AUD_00006) and made it clean
+SouthIntern_014 washed a dirty PerformanceCar (ACU_00004) and made it clean
+SouthIntern_017 washed a dirty Motorcycles (HON_00031) and made it dirty
+NorthIntern_013 washed a dirty Van (ISU_00045) and made it clean
+SouthIntern_017 washed a dirty ElectricCars (NIO_00021) and made it clean
+NorthIntern_013 washed a dirty Crane (LIE_00055) and made it clean
+SouthIntern_018 washed a dirty Crane (MAN_00058) and made it clean
+SouthIntern_018 washed a dirty Crane (CAR_00064) and made it clean
+NorthIntern_014 washed a dirty Tractor (MAS_00042) and made it clean
+NorthIntern_014 washed a dirty Motorcycles (LUC_00035) and made it sparkling
+
+Repairing...North
+
+NorthMechanics_002 fixed a used Van (IVE_00047) and made it used (made $0)
+Repairing...South
+NorthMechanics_002 fixed a used Crane (KON_00056) and made it like new (made $5000)
+SouthMechanics_006 fixed a used Tractor (SON_00041) and made it like new (made $2000)
+SouthMechanics_006 fixed a used Motorcycles (KAW_00033) and made it like new (made $1000)
+NorthMechanics_006 fixed a used PerformanceCar (LEX_00005) and made it like new (made $2000)
+SouthMechanics_010 fixed a used Cars (HON_00008) and made it like new (made $1000)
+NorthMechanics_006 fixed a used ElectricCars (NIS_00022) and made it like new (made $1000)
+SouthMechanics_010 fixed a used MonsterTrucks (Bulldozer_00030) and made it like new (made $1000)
+NorthMechanics_010 fixed a used Motorcycles (LUC_00035) and made it like new (made $1000)
+NorthMechanics_010 fixed a used Motorcycles (LUC_00036) and made it like new (made $1000)
+SouthMechanics_005 fixed a used Crane (PAL_00057) and made it like new (made $5000)
+SouthMechanics_005 fixed a used ElectricCars (ZOO_00022) and made it used (made $0)
+
+
+We have 1 Buyers today
+Selling...North
+
+
+We have 4 Buyers today
+Selling...South
+The original price of the car is: $130907
+The buyer has selected the following plan:
+Satellite RadioThe original price of the car is: $108910
+The buyer has selected the following plan:
+The current sale price 105.0% of the original price. Therefore the current sale price is $137452
+The current sale price 100.0% of the original price. Therefore the current sale price is $108910
+Buyer needs one electric car NorthSalesperson_011 suggested a dirty, like new Crane(KON_00056). The buying probability was 50. And the transaction was successful for $137452 (making $4000)
+Buyer needs one motorcycle SouthSalesperson_013 suggested a clean, like new Crane(CAR_00064). The buying probability was 60. And the transaction was unsuccessful for $108910
+The original price of the car is: $108910
+The buyer has selected the following plan:
+Undercoating, Satellite RadioThe current sale price 110.00000000000001% of the original price. Therefore the current sale price is $119801
+Buyer needs one monster truck SouthSalesperson_001 suggested a clean, like new Crane(CAR_00064). The buying probability was 60. And the transaction was successful for $119801 (making $4000)
+The original price of the car is: $105645
+The buyer has selected the following plan:
+Extended Warranty, The current sale price 120.0% of the original price. Therefore the current sale price is $126774
+Buyer needs one performance car SouthSalesperson_013 suggested a dirty, like new Crane(PAL_00057). The buying probability was 50. And the transaction was unsuccessful for $126774
+The original price of the car is: $105645
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $105645
+Buyer just looking pickup SouthSalesperson_001 suggested a dirty, like new Crane(PAL_00057). Therefore, the buyer is not interested
+
+
+
+
+
+Closing...
+
+Closing...
+We made $119801 today
+We made $137452 today
+
+
+
+Quitting
+
+Mechanics SouthMechanics_010 has quit after working for 10 days
+Quitting
+Intern SouthIntern_014 has stepped up and took the mechanics job
+
+End of the day
+
+Tracker: Day 11 (from both locations)
+Total money earned by all Staff: $276740
+Total money earned by both FNCD: $2425533
+End of the day
+
+
+South:******FNCD Day 12******
+South opening... (Current budget $1138168)
+North:******FNCD Day 12******
+North opening... (Current budget $905465)
+Hired intern SouthIntern_019
+
+
+South Purchased a like new, clean Car Palfinger, (PAL_00066) for $63973
+North Purchased a used, dirty Car Manitowoc Cranes, (MAN_00061) for $63830
+
+
+Washing...North
+Washing...South
+NorthIntern_005 washed a dirty Motorcycles (LUC_00036) and made it clean
+SouthIntern_017 washed a dirty Tractor (SON_00039) and made it dirty
+NorthIntern_005 washed a dirty Van (JOW_00046) and made it clean
+SouthIntern_017 washed a dirty Crane (PAL_00059) and made it clean
+NorthIntern_013 washed a dirty PerformanceCar (LAM_00004) and made it clean
+SouthIntern_018 washed a dirty Cars (HON_00008) and made it clean
+NorthIntern_013 washed a dirty ElectricCars (NIS_00023) and made it sparkling
+SouthIntern_018 washed a dirty Van (HYU_00043) and made it clean
+NorthIntern_014 washed a dirty Crane (LIE_00060) and made it clean
+SouthIntern_019 washed a dirty Van (JEE_00045) and made it clean
+NorthIntern_014 washed a dirty MonsterTrucks (Captain's Curse_00029) and made it dirty
+SouthIntern_019 washed a dirty Crane (PAL_00057) and made it clean
+
+
+Repairing...North
+Repairing...South
+NorthMechanics_002 fixed a used Van (IVE_00047) and made it like new (made $1000)
+NorthMechanics_002 fixed a broken Pickups (GMC_00016) and made it broken (made $0)
+SouthMechanics_006 fixed a used ElectricCars (TES_00019) and made it like new (made $1000)
+SouthMechanics_006 fixed a broken PerformanceCar (LAM_00005) and made it broken (made $0)
+NorthMechanics_006 fixed a broken MonsterTrucks (Air Force Afterburner_00028) and made it used (made $1000)
+NorthMechanics_006 fixed a used Cars (SUB_00011) and made it like new (made $1000)
+SouthMechanics_005 fixed a broken Crane (LIE_00063) and made it broken (made $0)
+SouthMechanics_005 fixed a broken Cars (HON_00007) and made it used (made $1000)
+NorthMechanics_010 fixed a broken Cars (SUB_00008) and made it used (made $1000)
+SouthMechanics_014 fixed a used ElectricCars (NIO_00023) and made it like new (made $1000)
+SouthMechanics_014 fixed a broken PerformanceCar (LAM_00005) and made it used (made $2000)
+NorthMechanics_010 fixed a broken Pickups (GMC_00016) and made it used (made $1000)
+
+it is the weekend (Friday/Saturday)
+
+We have 5 Buyers today
+Selling...South
+
+it is the weekend (Friday/Saturday)
+
+We have 5 Buyers today
+Selling...North
+The original price of the car is: $127946
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $127946
+The original price of the car is: $127660
+The buyer has selected the following plan:
+Satellite RadioBuyer wants one motorcycle SouthSalesperson_003 suggested a clean, like new Crane(PAL_00066). The buying probability was 30. And the transaction was unsuccessful for $127946
+The current sale price 105.0% of the original price. Therefore the current sale price is $134043
+Buyer wants one electric car NorthSalesperson_003 suggested a dirty, used Crane(MAN_00061). The buying probability was 20. And the transaction was unsuccessful for $134043
+The original price of the car is: $127660
+The buyer has selected the following plan:
+Extended Warranty, The original price of the car is: $127946
+The current sale price 120.0% of the original price. Therefore the current sale price is $153192
+The buyer has selected the following plan:
+Extended Warranty, Buyer needs one electric car NorthSalesperson_003 suggested a dirty, used Crane(MAN_00061). The buying probability was 50. And the transaction was successful for $153192 (making $4000)
+Satellite RadioThe current sale price 125.0% of the original price. Therefore the current sale price is $159932
+Buyer just looking monster truck SouthSalesperson_013 suggested a clean, like new Crane(PAL_00066). Therefore, the buyer is not interested
+The original price of the car is: $109570
+The buyer has selected the following plan:
+Extended Warranty, Undercoating, Satellite RadioThe current sale price 130.0% of the original price. Therefore the current sale price is $142441
+Buyer just looking monster truck NorthSalesperson_003 suggested a dirty, used Crane(CAR_00059). Therefore, the buyer is not interested
+The original price of the car is: $127946
+The buyer has selected the following plan:
+Extended Warranty, The current sale price 120.0% of the original price. Therefore the current sale price is $153535
+Buyer wants one pickup SouthSalesperson_001 suggested a clean, like new Crane(PAL_00066). The buying probability was 30. And the transaction was successful for $153535 (making $4000)
+The original price of the car is: $109570
+The buyer has selected the following plan:
+Extended Warranty, The current sale price 120.0% of the original price. Therefore the current sale price is $131484
+Buyer wants one monster truck NorthSalesperson_007 suggested a dirty, used Crane(CAR_00059). The buying probability was 20. And the transaction was unsuccessful for $131484
+The original price of the car is: $105645
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $105645
+Buyer wants one motorcycle SouthSalesperson_013 suggested a clean, like new Crane(PAL_00057). The buying probability was 30. And the transaction was unsuccessful for $105645
+The original price of the car is: $109570
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $109570
+Buyer wants one electric car NorthSalesperson_003 suggested a dirty, used Crane(CAR_00059). The buying probability was 20. And the transaction was unsuccessful for $109570
+The original price of the car is: $105645
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $105645
+Buyer needs one pickup SouthSalesperson_003 suggested a clean, like new Crane(PAL_00057). The buying probability was 60. And the transaction was successful for $105645 (making $4000)
+
+
+
+
+
+Closing...
+We made $259180 today
+
+Closing...
+We made $153192 today
+
+
+
+Quitting
+
+Quitting
+
+End of the day
+
+Tracker: Day 12 (from both locations)
+Total money earned by all Staff: $301800
+Total money earned by both FNCD: $2837905
+End of the day
+
+
+North:******FNCD Day 13******
+North opening... (Current budget $994827)
+South:******FNCD Day 13******
+South opening... (Current budget $1333375)
+
+
+South Purchased a used, clean Car Liebherr, (LIE_00067) for $55092
+North Purchased a broken, dirty Car Palfinger, (PAL_00062) for $36947
+South Purchased a used, dirty Car Liebherr, (LIE_00068) for $58944
+
+
+Washing...South
+Washing...North
+SouthIntern_017 washed a dirty Motorcycles (HON_00031) and made it clean
+NorthIntern_005 washed a dirty Cars (SUB_00011) and made it clean
+SouthIntern_017 washed a dirty Crane (LIE_00063) and made it clean
+NorthIntern_005 washed a dirty MonsterTrucks (Captain's Curse_00029) and made it dirty
+NorthIntern_013 washed a dirty Crane (CAR_00059) and made it dirty
+SouthIntern_018 washed a dirty PerformanceCar (LAM_00005) and made it clean
+NorthIntern_013 washed a dirty Motorcycles (HON_00032) and made it sparkling
+SouthIntern_018 washed a dirty Crane (CAR_00065) and made it clean
+SouthIntern_019 washed a dirty ElectricCars (NIO_00023) and made it clean
+SouthIntern_019 washed a dirty ElectricCars (NIS_00020) and made it clean
+NorthIntern_014 washed a dirty Cars (HYU_00012) and made it dirty
+NorthIntern_014 washed a dirty MonsterTrucks (Captain's Curse_00029) and made it dirty
+
+
+Repairing...South
+Repairing...North
+SouthMechanics_006 fixed a broken PerformanceCar (LAM_00002) and made it used (made $2000)
+NorthMechanics_002 fixed a used Tractor (JOH_00038) and made it used (made $0)
+SouthMechanics_006 fixed a used Pickups (GMC_00016) and made it like new (made $1000)
+NorthMechanics_002 fixed a broken Crane (PAL_00057) and made it used (made $5000)
+SouthMechanics_005 fixed a broken Crane (CAR_00065) and made it used (made $5000)
+NorthMechanics_006 fixed a used Crane (PAL_00057) and made it like new (made $5000)
+NorthMechanics_006 fixed a used Tractor (JOH_00038) and made it like new (made $2000)
+SouthMechanics_005 fixed a used PerformanceCar (LAM_00002) and made it like new (made $2000)
+NorthMechanics_010 fixed a used MonsterTrucks (Air Force Afterburner_00028) and made it like new (made $1000)
+NorthMechanics_010 fixed a used PerformanceCar (LAM_00004) and made it used (made $0)
+SouthMechanics_014 fixed a used Crane (PAL_00059) and made it like new (made $5000)
+SouthMechanics_014 fixed a used Cars (HON_00007) and made it like new (made $1000)
+
+
+it is the weekend (Friday/Saturday)
+
+We have 7 Buyers today
+Selling...South
+it is the weekend (Friday/Saturday)
+
+We have 3 Buyers today
+Selling...North
+The original price of the car is: $126225
+The buyer has selected the following plan:
+Undercoating, The original price of the car is: $109570
+The buyer has selected the following plan:
+Extended Warranty, The current sale price 105.0% of the original price. Therefore the current sale price is $132536
+The current sale price 120.0% of the original price. Therefore the current sale price is $131484
+Buyer needs one car SouthSalesperson_001 suggested a dirty, like new Crane(PAL_00059). The buying probability was 50. And the transaction was unsuccessful for $132536
+Buyer needs one car NorthSalesperson_011 suggested a dirty, used Crane(CAR_00059). The buying probability was 50. And the transaction was successful for $131484 (making $4000)
+The original price of the car is: $126225
+The buyer has selected the following plan:
+The original price of the car is: $109076
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $126225
+The current sale price 100.0% of the original price. Therefore the current sale price is $109076
+Buyer wants one car SouthSalesperson_013 suggested a dirty, like new Crane(PAL_00059). The buying probability was 20. And the transaction was unsuccessful for $126225
+Buyer needs one electric car NorthSalesperson_003 suggested a dirty, like new Crane(PAL_00057). The buying probability was 50. And the transaction was successful for $109076 (making $4000)
+The original price of the car is: $126225
+The buyer has selected the following plan:
+The original price of the car is: $102920
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $126225
+The current sale price 100.0% of the original price. Therefore the current sale price is $102920
+Buyer needs one monster truck SouthSalesperson_001 suggested a dirty, like new Crane(PAL_00059). The buying probability was 50. And the transaction was unsuccessful for $126225
+Buyer just looking pickup NorthSalesperson_011 suggested a clean, like new Crane(MAN_00054). Therefore, the buyer is not interested
+The original price of the car is: $126225
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $126225
+Buyer wants one monster truck SouthSalesperson_001 suggested a dirty, like new Crane(PAL_00059). The buying probability was 20. And the transaction was unsuccessful for $126225
+The original price of the car is: $126225
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $126225
+Buyer wants one electric car SouthSalesperson_013 suggested a dirty, like new Crane(PAL_00059). The buying probability was 20. And the transaction was successful for $126225 (making $4000)
+The original price of the car is: $117888
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $117888
+Buyer just looking motorcycle SouthSalesperson_013 suggested a dirty, used Crane(LIE_00068). Therefore, the buyer is not interested
+The original price of the car is: $117888
+The buyer has selected the following plan:
+Undercoating, Road Rescue Coverage, Satellite RadioThe current sale price 112.00000000000001% of the original price. Therefore the current sale price is $132034
+Buyer just looking car SouthSalesperson_013 suggested a dirty, used Crane(LIE_00068). Therefore, the buyer is not interested
+
+
+
+
+
+Closing...
+We made $126225 today
+
+Closing...
+We made $240560 today
+
+
+
+
+Quitting
+Quitting
+Intern NorthIntern_014 has quit after working for 10 days
+
+
+Tracker: Day 13 (from both locations)
+Total money earned by all Staff: $345860
+Total money earned by both FNCD: $3204690
+End of the day
+End of the day
+
+
+South:******FNCD Day 14: Race day!!!!!!!******
+Racing......
+North:******FNCD Day 14: Race day!!!!!!!******
+Racing......
+South FNCD is racing with Motorcycles
+North FNCD is racing with Pickups
+North FNCD have 3 vehicles in the race.
+South FNCD have 3 vehicles in the race.
+North: One of the vehicle got 9 place
+South: One of the vehicle got 11 place
+North: One of the vehicle got 4 place
+South: One of the vehicle got 2 place
+North: One of the vehicle got 14 place
+South: One of the vehicle got 12 place
+South:******FNCD Day 15******
+South opening... (Current budget $1345564)
+North:******FNCD Day 15******
+North opening... (Current budget $1198440)
+Hired intern NorthIntern_016
+
+
+North Purchased a used, dirty Car Manitowoc Cranes, (MAN_00063) for $44148
+South Purchased a used, dirty Car Cargotec, (CAR_00069) for $43941
+North Purchased a like new, clean Car Palfinger, (PAL_00064) for $69877
+
+
+Washing...North
+Washing...South
+NorthIntern_005 washed a dirty Crane (MAN_00063) and made it dirty
+SouthIntern_017 washed a dirty Crane (CAR_00069) and made it clean
+NorthIntern_005 washed a dirty PerformanceCar (LAM_00004) and made it clean
+SouthIntern_017 washed a dirty Motorcycles (SUZ_00036) and made it clean
+NorthIntern_013 washed a dirty MonsterTrucks (King Krunch_00025) and made it dirty
+SouthIntern_018 washed a dirty Crane (CAR_00065) and made it clean
+NorthIntern_013 washed a dirty Crane (MAN_00063) and made it clean
+SouthIntern_018 washed a dirty Tractor (CAS_00040) and made it clean
+NorthIntern_016 washed a dirty MonsterTrucks (Air Force Afterburner_00028) and made it clean
+SouthIntern_019 washed a dirty Tractor (SON_00041) and made it clean
+NorthIntern_016 washed a dirty Motorcycles (KTM_00031) and made it sparkling
+SouthIntern_019 washed a dirty Van (KIA_00044) and made it clean
+
+Repairing...South
+
+Repairing...North
+SouthMechanics_006 fixed a used Crane (CAR_00065) and made it like new (made $5000)
+SouthMechanics_006 fixed a used Crane (CAR_00069) and made it like new (made $5000)
+NorthMechanics_002 fixed a broken Crane (PAL_00062) and made it used (made $5000)
+NorthMechanics_002 fixed a used Tractor (MAH_00041) and made it like new (made $2000)
+SouthMechanics_005 fixed a used Crane (LIE_00067) and made it like new (made $5000)
+SouthMechanics_005 fixed a like new Crane (LIE_00067) and made it like new (made $0)
+NorthMechanics_006 fixed a broken Crane (LIE_00060) and made it broken (made $0)
+NorthMechanics_006 fixed a used PerformanceCar (LAM_00004) and made it like new (made $2000)
+SouthMechanics_014 fixed a broken Crane (LIE_00063) and made it used (made $5000)
+NorthMechanics_010 fixed a used MonsterTrucks (Brutus_00030) and made it like new (made $1000)
+SouthMechanics_014 fixed a used Crane (LIE_00063) and made it like new (made $5000)
+NorthMechanics_010 fixed a broken Pickups (GMC_00015) and made it used (made $1000)
+
+
+
+We have 5 Buyers today
+Selling...North
+
+We have 3 Buyers today
+Selling...South
+The original price of the car is: $139754
+The buyer has selected the following plan:
+Extended Warranty, The original price of the car is: $142200
+The buyer has selected the following plan:
+Extended Warranty, The current sale price 120.0% of the original price. Therefore the current sale price is $167704
+Satellite RadioBuyer wants one electric car NorthSalesperson_003 suggested a clean, like new Crane(PAL_00064). The buying probability was 30. And the transaction was successful for $167704 (making $4000)
+The current sale price 125.0% of the original price. Therefore the current sale price is $177750
+Buyer needs one monster truck SouthSalesperson_003 suggested a dirty, like new Crane(CAR_00065). The buying probability was 50. And the transaction was unsuccessful for $177750
+The original price of the car is: $142200
+The buyer has selected the following plan:
+Undercoating, The original price of the car is: $110841
+The buyer has selected the following plan:
+Extended Warranty, Road Rescue Coverage, The current sale price 105.0% of the original price. Therefore the current sale price is $149310
+The current sale price 122.0% of the original price. Therefore the current sale price is $135226
+Buyer needs one monster truck SouthSalesperson_013 suggested a dirty, like new Crane(CAR_00065). The buying probability was 50. And the transaction was successful for $149310 (making $4000)
+Buyer just looking pickup NorthSalesperson_003 suggested a dirty, used Crane(PAL_00062). Therefore, the buyer is not interested
+The original price of the car is: $110841
+The buyer has selected the following plan:
+Satellite RadioThe original price of the car is: $137730
+The current sale price 105.0% of the original price. Therefore the current sale price is $116383
+The buyer has selected the following plan:
+Buyer needs one car NorthSalesperson_007 suggested a dirty, used Crane(PAL_00062). The buying probability was 50. And the transaction was successful for $116383 (making $4000)
+The current sale price 100.0% of the original price. Therefore the current sale price is $137730
+Buyer just looking car SouthSalesperson_001 suggested a dirty, like new Crane(LIE_00067). Therefore, the buyer is not interested
+The original price of the car is: $102920
+The buyer has selected the following plan:
+Extended Warranty, The current sale price 120.0% of the original price. Therefore the current sale price is $123504
+Buyer wants one car NorthSalesperson_011 suggested a clean, like new Crane(MAN_00054). The buying probability was 30. And the transaction was unsuccessful for $123504
+The original price of the car is: $102920
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $108066
+Buyer needs one electric car NorthSalesperson_007 suggested a clean, like new Crane(MAN_00054). The buying probability was 60. And the transaction was successful for $108066 (making $4000)
+
+
+
+
+
+Closing...
+
+Closing...
+We made $392153 today
+We made $149310 today
+
+
+
+Quitting
+
+Quitting
+
+End of the day
+
+Tracker: Day 15 (from both locations)
+Total money earned by all Staff: $400850
+Total money earned by both FNCD: $3746153
+End of the day
+
+
+South:******FNCD Day 16******
+South opening... (Current budget $1450933)
+North:******FNCD Day 16******
+North opening... (Current budget $1476568)
+
+
+North Purchased a used, dirty Car Manitowoc Cranes, (MAN_00065) for $45440
+South Purchased a used, dirty Car Konecranes, (KON_00070) for $61421
+North Purchased a broken, dirty Car Liebherr, (LIE_00066) for $33161
+North Purchased a used, dirty Car Liebherr, (LIE_00067) for $51844
+
+
+Washing...North
+Washing...South
+NorthIntern_005 washed a dirty Crane (LIE_00066) and made it dirty
+SouthIntern_017 washed a dirty Crane (LIE_00063) and made it clean
+NorthIntern_005 washed a dirty Motorcycles (DUC_00033) and made it sparkling
+SouthIntern_017 washed a dirty Motorcycles (KAW_00033) and made it dirty
+NorthIntern_013 washed a dirty Tractor (JOH_00038) and made it clean
+NorthIntern_013 washed a dirty MonsterTrucks (Captain's Curse_00029) and made it clean
+SouthIntern_018 washed a dirty Crane (CAR_00069) and made it sparkling
+SouthIntern_018 washed a dirty Cars (MAZ_00010) and made it clean
+NorthIntern_016 washed a dirty Cars (HYU_00012) and made it sparkling
+NorthIntern_016 washed a dirty Pickups (GMC_00016) and made it dirty
+SouthIntern_019 washed a dirty Pickups (JEE_00014) and made it clean
+SouthIntern_019 washed a dirty Crane (LIE_00068) and made it clean
+
+
+Repairing...North
+Repairing...South
+NorthMechanics_002 fixed a used Crane (LIE_00067) and made it used (made $0)
+NorthMechanics_002 fixed a used Crane (MAN_00065) and made it like new (made $5000)
+SouthMechanics_006 fixed a used Crane (LIE_00068) and made it like new (made $5000)
+SouthMechanics_006 fixed a used Crane (KON_00070) and made it like new (made $5000)
+NorthMechanics_006 fixed a broken Crane (LIE_00060) and made it used (made $5000)
+SouthMechanics_005 fixed a used Motorcycles (SUZ_00036) and made it like new (made $1000)
+NorthMechanics_006 fixed a used Crane (LIE_00060) and made it like new (made $5000)
+SouthMechanics_005 fixed a like new Motorcycles (SUZ_00036) and made it used (made $1000)
+SouthMechanics_014 fixed a used Motorcycles (SUZ_00036) and made it like new (made $1000)
+SouthMechanics_014 fixed a broken Van (HYU_00048) and made it used (made $1000)
+NorthMechanics_010 fixed a used PerformanceCar (FER_00003) and made it like new (made $2000)
+NorthMechanics_010 fixed a used Crane (LIE_00055) and made it like new (made $5000)
+
+
+We have 1 Buyers today
+Selling...North
+
+The original price of the car is: $115072
+The buyer has selected the following plan:
+Extended Warranty,
+We have 4 Buyers today
+The current sale price 120.0% of the original price. Therefore the current sale price is $138086
+Selling...South
+Buyer wants one performance car NorthSalesperson_007 suggested a dirty, like new Crane(LIE_00060). The buying probability was 20. And the transaction was successful for $138086 (making $4000)
+The original price of the car is: $153552
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $153552
+Buyer wants one electric car SouthSalesperson_013 suggested a dirty, like new Crane(KON_00070). The buying probability was 20. And the transaction was unsuccessful for $153552
+The original price of the car is: $153552
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $161229
+Buyer just looking electric car SouthSalesperson_003 suggested a dirty, like new Crane(KON_00070). Therefore, the buyer is not interested
+The original price of the car is: $153552
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $161229
+Buyer just looking motorcycle SouthSalesperson_003 suggested a dirty, like new Crane(KON_00070). Therefore, the buyer is not interested
+The original price of the car is: $153552
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $153552
+Buyer just looking motorcycle SouthSalesperson_001 suggested a dirty, like new Crane(KON_00070). Therefore, the buyer is not interested
+
+
+
+
+
+Closing...
+We made $0 today
+
+Closing...
+We made $138086 today
+
+
+
+
+Quitting
+Quitting
+
+End of the day
+
+Tracker: Day 16 (from both locations)
+Total money earned by all Staff: $443910
+Total money earned by both FNCD: $3884239
+End of the day
+
+
+North:******FNCD Day 17******
+North opening... (Current budget $1484209)
+South:******FNCD Day 17******
+South opening... (Current budget $1389512)
+
+
+North Purchased a used, clean Car Palfinger, (PAL_00068) for $40768
+
+Washing...North
+
+Washing...South
+NorthIntern_005 washed a dirty PerformanceCar (FER_00003) and made it clean
+SouthIntern_017 washed a dirty PerformanceCar (BMW_00001) and made it clean
+NorthIntern_005 washed a dirty ElectricCars (LUC_00021) and made it dirty
+SouthIntern_017 washed a dirty Pickups (RAM_00015) and made it clean
+NorthIntern_013 washed a dirty Crane (LIE_00066) and made it dirty
+SouthIntern_018 washed a dirty MonsterTrucks (Bulldozer_00030) and made it clean
+SouthIntern_018 washed a dirty Van (HYU_00048) and made it clean
+NorthIntern_013 washed a dirty Van (IVE_00047) and made it clean
+SouthIntern_019 washed a dirty Tractor (SON_00039) and made it clean
+SouthIntern_019 washed a dirty Motorcycles (SUZ_00036) and made it clean
+NorthIntern_016 washed a dirty MonsterTrucks (King Krunch_00025) and made it clean
+NorthIntern_016 washed a dirty Tractor (MAH_00041) and made it clean
+
+
+Repairing...North
+Repairing...South
+NorthMechanics_002 fixed a used Pickups (GMC_00015) and made it like new (made $1000)
+SouthMechanics_006 fixed a used PerformanceCar (LAM_00005) and made it like new (made $2000)
+NorthMechanics_002 fixed a used Pickups (GMC_00016) and made it like new (made $1000)
+SouthMechanics_006 fixed a used Van (HYU_00048) and made it like new (made $1000)
+SouthMechanics_005 fixed a used ElectricCars (ZOO_00022) and made it used (made $0)
+NorthMechanics_006 fixed a broken Crane (LIE_00066) and made it used (made $5000)
+NorthMechanics_006 fixed a used Cars (SUB_00008) and made it like new (made $1000)
+SouthMechanics_014 fixed a used ElectricCars (ZOO_00022) and made it used (made $0)
+NorthMechanics_010 fixed a used Crane (LIE_00067) and made it used (made $0)
+NorthMechanics_010 fixed a used Crane (LIE_00066) and made it used (made $0)
+
+
+We have 1 Buyers today
+Selling...North
+
+The original price of the car is: $113600
+The buyer has selected the following plan:
+
+We have 4 Buyers today
+Selling...South
+Extended Warranty, Satellite RadioThe current sale price 125.0% of the original price. Therefore the current sale price is $142000
+The original price of the car is: $153552
+The buyer has selected the following plan:
+Buyer needs one electric car NorthSalesperson_003 suggested a dirty, like new Crane(MAN_00065). The buying probability was 50. And the transaction was unsuccessful for $142000
+The current sale price 100.0% of the original price. Therefore the current sale price is $153552
+Buyer wants one pickup SouthSalesperson_013 suggested a dirty, like new Crane(KON_00070). The buying probability was 20. And the transaction was unsuccessful for $153552
+The original price of the car is: $153552
+The buyer has selected the following plan:
+Extended Warranty, Satellite RadioThe current sale price 125.0% of the original price. Therefore the current sale price is $191940
+Buyer just looking performance car SouthSalesperson_003 suggested a dirty, like new Crane(KON_00070). Therefore, the buyer is not interested
+The original price of the car is: $153552
+The buyer has selected the following plan:
+Extended Warranty, Undercoating, The current sale price 125.0% of the original price. Therefore the current sale price is $191940
+Buyer needs one performance car SouthSalesperson_013 suggested a dirty, like new Crane(KON_00070). The buying probability was 50. And the transaction was successful for $191940 (making $4000)
+The original price of the car is: $147360
+The buyer has selected the following plan:
+Extended Warranty, The current sale price 120.0% of the original price. Therefore the current sale price is $176832
+Buyer wants one motorcycle SouthSalesperson_013 suggested a dirty, like new Crane(LIE_00068). The buying probability was 20. And the transaction was unsuccessful for $176832
+
+
+
+
+
+Closing...
+We made $191940 today
+
+Closing...
+We made $0 today
+
+
+
+
+Quitting
+Quitting
+
+End of the day
+
+Tracker: Day 17 (from both locations)
+Total money earned by all Staff: $461730
+Total money earned by both FNCD: $4076179
+End of the day
+
+
+North:******FNCD Day 17: Race day!!!!!!!******
+Racing......
+South:******FNCD Day 17: Race day!!!!!!!******
+Racing......
+North FNCD is racing with MonsterTrucks
+North FNCD have 3 vehicles in the race.
+South FNCD is racing with Pickups
+South FNCD have 3 vehicles in the race.
+South: One of the vehicle got 16 place
+North: One of the vehicle got 15 place
+North: One of the vehicle got 5 place
+South: One of the vehicle got 17 place
+South: One of the vehicle got 6 place
+North: One of the vehicle got 16 place
+North:******FNCD Day 18******
+North opening... (Current budget $1443441)
+South:******FNCD Day 18******
+South opening... (Current budget $1581452)
+
+
+South Purchased a broken, clean Car Cargotec, (CAR_00071) for $38520
+
+Washing...South
+
+SouthIntern_017 washed a dirty MonsterTrucks (Stone Crusher_00029) and made it sparkling
+Washing...North
+SouthIntern_017 washed a dirty Pickups (GMC_00016) and made it dirty
+NorthIntern_005 washed a dirty Crane (LIE_00067) and made it clean
+NorthIntern_005 washed a dirty Pickups (GMC_00015) and made it dirty
+SouthIntern_018 washed a dirty Crane (LIE_00068) and made it dirty
+NorthIntern_013 washed a dirty ElectricCars (LUC_00021) and made it sparkling
+NorthIntern_013 washed a dirty PerformanceCar (LEX_00005) and made it dirty
+SouthIntern_018 washed a dirty PerformanceCar (LAM_00005) and made it clean
+NorthIntern_016 washed a dirty Crane (MAN_00065) and made it sparkling
+NorthIntern_016 washed a dirty Pickups (GMC_00016) and made it sparkling
+SouthIntern_019 washed a dirty Crane (LIE_00067) and made it clean
+SouthIntern_019 washed a dirty Motorcycles (KAW_00033) and made it clean
+
+Repairing...South
+
+Repairing...North
+SouthMechanics_006 fixed a used ElectricCars (ZOO_00022) and made it like new (made $1000)
+SouthMechanics_006 fixed a like new ElectricCars (ZOO_00022) and made it used (made $1000)
+NorthMechanics_002 fixed a used Crane (PAL_00068) and made it like new (made $5000)
+NorthMechanics_002 fixed a used Crane (MAN_00063) and made it like new (made $5000)
+NorthMechanics_006 fixed a used Crane (LIE_00067) and made it like new (made $5000)
+NorthMechanics_006 fixed a used Crane (LIE_00066) and made it like new (made $5000)
+SouthMechanics_005 fixed a used ElectricCars (ZOO_00022) and made it like new (made $1000)
+SouthMechanics_005 fixed a broken Crane (CAR_00071) and made it used (made $5000)
+SouthMechanics_014 fixed a used Crane (CAR_00071) and made it like new (made $5000)
+
+
+
+We have 2 Buyers today
+
+We have 4 Buyers today
+Selling...South
+Selling...North
+The original price of the car is: $147360
+The buyer has selected the following plan:
+The original price of the car is: $129610
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $147360
+The current sale price 100.0% of the original price. Therefore the current sale price is $129610
+Buyer just looking performance car SouthSalesperson_003 suggested a dirty, like new Crane(LIE_00068). Therefore, the buyer is not interested
+Buyer wants one monster truck NorthSalesperson_007 suggested a dirty, like new Crane(LIE_00067). The buying probability was 20. And the transaction was unsuccessful for $129610
+The original price of the car is: $129610
+The buyer has selected the following plan:
+The original price of the car is: $147360
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $129610
+Undercoating, Buyer just looking performance car NorthSalesperson_003 suggested a dirty, like new Crane(LIE_00067). Therefore, the buyer is not interested
+Satellite RadioThe current sale price 110.00000000000001% of the original price. Therefore the current sale price is $162096
+Buyer wants one motorcycle SouthSalesperson_013 suggested a dirty, like new Crane(LIE_00068). The buying probability was 20. And the transaction was unsuccessful for $162096
+The original price of the car is: $147360
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $154728
+Buyer needs one pickup SouthSalesperson_013 suggested a dirty, like new Crane(LIE_00068). The buying probability was 50. And the transaction was successful for $154728 (making $4000)
+The original price of the car is: $144450
+The buyer has selected the following plan:
+Extended Warranty, The current sale price 120.0% of the original price. Therefore the current sale price is $173340
+Buyer just looking electric car SouthSalesperson_013 suggested a dirty, like new Crane(CAR_00071). Therefore, the buyer is not interested
+
+
+
+
+
+Closing...
+We made $154728 today
+
+Closing...
+We made $0 today
+
+
+
+Quitting
+
+Quitting
+
+
+Tracker: Day 18 (from both locations)
+Total money earned by all Staff: $501790
+Total money earned by both FNCD: $4230907
+End of the day
+End of the day
+
+
+South:******FNCD Day 19******
+North:******FNCD Day 19******
+North opening... (Current budget $1443441)
+South opening... (Current budget $1697660)
+
+
+South Purchased a used, dirty Car Manitowoc Cranes, (MAN_00072) for $52764
+
+Washing...South
+
+SouthIntern_017 washed a dirty Crane (MAN_00072) and made it clean
+SouthIntern_017 washed a dirty PerformanceCar (LAM_00002) and made it dirty
+SouthIntern_018 washed a dirty PerformanceCar (LAM_00002) and made it clean
+SouthIntern_018 washed a dirty Pickups (GMC_00016) and made it clean
+Washing...North
+SouthIntern_019 washed a dirty Cars (HON_00007) and made it clean
+SouthIntern_019 washed a dirty Crane (CAR_00071) and made it clean
+NorthIntern_005 washed a dirty PerformanceCar (LAM_00004) and made it clean
+NorthIntern_005 washed a dirty Crane (PAL_00068) and made it clean
+NorthIntern_013 washed a dirty PerformanceCar (LEX_00005) and made it dirty
+NorthIntern_013 washed a dirty Crane (LIE_00067) and made it sparkling
+NorthIntern_016 washed a dirty MonsterTrucks (Brutus_00030) and made it clean
+NorthIntern_016 washed a dirty PerformanceCar (LEX_00005) and made it sparkling
+
+Repairing...North
+
+Repairing...South
+SouthMechanics_006 fixed a used Crane (MAN_00072) and made it like new (made $5000)
+
+
+it is the weekend (Friday/Saturday)
+it is the weekend (Friday/Saturday)
+
+We have 4 Buyers today
+Selling...North
+
+We have 4 Buyers today
+Selling...South
+The original price of the car is: $129610
+The buyer has selected the following plan:
+Extended Warranty, Satellite RadioThe original price of the car is: $144450
+The buyer has selected the following plan:
+The current sale price 125.0% of the original price. Therefore the current sale price is $162012
+The current sale price 100.0% of the original price. Therefore the current sale price is $144450
+Buyer just looking monster truck NorthSalesperson_007 suggested a sparkling, like new Crane(LIE_00067). The buying probability was 10. And the transaction was unsuccessful for $162012
+Buyer wants one motorcycle SouthSalesperson_003 suggested a clean, like new Crane(CAR_00071). The buying probability was 30. And the transaction was successful for $144450 (making $4000)
+The original price of the car is: $129610
+The buyer has selected the following plan:
+The original price of the car is: $137730
+The buyer has selected the following plan:
+Extended Warranty, Satellite RadioThe current sale price 125.0% of the original price. Therefore the current sale price is $172162
+The current sale price 100.0% of the original price. Therefore the current sale price is $129610
+Buyer just looking pickup SouthSalesperson_003 suggested a clean, like new Crane(LIE_00067). Therefore, the buyer is not interested
+Buyer just looking motorcycle NorthSalesperson_003 suggested a sparkling, like new Crane(LIE_00067). The buying probability was 10. And the transaction was unsuccessful for $129610
+The original price of the car is: $129610
+The buyer has selected the following plan:
+The original price of the car is: $137730
+The buyer has selected the following plan:
+Extended Warranty, Satellite RadioSatellite RadioThe current sale price 125.0% of the original price. Therefore the current sale price is $162012
+The current sale price 105.0% of the original price. Therefore the current sale price is $144616
+Buyer needs one motorcycle SouthSalesperson_003 suggested a clean, like new Crane(LIE_00067). The buying probability was 60. And the transaction was unsuccessful for $144616
+Buyer just looking pickup NorthSalesperson_011 suggested a sparkling, like new Crane(LIE_00067). The buying probability was 10. And the transaction was successful for $162012 (making $4000)
+The original price of the car is: $137730
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $144616
+Buyer just looking pickup SouthSalesperson_001 suggested a clean, like new Crane(LIE_00067). Therefore, the buyer is not interested
+The original price of the car is: $124353
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $130570
+Buyer needs one performance car NorthSalesperson_003 suggested a dirty, like new Crane(LIE_00066). The buying probability was 50. And the transaction was successful for $130570 (making $4000)
+
+
+
+
+
+
+Closing...
+Closing...
+We made $144450 today
+We made $292582 today
+
+
+
+
+Quitting
+Quitting
+Salesperson NorthSalesperson_011 has quit after working for 17 days
+Intern NorthIntern_005 has stepped up and took the salesperson job
+
+End of the day
+
+Tracker: Day 19 (from both locations)
+Total money earned by all Staff: $521850
+Total money earned by both FNCD: $4667939
+End of the day
+
+
+North:******FNCD Day 20******
+South:******FNCD Day 20******
+South opening... (Current budget $1789346)
+North opening... (Current budget $1736023)
+Hired intern NorthIntern_017
+
+
+North Purchased a like new, dirty Car Palfinger, (PAL_00069) for $69064
+South Purchased a used, dirty Car Cargotec, (CAR_00073) for $61599
+North Purchased a broken, dirty Car Liebherr, (LIE_00070) for $27683
+
+
+Washing...South
+Washing...North
+SouthIntern_017 washed a dirty Crane (MAN_00072) and made it dirty
+NorthIntern_013 washed a dirty Crane (MAN_00063) and made it dirty
+SouthIntern_017 washed a dirty Crane (CAR_00073) and made it dirty
+NorthIntern_013 washed a dirty ElectricCars (NIS_00022) and made it dirty
+NorthIntern_016 washed a dirty Pickups (GMC_00015) and made it clean
+NorthIntern_016 washed a dirty Cars (SUB_00008) and made it dirty
+SouthIntern_018 washed a dirty ElectricCars (ZOO_00022) and made it clean
+SouthIntern_018 washed a dirty Van (HYU_00048) and made it clean
+NorthIntern_017 washed a dirty Crane (LIE_00055) and made it clean
+NorthIntern_017 washed a dirty Crane (PAL_00069) and made it clean
+SouthIntern_019 washed a dirty Crane (CAR_00073) and made it clean
+SouthIntern_019 washed a dirty Crane (MAN_00072) and made it clean
+
+
+Repairing...South
+Repairing...North
+SouthMechanics_006 fixed a used Crane (CAR_00073) and made it like new (made $5000)
+NorthMechanics_002 fixed a broken Crane (LIE_00070) and made it used (made $5000)
+SouthMechanics_006 fixed a broken ElectricCars (ZOO_00022) and made it used (made $1000)
+NorthMechanics_006 fixed a used Crane (LIE_00070) and made it like new (made $5000)
+SouthMechanics_005 fixed a used ElectricCars (ZOO_00022) and made it like new (made $1000)
+
+
+it is the weekend (Friday/Saturday)
+it is the weekend (Friday/Saturday)
+
+We have 3 Buyers today
+
+We have 8 Buyers today
+Selling...South
+Selling...North
+The original price of the car is: $153997
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $153997
+The original price of the car is: $138128
+The buyer has selected the following plan:
+Buyer needs one pickup SouthSalesperson_003 suggested a dirty, like new Crane(CAR_00073). The buying probability was 50. And the transaction was successful for $153997 (making $4000)
+The current sale price 100.0% of the original price. Therefore the current sale price is $138128
+Buyer just looking pickup NorthSalesperson_005 suggested a clean, like new Crane(PAL_00069). Therefore, the buyer is not interested
+The original price of the car is: $138128
+The buyer has selected the following plan:
+Extended Warranty, The original price of the car is: $137730
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 120.0% of the original price. Therefore the current sale price is $165753
+The current sale price 105.0% of the original price. Therefore the current sale price is $144616
+Buyer wants one car NorthSalesperson_005 suggested a clean, like new Crane(PAL_00069). The buying probability was 30. And the transaction was unsuccessful for $165753
+Buyer needs one pickup SouthSalesperson_001 suggested a clean, like new Crane(LIE_00067). The buying probability was 60. And the transaction was successful for $144616 (making $4000)
+The original price of the car is: $138128
+The buyer has selected the following plan:
+Extended Warranty, The original price of the car is: $131910
+The buyer has selected the following plan:
+Undercoating, Road Rescue Coverage, The current sale price 105.0% of the original price. Therefore the current sale price is $138505
+Satellite RadioBuyer just looking performance car SouthSalesperson_001 suggested a clean, like new Crane(MAN_00072). Therefore, the buyer is not interested
+The current sale price 127.0% of the original price. Therefore the current sale price is $175422
+Buyer needs one pickup NorthSalesperson_003 suggested a clean, like new Crane(PAL_00069). The buying probability was 60. And the transaction was successful for $175422 (making $4000)
+The original price of the car is: $113600
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $119280
+Buyer needs one electric car NorthSalesperson_007 suggested a sparkling, like new Crane(MAN_00065). The buying probability was 70. And the transaction was successful for $119280 (making $4000)
+The original price of the car is: $110370
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $110370
+Buyer needs one pickup NorthSalesperson_007 suggested a dirty, like new Crane(MAN_00063). The buying probability was 50. And the transaction was successful for $110370 (making $4000)
+The original price of the car is: $103811
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $109001
+Buyer needs one performance car NorthSalesperson_007 suggested a dirty, like new Crane(LIE_00070). The buying probability was 50. And the transaction was unsuccessful for $109001
+The original price of the car is: $103811
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $103811
+Buyer just looking motorcycle NorthSalesperson_005 suggested a dirty, like new Crane(LIE_00070). Therefore, the buyer is not interested
+The original price of the car is: $103811
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $109001
+Buyer needs one pickup NorthSalesperson_003 suggested a dirty, like new Crane(LIE_00070). The buying probability was 50. And the transaction was successful for $109001 (making $4000)
+
+
+
+
+
+Closing...
+
+Closing...
+We made $298613 today
+We made $514073 today
+
+
+
+
+Quitting
+Quitting
+
+End of the day
+
+Tracker: Day 20 (from both locations)
+Total money earned by all Staff: $565230
+Total money earned by both FNCD: $5480625
+End of the day
+
+
+South:******FNCD Day 21: Race day!!!!!!!******
+Racing......
+North:******FNCD Day 21: Race day!!!!!!!******
+Racing......
+South FNCD is racing with PerformanceCar
+North FNCD is racing with PerformanceCar
+North FNCD have 3 vehicles in the race.
+South FNCD have 3 vehicles in the race.
+North: One of the vehicle got 9 place
+South: One of the vehicle got 17 place
+North: One of the vehicle got 5 place
+South: One of the vehicle got 13 place
+North: One of the vehicle got 10 place
+South: One of the vehicle got 5 place
+South:******FNCD Day 22******
+South opening... (Current budget $2026360)
+North:******FNCD Day 22******
+North opening... (Current budget $2153349)
+
+
+North Purchased a used, clean Car Palfinger, (PAL_00071) for $59573
+South Purchased a used, dirty Car Palfinger, (PAL_00074) for $53516
+North Purchased a used, dirty Car Manitowoc Cranes, (MAN_00072) for $62158
+North Purchased a like new, clean Car Cargotec, (CAR_00073) for $70253
+South Purchased a used, dirty Car Liebherr, (LIE_00075) for $63406
+North Purchased a broken, clean Car Manitowoc Cranes, (MAN_00074) for $37907
+
+
+Washing...North
+Washing...South
+SouthIntern_017 washed a dirty ElectricCars (ZOO_00022) and made it clean
+SouthIntern_017 washed a dirty Crane (PAL_00074) and made it clean
+NorthIntern_013 washed a dirty ElectricCars (NIS_00022) and made it clean
+NorthIntern_013 washed a dirty Cars (SUB_00008) and made it sparkling
+SouthIntern_018 washed a dirty Crane (LIE_00075) and made it clean
+NorthIntern_016 washed a dirty Crane (MAN_00072) and made it clean
+SouthIntern_018 washed a clean PerformanceCar (ACU_00004) and made it clean
+NorthIntern_016 washed a clean Tractor (CAS_00040) and made it clean
+SouthIntern_019 washed a clean PerformanceCar (BMW_00001) and made it clean
+SouthIntern_019 washed a clean ElectricCars (ZOO_00022) and made it clean
+NorthIntern_017 washed a clean PerformanceCar (MER_00001) and made it clean
+NorthIntern_017 washed a clean Tractor (MAH_00041) and made it clean
+
+Repairing...North
+
+Repairing...South
+NorthMechanics_002 fixed a broken Tractor (CAS_00040) and made it used (made $2000)
+SouthMechanics_006 fixed a used Crane (LIE_00075) and made it used (made $0)
+NorthMechanics_002 fixed a broken Crane (MAN_00074) and made it used (made $5000)
+SouthMechanics_005 fixed a used Crane (LIE_00075) and made it like new (made $5000)
+NorthMechanics_006 fixed a used Crane (MAN_00072) and made it used (made $0)
+NorthMechanics_006 fixed a used Crane (PAL_00071) and made it used (made $0)
+NorthMechanics_010 fixed a used Tractor (CAS_00040) and made it like new (made $2000)
+NorthMechanics_010 fixed a used Crane (MAN_00072) and made it like new (made $5000)
+
+
+
+We have 0 Buyers today
+
+We have 0 Buyers today
+Selling...North
+Selling...South
+
+
+
+
+
+
+Closing...
+Closing...
+We made $0 today
+We made $0 today
+
+
+
+
+Quitting
+Quitting
+Intern SouthIntern_019 has quit after working for 9 days
+
+End of the day
+
+Tracker: Day 22 (from both locations)
+Total money earned by all Staff: $586890
+Total money earned by both FNCD: $5480625
+End of the day
+
+
+South:******FNCD Day 23******
+North:******FNCD Day 23******
+North opening... (Current budget $1923458)
+South opening... (Current budget $1909438)
+Hired intern SouthIntern_020
+
+
+
+
+Washing...North
+Washing...South
+NorthIntern_013 washed a dirty Tractor (CAS_00040) and made it sparkling
+NorthIntern_013 washed a dirty Crane (MAN_00074) and made it sparkling
+SouthIntern_017 washed a dirty Crane (LIE_00075) and made it clean
+NorthIntern_016 washed a dirty Crane (MAN_00072) and made it clean
+SouthIntern_017 washed a clean Tractor (SON_00041) and made it dirty
+NorthIntern_016 washed a dirty Crane (PAL_00071) and made it clean
+SouthIntern_018 washed a dirty Tractor (SON_00041) and made it clean
+NorthIntern_017 washed a clean Crane (MAN_00072) and made it clean
+SouthIntern_018 washed a clean Cars (MAZ_00012) and made it sparkling
+NorthIntern_017 washed a clean Pickups (GMC_00015) and made it clean
+SouthIntern_020 washed a clean PerformanceCar (BMW_00001) and made it dirty
+SouthIntern_020 washed a clean Cars (HON_00009) and made it clean
+
+
+Repairing...North
+NorthMechanics_002 fixed a used Crane (PAL_00071) and made it like new (made $5000)
+NorthMechanics_002 fixed a used Crane (MAN_00074) and made it used (made $0)
+Repairing...South
+NorthMechanics_006 fixed a broken Tractor (MAH_00041) and made it broken (made $0)
+NorthMechanics_006 fixed a broken Tractor (MAH_00041) and made it used (made $2000)
+NorthMechanics_010 fixed a used Tractor (MAH_00041) and made it like new (made $2000)
+NorthMechanics_010 fixed a like new Tractor (MAH_00041) and made it used (made $2000)
+
+
+
+We have 0 Buyers today
+
+We have 2 Buyers today
+Selling...North
+Selling...South
+The original price of the car is: $155395
+The buyer has selected the following plan:
+Extended Warranty, The current sale price 120.0% of the original price. Therefore the current sale price is $186474
+Buyer needs one motorcycle NorthSalesperson_003 suggested a clean, like new Crane(MAN_00072). The buying probability was 60. And the transaction was unsuccessful for $186474
+The original price of the car is: $155395
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $155395
+Buyer wants one electric car NorthSalesperson_005 suggested a clean, like new Crane(MAN_00072). The buying probability was 30. And the transaction was successful for $155395 (making $4000)
+
+
+
+
+
+Closing...
+We made $155395 today
+
+Closing...
+We made $0 today
+
+
+
+Quitting
+
+Quitting
+Intern SouthIntern_017 has quit after working for 16 days
+
+End of the day
+
+Tracker: Day 23 (from both locations)
+Total money earned by all Staff: $604880
+Total money earned by both FNCD: $5636020
+End of the day
+
+
+South:******FNCD Day 24******
+North:******FNCD Day 24******
+North opening... (Current budget $2078853)
+South opening... (Current budget $1909438)
+Hired intern SouthIntern_021
+
+
+North Purchased a broken, clean Car Palfinger, (PAL_00075) for $26573
+
+
+Washing...North
+Washing...South
+NorthIntern_013 washed a dirty Tractor (MAH_00041) and made it clean
+SouthIntern_018 washed a dirty PerformanceCar (BMW_00001) and made it clean
+NorthIntern_013 washed a dirty Crane (PAL_00071) and made it clean
+SouthIntern_018 washed a clean Tractor (SON_00041) and made it clean
+NorthIntern_016 washed a clean Pickups (CHE_00013) and made it dirty
+SouthIntern_020 washed a clean MonsterTrucks (Shell Camino_00025) and made it clean
+SouthIntern_020 washed a clean Cars (HON_00008) and made it clean
+NorthIntern_016 washed a clean Pickups (RAM_00014) and made it clean
+SouthIntern_021 washed a clean MonsterTrucks (Bulldozer_00030) and made it dirty
+NorthIntern_017 washed a dirty Pickups (CHE_00013) and made it sparkling
+SouthIntern_021 washed a clean Tractor (CAS_00037) and made it clean
+NorthIntern_017 washed a clean Crane (MAN_00074) and made it clean
+
+
+Repairing...North
+Repairing...South
+NorthMechanics_002 fixed a used Tractor (MAH_00041) and made it used (made $0)
+NorthMechanics_002 fixed a broken Crane (MAN_00074) and made it used (made $5000)
+NorthMechanics_006 fixed a used Tractor (MAH_00041) and made it like new (made $2000)
+NorthMechanics_006 fixed a like new Tractor (MAH_00041) and made it like new (made $0)
+NorthMechanics_010 fixed a used Crane (MAN_00074) and made it like new (made $5000)
+NorthMechanics_010 fixed a broken Crane (PAL_00075) and made it used (made $5000)
+
+
+
+We have 2 Buyers today
+
+We have 5 Buyers today
+Selling...North
+Selling...South
+The original price of the car is: $213226
+The buyer has selected the following plan:
+The original price of the car is: $158515
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $213226
+The current sale price 100.0% of the original price. Therefore the current sale price is $158515
+Buyer just looking performance car NorthSalesperson_007 suggested a dirty, like new Crane(MAN_00074). Therefore, the buyer is not interested
+Buyer needs one car SouthSalesperson_001 suggested a clean, like new Crane(LIE_00075). The buying probability was 60. And the transaction was successful for $158515 (making $4000)
+The original price of the car is: $213226
+The buyer has selected the following plan:
+The original price of the car is: $131910
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 100.0% of the original price. Therefore the current sale price is $131910
+Buyer just looking monster truck SouthSalesperson_013 suggested a clean, like new Crane(MAN_00072). Therefore, the buyer is not interested
+The current sale price 105.0% of the original price. Therefore the current sale price is $223887
+Buyer wants one performance car NorthSalesperson_003 suggested a dirty, like new Crane(MAN_00074). The buying probability was 20. And the transaction was unsuccessful for $223887
+The original price of the car is: $213226
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $213226
+Buyer wants one performance car NorthSalesperson_005 suggested a dirty, like new Crane(MAN_00074). The buying probability was 20. And the transaction was unsuccessful for $213226
+The original price of the car is: $213226
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $213226
+Buyer needs one monster truck NorthSalesperson_007 suggested a dirty, like new Crane(MAN_00074). The buying probability was 50. And the transaction was successful for $213226 (making $4000)
+The original price of the car is: $148932
+The buyer has selected the following plan:
+Undercoating, Satellite RadioThe current sale price 110.00000000000001% of the original price. Therefore the current sale price is $163825
+Buyer wants one monster truck NorthSalesperson_007 suggested a clean, like new Crane(PAL_00071). The buying probability was 30. And the transaction was unsuccessful for $163825
+
+
+
+
+
+Closing...
+We made $213226 today
+
+Closing...
+We made $158515 today
+
+
+
+
+Quitting
+Quitting
+
+End of the day
+
+Tracker: Day 24 (from both locations)
+Total money earned by all Staff: $632940
+Total money earned by both FNCD: $6007761
+End of the day
+
+
+South:******FNCD Day 24: Race day!!!!!!!******
+North:******FNCD Day 24: Race day!!!!!!!******
+Racing......
+Racing......
+North FNCD is racing with MonsterTrucks
+North FNCD have 3 vehicles in the race.
+South FNCD is racing with Motorcycles
+South FNCD have 3 vehicles in the race.
+South: One of the vehicle got 10 place
+North: One of the vehicle got 8 place
+South: One of the vehicle got 11 place
+North: One of the vehicle got 13 place
+South: One of the vehicle got 16 place
+North: One of the vehicle got 16 place
+North:******FNCD Day 25******
+North opening... (Current budget $2265506)
+South:******FNCD Day 25******
+South opening... (Current budget $2067953)
+
+
+South Purchased a used, clean Car Cargotec, (CAR_00076) for $55775
+North Purchased a like new, clean Car Liebherr, (LIE_00076) for $66897
+
+Washing...North
+
+Washing...South
+NorthIntern_013 washed a dirty Tractor (MAH_00041) and made it clean
+SouthIntern_018 washed a dirty MonsterTrucks (Bulldozer_00030) and made it dirty
+NorthIntern_013 washed a dirty Crane (PAL_00075) and made it dirty
+NorthIntern_016 washed a dirty Crane (PAL_00075) and made it clean
+SouthIntern_018 washed a clean Pickups (RAM_00018) and made it clean
+NorthIntern_016 washed a clean Cars (SUB_00007) and made it clean
+SouthIntern_020 washed a dirty MonsterTrucks (Bulldozer_00030) and made it dirty
+SouthIntern_020 washed a clean PerformanceCar (LAM_00005) and made it clean
+SouthIntern_021 washed a dirty MonsterTrucks (Bulldozer_00030) and made it clean
+SouthIntern_021 washed a clean Tractor (CAS_00040) and made it dirty
+NorthIntern_017 washed a clean Pickups (RAM_00014) and made it clean
+NorthIntern_017 washed a clean Cars (SUB_00010) and made it clean
+
+
+Repairing...South
+Repairing...North
+SouthMechanics_006 fixed a used Crane (CAR_00076) and made it like new (made $5000)
+NorthMechanics_002 fixed a used Crane (PAL_00075) and made it like new (made $5000)
+
+
+
+We have 1 Buyers today
+Selling...South
+
+We have 2 Buyers today
+Selling...North
+The original price of the car is: $148932
+The buyer has selected the following plan:
+The original price of the car is: $139437
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $148932
+Satellite RadioBuyer just looking electric car NorthSalesperson_005 suggested a clean, like new Crane(PAL_00071). Therefore, the buyer is not interested
+The current sale price 105.0% of the original price. Therefore the current sale price is $146408
+Buyer just looking performance car SouthSalesperson_013 suggested a dirty, like new Crane(CAR_00076). Therefore, the buyer is not interested
+The original price of the car is: $148932
+The buyer has selected the following plan:
+Extended Warranty, The current sale price 120.0% of the original price. Therefore the current sale price is $178718
+Buyer wants one monster truck NorthSalesperson_007 suggested a clean, like new Crane(PAL_00071). The buying probability was 30. And the transaction was successful for $178718 (making $4000)
+
+
+
+
+
+Closing...
+
+Closing...
+We made $178718 today
+We made $0 today
+
+
+
+Quitting
+
+Quitting
+Salesperson NorthSalesperson_007 has quit after working for 22 days
+Intern NorthIntern_013 has stepped up and took the salesperson job
+
+End of the day
+
+Tracker: Day 25 (from both locations)
+Total money earned by all Staff: $650000
+Total money earned by both FNCD: $6186479
+End of the day
+
+
+North:******FNCD Day 26******
+North opening... (Current budget $2377327)
+South:******FNCD Day 26******
+South opening... (Current budget $2012178)
+Hired intern NorthIntern_018
+
+
+North Purchased a like new, dirty Car Palfinger, (PAL_00077) for $68730
+
+
+Washing...North
+Washing...South
+NorthIntern_016 washed a dirty Crane (PAL_00075) and made it clean
+SouthIntern_018 washed a dirty Tractor (CAS_00040) and made it dirty
+SouthIntern_018 washed a dirty Crane (CAR_00076) and made it clean
+NorthIntern_016 washed a dirty Crane (PAL_00077) and made it clean
+SouthIntern_020 washed a dirty Tractor (CAS_00040) and made it dirty
+NorthIntern_017 washed a clean Van (HYU_00044) and made it clean
+SouthIntern_020 washed a clean PerformanceCar (LAM_00005) and made it clean
+NorthIntern_017 washed a clean Motorcycles (LUC_00036) and made it clean
+SouthIntern_021 washed a dirty Tractor (CAS_00040) and made it sparkling
+NorthIntern_018 washed a clean MonsterTrucks (King Krunch_00027) and made it clean
+NorthIntern_018 washed a clean Cars (SUB_00011) and made it clean
+SouthIntern_021 washed a clean PerformanceCar (MER_00006) and made it clean
+
+
+Repairing...South
+Repairing...North
+NorthMechanics_002 fixed a broken Van (HYU_00044) and made it broken (made $0)
+NorthMechanics_006 fixed a broken Van (HYU_00044) and made it broken (made $0)
+NorthMechanics_010 fixed a broken Van (HYU_00044) and made it used (made $1000)
+
+
+it is the weekend (Friday/Saturday)
+it is the weekend (Friday/Saturday)
+
+We have 2 Buyers today
+Selling...South
+
+We have 2 Buyers today
+Selling...North
+The original price of the car is: $139437
+The buyer has selected the following plan:
+The original price of the car is: $140506
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $139437
+Buyer just looking performance car SouthSalesperson_001 suggested a clean, like new Crane(CAR_00076). Therefore, the buyer is not interested
+The current sale price 100.0% of the original price. Therefore the current sale price is $140506
+Buyer needs one motorcycle NorthSalesperson_013 suggested a clean, like new Crane(CAR_00073). The buying probability was 60. And the transaction was successful for $140506 (making $4000)
+The original price of the car is: $139437
+The buyer has selected the following plan:
+Extended Warranty, The current sale price 120.0% of the original price. Therefore the current sale price is $167324
+The original price of the car is: $137460
+The buyer has selected the following plan:
+Satellite RadioBuyer needs one electric car SouthSalesperson_003 suggested a clean, like new Crane(CAR_00076). The buying probability was 60. And the transaction was unsuccessful for $167324
+The current sale price 105.0% of the original price. Therefore the current sale price is $144333
+Buyer needs one motorcycle NorthSalesperson_005 suggested a clean, like new Crane(PAL_00077). The buying probability was 60. And the transaction was successful for $144333 (making $4000)
+
+
+
+
+
+Closing...
+
+Closing...
+We made $284839 today
+We made $0 today
+
+
+
+
+Quitting
+Quitting
+Mechanics SouthMechanics_005 has quit after working for 23 days
+Intern SouthIntern_018 has stepped up and took the mechanics job
+
+End of the day
+
+Tracker: Day 26 (from both locations)
+Total money earned by all Staff: $661550
+Total money earned by both FNCD: $6471318
+End of the day
+
+
+South:******FNCD Day 27******
+North:******FNCD Day 27******
+North opening... (Current budget $2593436)
+South opening... (Current budget $2012178)
+Hired intern SouthIntern_022
+
+
+North Purchased a used, dirty Car Liebherr, (LIE_00078) for $40840
+North Purchased a like new, clean Car Manitowoc Cranes, (MAN_00079) for $60713
+
+
+Washing...North
+Washing...South
+NorthIntern_016 washed a dirty Crane (LIE_00078) and made it clean
+NorthIntern_016 washed a dirty Van (HYU_00044) and made it clean
+NorthIntern_017 washed a clean MonsterTrucks (King Krunch_00027) and made it clean
+NorthIntern_017 washed a clean Motorcycles (DUC_00034) and made it clean
+SouthIntern_020 washed a clean Crane (MAN_00058) and made it clean
+NorthIntern_018 washed a clean PerformanceCar (BMW_00002) and made it dirty
+NorthIntern_018 washed a clean Crane (LIE_00078) and made it clean
+SouthIntern_020 washed a clean Cars (HON_00009) and made it clean
+SouthIntern_021 washed a clean Cars (HON_00008) and made it clean
+SouthIntern_021 washed a clean Van (IVE_00047) and made it clean
+SouthIntern_022 washed a clean Pickups (RAM_00018) and made it clean
+SouthIntern_022 washed a clean ElectricCars (ZOO_00022) and made it clean
+
+
+Repairing...North
+Repairing...South
+NorthMechanics_002 fixed a used Van (HYU_00044) and made it like new (made $1000)
+NorthMechanics_002 fixed a used Crane (LIE_00078) and made it used (made $0)
+NorthMechanics_006 fixed a used Crane (LIE_00078) and made it like new (made $5000)
+NorthMechanics_006 fixed a like new Crane (LIE_00078) and made it used (made $5000)
+NorthMechanics_010 fixed a broken PerformanceCar (BMW_00002) and made it used (made $2000)
+NorthMechanics_010 fixed a used PerformanceCar (BMW_00002) and made it used (made $0)
+
+it is the weekend (Friday/Saturday)
+
+it is the weekend (Friday/Saturday)
+
+We have 7 Buyers today
+Selling...North
+
+We have 5 Buyers today
+Selling...South
+The original price of the car is: $139437
+The buyer has selected the following plan:
+The original price of the car is: $153150
+The buyer has selected the following plan:
+Satellite RadioSatellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $160807
+The current sale price 105.0% of the original price. Therefore the current sale price is $146408
+Buyer just looking car NorthSalesperson_005 suggested a dirty, used Crane(LIE_00078). Therefore, the buyer is not interested
+Buyer wants one electric car SouthSalesperson_003 suggested a clean, like new Crane(CAR_00076). The buying probability was 30. And the transaction was unsuccessful for $146408
+The original price of the car is: $139437
+The buyer has selected the following plan:
+The original price of the car is: $153150
+The buyer has selected the following plan:
+Road Rescue Coverage, Satellite RadioThe current sale price 100.0% of the original price. Therefore the current sale price is $153150
+The current sale price 107.0% of the original price. Therefore the current sale price is $149197
+Buyer needs one electric car NorthSalesperson_005 suggested a dirty, used Crane(LIE_00078). The buying probability was 50. And the transaction was unsuccessful for $153150
+Buyer wants one performance car SouthSalesperson_003 suggested a clean, like new Crane(CAR_00076). The buying probability was 30. And the transaction was unsuccessful for $149197
+The original price of the car is: $153150
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $153150
+Buyer just looking performance car NorthSalesperson_013 suggested a dirty, used Crane(LIE_00078). Therefore, the buyer is not interested
+The original price of the car is: $139437
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $146408
+Buyer needs one motorcycle SouthSalesperson_013 suggested a clean, like new Crane(CAR_00076). The buying probability was 60. And the transaction was unsuccessful for $146408
+The original price of the car is: $153150
+The buyer has selected the following plan:
+Extended Warranty, Satellite RadioThe current sale price 125.0% of the original price. Therefore the current sale price is $191437
+Buyer wants one electric car NorthSalesperson_005 suggested a dirty, used Crane(LIE_00078). The buying probability was 20. And the transaction was unsuccessful for $191437
+The original price of the car is: $139437
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $146408
+Buyer just looking performance car SouthSalesperson_013 suggested a clean, like new Crane(CAR_00076). Therefore, the buyer is not interested
+The original price of the car is: $153150
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $160807
+Buyer wants one performance car NorthSalesperson_005 suggested a dirty, used Crane(LIE_00078). The buying probability was 20. And the transaction was unsuccessful for $160807
+The original price of the car is: $139437
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $139437
+Buyer just looking motorcycle SouthSalesperson_013 suggested a clean, like new Crane(CAR_00076). Therefore, the buyer is not interested
+The original price of the car is: $153150
+The buyer has selected the following plan:
+Undercoating, The current sale price 105.0% of the original price. Therefore the current sale price is $160807
+Buyer wants one pickup NorthSalesperson_013 suggested a dirty, used Crane(LIE_00078). The buying probability was 20. And the transaction was unsuccessful for $160807
+The original price of the car is: $153150
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $160807
+Buyer needs one motorcycle NorthSalesperson_003 suggested a dirty, used Crane(LIE_00078). The buying probability was 50. And the transaction was unsuccessful for $160807
+
+
+
+
+
+Closing...
+We made $0 today
+
+Closing...
+We made $0 today
+
+
+
+
+Quitting
+Quitting
+Intern SouthIntern_022 has quit after working for 1 days
+Intern NorthIntern_017 has quit after working for 7 days
+Mechanics NorthMechanics_002 has quit after working for 24 days
+Intern NorthIntern_016 has stepped up and took the mechanics job
+
+End of the day
+
+Tracker: Day 27 (from both locations)
+Total money earned by all Staff: $677540
+Total money earned by both FNCD: $6471318
+End of the day
+
+
+North:******FNCD Day 28: Race day!!!!!!!******
+South:******FNCD Day 28: Race day!!!!!!!******
+Racing......
+Racing......
+South FNCD is racing with Pickups
+North FNCD is racing with MonsterTrucks
+South FNCD have 3 vehicles in the race.
+North FNCD have 3 vehicles in the race.
+North: One of the vehicle got 9 place
+South: One of the vehicle got 17 place
+North: One of the vehicle got 19 place
+South: One of the vehicle got 9 place
+South: One of the vehicle got 3 place
+NorthDriver_008 got injured and quit FNCD
+North: One of the vehicle got 13 place
+South:******FNCD Day 29******
+North:******FNCD Day 29******
+North opening... (Current budget $2491883)
+South opening... (Current budget $2012178)
+Hired intern NorthIntern_019
+Hired intern SouthIntern_023
+Hired intern NorthIntern_020
+Hired driver NorthDriver_021
+
+
+
+
+Washing...South
+Washing...North
+SouthIntern_020 washed a clean Crane (CAR_00076) and made it sparkling
+SouthIntern_020 washed a clean Tractor (SON_00039) and made it clean
+NorthIntern_018 washed a dirty Van (HYU_00044) and made it clean
+SouthIntern_021 washed a clean Motorcycles (DUC_00032) and made it clean
+SouthIntern_021 washed a clean Crane (MAN_00072) and made it clean
+NorthIntern_018 washed a dirty PerformanceCar (BMW_00002) and made it clean
+SouthIntern_023 washed a clean PerformanceCar (LAM_00002) and made it clean
+SouthIntern_023 washed a clean PerformanceCar (BMW_00001) and made it sparkling
+NorthIntern_019 washed a dirty Crane (LIE_00078) and made it clean
+NorthIntern_019 washed a clean Van (KIA_00048) and made it clean
+NorthIntern_020 washed a clean Motorcycles (LUC_00035) and made it clean
+NorthIntern_020 washed a clean Van (IVE_00047) and made it clean
+
+
+Repairing...North
+Repairing...South
+NorthMechanics_006 fixed a broken MonsterTrucks (Bounty Hunter_00026) and made it used (made $1000)
+NorthMechanics_006 fixed a used MonsterTrucks (Bounty Hunter_00026) and made it like new (made $1000)
+NorthMechanics_010 fixed a used PerformanceCar (BMW_00002) and made it like new (made $2000)
+NorthMechanics_010 fixed a like new PerformanceCar (BMW_00002) and made it like new (made $0)
+NorthMechanics_016 fixed a used Crane (LIE_00078) and made it used (made $0)
+
+
+
+We have 3 Buyers today
+Selling...South
+
+We have 4 Buyers today
+Selling...North
+The original price of the car is: $139437
+The buyer has selected the following plan:
+The original price of the car is: $153150
+The buyer has selected the following plan:
+Undercoating, The current sale price 100.0% of the original price. Therefore the current sale price is $153150
+The current sale price 105.0% of the original price. Therefore the current sale price is $146408
+Buyer just looking electric car NorthSalesperson_003 suggested a dirty, used Crane(LIE_00078). Therefore, the buyer is not interested
+Buyer needs one electric car SouthSalesperson_003 suggested a sparkling, like new Crane(CAR_00076). The buying probability was 70. And the transaction was successful for $146408 (making $4000)
+The original price of the car is: $153150
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $153150
+Buyer needs one car NorthSalesperson_005 suggested a dirty, used Crane(LIE_00078). The buying probability was 50. And the transaction was unsuccessful for $153150
+The original price of the car is: $131910
+The buyer has selected the following plan:
+Extended Warranty, Road Rescue Coverage, The current sale price 122.0% of the original price. Therefore the current sale price is $160930
+Buyer just looking electric car SouthSalesperson_001 suggested a clean, like new Crane(MAN_00072). Therefore, the buyer is not interested
+The original price of the car is: $153150
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $160807
+Buyer just looking pickup NorthSalesperson_005 suggested a dirty, used Crane(LIE_00078). Therefore, the buyer is not interested
+The original price of the car is: $131910
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $138505
+Buyer wants one electric car SouthSalesperson_003 suggested a clean, like new Crane(MAN_00072). The buying probability was 30. And the transaction was unsuccessful for $138505
+The original price of the car is: $153150
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $153150
+Buyer just looking performance car NorthSalesperson_013 suggested a dirty, used Crane(LIE_00078). Therefore, the buyer is not interested
+
+
+
+
+
+Closing...
+We made $0 today
+
+Closing...
+We made $146408 today
+
+
+
+
+Quitting
+Quitting
+Intern SouthIntern_021 has quit after working for 5 days
+
+
+Tracker: Day 29 (from both locations)
+Total money earned by all Staff: $684400
+Total money earned by both FNCD: $6617726
+End of the day
+End of the day
+
+
+North:******FNCD Day 30******
+North opening... (Current budget $2491883)
+South:******FNCD Day 30******
+South opening... (Current budget $2158586)
+Hired intern SouthIntern_024
+
+
+South Purchased a like new, dirty Car Palfinger, (PAL_00077) for $65177
+
+
+Washing...South
+Washing...North
+SouthIntern_020 washed a dirty Crane (PAL_00077) and made it clean
+NorthIntern_018 washed a dirty Crane (LIE_00078) and made it sparkling
+NorthIntern_018 washed a dirty PerformanceCar (BMW_00002) and made it clean
+SouthIntern_020 washed a clean Motorcycles (KAW_00033) and made it sparkling
+NorthIntern_019 washed a dirty MonsterTrucks (Bounty Hunter_00026) and made it dirty
+SouthIntern_023 washed a clean PerformanceCar (LAM_00005) and made it clean
+NorthIntern_019 washed a clean ElectricCars (LUC_00019) and made it clean
+SouthIntern_023 washed a clean Crane (PAL_00074) and made it sparkling
+NorthIntern_020 washed a dirty MonsterTrucks (Bounty Hunter_00026) and made it clean
+SouthIntern_024 washed a clean Van (KIA_00044) and made it clean
+SouthIntern_024 washed a clean MonsterTrucks (Shell Camino_00025) and made it sparkling
+NorthIntern_020 washed a clean MonsterTrucks (King Krunch_00025) and made it sparkling
+
+
+Repairing...North
+Repairing...South
+NorthMechanics_006 fixed a used Crane (LIE_00078) and made it used (made $0)
+NorthMechanics_010 fixed a used Crane (LIE_00078) and made it like new (made $5000)
+
+
+We have 1 Buyers today
+Selling...North
+
+
+We have 4 Buyers today
+Selling...South
+The original price of the car is: $191437
+The buyer has selected the following plan:
+Satellite RadioThe original price of the car is: $131910
+The buyer has selected the following plan:
+Extended Warranty, The current sale price 105.0% of the original price. Therefore the current sale price is $201008
+The current sale price 120.0% of the original price. Therefore the current sale price is $158292
+Buyer just looking pickup SouthSalesperson_013 suggested a clean, like new Crane(MAN_00072). Therefore, the buyer is not interested
+Buyer wants one motorcycle NorthSalesperson_005 suggested a dirty, like new Crane(LIE_00078). The buying probability was 20. And the transaction was unsuccessful for $201008
+The original price of the car is: $131910
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $131910
+Buyer wants one monster truck SouthSalesperson_001 suggested a clean, like new Crane(MAN_00072). The buying probability was 30. And the transaction was successful for $131910 (making $4000)
+The original price of the car is: $130354
+The buyer has selected the following plan:
+The current sale price 100.0% of the original price. Therefore the current sale price is $130354
+Buyer needs one motorcycle SouthSalesperson_001 suggested a clean, like new Crane(PAL_00077). The buying probability was 60. And the transaction was unsuccessful for $130354
+The original price of the car is: $130354
+The buyer has selected the following plan:
+Extended Warranty, Satellite RadioThe current sale price 125.0% of the original price. Therefore the current sale price is $162942
+Buyer wants one electric car SouthSalesperson_003 suggested a clean, like new Crane(PAL_00077). The buying probability was 30. And the transaction was unsuccessful for $162942
+
+
+
+
+
+Closing...
+We made $131910 today
+
+Closing...
+We made $0 today
+
+
+
+
+Quitting
+Quitting
+
+End of the day
+
+Tracker: Day 30 (from both locations)
+Total money earned by all Staff: $696390
+Total money earned by both FNCD: $6749636
+End of the day
+
+
+North:******FNCD Day 31: Race day!!!!!!!******
+Racing......
+South:******FNCD Day 31: Race day!!!!!!!******
+Racing......
+North FNCD is racing with PerformanceCar
+South FNCD is racing with Pickups
+South FNCD have 3 vehicles in the race.
+North FNCD have 3 vehicles in the race.
+South: One of the vehicle got 19 place
+North: One of the vehicle got 11 place
+North: One of the vehicle got 6 place
+SouthDriver_012 got injured and quit FNCD
+South: One of the vehicle got 10 place
+South: One of the vehicle got 13 place
+North: One of the vehicle got 14 place
+South:******FNCD Day 31******
+South opening... (Current budget $2225319)
+North:******FNCD Day 31******
+North opening... (Current budget $2491883)
+Hired driver SouthDriver_025
+
+
+South Purchased a like new, dirty Car Liebherr, (LIE_00078) for $61150
+
+
+Washing...South
+Washing...North
+SouthIntern_020 washed a dirty Crane (LIE_00078) and made it dirty
+SouthIntern_020 washed a clean Tractor (CAS_00037) and made it sparkling
+NorthIntern_018 washed a dirty Crane (LIE_00078) and made it clean
+SouthIntern_023 washed a dirty Crane (LIE_00078) and made it sparkling
+NorthIntern_018 washed a clean Tractor (JOH_00038) and made it clean
+SouthIntern_023 washed a clean Van (IVE_00047) and made it dirty
+NorthIntern_019 washed a clean PerformanceCar (LAM_00004) and made it clean
+SouthIntern_024 washed a dirty Van (IVE_00047) and made it clean
+NorthIntern_019 washed a clean Tractor (MAH_00041) and made it clean
+SouthIntern_024 washed a clean PerformanceCar (LAM_00005) and made it clean
+NorthIntern_020 washed a clean Van (ISU_00045) and made it dirty
+NorthIntern_020 washed a clean Tractor (MAH_00041) and made it clean
+
+
+Repairing...North
+Repairing...South
+NorthMechanics_006 fixed a broken Crane (LIE_00078) and made it used (made $5000)
+SouthMechanics_006 fixed a broken Pickups (CHE_00013) and made it used (made $1000)
+NorthMechanics_006 fixed a used Crane (LIE_00078) and made it like new (made $5000)
+SouthMechanics_014 fixed a used Pickups (CHE_00013) and made it like new (made $1000)
+NorthMechanics_010 fixed a broken Tractor (MAH_00041) and made it used (made $2000)
+NorthMechanics_016 fixed a used Tractor (MAH_00041) and made it like new (made $2000)
+
+
+
+1. Select one of the FNCD locations to issue commands to
+2. Ask the salesperson their name (should reply with employee's name)
+3. Ask the salesperson what time it is (should return the system time)
+4. Ask for a different salesperson (select another salesperson for the transactions)
+5. Ask the salesperson for current store inventory (to allow selecting an item)
+6. Ask the salesperson for all details on a user selected inventory item
+7. Buy a normal inventory item from the salesperson
+0. Exit
+? 1
+Please choose 1 for North or other for South: 1
+
+
+1. Select one of the FNCD locations to issue commands to
+2. Ask the salesperson their name (should reply with employee's name)
+3. Ask the salesperson what time it is (should return the system time)
+4. Ask for a different salesperson (select another salesperson for the transactions)
+5. Ask the salesperson for current store inventory (to allow selecting an item)
+6. Ask the salesperson for all details on a user selected inventory item
+7. Buy a normal inventory item from the salesperson
+0. Exit
+? 2
+Salesperson's name: NorthSalesperson_003
+
+
+1. Select one of the FNCD locations to issue commands to
+2. Ask the salesperson their name (should reply with employee's name)
+3. Ask the salesperson what time it is (should return the system time)
+4. Ask for a different salesperson (select another salesperson for the transactions)
+5. Ask the salesperson for current store inventory (to allow selecting an item)
+6. Ask the salesperson for all details on a user selected inventory item
+7. Buy a normal inventory item from the salesperson
+0. Exit
+? 3
+17/03/2023 18:50:00
+
+
+1. Select one of the FNCD locations to issue commands to
+2. Ask the salesperson their name (should reply with employee's name)
+3. Ask the salesperson what time it is (should return the system time)
+4. Ask for a different salesperson (select another salesperson for the transactions)
+5. Ask the salesperson for current store inventory (to allow selecting an item)
+6. Ask the salesperson for all details on a user selected inventory item
+7. Buy a normal inventory item from the salesperson
+0. Exit
+? 4
+Second salesperson's name: NorthSalesperson_005
+
+
+1. Select one of the FNCD locations to issue commands to
+2. Ask the salesperson their name (should reply with employee's name)
+3. Ask the salesperson what time it is (should return the system time)
+4. Ask for a different salesperson (select another salesperson for the transactions)
+5. Ask the salesperson for current store inventory (to allow selecting an item)
+6. Ask the salesperson for all details on a user selected inventory item
+7. Buy a normal inventory item from the salesperson
+0. Exit
+? 5
+                               Name                          Brand                 Cost           Sale Price            Condition          Cleanliness                         Status
+                          MER_00001                  Mercedes-Benz                26452                52904             like new                clean                       in stock
+                          BMW_00002                            BMW                15921                93290             like new                clean                       in stock
+                          FER_00003                        Ferrari                18905                47262             like new                clean                       in stock
+                          LAM_00004                    Lamborghini                11876                55672             like new                clean                       in stock
+                          LEX_00005                          Lexus                16945                42362             like new            sparkling                       in stock
+                          AUD_00006                           Audi                13142                61605             like new                clean                       in stock
+                          SUB_00007                         Subaru                13603                27206             like new                clean                       in stock
+                          SUB_00008                         Subaru                 7364                34518             like new            sparkling                       in stock
+                          NIS_00009                         Nissan                11435                22870             like new                clean                       in stock
+                          SUB_00010                         Subaru                17418                34836             like new                clean                       in stock
+                          SUB_00011                         Subaru                13876                34690             like new                clean                       in stock
+                          HYU_00012                        Hyundai                10513                26282             like new            sparkling                       in stock
+                          CHE_00013                      Chevrolet                32036                64072             like new            sparkling                       in stock
+                          RAM_00014                            Ram                16197                40492             like new                clean                       in stock
+                          GMC_00015                            GMC                15859                92925             like new                clean                       in stock
+                          GMC_00016                            GMC                10024                46987             like new            sparkling                       in stock
+                          FOR_00017                           Ford                26631                66577             like new                clean                       in stock
+                          GMC_00018                            GMC                39712                79424             like new                clean                       in stock
+                          LUC_00019                   Lucid Motors                 5446                25530             like new                clean           in stock(range: 381)
+                          LUC_00020                   Lucid Motors                14489                28978             like new                clean           in stock(range: 165)
+                          LUC_00021                   Lucid Motors                 9389                23472             like new            sparkling           in stock(range: 284)
+                          NIS_00022                         Nissan                 7344                34425             like new                clean           in stock(range: 237)
+                          NIS_00023                         Nissan                 7392                34650             like new            sparkling           in stock(range: 408)
+                          NIO_00024                            NIO                19479                38958             like new            sparkling           in stock(range: 257)
+                  King Krunch_00025                 Son-uva Digger                11678                29195             like new            sparkling                       in stock
+                Bounty Hunter_00026        Mon. Jam Steel Titans 2                 8232                38587             like new                clean                       in stock
+                  King Krunch_00027        Mon. Jam Steel Titans 2                14206                28412             like new                clean                       in stock
+        Air Force Afterburner_00028        Mon. Jam Steel Titans 2                 5770                27048             like new                clean                       in stock
+              Captain's Curse_00029                 Son-uva Digger                 5513                48465             like new                clean                       in stock
+                       Brutus_00030                   Grave Digger                14627                36567             like new                clean                       in stock
+                          KTM_00031                            KTM                 4586                21498             like new            sparkling     in stock(engine size: 689)
+                          HON_00032                          Honda                16030                32060             like new            sparkling     in stock(engine size: 659)
+                          DUC_00033                         Ducati                 4813                22563             like new            sparkling    in stock(engine size: 1013)
+                          DUC_00034                         Ducati                15948                31896             like new                clean    in stock(engine size: 1038)
+                          LUC_00035                   Lucid Motors                12473                73087             like new                clean     in stock(engine size: 767)
+                          LUC_00036                   Lucid Motors                10805                27012             like new                clean     in stock(engine size: 957)
+                          SON_00037         Sonalika International                26974                53948             like new                clean                       in stock
+                          JOH_00038                     John Deere                 8328                39037             like new                clean                       in stock
+                          MAS_00039                Massey Ferguson                22060                55150             like new                clean                       in stock
+                          CAS_00040                        Case IH                 8748                96123             like new            sparkling                       in stock
+                          MAH_00041                       Mahindra                 4114               248348             like new                dirty                       in stock
+                          MAS_00042                Massey Ferguson                11873                55657             like new                clean                       in stock
+                          JEE_00043                           Jeep                14893                29786             like new                clean                       in stock
+                          HYU_00044                        Hyundai                 3272                35948             like new                clean                       in stock
+                          ISU_00045                          Isuzu                 9499                23747             like new                dirty                       in stock
+                          JOW_00046                         Jowett                14754                29508             like new                clean                       in stock
+                          IVE_00047                          Iveco                 3705                40717             like new                clean                       in stock
+                          KIA_00048                            Kia                10154                25385             like new                clean                       in stock
+                          LIE_00055                       Liebherr                21833               102345             like new                clean                       in stock
+                          PAL_00068                      Palfinger                40768               101920             like new                clean                       in stock
+                          PAL_00075                      Palfinger                21258                99648             like new                clean                       in stock
+                          LIE_00076                       Liebherr                66897               133794             like new                clean                       in stock
+                          LIE_00078                       Liebherr                26137               358943             like new                dirty                       in stock
+                          MAN_00079               Manitowoc Cranes                60713               121426             like new                clean                       in stock
+Please enter the vehicle name: MER_00001
+
+
+1. Select one of the FNCD locations to issue commands to
+2. Ask the salesperson their name (should reply with employee's name)
+3. Ask the salesperson what time it is (should return the system time)
+4. Ask for a different salesperson (select another salesperson for the transactions)
+5. Ask the salesperson for current store inventory (to allow selecting an item)
+6. Ask the salesperson for all details on a user selected inventory item
+7. Buy a normal inventory item from the salesperson
+0. Exit
+? 6
+Name: MER_00001
+Brand: Mercedes-Benz
+Cost: 26452
+Sale Price: 52904
+Condition: like new
+Cleanliness: clean
+Status: in stock
+
+
+1. Select one of the FNCD locations to issue commands to
+2. Ask the salesperson their name (should reply with employee's name)
+3. Ask the salesperson what time it is (should return the system time)
+4. Ask for a different salesperson (select another salesperson for the transactions)
+5. Ask the salesperson for current store inventory (to allow selecting an item)
+6. Ask the salesperson for all details on a user selected inventory item
+7. Buy a normal inventory item from the salesperson
+0. Exit
+? 7
+The original price of the car is: $52904
+The buyer has selected the following plan:
+Satellite RadioThe current sale price 105.0% of the original price. Therefore the current sale price is $55549
+Buyer needs one car NorthSalesperson_005 suggested a clean, like new PerformanceCar(MER_00001). The buying probability was 60. And the transaction was successful for $61104 (making $1600)
+
+
+1. Select one of the FNCD locations to issue commands to
+2. Ask the salesperson their name (should reply with employee's name)
+3. Ask the salesperson what time it is (should return the system time)
+4. Ask for a different salesperson (select another salesperson for the transactions)
+5. Ask the salesperson for current store inventory (to allow selecting an item)
+6. Ask the salesperson for all details on a user selected inventory item
+7. Buy a normal inventory item from the salesperson
+0. Exit
+? 0
+
+
+
+
+Closing...
+Closing...
+We made $0 today
+We made $61104 today
+
+
+
+
+Quitting
+Quitting
+
+End of the day
+
+Tracker: Day 31 (from both locations)
+Total money earned by all Staff: $720540
+Total money earned by both FNCD: $6810740
+End of the day
+
+
+
+North:
+
+******End of simulation******
+Here is a list of all the staffs:
+                Name    Total Days Worked     Total Normal Pay      Total Bonus Pay          Status
+NorthSalesperson_003              27 days                $5400               $28000         working
+     NorthDriver_004              27 days                   $0                $2000         working
+  NorthMechanics_006              27 days                $6480               $94000         working
+  NorthMechanics_010              27 days                $6480               $72000         working
+     NorthDriver_015              18 days                   $0                   $0         working
+NorthSalesperson_005              27 days                $3190                $9600         working
+NorthSalesperson_013              26 days                $2470                $4000         working
+     NorthIntern_018               5 days                 $350                   $0         working
+  NorthMechanics_016              15 days                $1560                $2000         working
+     NorthIntern_019               3 days                 $210                   $0         working
+     NorthIntern_020               3 days                 $210                   $0         working
+     NorthDriver_021               3 days                   $0                   $0         working
+     NorthIntern_009               1 days                  $70                   $0            quit
+     NorthIntern_001               2 days                 $140                   $0            quit
+     NorthDriver_012               9 days                   $0                   $0            quit
+     NorthIntern_014              10 days                 $700                   $0            quit
+NorthSalesperson_011              17 days                $3400               $28000            quit
+NorthSalesperson_007              22 days                $4400               $32000            quit
+     NorthIntern_017               7 days                 $490                   $0            quit
+  NorthMechanics_002              24 days                $5760               $94000            quit
+     NorthDriver_008              24 days                   $0                   $0            quit
+
+Here is a list of all the vehicles:
+                               Name                          Brand                 Cost           Sale Price            Condition          Cleanliness                         Status
+                          BMW_00002                            BMW                15921                93290             like new                clean                       in stock
+                          FER_00003                        Ferrari                18905                47262             like new                clean                       in stock
+                          LAM_00004                    Lamborghini                11876                55672             like new                clean                       in stock
+                          LEX_00005                          Lexus                16945                42362             like new            sparkling                       in stock
+                          AUD_00006                           Audi                13142                61605             like new                clean                       in stock
+                          SUB_00007                         Subaru                13603                27206             like new                clean                       in stock
+                          SUB_00008                         Subaru                 7364                34518             like new            sparkling                       in stock
+                          NIS_00009                         Nissan                11435                22870             like new                clean                       in stock
+                          SUB_00010                         Subaru                17418                34836             like new                clean                       in stock
+                          SUB_00011                         Subaru                13876                34690             like new                clean                       in stock
+                          HYU_00012                        Hyundai                10513                26282             like new            sparkling                       in stock
+                          CHE_00013                      Chevrolet                32036                64072             like new            sparkling                       in stock
+                          RAM_00014                            Ram                16197                40492             like new                clean                       in stock
+                          GMC_00015                            GMC                15859                92925             like new                clean                       in stock
+                          GMC_00016                            GMC                10024                46987             like new            sparkling                       in stock
+                          FOR_00017                           Ford                26631                66577             like new                clean                       in stock
+                          GMC_00018                            GMC                39712                79424             like new                clean                       in stock
+                          LUC_00019                   Lucid Motors                 5446                25530             like new                clean           in stock(range: 381)
+                          LUC_00020                   Lucid Motors                14489                28978             like new                clean           in stock(range: 165)
+                          LUC_00021                   Lucid Motors                 9389                23472             like new            sparkling           in stock(range: 284)
+                          NIS_00022                         Nissan                 7344                34425             like new                clean           in stock(range: 237)
+                          NIS_00023                         Nissan                 7392                34650             like new            sparkling           in stock(range: 408)
+                          NIO_00024                            NIO                19479                38958             like new            sparkling           in stock(range: 257)
+                  King Krunch_00025                 Son-uva Digger                11678                29195             like new            sparkling                       in stock
+                Bounty Hunter_00026        Mon. Jam Steel Titans 2                 8232                38587             like new                clean                       in stock
+                  King Krunch_00027        Mon. Jam Steel Titans 2                14206                28412             like new                clean                       in stock
+        Air Force Afterburner_00028        Mon. Jam Steel Titans 2                 5770                27048             like new                clean                       in stock
+              Captain's Curse_00029                 Son-uva Digger                 5513                48465             like new                clean                       in stock
+                       Brutus_00030                   Grave Digger                14627                36567             like new                clean                       in stock
+                          KTM_00031                            KTM                 4586                21498             like new            sparkling     in stock(engine size: 689)
+                          HON_00032                          Honda                16030                32060             like new            sparkling     in stock(engine size: 659)
+                          DUC_00033                         Ducati                 4813                22563             like new            sparkling    in stock(engine size: 1013)
+                          DUC_00034                         Ducati                15948                31896             like new                clean    in stock(engine size: 1038)
+                          LUC_00035                   Lucid Motors                12473                73087             like new                clean     in stock(engine size: 767)
+                          LUC_00036                   Lucid Motors                10805                27012             like new                clean     in stock(engine size: 957)
+                          SON_00037         Sonalika International                26974                53948             like new                clean                       in stock
+                          JOH_00038                     John Deere                 8328                39037             like new                clean                       in stock
+                          MAS_00039                Massey Ferguson                22060                55150             like new                clean                       in stock
+                          CAS_00040                        Case IH                 8748                96123             like new            sparkling                       in stock
+                          MAH_00041                       Mahindra                 4114               248348             like new                dirty                       in stock
+                          MAS_00042                Massey Ferguson                11873                55657             like new                clean                       in stock
+                          JEE_00043                           Jeep                14893                29786             like new                clean                       in stock
+                          HYU_00044                        Hyundai                 3272                35948             like new                clean                       in stock
+                          ISU_00045                          Isuzu                 9499                23747             like new                dirty                       in stock
+                          JOW_00046                         Jowett                14754                29508             like new                clean                       in stock
+                          IVE_00047                          Iveco                 3705                40717             like new                clean                       in stock
+                          KIA_00048                            Kia                10154                25385             like new                clean                       in stock
+                          LIE_00055                       Liebherr                21833               102345             like new                clean                       in stock
+                          PAL_00068                      Palfinger                40768               101920             like new                clean                       in stock
+                          PAL_00075                      Palfinger                21258                99648             like new                clean                       in stock
+                          LIE_00076                       Liebherr                66897               133794             like new                clean                       in stock
+                          LIE_00078                       Liebherr                26137               358943             like new                dirty                       in stock
+                          MAN_00079               Manitowoc Cranes                60713               121426             like new                clean                       in stock
+                          LIE_00049                       Liebherr                78783               157566             like new                clean                           sold
+                          CAR_00052                       Cargotec                63970               127940             like new                clean                           sold
+                          PAL_00053                      Palfinger                30300               113625                 used                dirty                           sold
+                          KON_00051                     Konecranes                45336               113340             like new                clean                           sold
+                          KON_00058                     Konecranes                29955               112332                 used                dirty                           sold
+                          MAN_00050               Manitowoc Cranes                23952               112278             like new                dirty                           sold
+                          KON_00056                     Konecranes                52363               130907             like new                dirty                           sold
+                          MAN_00061               Manitowoc Cranes                63830               127660                 used                dirty                           sold
+                          CAR_00059                       Cargotec                54785               109570                 used                dirty                           sold
+                          PAL_00057                      Palfinger                23269               109076             like new                dirty                           sold
+                          PAL_00064                      Palfinger                69877               139754             like new                clean                           sold
+                          PAL_00062                      Palfinger                29557               110841                 used                dirty                           sold
+                          MAN_00054               Manitowoc Cranes                51460               102920             like new                clean                           sold
+                          LIE_00060                       Liebherr                24548               115072             like new                dirty                           sold
+                          LIE_00067                       Liebherr                51844               129610             like new            sparkling                           sold
+                          LIE_00066                       Liebherr                26528               124353             like new                dirty                           sold
+                          PAL_00069                      Palfinger                69064               138128             like new                clean                           sold
+                          MAN_00065               Manitowoc Cranes                45440               113600             like new            sparkling                           sold
+                          MAN_00063               Manitowoc Cranes                44148               110370             like new                dirty                           sold
+                          LIE_00070                       Liebherr                22146               103811             like new                dirty                           sold
+                          MAN_00072               Manitowoc Cranes                62158               155395             like new                clean                           sold
+                          MAN_00074               Manitowoc Cranes                24260               213226             like new                dirty                           sold
+                          PAL_00071                      Palfinger                59573               148932             like new                clean                           sold
+                          CAR_00073                       Cargotec                70253               140506             like new                clean                           sold
+                          PAL_00077                      Palfinger                68730               137460             like new                clean                           sold
+                          MER_00001                  Mercedes-Benz                26452                52904             like new                clean                           sold
+
+South:
+
+******End of simulation******
+Here is a list of all the staffs:
+                Name    Total Days Worked     Total Normal Pay      Total Bonus Pay          Status
+SouthSalesperson_003              27 days                $5400               $28000         working
+  SouthMechanics_006              27 days                $6480               $83000         working
+SouthSalesperson_001              27 days                $5010               $36000         working
+     SouthDriver_015              24 days                   $0                $1000         working
+     SouthDriver_016              24 days                   $0                $1000         working
+SouthSalesperson_013              24 days                $4410               $24000         working
+  SouthMechanics_014              24 days                $4570               $27000         working
+     SouthIntern_020               8 days                 $560                   $0         working
+  SouthMechanics_018              21 days                $2150                   $0         working
+     SouthIntern_023               3 days                 $210                   $0         working
+     SouthIntern_024               2 days                 $140                   $0         working
+     SouthDriver_025               1 days                   $0                   $0         working
+     SouthIntern_009               3 days                 $210                   $0            quit
+SouthSalesperson_011               3 days                 $600                   $0            quit
+     SouthDriver_004               3 days                   $0                   $0            quit
+     SouthDriver_008               3 days                   $0                   $0            quit
+  SouthMechanics_002               4 days                 $960               $19000            quit
+SouthSalesperson_007               6 days                $1200               $12000            quit
+  SouthMechanics_010              10 days                $2400               $21000            quit
+     SouthIntern_019               9 days                 $630                   $0            quit
+     SouthIntern_017              16 days                $1120                   $0            quit
+  SouthMechanics_005              23 days                $4840               $50000            quit
+     SouthIntern_022               1 days                  $70                   $0            quit
+     SouthIntern_021               5 days                 $350                   $0            quit
+     SouthDriver_012              26 days                   $0                   $0            quit
+
+Here is a list of all the vehicles:
+                               Name                          Brand                 Cost           Sale Price            Condition          Cleanliness                         Status
+                          BMW_00001                            BMW                19361                90757             like new            sparkling                       in stock
+                          LAM_00002                    Lamborghini                14316                67106             like new                clean                       in stock
+                          MCL_00003                        McLaren                19680                49200             like new                clean                       in stock
+                          ACU_00004                          Acura                34612                69224             like new                clean                       in stock
+                          LAM_00005                    Lamborghini                 7820                85913             like new                clean                       in stock
+                          MER_00006                  Mercedes-Benz                22015                44030             like new                clean                       in stock
+                          HON_00007                          Honda                 6644                31147             like new                clean                       in stock
+                          HON_00008                          Honda                 4204                46201             like new                clean                       in stock
+                          HON_00009                          Honda                10834                21668             like new                clean                       in stock
+                          MAZ_00010                          Mazda                10066                25165             like new                clean                       in stock
+                          HON_00011                          Honda                13047                26094             like new            sparkling                       in stock
+                          MAZ_00012                          Mazda                 4193                19657             like new            sparkling                       in stock
+                          CHE_00013                      Chevrolet                 8268                48443             like new                dirty                       in stock
+                          JEE_00014                           Jeep                22339                55847             like new                clean                       in stock
+                          RAM_00015                            Ram                 8219                16438             like new                clean                       in stock
+                          GMC_00016                            GMC                10612                49747             like new                clean                       in stock
+                          RAM_00017                            Ram                27398                54796             like new                clean                       in stock
+                          RAM_00018                            Ram                26584                66460             like new                clean                       in stock
+                          TES_00019                          Tesla                 5043                23640             like new                clean           in stock(range: 310)
+                          NIS_00020                         Nissan                 6260                29347             like new                clean           in stock(range: 481)
+                          NIO_00021                            NIO                15555                38887             like new                clean           in stock(range: 300)
+                          ZOO_00022                           Zoox                 2660                68525             like new                clean           in stock(range: 685)
+                          NIO_00023                            NIO                 8224                20560             like new                clean           in stock(range: 235)
+                          LUC_00024                   Lucid Motors                13210                26420             like new                clean           in stock(range: 402)
+                 Shell Camino_00025                 Son-uva Digger                19803                39606             like new            sparkling                       in stock
+                 Grave Digger_00026                 Son-uva Digger                17735                35470             like new                clean                       in stock
+                 Blue Thunder_00027        Mon. Jam Steel Titans 2                14069                28138             like new                clean                       in stock
+                 Monster Mutt_00028        Mon. Jam Steel Titans 2                13513                27026             like new                clean                       in stock
+                Stone Crusher_00029                 Son-uva Digger                 9913                24782             like new            sparkling                       in stock
+                    Bulldozer_00030                 Son-uva Digger                11756                68887             like new                clean                       in stock
+                          HON_00031                          Honda                12109                24218             like new                clean     in stock(engine size: 782)
+                          DUC_00032                         Ducati                16407                32814             like new                clean     in stock(engine size: 808)
+                          KAW_00033                       Kawasaki                11545                28862             like new            sparkling     in stock(engine size: 235)
+                          BMW_00034                            BMW                 5036                23610             like new            sparkling    in stock(engine size: 1025)
+                          YAM_00035                         Yamaha                12803                32007             like new                clean     in stock(engine size: 650)
+                          SUZ_00036                         Suzuki                 6389                70200             like new                clean     in stock(engine size: 475)
+                          CAS_00037                        Case IH                20815                52037             like new            sparkling                       in stock
+                          CAS_00038                        Case IH                27824                55648             like new            sparkling                       in stock
+                          SON_00039         Sonalika International                29435                58870             like new                clean                       in stock
+                          CAS_00040                        Case IH                11185                52432             like new            sparkling                       in stock
+                          SON_00041         Sonalika International                 9255                43383             like new                clean                       in stock
+                          CAS_00042                        Case IH                26670                53340             like new            sparkling                       in stock
+                          HYU_00043                        Hyundai                 9256                23140             like new                clean                       in stock
+                          KIA_00044                            Kia                10404                26010             like new                clean                       in stock
+                          JEE_00045                           Jeep                 4173                19563             like new                clean                       in stock
+                          ISU_00046                          Isuzu                12245                24490             like new                clean                       in stock
+                          IVE_00047                          Iveco                 9450                23625             like new                clean                       in stock
+                          HYU_00048                        Hyundai                 4824                22612             like new                clean                       in stock
+                          MAN_00058               Manitowoc Cranes                29750                59500             like new                clean                       in stock
+                          LIE_00063                       Liebherr                22212               104118             like new                clean                       in stock
+                          CAR_00069                       Cargotec                43941               109852             like new            sparkling                       in stock
+                          PAL_00074                      Palfinger                53516               107032             like new            sparkling                       in stock
+                          PAL_00077                      Palfinger                65177               130354             like new                clean                       in stock
+                          LIE_00078                       Liebherr                61150               122300             like new            sparkling                       in stock
+                          PAL_00051                      Palfinger                79851               159702             like new            sparkling                           sold
+                          LIE_00052                       Liebherr                59896               149740             like new                clean                           sold
+                          PAL_00056                      Palfinger                79793               159586             like new                dirty                           sold
+                          CAR_00053                       Cargotec                30416               142578             like new                clean                           sold
+                          KON_00054                     Konecranes                50944               127360             like new            sparkling                           sold
+                          MAN_00050               Manitowoc Cranes                41274               103185             like new                clean                           sold
+                          PAL_00055                      Palfinger                43264               108160             like new                dirty                           sold
+                          LIE_00060                       Liebherr                52204               104408                 used                clean                           sold
+                          MAN_00061               Manitowoc Cranes                60985               121970             like new                clean                           sold
+                          PAL_00062                      Palfinger                57683               115366                 used                clean                           sold
+                          LIE_00049                       Liebherr                21948               102885             like new                dirty                           sold
+                          CAR_00064                       Cargotec                54455               108910             like new                clean                           sold
+                          PAL_00066                      Palfinger                63973               127946             like new                clean                           sold
+                          PAL_00057                      Palfinger                22537               105645             like new                clean                           sold
+                          PAL_00059                      Palfinger                50490               126225             like new                dirty                           sold
+                          CAR_00065                       Cargotec                30336               142200             like new                dirty                           sold
+                          KON_00070                     Konecranes                61421               153552             like new                dirty                           sold
+                          LIE_00068                       Liebherr                58944               147360             like new                dirty                           sold
+                          CAR_00071                       Cargotec                30816               144450             like new                clean                           sold
+                          CAR_00073                       Cargotec                61599               153997             like new                dirty                           sold
+                          LIE_00067                       Liebherr                55092               137730             like new                clean                           sold
+                          LIE_00075                       Liebherr                63406               158515             like new                clean                           sold
+                          CAR_00076                       Cargotec                55775               139437             like new            sparkling                           sold
+                          MAN_00072               Manitowoc Cranes                52764               131910             like new                clean                           sold
+Process finished with exit code 0

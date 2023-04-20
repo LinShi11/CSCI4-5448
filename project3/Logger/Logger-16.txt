@@ -1,0 +1,16 @@
+Mechanics_002 fixed a used monster truck (Maximum Destruction (Max-D)_00041) and made it like new (made $1000)
+Mechanics_002 fixed a broken monster truck (Backwards Bob_00039) and made it broken (made $0)
+Mechanics_010 fixed a used motorcycle (KAW_00042) and made it like new (made $1000)
+Mechanics_010 fixed a used performance car (ACU_00004) and made it like new (made $2000)
+Mechanics_014 fixed a broken monster truck (Backwards Bob_00039) and made it used (made $1000)
+Mechanics_006 fixed a used pickup (GMC_00042) and made it like new (made $1000)
+Mechanics_006 fixed a used motorcycle (LUC_00023) and made it like new (made $1000)
+Mechanics_010 fixed a broken pickup (GMC_00009) and made it used (made $1000)
+Mechanics_005 fixed a used pickup (GMC_00009) and made it like new (made $1000)
+Salesperson_007 sold a vehicle MAS_00031 for $75608
+Salesperson_011 was not able to sell the vehicle LUC_00023
+Salesperson_007 sold a vehicle BMW_00036 for $72456
+Salesperson_007 was not able to sell the vehicle Bear Foot (2xtreme)_00019
+Salesperson_009 was not able to sell the vehicle ZOO_00033
+Salesperson_007 was not able to sell the vehicle MAZ_00040
+Salesperson_011 was not able to sell the vehicle AST_00002
