@@ -1,0 +1,24 @@
+Mechanics_002 fixed a broken monster truck (Zombie_00020) and made it used (made $1000)
+Mechanics_002 fixed a used performance car (AUD_00051) and made it like new (made $2000)
+Mechanics_014 fixed a used monster truck (Zombie_00020) and made it like new (made $1000)
+Mechanics_014 fixed a broken electric car (RIV_00053) and made it used (made $1000)
+Mechanics_015 fixed a used electric car (RIV_00053) and made it like new (made $1000)
+Salesperson_005 sold a vehicle RAM_00046 for $74410
+Salesperson_018 sold a vehicle Zombie_00020 for $39247
+Salesperson_005 sold a vehicle BMW_00045 for $47727
+Salesperson_017 was not able to sell the vehicle Avenger_00050
+Salesperson_007 sold a vehicle HON_00037 for $30727
+Salesperson_007 sold a vehicle MAS_00048 for $82998
+Salesperson_003 sold a vehicle TRI_00041 for $62639
+Salesperson_011 was not able to sell the vehicle Blue Thunder_00052
+Salesperson_011 was not able to sell the vehicle Blue Thunder_00052
+Mechanics_002 fixed a broken monster truck (Predator_00034) and made it used (made $1000)
+Mechanics_002 fixed a used monster truck (Predator_00034) and made it used (made $0)
+Mechanics_005 fixed a broken performance car (JAG_00043) and made it used (made $2000)
+Mechanics_005 fixed a used monster truck (Predator_00034) and made it used (made $0)
+Mechanics_014 fixed a broken monster truck (Bear Foot (1979)_00056) and made it used (made $1000)
+Mechanics_014 fixed a used monster truck (Predator_00034) and made it used (made $0)
+Salesperson_011 sold a vehicle JAG_00043 for $78039
+Salesperson_011 sold a vehicle TOY_00048 for $38451
+Salesperson_011 was not able to sell the vehicle Predator_00034
+Salesperson_007 sold a vehicle NIS_00049 for $95385

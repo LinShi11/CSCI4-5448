@@ -1,0 +1,13 @@
+Mechanics_002 fixed a used car (HON_00047) and made it like new (made $1000)
+Salesperson_009 was not able to sell the vehicle ACU_00004
+Salesperson_005 sold a vehicle APT_00038 for $32004
+Salesperson_005 sold a vehicle Backwards Bob_00039 for $30802
+Salesperson_013 sold a vehicle USA-1_00044 for $37467
+Salesperson_013 was not able to sell the vehicle VOL_00015
+Mechanics_006 fixed a broken monster truck (Blue Thunder_00052) and made it used (made $1000)
+Mechanics_006 fixed a broken pickup (FOR_00049) and made it used (made $1000)
+Mechanics_010 fixed a used pickup (FOR_00049) and made it like new (made $1000)
+Mechanics_010 fixed a like new pickup (FOR_00049) and made it used (made $1000)
+Mechanics_005 fixed a used pickup (FOR_00049) and made it like new (made $1000)
+Mechanics_005 fixed a like new pickup (FOR_00049) and made it like new (made $0)
+Salesperson_011 was not able to sell the vehicle MER_00051

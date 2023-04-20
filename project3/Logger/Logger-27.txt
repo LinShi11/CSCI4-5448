@@ -1,0 +1,24 @@
+Mechanics_014 fixed a broken pickup (FOR_00056) and made it broken (made $0)
+Mechanics_015 fixed a broken pickup (FOR_00056) and made it used (made $1000)
+Mechanics_019 fixed a used pickup (FOR_00056) and made it like new (made $1000)
+Salesperson_018 was not able to sell the vehicle RIV_00053
+Salesperson_017 sold a vehicle RIV_00053 for $35614
+Salesperson_018 sold a vehicle NIO_00054 for $31080
+Mechanics_006 fixed a broken electric car (LUC_00061) and made it used (made $1000)
+Mechanics_006 fixed a broken car (NIS_00057) and made it used (made $1000)
+Mechanics_010 fixed a broken electric car (APT_00062) and made it used (made $1000)
+Mechanics_010 fixed a used electric car (LUC_00061) and made it like new (made $1000)
+Mechanics_005 fixed a used pickup (RAM_00060) and made it like new (made $1000)
+Mechanics_005 fixed a used car (NIS_00057) and made it like new (made $1000)
+Salesperson_011 sold a vehicle KTM_00058 for $72765
+Salesperson_007 was not able to sell the vehicle NIS_00016
+Mechanics_002 fixed a used monster truck (Bear Foot (1979)_00056) and made it like new (made $1000)
+Mechanics_002 fixed a like new monster truck (Bear Foot (1979)_00056) and made it used (made $1000)
+Mechanics_005 fixed a broken performance car (LEX_00060) and made it used (made $2000)
+Mechanics_005 fixed a broken monster truck (Bounty Hunter_00061) and made it used (made $1000)
+Mechanics_014 fixed a used monster truck (Bear Foot (1979)_00056) and made it like new (made $1000)
+Mechanics_014 fixed a used monster truck (Bounty Hunter_00061) and made it like new (made $1000)
+Salesperson_011 was not able to sell the vehicle LEX_00055
+Salesperson_007 sold a vehicle LEX_00055 for $62565
+Salesperson_009 sold a vehicle TOY_00054 for $28171
+Salesperson_009 sold a vehicle VOL_00027 for $23486

@@ -1,0 +1,29 @@
+Mechanics_002 fixed a broken pickup (RAM_00046) and made it used (made $1000)
+Mechanics_002 fixed a broken car (MAZ_00036) and made it used (made $1000)
+Mechanics_014 fixed a used car (MAZ_00036) and made it like new (made $1000)
+Mechanics_014 fixed a used pickup (RAM_00046) and made it used (made $0)
+Mechanics_015 fixed a used pickup (RAM_00046) and made it like new (made $1000)
+Salesperson_005 was not able to sell the vehicle Backwards Bob_00039
+Salesperson_005 sold a vehicle MAZ_00036 for $42637
+Salesperson_009 was not able to sell the vehicle HON_00005
+Salesperson_009 was not able to sell the vehicle RAM_00046
+Salesperson_013 was not able to sell the vehicle APT_00038
+Mechanics_006 fixed a used performance car (MAS_00048) and made it like new (made $2000)
+Mechanics_006 fixed a like new performance car (MAS_00048) and made it used (made $2000)
+Mechanics_010 fixed a broken pickup (CHE_00050) and made it used (made $1000)
+Mechanics_010 fixed a used performance car (MAS_00048) and made it like new (made $2000)
+Mechanics_005 fixed a used pickup (CHE_00050) and made it like new (made $1000)
+Mechanics_005 fixed a like new pickup (CHE_00050) and made it like new (made $0)
+Salesperson_007 was not able to sell the vehicle VOL_00030
+Salesperson_011 sold a vehicle Bad News Travels Fast_00035 for $28706
+Salesperson_007 sold a vehicle Backwards Bob_00051 for $23900
+Mechanics_002 fixed a broken pickup (JEE_00052) and made it used (made $1000)
+Mechanics_002 fixed a used motorcycle (DUC_00053) and made it like new (made $1000)
+Mechanics_005 fixed a used car (TOY_00048) and made it used (made $0)
+Mechanics_005 fixed a used car (TOY_00048) and made it like new (made $1000)
+Mechanics_014 fixed a used pickup (JEE_00052) and made it like new (made $1000)
+Salesperson_009 was not able to sell the vehicle MER_00051
+Salesperson_011 was not able to sell the vehicle JEE_00052
+Salesperson_009 was not able to sell the vehicle JEE_00052
+Salesperson_009 sold a vehicle TOY_00041 for $46584
+Salesperson_009 was not able to sell the vehicle NIS_00049

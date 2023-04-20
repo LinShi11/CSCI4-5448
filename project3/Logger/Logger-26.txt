@@ -1,0 +1,35 @@
+Mechanics_014 fixed a broken pickup (FOR_00056) and made it broken (made $0)
+Mechanics_014 fixed a broken motorcycle (BMW_00058) and made it used (made $1000)
+Mechanics_015 fixed a used motorcycle (BMW_00058) and made it used (made $0)
+Mechanics_015 fixed a broken pickup (FOR_00056) and made it broken (made $0)
+Mechanics_019 fixed a used motorcycle (BMW_00058) and made it used (made $0)
+Mechanics_019 fixed a used motorcycle (BMW_00058) and made it like new (made $1000)
+Salesperson_017 was not able to sell the vehicle HON_00047
+Salesperson_017 was not able to sell the vehicle RIV_00053
+Salesperson_018 was not able to sell the vehicle RIV_00053
+Salesperson_017 was not able to sell the vehicle El Toro Loco_00057
+Mechanics_006 fixed a used motorcycle (KTM_00058) and made it like new (made $1000)
+Mechanics_006 fixed a like new motorcycle (KTM_00058) and made it used (made $1000)
+Mechanics_010 fixed a used car (NIS_00057) and made it like new (made $1000)
+Mechanics_010 fixed a used motorcycle (KTM_00058) and made it like new (made $1000)
+Salesperson_003 was not able to sell the vehicle KTM_00058
+Salesperson_007 sold a vehicle FOR_00049 for $137882
+Salesperson_007 was not able to sell the vehicle CHE_00050
+Salesperson_011 sold a vehicle CHE_00050 for $51671
+Salesperson_007 sold a vehicle VOL_00030 for $53898
+Salesperson_011 was not able to sell the vehicle KTM_00058
+Salesperson_003 sold a vehicle VOL_00014 for $37680
+Salesperson_007 was not able to sell the vehicle Blue Thunder_00052
+Mechanics_002 fixed a broken performance car (ACU_00057) and made it used (made $2000)
+Mechanics_002 fixed a used performance car (ACU_00057) and made it used (made $0)
+Mechanics_005 fixed a used electric car (ZOO_00059) and made it like new (made $1000)
+Mechanics_005 fixed a used performance car (ACU_00057) and made it like new (made $2000)
+Mechanics_014 fixed a used monster truck (Predator_00034) and made it like new (made $1000)
+Mechanics_014 fixed a like new monster truck (Predator_00034) and made it used (made $1000)
+Salesperson_007 was not able to sell the vehicle Predator_00034
+Salesperson_007 was not able to sell the vehicle ACU_00057
+Salesperson_011 sold a vehicle ACU_00057 for $75215
+Salesperson_011 was not able to sell the vehicle Predator_00034
+Salesperson_009 sold a vehicle YAM_00039 for $29530
+Salesperson_011 sold a vehicle Predator_00034 for $87560
+Salesperson_011 sold a vehicle DUC_00053 for $22685

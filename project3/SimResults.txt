@@ -1,0 +1,1307 @@
+******FNCD Day 1******
+Opening... (Current budget $500000)
+Purchased a like new, dirty Car Aston Martin, (AST_00001) for $32820
+Purchased a like new, clean Car Acura, (ACU_00002) for $32502
+Purchased a broken, dirty Car Aston Martin, (AST_00003) for $19588
+Purchased a used, dirty Car Acura, (ACU_00004) for $16265
+Purchased a broken, dirty Car Honda, (HON_00005) for $9655
+Purchased a used, dirty Car Subaru, (SUB_00006) for $14219
+Purchased a like new, sparkling Car Nissan, (NIS_00007) for $16534
+Purchased a used, clean Car Toyota, (TOY_00008) for $15709
+Purchased a used, clean Car Ram, (RAM_00009) for $8611
+Purchased a broken, clean Car Jeep, (JEE_00010) for $15652
+Purchased a like new, clean Car Ford, (FOR_00011) for $14609
+Purchased a like new, dirty Car Jeep, (JEE_00012) for $10038
+Purchased a broken, clean Car NIO, (NIO_00013) for $8892
+Purchased a like new, clean Car Lucid Motors, (LUC_00014) for $12337
+Purchased a used, dirty Car Volvo, (VOL_00015) for $11634
+Purchased a broken, dirty Car Rivian, (RIV_00016) for $7688
+Purchased a like new, sparkling Car Son-uva Digger, (Avenger_00017) for $19679
+Purchased a like new, dirty Car Son-uva Digger, (The Destroyer_00018) for $14513
+Purchased a broken, dirty Car Mon. Jam Steel Titans 2, (Shell Camino_00019) for $7866
+Purchased a broken, clean Car Mon. Jam Steel Titans 2, (Zombie_00020) for $5582
+Purchased a broken, clean Car Suzuki, (SUZ_00021) for $5699
+Purchased a broken, clean Car Lucid Motors, (LUC_00022) for $8555
+Purchased a like new, dirty Car Honda, (HON_00023) for $14438
+Purchased a used, clean Car Yamaha, (YAM_00024) for $9947
+
+Washing...
+Intern_001 washed a dirty performance car (AST_00003) and made it clean
+Intern_001 washed a dirty car (HON_00005) and made it clean
+Intern_005 washed a dirty monster truck (The Destroyer_00018) and made it dirty
+Intern_005 washed a dirty pickup (JEE_00012) and made it sparkling
+Intern_009 washed a dirty electric car (VOL_00015) and made it clean
+Intern_009 washed a dirty motorcycle (HON_00023) and made it clean
+
+Repairing...
+Mechanics_002 fixed a broken electric car (NIO_00013) and made it used (made $1000)
+Mechanics_002 fixed a used motorcycle (YAM_00024) and made it like new (made $1000)
+Mechanics_006 fixed a broken monster truck (Zombie_00020) and made it used (made $1000)
+Mechanics_006 fixed a broken monster truck (Shell Camino_00019) and made it used (made $1000)
+Mechanics_010 fixed a used monster truck (Zombie_00020) and made it like new (made $1000)
+Mechanics_010 fixed a used pickup (RAM_00009) and made it like new (made $1000)
+
+We have 0 Buyers today
+Selling...
+
+Closing...
+We made $0 today
+
+Quitting
+Tracker: Day 1
+Total money earned by all Staff: $7530
+Total money earned by FNCD: $0
+End of the day
+******FNCD Day 2******
+Opening... (Current budget $166968)
+
+Washing...
+Intern_001 washed a dirty monster truck (Zombie_00020) and made it sparkling
+Intern_001 washed a dirty monster truck (The Destroyer_00018) and made it clean
+Intern_005 washed a dirty motorcycle (YAM_00024) and made it sparkling
+Intern_005 washed a dirty electric car (NIO_00013) and made it dirty
+Intern_009 washed a dirty pickup (RAM_00009) and made it sparkling
+Intern_009 washed a dirty electric car (RIV_00016) and made it clean
+
+Repairing...
+Mechanics_002 fixed a used car (SUB_00006) and made it like new (made $1000)
+Mechanics_002 fixed a used electric car (VOL_00015) and made it like new (made $1000)
+Mechanics_006 fixed a broken electric car (RIV_00016) and made it used (made $1000)
+Mechanics_006 fixed a broken motorcycle (SUZ_00021) and made it used (made $1000)
+Mechanics_010 fixed a used monster truck (Shell Camino_00019) and made it used (made $0)
+Mechanics_010 fixed a used motorcycle (SUZ_00021) and made it like new (made $1000)
+
+We have 2 Buyers today
+Selling...
+The original price of the car is: $35547
+The buyer has selected the following plan:
+Undercoating, . Making the current sale price 105.0% of the original price. Therefore the current sale price is $37324
+Buyer needs one car Salesperson_003 suggested a dirty, like new car(SUB_00006). The buying probability was 70. And the transaction was unsuccessful for $37324
+The original price of the car is: $28876
+The buyer has selected the following plan:
+Road Rescue Coverage, Satellite Radio. Making the current sale price 107.0% of the original price. Therefore the current sale price is $30897
+Buyer just looking motorcycle Salesperson_007 suggested a clean, like new motorcycle(HON_00023). The buying probability was 20. And the transaction was unsuccessful for $33987
+
+Closing...
+We made $0 today
+
+Quitting
+Salesperson Salesperson_011 has quit after working for 2 days
+Intern Intern_001 has stepped up and took the salesperson job
+Tracker: Day 2
+Total money earned by all Staff: $14060
+Total money earned by FNCD: $0
+End of the day
+******FNCD Day 3******
+Opening... (Current budget $166968)
+Hired intern Intern_013
+
+Washing...
+Intern_005 washed a dirty electric car (NIO_00013) and made it clean
+Intern_005 washed a dirty monster truck (Shell Camino_00019) and made it clean
+Intern_009 washed a dirty electric car (VOL_00015) and made it clean
+Intern_009 washed a dirty performance car (AST_00001) and made it clean
+Intern_013 washed a dirty car (SUB_00006) and made it clean
+Intern_013 washed a dirty performance car (ACU_00004) and made it clean
+
+Repairing...
+Mechanics_002 fixed a broken pickup (JEE_00010) and made it used (made $1000)
+Mechanics_002 fixed a broken motorcycle (LUC_00022) and made it used (made $1000)
+Mechanics_006 fixed a used electric car (NIO_00013) and made it like new (made $1000)
+Mechanics_006 fixed a used electric car (RIV_00016) and made it like new (made $1000)
+Mechanics_010 fixed a used monster truck (Shell Camino_00019) and made it like new (made $1000)
+Mechanics_010 fixed a broken performance car (AST_00003) and made it used (made $2000)
+
+We have 4 Buyers today
+Selling...
+The original price of the car is: $33345
+The buyer has selected the following plan:
+. Making the current sale price 100.0% of the original price. Therefore the current sale price is $33345
+Buyer wants one electric car Salesperson_001 suggested a dirty, like new electric car(NIO_00013). The buying probability was 40. And the transaction was successful for $33345 (making $800)
+The original price of the car is: $65640
+The buyer has selected the following plan:
+Satellite Radio. Making the current sale price 105.0% of the original price. Therefore the current sale price is $68922
+Buyer just looking performance car Salesperson_007 suggested a clean, like new performance car(AST_00001). The buying probability was 20. And the transaction was unsuccessful for $75814
+The original price of the car is: $46956
+The buyer has selected the following plan:
+Undercoating, . Making the current sale price 105.0% of the original price. Therefore the current sale price is $49303
+Buyer just looking pickup Salesperson_007 suggested a dirty, used pickup(JEE_00010). The buying probability was 10. And the transaction was unsuccessful for $54234
+The original price of the car is: $28876
+The buyer has selected the following plan:
+Extended Warranty, Satellite Radio. Making the current sale price 125.0% of the original price. Therefore the current sale price is $36095
+Buyer wants one motorcycle Salesperson_003 suggested a clean, like new motorcycle(HON_00023). The buying probability was 50. And the transaction was successful for $39704 (making $800)
+
+Closing...
+We made $62221 today
+
+Quitting
+Tracker: Day 3
+Total money earned by all Staff: $24190
+Total money earned by FNCD: $73049
+End of the day
+******FNCD Day 3: Race day!!!!!!!******
+Racing......
+FNCD is racing with motorcycle
+FNCD have 3 vehicles in the race.
+One of the vehicle got 17 place
+One of the vehicle got 4 place
+One of the vehicle got 19 place
+******FNCD Day 4******
+Opening... (Current budget $229189)
+Purchased a broken, dirty Car Lucid Motors, (LUC_00025) for $9440
+Purchased a used, dirty Car BMW, (BMW_00026) for $11584
+
+Washing...
+Intern_005 washed a dirty motorcycle (BMW_00026) and made it clean
+Intern_005 washed a dirty electric car (RIV_00016) and made it sparkling
+Intern_009 washed a dirty pickup (JEE_00010) and made it clean
+Intern_009 washed a dirty performance car (AST_00003) and made it clean
+Intern_013 washed a dirty monster truck (Shell Camino_00019) and made it dirty
+Intern_013 washed a dirty motorcycle (LUC_00022) and made it dirty
+
+Repairing...
+Mechanics_002 fixed a broken motorcycle (YAM_00024) and made it used (made $1000)
+Mechanics_002 fixed a broken pickup (JEE_00010) and made it used (made $1000)
+Mechanics_006 fixed a used motorcycle (BMW_00026) and made it like new (made $1000)
+Mechanics_006 fixed a broken electric car (LUC_00025) and made it used (made $1000)
+Mechanics_010 fixed a used motorcycle (LUC_00022) and made it like new (made $1000)
+Mechanics_010 fixed a used pickup (JEE_00010) and made it like new (made $1000)
+
+We have 1 Buyers today
+Selling...
+The original price of the car is: $39358
+The buyer has selected the following plan:
+Extended Warranty, Satellite Radio. Making the current sale price 125.0% of the original price. Therefore the current sale price is $49197
+Buyer needs one monster truck Salesperson_003 suggested a sparkling, like new monster truck(Avenger_00017). The buying probability was 90. And the transaction was successful for $54117 (making $800)
+
+Closing...
+We made $39358 today
+
+Quitting
+Tracker: Day 4
+Total money earned by all Staff: $32520
+Total money earned by FNCD: $127166
+End of the day
+******FNCD Day 5******
+Opening... (Current budget $247523)
+Purchased a like new, dirty Car Mon. Jam Steel Titans 2, (Bear Foot (F-150)_00027) for $13274
+
+Washing...
+Intern_005 washed a dirty motorcycle (LUC_00022) and made it sparkling
+Intern_005 washed a dirty pickup (JEE_00010) and made it clean
+Intern_009 washed a dirty motorcycle (SUZ_00021) and made it clean
+Intern_009 washed a dirty monster truck (Shell Camino_00019) and made it clean
+Intern_013 washed a dirty electric car (LUC_00025) and made it clean
+Intern_013 washed a dirty motorcycle (BMW_00026) and made it clean
+
+Repairing...
+Mechanics_002 fixed a used performance car (AST_00003) and made it like new (made $2000)
+Mechanics_002 fixed a used electric car (LUC_00025) and made it like new (made $1000)
+Mechanics_006 fixed a used motorcycle (YAM_00024) and made it like new (made $1000)
+Mechanics_006 fixed a broken motorcycle (SUZ_00021) and made it used (made $1000)
+Mechanics_010 fixed a used motorcycle (SUZ_00021) and made it like new (made $1000)
+Mechanics_010 fixed a used car (TOY_00008) and made it like new (made $1000)
+it is the weekend (Friday/Saturday)
+
+We have 2 Buyers today
+Selling...
+The original price of the car is: $39272
+The buyer has selected the following plan:
+Satellite Radio. Making the current sale price 105.0% of the original price. Therefore the current sale price is $41235
+Buyer needs one car Salesperson_001 suggested a dirty, like new car(TOY_00008). The buying probability was 70. And the transaction was successful for $41235 (making $800)
+The original price of the car is: $35547
+The buyer has selected the following plan:
+Satellite Radio. Making the current sale price 105.0% of the original price. Therefore the current sale price is $37324
+Buyer wants one car Salesperson_003 suggested a clean, like new car(SUB_00006). The buying probability was 50. And the transaction was unsuccessful for $37324
+
+Closing...
+We made $39272 today
+
+Quitting
+Salesperson Salesperson_003 has quit after working for 5 days
+Intern Intern_005 has stepped up and took the salesperson job
+Tracker: Day 5
+Total money earned by all Staff: $41850
+Total money earned by FNCD: $168401
+End of the day
+******FNCD Day 6******
+Opening... (Current budget $273521)
+Hired intern Intern_014
+Purchased a broken, dirty Car Nissan, (NIS_00028) for $9852
+
+Washing...
+Intern_009 washed a dirty performance car (AST_00003) and made it clean
+Intern_009 washed a dirty car (NIS_00028) and made it clean
+Intern_013 washed a dirty monster truck (Bear Foot (F-150)_00027) and made it clean
+Intern_013 washed a dirty motorcycle (YAM_00024) and made it clean
+Intern_014 washed a dirty motorcycle (SUZ_00021) and made it clean
+Intern_014 washed a dirty electric car (LUC_00025) and made it clean
+
+Repairing...
+Mechanics_002 fixed a broken car (HON_00005) and made it used (made $1000)
+Mechanics_002 fixed a broken car (NIS_00028) and made it used (made $1000)
+Mechanics_006 fixed a used car (HON_00005) and made it like new (made $1000)
+Mechanics_006 fixed a used car (NIS_00028) and made it like new (made $1000)
+it is the weekend (Friday/Saturday)
+
+We have 5 Buyers today
+Selling...
+The original price of the car is: $29497
+The buyer has selected the following plan:
+Extended Warranty, . Making the current sale price 120.0% of the original price. Therefore the current sale price is $35396
+Buyer just looking monster truck Salesperson_007 suggested a clean, like new monster truck(Shell Camino_00019). The buying probability was 20. And the transaction was unsuccessful for $38936
+The original price of the car is: $46625
+The buyer has selected the following plan:
+Road Rescue Coverage, Satellite Radio. Making the current sale price 107.0% of the original price. Therefore the current sale price is $49888
+Buyer needs one motorcycle Salesperson_007 suggested a clean, like new motorcycle(YAM_00024). The buying probability was 80. And the transaction was successful for $54877 (making $800)
+The original price of the car is: $73455
+The buyer has selected the following plan:
+Satellite Radio. Making the current sale price 105.0% of the original price. Therefore the current sale price is $77127
+Buyer just looking performance car Salesperson_001 suggested a clean, like new performance car(AST_00003). The buying probability was 20. And the transaction was unsuccessful for $84840
+The original price of the car is: $35400
+The buyer has selected the following plan:
+. Making the current sale price 100.0% of the original price. Therefore the current sale price is $35400
+Buyer needs one electric car Salesperson_005 suggested a clean, like new electric car(LUC_00025). The buying probability was 80. And the transaction was successful for $35400 (making $800)
+The original price of the car is: $88042
+The buyer has selected the following plan:
+Satellite Radio. Making the current sale price 105.0% of the original price. Therefore the current sale price is $92444
+Buyer needs one pickup Salesperson_001 suggested a clean, like new pickup(JEE_00010). The buying probability was 80. And the transaction was unsuccessful for $101688
+
+Closing...
+We made $82025 today
+
+Quitting
+Salesperson Salesperson_001 has quit after working for 6 days
+Intern Intern_009 has stepped up and took the salesperson job
+Tracker: Day 6
+Total money earned by all Staff: $48980
+Total money earned by FNCD: $258678
+End of the day
+******FNCD Day 7: Race day!!!!!!!******
+Racing......
+FNCD is racing with performance car
+FNCD have 3 vehicles in the race.
+One of the vehicle got 8 place
+One of the vehicle got 5 place
+One of the vehicle got 13 place
+******FNCD Day 8******
+Opening... (Current budget $345694)
+Hired intern Intern_015
+Purchased a used, dirty Car NIO, (NIO_00029) for $15516
+Purchased a like new, dirty Car KTM, (KTM_00030) for $19119
+
+Washing...
+Intern_013 washed a dirty car (NIS_00028) and made it sparkling
+Intern_013 washed a dirty electric car (NIO_00029) and made it clean
+Intern_014 washed a dirty motorcycle (KTM_00030) and made it clean
+Intern_014 washed a dirty car (HON_00005) and made it clean
+Intern_015 washed a clean monster truck (The Destroyer_00018) and made it clean
+Intern_015 washed a clean motorcycle (KTM_00030) and made it dirty
+
+Repairing...
+Mechanics_002 fixed a used electric car (NIO_00029) and made it like new (made $1000)
+
+We have 5 Buyers today
+Selling...
+The original price of the car is: $29497
+The buyer has selected the following plan:
+Undercoating, . Making the current sale price 105.0% of the original price. Therefore the current sale price is $30971
+Buyer just looking monster truck Salesperson_005 suggested a clean, like new monster truck(Shell Camino_00019). The buying probability was 20. And the transaction was unsuccessful for $34069
+The original price of the car is: $73455
+The buyer has selected the following plan:
+Road Rescue Coverage, Satellite Radio. Making the current sale price 107.0% of the original price. Therefore the current sale price is $78596
+Buyer just looking performance car Salesperson_009 suggested a clean, like new performance car(AST_00003). The buying probability was 20. And the transaction was unsuccessful for $86456
+The original price of the car is: $88042
+The buyer has selected the following plan:
+Extended Warranty, Satellite Radio. Making the current sale price 125.0% of the original price. Therefore the current sale price is $110052
+800
+Buyer needs one pickup Salesperson_005 suggested a clean, like new pickup(JEE_00010). The buying probability was 80. And the transaction was successful for $121057 (making $800)
+800
+The original price of the car is: $40070
+The buyer has selected the following plan:
+Undercoating, . Making the current sale price 105.0% of the original price. Therefore the current sale price is $42073
+Buyer just looking motorcycle Salesperson_009 suggested a clean, like new motorcycle(SUZ_00021). The buying probability was 20. And the transaction was unsuccessful for $46280
+The original price of the car is: $36945
+The buyer has selected the following plan:
+Undercoating, Satellite Radio. Making the current sale price 110.00000000000001% of the original price. Therefore the current sale price is $40639
+Buyer needs one car Salesperson_005 suggested a sparkling, like new car(NIS_00028). The buying probability was 90. And the transaction was successful for $40639 (making $800)
+
+Closing...
+We made $124987 today
+
+Quitting
+Tracker: Day 8
+Total money earned by all Staff: $53110
+Total money earned by FNCD: $420374
+End of the day
+******FNCD Day 9******
+Opening... (Current budget $436046)
+Purchased a like new, clean Car Kia, (KIA_00031) for $18269
+Purchased a used, dirty Car Ford, (FOR_00032) for $31739
+
+Washing...
+Intern_013 washed a dirty motorcycle (KTM_00030) and made it clean
+Intern_013 washed a dirty pickup (FOR_00032) and made it clean
+Intern_014 washed a dirty electric car (NIO_00029) and made it clean
+Intern_014 washed a clean electric car (LUC_00014) and made it clean
+Intern_015 washed a clean performance car (AST_00003) and made it sparkling
+Intern_015 washed a clean motorcycle (KTM_00030) and made it dirty
+
+Repairing...
+Mechanics_002 fixed a used pickup (FOR_00032) and made it used (made $0)
+Mechanics_006 fixed a used pickup (FOR_00032) and made it like new (made $1000)
+
+We have 2 Buyers today
+Selling...
+The original price of the car is: $73455
+The buyer has selected the following plan:
+. Making the current sale price 100.0% of the original price. Therefore the current sale price is $73455
+Buyer needs one performance car Salesperson_007 suggested a sparkling, like new performance car(AST_00003). The buying probability was 90. And the transaction was successful for $80800 (making $1600)
+The original price of the car is: $29497
+The buyer has selected the following plan:
+Extended Warranty, . Making the current sale price 120.0% of the original price. Therefore the current sale price is $35396
+Buyer just looking monster truck Salesperson_007 suggested a clean, like new monster truck(Shell Camino_00019). The buying probability was 20. And the transaction was unsuccessful for $38936
+
+Closing...
+We made $73455 today
+
+Quitting
+Tracker: Day 9
+Total money earned by all Staff: $57240
+Total money earned by FNCD: $501174
+End of the day
+******FNCD Day 10******
+Opening... (Current budget $459493)
+Purchased a used, dirty Car BMW, (BMW_00033) for $21321
+
+Washing...
+Intern_013 washed a dirty performance car (BMW_00033) and made it dirty
+Intern_013 washed a dirty motorcycle (KTM_00030) and made it clean
+Intern_014 washed a dirty performance car (BMW_00033) and made it clean
+Intern_014 washed a dirty pickup (FOR_00032) and made it dirty
+Intern_015 washed a dirty pickup (FOR_00032) and made it clean
+Intern_015 washed a clean car (HON_00005) and made it clean
+
+Repairing...
+Mechanics_002 fixed a used performance car (BMW_00033) and made it like new (made $2000)
+
+We have 4 Buyers today
+Selling...
+The original price of the car is: $36538
+The buyer has selected the following plan:
+Satellite Radio. Making the current sale price 105.0% of the original price. Therefore the current sale price is $38364
+Buyer just looking car Salesperson_007 suggested a clean, like new car(KIA_00031). The buying probability was 20. And the transaction was unsuccessful for $38364
+The original price of the car is: $36538
+The buyer has selected the following plan:
+Satellite Radio. Making the current sale price 105.0% of the original price. Therefore the current sale price is $38364
+Buyer wants one car Salesperson_007 suggested a clean, like new car(KIA_00031). The buying probability was 50. And the transaction was unsuccessful for $38364
+The original price of the car is: $36538
+The buyer has selected the following plan:
+Extended Warranty, Undercoating, . Making the current sale price 125.0% of the original price. Therefore the current sale price is $45672
+Buyer just looking car Salesperson_007 suggested a clean, like new car(KIA_00031). The buying probability was 20. And the transaction was unsuccessful for $45672
+The original price of the car is: $29497
+The buyer has selected the following plan:
+Satellite Radio. Making the current sale price 105.0% of the original price. Therefore the current sale price is $30971
+Buyer wants one monster truck Salesperson_005 suggested a clean, like new monster truck(Shell Camino_00019). The buying probability was 50. And the transaction was unsuccessful for $34069
+
+Closing...
+We made $0 today
+
+Quitting
+Tracker: Day 10
+Total money earned by all Staff: $60770
+Total money earned by FNCD: $501174
+End of the day
+******FNCD Day 10: Race day!!!!!!!******
+Racing......
+FNCD is racing with performance car
+FNCD have 3 vehicles in the race.
+One of the vehicle got 9 place
+One of the vehicle got 1 place
+One of the vehicle got 4 place
+******FNCD Day 11******
+Opening... (Current budget $438172)
+
+Washing...
+Intern_013 washed a dirty performance car (BMW_00033) and made it clean
+Intern_013 washed a clean car (HON_00005) and made it clean
+Intern_014 washed a clean pickup (FOR_00032) and made it clean
+Intern_014 washed a clean performance car (ACU_00004) and made it clean
+Intern_015 washed a clean pickup (FOR_00011) and made it clean
+Intern_015 washed a clean electric car (LUC_00014) and made it clean
+
+Repairing...
+
+We have 0 Buyers today
+Selling...
+
+Closing...
+We made $0 today
+
+Quitting
+Tracker: Day 11
+Total money earned by all Staff: $62300
+Total money earned by FNCD: $501174
+End of the day
+******FNCD Day 12******
+Opening... (Current budget $438172)
+
+Washing...
+Intern_013 washed a clean electric car (VOL_00015) and made it clean
+Intern_013 washed a clean performance car (AST_00001) and made it clean
+Intern_014 washed a clean performance car (ACU_00002) and made it clean
+Intern_014 washed a clean performance car (BMW_00033) and made it sparkling
+Intern_015 washed a clean electric car (LUC_00014) and made it clean
+Intern_015 washed a clean performance car (ACU_00004) and made it clean
+
+Repairing...
+it is the weekend (Friday/Saturday)
+
+We have 3 Buyers today
+Selling...
+The original price of the car is: $65640
+The buyer has selected the following plan:
+Extended Warranty, . Making the current sale price 120.0% of the original price. Therefore the current sale price is $78768
+Buyer just looking performance car Salesperson_007 suggested a clean, like new performance car(AST_00001). The buying probability was 20. And the transaction was unsuccessful for $78768
+The original price of the car is: $29497
+The buyer has selected the following plan:
+Extended Warranty, . Making the current sale price 120.0% of the original price. Therefore the current sale price is $35396
+Buyer wants one monster truck Salesperson_009 suggested a clean, like new monster truck(Shell Camino_00019). The buying probability was 50. And the transaction was successful for $38936 (making $800)
+The original price of the car is: $40070
+The buyer has selected the following plan:
+. Making the current sale price 100.0% of the original price. Therefore the current sale price is $40070
+Buyer just looking motorcycle Salesperson_009 suggested a clean, like new motorcycle(SUZ_00021). The buying probability was 20. And the transaction was unsuccessful for $44077
+
+Closing...
+We made $29497 today
+
+Quitting
+Salesperson Salesperson_007 has quit after working for 11 days
+Intern Intern_013 has stepped up and took the salesperson job
+Tracker: Day 12
+Total money earned by all Staff: $64630
+Total money earned by FNCD: $540110
+End of the day
+******FNCD Day 13******
+Opening... (Current budget $467669)
+Hired intern Intern_016
+Purchased a used, dirty Car Son-uva Digger, (Shell Camino_00034) for $14015
+
+Washing...
+Intern_014 washed a dirty monster truck (Shell Camino_00034) and made it dirty
+Intern_014 washed a clean car (SUB_00006) and made it clean
+Intern_015 washed a dirty monster truck (Shell Camino_00034) and made it dirty
+Intern_015 washed a clean car (KIA_00031) and made it dirty
+Intern_016 washed a dirty car (KIA_00031) and made it clean
+Intern_016 washed a dirty monster truck (Shell Camino_00034) and made it clean
+
+Repairing...
+Mechanics_002 fixed a used monster truck (Shell Camino_00034) and made it like new (made $1000)
+it is the weekend (Friday/Saturday)
+
+We have 8 Buyers today
+Selling...
+The original price of the car is: $36538
+The buyer has selected the following plan:
+Satellite Radio. Making the current sale price 105.0% of the original price. Therefore the current sale price is $38364
+Buyer needs one car Salesperson_013 suggested a clean, like new car(KIA_00031). The buying probability was 80. And the transaction was successful for $38364 (making $800)
+The original price of the car is: $65640
+The buyer has selected the following plan:
+Extended Warranty, Undercoating, Satellite Radio. Making the current sale price 130.0% of the original price. Therefore the current sale price is $85332
+Buyer wants one performance car Salesperson_013 suggested a clean, like new performance car(AST_00001). The buying probability was 50. And the transaction was successful for $85332 (making $1600)
+The original price of the car is: $35037
+The buyer has selected the following plan:
+Satellite Radio. Making the current sale price 105.0% of the original price. Therefore the current sale price is $36788
+Buyer needs one monster truck Salesperson_013 suggested a dirty, like new monster truck(Shell Camino_00034). The buying probability was 70. And the transaction was unsuccessful for $40467
+The original price of the car is: $35037
+The buyer has selected the following plan:
+Satellite Radio. Making the current sale price 105.0% of the original price. Therefore the current sale price is $36788
+Buyer wants one monster truck Salesperson_013 suggested a dirty, like new monster truck(Shell Camino_00034). The buying probability was 40. And the transaction was successful for $40467 (making $800)
+The original price of the car is: $38790
+The buyer has selected the following plan:
+Satellite Radio. Making the current sale price 105.0% of the original price. Therefore the current sale price is $40729
+Buyer needs one electric car Salesperson_009 suggested a clean, like new electric car(NIO_00029). The buying probability was 80. And the transaction was successful for $40729 (making $800)
+The original price of the car is: $29085
+The buyer has selected the following plan:
+Road Rescue Coverage, . Making the current sale price 102.0% of the original price. Therefore the current sale price is $29666
+Buyer just looking electric car Salesperson_009 suggested a clean, like new electric car(VOL_00015). The buying probability was 20. And the transaction was unsuccessful for $29666
+The original price of the car is: $40070
+The buyer has selected the following plan:
+. Making the current sale price 100.0% of the original price. Therefore the current sale price is $40070
+Buyer needs one motorcycle Salesperson_009 suggested a clean, like new motorcycle(SUZ_00021). The buying probability was 80. And the transaction was successful for $44077 (making $800)
+The original price of the car is: $79347
+The buyer has selected the following plan:
+Extended Warranty, . Making the current sale price 120.0% of the original price. Therefore the current sale price is $95216
+800
+Buyer wants one pickup Salesperson_013 suggested a clean, like new pickup(FOR_00032). The buying probability was 50. And the transaction was successful for $104738 (making $800)
+800
+
+Closing...
+We made $295422 today
+
+Quitting
+Mechanics Mechanics_006 has quit after working for 12 days
+Intern Intern_014 has stepped up and took the mechanics job
+Tracker: Day 13
+Total money earned by all Staff: $72760
+Total money earned by FNCD: $893817
+End of the day
+******FNCD Day 14: Race day!!!!!!!******
+Racing......
+FNCD is racing with performance car
+FNCD have 3 vehicles in the race.
+One of the vehicle got 1 place
+One of the vehicle got 19 place
+One of the vehicle got 17 place
+******FNCD Day 15******
+Opening... (Current budget $749076)
+Hired intern Intern_017
+Purchased a like new, sparkling Car Ferrari, (FER_00035) for $26805
+Purchased a like new, clean Car Mazda, (MAZ_00036) for $11147
+Purchased a used, dirty Car Jeep, (JEE_00037) for $28012
+Purchased a used, dirty Car Aptiv, (APT_00038) for $12192
+Purchased a broken, dirty Car Son-uva Digger, (Backwards Bob_00039) for $8214
+Purchased a used, clean Car Honda, (HON_00040) for $11483
+
+Washing...
+Intern_015 washed a dirty monster truck (Backwards Bob_00039) and made it clean
+Intern_015 washed a dirty electric car (APT_00038) and made it clean
+Intern_016 washed a dirty pickup (JEE_00037) and made it sparkling
+Intern_016 washed a clean performance car (ACU_00004) and made it clean
+Intern_017 washed a clean performance car (ACU_00002) and made it clean
+Intern_017 washed a clean motorcycle (KTM_00030) and made it clean
+
+Repairing...
+Mechanics_002 fixed a used motorcycle (HON_00040) and made it used (made $0)
+Mechanics_002 fixed a used electric car (APT_00038) and made it like new (made $1000)
+Mechanics_010 fixed a used pickup (JEE_00037) and made it like new (made $1000)
+Mechanics_010 fixed a broken performance car (ACU_00004) and made it used (made $2000)
+Mechanics_014 fixed a used motorcycle (HON_00040) and made it like new (made $1000)
+Mechanics_014 fixed a broken monster truck (Backwards Bob_00039) and made it broken (made $0)
+
+We have 4 Buyers today
+Selling...
+The original price of the car is: $30480
+The buyer has selected the following plan:
+. Making the current sale price 100.0% of the original price. Therefore the current sale price is $30480
+Buyer needs one electric car Salesperson_009 suggested a dirty, like new electric car(APT_00038). The buying probability was 70. And the transaction was unsuccessful for $30480
+The original price of the car is: $38238
+The buyer has selected the following plan:
+Extended Warranty, . Making the current sale price 120.0% of the original price. Therefore the current sale price is $45885
+Buyer needs one motorcycle Salesperson_005 suggested a clean, like new motorcycle(KTM_00030). The buying probability was 80. And the transaction was successful for $50474 (making $800)
+The original price of the car is: $29026
+The buyer has selected the following plan:
+Extended Warranty, . Making the current sale price 120.0% of the original price. Therefore the current sale price is $34831
+Buyer wants one monster truck Salesperson_009 suggested a clean, like new monster truck(The Destroyer_00018). The buying probability was 50. And the transaction was successful for $38314 (making $800)
+The original price of the car is: $32081
+The buyer has selected the following plan:
+Extended Warranty, . Making the current sale price 120.0% of the original price. Therefore the current sale price is $38497
+Buyer just looking motorcycle Salesperson_005 suggested a sparkling, like new motorcycle(LUC_00022). The buying probability was 30. And the transaction was unsuccessful for $42346
+
+Closing...
+We made $67264 today
+
+Quitting
+Tracker: Day 15
+Total money earned by all Staff: $80890
+Total money earned by FNCD: $982605
+End of the day
+******FNCD Day 16******
+Opening... (Current budget $718487)
+Purchased a used, dirty Car Mon. Jam Steel Titans 2, (Maximum Destruction (Max-D)_00041) for $15443
+Purchased a used, dirty Car Kawasaki, (KAW_00042) for $8135
+
+Washing...
+Intern_015 washed a dirty monster truck (Maximum Destruction (Max-D)_00041) and made it clean
+Intern_015 washed a dirty motorcycle (HON_00040) and made it clean
+Intern_016 washed a dirty performance car (ACU_00004) and made it sparkling
+Intern_016 washed a dirty motorcycle (KAW_00042) and made it clean
+Intern_017 washed a dirty monster truck (Backwards Bob_00039) and made it clean
+Intern_017 washed a dirty electric car (APT_00038) and made it clean
+
+Repairing...
+Mechanics_002 fixed a used monster truck (Maximum Destruction (Max-D)_00041) and made it like new (made $1000)
+Mechanics_002 fixed a broken monster truck (Backwards Bob_00039) and made it broken (made $0)
+Mechanics_010 fixed a used motorcycle (KAW_00042) and made it like new (made $1000)
+Mechanics_010 fixed a used performance car (ACU_00004) and made it like new (made $2000)
+Mechanics_014 fixed a broken monster truck (Backwards Bob_00039) and made it used (made $1000)
+
+We have 0 Buyers today
+Selling...
+
+Closing...
+We made $0 today
+
+Quitting
+Intern Intern_016 has quit after working for 3 days
+Tracker: Day 16
+Total money earned by all Staff: $87420
+Total money earned by FNCD: $982605
+End of the day
+******FNCD Day 17******
+Opening... (Current budget $694909)
+Hired intern Intern_018
+
+Washing...
+Intern_015 washed a dirty monster truck (Maximum Destruction (Max-D)_00041) and made it clean
+Intern_015 washed a dirty motorcycle (KAW_00042) and made it clean
+Intern_017 washed a dirty monster truck (Backwards Bob_00039) and made it dirty
+Intern_017 washed a clean performance car (ACU_00002) and made it clean
+Intern_018 washed a dirty monster truck (Backwards Bob_00039) and made it clean
+Intern_018 washed a clean monster truck (Maximum Destruction (Max-D)_00041) and made it sparkling
+
+Repairing...
+Mechanics_002 fixed a used monster truck (Backwards Bob_00039) and made it like new (made $1000)
+
+We have 5 Buyers today
+Selling...
+The original price of the car is: $38607
+The buyer has selected the following plan:
+Satellite Radio. Making the current sale price 105.0% of the original price. Therefore the current sale price is $40537
+Buyer needs one monster truck Salesperson_009 suggested a sparkling, like new monster truck(Maximum Destruction (Max-D)_00041). The buying probability was 90. And the transaction was successful for $44591 (making $800)
+The original price of the car is: $36206
+The buyer has selected the following plan:
+. Making the current sale price 100.0% of the original price. Therefore the current sale price is $36206
+Buyer just looking car Salesperson_013 suggested a clean, like new car(HON_00005). The buying probability was 20. And the transaction was unsuccessful for $36206
+The original price of the car is: $30802
+The buyer has selected the following plan:
+. Making the current sale price 100.0% of the original price. Therefore the current sale price is $30802
+Buyer just looking monster truck Salesperson_013 suggested a dirty, like new monster truck(Backwards Bob_00039). The buying probability was 10. And the transaction was unsuccessful for $33882
+The original price of the car is: $65004
+The buyer has selected the following plan:
+. Making the current sale price 100.0% of the original price. Therefore the current sale price is $65004
+Buyer just looking performance car Salesperson_005 suggested a clean, like new performance car(ACU_00002). The buying probability was 20. And the transaction was successful for $65004 (making $1600)
+The original price of the car is: $32081
+The buyer has selected the following plan:
+. Making the current sale price 100.0% of the original price. Therefore the current sale price is $32081
+Buyer wants one motorcycle Salesperson_005 suggested a sparkling, like new motorcycle(LUC_00022). The buying probability was 60. And the transaction was successful for $35289 (making $800)
+
+Closing...
+We made $135692 today
+
+Quitting
+Tracker: Day 17
+Total money earned by all Staff: $93150
+Total money earned by FNCD: $1127489
+End of the day
+******FNCD Day 17: Race day!!!!!!!******
+Racing......
+FNCD is racing with monster truck
+FNCD have 3 vehicles in the race.
+One of the vehicle got 1 place
+One of the vehicle got 8 place
+One of the vehicle got 9 place
+******FNCD Day 18******
+Opening... (Current budget $830601)
+Purchased a broken, clean Car McLaren, (MCL_00043) for $12282
+Purchased a like new, dirty Car Mon. Jam Steel Titans 2, (USA-1_00044) for $14987
+Purchased a broken, dirty Car BMW, (BMW_00045) for $9642
+
+Washing...
+Intern_015 washed a dirty monster truck (USA-1_00044) and made it clean
+Intern_015 washed a dirty motorcycle (BMW_00045) and made it clean
+Intern_017 washed a dirty monster truck (Backwards Bob_00039) and made it dirty
+Intern_017 washed a clean performance car (MCL_00043) and made it clean
+Intern_018 washed a dirty monster truck (Backwards Bob_00039) and made it clean
+Intern_018 washed a clean motorcycle (KAW_00042) and made it sparkling
+
+Repairing...
+Mechanics_002 fixed a broken performance car (MCL_00043) and made it used (made $2000)
+Mechanics_002 fixed a used performance car (MCL_00043) and made it used (made $0)
+Mechanics_010 fixed a broken motorcycle (BMW_00045) and made it used (made $1000)
+Mechanics_010 fixed a used performance car (MCL_00043) and made it like new (made $2000)
+Mechanics_014 fixed a used motorcycle (BMW_00045) and made it like new (made $1000)
+
+We have 0 Buyers today
+Selling...
+
+Closing...
+We made $0 today
+
+Quitting
+Mechanics Mechanics_010 has quit after working for 16 days
+Intern Intern_015 has stepped up and took the mechanics job
+Tracker: Day 18
+Total money earned by all Staff: $100680
+Total money earned by FNCD: $1127489
+End of the day
+******FNCD Day 19******
+Opening... (Current budget $793690)
+Hired intern Intern_019
+
+Washing...
+Intern_017 washed a dirty motorcycle (BMW_00045) and made it clean
+Intern_017 washed a dirty performance car (MCL_00043) and made it clean
+Intern_018 washed a clean monster truck (USA-1_00044) and made it sparkling
+Intern_018 washed a clean performance car (ACU_00004) and made it clean
+Intern_019 washed a clean electric car (APT_00038) and made it sparkling
+Intern_019 washed a clean monster truck (Backwards Bob_00039) and made it sparkling
+
+Repairing...
+it is the weekend (Friday/Saturday)
+
+We have 4 Buyers today
+Selling...
+The original price of the car is: $36206
+The buyer has selected the following plan:
+Satellite Radio. Making the current sale price 105.0% of the original price. Therefore the current sale price is $38016
+Buyer just looking car Salesperson_013 suggested a clean, like new car(HON_00005). The buying probability was 20. And the transaction was unsuccessful for $38016
+The original price of the car is: $36157
+The buyer has selected the following plan:
+Extended Warranty, . Making the current sale price 120.0% of the original price. Therefore the current sale price is $43388
+Buyer just looking motorcycle Salesperson_005 suggested a clean, like new motorcycle(BMW_00045). The buying probability was 20. And the transaction was unsuccessful for $47727
+The original price of the car is: $70030
+The buyer has selected the following plan:
+. Making the current sale price 100.0% of the original price. Therefore the current sale price is $70030
+800
+Buyer needs one pickup Salesperson_013 suggested a clean, like new pickup(JEE_00037). The buying probability was 80. And the transaction was successful for $77033 (making $800)
+800
+The original price of the car is: $29218
+The buyer has selected the following plan:
+Extended Warranty, . Making the current sale price 120.0% of the original price. Therefore the current sale price is $35061
+Buyer wants one pickup Salesperson_013 suggested a clean, like new pickup(FOR_00011). The buying probability was 50. And the transaction was unsuccessful for $38567
+
+Closing...
+We made $70030 today
+
+Quitting
+Tracker: Day 19
+Total money earned by all Staff: $103010
+Total money earned by FNCD: $1204522
+End of the day
+******FNCD Day 20******
+Opening... (Current budget $863720)
+Purchased a broken, clean Car Ram, (RAM_00046) for $18039
+
+Washing...
+Intern_017 washed a clean electric car (VOL_00015) and made it dirty
+Intern_017 washed a clean electric car (LUC_00014) and made it clean
+Intern_018 washed a dirty electric car (VOL_00015) and made it clean
+Intern_018 washed a clean car (MAZ_00036) and made it clean
+Intern_019 washed a clean pickup (FOR_00011) and made it sparkling
+Intern_019 washed a clean motorcycle (BMW_00045) and made it sparkling
+
+Repairing...
+Mechanics_002 fixed a broken pickup (RAM_00046) and made it used (made $1000)
+Mechanics_002 fixed a broken car (MAZ_00036) and made it used (made $1000)
+Mechanics_014 fixed a used car (MAZ_00036) and made it like new (made $1000)
+Mechanics_014 fixed a used pickup (RAM_00046) and made it used (made $0)
+Mechanics_015 fixed a used pickup (RAM_00046) and made it like new (made $1000)
+it is the weekend (Friday/Saturday)
+
+We have 5 Buyers today
+Selling...
+The original price of the car is: $30802
+The buyer has selected the following plan:
+Extended Warranty, . Making the current sale price 120.0% of the original price. Therefore the current sale price is $36962
+Buyer just looking monster truck Salesperson_005 suggested a sparkling, like new monster truck(Backwards Bob_00039). The buying probability was 30. And the transaction was unsuccessful for $36962
+The original price of the car is: $41801
+The buyer has selected the following plan:
+Road Rescue Coverage, . Making the current sale price 102.0% of the original price. Therefore the current sale price is $42637
+Buyer just looking car Salesperson_005 suggested a dirty, like new car(MAZ_00036). The buying probability was 10. And the transaction was successful for $42637 (making $800)
+The original price of the car is: $36206
+The buyer has selected the following plan:
+. Making the current sale price 100.0% of the original price. Therefore the current sale price is $36206
+Buyer just looking car Salesperson_009 suggested a clean, like new car(HON_00005). The buying probability was 20. And the transaction was unsuccessful for $36206
+The original price of the car is: $67646
+The buyer has selected the following plan:
+. Making the current sale price 100.0% of the original price. Therefore the current sale price is $67646
+Buyer just looking pickup Salesperson_009 suggested a dirty, like new pickup(RAM_00046). The buying probability was 10. And the transaction was unsuccessful for $74410
+The original price of the car is: $30480
+The buyer has selected the following plan:
+Satellite Radio. Making the current sale price 105.0% of the original price. Therefore the current sale price is $32004
+Buyer just looking electric car Salesperson_013 suggested a sparkling, like new electric car(APT_00038). The buying probability was 30. And the transaction was unsuccessful for $32004
+
+Closing...
+We made $41801 today
+
+Quitting
+Tracker: Day 20
+Total money earned by all Staff: $109340
+Total money earned by FNCD: $1247159
+End of the day
+******FNCD Day 21: Race day!!!!!!!******
+Racing......
+FNCD is racing with pickup
+FNCD have 3 vehicles in the race.
+One of the vehicle got 16 place
+One of the vehicle got 15 place
+One of the vehicle got 11 place
+******FNCD Day 22******
+Opening... (Current budget $887482)
+Purchased a used, dirty Car Honda, (HON_00047) for $10083
+
+Washing...
+Intern_017 washed a dirty pickup (RAM_00046) and made it clean
+Intern_017 washed a dirty car (HON_00047) and made it clean
+Intern_018 washed a clean performance car (MCL_00043) and made it clean
+Intern_018 washed a clean monster truck (Bear Foot (F-150)_00027) and made it sparkling
+Intern_019 washed a clean pickup (RAM_00046) and made it clean
+Intern_019 washed a clean electric car (LUC_00014) and made it sparkling
+
+Repairing...
+Mechanics_002 fixed a used car (HON_00047) and made it like new (made $1000)
+
+We have 5 Buyers today
+Selling...
+The original price of the car is: $60993
+The buyer has selected the following plan:
+Satellite Radio. Making the current sale price 105.0% of the original price. Therefore the current sale price is $64042
+Buyer just looking performance car Salesperson_009 suggested a clean, like new performance car(ACU_00004). The buying probability was 20. And the transaction was unsuccessful for $64042
+The original price of the car is: $30480
+The buyer has selected the following plan:
+Satellite Radio. Making the current sale price 105.0% of the original price. Therefore the current sale price is $32004
+Buyer wants one electric car Salesperson_005 suggested a sparkling, like new electric car(APT_00038). The buying probability was 60. And the transaction was successful for $32004 (making $800)
+The original price of the car is: $30802
+The buyer has selected the following plan:
+. Making the current sale price 100.0% of the original price. Therefore the current sale price is $30802
+Buyer wants one monster truck Salesperson_005 suggested a sparkling, like new monster truck(Backwards Bob_00039). The buying probability was 60. And the transaction was successful for $30802 (making $800)
+The original price of the car is: $29974
+The buyer has selected the following plan:
+Extended Warranty, Satellite Radio. Making the current sale price 125.0% of the original price. Therefore the current sale price is $37467
+Buyer wants one monster truck Salesperson_013 suggested a sparkling, like new monster truck(USA-1_00044). The buying probability was 60. And the transaction was successful for $37467 (making $800)
+The original price of the car is: $29085
+The buyer has selected the following plan:
+Undercoating, . Making the current sale price 105.0% of the original price. Therefore the current sale price is $30539
+Buyer just looking electric car Salesperson_013 suggested a clean, like new electric car(VOL_00015). The buying probability was 20. And the transaction was unsuccessful for $30539
+
+Closing...
+We made $91256 today
+
+Quitting
+Tracker: Day 22
+Total money earned by all Staff: $114270
+Total money earned by FNCD: $1347432
+End of the day
+******FNCD Day 23******
+Opening... (Current budget $968655)
+Purchased a broken, dirty Car Lucid Motors, (LUC_00048) for $8062
+Purchased a like new, clean Car Mon. Jam Steel Titans 2, (Avenger_00049) for $12540
+Purchased a like new, dirty Car Mon. Jam Steel Titans 2, (Avenger_00050) for $13542
+
+Washing...
+Intern_017 washed a dirty monster truck (Avenger_00050) and made it clean
+Intern_017 washed a dirty electric car (LUC_00048) and made it clean
+Intern_018 washed a dirty car (HON_00047) and made it clean
+Intern_018 washed a clean motorcycle (BMW_00026) and made it sparkling
+Intern_019 washed a clean car (SUB_00006) and made it clean
+Intern_019 washed a clean performance car (MCL_00043) and made it clean
+
+Repairing...
+Mechanics_002 fixed a broken car (HON_00047) and made it used (made $1000)
+Mechanics_002 fixed a broken motorcycle (BMW_00026) and made it used (made $1000)
+Mechanics_014 fixed a broken electric car (LUC_00048) and made it used (made $1000)
+Mechanics_014 fixed a used motorcycle (BMW_00026) and made it like new (made $1000)
+Mechanics_015 fixed a used car (HON_00047) and made it like new (made $1000)
+Mechanics_015 fixed a like new car (HON_00047) and made it like new (made $0)
+
+We have 3 Buyers today
+Selling...
+The original price of the car is: $47262
+The buyer has selected the following plan:
+Undercoating, Satellite Radio. Making the current sale price 110.00000000000001% of the original price. Therefore the current sale price is $51988
+Buyer just looking car Salesperson_005 suggested a dirty, like new car(HON_00047). The buying probability was 10. And the transaction was unsuccessful for $51988
+The original price of the car is: $29085
+The buyer has selected the following plan:
+Satellite Radio. Making the current sale price 105.0% of the original price. Therefore the current sale price is $30539
+Buyer just looking electric car Salesperson_013 suggested a clean, like new electric car(VOL_00015). The buying probability was 20. And the transaction was unsuccessful for $30539
+The original price of the car is: $60993
+The buyer has selected the following plan:
+Satellite Radio. Making the current sale price 105.0% of the original price. Therefore the current sale price is $64042
+Buyer needs one performance car Salesperson_009 suggested a clean, like new performance car(ACU_00004). The buying probability was 80. And the transaction was successful for $64042 (making $1600)
+
+Closing...
+We made $60993 today
+
+Quitting
+Salesperson Salesperson_009 has quit after working for 20 days
+Intern Intern_017 has stepped up and took the salesperson job
+Tracker: Day 23
+Total money earned by all Staff: $122400
+Total money earned by FNCD: $1411474
+End of the day
+******FNCD Day 24******
+Opening... (Current budget $995504)
+Hired intern Intern_020
+Purchased a broken, clean Car Audi, (AUD_00051) for $13745
+
+Washing...
+Intern_018 washed a dirty car (HON_00047) and made it sparkling
+Intern_018 washed a dirty electric car (LUC_00048) and made it sparkling
+Intern_019 washed a dirty motorcycle (BMW_00026) and made it clean
+Intern_019 washed a clean performance car (MCL_00043) and made it clean
+Intern_020 washed a clean pickup (RAM_00046) and made it sparkling
+Intern_020 washed a clean electric car (VOL_00015) and made it clean
+
+Repairing...
+Mechanics_002 fixed a broken performance car (AUD_00051) and made it broken (made $0)
+Mechanics_002 fixed a used electric car (LUC_00048) and made it like new (made $1000)
+Mechanics_014 fixed a broken performance car (AUD_00051) and made it used (made $2000)
+Mechanics_015 fixed a used performance car (AUD_00051) and made it used (made $0)
+
+We have 5 Buyers today
+Selling...
+The original price of the car is: $30232
+The buyer has selected the following plan:
+Extended Warranty, Satellite Radio. Making the current sale price 125.0% of the original price. Therefore the current sale price is $37790
+Buyer needs one electric car Salesperson_005 suggested a clean, like new electric car(LUC_00048). The buying probability was 80. And the transaction was successful for $37790 (making $800)
+The original price of the car is: $29085
+The buyer has selected the following plan:
+. Making the current sale price 100.0% of the original price. Therefore the current sale price is $29085
+Buyer needs one electric car Salesperson_017 suggested a clean, like new electric car(VOL_00015). The buying probability was 80. And the transaction was successful for $29085 (making $800)
+The original price of the car is: $27084
+The buyer has selected the following plan:
+. Making the current sale price 100.0% of the original price. Therefore the current sale price is $27084
+Buyer just looking monster truck Salesperson_017 suggested a clean, like new monster truck(Avenger_00050). The buying probability was 20. And the transaction was unsuccessful for $27084
+The original price of the car is: $54300
+The buyer has selected the following plan:
+. Making the current sale price 100.0% of the original price. Therefore the current sale price is $54300
+Buyer needs one motorcycle Salesperson_017 suggested a clean, like new motorcycle(BMW_00026). The buying probability was 80. And the transaction was successful for $59730 (making $800)
+The original price of the car is: $53610
+The buyer has selected the following plan:
+. Making the current sale price 100.0% of the original price. Therefore the current sale price is $53610
+Buyer wants one performance car Salesperson_017 suggested a sparkling, like new performance car(FER_00035). The buying probability was 60. And the transaction was successful for $53610 (making $1600)
+
+Closing...
+We made $167227 today
+
+Quitting
+Salesperson Salesperson_013 has quit after working for 19 days
+Intern Intern_018 has stepped up and took the salesperson job
+Tracker: Day 24
+Total money earned by all Staff: $130930
+Total money earned by FNCD: $1591689
+End of the day
+******FNCD Day 24: Race day!!!!!!!******
+Racing......
+FNCD is racing with monster truck
+FNCD have 3 vehicles in the race.
+One of the vehicle got 20 place
+One of the vehicle got 1 place
+One of the vehicle got 6 place
+******FNCD Day 25******
+Opening... (Current budget $1148986)
+Hired intern Intern_021
+Purchased a like new, dirty Car McLaren, (MCL_00052) for $26073
+Purchased a broken, dirty Car Rivian, (RIV_00053) for $8634
+Purchased a like new, dirty Car NIO, (NIO_00054) for $14800
+Purchased a like new, sparkling Car Triumph, (TRI_00055) for $15768
+
+Washing...
+Intern_019 washed a dirty electric car (RIV_00053) and made it clean
+Intern_019 washed a dirty electric car (NIO_00054) and made it sparkling
+Intern_020 washed a dirty performance car (MCL_00052) and made it clean
+Intern_020 washed a dirty performance car (AUD_00051) and made it dirty
+Intern_021 washed a dirty performance car (AUD_00051) and made it clean
+Intern_021 washed a clean monster truck (Avenger_00049) and made it sparkling
+
+Repairing...
+Mechanics_002 fixed a broken monster truck (Zombie_00020) and made it used (made $1000)
+Mechanics_002 fixed a used performance car (AUD_00051) and made it like new (made $2000)
+Mechanics_014 fixed a used monster truck (Zombie_00020) and made it like new (made $1000)
+Mechanics_014 fixed a broken electric car (RIV_00053) and made it used (made $1000)
+Mechanics_015 fixed a used electric car (RIV_00053) and made it like new (made $1000)
+
+We have 4 Buyers today
+Selling...
+The original price of the car is: $67646
+The buyer has selected the following plan:
+. Making the current sale price 100.0% of the original price. Therefore the current sale price is $67646
+800
+Buyer wants one pickup Salesperson_005 suggested a sparkling, like new pickup(RAM_00046). The buying probability was 60. And the transaction was successful for $74410 (making $800)
+800
+The original price of the car is: $39247
+The buyer has selected the following plan:
+. Making the current sale price 100.0% of the original price. Therefore the current sale price is $39247
+Buyer wants one monster truck Salesperson_018 suggested a dirty, like new monster truck(Zombie_00020). The buying probability was 40. And the transaction was successful for $39247 (making $800)
+The original price of the car is: $36157
+The buyer has selected the following plan:
+Extended Warranty, . Making the current sale price 120.0% of the original price. Therefore the current sale price is $43388
+Buyer wants one motorcycle Salesperson_005 suggested a sparkling, like new motorcycle(BMW_00045). The buying probability was 60. And the transaction was successful for $47727 (making $800)
+The original price of the car is: $27084
+The buyer has selected the following plan:
+Extended Warranty, . Making the current sale price 120.0% of the original price. Therefore the current sale price is $32500
+Buyer just looking monster truck Salesperson_017 suggested a clean, like new monster truck(Avenger_00050). The buying probability was 20. And the transaction was unsuccessful for $32500
+
+Closing...
+We made $143050 today
+
+Quitting
+Mechanics Mechanics_002 has quit after working for 22 days
+Intern Intern_019 has stepped up and took the mechanics job
+Tracker: Day 25
+Total money earned by all Staff: $140860
+Total money earned by FNCD: $1753073
+End of the day
+******FNCD Day 26******
+Opening... (Current budget $1226761)
+Hired intern Intern_022
+Purchased a broken, clean Car Ford, (FOR_00056) for $17694
+Purchased a like new, dirty Car Son-uva Digger, (El Toro Loco_00057) for $14690
+Purchased a broken, dirty Car BMW, (BMW_00058) for $6872
+
+Washing...
+Intern_020 washed a dirty electric car (RIV_00053) and made it clean
+Intern_020 washed a dirty motorcycle (BMW_00058) and made it sparkling
+Intern_021 washed a dirty monster truck (El Toro Loco_00057) and made it sparkling
+Intern_021 washed a dirty performance car (AUD_00051) and made it sparkling
+Intern_022 washed a clean pickup (FOR_00056) and made it sparkling
+Intern_022 washed a clean performance car (MCL_00043) and made it sparkling
+
+Repairing...
+Mechanics_014 fixed a broken pickup (FOR_00056) and made it broken (made $0)
+Mechanics_014 fixed a broken motorcycle (BMW_00058) and made it used (made $1000)
+Mechanics_015 fixed a used motorcycle (BMW_00058) and made it used (made $0)
+Mechanics_015 fixed a broken pickup (FOR_00056) and made it broken (made $0)
+Mechanics_019 fixed a used motorcycle (BMW_00058) and made it used (made $0)
+Mechanics_019 fixed a used motorcycle (BMW_00058) and made it like new (made $1000)
+it is the weekend (Friday/Saturday)
+
+We have 4 Buyers today
+Selling...
+The original price of the car is: $47262
+The buyer has selected the following plan:
+. Making the current sale price 100.0% of the original price. Therefore the current sale price is $47262
+Buyer just looking car Salesperson_017 suggested a sparkling, like new car(HON_00047). The buying probability was 30. And the transaction was unsuccessful for $47262
+The original price of the car is: $32377
+The buyer has selected the following plan:
+Extended Warranty, . Making the current sale price 120.0% of the original price. Therefore the current sale price is $38852
+Buyer just looking electric car Salesperson_017 suggested a clean, like new electric car(RIV_00053). The buying probability was 20. And the transaction was unsuccessful for $38852
+The original price of the car is: $32377
+The buyer has selected the following plan:
+. Making the current sale price 100.0% of the original price. Therefore the current sale price is $32377
+Buyer just looking electric car Salesperson_018 suggested a clean, like new electric car(RIV_00053). The buying probability was 20. And the transaction was unsuccessful for $32377
+The original price of the car is: $29380
+The buyer has selected the following plan:
+. Making the current sale price 100.0% of the original price. Therefore the current sale price is $29380
+Buyer just looking monster truck Salesperson_017 suggested a sparkling, like new monster truck(El Toro Loco_00057). The buying probability was 30. And the transaction was unsuccessful for $29380
+
+Closing...
+We made $0 today
+
+Quitting
+Tracker: Day 26
+Total money earned by all Staff: $144390
+Total money earned by FNCD: $1753073
+End of the day
+******FNCD Day 27******
+Opening... (Current budget $1187505)
+
+Washing...
+Intern_020 washed a dirty pickup (FOR_00056) and made it clean
+Intern_020 washed a dirty motorcycle (BMW_00058) and made it clean
+Intern_021 washed a clean pickup (FOR_00056) and made it clean
+Intern_021 washed a clean car (HON_00005) and made it clean
+Intern_022 washed a clean car (HON_00005) and made it clean
+Intern_022 washed a clean motorcycle (HON_00040) and made it clean
+
+Repairing...
+Mechanics_014 fixed a broken pickup (FOR_00056) and made it broken (made $0)
+Mechanics_015 fixed a broken pickup (FOR_00056) and made it used (made $1000)
+Mechanics_019 fixed a used pickup (FOR_00056) and made it like new (made $1000)
+it is the weekend (Friday/Saturday)
+
+We have 3 Buyers today
+Selling...
+The original price of the car is: $32377
+The buyer has selected the following plan:
+. Making the current sale price 100.0% of the original price. Therefore the current sale price is $32377
+Buyer just looking electric car Salesperson_018 suggested a clean, like new electric car(RIV_00053). The buying probability was 20. And the transaction was unsuccessful for $32377
+The original price of the car is: $32377
+The buyer has selected the following plan:
+Undercoating, Satellite Radio. Making the current sale price 110.00000000000001% of the original price. Therefore the current sale price is $35614
+Buyer wants one electric car Salesperson_017 suggested a clean, like new electric car(RIV_00053). The buying probability was 50. And the transaction was successful for $35614 (making $800)
+The original price of the car is: $29600
+The buyer has selected the following plan:
+Satellite Radio. Making the current sale price 105.0% of the original price. Therefore the current sale price is $31080
+Buyer needs one electric car Salesperson_018 suggested a sparkling, like new electric car(NIO_00054). The buying probability was 90. And the transaction was successful for $31080 (making $800)
+
+Closing...
+We made $61977 today
+
+Quitting
+Mechanics Mechanics_015 has quit after working for 18 days
+Intern Intern_020 has stepped up and took the mechanics job
+Salesperson Salesperson_017 has quit after working for 12 days
+Intern Intern_021 has stepped up and took the salesperson job
+Tracker: Day 27
+Total money earned by all Staff: $149520
+Total money earned by FNCD: $1819767
+End of the day
+******FNCD Day 28: Race day!!!!!!!******
+Racing......
+FNCD is racing with monster truck
+FNCD have 3 vehicles in the race.
+One of the vehicle got 7 place
+One of the vehicle got 1 place
+One of the vehicle got 15 place
+******FNCD Day 29******
+Opening... (Current budget $1249482)
+Hired intern Intern_023
+Hired intern Intern_024
+Purchased a like new, dirty Car Nissan, (NIS_00059) for $15532
+Purchased a used, clean Car Rivian, (RIV_00060) for $10944
+
+Washing...
+Intern_022 washed a dirty electric car (NIS_00059) and made it dirty
+Intern_022 washed a dirty pickup (FOR_00056) and made it clean
+Intern_023 washed a dirty electric car (NIS_00059) and made it clean
+Intern_023 washed a clean monster truck (Avenger_00050) and made it clean
+Intern_024 washed a clean car (SUB_00006) and made it dirty
+Intern_024 washed a clean performance car (MCL_00052) and made it dirty
+
+Repairing...
+Mechanics_014 fixed a used electric car (RIV_00060) and made it like new (made $1000)
+
+We have 0 Buyers today
+Selling...
+
+Closing...
+We made $0 today
+
+Quitting
+Tracker: Day 29
+Total money earned by all Staff: $152050
+Total money earned by FNCD: $1819767
+End of the day
+******FNCD Day 30******
+Opening... (Current budget $1223006)
+
+Washing...
+Intern_022 washed a dirty performance car (MCL_00052) and made it clean
+Intern_022 washed a dirty electric car (RIV_00060) and made it clean
+Intern_023 washed a dirty car (SUB_00006) and made it clean
+Intern_023 washed a clean monster truck (Avenger_00050) and made it clean
+Intern_024 washed a clean electric car (NIS_00059) and made it dirty
+Intern_024 washed a clean monster truck (Avenger_00050) and made it dirty
+
+Repairing...
+
+We have 5 Buyers today
+Selling...
+The original price of the car is: $66352
+The buyer has selected the following plan:
+. Making the current sale price 100.0% of the original price. Therefore the current sale price is $66352
+800
+Buyer wants one pickup Salesperson_021 suggested a clean, like new pickup(FOR_00056). The buying probability was 50. And the transaction was successful for $72987 (making $800)
+800
+The original price of the car is: $47262
+The buyer has selected the following plan:
+Extended Warranty, . Making the current sale price 120.0% of the original price. Therefore the current sale price is $56714
+Buyer needs one car Salesperson_005 suggested a sparkling, like new car(HON_00047). The buying probability was 90. And the transaction was successful for $56714 (making $800)
+The original price of the car is: $31064
+The buyer has selected the following plan:
+Satellite Radio. Making the current sale price 105.0% of the original price. Therefore the current sale price is $32617
+Buyer needs one electric car Salesperson_021 suggested a dirty, like new electric car(NIS_00059). The buying probability was 70. And the transaction was successful for $32617 (making $800)
+The original price of the car is: $31536
+The buyer has selected the following plan:
+. Making the current sale price 100.0% of the original price. Therefore the current sale price is $31536
+Buyer needs one motorcycle Salesperson_018 suggested a sparkling, like new motorcycle(TRI_00055). The buying probability was 90. And the transaction was successful for $34689 (making $800)
+The original price of the car is: $36206
+The buyer has selected the following plan:
+. Making the current sale price 100.0% of the original price. Therefore the current sale price is $36206
+Buyer just looking car Salesperson_018 suggested a clean, like new car(HON_00005). The buying probability was 20. And the transaction was unsuccessful for $36206
+
+Closing...
+We made $176214 today
+
+Quitting
+Mechanics Mechanics_014 has quit after working for 21 days
+Intern Intern_022 has stepped up and took the mechanics job
+Tracker: Day 30
+Total money earned by all Staff: $156780
+Total money earned by FNCD: $2016774
+End of the day
+
+******End of simulation******
+Here is a list of all the staffs:
+                Name    Total Days Worked     Total Normal Pay      Total Bonus Pay          Status
+          Intern_023               2 days                 $140                   $0         working
+          Intern_024               2 days                 $140                   $0         working
+       Mechanics_019              10 days                $1380                $2000         working
+       Mechanics_020               6 days                 $760                   $0         working
+       Mechanics_022               4 days                 $280                   $0         working
+     Salesperson_005              26 days                $4550               $11200         working
+     Salesperson_018              12 days                $1490                $2400         working
+     Salesperson_021               5 days                 $610                $1600         working
+          Driver_004              26 days                   $0                $2000         working
+          Driver_008              26 days                   $0                $3000         working
+          Driver_012              26 days                   $0                   $0         working
+     Salesperson_011               2 days                 $400                   $0            quit
+     Salesperson_003               5 days                $1000                $1600            quit
+     Salesperson_001               6 days                 $940                $1600            quit
+     Salesperson_007              11 days                $2200                $2400            quit
+       Mechanics_006              12 days                $2880               $13000            quit
+          Intern_016               3 days                 $210                   $0            quit
+       Mechanics_010              16 days                $3840               $19000            quit
+     Salesperson_009              20 days                $3220                $5600            quit
+     Salesperson_013              19 days                $2630                $5600            quit
+       Mechanics_002              22 days                $5280               $31000            quit
+       Mechanics_015              18 days                $2620                $4000            quit
+     Salesperson_017              12 days                $1360                $4000            quit
+       Mechanics_014              21 days                $3850               $12000            quit
+
+Here is a list of all the vehicles:
+                               Name                          Brand                 Cost           Sale Price            Condition          Cleanliness                         Status
+                          HON_00005                          Honda                 7724                36206             like new                clean                       in stock
+                          SUB_00006                         Subaru                14219                35547             like new                clean                       in stock
+                          NIS_00007                         Nissan                16534                33068             like new            sparkling                       in stock
+                          RAM_00009                            Ram                 8611                21527             like new            sparkling                       in stock
+                          FOR_00011                           Ford                14609                29218             like new            sparkling                       in stock
+                          JEE_00012                           Jeep                10038                20076             like new            sparkling                       in stock
+                          LUC_00014                   Lucid Motors                12337                24674             like new            sparkling           in stock(range: 393)
+                          RIV_00016                         Rivian                 6150                28830             like new            sparkling           in stock(range: 455)
+            Bear Foot (F-150)_00027        Mon. Jam Steel Titans 2                13274                26548             like new            sparkling                       in stock
+                          BMW_00033                            BMW                21321                53302             like new            sparkling                       in stock
+                          HON_00040                          Honda                11483                28707             like new                clean     in stock(engine size: 350)
+                          KAW_00042                       Kawasaki                 8135                20337             like new            sparkling     in stock(engine size: 884)
+                          MCL_00043                        McLaren                 9825                46057             like new            sparkling                       in stock
+                      Avenger_00049        Mon. Jam Steel Titans 2                12540                25080             like new            sparkling                       in stock
+                      Avenger_00050        Mon. Jam Steel Titans 2                13542                27084             like new                dirty                       in stock
+                          AUD_00051                           Audi                10996                51543             like new            sparkling                       in stock
+                          MCL_00052                        McLaren                26073                52146             like new                clean                       in stock
+                 El Toro Loco_00057                 Son-uva Digger                14690                29380             like new            sparkling                       in stock
+                          BMW_00058                            BMW                 5497                25770             like new                clean     in stock(engine size: 360)
+                          RIV_00060                         Rivian                10944                27360             like new                clean           in stock(range: 215)
+                          NIO_00013                            NIO                 7113                33345             like new                dirty                           sold
+                          HON_00023                          Honda                14438                28876             like new                clean                           sold
+                      Avenger_00017                 Son-uva Digger                19679                39358             like new            sparkling                           sold
+                          TOY_00008                         Toyota                15709                39272             like new                dirty                           sold
+                          YAM_00024                         Yamaha                 7957                46625             like new                clean                           sold
+                          LUC_00025                   Lucid Motors                 7552                35400             like new                clean                           sold
+                          JEE_00010                           Jeep                10016                88042             like new                clean                           sold
+                          NIS_00028                         Nissan                 7881                36945             like new            sparkling                           sold
+                          AST_00003                   Aston Martin                15670                73455             like new            sparkling                           sold
+                 Shell Camino_00019        Mon. Jam Steel Titans 2                 6292                29497             like new                clean                           sold
+                          KIA_00031                            Kia                18269                36538             like new                clean                           sold
+                          AST_00001                   Aston Martin                32820                65640             like new                clean                           sold
+                 Shell Camino_00034                 Son-uva Digger                14015                35037             like new                dirty                           sold
+                          NIO_00029                            NIO                15516                38790             like new                clean                           sold
+                          SUZ_00021                         Suzuki                 3647                40070             like new                clean                           sold
+                          FOR_00032                           Ford                31739                79347             like new                clean                           sold
+                          KTM_00030                            KTM                19119                38238             like new                clean                           sold
+                The Destroyer_00018                 Son-uva Digger                14513                29026             like new                clean                           sold
+  Maximum Destruction (Max-D)_00041        Mon. Jam Steel Titans 2                15443                38607             like new            sparkling                           sold
+                          ACU_00002                          Acura                32502                65004             like new                clean                           sold
+                          LUC_00022                   Lucid Motors                 6844                32081             like new            sparkling                           sold
+                          JEE_00037                           Jeep                28012                70030             like new                clean                           sold
+                          MAZ_00036                          Mazda                 8917                41801             like new                dirty                           sold
+                          APT_00038                          Aptiv                12192                30480             like new            sparkling                           sold
+                Backwards Bob_00039                 Son-uva Digger                 6571                30802             like new            sparkling                           sold
+                        USA-1_00044        Mon. Jam Steel Titans 2                14987                29974             like new            sparkling                           sold
+                          ACU_00004                          Acura                13012                60993             like new                clean                           sold
+                          LUC_00048                   Lucid Motors                 6449                30232             like new                clean                           sold
+                          VOL_00015                          Volvo                11634                29085             like new                clean                           sold
+                          BMW_00026                            BMW                 9267                54300             like new                clean                           sold
+                          FER_00035                        Ferrari                26805                53610             like new            sparkling                           sold
+                          RAM_00046                            Ram                14431                67646             like new            sparkling                           sold
+                       Zombie_00020        Mon. Jam Steel Titans 2                 3572                39247             like new                dirty                           sold
+                          BMW_00045                            BMW                 7713                36157             like new            sparkling                           sold
+                          RIV_00053                         Rivian                 6907                32377             like new                clean                           sold
+                          NIO_00054                            NIO                14800                29600             like new            sparkling                           sold
+                          FOR_00056                           Ford                14155                66352             like new                clean                           sold
+                          HON_00047                          Honda                 8066                47262             like new            sparkling                           sold
+                          NIS_00059                         Nissan                15532                31064             like new                dirty                           sold
+                          TRI_00055                        Triumph                15768                31536             like new            sparkling                           sold
+
+Process finished with exit code 0
