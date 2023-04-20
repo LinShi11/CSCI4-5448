@@ -10,7 +10,7 @@ public class Hunter implements People{
 
     @Override
     public int getMeat() {
-        return 0;
+        return 1;
     }
 
     @Override
@@ -20,7 +20,7 @@ public class Hunter implements People{
 
     @Override
     public int getFur() {
-        return 0;
+        return 1;
     }
 
     @Override

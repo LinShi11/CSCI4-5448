@@ -5,7 +5,7 @@ public class Gather implements People{
     }
     @Override
     public int getFood() {
-        return 0;
+        return 1;
     }
 
     @Override
@@ -25,7 +25,7 @@ public class Gather implements People{
 
     @Override
     public int getWood() {
-        return 0;
+        return 1;
     }
 
     @Override

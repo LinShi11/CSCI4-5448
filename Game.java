@@ -138,6 +138,15 @@ public class Game {
                     System.out.println("nothing");
             }
         }
+        for(People person: peopleArrayList){
+            resourceMap.put(Enum.resourceType.wood, (resourceMap.get(Enum.resourceType.wood) + person.getWood()));
+            resourceMap.put(Enum.resourceType.food, (resourceMap.get(Enum.resourceType.food) + person.getFood()));
+            resourceMap.put(Enum.resourceType.meat, (resourceMap.get(Enum.resourceType.meat) + person.getMeat()));
+            resourceMap.put(Enum.resourceType.rock, (resourceMap.get(Enum.resourceType.rock) + person.getRock()));
+            resourceMap.put(Enum.resourceType.water, (resourceMap.get(Enum.resourceType.water) + person.getWater()));
+            resourceMap.put(Enum.resourceType.clothes, (resourceMap.get(Enum.resourceType.clothes) + person.getClothes()));
+            resourceMap.put(Enum.resourceType.fur, (resourceMap.get(Enum.resourceType.fur) + person.getFur()));
+        }
     }
 
     public HashMap<Enum.buildingType, Integer> getBuildingMap(){

@@ -35,7 +35,7 @@ public class Tailor implements People{
 
     @Override
     public int getClothes() {
-        return 0;
+        return 1;
     }
 
     @Override

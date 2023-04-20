@@ -5,7 +5,7 @@ public class Cook implements People{
     }
     @Override
     public int getFood() {
-        return 0;
+        return 1;
     }
 
     @Override

@@ -26,7 +26,7 @@ public class Lumberjack implements People{
 
     @Override
     public int getWood() {
-        return 0;
+        return 1;
     }
 
     @Override

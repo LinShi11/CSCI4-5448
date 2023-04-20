@@ -41,7 +41,7 @@ public class Repairer implements People{
 
     @Override
     public int getHealth() {
-        return 0;
+        return 1;
     }
 
     @Override

@@ -30,7 +30,7 @@ public class Miner implements People{
 
     @Override
     public int getRock() {
-        return 0;
+        return 1;
     }
 
     @Override

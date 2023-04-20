@@ -15,7 +15,7 @@ public class Waterman implements People{
 
     @Override
     public int getWater() {
-        return 0;
+        return 1;
     }
 
     @Override
