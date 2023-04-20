@@ -17,7 +17,7 @@ public class BuildingFactory {
             case Mines:
                 return new Mines();
             case Tradecart:
-                return new Tradecart();
+                return Tradecart.getInstance();
             default:
                 return null;
         }

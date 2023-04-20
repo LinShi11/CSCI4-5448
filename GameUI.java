@@ -431,8 +431,6 @@ public class GameUI {
         public void actionPerformed(ActionEvent e) {
             game.dailyUpdate();
             dailyRepaint();
-
-            System.out.println("Next day");
         }
     }
 

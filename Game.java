@@ -91,7 +91,11 @@ public class Game {
     }
     public void addBuildings(Enum.buildingType type){
         Building building = buildingFactory.constructBuilding(type);
-        buildingMap.put(building.getType(), (buildingMap.get(building.getType()) + 1));
+        if(building.getType() == Enum.buildingType.Tradecart){
+            buildingMap.put(Enum.buildingType.Tradecart, 1);
+        } else {
+            buildingMap.put(building.getType(), (buildingMap.get(building.getType()) + 1));
+        }
     }
 
     public void assignJobs(Enum.jobType type){
