@@ -47,7 +47,7 @@ public class Game {
         jobMap.put(Enum.jobType.Lumberjack, 0);
         jobMap.put(Enum.jobType.Cook, 0);
         jobMap.put(Enum.jobType.Repairer, 0);
-        jobMap.put(Enum.jobType.Villager, 10);
+        jobMap.put(Enum.jobType.Villager, 0);
 
 
 
@@ -96,6 +96,7 @@ public class Game {
         } else {
             buildingMap.put(building.getType(), (buildingMap.get(building.getType()) + 1));
         }
+        getVillagerCount();
     }
     public void assignJobs(Enum.jobType type){
         if(jobMap.get(Enum.jobType.Villager) > 0) {
@@ -111,20 +112,6 @@ public class Game {
             jobMap.put(Enum.jobType.Villager, (jobMap.get(Enum.jobType.Villager)) - 1);
         }
     }
-
-//    public boolean checkLimit(Enum.jobType type){
-//        switch(type) {
-//            case Weaponsmith:
-//                if(jobMap.get(Enum.jobType.Weaponsmith) < )
-//            case Waterman:
-//            case Tailor:
-//            case Miner:
-//            case Cook:
-//            case Trapper:
-//            case Villager:
-//
-//        }
-//    }
 
     public void removeJobs(Enum.jobType type){
         if(jobMap.get(type) > 0){
@@ -192,5 +179,10 @@ public class Game {
 
     public ArrayList<Enum.magicItems> getMagicItemsArrayList(){
         return magicItemsArrayList;
+    }
+
+    public void getVillagerCount(){
+        jobMap.put(Enum.jobType.Villager, buildingMap.get(Enum.buildingType.Hut) * Helper.getLimit(Enum.buildingType.Hut));
+        System.out.println(jobMap.get(Enum.jobType.Villager));
     }
 }

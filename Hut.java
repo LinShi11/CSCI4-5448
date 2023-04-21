@@ -3,10 +3,10 @@ public class Hut implements Building{
     public Hut(){
         type = Enum.buildingType.Hut;
     }
-    @Override
-    public int getLimit() {
-        return 5;
-    }
+//    @Override
+//    public int getLimit() {
+//        return 5;
+//    }
 
     @Override
     public Enum.buildingType getType() {
