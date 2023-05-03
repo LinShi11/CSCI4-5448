@@ -16,6 +16,7 @@ public interface People{
 	int getClothes();
 	
 	int getHealth();
+	int getDefense();
 
 	Enum.jobType getType();
 

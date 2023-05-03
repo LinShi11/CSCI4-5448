@@ -6,7 +6,7 @@ public class Lumberjack implements People{
 
     @Override
     public int getFood() {
-        return 0;
+        return -1;
     }
 
     @Override
@@ -16,7 +16,7 @@ public class Lumberjack implements People{
 
     @Override
     public int getWater() {
-        return 0;
+        return -1;
     }
 
     @Override
@@ -26,7 +26,7 @@ public class Lumberjack implements People{
 
     @Override
     public int getWood() {
-        return 1;
+        return 5;
     }
 
     @Override
@@ -41,6 +41,11 @@ public class Lumberjack implements People{
 
     @Override
     public int getHealth() {
+        return 0;
+    }
+
+    @Override
+    public int getDefense() {
         return 0;
     }
 

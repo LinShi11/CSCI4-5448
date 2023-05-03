@@ -5,7 +5,7 @@ public class Miner implements People{
     }
     @Override
     public int getFood() {
-        return 0;
+        return -1;
     }
 
     @Override
@@ -15,7 +15,7 @@ public class Miner implements People{
 
     @Override
     public int getWater() {
-        return 0;
+        return -1;
     }
 
     @Override
@@ -25,12 +25,12 @@ public class Miner implements People{
 
     @Override
     public int getWood() {
-        return 0;
+        return -1;
     }
 
     @Override
     public int getRock() {
-        return 1;
+        return 3;
     }
 
     @Override
@@ -40,6 +40,11 @@ public class Miner implements People{
 
     @Override
     public int getHealth() {
+        return 0;
+    }
+
+    @Override
+    public int getDefense() {
         return 0;
     }
 

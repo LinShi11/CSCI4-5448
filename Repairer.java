@@ -6,7 +6,7 @@ public class Repairer implements People{
     }
     @Override
     public int getFood() {
-        return 0;
+        return -1;
     }
 
     @Override
@@ -16,7 +16,7 @@ public class Repairer implements People{
 
     @Override
     public int getWater() {
-        return 0;
+        return -1;
     }
 
     @Override
@@ -26,7 +26,7 @@ public class Repairer implements People{
 
     @Override
     public int getWood() {
-        return 0;
+        return -1;
     }
 
     @Override
@@ -41,7 +41,12 @@ public class Repairer implements People{
 
     @Override
     public int getHealth() {
-        return 1;
+        return 2;
+    }
+
+    @Override
+    public int getDefense() {
+        return 0;
     }
 
     @Override

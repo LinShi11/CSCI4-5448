@@ -9,7 +9,7 @@ public class UserActions{
 	}
 
 	public int getFood() {
-		return random.nextInt(3) + 1; //1-3 pounds
+		return random.nextInt(3) + 3; //3-6 pounds
 	}
 
 	public int getMeat() {

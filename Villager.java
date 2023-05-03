@@ -44,6 +44,11 @@ public class Villager implements People{
     }
 
     @Override
+    public int getDefense() {
+        return 0;
+    }
+
+    @Override
     public Enum.jobType getType() {
         return type;
     }

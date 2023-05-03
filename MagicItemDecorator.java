@@ -32,6 +32,10 @@ public class MagicItemDecorator implements People{
 	public int getHealth() {
 		return 0;
 	}
+	@Override
+	public int getDefense() {
+		return 0;
+	}
 
 	@Override
 	public Enum.jobType getType() {

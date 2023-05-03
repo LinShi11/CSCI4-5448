@@ -182,15 +182,49 @@ public class Game implements Subject{
             }
         }
         notifyObserver("Tasks completed: ");
+        int woodCheck = 0;
+        int foodCheck = 0;
+        int meatCheck = 0;
+        int rockCheck = 0;
+        int waterCheck = 0;
+        int clothesCheck = 0;
+        int furCheck = 0;
+        int healthCheck = 0;
+        int defenseCheck = 0;
         // daily resource update for villager jobs
         for(People person: peopleArrayList){
-            resourceMap.put(Enum.resourceType.wood, (resourceMap.get(Enum.resourceType.wood) + person.getWood()));
-            resourceMap.put(Enum.resourceType.food, (resourceMap.get(Enum.resourceType.food) + person.getFood()));
-            resourceMap.put(Enum.resourceType.meat, (resourceMap.get(Enum.resourceType.meat) + person.getMeat()));
-            resourceMap.put(Enum.resourceType.rock, (resourceMap.get(Enum.resourceType.rock) + person.getRock()));
-            resourceMap.put(Enum.resourceType.water, (resourceMap.get(Enum.resourceType.water) + person.getWater()));
-            resourceMap.put(Enum.resourceType.clothes, (resourceMap.get(Enum.resourceType.clothes) + person.getClothes()));
-            resourceMap.put(Enum.resourceType.fur, (resourceMap.get(Enum.resourceType.fur) + person.getFur()));
+            woodCheck += person.getWood();
+            foodCheck += person.getFood();
+            meatCheck += person.getMeat();
+            rockCheck += person.getRock();
+            waterCheck += person.getWater();
+            clothesCheck += person.getClothes();
+            furCheck += person.getFur();
+            healthCheck += person.getHealth();
+            defenseCheck += person.getDefense();
+        }
+        resourceMap.put(Enum.resourceType.wood, (resourceMap.get(Enum.resourceType.wood) + woodCheck));
+        resourceMap.put(Enum.resourceType.food, (resourceMap.get(Enum.resourceType.food) + foodCheck));
+        resourceMap.put(Enum.resourceType.meat, (resourceMap.get(Enum.resourceType.meat) + meatCheck));
+        resourceMap.put(Enum.resourceType.rock, (resourceMap.get(Enum.resourceType.rock) + rockCheck));
+        resourceMap.put(Enum.resourceType.water, (resourceMap.get(Enum.resourceType.water) + waterCheck));
+        resourceMap.put(Enum.resourceType.clothes, (resourceMap.get(Enum.resourceType.clothes) + clothesCheck));
+        resourceMap.put(Enum.resourceType.fur, (resourceMap.get(Enum.resourceType.fur) + furCheck));
+
+        statsMap.put(Enum.stats.health, (statsMap.get(Enum.stats.health) + healthCheck));
+        statsMap.put(Enum.stats.defense, (statsMap.get(Enum.stats.defense) + defenseCheck));
+
+        notifyObserver("wood: " + woodCheck);
+        notifyObserver("food: " + foodCheck);
+        notifyObserver("meat: " + meatCheck);
+        notifyObserver("rock: " + rockCheck);
+        notifyObserver("water: " + waterCheck);
+        notifyObserver("clothes: "+ clothesCheck);
+        notifyObserver("fur: " + furCheck);
+        notifyObserver("health: " + healthCheck);
+        notifyObserver("defense: " + defenseCheck);
+        if(woodCheck< 0 || foodCheck< 0 || meatCheck < 0||rockCheck< 0||waterCheck< 0||clothesCheck< 0||furCheck< 0||healthCheck< 0||defenseCheck< 0){
+            notifyObserver("The villagers are unhappy, the village is not producing enough resources. If this continues, the villagers will start to leave.\n");
         }
     }
 
