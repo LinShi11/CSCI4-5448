@@ -1,11 +1,15 @@
 public class BowDecorator extends MagicItemDecorator{
-	
+
+	public BowDecorator(People person) {
+		super(person);
+	}
+
 	public int getMeat() {
-		return 0;
+		return person.getMeat() + 4;
 	}
 
 	public int getFur() {
-		return 0;
+		return person.getFur() + 2;
 	}
 
 }

@@ -1,45 +1,49 @@
 public class MagicItemDecorator implements People{
+	protected  People person;
+	public MagicItemDecorator(People person){
+		this.person = person;
+	}
 	
 	public int getFood() {
-		return 0;
+		return person.getFood();
 	}
 
 	public int getMeat() {
-		return 0;
+		return person.getMeat();
 	}
 
 	public int getWater() {
-		return 0;
+		return person.getWater();
 	}
 
 	public int getFur() {
-		return 0;
+		return person.getFur();
 	}
 
 	public int getWood() {
-		return 0;
+		return person.getWood();
 	}
 
 	public int getRock() {
-		return 0;
+		return person.getRock();
 	}
 
 	public int getClothes() {
-		return 0;
+		return person.getClothes();
 	}
 
 	@Override
 	public int getHealth() {
-		return 0;
+		return person.getHealth();
 	}
 	@Override
 	public int getDefense() {
-		return 0;
+		return person.getDefense();
 	}
 
 	@Override
 	public int getGold() {
-		return 0;
+		return person.getGold();
 	}
 
 	@Override

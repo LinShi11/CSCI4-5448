@@ -1,7 +1,11 @@
 public class StorageDecorator extends MagicItemDecorator{
-	
+
+	public StorageDecorator(People person) {
+		super(person);
+	}
+
 	public int getWater() {
-		return 0;
+		return person.getWater() + 4;
 	}
 
 }

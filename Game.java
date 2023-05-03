@@ -122,12 +122,69 @@ public class Game implements Subject{
                 if (magicItemsArrayList.get(i) == type) {
                     magicItemsArrayList.remove(i);
                     magicItemMap.put(type, magicItemMap.get(type) + 1);
-                    magicItemDecoratorArrayList.add(type)
+                    setDecorator(type);
                     break;
                 }
             }
         } else{
             notifyObserver("Not enough gold (50)");
+        }
+    }
+
+    public void setDecorator(Enum.magicItems type){
+        switch (type){
+            case matches:
+                for(int i = 0; i < peopleArrayList.size(); i++){
+                    peopleArrayList.set(i, new MatchesDecorator(peopleArrayList.get(i)));
+                }
+                break;
+            case axe:
+                for(int i = 0; i < peopleArrayList.size(); i++){
+                    peopleArrayList.set(i, new AxeDecorator(peopleArrayList.get(i)));
+                }
+                break;
+            case needle:
+                for(int i = 0; i < peopleArrayList.size(); i++){
+                    peopleArrayList.set(i, new SewingDecorator(peopleArrayList.get(i)));
+                }
+                break;
+            case pickaxe:
+                for(int i = 0; i < peopleArrayList.size(); i++){
+                    peopleArrayList.set(i, new PickaxeDecorator(peopleArrayList.get(i)));
+                }
+                break;
+            case bait:
+                for(int i = 0; i < peopleArrayList.size(); i++){
+                    peopleArrayList.set(i, new BaitDecorator(peopleArrayList.get(i)));
+                }
+                break;
+            case storage:
+                for(int i = 0; i < peopleArrayList.size(); i++){
+                    peopleArrayList.set(i, new StorageDecorator(peopleArrayList.get(i)));
+                }
+                break;
+            case metal:
+                for(int i = 0; i < peopleArrayList.size(); i++){
+                    peopleArrayList.set(i, new MetalDecorator(peopleArrayList.get(i)));
+                }
+                break;
+            case bow:
+                for(int i = 0; i < peopleArrayList.size(); i++){
+                    peopleArrayList.set(i, new BowDecorator(peopleArrayList.get(i)));
+                }
+                break;
+            case sword:
+                for(int i = 0; i < peopleArrayList.size(); i++){
+                    peopleArrayList.set(i, new SwordDecorator(peopleArrayList.get(i)));
+                }
+                break;
+            case gunpowder:
+                for(int i = 0; i < peopleArrayList.size(); i++){
+                    peopleArrayList.set(i, new GunpowderDecorator(peopleArrayList.get(i)));
+                }
+                break;
+            default:
+                System.out.println("some error has occured");
         }
     }
 

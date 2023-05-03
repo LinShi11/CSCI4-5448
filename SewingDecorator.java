@@ -1,7 +1,11 @@
 public class SewingDecorator extends MagicItemDecorator{
 
+	public SewingDecorator(People person) {
+		super(person);
+	}
+
 	public int getClothes() {
-		return 0;
+		return person.getClothes() + 1;
 	}
 
 }

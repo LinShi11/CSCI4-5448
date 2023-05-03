@@ -1,7 +1,11 @@
 public class AxeDecorator extends MagicItemDecorator{
-	
-	public int getFood() {
-		return 0;
+
+	public AxeDecorator(People person) {
+		super(person);
+	}
+
+	public int getWood() {
+		return person.getWood() + 1;
 	}
 
 }

@@ -1,7 +1,11 @@
 public class BaitDecorator extends MagicItemDecorator{
-	
+
+	public BaitDecorator(People person) {
+		super(person);
+	}
+
 	public int getMeat() {
-		return 0;
+		return person.getMeat() + 1;
 	}
 
 }
