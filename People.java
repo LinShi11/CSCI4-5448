@@ -17,10 +17,6 @@ public interface People{
 	
 	int getHealth();
 
-	boolean getStatus();
-	
-	void setStatus(boolean status);
-
 	Enum.jobType getType();
 
 }

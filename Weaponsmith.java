@@ -43,15 +43,6 @@ public class Weaponsmith implements People{
         return 0;
     }
 
-    @Override
-    public boolean getStatus() {
-        return false;
-    }
-
-    @Override
-    public void setStatus(boolean status) {
-
-    }
 
     @Override
     public Enum.jobType getType() {

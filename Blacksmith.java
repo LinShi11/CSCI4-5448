@@ -3,10 +3,6 @@ public class Blacksmith implements Building{
     public Blacksmith(){
         type = Enum.buildingType.Blacksmith;
     }
-//    @Override
-//    public int getLimit() {
-//        return 2;
-//    }
     @Override
     public Enum.buildingType getType() {
         return type;

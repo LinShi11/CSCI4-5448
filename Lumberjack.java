@@ -45,16 +45,6 @@ public class Lumberjack implements People{
     }
 
     @Override
-    public boolean getStatus() {
-        return false;
-    }
-
-    @Override
-    public void setStatus(boolean status) {
-
-    }
-
-    @Override
     public Enum.jobType getType() {
         return type;
     }

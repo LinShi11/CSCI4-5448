@@ -13,7 +13,7 @@ public class UserActions{
 	}
 
 	public int getMeat() {
-		return random.nextInt(5) + 5; //5-10 pounds
+		return random.nextInt(5) + 1; //1-5 pounds
 	}
 
 	public int getWater() {
@@ -25,11 +25,11 @@ public class UserActions{
 	}
 
 	public int getWood() {
-		return random.nextInt(10) + 5; //5-15 pounds
+		return random.nextInt(5) + 5; //5-10 pounds
 	}
 
 	public int getRock() {
-		return random.nextInt(10) + 10; //10-20 pounds
+		return random.nextInt(5) + 5; //5-10 pounds
 	}
 
 	public int getClothes() {

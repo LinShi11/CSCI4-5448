@@ -15,7 +15,7 @@ public class Gather implements People{
 
     @Override
     public int getWater() {
-        return 0;
+        return -1;
     }
 
     @Override
@@ -41,16 +41,6 @@ public class Gather implements People{
     @Override
     public int getHealth() {
         return 0;
-    }
-
-    @Override
-    public boolean getStatus() {
-        return false;
-    }
-
-    @Override
-    public void setStatus(boolean status) {
-
     }
 
     @Override

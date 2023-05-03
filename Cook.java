@@ -10,7 +10,7 @@ public class Cook implements People{
 
     @Override
     public int getMeat() {
-        return 0;
+        return -2;
     }
 
     @Override
@@ -41,16 +41,6 @@ public class Cook implements People{
     @Override
     public int getHealth() {
         return 0;
-    }
-
-    @Override
-    public boolean getStatus() {
-        return false;
-    }
-
-    @Override
-    public void setStatus(boolean status) {
-
     }
 
     @Override
