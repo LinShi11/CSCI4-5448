@@ -62,7 +62,7 @@ public class GameUI {
         startButtonPanel.setBounds(400, 300, 200, 100);
         startButtonPanel.setBackground(Color.black);
         JButton temp;
-        temp = new JButton("Start");
+        temp = new JButton("New User");
         temp.setBackground(Color.black);
         temp.setForeground(Color.white);
         temp.setFont(normalFont);
@@ -309,7 +309,6 @@ public class GameUI {
     }
 
     public void dailyRepaint(){
-//        con.removeAll();
         con.remove(eventAnnouncerPanel);
         con.remove(resourcesPanel);
         con.remove(buildingPanel);

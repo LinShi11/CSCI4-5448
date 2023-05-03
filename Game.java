@@ -93,13 +93,15 @@ public class Game {
         return resourceMap;
     }
     public void addBuildings(Enum.buildingType type){
-        Building building = buildingFactory.constructBuilding(type);
-        if(building.getType() == Enum.buildingType.Tradecart){
-            buildingMap.put(Enum.buildingType.Tradecart, 1);
-        } else {
-            buildingMap.put(building.getType(), (buildingMap.get(building.getType()) + 1));
+        if(possibleBuild(type)) {
+            Building building = buildingFactory.constructBuilding(type);
+            if (building.getType() == Enum.buildingType.Tradecart) {
+                buildingMap.put(Enum.buildingType.Tradecart, 1);
+            } else {
+                buildingMap.put(building.getType(), (buildingMap.get(building.getType()) + 1));
+            }
+            getVillagerCount();
         }
-        getVillagerCount();
     }
     public void assignJobs(Enum.jobType type){
         if(jobMap.get(Enum.jobType.Villager) > 0) {
@@ -187,6 +189,69 @@ public class Game {
 
     public void getVillagerCount(){
         jobMap.put(Enum.jobType.Villager, buildingMap.get(Enum.buildingType.Hut) * Helper.getLimit(Enum.buildingType.Hut));
+    }
+
+    public void setResource(Enum.resourceType type, int usedCount){
+        resourceMap.put(type, resourceMap.get(type)-usedCount);
+    }
+
+    public boolean possibleBuild(Enum.buildingType type){
+
+        switch (type){
+            case Smokehouse:
+                if(resourceMap.get(Enum.resourceType.wood) >= 5){
+                    setResource(Enum.resourceType.wood, 5);
+                    return true;
+                }
+                System.out.println("You do not have enough resources");
+                return false;
+            case Factory:
+                return false;
+            case Bucket:
+                if(resourceMap.get(Enum.resourceType.wood) >= 5){
+                    setResource(Enum.resourceType.wood, 5);
+                    return true;
+                }
+                System.out.println("You do not have enough resources");
+                return false;
+            case Trap:
+                if(resourceMap.get(Enum.resourceType.wood) >= 5){
+                    setResource(Enum.resourceType.wood, 5);
+                    return true;
+                }
+                System.out.println("You do not have enough resources");
+                return false;
+            case Hut:
+                if(resourceMap.get(Enum.resourceType.wood) >= 5){
+                    setResource(Enum.resourceType.wood, 5);
+                    return true;
+                }
+                System.out.println("You do not have enough resources");
+                return false;
+            case Blacksmith:
+                if(resourceMap.get(Enum.resourceType.wood) >= 5 && resourceMap.get(Enum.resourceType.rock) >= 5){
+                    setResource(Enum.resourceType.wood, 5);
+                    setResource(Enum.resourceType.rock, 5);
+                    return true;
+                }
+                System.out.println("You do not have enough resources");
+                return false;
+            case Mines:
+                if(resourceMap.get(Enum.resourceType.wood) >= 5){
+                    setResource(Enum.resourceType.wood, 5);
+                    return true;
+                }
+                System.out.println("You do not have enough resources");
+                return false;
+            case Tradecart:
+                if(resourceMap.get(Enum.resourceType.wood) >= 5){
+                    return true;
+                }
+                System.out.println("You do not have enough resources");
+                return false;
+            default:
+                return false;
+        }
     }
 
     public void setJobLimit(){
