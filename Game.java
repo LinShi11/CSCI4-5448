@@ -12,6 +12,7 @@ public class Game implements Subject{
     HashMap<Enum.stats, Integer> statsMap;
     ArrayList<Enum.resourceType> cartResourceItemList;
     ArrayList<Enum.magicItems> magicItemsArrayList;
+    ArrayList<MagicItemDecorator> magicItemDecoratorArrayList;
     ArrayList<Enum.resourceType> dailyAgenda;
     ArrayList<People> peopleArrayList;
     UserActions userActions;
@@ -75,6 +76,7 @@ public class Game implements Subject{
         magicItemsArrayList = new ArrayList<>();
         dailyAgenda = new ArrayList<>();
         peopleArrayList = new ArrayList<>();
+        magicItemDecoratorArrayList = new ArrayList<>();
 
         for(int i = 0; i < 10; i ++){
             peopleArrayList.add(jobFactory.assignJob(Enum.jobType.Villager));
@@ -120,7 +122,7 @@ public class Game implements Subject{
                 if (magicItemsArrayList.get(i) == type) {
                     magicItemsArrayList.remove(i);
                     magicItemMap.put(type, magicItemMap.get(type) + 1);
-                    System.out.println(magicItemMap.get(type));
+                    magicItemDecoratorArrayList.add(type)
                     break;
                 }
             }

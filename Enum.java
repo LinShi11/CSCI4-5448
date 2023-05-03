@@ -38,16 +38,16 @@ public class Enum {
     }
 
     enum magicItems{
-        matches,
-        axe,
-        needle,
-        pickaxe,
-        bait,
-        storage,
-        metal,
-        bow,
-        sword,
-        gunpowder
+        matches, // get more food
+        axe, // get more wood
+        needle, // get more clothes
+        pickaxe, // get more rocks and gold
+        bait, // get more meat
+        storage, // get more water
+        metal, // get more health
+        bow, // get more meat and fur
+        sword, // get more defense
+        gunpowder // get more meat/ fur/ defense
     }
 
     enum mapLocationType{
