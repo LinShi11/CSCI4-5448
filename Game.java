@@ -99,6 +99,9 @@ public class Game implements Subject{
                 buildingMap.put(building.getType(), (buildingMap.get(building.getType()) + 1));
             }
             getVillagerCount();
+            notifyObserver("Constructed a " + type.toString());
+        }else {
+            notifyObserver("Cannot construct a " + type.toString());
         }
     }
     public void assignJobs(Enum.jobType type){
@@ -115,7 +118,6 @@ public class Game implements Subject{
             jobMap.put(Enum.jobType.Villager, (jobMap.get(Enum.jobType.Villager)) - 1);
             notifyObserver("Assigned a new " + type.toString());
         } else{
-            System.out.println("test");
             notifyObserver("Cannot assign Villager as " + type.toString());
         }
     }
@@ -132,7 +134,9 @@ public class Game implements Subject{
             People person = jobFactory.assignJob(Enum.jobType.Villager);
             peopleArrayList.add(person);
             jobMap.put(Enum.jobType.Villager, (jobMap.get(Enum.jobType.Villager)) + 1);
-
+            notifyObserver("Removed a "+ type.toString());
+        } else{
+            notifyObserver("Cannot remove a " + type.toString());
         }
     }
 

@@ -15,6 +15,7 @@ public class GameUI implements Observer{
     Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
     Font normalFont = new Font("Times New Roman", Font.PLAIN, 28);
     Font arrowFont = new Font("Times New Roman", Font.PLAIN, 12);
+    Font annoucerFont = new Font("Times New Roman", Font.PLAIN, 18);
 
     JPanel titlePanel, startButtonPanel, eventAnnouncerPanel, buildingButtonPanel, resourcesPanel, buildingPanel, peoplePanel, numberPanel, arrowPanel, healthPanel, mapPanel, userActionPanel, dailyTaskPanel, nextDayPanel, cartItemsPanel, magicItemPanel;
     JLabel titleLabel;
@@ -249,12 +250,14 @@ public class GameUI implements Observer{
 
     public void setEventAnnouncerPanel(String events){
         eventAnnouncerPanel = new JPanel();
-        eventAnnouncerPanel.setBounds(100, 100, 200, 1000);
+        eventAnnouncerPanel.setBounds(50, 100, 300, 1000);
         eventAnnouncerPanel.setBackground(Color.black);
-        System.out.println(events);
         announcer = new JTextArea(events);
-        announcer.setBounds(100, 100, 200, 1000);
-        textColorHelper(announcer);
+        announcer.setBounds(50, 100, 300, 1000);
+        announcer.setForeground(Color.white);
+        announcer.setBackground(Color.black);
+        announcer.setFont(annoucerFont);
+        announcer.setEditable(false);
         announcer.setLineWrap(true);
         announcer.setWrapStyleWord(true);
         eventAnnouncerPanel.add(announcer);
