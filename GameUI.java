@@ -645,8 +645,12 @@ public class GameUI implements Observer{
                     map();
                     break;
                 case "tradecart":
-                    mapLocation = Enum.mapLocationType.tradecart;
-                    map();
+                    if(game.getBuildingMap().get(Enum.buildingType.Tradecart) != 0) {
+                        mapLocation = Enum.mapLocationType.tradecart;
+                        map();
+                    } else{
+                        game.notifyObserver("A tradecart must be build before you can use it");
+                    }
                     break;
                 default:
                     System.out.println("I am not sure what you created");
