@@ -17,10 +17,11 @@ public class GameUI implements Observer{
     Font arrowFont = new Font("Times New Roman", Font.PLAIN, 12);
     Font annoucerFont = new Font("Times New Roman", Font.PLAIN, 18);
 
-    JPanel titlePanel, startButtonPanel, eventAnnouncerPanel, buildingButtonPanel, resourcesPanel, buildingPanel, peoplePanel, numberPanel, arrowPanel, healthPanel, mapPanel, userActionPanel, dailyTaskPanel, nextDayPanel, cartItemsPanel, magicItemPanel;
+    JPanel titlePanel, startButtonPanel, eventAnnouncerPanel, buildingButtonPanel, resourcesPanel, buildingPanel, peoplePanel, numberPanel, arrowPanel, healthPanel, mapPanel,
+            userActionPanel, dailyTaskPanel, nextDayPanel, cartItemsPanel, magicItemPanel, tradeCartInfoPanel;
     JLabel titleLabel;
     JButton villageButton, actionButton, tradecartMenu;
-    JTextArea announcer, resources, buildings, health, dailyTaskInfo, magicItems;
+    JTextArea announcer, resources, buildings, health, dailyTaskInfo, tradeCartInfo;
     TitleScreenHandler tsHandler = new TitleScreenHandler();
     ChoiceHandler choiceHandler = new ChoiceHandler();
     UserActionHandler userActionHandler = new UserActionHandler();
@@ -30,8 +31,9 @@ public class GameUI implements Observer{
     NextDayHandler nextDayHandler = new NextDayHandler();
     Game game;
     Enum.mapLocationType mapLocation;
-    ArrayList<JButton> dailyTasksButtons;
+    ArrayList<JButton> dailyTasksButtons, tradeCartResourceButtons, tradeCartMagicButtons;
     Logger logger;
+    boolean newDay;
     public GameUI(Game tempGame){
         game = tempGame;
         window = new JFrame();
@@ -42,12 +44,15 @@ public class GameUI implements Observer{
         con = window.getContentPane();
         mapLocation = Enum.mapLocationType.village;
         dailyTasksButtons = new ArrayList<>();
+        tradeCartMagicButtons = new ArrayList<>();
+        tradeCartResourceButtons = new ArrayList<>();
 
         createAllChangablePanels();
         stopAllButton();
         login();
         window.setVisible(true);
         logger = Logger.getInstance();
+        newDay = true;
 
     }
 
@@ -196,10 +201,50 @@ public class GameUI implements Observer{
 
         con.add(nextDayPanel);
 
+        tradeCartInfoPanel = new JPanel();
+        tradeCartInfoPanel.setBackground(Color.black);
+        tradeCartInfoPanel.setBounds(400, 200, 200, 100);
+        tradeCartInfo = new JTextArea("Want anything?");
+        tradeCartInfo.setBounds(400, 200, 200,  100);
+        textColorHelper(tradeCartInfo);
+        tradeCartInfoPanel.add(tradeCartInfo);
+
+        con.add(tradeCartInfoPanel);
+
+
+        cartItemsPanel = new JPanel();
+        cartItemsPanel.setBackground(Color.black);
+        cartItemsPanel.setBounds(700, 300, 200, 500);
+        con.add(cartItemsPanel);
+
+
     }
 
-    public void createTradecartItems(boolean newDay){
-        // skip for rn
+    public void createTradecartItems(){
+        if(newDay){
+            game.setDailyItems();
+            JButton temp;
+            ArrayList<Enum.resourceType> cartResourceItems = game.getCartResourceItemList();
+            for(int i = 0; i < cartResourceItems.size(); i++){
+                temp = new JButton(cartResourceItems.get(i).toString());
+                tradeCartResourceButtons.add(temp);
+                addTradeCartItem(temp, "temp", cartItemsPanel);
+            }
+        }
+        cartItemsPanel.setVisible(true);
+        tradeCartInfoPanel.setVisible(true);
+        newDay = false;
+
+    }
+
+    public void addTradeCartItem(JButton button, String command, JPanel panel){
+        button.setBackground(Color.black);
+        button.setForeground(Color.white);
+        button.setFont(normalFont);
+        button.setFocusPainted(false);
+//        button.addActionListener(deleteResource);
+        button.setActionCommand(command);
+        panel.add(button);
     }
 
     public void jobRepaint(){
@@ -346,7 +391,7 @@ public class GameUI implements Observer{
                 break;
             case tradecart:
                 stopAllButton();
-                createTradecartItems(true);
+                createTradecartItems();
                 break;
             default:
                 System.out.println("The map navigation is incorrect");
@@ -359,6 +404,7 @@ public class GameUI implements Observer{
 
     public void stopAllButton(){
         titlePanel.setVisible(false);
+        tradeCartInfoPanel.setVisible(false);
         startButtonPanel.setVisible(false);
         buildingButtonPanel.setVisible(false);
         peoplePanel.setVisible(false);
@@ -366,6 +412,7 @@ public class GameUI implements Observer{
         arrowPanel.setVisible(false);
         userActionPanel.setVisible(false);
         dailyTaskPanel.setVisible(false);
+        cartItemsPanel.setVisible(false);
         mapPanel.setVisible(true);
         nextDayPanel.setVisible(true);
     }
@@ -460,6 +507,7 @@ public class GameUI implements Observer{
         public void actionPerformed(ActionEvent e) {
             game.dailyUpdate();
             dailyRepaint();
+//            newDay = true;
         }
     }
 
@@ -513,7 +561,8 @@ public class GameUI implements Observer{
                     map();
                     break;
                 case "tradecart":
-                    System.out.println("tradecart map");
+                    mapLocation = Enum.mapLocationType.tradecart;
+                    map();
                     break;
                 default:
                     System.out.println("I am not sure what you created");

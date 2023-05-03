@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Random;
 
 public class Game implements Subject{
 
@@ -8,6 +9,7 @@ public class Game implements Subject{
 
     HashMap<Enum.jobType, Integer> jobMap;
     HashMap<Enum.stats, Integer> statsMap;
+    ArrayList<Enum.resourceType> cartResourceItemList;
     ArrayList<Enum.magicItems> magicItemsArrayList;
     ArrayList<Enum.resourceType> dailyAgenda;
     ArrayList<People> peopleArrayList;
@@ -65,6 +67,7 @@ public class Game implements Subject{
             peopleArrayList.add(jobFactory.assignJob(Enum.jobType.Villager));
         }
         userActions = new UserActions();
+        cartResourceItemList = new ArrayList<>();
 
     }
 
@@ -84,9 +87,44 @@ public class Game implements Subject{
         }
     }
 
+    public void setDailyItems(){
+        Random random = new Random();
+        cartResourceItemList = new ArrayList<>();
+        for(int i = 0; i < 5; i++){
+            cartResourceItemList.add(findItem(random.nextInt(resourceMap.size())));
+        }
+        for(Enum.resourceType resource: cartResourceItemList){
+            System.out.println(resource.toString());
+        }
+    }
+
+    private Enum.resourceType findItem(int randomValue){
+        switch (randomValue){
+            case 0:
+                return Enum.resourceType.wood;
+            case 1:
+                return Enum.resourceType.food;
+            case 2:
+                return Enum.resourceType.meat;
+            case 3:
+                return Enum.resourceType.fur;
+            case 4:
+                return Enum.resourceType.rock;
+            case 5:
+                return Enum.resourceType.water;
+            case 6:
+                return Enum.resourceType.clothes;
+            case 7:
+                return Enum.resourceType.gold;
+            default:
+                return null;
+        }
+    }
+
     public ArrayList<Enum.resourceType> getDailyAgenda(){
         return dailyAgenda;
     }
+    public ArrayList<Enum.resourceType> getCartResourceItemList(){return cartResourceItemList;}
 
     public int getTotalMagicItemCount(){
         return totalMagicItemCount;
