@@ -7,9 +7,9 @@ public class Game implements Subject{
     HashMap<Enum.buildingType, Integer> buildingMap;
 
     HashMap<Enum.jobType, Integer> jobMap;
+    HashMap<Enum.stats, Integer> statsMap;
     ArrayList<Enum.magicItems> magicItemsArrayList;
     ArrayList<Enum.resourceType> dailyAgenda;
-    HashMap<Enum.jobType, Integer> jobLimit;
     ArrayList<People> peopleArrayList;
     int totalMagicItemCount = 10;
     UserActions userActions;
@@ -50,7 +50,9 @@ public class Game implements Subject{
         jobMap.put(Enum.jobType.Repairer, 0);
         jobMap.put(Enum.jobType.Villager, 0);
 
-
+        statsMap = new HashMap<>();
+        statsMap.put(Enum.stats.health, 100);
+        statsMap.put(Enum.stats.defense, 100);
 
         magicItemsArrayList = new ArrayList<>();
         dailyAgenda = new ArrayList<>();
@@ -198,6 +200,10 @@ public class Game implements Subject{
 
     public HashMap<Enum.jobType, Integer> getJobMap(){
         return jobMap;
+    }
+
+    public HashMap<Enum.stats, Integer> getStatsMap(){
+        return statsMap;
     }
 
     public ArrayList<Enum.magicItems> getMagicItemsArrayList(){

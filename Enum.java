@@ -52,4 +52,9 @@ public class Enum {
         action,
         tradecart
     }
+
+    enum stats{
+        health,
+        defense
+    }
 }

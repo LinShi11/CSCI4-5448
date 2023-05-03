@@ -266,29 +266,31 @@ public class GameUI implements Observer{
     public void gamePlayScreen(){
 
         resourcesPanel = new JPanel();
-        resourcesPanel.setBounds(1000, 100, 400, 300);
+        resourcesPanel.setBounds(1000, 100, 300, 300);
         resourcesPanel.setBackground(Color.BLACK);
 
         con.add(resourcesPanel);
         resources = new JTextArea();
 
-        resources.setBounds(1000,100,400,300);
+        resources.setBounds(1000,100,300,300);
 
         resources.setText("Resources \t Amount\n");
+        String tempString;
         for(Map.Entry<Enum.resourceType, Integer> elements: game.getResourceMap().entrySet()){
-            resources.append(elements.getKey() + "\t" + elements.getValue() + "\n");
+            tempString = elements.getKey().toString();
+            resources.append(tempString.substring(0,1).toUpperCase() + tempString.substring(1) + "\t" + elements.getValue() + "\n");
         }
         textColorHelper(resources);
         resourcesPanel.add(resources);
 
         buildingPanel = new JPanel();
-        buildingPanel.setBounds(1000, 500, 400, 300);
+        buildingPanel.setBounds(1000, 500, 300, 300);
         buildingPanel.setBackground(Color.black);
 
         con.add(buildingPanel);
 
         buildings = new JTextArea();
-        buildings.setBounds(1000,500,400,300);
+        buildings.setBounds(1000,500,300,300);
 
         buildings.setText("Building\t Amount\n");
         for(Map.Entry<Enum.buildingType, Integer> elements: game.getBuildingMap().entrySet()){
@@ -298,16 +300,17 @@ public class GameUI implements Observer{
         buildingPanel.add(buildings);
 
         healthPanel = new JPanel();
-        healthPanel.setBounds(1000, 900, 400, 200);
+        healthPanel.setBounds(1300, 100, 300, 300);
         healthPanel.setBackground(Color.black);
 
         con.add(healthPanel);
 
         health = new JTextArea();
-        health.setBounds(1000,900,400,200);
-
-        health.append("Health\t 100\n");
-        health.append("Defense\t 100\n");
+        health.setBounds(1300,100,300,300);
+        for(Map.Entry<Enum.stats, Integer> elements: game.getStatsMap().entrySet()){
+            tempString = elements.getKey().toString();
+            health.append(tempString.substring(0,1).toUpperCase() + tempString.substring(1) + "\t" + elements.getValue() + "\n");
+        }
         textColorHelper(health);
         healthPanel.add(health);
 
