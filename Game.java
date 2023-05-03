@@ -104,17 +104,19 @@ public class Game {
         }
     }
     public void assignJobs(Enum.jobType type){
-        if(jobMap.get(Enum.jobType.Villager) > 0) {
-            People person = jobFactory.assignJob(type);
-            peopleArrayList.add(person);
-            jobMap.put(person.getType(), (jobMap.get(person.getType()) + 1));
-            for(People p: peopleArrayList){
-                if(p.getType() == Enum.jobType.Villager){
-                    peopleArrayList.remove(p);
-                    break;
+        if(possibleJob(type)) {
+            if (jobMap.get(Enum.jobType.Villager) > 0) {
+                People person = jobFactory.assignJob(type);
+                peopleArrayList.add(person);
+                jobMap.put(person.getType(), (jobMap.get(person.getType()) + 1));
+                for (People p : peopleArrayList) {
+                    if (p.getType() == Enum.jobType.Villager) {
+                        peopleArrayList.remove(p);
+                        break;
+                    }
                 }
+                jobMap.put(Enum.jobType.Villager, (jobMap.get(Enum.jobType.Villager)) - 1);
             }
-            jobMap.put(Enum.jobType.Villager, (jobMap.get(Enum.jobType.Villager)) - 1);
         }
     }
 
@@ -254,12 +256,51 @@ public class Game {
         }
     }
 
-    public void setJobLimit(){
-        jobLimit.put(Enum.jobType.Trapper, buildingMap.get(Enum.buildingType.Trap) * Helper.getLimit(Enum.buildingType.Trap));
-        jobLimit.put(Enum.jobType.Waterman, buildingMap.get(Enum.buildingType.Bucket) * Helper.getLimit(Enum.buildingType.Bucket));
-        jobLimit.put(Enum.jobType.Weaponsmith, buildingMap.get(Enum.buildingType.Blacksmith) * Helper.getLimit(Enum.buildingType.Blacksmith));
-        jobLimit.put(Enum.jobType.Cook, buildingMap.get(Enum.buildingType.Smokehouse) * Helper.getLimit(Enum.buildingType.Smokehouse));
-        jobLimit.put(Enum.jobType.Tailor, buildingMap.get(Enum.buildingType.Factory) * Helper.getLimit(Enum.buildingType.Factory));
-        jobLimit.put(Enum.jobType.Miner, buildingMap.get(Enum.buildingType.Mines) * Helper.getLimit(Enum.buildingType.Mines));
+    public boolean possibleJob(Enum.jobType type){
+        switch (type){
+            case Cook:
+                if(buildingMap.get(Enum.buildingType.Smokehouse) * 1 > jobMap.get(Enum.jobType.Cook)){
+                    return true;
+                }
+                return false;
+            case Gather:
+                return true;
+            case Hunter:
+                return true;
+            case Miner:
+                if(buildingMap.get(Enum.buildingType.Mines) * 1 > jobMap.get(Enum.jobType.Miner)){
+                    return true;
+                }
+                return false;
+            case Tailor:
+                if(buildingMap.get(Enum.buildingType.Factory) * 1 > jobMap.get(Enum.jobType.Tailor)){
+                    return true;
+                }
+                return false;
+            case Trapper:
+                if(buildingMap.get(Enum.buildingType.Trap) * 1 > jobMap.get(Enum.jobType.Trapper)){
+                    return true;
+                }
+                return false;
+            case Repairer:
+                return true;
+            case Waterman:
+                if(buildingMap.get(Enum.buildingType.Bucket) * 1 > jobMap.get(Enum.jobType.Waterman)){
+                    return true;
+                }
+                return false;
+            case Lumberjack:
+                return true;
+            case Weaponsmith:
+                if(buildingMap.get(Enum.buildingType.Blacksmith) * 1 > jobMap.get(Enum.jobType.Weaponsmith)){
+                    return true;
+                }
+                return false;
+            case Villager:
+                return true;
+            default:
+                return false;
+        }
+
     }
 }
