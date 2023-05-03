@@ -101,7 +101,7 @@ public class Game implements Subject{
             getVillagerCount();
             notifyObserver("Constructed a " + type.toString());
         }else {
-            notifyObserver("Cannot construct a " + type.toString());
+            notifyObserver("Cannot construct a " + type.toString() + ": ");
         }
     }
     public void assignJobs(Enum.jobType type){
@@ -118,7 +118,7 @@ public class Game implements Subject{
             jobMap.put(Enum.jobType.Villager, (jobMap.get(Enum.jobType.Villager)) - 1);
             notifyObserver("Assigned a new " + type.toString());
         } else{
-            notifyObserver("Cannot assign Villager as " + type.toString());
+            notifyObserver("Cannot assign a " + type.toString());
         }
     }
 
@@ -149,31 +149,31 @@ public class Game implements Subject{
             switch (agenda){
                 case wood:
                     resourceMap.put(Enum.resourceType.wood, (resourceMap.get(Enum.resourceType.wood) + userActions.getWood()));
-                    notifyObserver("Collected Wood");
+                    notifyObserver("     Collected Wood");
                     break;
                 case food:
                     resourceMap.put(Enum.resourceType.food, (resourceMap.get(Enum.resourceType.food) + userActions.getFood()));
-                    notifyObserver("Collected Food");
+                    notifyObserver("     Collected Food");
                     break;
                 case meat:
                     resourceMap.put(Enum.resourceType.meat, (resourceMap.get(Enum.resourceType.meat) + userActions.getMeat()));
-                    notifyObserver("Collected Meat");
+                    notifyObserver("     Collected Meat");
                     break;
                 case rock:
                     resourceMap.put(Enum.resourceType.rock, (resourceMap.get(Enum.resourceType.rock) + userActions.getRock()));
-                    notifyObserver("Collected Rock");
+                    notifyObserver("     Collected Rock");
                     break;
                 case water:
                     resourceMap.put(Enum.resourceType.water, (resourceMap.get(Enum.resourceType.water) + userActions.getWater()));
-                    notifyObserver("Collected Water");
+                    notifyObserver("     Collected Water");
                     break;
                 case clothes:
                     resourceMap.put(Enum.resourceType.clothes, (resourceMap.get(Enum.resourceType.clothes) + userActions.getClothes()));
-                    notifyObserver("Collected Clothes");
+                    notifyObserver("     Collected Clothes");
                     break;
                 case fur:
                     resourceMap.put(Enum.resourceType.fur, (resourceMap.get(Enum.resourceType.fur) + userActions.getFur()));
-                    notifyObserver("Collected Fur");
+                    notifyObserver("     Collected Fur");
                     break;
                 default:
                     System.out.println("nothing");
@@ -215,34 +215,41 @@ public class Game implements Subject{
     public boolean possibleBuild(Enum.buildingType type){
         switch (type){
             case Smokehouse:
-                if(resourceMap.get(Enum.resourceType.wood) >= 5){
+                if(resourceMap.get(Enum.resourceType.wood) >= 5 && resourceMap.get(Enum.resourceType.meat) >= 5){
                     setResource(Enum.resourceType.wood, 5);
+                    setResource(Enum.resourceType.meat, 5);
                     return true;
                 }
-                System.out.println("You do not have enough resources");
+                notifyObserver("     Not enough resources");
                 return false;
             case Factory:
-                return false;
-            case Bucket:
-                if(resourceMap.get(Enum.resourceType.wood) >= 5){
+                if(resourceMap.get(Enum.resourceType.wood) >= 5 && resourceMap.get(Enum.resourceType.fur) >= 5){
                     setResource(Enum.resourceType.wood, 5);
+                    setResource(Enum.resourceType.fur, 5);
                     return true;
                 }
-                System.out.println("You do not have enough resources");
+                notifyObserver("     Not enough resources");
+                return false;
+            case Bucket:
+                if(resourceMap.get(Enum.resourceType.wood) >= 2){
+                    setResource(Enum.resourceType.wood, 2);
+                    return true;
+                }
+                notifyObserver("     Not enough resources");
                 return false;
             case Trap:
                 if(resourceMap.get(Enum.resourceType.wood) >= 5){
                     setResource(Enum.resourceType.wood, 5);
                     return true;
                 }
-                System.out.println("You do not have enough resources");
+                notifyObserver("     Not enough resources");
                 return false;
             case Hut:
-                if(resourceMap.get(Enum.resourceType.wood) >= 5){
-                    setResource(Enum.resourceType.wood, 5);
+                if(resourceMap.get(Enum.resourceType.wood) >= 10){
+                    setResource(Enum.resourceType.wood, 10);
                     return true;
                 }
-                System.out.println("You do not have enough resources");
+                notifyObserver("     Not enough resources");
                 return false;
             case Blacksmith:
                 if(resourceMap.get(Enum.resourceType.wood) >= 5 && resourceMap.get(Enum.resourceType.rock) >= 5){
@@ -250,20 +257,20 @@ public class Game implements Subject{
                     setResource(Enum.resourceType.rock, 5);
                     return true;
                 }
-                System.out.println("You do not have enough resources");
+                notifyObserver("     Not enough resources");
                 return false;
             case Mines:
-                if(resourceMap.get(Enum.resourceType.wood) >= 5){
-                    setResource(Enum.resourceType.wood, 5);
+                if(resourceMap.get(Enum.resourceType.rock) >= 5){
+                    setResource(Enum.resourceType.rock, 5);
                     return true;
                 }
-                System.out.println("You do not have enough resources");
+                notifyObserver("     Not enough resources");
                 return false;
             case Tradecart:
                 if(resourceMap.get(Enum.resourceType.wood) >= 5){
                     return true;
                 }
-                System.out.println("You do not have enough resources");
+                notifyObserver("     Not enough resources");
                 return false;
             default:
                 return false;
@@ -272,6 +279,7 @@ public class Game implements Subject{
 
     public boolean possibleJob(Enum.jobType type){
         if(jobMap.get(Enum.jobType.Villager) <= 0){
+            notifyObserver("     Not enough villagers");
             return false;
         }
         switch (type){
@@ -279,6 +287,7 @@ public class Game implements Subject{
                 if(buildingMap.get(Enum.buildingType.Smokehouse) * Helper.getJobLimit(Enum.buildingType.Smokehouse) > jobMap.get(Enum.jobType.Cook)){
                     return true;
                 }
+                notifyObserver("     Not enough smokehouse");
                 return false;
             case Gather, Villager, Lumberjack, Repairer, Hunter:
                 return true;
@@ -286,33 +295,37 @@ public class Game implements Subject{
                 if(buildingMap.get(Enum.buildingType.Mines) * Helper.getJobLimit(Enum.buildingType.Mines) > jobMap.get(Enum.jobType.Miner)){
                     return true;
                 }
+                notifyObserver("     Not enough mines");
                 return false;
             case Tailor:
                 if(buildingMap.get(Enum.buildingType.Factory) * Helper.getJobLimit(Enum.buildingType.Factory) > jobMap.get(Enum.jobType.Tailor)){
                     return true;
                 }
+                notifyObserver("     Not enough factory");
                 return false;
             case Trapper:
                 if(buildingMap.get(Enum.buildingType.Trap) * Helper.getJobLimit(Enum.buildingType.Trap) > jobMap.get(Enum.jobType.Trapper)){
                     return true;
                 }
+                notifyObserver("     Not enough trap");
                 return false;
             case Waterman:
                 if(buildingMap.get(Enum.buildingType.Bucket) * Helper.getJobLimit(Enum.buildingType.Bucket) > jobMap.get(Enum.jobType.Waterman)){
                     return true;
                 }
+                notifyObserver("     Not enough bucket");
                 return false;
             case Weaponsmith:
                 if(buildingMap.get(Enum.buildingType.Blacksmith) * Helper.getJobLimit(Enum.buildingType.Blacksmith) > jobMap.get(Enum.jobType.Weaponsmith)){
                     return true;
                 }
+                notifyObserver("     Not enough blacksmith");
                 return false;
             default:
                 return false;
         }
 
     }
-
     @Override
     public void register(Observer obj) {
         registered.add(obj);
