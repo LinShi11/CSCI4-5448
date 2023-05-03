@@ -309,13 +309,16 @@ public class GameUI {
     }
 
     public void dailyRepaint(){
-        eventAnnouncerPanel.revalidate();
-        resourcesPanel.revalidate();
-        buildingPanel.revalidate();
-        healthPanel.revalidate();
-        con.repaint();
+//        con.removeAll();
+        con.remove(eventAnnouncerPanel);
+        con.remove(resourcesPanel);
+        con.remove(buildingPanel);
+        con.remove(healthPanel);
+        map();
         gamePlayScreen();
         jobRepaint();
+        con.revalidate();
+        con.repaint();
     }
 
     public void map(){

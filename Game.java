@@ -1,3 +1,5 @@
+import org.junit.runner.manipulation.Ordering;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,6 +12,7 @@ public class Game {
     HashMap<Enum.jobType, Integer> jobMap;
     ArrayList<Enum.magicItems> magicItemsArrayList;
     ArrayList<Enum.resourceType> dailyAgenda;
+    HashMap<Enum.jobType, Integer> jobLimit;
     ArrayList<People> peopleArrayList;
     int totalMagicItemCount = 10;
     UserActions userActions;
@@ -167,6 +170,7 @@ public class Game {
             resourceMap.put(Enum.resourceType.clothes, (resourceMap.get(Enum.resourceType.clothes) + person.getClothes()));
             resourceMap.put(Enum.resourceType.fur, (resourceMap.get(Enum.resourceType.fur) + person.getFur()));
         }
+        System.out.println(resourceMap.get(Enum.resourceType.wood));
     }
 
     public HashMap<Enum.buildingType, Integer> getBuildingMap(){
@@ -183,6 +187,14 @@ public class Game {
 
     public void getVillagerCount(){
         jobMap.put(Enum.jobType.Villager, buildingMap.get(Enum.buildingType.Hut) * Helper.getLimit(Enum.buildingType.Hut));
-        System.out.println(jobMap.get(Enum.jobType.Villager));
+    }
+
+    public void setJobLimit(){
+        jobLimit.put(Enum.jobType.Trapper, buildingMap.get(Enum.buildingType.Trap) * Helper.getLimit(Enum.buildingType.Trap));
+        jobLimit.put(Enum.jobType.Waterman, buildingMap.get(Enum.buildingType.Bucket) * Helper.getLimit(Enum.buildingType.Bucket));
+        jobLimit.put(Enum.jobType.Weaponsmith, buildingMap.get(Enum.buildingType.Blacksmith) * Helper.getLimit(Enum.buildingType.Blacksmith));
+        jobLimit.put(Enum.jobType.Cook, buildingMap.get(Enum.buildingType.Smokehouse) * Helper.getLimit(Enum.buildingType.Smokehouse));
+        jobLimit.put(Enum.jobType.Tailor, buildingMap.get(Enum.buildingType.Factory) * Helper.getLimit(Enum.buildingType.Factory));
+        jobLimit.put(Enum.jobType.Miner, buildingMap.get(Enum.buildingType.Mines) * Helper.getLimit(Enum.buildingType.Mines));
     }
 }
