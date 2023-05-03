@@ -17,6 +17,7 @@ public interface People{
 	
 	int getHealth();
 	int getDefense();
+	int getGold();
 
 	Enum.jobType getType();
 

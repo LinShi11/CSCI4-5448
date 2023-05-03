@@ -94,7 +94,7 @@ public class GameUI implements Observer{
         userActionPanel = new JPanel();
         userActionPanel.setBounds(400, 200, 200,350);
         userActionPanel.setBackground(Color.black);
-        userActionPanel.setLayout(new GridLayout(7, 1));
+        userActionPanel.setLayout(new GridLayout(8, 1));
 
         temp = new JButton("Wood");
         userActionButtons(temp, "gatherWood");
@@ -110,12 +110,14 @@ public class GameUI implements Observer{
         userActionButtons(temp, "gatherClothes");
         temp = new JButton("Fur");
         userActionButtons(temp, "gatherFur");
+        temp = new JButton("Gold");
+        userActionButtons(temp, "gatherGold");
         con.add(userActionPanel);
 
         buildingButtonPanel = new JPanel();
         buildingButtonPanel.setBounds(400, 200, 200, 400);
         buildingButtonPanel.setBackground(Color.black);
-        buildingButtonPanel.setLayout(new GridLayout(8,1));
+        buildingButtonPanel.setLayout(new GridLayout(9,1));
         con.add(buildingButtonPanel);
 
         temp = new JButton("Hut");
@@ -132,23 +134,25 @@ public class GameUI implements Observer{
         buttonHelper(temp, "bucket");
         temp = new JButton("Trap");
         buttonHelper(temp, "trap");
+        temp = new JButton("Gold Mine");
+        buttonHelper(temp, "gold mine");
         temp = new JButton("Tradecart");
         buttonHelper(temp, "tradecart");
 
         peoplePanel = new JPanel();
-        peoplePanel.setBounds(650, 200, 200, 550);
+        peoplePanel.setBounds(650, 200, 200, 600);
         peoplePanel.setBackground(Color.black);
         peoplePanel.setLayout(new GridLayout(game.getJobMap().size(),1));
         con.add(peoplePanel);
 
         numberPanel = new JPanel();
-        numberPanel.setBounds(850, 200, 80, 550);
+        numberPanel.setBounds(850, 200, 80, 600);
         numberPanel.setBackground(Color.black);
         numberPanel.setLayout(new GridLayout(game.getJobMap().size(), 1));
         con.add(numberPanel);
 
         arrowPanel = new JPanel();
-        arrowPanel.setBounds(930, 200, 50, 500);
+        arrowPanel.setBounds(930, 200, 50, 550);
         arrowPanel.setBackground(Color.black);
         arrowPanel.setLayout(new GridLayout((game.getJobMap().size()-1)*2, 1 ));
         con.add(arrowPanel);
@@ -485,6 +489,9 @@ public class GameUI implements Observer{
                 case "delete_fur":
                     game.deleteDailyAgenda(Enum.resourceType.fur);
                     break;
+                case "delete_gold":
+                    game.deleteDailyAgenda(Enum.resourceType.gold);
+                    break;
                 default:
                     System.out.println("I am not sure what you are trying to delete");
             }
@@ -539,6 +546,9 @@ public class GameUI implements Observer{
                     break;
                 case "gatherFur":
                     game.setDailyAgenda(Enum.resourceType.fur);
+                    break;
+                case "gatherGold":
+                    game.setDailyAgenda(Enum.resourceType.gold);
                     break;
                 default:
                     System.out.println("I am not sure what you created");
@@ -613,6 +623,12 @@ public class GameUI implements Observer{
                 case "Trapper_down":
                     game.removeJobs(Enum.jobType.Trapper);
                     break;
+                case "Gold_Miner_up":
+                    game.assignJobs(Enum.jobType.Gold_Miner);
+                    break;
+                case "Gold_Miner_down":
+                    game.removeJobs(Enum.jobType.Gold_Miner);
+                    break;
                 default:
                     System.out.println("I am not sure what you created");
             }
@@ -648,6 +664,9 @@ public class GameUI implements Observer{
                     break;
                 case "tradecart":
                     game.addBuildings(Enum.buildingType.Tradecart);
+                    break;
+                case "gold mine":
+                    game.addBuildings(Enum.buildingType.Gold_Mine);
                     break;
                 default:
                     System.out.println("I am not sure what you created");

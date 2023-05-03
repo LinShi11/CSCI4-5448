@@ -8,6 +8,7 @@ public class Enum {
         Hut,
         Blacksmith,
         Mines,
+        Gold_Mine,
         Tradecart
     }
     enum resourceType{
@@ -17,7 +18,8 @@ public class Enum {
         fur,
         rock,
         water,
-        clothes
+        clothes,
+        gold
     }
 
     enum jobType{
@@ -31,7 +33,8 @@ public class Enum {
         Villager,
         Lumberjack,
         Repairer,
-        Cook
+        Cook,
+        Gold_Miner
     }
 
     enum magicItems{

@@ -36,4 +36,8 @@ public class UserActions{
 		return random.nextInt(3) + 1; //1-3 count
 	}
 
+	public int getGold(){
+		return random.nextInt(3) + 1;
+	}
+
 }

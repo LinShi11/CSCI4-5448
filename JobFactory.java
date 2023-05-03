@@ -23,6 +23,8 @@ public class JobFactory {
                 return new Weaponsmith();
             case Villager:
                 return new Villager();
+            case Gold_Miner:
+                return new Gold_miner();
             default:
                 return null;
         }

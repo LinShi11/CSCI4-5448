@@ -1,8 +1,8 @@
-public class Villager implements People{
+public class Gold_miner implements People{
+
     Enum.jobType type;
-    public Villager(){
-        type = Enum.jobType.Villager;
-    }
+    public Gold_miner(){ type = Enum.jobType.Gold_Miner;}
+
     @Override
     public int getFood() {
         return 0;
@@ -50,7 +50,7 @@ public class Villager implements People{
 
     @Override
     public int getGold() {
-        return 0;
+        return 3;
     }
 
     @Override

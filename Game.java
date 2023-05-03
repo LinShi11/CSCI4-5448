@@ -26,6 +26,7 @@ public class Game implements Subject{
         resourceMap.put(Enum.resourceType.fur, 0);
         resourceMap.put(Enum.resourceType.rock, 0);
         resourceMap.put(Enum.resourceType.clothes, 0);
+        resourceMap.put(Enum.resourceType.gold, 0);
 
         buildingMap = new HashMap<>();
         buildingMap.put(Enum.buildingType.Trap, 0);
@@ -36,6 +37,7 @@ public class Game implements Subject{
         buildingMap.put(Enum.buildingType.Mines, 0);
         buildingMap.put(Enum.buildingType.Tradecart, 0);
         buildingMap.put(Enum.buildingType.Hut, 0);
+        buildingMap.put(Enum.buildingType.Gold_Mine, 0);
 
         jobMap = new HashMap<>();
         jobMap.put(Enum.jobType.Gather, 0);
@@ -49,6 +51,7 @@ public class Game implements Subject{
         jobMap.put(Enum.jobType.Cook, 0);
         jobMap.put(Enum.jobType.Repairer, 0);
         jobMap.put(Enum.jobType.Villager, 0);
+        jobMap.put(Enum.jobType.Gold_Miner, 0);
 
         statsMap = new HashMap<>();
         statsMap.put(Enum.stats.health, 100);
@@ -177,6 +180,10 @@ public class Game implements Subject{
                     resourceMap.put(Enum.resourceType.fur, (resourceMap.get(Enum.resourceType.fur) + userActions.getFur()));
                     notifyObserver("     Collected Fur");
                     break;
+                case gold:
+                    resourceMap.put(Enum.resourceType.gold, (resourceMap.get(Enum.resourceType.gold) + userActions.getGold()));
+                    notifyObserver("     Collected Gold");
+                    break;
                 default:
                     System.out.println("nothing");
             }
@@ -191,6 +198,7 @@ public class Game implements Subject{
         int furCheck = 0;
         int healthCheck = 0;
         int defenseCheck = 0;
+        int goldCheck = 0;
         // daily resource update for villager jobs
         for(People person: peopleArrayList){
             woodCheck += person.getWood();
@@ -202,6 +210,7 @@ public class Game implements Subject{
             furCheck += person.getFur();
             healthCheck += person.getHealth();
             defenseCheck += person.getDefense();
+            goldCheck += person.getGold();
         }
         resourceMap.put(Enum.resourceType.wood, (resourceMap.get(Enum.resourceType.wood) + woodCheck));
         resourceMap.put(Enum.resourceType.food, (resourceMap.get(Enum.resourceType.food) + foodCheck));
@@ -210,6 +219,7 @@ public class Game implements Subject{
         resourceMap.put(Enum.resourceType.water, (resourceMap.get(Enum.resourceType.water) + waterCheck));
         resourceMap.put(Enum.resourceType.clothes, (resourceMap.get(Enum.resourceType.clothes) + clothesCheck));
         resourceMap.put(Enum.resourceType.fur, (resourceMap.get(Enum.resourceType.fur) + furCheck));
+        resourceMap.put(Enum.resourceType.gold, (resourceMap.get(Enum.resourceType.gold) + goldCheck));
 
         statsMap.put(Enum.stats.health, (statsMap.get(Enum.stats.health) + healthCheck));
         statsMap.put(Enum.stats.defense, (statsMap.get(Enum.stats.defense) + defenseCheck));
@@ -223,6 +233,7 @@ public class Game implements Subject{
         notifyObserver("fur: " + furCheck);
         notifyObserver("health: " + healthCheck);
         notifyObserver("defense: " + defenseCheck);
+        notifyObserver("gold: " + goldCheck);
         if(woodCheck< 0 || foodCheck< 0 || meatCheck < 0||rockCheck< 0||waterCheck< 0||clothesCheck< 0||furCheck< 0||healthCheck< 0||defenseCheck< 0){
             notifyObserver("The villagers are unhappy, the village is not producing enough resources. If this continues, the villagers will start to leave.\n");
         }
@@ -312,6 +323,12 @@ public class Game implements Subject{
                 }
                 notifyObserver("     Not enough resources");
                 return false;
+            case Gold_Mine:
+                if(resourceMap.get(Enum.resourceType.wood) >= 5 && resourceMap.get(Enum.resourceType.rock) >= 5){
+                    return true;
+                }
+                notifyObserver("     Not enough resources");
+                return false;
             default:
                 return false;
         }
@@ -360,6 +377,12 @@ public class Game implements Subject{
                     return true;
                 }
                 notifyObserver("     Not enough blacksmith");
+                return false;
+            case Gold_Miner:
+                if(buildingMap.get(Enum.buildingType.Gold_Mine) * Helper.getJobLimit(Enum.buildingType.Gold_Mine) > jobMap.get(Enum.jobType.Gold_Miner)){
+                    return true;
+                }
+                notifyObserver("     Not enough gold mines");
                 return false;
             default:
                 return false;

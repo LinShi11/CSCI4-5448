@@ -16,6 +16,8 @@ public class Helper {
                 return 3;
             case Mines:
                 return 10;
+            case Gold_Mine:
+                return 3;
             default:
                 return 0;
         }

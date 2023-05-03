@@ -49,6 +49,11 @@ public class Waterman implements People{
     }
 
     @Override
+    public int getGold() {
+        return 0;
+    }
+
+    @Override
     public Enum.jobType getType() {
         return type;
     }
