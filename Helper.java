@@ -1,6 +1,6 @@
 public class Helper {
 
-    public static int getLimit(Enum.buildingType type){
+    public static int getJobLimit(Enum.buildingType type){
         switch (type){
             case Smokehouse:
                 return 5;

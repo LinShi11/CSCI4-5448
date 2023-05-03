@@ -1,6 +1,3 @@
-import org.junit.runner.manipulation.Ordering;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -105,18 +102,16 @@ public class Game {
     }
     public void assignJobs(Enum.jobType type){
         if(possibleJob(type)) {
-            if (jobMap.get(Enum.jobType.Villager) > 0) {
-                People person = jobFactory.assignJob(type);
-                peopleArrayList.add(person);
-                jobMap.put(person.getType(), (jobMap.get(person.getType()) + 1));
-                for (People p : peopleArrayList) {
-                    if (p.getType() == Enum.jobType.Villager) {
-                        peopleArrayList.remove(p);
-                        break;
-                    }
+            People person = jobFactory.assignJob(type);
+            peopleArrayList.add(person);
+            jobMap.put(person.getType(), (jobMap.get(person.getType()) + 1));
+            for (People p : peopleArrayList) {
+                if (p.getType() == Enum.jobType.Villager) {
+                    peopleArrayList.remove(p);
+                    break;
                 }
-                jobMap.put(Enum.jobType.Villager, (jobMap.get(Enum.jobType.Villager)) - 1);
             }
+            jobMap.put(Enum.jobType.Villager, (jobMap.get(Enum.jobType.Villager)) - 1);
         }
     }
 
@@ -190,7 +185,7 @@ public class Game {
     }
 
     public void getVillagerCount(){
-        jobMap.put(Enum.jobType.Villager, buildingMap.get(Enum.buildingType.Hut) * Helper.getLimit(Enum.buildingType.Hut));
+        jobMap.put(Enum.jobType.Villager, buildingMap.get(Enum.buildingType.Hut) * Helper.getJobLimit(Enum.buildingType.Hut));
     }
 
     public void setResource(Enum.resourceType type, int usedCount){
@@ -257,47 +252,42 @@ public class Game {
     }
 
     public boolean possibleJob(Enum.jobType type){
+        if(jobMap.get(Enum.jobType.Villager) <= 0){
+            return false;
+        }
         switch (type){
             case Cook:
-                if(buildingMap.get(Enum.buildingType.Smokehouse) * 1 > jobMap.get(Enum.jobType.Cook)){
+                if(buildingMap.get(Enum.buildingType.Smokehouse) * Helper.getJobLimit(Enum.buildingType.Smokehouse) > jobMap.get(Enum.jobType.Cook)){
                     return true;
                 }
                 return false;
-            case Gather:
-                return true;
-            case Hunter:
+            case Gather, Villager, Lumberjack, Repairer, Hunter:
                 return true;
             case Miner:
-                if(buildingMap.get(Enum.buildingType.Mines) * 1 > jobMap.get(Enum.jobType.Miner)){
+                if(buildingMap.get(Enum.buildingType.Mines) * Helper.getJobLimit(Enum.buildingType.Mines) > jobMap.get(Enum.jobType.Miner)){
                     return true;
                 }
                 return false;
             case Tailor:
-                if(buildingMap.get(Enum.buildingType.Factory) * 1 > jobMap.get(Enum.jobType.Tailor)){
+                if(buildingMap.get(Enum.buildingType.Factory) * Helper.getJobLimit(Enum.buildingType.Factory) > jobMap.get(Enum.jobType.Tailor)){
                     return true;
                 }
                 return false;
             case Trapper:
-                if(buildingMap.get(Enum.buildingType.Trap) * 1 > jobMap.get(Enum.jobType.Trapper)){
+                if(buildingMap.get(Enum.buildingType.Trap) * Helper.getJobLimit(Enum.buildingType.Trap) > jobMap.get(Enum.jobType.Trapper)){
                     return true;
                 }
                 return false;
-            case Repairer:
-                return true;
             case Waterman:
-                if(buildingMap.get(Enum.buildingType.Bucket) * 1 > jobMap.get(Enum.jobType.Waterman)){
+                if(buildingMap.get(Enum.buildingType.Bucket) * Helper.getJobLimit(Enum.buildingType.Bucket) > jobMap.get(Enum.jobType.Waterman)){
                     return true;
                 }
                 return false;
-            case Lumberjack:
-                return true;
             case Weaponsmith:
-                if(buildingMap.get(Enum.buildingType.Blacksmith) * 1 > jobMap.get(Enum.jobType.Weaponsmith)){
+                if(buildingMap.get(Enum.buildingType.Blacksmith) * Helper.getJobLimit(Enum.buildingType.Blacksmith) > jobMap.get(Enum.jobType.Weaponsmith)){
                     return true;
                 }
                 return false;
-            case Villager:
-                return true;
             default:
                 return false;
         }
