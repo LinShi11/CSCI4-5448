@@ -9,7 +9,7 @@ import java.util.Map;
 /**
  * citation: use https://www.ryisnow.online/2021/04/java-for-beginner-text-adventure-game.html as reference to jFrame start ups
  */
-public class GameUI {
+public class GameUI implements Observer{
     JFrame window;
     Container con;
     Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
@@ -30,7 +30,7 @@ public class GameUI {
     Game game;
     Enum.mapLocationType mapLocation;
     ArrayList<JButton> dailyTasksButtons;
-
+    Logger logger;
     public GameUI(Game tempGame){
         game = tempGame;
         window = new JFrame();
@@ -46,6 +46,7 @@ public class GameUI {
         stopAllButton();
         login();
         window.setVisible(true);
+        logger = Logger.getInstance();
 
     }
 
@@ -246,18 +247,20 @@ public class GameUI {
         titlePanel.setVisible(true);
     }
 
-    public void gamePlayScreen(){
-
+    public void setEventAnnouncerPanel(String events){
         eventAnnouncerPanel = new JPanel();
         eventAnnouncerPanel.setBounds(100, 100, 200, 1000);
         eventAnnouncerPanel.setBackground(Color.black);
-        announcer = new JTextArea("This is the event Announcer");
+        System.out.println(events);
+        announcer = new JTextArea(events);
         announcer.setBounds(100, 100, 200, 1000);
         textColorHelper(announcer);
         announcer.setLineWrap(true);
         announcer.setWrapStyleWord(true);
         eventAnnouncerPanel.add(announcer);
         con.add(eventAnnouncerPanel);
+    }
+    public void gamePlayScreen(){
 
         resourcesPanel = new JPanel();
         resourcesPanel.setBounds(1000, 100, 400, 300);
@@ -309,7 +312,6 @@ public class GameUI {
     }
 
     public void dailyRepaint(){
-        con.remove(eventAnnouncerPanel);
         con.remove(resourcesPanel);
         con.remove(buildingPanel);
         con.remove(healthPanel);
@@ -319,6 +321,7 @@ public class GameUI {
         con.revalidate();
         con.repaint();
     }
+
 
     public void map(){
         switch (mapLocation){
@@ -420,9 +423,23 @@ public class GameUI {
         buildingButtonPanel.add(button);
     }
 
+    @Override
+    public void update(String event) {
+        ArrayList<String> events = logger.getEvents();
+        StringBuilder publishingEvents = new StringBuilder();
+        for(int i = events.size()-1; i >= 0; i--){
+            publishingEvents.append(events.get(i) + "\n");
+        }
+        con.remove(eventAnnouncerPanel);
+        setEventAnnouncerPanel(publishingEvents.toString());
+        con.revalidate();
+        con.repaint();
+    }
+
     public class TitleScreenHandler implements ActionListener {
 
         public void actionPerformed(ActionEvent event){
+            setEventAnnouncerPanel("Welcome to the game");
             gamePlayScreen();
             map();
         }

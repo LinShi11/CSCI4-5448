@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Game {
+public class Game implements Subject{
 
     HashMap<Enum.resourceType, Integer> resourceMap;
     HashMap<Enum.buildingType, Integer> buildingMap;
@@ -15,6 +15,7 @@ public class Game {
     UserActions userActions;
     BuildingFactory buildingFactory = new BuildingFactory();
     JobFactory jobFactory = new JobFactory();
+    ArrayList<Observer> registered = new ArrayList<>();
 
     public Game(){
         resourceMap = new HashMap<>();
@@ -112,6 +113,10 @@ public class Game {
                 }
             }
             jobMap.put(Enum.jobType.Villager, (jobMap.get(Enum.jobType.Villager)) - 1);
+            notifyObserver("Assigned a new " + type.toString());
+        } else{
+            System.out.println("test");
+            notifyObserver("Cannot assign Villager as " + type.toString());
         }
     }
 
@@ -133,33 +138,45 @@ public class Game {
 
 
     public void dailyUpdate(){
+        // daily resource update for the user actions
+
         for(Enum.resourceType agenda: dailyAgenda){
+
             switch (agenda){
                 case wood:
                     resourceMap.put(Enum.resourceType.wood, (resourceMap.get(Enum.resourceType.wood) + userActions.getWood()));
+                    notifyObserver("Collected Wood");
                     break;
                 case food:
                     resourceMap.put(Enum.resourceType.food, (resourceMap.get(Enum.resourceType.food) + userActions.getFood()));
+                    notifyObserver("Collected Food");
                     break;
                 case meat:
                     resourceMap.put(Enum.resourceType.meat, (resourceMap.get(Enum.resourceType.meat) + userActions.getMeat()));
+                    notifyObserver("Collected Meat");
                     break;
                 case rock:
                     resourceMap.put(Enum.resourceType.rock, (resourceMap.get(Enum.resourceType.rock) + userActions.getRock()));
+                    notifyObserver("Collected Rock");
                     break;
                 case water:
                     resourceMap.put(Enum.resourceType.water, (resourceMap.get(Enum.resourceType.water) + userActions.getWater()));
+                    notifyObserver("Collected Water");
                     break;
                 case clothes:
                     resourceMap.put(Enum.resourceType.clothes, (resourceMap.get(Enum.resourceType.clothes) + userActions.getClothes()));
+                    notifyObserver("Collected Clothes");
                     break;
                 case fur:
                     resourceMap.put(Enum.resourceType.fur, (resourceMap.get(Enum.resourceType.fur) + userActions.getFur()));
+                    notifyObserver("Collected Fur");
                     break;
                 default:
                     System.out.println("nothing");
             }
         }
+        notifyObserver("Tasks completed: ");
+        // daily resource update for villager jobs
         for(People person: peopleArrayList){
             resourceMap.put(Enum.resourceType.wood, (resourceMap.get(Enum.resourceType.wood) + person.getWood()));
             resourceMap.put(Enum.resourceType.food, (resourceMap.get(Enum.resourceType.food) + person.getFood()));
@@ -169,7 +186,6 @@ public class Game {
             resourceMap.put(Enum.resourceType.clothes, (resourceMap.get(Enum.resourceType.clothes) + person.getClothes()));
             resourceMap.put(Enum.resourceType.fur, (resourceMap.get(Enum.resourceType.fur) + person.getFur()));
         }
-        System.out.println(resourceMap.get(Enum.resourceType.wood));
     }
 
     public HashMap<Enum.buildingType, Integer> getBuildingMap(){
@@ -193,7 +209,6 @@ public class Game {
     }
 
     public boolean possibleBuild(Enum.buildingType type){
-
         switch (type){
             case Smokehouse:
                 if(resourceMap.get(Enum.resourceType.wood) >= 5){
@@ -292,5 +307,22 @@ public class Game {
                 return false;
         }
 
+    }
+
+    @Override
+    public void register(Observer obj) {
+        registered.add(obj);
+    }
+
+    @Override
+    public void unregister(Observer obj) {
+        registered.remove(obj);
+    }
+
+    @Override
+    public void notifyObserver(String event) {
+        for(Observer obs: registered){
+            obs.update(event);
+        }
     }
 }
