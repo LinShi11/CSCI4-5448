@@ -205,7 +205,7 @@ public class GameUI implements Observer{
         tradeCartInfoPanel = new JPanel();
         tradeCartInfoPanel.setBackground(Color.black);
         tradeCartInfoPanel.setBounds(300, 200, 700, 100);
-        tradeCartInfo = new JTextArea("Want anything? Resource: 1 gold. Magic item: 50 gold");
+        tradeCartInfo = new JTextArea("Want anything? Resource: 5 gold. Magic item: 50 gold");
         tradeCartInfo.setBounds(300, 200, 700,  100);
         textColorHelper(tradeCartInfo);
         tradeCartInfoPanel.add(tradeCartInfo);
@@ -590,6 +590,7 @@ public class GameUI implements Observer{
                 default:
                     System.out.println(choice);
             }
+            dailyRepaint();
             map();
         }
     }

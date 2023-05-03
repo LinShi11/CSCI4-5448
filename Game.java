@@ -101,20 +101,31 @@ public class Game implements Subject{
     }
 
     public void deleteCartResourceItem(Enum.resourceType type){
-        for(int i = 0; i< cartResourceItemList.size(); i++){
-            if(cartResourceItemList.get(i) == type){
-                cartResourceItemList.remove(i);
-                break;
+        if(resourceMap.get(Enum.resourceType.gold) >= 5) {
+            for (int i = 0; i < cartResourceItemList.size(); i++) {
+                if (cartResourceItemList.get(i) == type) {
+                    cartResourceItemList.remove(i);
+                    resourceMap.put(type, resourceMap.get(type) + 1);
+                    break;
+                }
             }
+        } else{
+            notifyObserver("Not enough gold (5)");
         }
     }
 
     public void deleteCartMagicItem(Enum.magicItems type){
-        for(int i = 0; i < magicItemsArrayList.size(); i++){
-            if(magicItemsArrayList.get(i) == type){
-                magicItemsArrayList.remove(i);
-                break;
+        if(resourceMap.get(Enum.resourceType.gold) >= 50) {
+            for (int i = 0; i < magicItemsArrayList.size(); i++) {
+                if (magicItemsArrayList.get(i) == type) {
+                    magicItemsArrayList.remove(i);
+                    magicItemMap.put(type, magicItemMap.get(type) + 1);
+                    System.out.println(magicItemMap.get(type));
+                    break;
+                }
             }
+        } else{
+            notifyObserver("Not enough gold (50)");
         }
     }
 
