@@ -8,12 +8,12 @@ public class Game implements Subject{
     HashMap<Enum.buildingType, Integer> buildingMap;
 
     HashMap<Enum.jobType, Integer> jobMap;
+    HashMap<Enum.magicItems, Integer> magicItemMap;
     HashMap<Enum.stats, Integer> statsMap;
     ArrayList<Enum.resourceType> cartResourceItemList;
     ArrayList<Enum.magicItems> magicItemsArrayList;
     ArrayList<Enum.resourceType> dailyAgenda;
     ArrayList<People> peopleArrayList;
-    int totalMagicItemCount = 10;
     UserActions userActions;
     BuildingFactory buildingFactory = new BuildingFactory();
     JobFactory jobFactory = new JobFactory();
@@ -55,6 +55,19 @@ public class Game implements Subject{
         jobMap.put(Enum.jobType.Villager, 0);
         jobMap.put(Enum.jobType.Gold_Miner, 0);
 
+        magicItemMap = new HashMap<>();
+        magicItemMap.put(Enum.magicItems.matches, 0);
+        magicItemMap.put(Enum.magicItems.axe, 0);
+        magicItemMap.put(Enum.magicItems.needle, 0);
+        magicItemMap.put(Enum.magicItems.pickaxe, 0);
+        magicItemMap.put(Enum.magicItems.bait, 0);
+        magicItemMap.put(Enum.magicItems.storage, 0);
+        magicItemMap.put(Enum.magicItems.metal, 0);
+        magicItemMap.put(Enum.magicItems.bow, 0);
+        magicItemMap.put(Enum.magicItems.sword, 0);
+        magicItemMap.put(Enum.magicItems.gunpowder, 0);
+
+
         statsMap = new HashMap<>();
         statsMap.put(Enum.stats.health, 100);
         statsMap.put(Enum.stats.defense, 100);
@@ -87,14 +100,29 @@ public class Game implements Subject{
         }
     }
 
+    public void deleteCartResourceItem(Enum.resourceType type){
+        for(int i = 0; i< cartResourceItemList.size(); i++){
+            if(cartResourceItemList.get(i) == type){
+                cartResourceItemList.remove(i);
+                break;
+            }
+        }
+    }
+
+    public void deleteCartMagicItem(Enum.magicItems type){
+        for(int i = 0; i < magicItemsArrayList.size(); i++){
+            if(magicItemsArrayList.get(i) == type){
+                magicItemsArrayList.remove(i);
+                break;
+            }
+        }
+    }
+
     public void setDailyItems(){
         Random random = new Random();
         cartResourceItemList = new ArrayList<>();
         for(int i = 0; i < 5; i++){
             cartResourceItemList.add(findItem(random.nextInt(resourceMap.size())));
-        }
-        for(Enum.resourceType resource: cartResourceItemList){
-            System.out.println(resource.toString());
         }
     }
 
@@ -121,13 +149,48 @@ public class Game implements Subject{
         }
     }
 
+    public void setDailyMagicItems(){
+        Random random = new Random();
+        magicItemsArrayList = new ArrayList<>();
+        for(int i = 0; i < 3; i++){
+            magicItemsArrayList.add(findMagicItem(random.nextInt(magicItemMap.size())));
+        }
+    }
+
+    public Enum.magicItems findMagicItem(int randomValue){
+        switch (randomValue){
+            case 0:
+                return Enum.magicItems.matches;
+            case 1:
+                return Enum.magicItems.axe;
+            case 2:
+                return Enum.magicItems.needle;
+            case 3:
+                return Enum.magicItems.pickaxe;
+            case 4:
+                return Enum.magicItems.bait;
+            case 5:
+                return Enum.magicItems.storage;
+            case 6:
+                return Enum.magicItems.metal;
+            case 7:
+                return Enum.magicItems.bow;
+            case 8:
+                return Enum.magicItems.sword;
+            case 9:
+                return Enum.magicItems.gunpowder;
+            default:
+                return null;
+        }
+    }
+
     public ArrayList<Enum.resourceType> getDailyAgenda(){
         return dailyAgenda;
     }
     public ArrayList<Enum.resourceType> getCartResourceItemList(){return cartResourceItemList;}
 
-    public int getTotalMagicItemCount(){
-        return totalMagicItemCount;
+    public ArrayList<Enum.magicItems> getMagicItemList(){
+        return magicItemsArrayList;
     }
 
     public HashMap<Enum.resourceType, Integer> getResourceMap(){

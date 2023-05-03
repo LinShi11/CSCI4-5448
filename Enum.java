@@ -40,7 +40,7 @@ public class Enum {
     enum magicItems{
         matches,
         axe,
-        sewingMachine,
+        needle,
         pickaxe,
         bait,
         storage,

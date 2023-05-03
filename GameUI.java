@@ -28,6 +28,7 @@ public class GameUI implements Observer{
     MapNavigationHandler mapNavigationHandler = new MapNavigationHandler();
     VillagerAssignmentHandler villagerAssignmentHandler = new VillagerAssignmentHandler();
     DeleteAgendaHandler deleteAgendaHandler = new DeleteAgendaHandler();
+    TradeCartItemHandler tradeCartItemHandler = new TradeCartItemHandler();
     NextDayHandler nextDayHandler = new NextDayHandler();
     Game game;
     Enum.mapLocationType mapLocation;
@@ -203,9 +204,9 @@ public class GameUI implements Observer{
 
         tradeCartInfoPanel = new JPanel();
         tradeCartInfoPanel.setBackground(Color.black);
-        tradeCartInfoPanel.setBounds(400, 200, 200, 100);
-        tradeCartInfo = new JTextArea("Want anything?");
-        tradeCartInfo.setBounds(400, 200, 200,  100);
+        tradeCartInfoPanel.setBounds(300, 200, 700, 100);
+        tradeCartInfo = new JTextArea("Want anything? Resource: 1 gold. Magic item: 50 gold");
+        tradeCartInfo.setBounds(300, 200, 700,  100);
         textColorHelper(tradeCartInfo);
         tradeCartInfoPanel.add(tradeCartInfo);
 
@@ -217,22 +218,36 @@ public class GameUI implements Observer{
         cartItemsPanel.setBounds(700, 300, 200, 500);
         con.add(cartItemsPanel);
 
+        magicItemPanel = new JPanel();
+        magicItemPanel.setBackground(Color.black);
+        magicItemPanel.setBounds(300, 300, 200, 500);
+        con.add(magicItemPanel);
+
 
     }
 
     public void createTradecartItems(){
         if(newDay){
             game.setDailyItems();
-            JButton temp;
-            ArrayList<Enum.resourceType> cartResourceItems = game.getCartResourceItemList();
-            for(int i = 0; i < cartResourceItems.size(); i++){
-                temp = new JButton(cartResourceItems.get(i).toString());
-                tradeCartResourceButtons.add(temp);
-                addTradeCartItem(temp, "temp", cartItemsPanel);
-            }
+            game.setDailyMagicItems();
+        }
+        cartItemsPanel.removeAll();
+        magicItemPanel.removeAll();
+
+        JButton temp;
+        ArrayList<Enum.resourceType> cartResourceItems = game.getCartResourceItemList();
+        for(int i = 0; i < cartResourceItems.size(); i++){
+            temp = new JButton(cartResourceItems.get(i).toString());
+            addTradeCartItem(temp, "delete_"+cartResourceItems.get(i).toString(), cartItemsPanel);
+        }
+        ArrayList<Enum.magicItems> magicItemsArrayList = game.getMagicItemList();
+        for(int i = 0; i < magicItemsArrayList.size(); i++){
+            temp = new JButton(magicItemsArrayList.get(i).toString());
+            addTradeCartItem(temp, "delete_"+magicItemsArrayList.get(i).toString(), magicItemPanel);
         }
         cartItemsPanel.setVisible(true);
         tradeCartInfoPanel.setVisible(true);
+        magicItemPanel.setVisible(true);
         newDay = false;
 
     }
@@ -242,7 +257,7 @@ public class GameUI implements Observer{
         button.setForeground(Color.white);
         button.setFont(normalFont);
         button.setFocusPainted(false);
-//        button.addActionListener(deleteResource);
+        button.addActionListener(tradeCartItemHandler);
         button.setActionCommand(command);
         panel.add(button);
     }
@@ -413,6 +428,7 @@ public class GameUI implements Observer{
         userActionPanel.setVisible(false);
         dailyTaskPanel.setVisible(false);
         cartItemsPanel.setVisible(false);
+        magicItemPanel.setVisible(false);
         mapPanel.setVisible(true);
         nextDayPanel.setVisible(true);
     }
@@ -507,7 +523,74 @@ public class GameUI implements Observer{
         public void actionPerformed(ActionEvent e) {
             game.dailyUpdate();
             dailyRepaint();
-//            newDay = true;
+            newDay = true;
+        }
+
+    }
+
+    public class TradeCartItemHandler implements ActionListener{
+        @Override
+        public void actionPerformed(ActionEvent e){
+            String choice = e.getActionCommand();
+            switch (choice){
+                case "delete_wood":
+                    game.deleteCartResourceItem(Enum.resourceType.wood);
+                    break;
+                case "delete_food":
+                    game.deleteCartResourceItem(Enum.resourceType.food);
+                    break;
+                case "delete_meat":
+                    game.deleteCartResourceItem(Enum.resourceType.meat);
+                    break;
+                case "delete_fur":
+                    game.deleteCartResourceItem(Enum.resourceType.fur);
+                    break;
+                case "delete_rock":
+                    game.deleteCartResourceItem(Enum.resourceType.rock);
+                    break;
+                case "delete_water":
+                    game.deleteCartResourceItem(Enum.resourceType.water);
+                    break;
+                case "delete_clothes":
+                    game.deleteCartResourceItem(Enum.resourceType.clothes);
+                    break;
+                case "delete_gold":
+                    game.deleteCartResourceItem(Enum.resourceType.gold);
+                    break;
+                case "delete_matches":
+                    game.deleteCartMagicItem(Enum.magicItems.matches);
+                    break;
+                case "delete_axe":
+                    game.deleteCartMagicItem(Enum.magicItems.axe);
+                    break;
+                case "delete_needle":
+                    game.deleteCartMagicItem(Enum.magicItems.needle);
+                    break;
+                case "delete_pickaxe":
+                    game.deleteCartMagicItem(Enum.magicItems.pickaxe);
+                    break;
+                case "delete_bait":
+                    game.deleteCartMagicItem(Enum.magicItems.bait);
+                    break;
+                case "delete_storage":
+                    game.deleteCartMagicItem(Enum.magicItems.storage);
+                    break;
+                case "delete_metal":
+                    game.deleteCartMagicItem(Enum.magicItems.metal);
+                    break;
+                case "delete_bow":
+                    game.deleteCartMagicItem(Enum.magicItems.bow);
+                    break;
+                case "delete_sword":
+                    game.deleteCartMagicItem(Enum.magicItems.sword);
+                    break;
+                case "delete_gunpowder":
+                    game.deleteCartMagicItem(Enum.magicItems.gunpowder);
+                    break;
+                default:
+                    System.out.println(choice);
+            }
+            map();
         }
     }
 
