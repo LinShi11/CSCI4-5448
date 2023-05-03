@@ -1,4 +1,3 @@
-import java.util.List;
 
 public interface People{
 
@@ -21,14 +20,6 @@ public interface People{
 	boolean getStatus();
 	
 	void setStatus(boolean status);
-
-	int getLimit();
-	
-	void setLimit(int limit);
-
-	int getCount();
-
-	void setCount(int count);
 
 	Enum.jobType getType();
 

@@ -54,26 +54,6 @@ public class Trapper implements People{
     }
 
     @Override
-    public int getLimit() {
-        return 0;
-    }
-
-    @Override
-    public void setLimit(int limit) {
-
-    }
-
-    @Override
-    public int getCount() {
-        return 0;
-    }
-
-    @Override
-    public void setCount(int count) {
-
-    }
-
-    @Override
     public Enum.jobType getType() {
         return type;
     }
