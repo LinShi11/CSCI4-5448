@@ -8,6 +8,8 @@ import java.util.Map;
 import GameUIHelpers.*;
 import ActionListeners.*;
 import GamePlaySupport.*;
+import ObserverPattern.Logger;
+import ObserverPattern.ObserverInterface;
 
 /**
  * This class is used to display the UI portion for the game. The code was inspired by:

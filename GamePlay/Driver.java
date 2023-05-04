@@ -1,8 +1,6 @@
 package GamePlay;
 
-import GamePlay.Game;
-import GamePlay.GameUI;
-import GamePlaySupport.Logger;
+import ObserverPattern.Logger;
 
 public class Driver {
 

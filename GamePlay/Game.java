@@ -1,7 +1,14 @@
 package GamePlay;
 
+import Buildings.Building;
+import Decorators.*;
+import Factory.BuildingFactory;
+import Factory.JobFactory;
 import GamePlaySupport.*;
-import RandomEvents.RandomEvents;
+import ObserverPattern.ObserverInterface;
+import ObserverPattern.Subject;
+import People.People;
+import CommandRandomEvents.RandomEvents;
 
 import java.io.*;
 import java.util.*;
@@ -73,7 +80,7 @@ public class Game implements Subject {
         // uses bufferreader to read through the stored game data
         BufferedReader reader;
         try{
-            reader = new BufferedReader(new FileReader("gameStats.txt"));
+            reader = new BufferedReader(new FileReader("GamePlay/gameStats.txt"));
             String line = reader.readLine();
 
             while(line != null){
@@ -119,7 +126,7 @@ public class Game implements Subject {
         BufferedReader reader;
         String line = "";
         try{
-            reader = new BufferedReader(new FileReader("gameStats.txt"));
+            reader = new BufferedReader(new FileReader("GamePlay/gameStats.txt"));
             line = reader.readLine();
 
             while(line != null){
@@ -238,9 +245,9 @@ public class Game implements Subject {
      * @throws FileNotFoundException: if the file is not found
      */
     public void saveGame() throws FileNotFoundException {
-        Scanner scanner = new Scanner(new File("gameStats.txt"));
+        Scanner scanner = new Scanner(new File("GamePlay/gameStats.txt"));
 
-        // reads the current gamestats.txt and will add the line if the username do not match
+        // reads the current GamePlay/gamestats.txt and will add the line if the username do not match
         StringBuffer buffer = new StringBuffer();
         while(scanner.hasNext()){
             String line = scanner.nextLine();
@@ -273,7 +280,7 @@ public class Game implements Subject {
 
         // rewrite all the data back to the file
         try {
-            FileWriter writer = new FileWriter("gameStats.txt");
+            FileWriter writer = new FileWriter("GamePlay/gameStats.txt");
             writer.append(fileContents);
             writer.flush();
         } catch (IOException e) {
