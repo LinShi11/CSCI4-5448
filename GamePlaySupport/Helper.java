@@ -5,12 +5,17 @@ import GamePlay.Enum;
 import java.awt.*;
 
 public class Helper {
-
+    // a list of possible fonts
     public static Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
     public static Font normalFont = new Font("Times New Roman", Font.PLAIN, 28);
     public static Font arrowFont = new Font("Times New Roman", Font.PLAIN, 12);
     public static Font announcerFont = new Font("Times New Roman", Font.PLAIN, 18);
 
+    /**
+     * helper to find the limit for each type of building
+     * @param type: the type of building
+     * @return: the limit associated with that building
+     */
     public static int getJobLimit(Enum.buildingType type){
         switch (type){
             case Smokehouse:

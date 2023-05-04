@@ -2,6 +2,9 @@ package GamePlaySupport;
 
 import java.util.Random;
 
+/**
+ * The class is a list of all the daily tasks and
+ */
 public class UserActions{
 	
 	private Random random = new Random();
@@ -9,7 +12,7 @@ public class UserActions{
 	public UserActions(){
 
 	}
-
+	// gives all of them random return values
 	public int getFood() {
 		return random.nextInt(3) + 3; //3-6 pounds
 	}
