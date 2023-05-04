@@ -4,8 +4,17 @@ import Buildings.*;
 import GamePlay.Enum;
 import Buildings.Mines;
 
+/**
+ * Factory pattern for building.
+ */
 public class BuildingFactory {
 
+    /**
+     * construct the building according to the type
+     * Note: Tradecart is singleton; thus, getInstance is called
+     * @param type: type of building
+     * @return building instance
+     */
     public Building constructBuilding(Enum.buildingType type){
         switch (type){
             case Smokehouse:

@@ -3,7 +3,15 @@ package Factory;
 import GamePlay.Enum;
 import People.*;
 
+/**
+ * Factory pattern for jobs
+ */
 public class JobFactory {
+    /**
+     * assign villagers to a job according to the type
+     * @param type: the type fo job
+     * @return an instance of a person
+     */
     public People assignJob(Enum.jobType type){
         switch (type){
             case Cook:
