@@ -22,68 +22,19 @@ public class Game implements Subject{
 
     public Game(){
         resourceMap = new HashMap<>();
-        resourceMap.put(Enum.resourceType.food, 0);
-        resourceMap.put(Enum.resourceType.meat, 0);
-        resourceMap.put(Enum.resourceType.wood, 0);
-        resourceMap.put(Enum.resourceType.water, 0);
-        resourceMap.put(Enum.resourceType.fur, 0);
-        resourceMap.put(Enum.resourceType.rock, 0);
-        resourceMap.put(Enum.resourceType.clothes, 0);
-        resourceMap.put(Enum.resourceType.gold, 0);
-
         buildingMap = new HashMap<>();
-        buildingMap.put(Enum.buildingType.Trap, 0);
-        buildingMap.put(Enum.buildingType.Bucket, 0);
-        buildingMap.put(Enum.buildingType.Smokehouse, 0);
-        buildingMap.put(Enum.buildingType.Factory, 0);
-        buildingMap.put(Enum.buildingType.Blacksmith, 0);
-        buildingMap.put(Enum.buildingType.Mines, 0);
-        buildingMap.put(Enum.buildingType.Tradecart, 0);
-        buildingMap.put(Enum.buildingType.Hut, 0);
-        buildingMap.put(Enum.buildingType.Gold_Mine, 0);
-
         jobMap = new HashMap<>();
-        jobMap.put(Enum.jobType.Gather, 0);
-        jobMap.put(Enum.jobType.Hunter, 0);
-        jobMap.put(Enum.jobType.Trapper, 0);
-        jobMap.put(Enum.jobType.Waterman, 0);
-        jobMap.put(Enum.jobType.Tailor, 0);
-        jobMap.put(Enum.jobType.Miner, 0);
-        jobMap.put(Enum.jobType.Weaponsmith, 0);
-        jobMap.put(Enum.jobType.Lumberjack, 0);
-        jobMap.put(Enum.jobType.Cook, 0);
-        jobMap.put(Enum.jobType.Repairer, 0);
-        jobMap.put(Enum.jobType.Villager, 0);
-        jobMap.put(Enum.jobType.Gold_Miner, 0);
-
         magicItemMap = new HashMap<>();
-        magicItemMap.put(Enum.magicItems.matches, 0);
-        magicItemMap.put(Enum.magicItems.axe, 0);
-        magicItemMap.put(Enum.magicItems.needle, 0);
-        magicItemMap.put(Enum.magicItems.pickaxe, 0);
-        magicItemMap.put(Enum.magicItems.bait, 0);
-        magicItemMap.put(Enum.magicItems.storage, 0);
-        magicItemMap.put(Enum.magicItems.metal, 0);
-        magicItemMap.put(Enum.magicItems.bow, 0);
-        magicItemMap.put(Enum.magicItems.sword, 0);
-        magicItemMap.put(Enum.magicItems.gunpowder, 0);
-
-
         statsMap = new HashMap<>();
-        statsMap.put(Enum.stats.health, 100);
-        statsMap.put(Enum.stats.defense, 100);
 
-        magicItemsArrayList = new ArrayList<>();
         dailyAgenda = new ArrayList<>();
+        cartResourceItemList = new ArrayList<>();
+        magicItemsArrayList = new ArrayList<>();
+
         peopleArrayList = new ArrayList<>();
         magicItemDecoratorArrayList = new ArrayList<>();
 
-        for(int i = 0; i < 10; i ++){
-            peopleArrayList.add(jobFactory.assignJob(Enum.jobType.Villager));
-        }
         userActions = new UserActions();
-        cartResourceItemList = new ArrayList<>();
-
     }
     public void saveName(String name){
         userName = name;
@@ -98,6 +49,7 @@ public class Game implements Subject{
             while(line != null){
                 System.out.println(line.split(",")[0]);
                 if(Objects.equals(line.split(",")[0], username)){
+                    userName = username;
                     return true;
                 }
                 line = reader.readLine();
@@ -108,9 +60,81 @@ public class Game implements Subject{
         return false;
     }
 
-    public void loadData(String line){
-        // load the data
+    public void createData(){
+
+        for(Enum.resourceType resourceType: Enum.resourceType.values()){
+            resourceMap.put(resourceType, 0);
+        }
+        for(Enum.buildingType buildingType: Enum.buildingType.values()){
+            buildingMap.put(buildingType, 0);
+        }
+        for(Enum.jobType jobType: Enum.jobType.values()){
+            jobMap.put(jobType, 0);
+        }
+        for(Enum.magicItems magicItems: Enum.magicItems.values()){
+            magicItemMap.put(magicItems, 0);
+        }
+        for(Enum.stats stats: Enum.stats.values()){
+            statsMap.put(stats, 100);
+        }
     }
+
+    public void loadData(){
+        BufferedReader reader;
+        String line = "";
+        try{
+            reader = new BufferedReader(new FileReader("gameStats.txt"));
+            line = reader.readLine();
+
+            while(line != null){
+                System.out.println(line.split(",")[0]);
+                if(Objects.equals(line.split(",")[0], userName)){
+                    break;
+                }
+                line = reader.readLine();
+            }
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+        String[] tempStats = line.split(",");
+        int location = 1;
+        int count;
+        for(int i = location; i < location+Enum.resourceType.values().length; i++){
+            Enum.resourceType resource = Enum.resourceType.valueOf(tempStats[i].split(":")[0]);
+            count = Integer.parseInt(tempStats[i].split(":")[1]);
+            resourceMap.put(resource, count);
+        }
+        location += Enum.resourceType.values().length;
+        for(int i = location; i < location + Enum.buildingType.values().length; i++){
+            Enum.buildingType building = Enum.buildingType.valueOf(tempStats[i].split(":")[0]);
+            count = Integer.parseInt(tempStats[i].split(":")[1]);
+            buildingMap.put(building, count);
+        }
+
+        location+= Enum.buildingType.values().length;
+        for(int i = location; i < location+Enum.jobType.values().length; i++){
+            Enum.jobType job = Enum.jobType.valueOf(tempStats[i].split(":")[0]);
+            count = Integer.parseInt(tempStats[i].split(":")[1]);
+            jobMap.put(job, count);
+        }
+        location+=Enum.jobType.values().length;
+        for(int i = location; i< location+Enum.stats.values().length; i++){
+            Enum.stats stats = Enum.stats.valueOf(tempStats[i].split(":")[0]);
+            count = Integer.parseInt(tempStats[i].split(":")[1]);
+            statsMap.put(stats, count);
+        }
+        for(Map.Entry<Enum.jobType, Integer> elements: jobMap.entrySet()){
+            for(int i = 0; i < elements.getValue(); i++) {
+                loadPeopleArray(elements.getKey());
+            }
+        }
+    }
+
+    public void loadPeopleArray(Enum.jobType type){
+        People person = jobFactory.assignJob(type);
+        peopleArrayList.add(person);
+    }
+
 
     public void saveGame() throws FileNotFoundException {
         Scanner scanner = new Scanner(new File("gameStats.txt"));
@@ -133,9 +157,6 @@ public class Game implements Subject{
         for(Map.Entry<Enum.jobType, Integer> elements: jobMap.entrySet()){
             saveStats = new StringBuilder(saveStats + "," + elements.getKey().toString() + ":" + elements.getValue().toString());
         }
-        for(Map.Entry<Enum.magicItems, Integer> elements: magicItemMap.entrySet()){
-            saveStats = new StringBuilder(saveStats + "," + elements.getKey().toString() + ":" + elements.getValue().toString());
-        }
         for(Map.Entry<Enum.stats, Integer> elements: statsMap.entrySet()){
             saveStats = new StringBuilder(saveStats + "," + elements.getKey().toString() + ":" + elements.getValue().toString());
         }
@@ -148,8 +169,6 @@ public class Game implements Subject{
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
-
     }
 
     public boolean deleteDailyAgenda(Enum.resourceType type){

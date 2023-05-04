@@ -49,44 +49,20 @@ public class GameUI implements Observer{
         tradeCartMagicButtons = new ArrayList<>();
         tradeCartResourceButtons = new ArrayList<>();
 
-        createAllChangablePanels();
-        stopAllButton();
         login();
+
 
         window.setVisible(true);
         logger = Logger.getInstance();
     }
 
     public void createAllChangablePanels(){
-        titlePanel = new JPanel();
-        titlePanel.setBounds(350,100,800,150);
-
-        titleLabel = new JLabel("Defend Your Village");
-        setPanelHelper(titlePanel);
-        setLabelHelper(titleLabel, Helper.titleFont);
 
         savePanel = new JPanel();
         savePanel.setBounds(1300, 500, 200, 100);
         setPanelHelper(savePanel);
         setButtonHelper(new JButton("Save"), Helper.normalFont, saveGameHandler, savePanel, null);
 
-
-
-        startButtonPanel = new JPanel();
-        startButtonPanel.setBounds(400, 300, 300, 300);
-        setPanelHelper(startButtonPanel);
-
-        userName = new JTextField("Username", 10);
-        userName.setBounds(400, 300, 300, 100);
-        userName.setFont(Helper.normalFont);
-        userName.setBackground(Color.black);
-        userName.setForeground(Color.white);
-        startButtonPanel.add(userName);
-
-        setButtonHelper(new JButton("New User"), Helper.normalFont, tsHandler, startButtonPanel, "newUser");
-        setButtonHelper(new JButton("Returning User"), Helper.normalFont, tsHandler, startButtonPanel, "returningUser");
-
-        titlePanel.add(titleLabel);
 
         mapPanel = new JPanel();
         mapPanel.setBounds(400, 100, 600, 50);
@@ -156,6 +132,7 @@ public class GameUI implements Observer{
             }
         }
         setButtonHelper(new JButton("Villager"), Helper.normalFont, null, peoplePanel, null);
+        System.out.println(game.getJobMap().get(Enum.jobType.Villager).toString());
         setButtonHelper(new JButton(game.getJobMap().get(Enum.jobType.Villager).toString()), Helper.normalFont, null, numberPanel, null);
 
         dailyTaskPanel = new JPanel();
@@ -248,11 +225,34 @@ public class GameUI implements Observer{
         }
     }
     public void login(){
-        savePanel.setVisible(false);
-        mapPanel.setVisible(false);
-        nextDayPanel.setVisible(false);
+
+        startButtonPanel = new JPanel();
+        startButtonPanel.setBounds(400, 300, 300, 300);
+        setPanelHelper(startButtonPanel);
+
+        userName = new JTextField("Username", 10);
+        userName.setBounds(400, 300, 300, 100);
+        userName.setFont(Helper.normalFont);
+        userName.setBackground(Color.black);
+        userName.setForeground(Color.white);
+        startButtonPanel.add(userName);
+
+        setButtonHelper(new JButton("New User"), Helper.normalFont, tsHandler, startButtonPanel, "newUser");
+        setButtonHelper(new JButton("Returning User"), Helper.normalFont, tsHandler, startButtonPanel, "returningUser");
+
+
+        titlePanel = new JPanel();
+        titlePanel.setBounds(350,100,800,150);
+
+        titleLabel = new JLabel("Defend Your Village");
+        setPanelHelper(titlePanel);
+        setLabelHelper(titleLabel, Helper.titleFont);
+        titlePanel.add(titleLabel);
+
         startButtonPanel.setVisible(true);
         titlePanel.setVisible(true);
+
+
     }
     public void setEventAnnouncerPanel(String events){
         eventAnnouncerPanel = new JPanel();
@@ -352,9 +352,7 @@ public class GameUI implements Observer{
     }
 
     public void stopAllButton(){
-        titlePanel.setVisible(false);
         tradeCartInfoPanel.setVisible(false);
-        startButtonPanel.setVisible(false);
         buildingButtonPanel.setVisible(false);
         peoplePanel.setVisible(false);
         numberPanel.setVisible(false);
@@ -408,21 +406,28 @@ public class GameUI implements Observer{
         public void actionPerformed(ActionEvent event){
             String command = event.getActionCommand();
             if(Objects.equals(command, "newUser")){
-                setEventAnnouncerPanel("Welcome to the game");
+                game.createData();
+                createAllChangablePanels();
                 game.saveName(userName.getText());
+                setEventAnnouncerPanel("Welcome to the game");
+                con.remove(titlePanel);
+                con.remove(startButtonPanel);
                 gamePlayScreen();
                 map();
             } else if(Objects.equals(command, "returningUser")){
                 System.out.println("returning user");
                 if(game.checkUserName(userName.getText())){
+                    game.loadData();
+                    createAllChangablePanels();
                     game.saveName(userName.getText());
                     setEventAnnouncerPanel("Welcome to the game");
+                    con.remove(titlePanel);
+                    con.remove(startButtonPanel);
                     gamePlayScreen();
                     map();
                 } else{
                     userName.setText("No file stored");
                 }
-
             }
 
         }
