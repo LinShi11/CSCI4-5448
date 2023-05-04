@@ -1,0 +1,1 @@
+Username,gold:0,fur:0,clothes:0,water:0,wood:0,meat:0,food:0,rock:0,Blacksmith:0,Tradecart:0,Smokehouse:0,Factory:0,Gold_Mine:0,Bucket:0,Hut:0,Mines:0,Trap:0,Gather:0,Hunter:0,Miner:0,Repairer:0,Villager:0,Waterman:0,Weaponsmith:0,Tailor:0,Gold_Miner:0,Trapper:0,Lumberjack:0,Cook:0,defense:100,health:100
