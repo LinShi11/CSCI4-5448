@@ -24,16 +24,7 @@ public class GameUI implements ObserverInterface {
     JLabel titleLabel;
     JTextField userName;
     JTextArea announcer, resources, buildings, health, dailyTaskInfo, tradeCartInfo, alertMessage;
-    ActionListener tsHandler = new TitleScreenHandler();
-    ActionListener choiceHandler;
-    ActionListener userActionHandler = new UserActionHandler();
-    ActionListener mapNavigationHandler = new MapNavigationHandler();
-    ActionListener villagerAssignmentHandler = new VillagerAssignmentHandler();
-    ActionListener deleteAgendaHandler = new DeleteAgendaHandler();
-    ActionListener tradeCartItemHandler = new TradeCartItemHandler();
-    ActionListener nextDayHandler = new NextDayHandler();
-    ActionListener saveGameHandler = new SaveGameHandler();
-    ActionListener continueAlertHandler = new ContinueAlertHandler();
+    ActionListener tsHandler, choiceHandler, userActionHandler, mapNavigationHandler, villagerAssignmentHandler, deleteAgendaHandler, tradeCartItemHandler, nextDayHandler, saveGameHandler, continueAlertHandler;
     Game game;
     Enum.mapLocationType mapLocation;
     ArrayList<JButton> dailyTasksButtons;
@@ -60,6 +51,15 @@ public class GameUI implements ObserverInterface {
         logger = Logger.getInstance();
 
         choiceHandler = new BuildActionHandler(game, this);
+        villagerAssignmentHandler = new VillagerAssignmentHandler(game, this);
+        tradeCartItemHandler = new TradeCartItemHandler(game, this);
+        nextDayHandler = new NextDayHandler(game, this);
+        userActionHandler = new UserActionHandler(game, this);
+        mapNavigationHandler = new MapNavigationHandler(game, this);
+        deleteAgendaHandler = new DeleteAgendaHandler(game, this);
+        continueAlertHandler = new ContinueAlertHandler(game, this);
+        saveGameHandler = new SaveGameHandler(game, this);
+        tsHandler = new TitleScreenHandler(game, this);
 
         // used to track whether UI update is needed for daily action buttons
         dailyTasksButtons = new ArrayList<>();
@@ -508,387 +508,49 @@ public class GameUI implements ObserverInterface {
     }
 
     /**
-     * This class is the action listener for the continue button for alert messages
+     * helper function to interact with the action handler for map navigation
+     * @param type
      */
-    public class ContinueAlertHandler implements ActionListener{
-        /**
-         * this function will reset everything and remove the alert message
-         * @param e the event to be processed
-         */
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            resetAllPanel();
-            dailyRepaint();
-            map();
-        }
+    public void setMapLocation(Enum.mapLocationType type){
+        mapLocation = type;
     }
 
     /**
-     * This class is the action listener for the save game button
+     * helper function to repaint the daily task panel every time
      */
-    public class SaveGameHandler implements ActionListener{
-        /**
-         * this function calls the saveGame option in the actual game play
-         * @param e the event to be processed
-         */
-        @Override
-        public void actionPerformed(ActionEvent e){
-            try {
-                game.saveGame();
-            } catch (FileNotFoundException ex) {
-                throw new RuntimeException(ex);
-            }
-        }
+    public void dailyTaskPanelRepaint(){
+        dailyTaskPanel.repaint();
     }
 
     /**
-     * This class is the action listener for the login page
+     * helper funciton to set the new day variable
+     * @param bool
      */
-    public class TitleScreenHandler implements ActionListener {
-        /**
-         * this class will call the login based on new user button or returning user
-         * @param event the event to be processed
-         */
-        @Override
-        public void actionPerformed(ActionEvent event){
-            String command = event.getActionCommand();
-
-            // the new user
-            if(Objects.equals(command, "newUser")){
-                game.createData();
-                createAllChangablePanels();
-                game.saveName(userName.getText());
-                setEventAnnouncerPanel("Welcome to the game");
-                con.remove(titlePanel);
-                con.remove(startButtonPanel);
-                gamePlayScreen();
-                map();
-            }
-            // the returning user
-            else if(Objects.equals(command, "returningUser")){
-                // if the name exist
-                if(game.checkUserName(userName.getText())){
-                    game.loadData();
-                    createAllChangablePanels();
-                    game.saveName(userName.getText());
-                    setEventAnnouncerPanel("Welcome to the game");
-                    con.remove(titlePanel);
-                    con.remove(startButtonPanel);
-                    gamePlayScreen();
-                    map();
-                }
-                // when the name does not exist, the text field will be updated to "No file stored"
-                else{
-                    userName.setText("No file stored");
-                }
-            }
-
-        }
+    public void setNewDay(boolean bool){
+        newDay = bool;
     }
 
     /**
-     * This class is the next day action listener
+     * helper funtion to get the username
+     * @return
      */
-    public class NextDayHandler implements ActionListener{
-        /**
-         * calls the appropriate functions for a new day
-         * @param e the event to be processed
-         */
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            game.dailyUpdate();
-            dailyRepaint();
-            newDay = true;
-            alert();
-        }
-
+    public JTextField getUserName() {
+        return userName;
     }
 
     /**
-     * This class handles all tradecart item actions
+     * Helper function to set the username
+     * @param name
      */
-    public class TradeCartItemHandler implements ActionListener{
-        /**
-         * tries to deletes the resource if the button is clicked
-         * @param e the event to be processed
-         */
-        @Override
-        public void actionPerformed(ActionEvent e){
-            String choice = e.getActionCommand();
-            switch (choice){
-                case "delete_wood":
-                    game.deleteCartResourceItem(Enum.resourceType.wood);
-                    break;
-                case "delete_food":
-                    game.deleteCartResourceItem(Enum.resourceType.food);
-                    break;
-                case "delete_meat":
-                    game.deleteCartResourceItem(Enum.resourceType.meat);
-                    break;
-                case "delete_fur":
-                    game.deleteCartResourceItem(Enum.resourceType.fur);
-                    break;
-                case "delete_rock":
-                    game.deleteCartResourceItem(Enum.resourceType.rock);
-                    break;
-                case "delete_water":
-                    game.deleteCartResourceItem(Enum.resourceType.water);
-                    break;
-                case "delete_clothes":
-                    game.deleteCartResourceItem(Enum.resourceType.clothes);
-                    break;
-                case "delete_gold":
-                    game.deleteCartResourceItem(Enum.resourceType.gold);
-                    break;
-                case "delete_matches":
-                    game.deleteCartMagicItem(Enum.magicItems.matches);
-                    break;
-                case "delete_axe":
-                    game.deleteCartMagicItem(Enum.magicItems.axe);
-                    break;
-                case "delete_needle":
-                    game.deleteCartMagicItem(Enum.magicItems.needle);
-                    break;
-                case "delete_pickaxe":
-                    game.deleteCartMagicItem(Enum.magicItems.pickaxe);
-                    break;
-                case "delete_bait":
-                    game.deleteCartMagicItem(Enum.magicItems.bait);
-                    break;
-                case "delete_storage":
-                    game.deleteCartMagicItem(Enum.magicItems.storage);
-                    break;
-                case "delete_metal":
-                    game.deleteCartMagicItem(Enum.magicItems.metal);
-                    break;
-                case "delete_bow":
-                    game.deleteCartMagicItem(Enum.magicItems.bow);
-                    break;
-                case "delete_sword":
-                    game.deleteCartMagicItem(Enum.magicItems.sword);
-                    break;
-                case "delete_gunpowder":
-                    game.deleteCartMagicItem(Enum.magicItems.gunpowder);
-                    break;
-                default:
-                    System.out.println(choice);
-            }
-            dailyRepaint();
-            map();
-        }
+    public void setUserName(String name){
+        userName.setText(name);
     }
 
     /**
-     * This class is the used to update the daily tasks and be reflective
+     * Helper function for title screen
      */
-    public class DeleteAgendaHandler implements  ActionListener{
-        /**
-         * delete the task from the list once the button is clicked.
-         * @param e the event to be processed
-         */
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            String choice = e.getActionCommand();
-            switch(choice){
-                case "delete_wood":
-                    game.deleteDailyAgenda(Enum.resourceType.wood);
-                    break;
-                case "delete_food":
-                    game.deleteDailyAgenda(Enum.resourceType.food);
-                    break;
-                case "delete_meat":
-                    game.deleteDailyAgenda(Enum.resourceType.meat);
-                    break;
-                case "delete_rock":
-                    game.deleteDailyAgenda(Enum.resourceType.rock);
-                    break;
-                case "delete_water":
-                    game.deleteDailyAgenda(Enum.resourceType.water);
-                    break;
-                case "delete_clothes":
-                    game.deleteDailyAgenda(Enum.resourceType.clothes);
-                    break;
-                case "delete_fur":
-                    game.deleteDailyAgenda(Enum.resourceType.fur);
-                    break;
-                case "delete_gold":
-                    game.deleteDailyAgenda(Enum.resourceType.gold);
-                    break;
-                default:
-                    System.out.println("I am not sure what you are trying to delete");
-            }
-            removeTaskButtons();
-            dailyTaskPanel.repaint();
-            map();
-        }
+    public void titleScreenHelper(){
+        con.remove(titlePanel);
+        con.remove(startButtonPanel);
     }
-
-    /**
-     * This class is the navigation bar handler
-     */
-    public class MapNavigationHandler implements ActionListener{
-        /**
-         * This class sets the location and calls map
-         * @param event the event to be processed
-         */
-        @Override
-        public void actionPerformed(ActionEvent event) {
-            String choice = event.getActionCommand();
-            switch (choice) {
-                case "village":
-                    mapLocation = Enum.mapLocationType.village;
-                    map();
-                    break;
-                case "action":
-                    mapLocation = Enum.mapLocationType.action;
-                    map();
-                    break;
-                case "tradecart":
-                    if(game.getBuildingMap().get(Enum.buildingType.Tradecart) != 0) {
-                        mapLocation = Enum.mapLocationType.tradecart;
-                        map();
-                    }
-                    // you can only navigate to the tradecart if it has been built
-                    else{
-                        game.notifyObserver("A tradecart must be build before you can use it");
-                    }
-                    break;
-                default:
-                    System.out.println("I am not sure what you created");
-            }
-
-        }
-    }
-
-    /**
-     * This class adds the buttons to the daily tasks
-     */
-    public class UserActionHandler implements ActionListener{
-        /**
-         * tries to add the buttons to the list of daily tasks
-         * @param event the event to be processed
-         */
-        @Override
-        public void actionPerformed(ActionEvent event){
-            String choice = event.getActionCommand();
-            switch (choice){
-                case "gatherWood":
-                    game.setDailyAgenda(Enum.resourceType.wood);
-                    break;
-                case "gatherFood":
-                    game.setDailyAgenda(Enum.resourceType.food);
-                    break;
-                case "gatherMeat":
-                    game.setDailyAgenda(Enum.resourceType.meat);
-                    break;
-                case "gatherRocks":
-                    game.setDailyAgenda(Enum.resourceType.rock);
-                    break;
-                case "gatherWater":
-                    game.setDailyAgenda(Enum.resourceType.water);
-                    break;
-                case "gatherClothes":
-                    game.setDailyAgenda(Enum.resourceType.clothes);
-                    break;
-                case "gatherFur":
-                    game.setDailyAgenda(Enum.resourceType.fur);
-                    break;
-                case "gatherGold":
-                    game.setDailyAgenda(Enum.resourceType.gold);
-                    break;
-                default:
-                    System.out.println("I am not sure what you created");
-            }
-            removeTaskButtons();
-            dailyTaskPanel.repaint();
-            map();
-        }
-    }
-
-    /**
-     * This class assigns and removes villagers from jobs
-     */
-    public class VillagerAssignmentHandler implements ActionListener{
-        /**
-         * This function tries to add/remove villagers from job
-         * @param event the event to be processed
-         */
-        @Override
-        public void actionPerformed(ActionEvent event){
-            String choice = event.getActionCommand();
-            switch(choice){
-                case "Hunter_up":
-                    game.assignJobs(Enum.jobType.Hunter);
-                    break;
-                case "Hunter_down":
-                    game.removeJobs(Enum.jobType.Hunter);
-                    break;
-                case "Miner_up":
-                    game.assignJobs(Enum.jobType.Miner);
-                    break;
-                case "Miner_down":
-                    game.removeJobs(Enum.jobType.Miner);
-                    break;
-                case "Lumberjack_up":
-                    game.assignJobs(Enum.jobType.Lumberjack);
-                    break;
-                case "Lumberjack_down":
-                    game.removeJobs(Enum.jobType.Lumberjack);
-                    break;
-                case "Weaponsmith_up":
-                    game.assignJobs(Enum.jobType.Weaponsmith);
-                    break;
-                case "Weaponsmith_down":
-                    game.removeJobs(Enum.jobType.Weaponsmith);
-                    break;
-                case "Repairer_up":
-                    game.assignJobs(Enum.jobType.Repairer);
-                    break;
-                case "Repairer_down":
-                    game.removeJobs(Enum.jobType.Repairer);
-                    break;
-                case "Cook_up":
-                    game.assignJobs(Enum.jobType.Cook);
-                    break;
-                case "Cook_down":
-                    game.removeJobs(Enum.jobType.Cook);
-                    break;
-                case "Waterman_up":
-                    game.assignJobs(Enum.jobType.Waterman);
-                    break;
-                case "Waterman_down":
-                    game.removeJobs(Enum.jobType.Waterman);
-                    break;
-                case "Tailor_up":
-                    game.assignJobs(Enum.jobType.Tailor);
-                    break;
-                case "Tailor_down":
-                    game.removeJobs(Enum.jobType.Tailor);
-                    break;
-                case "Gather_up":
-                    game.assignJobs(Enum.jobType.Gather);
-                    break;
-                case "Gather_down":
-                    game.removeJobs(Enum.jobType.Gather);
-                    break;
-                case "Trapper_up":
-                    game.assignJobs(Enum.jobType.Trapper);
-                    break;
-                case "Trapper_down":
-                    game.removeJobs(Enum.jobType.Trapper);
-                    break;
-                case "Gold_Miner_up":
-                    game.assignJobs(Enum.jobType.Gold_Miner);
-                    break;
-                case "Gold_Miner_down":
-                    game.removeJobs(Enum.jobType.Gold_Miner);
-                    break;
-                default:
-                    System.out.println("I am not sure what you created");
-            }
-            jobRepaint();
-        }
-    }
-
-
 }
