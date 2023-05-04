@@ -1,7 +1,13 @@
 package GamePlay;
 
+/**
+ * A class of enum that is used throughout the program
+ */
 public class Enum {
 
+    /**
+     * list of possible buildings
+     */
     public enum buildingType{
         Smokehouse,
         Factory,
@@ -13,6 +19,10 @@ public class Enum {
         Gold_Mine,
         Tradecart
     }
+
+    /**
+     * list of possible resources
+     */
     public enum resourceType{
         wood,
         food,
@@ -24,6 +34,9 @@ public class Enum {
         gold
     }
 
+    /**
+     * list of possible jobs
+     */
     public enum jobType{
         Gather,
         Hunter,
@@ -39,6 +52,9 @@ public class Enum {
         Gold_Miner
     }
 
+    /**
+     * list of possible magic items
+     */
     public enum magicItems{
         matches, // get more food
         axe, // get more wood
@@ -52,12 +68,18 @@ public class Enum {
         gunpowder // get more meat/ fur/ defense
     }
 
+    /**
+     * list of possible map location
+     */
     public enum mapLocationType{
         village,
         action,
         tradecart
     }
 
+    /**
+     * list of stats
+     */
     public enum stats{
         health,
         defense
