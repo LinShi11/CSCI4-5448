@@ -8,8 +8,11 @@ This is the repository for CSCI 4/5448 OOAD.
 ### To run the code: 
 make sure the Swing package is added to java. That will run the UI for our game.
 
+### Final Project Report:
+The final Project report can be found in [project7.pdf](Project7.pdf). 
+
 ### Video Presentation:
-The video is included in this [github](FinalSemesterPresentation.mp4) or it could be view [Drive](https://drive.google.com/file/d/1Is0VIkeNODadSaQEwdYiIj0q6NfJicdS/view?usp=sharing). 
+The video is included in this [github](FinalSemesterPresentation.mp4) or it could be view in this [Drive](https://drive.google.com/file/d/1Is0VIkeNODadSaQEwdYiIj0q6NfJicdS/view?usp=sharing). 
 
 ### File Structures: 
 We tried to organize the code a little. Therefore, Factory folder consist of the two factory patterns used. The GamePlay folder consist
