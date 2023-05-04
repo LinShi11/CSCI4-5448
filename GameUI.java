@@ -2,8 +2,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * citation: use https://www.ryisnow.online/2021/04/java-for-beginner-text-adventure-game.html as reference to jFrame start ups
@@ -13,8 +15,9 @@ public class GameUI implements Observer{
     Container con;
 
     JPanel titlePanel, startButtonPanel, eventAnnouncerPanel, buildingButtonPanel, resourcesPanel, buildingPanel, peoplePanel, numberPanel, arrowPanel, healthPanel, mapPanel,
-            userActionPanel, dailyTaskPanel, nextDayPanel, cartItemsPanel, magicItemPanel, tradeCartInfoPanel;
+            userActionPanel, dailyTaskPanel, nextDayPanel, cartItemsPanel, magicItemPanel, tradeCartInfoPanel, savePanel;
     JLabel titleLabel;
+    JTextField userName;
     JButton villageButton, actionButton, tradecartMenu;
     JTextArea announcer, resources, buildings, health, dailyTaskInfo, tradeCartInfo;
     ActionListener tsHandler = new TitleScreenHandler();
@@ -25,6 +28,7 @@ public class GameUI implements Observer{
     ActionListener deleteAgendaHandler = new DeleteAgendaHandler();
     ActionListener tradeCartItemHandler = new TradeCartItemHandler();
     ActionListener nextDayHandler = new NextDayHandler();
+    ActionListener saveGameHandler = new SaveGameHandler();
     Game game;
     Enum.mapLocationType mapLocation;
     ArrayList<JButton> dailyTasksButtons, tradeCartResourceButtons, tradeCartMagicButtons;
@@ -51,7 +55,6 @@ public class GameUI implements Observer{
 
         window.setVisible(true);
         logger = Logger.getInstance();
-
     }
 
     public void createAllChangablePanels(){
@@ -62,11 +65,26 @@ public class GameUI implements Observer{
         setPanelHelper(titlePanel);
         setLabelHelper(titleLabel, Helper.titleFont);
 
+        savePanel = new JPanel();
+        savePanel.setBounds(1300, 500, 200, 100);
+        setPanelHelper(savePanel);
+        setButtonHelper(new JButton("Save"), Helper.normalFont, saveGameHandler, savePanel, null);
+
+
+
         startButtonPanel = new JPanel();
-        startButtonPanel.setBounds(400, 300, 200, 100);
+        startButtonPanel.setBounds(400, 300, 300, 300);
         setPanelHelper(startButtonPanel);
 
-        setButtonHelper(new JButton("New User"), Helper.normalFont, tsHandler, startButtonPanel, null);
+        userName = new JTextField("Username", 10);
+        userName.setBounds(400, 300, 300, 100);
+        userName.setFont(Helper.normalFont);
+        userName.setBackground(Color.black);
+        userName.setForeground(Color.white);
+        startButtonPanel.add(userName);
+
+        setButtonHelper(new JButton("New User"), Helper.normalFont, tsHandler, startButtonPanel, "newUser");
+        setButtonHelper(new JButton("Returning User"), Helper.normalFont, tsHandler, startButtonPanel, "returningUser");
 
         titlePanel.add(titleLabel);
 
@@ -230,12 +248,12 @@ public class GameUI implements Observer{
         }
     }
     public void login(){
+        savePanel.setVisible(false);
         mapPanel.setVisible(false);
         nextDayPanel.setVisible(false);
         startButtonPanel.setVisible(true);
         titlePanel.setVisible(true);
     }
-
     public void setEventAnnouncerPanel(String events){
         eventAnnouncerPanel = new JPanel();
         eventAnnouncerPanel.setBounds(50, 100, 300, 1000);
@@ -347,6 +365,7 @@ public class GameUI implements Observer{
         magicItemPanel.setVisible(false);
         mapPanel.setVisible(true);
         nextDayPanel.setVisible(true);
+        savePanel.setVisible(true);
     }
 
     public void villageButtons(){
@@ -374,12 +393,38 @@ public class GameUI implements Observer{
         con.repaint();
     }
 
+    public class SaveGameHandler implements ActionListener{
+        public void actionPerformed(ActionEvent e){
+            try {
+                game.saveGame();
+            } catch (FileNotFoundException ex) {
+                throw new RuntimeException(ex);
+            }
+        }
+    }
+
     public class TitleScreenHandler implements ActionListener {
 
         public void actionPerformed(ActionEvent event){
-            setEventAnnouncerPanel("Welcome to the game");
-            gamePlayScreen();
-            map();
+            String command = event.getActionCommand();
+            if(Objects.equals(command, "newUser")){
+                setEventAnnouncerPanel("Welcome to the game");
+                game.saveName(userName.getText());
+                gamePlayScreen();
+                map();
+            } else if(Objects.equals(command, "returningUser")){
+                System.out.println("returning user");
+                if(game.checkUserName(userName.getText())){
+                    game.saveName(userName.getText());
+                    setEventAnnouncerPanel("Welcome to the game");
+                    gamePlayScreen();
+                    map();
+                } else{
+                    userName.setText("No file stored");
+                }
+
+            }
+
         }
     }
 

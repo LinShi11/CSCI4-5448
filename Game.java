@@ -1,6 +1,5 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Random;
+import java.io.*;
+import java.util.*;
 
 public class Game implements Subject{
 
@@ -19,6 +18,7 @@ public class Game implements Subject{
     BuildingFactory buildingFactory = new BuildingFactory();
     JobFactory jobFactory = new JobFactory();
     ArrayList<Observer> registered = new ArrayList<>();
+    String userName = "";
 
     public Game(){
         resourceMap = new HashMap<>();
@@ -83,6 +83,72 @@ public class Game implements Subject{
         }
         userActions = new UserActions();
         cartResourceItemList = new ArrayList<>();
+
+    }
+    public void saveName(String name){
+        userName = name;
+    }
+
+    public boolean checkUserName(String username){
+        BufferedReader reader;
+        try{
+            reader = new BufferedReader(new FileReader("gameStats.txt"));
+            String line = reader.readLine();
+
+            while(line != null){
+                System.out.println(line.split(",")[0]);
+                if(Objects.equals(line.split(",")[0], username)){
+                    return true;
+                }
+                line = reader.readLine();
+            }
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public void loadData(String line){
+        // load the data
+    }
+
+    public void saveGame() throws FileNotFoundException {
+        Scanner scanner = new Scanner(new File("gameStats.txt"));
+        StringBuffer buffer = new StringBuffer();
+        while(scanner.hasNext()){
+            String line = scanner.nextLine();
+            if(!Objects.equals(line.split(",")[0], userName)){
+                buffer.append(line + System.lineSeparator());
+            }
+        }
+        String fileContents = buffer.toString();
+        scanner.close();
+        StringBuilder saveStats = new StringBuilder(userName);
+        for(Map.Entry<Enum.resourceType, Integer> elements: resourceMap.entrySet()){
+            saveStats = new StringBuilder(saveStats + "," + elements.getKey().toString() + ":" + elements.getValue().toString());
+        }
+        for(Map.Entry<Enum.buildingType, Integer> elements: buildingMap.entrySet()){
+            saveStats = new StringBuilder(saveStats + "," + elements.getKey().toString() + ":" + elements.getValue().toString());
+        }
+        for(Map.Entry<Enum.jobType, Integer> elements: jobMap.entrySet()){
+            saveStats = new StringBuilder(saveStats + "," + elements.getKey().toString() + ":" + elements.getValue().toString());
+        }
+        for(Map.Entry<Enum.magicItems, Integer> elements: magicItemMap.entrySet()){
+            saveStats = new StringBuilder(saveStats + "," + elements.getKey().toString() + ":" + elements.getValue().toString());
+        }
+        for(Map.Entry<Enum.stats, Integer> elements: statsMap.entrySet()){
+            saveStats = new StringBuilder(saveStats + "," + elements.getKey().toString() + ":" + elements.getValue().toString());
+        }
+        fileContents += saveStats;
+        System.out.println(fileContents);
+        try {
+            FileWriter writer = new FileWriter("gameStats.txt");
+            writer.append(fileContents);
+            writer.flush();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
 
     }
 
