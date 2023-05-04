@@ -2,6 +2,11 @@ package People;
 
 import GamePlay.Enum;
 
+/**
+ * the repairer class implements people class
+ * repairer increase the health of the village
+ * repairer consumes food, wood, and water
+ */
 public class Repairer implements People{
 
     Enum.jobType type;

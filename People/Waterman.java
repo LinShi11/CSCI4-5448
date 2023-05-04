@@ -2,6 +2,11 @@ package People;
 
 import GamePlay.Enum;
 
+/**
+ * Waterman class implements people class
+ * waterman produces water
+ * waterman consumes food and wood
+ */
 public class Waterman implements People{
     Enum.jobType type;
     public Waterman(){

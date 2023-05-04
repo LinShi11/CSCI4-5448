@@ -2,6 +2,11 @@ package People;
 
 import GamePlay.Enum;
 
+/**
+ * The gather class implements the people class
+ * The gather produces food and wood
+ * The gather consumes water
+ */
 public class Gather implements People {
     Enum.jobType type;
     public Gather(){

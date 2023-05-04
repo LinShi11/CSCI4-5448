@@ -859,15 +859,6 @@ public class Game implements Subject {
     }
 
     /**
-     * Observer pattern: unregister the object
-     * @param obj: the object to delete
-     */
-    @Override
-    public void unregister(ObserverInterface obj) {
-        registered.remove(obj);
-    }
-
-    /**
      * Observer pattern: notify all observers
      * @param event: the message to send them
      */

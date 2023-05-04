@@ -2,6 +2,11 @@ package People;
 
 import GamePlay.Enum;
 
+/**
+ * The weaponsmith implements people class
+ * weaponsmith produces defense
+ * weaponsmith consumes food, wood, and water
+ */
 public class Weaponsmith implements People{
     Enum.jobType type;
     public Weaponsmith(){

@@ -2,6 +2,10 @@ package People;
 
 import GamePlay.Enum;
 
+/**
+ * The villager class implements people class
+ * The villager does not have another assignment, so they find their own resources
+ */
 public class Villager implements People{
     Enum.jobType type;
     public Villager(){

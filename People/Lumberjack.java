@@ -2,6 +2,11 @@ package People;
 
 import GamePlay.Enum;
 
+/**
+ * The lumberjack class implements people class
+ * lumberjack produces wood
+ * lumberjack consumes food and water
+ */
 public class Lumberjack implements People {
     Enum.jobType type;
     public Lumberjack(){

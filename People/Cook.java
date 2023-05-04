@@ -2,6 +2,11 @@ package People;
 
 import GamePlay.Enum;
 
+/**
+ * The class cook implements from people class
+ * The cook is using meat, producing food
+ * the cook is consuming water and wood
+ */
 public class Cook implements People {
     Enum.jobType type;
     public Cook(){

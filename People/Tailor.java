@@ -2,6 +2,11 @@ package People;
 
 import GamePlay.Enum;
 
+/**
+ * The Tailor implements people class
+ * tailor produces clothes
+ * tailor consumes food, water, fur, and wood
+ */
 public class Tailor implements People{
     Enum.jobType type;
     public Tailor(){
@@ -24,7 +29,7 @@ public class Tailor implements People{
 
     @Override
     public int getFur() {
-        return 0;
+        return -1;
     }
 
     @Override

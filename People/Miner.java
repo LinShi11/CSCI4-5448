@@ -2,6 +2,11 @@ package People;
 
 import GamePlay.Enum;
 
+/**
+ * The miner class implements people class
+ * the miner produces rock
+ * the miner consumes food, water, and wood
+ */
 public class Miner implements People {
     Enum.jobType type;
     public Miner(){

@@ -2,6 +2,11 @@ package People;
 
 import GamePlay.Enum;
 
+/**
+ * The gold miner class implements people class
+ * The gold miner produces gold
+ * The gold miner consumes food, water, and wood
+ */
 public class Gold_miner implements People {
 
     Enum.jobType type;
@@ -9,7 +14,7 @@ public class Gold_miner implements People {
 
     @Override
     public int getFood() {
-        return 0;
+        return -1;
     }
 
     @Override
@@ -19,7 +24,7 @@ public class Gold_miner implements People {
 
     @Override
     public int getWater() {
-        return 0;
+        return -1;
     }
 
     @Override
@@ -29,7 +34,7 @@ public class Gold_miner implements People {
 
     @Override
     public int getWood() {
-        return 0;
+        return -1;
     }
 
     @Override

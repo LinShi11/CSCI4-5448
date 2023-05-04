@@ -2,6 +2,11 @@ package People;
 
 import GamePlay.Enum;
 
+/**
+ * The hunter class implements people class
+ * The hunter produces meat and fur
+ * The hunter consumes food, water, and wood
+ */
 public class Hunter implements People {
     Enum.jobType type;
     public Hunter(){
