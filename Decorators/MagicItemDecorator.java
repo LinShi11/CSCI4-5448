@@ -3,6 +3,9 @@ package Decorators;
 import GamePlay.Enum;
 import People.People;
 
+/**
+ * Decorator Pattern: The magicItemdecorator implements the people class. There are various different bonuses for the different magic item
+ */
 public class MagicItemDecorator implements People {
 	protected People person;
 	public MagicItemDecorator(People person){

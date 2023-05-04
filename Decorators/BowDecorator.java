@@ -2,6 +2,9 @@ package Decorators;
 
 import People.People;
 
+/**
+ * Decorator pattern: the bow will increasee meat and fur production
+ */
 public class BowDecorator extends MagicItemDecorator {
 
 	public BowDecorator(People person) {

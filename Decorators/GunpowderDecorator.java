@@ -2,6 +2,9 @@ package Decorators;
 
 import People.People;
 
+/**
+ * Decorator Pattern: the gunpowder will increase meat, fur and defense
+ */
 public class GunpowderDecorator extends MagicItemDecorator{
     public GunpowderDecorator(People person) {
         super(person);

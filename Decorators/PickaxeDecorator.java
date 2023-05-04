@@ -2,6 +2,9 @@ package Decorators;
 
 import People.People;
 
+/**
+ * Decorator pattern: the pickaxe will increase rock and gold production
+ */
 public class PickaxeDecorator extends MagicItemDecorator {
 
 	public PickaxeDecorator(People person) {

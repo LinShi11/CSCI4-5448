@@ -2,6 +2,9 @@ package Decorators;
 
 import People.People;
 
+/**
+ * Decorator pattern: the baits will increase meat production
+ */
 public class BaitDecorator extends MagicItemDecorator {
 
 	public BaitDecorator(People person) {
