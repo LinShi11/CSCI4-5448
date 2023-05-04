@@ -2,18 +2,16 @@ package GamePlay;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Map;
-import java.util.Objects;
 import GameUIHelpers.*;
 import ActionListeners.*;
 import GamePlaySupport.*;
 
 /**
- * citation: use https://www.ryisnow.online/2021/04/java-for-beginner-text-adventure-game.html as reference to jFrame start ups
+ * This class is used to display the UI portion for the game. The code was inspired by:
+ * citation: https://www.ryisnow.online/2021/04/java-for-beginner-text-adventure-game.html
  */
 public class GameUI implements ObserverInterface {
     JFrame window;

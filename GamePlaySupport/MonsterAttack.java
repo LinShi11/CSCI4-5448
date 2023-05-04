@@ -12,7 +12,7 @@ public class MonsterAttack implements Command {
     public String execute(Game game) {
         String message = "Oh no. A Monster has attacked over the night. ";
         int resource = random.nextInt(Enum.resourceType.values().length);
-        Enum.resourceType type = game.findItem(resource);
+        Enum.resourceType type = Helper.findItem(resource);
 
         int count = RandomEventHelper.looting(type, game);
         message = message + "You lost " + count + " " + type.toString() + ". ";

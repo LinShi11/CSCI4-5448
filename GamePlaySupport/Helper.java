@@ -33,4 +33,64 @@ public class Helper {
                 return 0;
         }
     }
+
+    /**
+     * helper function that generates resource
+     * @param randomValue: the random value
+     * @return: the corresponding resource
+     */
+    public static Enum.resourceType findItem(int randomValue){
+        switch (randomValue){
+            case 0:
+                return Enum.resourceType.wood;
+            case 1:
+                return Enum.resourceType.food;
+            case 2:
+                return Enum.resourceType.meat;
+            case 3:
+                return Enum.resourceType.fur;
+            case 4:
+                return Enum.resourceType.rock;
+            case 5:
+                return Enum.resourceType.water;
+            case 6:
+                return Enum.resourceType.clothes;
+            case 7:
+                return Enum.resourceType.gold;
+            default:
+                return null;
+        }
+    }
+
+    /**
+     * helper function that generates magic item
+     * @param randomValue: the random value
+     * @return: the corresponding magic item
+     */
+    public static Enum.magicItems findMagicItem(int randomValue){
+        switch (randomValue){
+            case 0:
+                return Enum.magicItems.matches;
+            case 1:
+                return Enum.magicItems.axe;
+            case 2:
+                return Enum.magicItems.needle;
+            case 3:
+                return Enum.magicItems.pickaxe;
+            case 4:
+                return Enum.magicItems.bait;
+            case 5:
+                return Enum.magicItems.storage;
+            case 6:
+                return Enum.magicItems.metal;
+            case 7:
+                return Enum.magicItems.bow;
+            case 8:
+                return Enum.magicItems.sword;
+            case 9:
+                return Enum.magicItems.gunpowder;
+            default:
+                return null;
+        }
+    }
 }

@@ -5,6 +5,9 @@ import GamePlaySupport.*;
 import java.io.*;
 import java.util.*;
 
+/**
+ * This class contains all the logic for the actual game implementation, it contains where all data are stored.
+ */
 public class Game implements Subject {
 
     HashMap<Enum.resourceType, Integer> resourceMap;
@@ -26,31 +29,48 @@ public class Game implements Subject {
     Invoker invoker = new Invoker();
     boolean unhappy;
 
+    /**
+     * Constructor and to initialize the variables
+     */
     public Game(){
+        // map used to store the data
         resourceMap = new HashMap<>();
         buildingMap = new HashMap<>();
         jobMap = new HashMap<>();
         magicItemMap = new HashMap<>();
         statsMap = new HashMap<>();
 
+        // arraylist of data
         dailyAgenda = new ArrayList<>();
         cartResourceItemList = new ArrayList<>();
         magicItemsArrayList = new ArrayList<>();
 
+        // stores all villager and magic item
         peopleArrayList = new ArrayList<>();
         magicItemDecoratorArrayList = new ArrayList<>();
 
         userActions = new UserActions();
         unhappy = false;
     }
+
+    /**
+     * Save the user name
+     * @param name: the useranem to save
+     */
     public void saveName(String name){
         userName = name;
     }
 
+    /**
+     * check if this username exist
+     * @param username: the username to check
+     * @return: true if the username exist; false otherwise
+     */
     public boolean checkUserName(String username){
+        // uses bufferreader to read through the stored game data
         BufferedReader reader;
         try{
-            reader = new BufferedReader(new FileReader("GamePlay/gameStats.txt"));
+            reader = new BufferedReader(new FileReader("gameStats.txt"));
             String line = reader.readLine();
 
             while(line != null){
@@ -67,8 +87,10 @@ public class Game implements Subject {
         return false;
     }
 
+    /**
+     * called when they are a new user, put 0 for everything, 100 for health and defense
+     */
     public void createData(){
-
         for(Enum.resourceType resourceType: Enum.resourceType.values()){
             resourceMap.put(resourceType, 0);
         }
@@ -86,11 +108,15 @@ public class Game implements Subject {
         }
     }
 
+    /**
+     * called when the username exist
+     */
     public void loadData(){
+        // find the line that we are reading
         BufferedReader reader;
         String line = "";
         try{
-            reader = new BufferedReader(new FileReader("GamePlay/gameStats.txt"));
+            reader = new BufferedReader(new FileReader("gameStats.txt"));
             line = reader.readLine();
 
             while(line != null){
@@ -103,34 +129,45 @@ public class Game implements Subject {
         } catch (IOException e){
             e.printStackTrace();
         }
+
+        // split all data into an array
         String[] tempStats = line.split(",");
         int location = 1;
         int count;
+
+        // the first set of data is the stored resource count
         for(int i = location; i < location+ Enum.resourceType.values().length; i++){
             Enum.resourceType resource = Enum.resourceType.valueOf(tempStats[i].split(":")[0]);
             count = Integer.parseInt(tempStats[i].split(":")[1]);
             resourceMap.put(resource, count);
         }
         location += Enum.resourceType.values().length;
+
+        // the next set is the building count
         for(int i = location; i < location + Enum.buildingType.values().length; i++){
             System.out.println(tempStats[i]);
             Enum.buildingType building = Enum.buildingType.valueOf(tempStats[i].split(":")[0]);
             count = Integer.parseInt(tempStats[i].split(":")[1]);
             buildingMap.put(building, count);
         }
-
         location+= Enum.buildingType.values().length;
+
+        // the next set is the job assignments
         for(int i = location; i < location+ Enum.jobType.values().length; i++){
             Enum.jobType job = Enum.jobType.valueOf(tempStats[i].split(":")[0]);
             count = Integer.parseInt(tempStats[i].split(":")[1]);
             jobMap.put(job, count);
         }
         location+= Enum.jobType.values().length;
+
+        // the next set is the stats: defense and health
         for(int i = location; i< location+ Enum.stats.values().length; i++){
             Enum.stats stats = Enum.stats.valueOf(tempStats[i].split(":")[0]);
             count = Integer.parseInt(tempStats[i].split(":")[1]);
             statsMap.put(stats, count);
         }
+
+        // recreate all villager object, will need that for the game
         for(Map.Entry<Enum.jobType, Integer> elements: jobMap.entrySet()){
             for(int i = 0; i < elements.getValue(); i++) {
                 loadPeopleArray(elements.getKey());
@@ -138,10 +175,18 @@ public class Game implements Subject {
         }
     }
 
+    /**
+     * getter for stats hashmap
+     * @return: the stats hashmap
+     */
     public HashMap<Enum.stats, Integer> getStats(){
         return statsMap;
     }
 
+    /**
+     * set the health
+     * @param health: the health to decrease
+     */
     public void setHealth(int health){
         int afterHealth = statsMap.get(Enum.stats.health) - health;
         if(afterHealth <= 0){
@@ -152,6 +197,10 @@ public class Game implements Subject {
         }
     }
 
+    /**
+     * factory for the command pattern
+     * @return: the string based on the command pattern
+     */
     public String randomEvents(){
         Random random = new Random();
         int choice = random.nextInt(4);
@@ -170,16 +219,28 @@ public class Game implements Subject {
         }
     }
 
+    /**
+     * command pattern: robbed, loses food and gold
+     * @return: the message for gameUI
+     */
     public String robbed(){
         invoker.setCommand(new Robbed());
         return invoker.execute(this);
     }
 
+    /**
+     * command pattern: monsters attack, loses resource, villager, and health
+     * @return: the message for gameUI
+     */
     public String monsterAttack(){
         invoker.setCommand(new MonsterAttack());
         return invoker.execute(this);
     }
 
+    /**
+     * command pattern: villagers leaving. Only occurs when the villagers are unhappy
+     * @return: the message for gameUI
+     */
     public String peopleLeaving(){
         if(unhappy) {
             invoker.setCommand(new PeopleLeaving());
@@ -189,19 +250,32 @@ public class Game implements Subject {
         }
     }
 
+    /**
+     * command pattern: small storm. Loses health
+     * @return: the message for gameUI
+     */
     public String smallStorm(){
         invoker.setCommand(new Storm());
         return invoker.execute(this);
     }
 
+    /**
+     * helper function to create the villager object and add it to a list
+     * @param type
+     */
     public void loadPeopleArray(Enum.jobType type){
         People person = jobFactory.assignJob(type);
         peopleArrayList.add(person);
     }
 
-
+    /**
+     * attempts to save the game
+     * @throws FileNotFoundException: if the file is not found
+     */
     public void saveGame() throws FileNotFoundException {
-        Scanner scanner = new Scanner(new File("GamePlay/gameStats.txt"));
+        Scanner scanner = new Scanner(new File("gameStats.txt"));
+
+        // reads the current gamestats.txt and will add the line if the username do not match
         StringBuffer buffer = new StringBuffer();
         while(scanner.hasNext()){
             String line = scanner.nextLine();
@@ -209,8 +283,12 @@ public class Game implements Subject {
                 buffer.append(line + System.lineSeparator());
             }
         }
+
+        // convert the file stats to string
         String fileContents = buffer.toString();
         scanner.close();
+
+        // build our string that we wish to add
         StringBuilder saveStats = new StringBuilder(userName);
         for(Map.Entry<Enum.resourceType, Integer> elements: resourceMap.entrySet()){
             saveStats = new StringBuilder(saveStats + "," + elements.getKey().toString() + ":" + elements.getValue().toString());
@@ -224,10 +302,13 @@ public class Game implements Subject {
         for(Map.Entry<Enum.stats, Integer> elements: statsMap.entrySet()){
             saveStats = new StringBuilder(saveStats + "," + elements.getKey().toString() + ":" + elements.getValue().toString());
         }
+
+        // add the new line
         fileContents += saveStats;
-        System.out.println(fileContents);
+
+        // rewrite all the data back to the file
         try {
-            FileWriter writer = new FileWriter("GamePlay/gameStats.txt");
+            FileWriter writer = new FileWriter("gameStats.txt");
             writer.append(fileContents);
             writer.flush();
         } catch (IOException e) {
@@ -235,6 +316,11 @@ public class Game implements Subject {
         }
     }
 
+    /**
+     * The function deletes the daily tasks from the list
+     * @param type: what task they want to delete
+     * @return: true if success, false otherwise
+     */
     public boolean deleteDailyAgenda(Enum.resourceType type){
         for(int i = 0; i < dailyAgenda.size(); i++){
             if(dailyAgenda.get(i) == type){
@@ -245,12 +331,20 @@ public class Game implements Subject {
         return false;
     }
 
+    /**
+     * add the daily tasks to the list
+     * @param type: the task to add
+     */
     public void setDailyAgenda(Enum.resourceType type) {
         if(dailyAgenda.size() < 3){
             dailyAgenda.add(type);
         }
     }
 
+    /**
+     * delete/"purchase" the resource item from the tradecart
+     * @param type: the one to delete
+     */
     public void deleteCartResourceItem(Enum.resourceType type){
         if(resourceMap.get(Enum.resourceType.gold) >= 5) {
             for (int i = 0; i < cartResourceItemList.size(); i++) {
@@ -265,6 +359,10 @@ public class Game implements Subject {
         }
     }
 
+    /**
+     * delete/"purchase" the magic item from tradecart
+     * @param type: the magic item to buy
+     */
     public void deleteCartMagicItem(Enum.magicItems type){
         if(resourceMap.get(Enum.resourceType.gold) >= 50) {
             for (int i = 0; i < magicItemsArrayList.size(); i++) {
@@ -280,6 +378,10 @@ public class Game implements Subject {
         }
     }
 
+    /**
+     * decorator pattern: adds all decorator to all the villagers, gives them a boost and bonus. Note: the magic item is only usable during the sessin, once you quit, the buff does not stay
+     * @param type: the magic item to add
+     */
     public void setDecorator(Enum.magicItems type){
         switch (type){
             case matches:
@@ -337,92 +439,77 @@ public class Game implements Subject {
         }
     }
 
+    /**
+     * the function resets the tradecart item, calls every new day
+     */
     public void setDailyItems(){
         Random random = new Random();
         cartResourceItemList = new ArrayList<>();
         for(int i = 0; i < 5; i++){
-            cartResourceItemList.add(findItem(random.nextInt(resourceMap.size())));
+            cartResourceItemList.add(Helper.findItem(random.nextInt(resourceMap.size())));
         }
     }
 
-    public Enum.resourceType findItem(int randomValue){
-        switch (randomValue){
-            case 0:
-                return Enum.resourceType.wood;
-            case 1:
-                return Enum.resourceType.food;
-            case 2:
-                return Enum.resourceType.meat;
-            case 3:
-                return Enum.resourceType.fur;
-            case 4:
-                return Enum.resourceType.rock;
-            case 5:
-                return Enum.resourceType.water;
-            case 6:
-                return Enum.resourceType.clothes;
-            case 7:
-                return Enum.resourceType.gold;
-            default:
-                return null;
-        }
-    }
-
+    /**
+     * The function resets tradecart item, calls every new day
+     */
     public void setDailyMagicItems(){
         Random random = new Random();
         magicItemsArrayList = new ArrayList<>();
         for(int i = 0; i < 3; i++){
-            magicItemsArrayList.add(findMagicItem(random.nextInt(magicItemMap.size())));
+            magicItemsArrayList.add(Helper.findMagicItem(random.nextInt(magicItemMap.size())));
         }
     }
 
-    public Enum.magicItems findMagicItem(int randomValue){
-        switch (randomValue){
-            case 0:
-                return Enum.magicItems.matches;
-            case 1:
-                return Enum.magicItems.axe;
-            case 2:
-                return Enum.magicItems.needle;
-            case 3:
-                return Enum.magicItems.pickaxe;
-            case 4:
-                return Enum.magicItems.bait;
-            case 5:
-                return Enum.magicItems.storage;
-            case 6:
-                return Enum.magicItems.metal;
-            case 7:
-                return Enum.magicItems.bow;
-            case 8:
-                return Enum.magicItems.sword;
-            case 9:
-                return Enum.magicItems.gunpowder;
-            default:
-                return null;
-        }
-    }
-
+    /**
+     * getting for daily tasks
+     * @return: arralist of daily task
+     */
     public ArrayList<Enum.resourceType> getDailyAgenda(){
         return dailyAgenda;
     }
+
+    /**
+     * getter for resource tradecart
+     * @return: arraylist of resource offered in tradecart
+     */
     public ArrayList<Enum.resourceType> getCartResourceItemList(){return cartResourceItemList;}
 
+    /**
+     * getter for magic item tradecart
+     * @return: arraylist of magic item offered in tradecart
+     */
     public ArrayList<Enum.magicItems> getMagicItemList(){
         return magicItemsArrayList;
     }
 
+    /**
+     * getter for resource hashmap
+     * @return: the resource hashmap
+     */
     public HashMap<Enum.resourceType, Integer> getResourceMap(){
         return resourceMap;
     }
+
+    /**
+     * the function adds the building
+     * @param type: the type of building to add
+     */
     public void addBuildings(Enum.buildingType type){
+        // check if we have enough resources
         if(possibleBuild(type)) {
+
+            // create the instance using factory
             Building building = buildingFactory.constructBuilding(type);
+
+            // check singleton
             if (building.getType() == Enum.buildingType.Tradecart) {
                 buildingMap.put(Enum.buildingType.Tradecart, 1);
             } else {
                 buildingMap.put(building.getType(), (buildingMap.get(building.getType()) + 1));
             }
+
+            // modify villager count after a hut is constructed
             if(type == Enum.buildingType.Hut){
                 for(int i = 0; i < Helper.getJobLimit(Enum.buildingType.Hut); i++) {
                     assignJobs(Enum.jobType.Villager);
@@ -433,11 +520,21 @@ public class Game implements Subject {
             notifyObserver("Cannot construct a " + type.toString() + ": ");
         }
     }
+
+    /**
+     * the function assigns the villagers
+     * @param type: the type of job to assign
+     */
     public void assignJobs(Enum.jobType type){
+        // check if we can assign the job
         if(possibleJob(type)) {
+
+            // create instance of person
             People person = jobFactory.assignJob(type);
             peopleArrayList.add(person);
             jobMap.put(person.getType(), (jobMap.get(person.getType()) + 1));
+
+            // if it is not villager, that mean we need to remove a villager
             if(type != Enum.jobType.Villager) {
                 for (People p : peopleArrayList) {
                     if (p.getType() == Enum.jobType.Villager) {
@@ -453,7 +550,12 @@ public class Game implements Subject {
         }
     }
 
+    /**
+     * the function removes the villager from the job
+     * @param type: the job to remove
+     */
     public void removeJobs(Enum.jobType type){
+        // make sure it is removable and remove
         if(jobMap.get(type) > 0){
             jobMap.put(type, (jobMap.get(type)-1));
             for(People person: peopleArrayList){
@@ -471,7 +573,9 @@ public class Game implements Subject {
         }
     }
 
-
+    /**
+     * the daily update for resources
+     */
     public void dailyUpdate(){
         // daily resource update for the user actions
         ArrayList<Integer> villagerUpdate = new ArrayList<>();
@@ -479,6 +583,7 @@ public class Game implements Subject {
             villagerUpdate.add(0);
         }
 
+        // add the daily update from daily tasks
         for(Enum.resourceType agenda: dailyAgenda){
 
             switch (agenda){
@@ -554,6 +659,7 @@ public class Game implements Subject {
         statsMap.put(Enum.stats.health, (statsMap.get(Enum.stats.health) + ((villagerUpdate.get(8) < 0) ? 0 : villagerUpdate.get(8))));
         statsMap.put(Enum.stats.defense, (statsMap.get(Enum.stats.defense) + ((villagerUpdate.get(9) < 0) ? 0 : villagerUpdate.get(9))));
 
+        // add it to the event announcer
         notifyObserver("wood: " + villagerUpdate.get(0));
         notifyObserver("food: " + villagerUpdate.get(1));
         notifyObserver("meat: " + villagerUpdate.get(2));
@@ -564,6 +670,8 @@ public class Game implements Subject {
         notifyObserver("gold: " + villagerUpdate.get(7));
         notifyObserver("health: " + villagerUpdate.get(8));
         notifyObserver("defense: " + villagerUpdate.get(9));
+
+        // check if the villagers had to work overtime to get all the resources
         unhappy = false;
         for(int i = 0; i < villagerUpdate.size(); i++){
             if(villagerUpdate.get(i) < 0){
@@ -574,22 +682,42 @@ public class Game implements Subject {
         }
     }
 
+    /**
+     * getter for building hashmap
+     * @return building hashmap
+     */
     public HashMap<Enum.buildingType, Integer> getBuildingMap(){
         return buildingMap;
     }
 
+    /**
+     * getter for job hashmap
+     * @return job hashmap
+     */
     public HashMap<Enum.jobType, Integer> getJobMap(){
         return jobMap;
     }
 
+    /**
+     * getter for stats map
+     * @return stats hashmap
+     */
     public HashMap<Enum.stats, Integer> getStatsMap(){
         return statsMap;
     }
 
+    /**
+     * getter for people arraylist
+     * @return arraylist of all the people
+     */
     public ArrayList<People> getPeopleArrayList(){
         return peopleArrayList;
     }
 
+    /**
+     * part of the random event: when we lose villagers
+     * @param count: the number of villagers to remove
+     */
     public void lostVillager(int count){
         Random random = new Random();
         System.out.println(peopleArrayList.size());
@@ -599,23 +727,22 @@ public class Game implements Subject {
             jobMap.put(villager.getType(), jobMap.get(villager.getType())-1);
             peopleArrayList.remove(villager);
         }
-        System.out.println(peopleArrayList.size());
     }
 
-    public void getVillagerCount(){
-        int villagerCount = buildingMap.get(Enum.buildingType.Hut) * Helper.getJobLimit(Enum.buildingType.Hut);
-        for(Map.Entry<Enum.jobType, Integer> elements: jobMap.entrySet()){
-            if(elements.getKey()!= Enum.jobType.Villager){
-                villagerCount -= elements.getValue();
-            }
-        }
-        jobMap.put(Enum.jobType.Villager, villagerCount);
-    }
-
+    /**
+     * setter for resource update
+     * @param type: the resource type to update
+     * @param usedCount: the count to remove
+     */
     public void setResource(Enum.resourceType type, int usedCount){
         resourceMap.put(type, resourceMap.get(type)-usedCount);
     }
 
+    /**
+     * check for possible build
+     * @param type: the type of building to add
+     * @return: true if possible; false otherwise
+     */
     public boolean possibleBuild(Enum.buildingType type){
         switch (type){
             case Smokehouse:
@@ -687,6 +814,11 @@ public class Game implements Subject {
         }
     }
 
+    /**
+     * helper function to check if the job is possible
+     * @param type: the type of job to add
+     * @return: true if it is possible; false otherwise
+     */
     public boolean possibleJob(Enum.jobType type){
         if(type != Enum.jobType.Villager) {
             if (jobMap.get(Enum.jobType.Villager) <= 0) {
@@ -745,16 +877,28 @@ public class Game implements Subject {
 
     }
 
+    /**
+     * Observer pattern: register the objects
+     * @param obj: the object to  add
+     */
     @Override
     public void register(ObserverInterface obj) {
         registered.add(obj);
     }
 
+    /**
+     * Observer pattern: unregister the object
+     * @param obj: the object to delete
+     */
     @Override
     public void unregister(ObserverInterface obj) {
         registered.remove(obj);
     }
 
+    /**
+     * Observer pattern: notify all observers
+     * @param event: the message to send them
+     */
     @Override
     public void notifyObserver(String event) {
         for(ObserverInterface obs: registered){
