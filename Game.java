@@ -404,40 +404,52 @@ public class Game implements Subject{
 
     public void dailyUpdate(){
         // daily resource update for the user actions
+        ArrayList<Integer> villagerUpdate = new ArrayList<>();
+        for(int i = 0; i < Enum.resourceType.values().length+ Enum.stats.values().length; i++){
+            villagerUpdate.add(0);
+        }
 
         for(Enum.resourceType agenda: dailyAgenda){
 
             switch (agenda){
                 case wood:
                     resourceMap.put(Enum.resourceType.wood, (resourceMap.get(Enum.resourceType.wood) + userActions.getWood()));
+                    villagerUpdate.set(0, villagerUpdate.get(0) + userActions.getWood());
                     notifyObserver("     Collected Wood");
                     break;
                 case food:
                     resourceMap.put(Enum.resourceType.food, (resourceMap.get(Enum.resourceType.food) + userActions.getFood()));
+                    villagerUpdate.set(1, villagerUpdate.get(1) + userActions.getFood());
                     notifyObserver("     Collected Food");
                     break;
                 case meat:
                     resourceMap.put(Enum.resourceType.meat, (resourceMap.get(Enum.resourceType.meat) + userActions.getMeat()));
+                    villagerUpdate.set(2, villagerUpdate.get(2) + userActions.getMeat());
                     notifyObserver("     Collected Meat");
                     break;
                 case rock:
                     resourceMap.put(Enum.resourceType.rock, (resourceMap.get(Enum.resourceType.rock) + userActions.getRock()));
+                    villagerUpdate.set(3, villagerUpdate.get(3) + userActions.getRock());
                     notifyObserver("     Collected Rock");
                     break;
                 case water:
                     resourceMap.put(Enum.resourceType.water, (resourceMap.get(Enum.resourceType.water) + userActions.getWater()));
+                    villagerUpdate.set(4, villagerUpdate.get(4) + userActions.getWater());
                     notifyObserver("     Collected Water");
                     break;
                 case clothes:
                     resourceMap.put(Enum.resourceType.clothes, (resourceMap.get(Enum.resourceType.clothes) + userActions.getClothes()));
+                    villagerUpdate.set(5, villagerUpdate.get(5) + userActions.getClothes());
                     notifyObserver("     Collected Clothes");
                     break;
                 case fur:
                     resourceMap.put(Enum.resourceType.fur, (resourceMap.get(Enum.resourceType.fur) + userActions.getFur()));
+                    villagerUpdate.set(6, villagerUpdate.get(6) + userActions.getFur());
                     notifyObserver("     Collected Fur");
                     break;
                 case gold:
                     resourceMap.put(Enum.resourceType.gold, (resourceMap.get(Enum.resourceType.gold) + userActions.getGold()));
+                    villagerUpdate.set(7, villagerUpdate.get(7) + userActions.getGold());
                     notifyObserver("     Collected Gold");
                     break;
                 default:
@@ -445,53 +457,48 @@ public class Game implements Subject{
             }
         }
         notifyObserver("Tasks completed: ");
-        int woodCheck = 0;
-        int foodCheck = 0;
-        int meatCheck = 0;
-        int rockCheck = 0;
-        int waterCheck = 0;
-        int clothesCheck = 0;
-        int furCheck = 0;
-        int healthCheck = 0;
-        int defenseCheck = 0;
-        int goldCheck = 0;
+
+
         // daily resource update for villager jobs
         for(People person: peopleArrayList){
-            woodCheck += person.getWood();
-            foodCheck += person.getFood();
-            meatCheck += person.getMeat();
-            rockCheck += person.getRock();
-            waterCheck += person.getWater();
-            clothesCheck += person.getClothes();
-            furCheck += person.getFur();
-            healthCheck += person.getHealth();
-            defenseCheck += person.getDefense();
-            goldCheck += person.getGold();
+            villagerUpdate.set(0, villagerUpdate.get(0) + person.getWood());
+            villagerUpdate.set(1, villagerUpdate.get(1) + person.getFood());
+            villagerUpdate.set(2, villagerUpdate.get(2) + person.getMeat());
+            villagerUpdate.set(3, villagerUpdate.get(3) + person.getRock());
+            villagerUpdate.set(4, villagerUpdate.get(4) + person.getWater());
+            villagerUpdate.set(5, villagerUpdate.get(5) + person.getClothes());
+            villagerUpdate.set(6, villagerUpdate.get(6) + person.getFur());
+            villagerUpdate.set(7, villagerUpdate.get(7) + person.getGold());
+            villagerUpdate.set(8, villagerUpdate.get(8) + person.getHealth());
+            villagerUpdate.set(9, villagerUpdate.get(9) + person.getDefense());
         }
-        resourceMap.put(Enum.resourceType.wood, (resourceMap.get(Enum.resourceType.wood) + woodCheck));
-        resourceMap.put(Enum.resourceType.food, (resourceMap.get(Enum.resourceType.food) + foodCheck));
-        resourceMap.put(Enum.resourceType.meat, (resourceMap.get(Enum.resourceType.meat) + meatCheck));
-        resourceMap.put(Enum.resourceType.rock, (resourceMap.get(Enum.resourceType.rock) + rockCheck));
-        resourceMap.put(Enum.resourceType.water, (resourceMap.get(Enum.resourceType.water) + waterCheck));
-        resourceMap.put(Enum.resourceType.clothes, (resourceMap.get(Enum.resourceType.clothes) + clothesCheck));
-        resourceMap.put(Enum.resourceType.fur, (resourceMap.get(Enum.resourceType.fur) + furCheck));
-        resourceMap.put(Enum.resourceType.gold, (resourceMap.get(Enum.resourceType.gold) + goldCheck));
+        resourceMap.put(Enum.resourceType.wood, (resourceMap.get(Enum.resourceType.wood) + ((villagerUpdate.get(0) < 0) ? 0 : villagerUpdate.get(0))));
+        resourceMap.put(Enum.resourceType.food, (resourceMap.get(Enum.resourceType.food) + ((villagerUpdate.get(1) < 0) ? 0 : villagerUpdate.get(1))));
+        resourceMap.put(Enum.resourceType.meat, (resourceMap.get(Enum.resourceType.meat) + ((villagerUpdate.get(2) < 0) ? 0 : villagerUpdate.get(2))));
+        resourceMap.put(Enum.resourceType.rock, (resourceMap.get(Enum.resourceType.rock) + ((villagerUpdate.get(3) < 0) ? 0 : villagerUpdate.get(3))));
+        resourceMap.put(Enum.resourceType.water, (resourceMap.get(Enum.resourceType.water) + ((villagerUpdate.get(4) < 0) ? 0 : villagerUpdate.get(4))));
+        resourceMap.put(Enum.resourceType.clothes, (resourceMap.get(Enum.resourceType.clothes) + ((villagerUpdate.get(5) < 0) ? 0 : villagerUpdate.get(5))));
+        resourceMap.put(Enum.resourceType.fur, (resourceMap.get(Enum.resourceType.fur) + ((villagerUpdate.get(6) < 0) ? 0 : villagerUpdate.get(6))));
+        resourceMap.put(Enum.resourceType.gold, (resourceMap.get(Enum.resourceType.gold) + ((villagerUpdate.get(7) < 0) ? 0 : villagerUpdate.get(7))));
 
-        statsMap.put(Enum.stats.health, (statsMap.get(Enum.stats.health) + healthCheck));
-        statsMap.put(Enum.stats.defense, (statsMap.get(Enum.stats.defense) + defenseCheck));
+        statsMap.put(Enum.stats.health, (statsMap.get(Enum.stats.health) + ((villagerUpdate.get(8) < 0) ? 0 : villagerUpdate.get(8))));
+        statsMap.put(Enum.stats.defense, (statsMap.get(Enum.stats.defense) + ((villagerUpdate.get(9) < 0) ? 0 : villagerUpdate.get(9))));
 
-        notifyObserver("wood: " + woodCheck);
-        notifyObserver("food: " + foodCheck);
-        notifyObserver("meat: " + meatCheck);
-        notifyObserver("rock: " + rockCheck);
-        notifyObserver("water: " + waterCheck);
-        notifyObserver("clothes: "+ clothesCheck);
-        notifyObserver("fur: " + furCheck);
-        notifyObserver("health: " + healthCheck);
-        notifyObserver("defense: " + defenseCheck);
-        notifyObserver("gold: " + goldCheck);
-        if(woodCheck< 0 || foodCheck< 0 || meatCheck < 0||rockCheck< 0||waterCheck< 0||clothesCheck< 0||furCheck< 0||healthCheck< 0||defenseCheck< 0){
-            notifyObserver("The villagers are unhappy, the village is not producing enough resources. If this continues, the villagers will start to leave.\n");
+        notifyObserver("wood: " + villagerUpdate.get(0));
+        notifyObserver("food: " + villagerUpdate.get(1));
+        notifyObserver("meat: " + villagerUpdate.get(2));
+        notifyObserver("rock: " + villagerUpdate.get(3));
+        notifyObserver("water: " + villagerUpdate.get(4));
+        notifyObserver("clothes: "+ villagerUpdate.get(5));
+        notifyObserver("fur: " + villagerUpdate.get(6));
+        notifyObserver("gold: " + villagerUpdate.get(7));
+        notifyObserver("health: " + villagerUpdate.get(8));
+        notifyObserver("defense: " + villagerUpdate.get(9));
+        for(int i = 0; i < villagerUpdate.size(); i++){
+            if(villagerUpdate.get(i) < 0){
+                notifyObserver("The villagers are unhappy, the village is not producing enough resources. If this continues, the villagers will start to leave.\n");
+                break;
+            }
         }
     }
 
@@ -505,10 +512,6 @@ public class Game implements Subject{
 
     public HashMap<Enum.stats, Integer> getStatsMap(){
         return statsMap;
-    }
-
-    public ArrayList<Enum.magicItems> getMagicItemsArrayList(){
-        return magicItemsArrayList;
     }
 
     public void getVillagerCount(){
