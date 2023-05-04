@@ -4,9 +4,15 @@ import GamePlay.Game;
 
 import java.util.Random;
 
+/**
+ * command pattern: people leaving when they are unhappy
+ */
 public class PeopleLeaving implements Command {
-
-    private Random random = new Random();
+    /**
+     * people leaving will happen if the villagers are unhappy
+     * @param game: instance of game so updates could happen
+     * @return: message built from the action
+     */
     @Override
     public String execute(Game game) {
         String message = "A lot of villager have been unhappy lately. ";

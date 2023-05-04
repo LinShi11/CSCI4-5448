@@ -3,8 +3,16 @@ package CommandRandomEvents;
 import GamePlay.Enum;
 import GamePlay.Game;
 
+/**
+ * command pattern: implements from command interface
+ */
 public class Robbed implements Command {
 
+    /**
+     * robbed will lose food and gold
+     * @param game: instance of game so updates could happen
+     * @return the message built from this action
+     */
     @Override
     public String execute(Game game) {
         String message = "You were visited by thieves over night. ";

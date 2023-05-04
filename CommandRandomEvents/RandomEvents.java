@@ -2,6 +2,9 @@ package CommandRandomEvents;
 
 import GamePlay.*;
 
+/**
+ * The random event class contains all the possible random events
+ */
 public class RandomEvents {
     Invoker invoker = new Invoker();
     private Game game;

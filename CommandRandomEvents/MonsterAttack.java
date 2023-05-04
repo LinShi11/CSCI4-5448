@@ -6,9 +6,18 @@ import GamePlaySupport.Helper;
 
 import java.util.Random;
 
+/**
+ * Command pattern: implements the command pattern.
+ * The class simulates a monster attack: might loss resource, people, and health
+ */
 public class MonsterAttack implements Command {
     private Random random = new Random();
 
+    /**
+     * The execute for monster fight
+     * @param game: instance of game so updates could happen
+     * @return: the message built from this action
+     */
     @Override
     public String execute(Game game) {
         String message = "Oh no. A Monster has attacked over the night. ";
