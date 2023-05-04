@@ -19,6 +19,8 @@ public class Game implements Subject{
     JobFactory jobFactory = new JobFactory();
     ArrayList<Observer> registered = new ArrayList<>();
     String userName = "";
+    Invoker invoker = new Invoker();
+    boolean unhappy;
 
     public Game(){
         resourceMap = new HashMap<>();
@@ -35,6 +37,7 @@ public class Game implements Subject{
         magicItemDecoratorArrayList = new ArrayList<>();
 
         userActions = new UserActions();
+        unhappy = false;
     }
     public void saveName(String name){
         userName = name;
@@ -128,6 +131,62 @@ public class Game implements Subject{
                 loadPeopleArray(elements.getKey());
             }
         }
+    }
+
+    public HashMap<Enum.stats, Integer> getStats(){
+        return statsMap;
+    }
+
+    public void setHealth(int health){
+        int afterHealth = statsMap.get(Enum.stats.health) - health;
+        if(afterHealth <= 0){
+            notifyObserver("You have lost the game, the game will be restarted");
+            createData();
+        } else {
+            statsMap.put(Enum.stats.health, afterHealth);
+        }
+    }
+
+    public String randomEvents(){
+        Random random = new Random();
+        int choice = random.nextInt(4);
+        System.out.println(choice);
+        switch (choice){
+            case 0:
+                return monsterAttack();
+            case 1:
+                return peopleLeaving();
+            case 2:
+                return smallStorm();
+            case 3:
+                return robbed();
+            default:
+                return "No event has occurred";
+        }
+    }
+
+    public String robbed(){
+        invoker.setCommand(new Robbed());
+        return invoker.execute(this);
+    }
+
+    public String monsterAttack(){
+        invoker.setCommand(new MonsterAttack());
+        return invoker.execute(this);
+    }
+
+    public String peopleLeaving(){
+        if(unhappy) {
+            invoker.setCommand(new PeopleLeaving());
+            return invoker.execute(this);
+        }else{
+            return "No event has occurred";
+        }
+    }
+
+    public String smallStorm(){
+        invoker.setCommand(new Storm());
+        return invoker.execute(this);
     }
 
     public void loadPeopleArray(Enum.jobType type){
@@ -281,7 +340,7 @@ public class Game implements Subject{
         }
     }
 
-    private Enum.resourceType findItem(int randomValue){
+    public Enum.resourceType findItem(int randomValue){
         switch (randomValue){
             case 0:
                 return Enum.resourceType.wood;
@@ -359,7 +418,11 @@ public class Game implements Subject{
             } else {
                 buildingMap.put(building.getType(), (buildingMap.get(building.getType()) + 1));
             }
-            getVillagerCount();
+            if(type == Enum.buildingType.Hut){
+                for(int i = 0; i < Helper.getJobLimit(Enum.buildingType.Hut); i++) {
+                    assignJobs(Enum.jobType.Villager);
+                }
+            }
             notifyObserver("Constructed a " + type.toString());
         }else {
             notifyObserver("Cannot construct a " + type.toString() + ": ");
@@ -370,13 +433,15 @@ public class Game implements Subject{
             People person = jobFactory.assignJob(type);
             peopleArrayList.add(person);
             jobMap.put(person.getType(), (jobMap.get(person.getType()) + 1));
-            for (People p : peopleArrayList) {
-                if (p.getType() == Enum.jobType.Villager) {
-                    peopleArrayList.remove(p);
-                    break;
+            if(type != Enum.jobType.Villager) {
+                for (People p : peopleArrayList) {
+                    if (p.getType() == Enum.jobType.Villager) {
+                        peopleArrayList.remove(p);
+                        break;
+                    }
                 }
+                jobMap.put(Enum.jobType.Villager, (jobMap.get(Enum.jobType.Villager)) - 1);
             }
-            jobMap.put(Enum.jobType.Villager, (jobMap.get(Enum.jobType.Villager)) - 1);
             notifyObserver("Assigned a new " + type.toString());
         } else{
             notifyObserver("Cannot assign a " + type.toString());
@@ -494,9 +559,11 @@ public class Game implements Subject{
         notifyObserver("gold: " + villagerUpdate.get(7));
         notifyObserver("health: " + villagerUpdate.get(8));
         notifyObserver("defense: " + villagerUpdate.get(9));
+        unhappy = false;
         for(int i = 0; i < villagerUpdate.size(); i++){
             if(villagerUpdate.get(i) < 0){
                 notifyObserver("The villagers are unhappy, the village is not producing enough resources. If this continues, the villagers will start to leave.\n");
+                unhappy = true;
                 break;
             }
         }
@@ -514,8 +581,30 @@ public class Game implements Subject{
         return statsMap;
     }
 
+    public ArrayList<People> getPeopleArrayList(){
+        return peopleArrayList;
+    }
+
+    public void lostVillager(int count){
+        Random random = new Random();
+        System.out.println(peopleArrayList.size());
+        for(int i = 0; i< count; i++){
+            int randomDelete = random.nextInt(peopleArrayList.size());
+            People villager = peopleArrayList.get(randomDelete);
+            jobMap.put(villager.getType(), jobMap.get(villager.getType())-1);
+            peopleArrayList.remove(villager);
+        }
+        System.out.println(peopleArrayList.size());
+    }
+
     public void getVillagerCount(){
-        jobMap.put(Enum.jobType.Villager, buildingMap.get(Enum.buildingType.Hut) * Helper.getJobLimit(Enum.buildingType.Hut));
+        int villagerCount = buildingMap.get(Enum.buildingType.Hut) * Helper.getJobLimit(Enum.buildingType.Hut);
+        for(Map.Entry<Enum.jobType, Integer> elements: jobMap.entrySet()){
+            if(elements.getKey()!= Enum.jobType.Villager){
+                villagerCount -= elements.getValue();
+            }
+        }
+        jobMap.put(Enum.jobType.Villager, villagerCount);
     }
 
     public void setResource(Enum.resourceType type, int usedCount){

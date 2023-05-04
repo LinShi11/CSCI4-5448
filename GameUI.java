@@ -15,11 +15,11 @@ public class GameUI implements Observer{
     Container con;
 
     JPanel titlePanel, startButtonPanel, eventAnnouncerPanel, buildingButtonPanel, resourcesPanel, buildingPanel, peoplePanel, numberPanel, arrowPanel, healthPanel, mapPanel,
-            userActionPanel, dailyTaskPanel, nextDayPanel, cartItemsPanel, magicItemPanel, tradeCartInfoPanel, savePanel;
+            userActionPanel, dailyTaskPanel, nextDayPanel, cartItemsPanel, magicItemPanel, tradeCartInfoPanel, savePanel, alertPanel, alertButtonPanel;
     JLabel titleLabel;
     JTextField userName;
     JButton villageButton, actionButton, tradecartMenu;
-    JTextArea announcer, resources, buildings, health, dailyTaskInfo, tradeCartInfo;
+    JTextArea announcer, resources, buildings, health, dailyTaskInfo, tradeCartInfo, alertMessage;
     ActionListener tsHandler = new TitleScreenHandler();
     ActionListener choiceHandler = new ChoiceHandler();
     ActionListener userActionHandler = new UserActionHandler();
@@ -29,6 +29,7 @@ public class GameUI implements Observer{
     ActionListener tradeCartItemHandler = new TradeCartItemHandler();
     ActionListener nextDayHandler = new NextDayHandler();
     ActionListener saveGameHandler = new SaveGameHandler();
+    ActionListener continueAlertHandler = new ContinueAlertHandler();
     Game game;
     Enum.mapLocationType mapLocation;
     ArrayList<JButton> dailyTasksButtons, tradeCartResourceButtons, tradeCartMagicButtons;
@@ -132,7 +133,6 @@ public class GameUI implements Observer{
             }
         }
         setButtonHelper(new JButton("Villager"), Helper.normalFont, null, peoplePanel, null);
-        System.out.println(game.getJobMap().get(Enum.jobType.Villager).toString());
         setButtonHelper(new JButton(game.getJobMap().get(Enum.jobType.Villager).toString()), Helper.normalFont, null, numberPanel, null);
 
         dailyTaskPanel = new JPanel();
@@ -166,6 +166,17 @@ public class GameUI implements Observer{
         magicItemPanel = new JPanel();
         magicItemPanel.setBounds(300, 300, 200, 500);
         setPanelHelper(magicItemPanel);
+
+        alertPanel = new JPanel();
+        alertPanel.setBounds(200, 200, 600, 600);
+        setPanelHelper(alertPanel);
+        setAlertMessage("PlaceHolder");
+        setPanelHelper(alertPanel);
+
+        alertButtonPanel = new JPanel();
+        alertButtonPanel.setBounds(600, 800, 300, 200);
+        setPanelHelper(alertButtonPanel);
+        setButtonHelper(new JButton("Continue"), Helper.normalFont, continueAlertHandler, alertButtonPanel, null);
 
 
     }
@@ -361,6 +372,8 @@ public class GameUI implements Observer{
         dailyTaskPanel.setVisible(false);
         cartItemsPanel.setVisible(false);
         magicItemPanel.setVisible(false);
+        alertPanel.setVisible(false);
+        alertButtonPanel.setVisible(false);
         mapPanel.setVisible(true);
         nextDayPanel.setVisible(true);
         savePanel.setVisible(true);
@@ -371,6 +384,28 @@ public class GameUI implements Observer{
         peoplePanel.setVisible(true);
         numberPanel.setVisible(true);
         arrowPanel.setVisible(true);
+    }
+
+    public void alert(){
+        String message = game.randomEvents();
+        stopAllButton();
+        setAlertMessage(message);
+        mapPanel.setVisible(false);
+        nextDayPanel.setVisible(false);
+        savePanel.setVisible(false);
+        alertPanel.setVisible(true);
+        alertButtonPanel.setVisible(true);
+    }
+
+    public void setAlertMessage(String message){
+        alertPanel.removeAll();
+        alertMessage = new JTextArea(message);
+        alertMessage.setEditable(false);
+        alertMessage.setLineWrap(true);
+        alertMessage.setWrapStyleWord(true);
+        alertMessage.setBounds(200,200, 600, 600);
+        setTextAreaColor(alertMessage, Helper.normalFont);
+        alertPanel.add(alertMessage);
     }
 
     public void textColorHelper(JTextArea area){
@@ -389,6 +424,15 @@ public class GameUI implements Observer{
         setEventAnnouncerPanel(publishingEvents.toString());
         con.revalidate();
         con.repaint();
+    }
+
+    public class ContinueAlertHandler implements ActionListener{
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            stopAllButton();
+            dailyRepaint();
+            map();
+        }
     }
 
     public class SaveGameHandler implements ActionListener{
@@ -439,6 +483,7 @@ public class GameUI implements Observer{
             game.dailyUpdate();
             dailyRepaint();
             newDay = true;
+            alert();
         }
 
     }
