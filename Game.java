@@ -19,6 +19,7 @@ public class Game implements Subject{
     BuildingFactory buildingFactory = new BuildingFactory();
     JobFactory jobFactory = new JobFactory();
     ArrayList<Observer> registered = new ArrayList<>();
+    Invoker invoker = new Invoker();
 
     public Game(){
         resourceMap = new HashMap<>();
