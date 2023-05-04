@@ -1,6 +1,7 @@
 package GamePlay;
 
 import GamePlaySupport.*;
+import RandomEvents.RandomEvents;
 
 import java.io.*;
 import java.util.*;
@@ -26,8 +27,9 @@ public class Game implements Subject {
     JobFactory jobFactory = new JobFactory();
     ArrayList<ObserverInterface> registered = new ArrayList<>();
     String userName = "";
-    Invoker invoker = new Invoker();
+
     boolean unhappy;
+    RandomEvents randomevents;
 
     /**
      * Constructor and to initialize the variables
@@ -51,6 +53,7 @@ public class Game implements Subject {
 
         userActions = new UserActions();
         unhappy = false;
+        randomevents = new RandomEvents(this);
     }
 
     /**
@@ -197,6 +200,8 @@ public class Game implements Subject {
         }
     }
 
+
+
     /**
      * factory for the command pattern
      * @return: the string based on the command pattern
@@ -207,56 +212,16 @@ public class Game implements Subject {
         System.out.println(choice);
         switch (choice){
             case 0:
-                return monsterAttack();
+                return randomevents.monsterAttack();
             case 1:
-                return peopleLeaving();
+                return randomevents.peopleLeaving(unhappy);
             case 2:
-                return smallStorm();
+                return randomevents.smallStorm();
             case 3:
-                return robbed();
+                return randomevents.robbed();
             default:
                 return "No event has occurred";
         }
-    }
-
-    /**
-     * command pattern: robbed, loses food and gold
-     * @return: the message for gameUI
-     */
-    public String robbed(){
-        invoker.setCommand(new Robbed());
-        return invoker.execute(this);
-    }
-
-    /**
-     * command pattern: monsters attack, loses resource, villager, and health
-     * @return: the message for gameUI
-     */
-    public String monsterAttack(){
-        invoker.setCommand(new MonsterAttack());
-        return invoker.execute(this);
-    }
-
-    /**
-     * command pattern: villagers leaving. Only occurs when the villagers are unhappy
-     * @return: the message for gameUI
-     */
-    public String peopleLeaving(){
-        if(unhappy) {
-            invoker.setCommand(new PeopleLeaving());
-            return invoker.execute(this);
-        }else{
-            return "No event has occurred";
-        }
-    }
-
-    /**
-     * command pattern: small storm. Loses health
-     * @return: the message for gameUI
-     */
-    public String smallStorm(){
-        invoker.setCommand(new Storm());
-        return invoker.execute(this);
     }
 
     /**

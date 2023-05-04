@@ -32,9 +32,13 @@ public class RandomEventHelper {
     }
 
     public static int losingPeople(Game game){
-        int count = random.nextInt((int)(game.getPeopleArrayList().size()/10));
-        game.lostVillager(count);
-        return count;
+        if(game.getPeopleArrayList().size()/10 == 0){
+            return 0;
+        } else {
+            int count = random.nextInt((int) (game.getPeopleArrayList().size() / 10));
+            game.lostVillager(count);
+            return count;
+        }
     }
 
     public static int losingHealth(Game game, int limit){
