@@ -3,7 +3,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -12,24 +11,20 @@ import java.util.Map;
 public class GameUI implements Observer{
     JFrame window;
     Container con;
-    Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
-    Font normalFont = new Font("Times New Roman", Font.PLAIN, 28);
-    Font arrowFont = new Font("Times New Roman", Font.PLAIN, 12);
-    Font annoucerFont = new Font("Times New Roman", Font.PLAIN, 18);
 
     JPanel titlePanel, startButtonPanel, eventAnnouncerPanel, buildingButtonPanel, resourcesPanel, buildingPanel, peoplePanel, numberPanel, arrowPanel, healthPanel, mapPanel,
             userActionPanel, dailyTaskPanel, nextDayPanel, cartItemsPanel, magicItemPanel, tradeCartInfoPanel;
     JLabel titleLabel;
     JButton villageButton, actionButton, tradecartMenu;
     JTextArea announcer, resources, buildings, health, dailyTaskInfo, tradeCartInfo;
-    TitleScreenHandler tsHandler = new TitleScreenHandler();
-    ChoiceHandler choiceHandler = new ChoiceHandler();
-    UserActionHandler userActionHandler = new UserActionHandler();
-    MapNavigationHandler mapNavigationHandler = new MapNavigationHandler();
-    VillagerAssignmentHandler villagerAssignmentHandler = new VillagerAssignmentHandler();
-    DeleteAgendaHandler deleteAgendaHandler = new DeleteAgendaHandler();
-    TradeCartItemHandler tradeCartItemHandler = new TradeCartItemHandler();
-    NextDayHandler nextDayHandler = new NextDayHandler();
+    ActionListener tsHandler = new TitleScreenHandler();
+    ActionListener choiceHandler = new ChoiceHandler();
+    ActionListener userActionHandler = new UserActionHandler();
+    ActionListener mapNavigationHandler = new MapNavigationHandler();
+    ActionListener villagerAssignmentHandler = new VillagerAssignmentHandler();
+    ActionListener deleteAgendaHandler = new DeleteAgendaHandler();
+    ActionListener tradeCartItemHandler = new TradeCartItemHandler();
+    ActionListener nextDayHandler = new NextDayHandler();
     Game game;
     Enum.mapLocationType mapLocation;
     ArrayList<JButton> dailyTasksButtons, tradeCartResourceButtons, tradeCartMagicButtons;
@@ -44,6 +39,8 @@ public class GameUI implements Observer{
         window.setLayout(null);
         con = window.getContentPane();
         mapLocation = Enum.mapLocationType.village;
+        newDay = true;
+
         dailyTasksButtons = new ArrayList<>();
         tradeCartMagicButtons = new ArrayList<>();
         tradeCartResourceButtons = new ArrayList<>();
@@ -51,177 +48,129 @@ public class GameUI implements Observer{
         createAllChangablePanels();
         stopAllButton();
         login();
+
         window.setVisible(true);
         logger = Logger.getInstance();
-        newDay = true;
 
     }
 
     public void createAllChangablePanels(){
         titlePanel = new JPanel();
         titlePanel.setBounds(350,100,800,150);
-        titlePanel.setBackground(Color.black);
 
         titleLabel = new JLabel("Defend Your Village");
-        titleLabel.setForeground(Color.white);
-        titleLabel.setFont(titleFont);
+        setPanelHelper(titlePanel);
+        setLabelHelper(titleLabel, Helper.titleFont);
 
         startButtonPanel = new JPanel();
         startButtonPanel.setBounds(400, 300, 200, 100);
-        startButtonPanel.setBackground(Color.black);
-        JButton temp;
-        temp = new JButton("New User");
-        temp.setBackground(Color.black);
-        temp.setForeground(Color.white);
-        temp.setFont(normalFont);
-        temp.addActionListener(tsHandler);
-        temp.setFocusPainted(false);
+        setPanelHelper(startButtonPanel);
+
+        setButtonHelper(new JButton("New User"), Helper.normalFont, tsHandler, startButtonPanel, null);
 
         titlePanel.add(titleLabel);
-        startButtonPanel.add(temp);
-
-        con.add(titlePanel);
-        con.add(startButtonPanel);
 
         mapPanel = new JPanel();
         mapPanel.setBounds(400, 100, 600, 50);
-        mapPanel.setBackground(Color.black);
+
         mapPanel.setLayout(new GridLayout(1, 3));
 
         villageButton = new JButton("Village");
-        mapButtonAdd(villageButton, "village");
+        setButtonHelper(villageButton, Helper.normalFont, mapNavigationHandler, mapPanel, "village");
         actionButton = new JButton("User Action");
-        mapButtonAdd(actionButton, "action");
+        setButtonHelper(actionButton, Helper.normalFont, mapNavigationHandler, mapPanel, "action");
         tradecartMenu = new JButton("Tradecart");
-        mapButtonAdd(tradecartMenu, "tradecart");
+        setButtonHelper(tradecartMenu, Helper.normalFont, mapNavigationHandler, mapPanel, "tradecart");
+        setPanelHelper(mapPanel);
 
-        con.add(mapPanel);
 
         userActionPanel = new JPanel();
         userActionPanel.setBounds(400, 200, 200,350);
-        userActionPanel.setBackground(Color.black);
+        setPanelHelper(userActionPanel);
         userActionPanel.setLayout(new GridLayout(8, 1));
 
-        temp = new JButton("Wood");
-        userActionButtons(temp, "gatherWood");
-        temp = new JButton("Food");
-        userActionButtons(temp, "gatherFood");
-        temp = new JButton("Meat");
-        userActionButtons(temp, "gatherMeat");
-        temp = new JButton("Rock");
-        userActionButtons(temp, "gatherRocks");
-        temp = new JButton("Water");
-        userActionButtons(temp, "gatherWater");
-        temp = new JButton("Clothes");
-        userActionButtons(temp, "gatherClothes");
-        temp = new JButton("Fur");
-        userActionButtons(temp, "gatherFur");
-        temp = new JButton("Gold");
-        userActionButtons(temp, "gatherGold");
-        con.add(userActionPanel);
+        setButtonHelper(new JButton("Wood"), Helper.normalFont, userActionHandler, userActionPanel, "gatherWood");
+        setButtonHelper(new JButton("Food"), Helper.normalFont, userActionHandler, userActionPanel, "gatherFood");
+        setButtonHelper(new JButton("Meat"), Helper.normalFont, userActionHandler, userActionPanel, "gatherMeat");
+        setButtonHelper(new JButton("Rock"), Helper.normalFont, userActionHandler, userActionPanel, "gatherRocks");
+        setButtonHelper(new JButton("Water"), Helper.normalFont, userActionHandler, userActionPanel, "gatherWater");
+        setButtonHelper(new JButton("Clothes"), Helper.normalFont, userActionHandler, userActionPanel, "gatherClothes");
+        setButtonHelper(new JButton("Fur"), Helper.normalFont, userActionHandler, userActionPanel, "gatherFur");
+        setButtonHelper(new JButton("Gold"), Helper.normalFont, userActionHandler, userActionPanel, "gatherGold");
 
         buildingButtonPanel = new JPanel();
         buildingButtonPanel.setBounds(400, 200, 200, 400);
-        buildingButtonPanel.setBackground(Color.black);
-        buildingButtonPanel.setLayout(new GridLayout(9,1));
-        con.add(buildingButtonPanel);
+        setPanelHelper(buildingButtonPanel);
 
-        temp = new JButton("Hut");
-        buttonHelper(temp, "hut");
-        temp = new JButton("SmokeHouse");
-        buttonHelper(temp, "smokehouse");
-        temp = new JButton("Mines");
-        buttonHelper(temp, "mines");
-        temp = new JButton("Factory");
-        buttonHelper(temp, "factory");
-        temp = new JButton("Blacksmith");
-        buttonHelper(temp, "blacksmith");
-        temp = new JButton("Bucket");
-        buttonHelper(temp, "bucket");
-        temp = new JButton("Trap");
-        buttonHelper(temp, "trap");
-        temp = new JButton("Gold Mine");
-        buttonHelper(temp, "gold mine");
-        temp = new JButton("Tradecart");
-        buttonHelper(temp, "tradecart");
+        buildingButtonPanel.setLayout(new GridLayout(9,1));
+
+        setButtonHelper(new JButton("Hut"), Helper.normalFont, choiceHandler, buildingButtonPanel, "hut");
+        setButtonHelper(new JButton("SmokeHouse"), Helper.normalFont, choiceHandler, buildingButtonPanel, "smokehouse");
+        setButtonHelper(new JButton("Mines"), Helper.normalFont, choiceHandler, buildingButtonPanel, "mines");
+        setButtonHelper(new JButton("Factory"), Helper.normalFont, choiceHandler, buildingButtonPanel, "factory");
+        setButtonHelper(new JButton("Blacksmith"), Helper.normalFont, choiceHandler, buildingButtonPanel, "blacksmith");
+        setButtonHelper(new JButton("Bucket"), Helper.normalFont, choiceHandler, buildingButtonPanel, "bucket");
+        setButtonHelper(new JButton("Trap"), Helper.normalFont, choiceHandler, buildingButtonPanel, "trap");
+        setButtonHelper(new JButton("Gold Mine"), Helper.normalFont, choiceHandler, buildingButtonPanel, "gold mine");
+        setButtonHelper(new JButton("Tradecart"), Helper.normalFont, choiceHandler, buildingButtonPanel, "tradecart");
 
         peoplePanel = new JPanel();
         peoplePanel.setBounds(650, 200, 200, 600);
-        peoplePanel.setBackground(Color.black);
+        setPanelHelper(peoplePanel);
         peoplePanel.setLayout(new GridLayout(game.getJobMap().size(),1));
-        con.add(peoplePanel);
 
         numberPanel = new JPanel();
         numberPanel.setBounds(850, 200, 80, 600);
-        numberPanel.setBackground(Color.black);
         numberPanel.setLayout(new GridLayout(game.getJobMap().size(), 1));
-        con.add(numberPanel);
+        setPanelHelper(numberPanel);
 
         arrowPanel = new JPanel();
         arrowPanel.setBounds(930, 200, 50, 550);
-        arrowPanel.setBackground(Color.black);
         arrowPanel.setLayout(new GridLayout((game.getJobMap().size()-1)*2, 1 ));
-        con.add(arrowPanel);
+        setPanelHelper(arrowPanel);
 
         for(Map.Entry<Enum.jobType, Integer> elements: game.getJobMap().entrySet()){
             if(elements.getKey()!= Enum.jobType.Villager) {
-                temp = new JButton(elements.getKey().toString());
-                noActionButtonAdd(temp, peoplePanel);
-                temp = new JButton(elements.getValue().toString());
-                noActionButtonAdd(temp, numberPanel);
-                temp = new JButton(">");
-                arrowButtonAdd(temp, elements.getKey().toString()+"_up");
-                temp = new JButton("<");
-                arrowButtonAdd(temp, elements.getKey().toString()+"_down");
+                setButtonHelper(new JButton(elements.getKey().toString()), Helper.normalFont, null, peoplePanel, null);
+                setButtonHelper(new JButton(elements.getValue().toString()), Helper.normalFont, null, numberPanel, null);
+                setButtonHelper(new JButton(">"), Helper.arrowFont, villagerAssignmentHandler, arrowPanel, elements.getKey().toString()+"_up");
+                setButtonHelper(new JButton("<"), Helper.arrowFont, villagerAssignmentHandler, arrowPanel, elements.getKey().toString()+"_down");
             }
         }
-        noActionButtonAdd(new JButton("Villager"), peoplePanel);
-        noActionButtonAdd(new JButton(game.getJobMap().get(Enum.jobType.Villager).toString()), numberPanel);
+        setButtonHelper(new JButton("Villager"), Helper.normalFont, null, peoplePanel, null);
+        setButtonHelper(new JButton(game.getJobMap().get(Enum.jobType.Villager).toString()), Helper.normalFont, null, numberPanel, null);
 
         dailyTaskPanel = new JPanel();
-        dailyTaskPanel.setBackground(Color.black);
         dailyTaskPanel.setBounds(700, 200, 200, 500);
         dailyTaskInfo = new JTextArea("Daily TODO's ");
         dailyTaskInfo.setBounds(700, 200, 200, 500);
         textColorHelper(dailyTaskInfo);
 
         dailyTaskPanel.add(dailyTaskInfo);
-        con.add(dailyTaskPanel);
+        setPanelHelper(dailyTaskPanel);
 
         nextDayPanel = new JPanel();
         nextDayPanel.setBounds(600, 900, 200, 100);
-        nextDayPanel.setBackground(Color.black);
 
-        temp = new JButton("Next Day");
-        temp.setBackground(Color.black);
-        temp.setForeground(Color.white);
-        temp.setFont(normalFont);
-        temp.addActionListener(nextDayHandler);
-        temp.setFocusPainted(false);
-        nextDayPanel.add(temp);
-
-        con.add(nextDayPanel);
+        setButtonHelper(new JButton("Next Day"), Helper.normalFont, nextDayHandler, nextDayPanel, null);
+        setPanelHelper(nextDayPanel);
 
         tradeCartInfoPanel = new JPanel();
-        tradeCartInfoPanel.setBackground(Color.black);
         tradeCartInfoPanel.setBounds(300, 200, 700, 100);
         tradeCartInfo = new JTextArea("Want anything? Resource: 5 gold. Magic item: 50 gold");
         tradeCartInfo.setBounds(300, 200, 700,  100);
         textColorHelper(tradeCartInfo);
         tradeCartInfoPanel.add(tradeCartInfo);
-
-        con.add(tradeCartInfoPanel);
+        setPanelHelper(tradeCartInfoPanel);
 
 
         cartItemsPanel = new JPanel();
-        cartItemsPanel.setBackground(Color.black);
         cartItemsPanel.setBounds(700, 300, 200, 500);
-        con.add(cartItemsPanel);
+        setPanelHelper(cartItemsPanel);
 
         magicItemPanel = new JPanel();
-        magicItemPanel.setBackground(Color.black);
         magicItemPanel.setBounds(300, 300, 200, 500);
-        con.add(magicItemPanel);
+        setPanelHelper(magicItemPanel);
 
 
     }
@@ -234,16 +183,13 @@ public class GameUI implements Observer{
         cartItemsPanel.removeAll();
         magicItemPanel.removeAll();
 
-        JButton temp;
         ArrayList<Enum.resourceType> cartResourceItems = game.getCartResourceItemList();
         for(int i = 0; i < cartResourceItems.size(); i++){
-            temp = new JButton(cartResourceItems.get(i).toString());
-            addTradeCartItem(temp, "delete_"+cartResourceItems.get(i).toString(), cartItemsPanel);
+            setButtonHelper(new JButton(cartResourceItems.get(i).toString()), Helper.normalFont, tradeCartItemHandler, cartItemsPanel, "delete_"+cartResourceItems.get(i).toString());
         }
         ArrayList<Enum.magicItems> magicItemsArrayList = game.getMagicItemList();
         for(int i = 0; i < magicItemsArrayList.size(); i++){
-            temp = new JButton(magicItemsArrayList.get(i).toString());
-            addTradeCartItem(temp, "delete_"+magicItemsArrayList.get(i).toString(), magicItemPanel);
+            setButtonHelper(new JButton(magicItemsArrayList.get(i).toString()), Helper.normalFont, tradeCartItemHandler, magicItemPanel, "delete_"+magicItemsArrayList.get(i).toString());
         }
         cartItemsPanel.setVisible(true);
         tradeCartInfoPanel.setVisible(true);
@@ -252,27 +198,15 @@ public class GameUI implements Observer{
 
     }
 
-    public void addTradeCartItem(JButton button, String command, JPanel panel){
-        button.setBackground(Color.black);
-        button.setForeground(Color.white);
-        button.setFont(normalFont);
-        button.setFocusPainted(false);
-        button.addActionListener(tradeCartItemHandler);
-        button.setActionCommand(command);
-        panel.add(button);
-    }
-
     public void jobRepaint(){
         numberPanel.removeAll();
         numberPanel.revalidate();
-        JButton temp;
         for(Map.Entry<Enum.jobType, Integer> elements: game.getJobMap().entrySet()){
             if(elements.getKey()!= Enum.jobType.Villager) {
-                temp = new JButton(elements.getValue().toString());
-                noActionButtonAdd(temp, numberPanel);
+                setButtonHelper(new JButton(elements.getValue().toString()), Helper.normalFont, null, numberPanel, null);
             }
         }
-        noActionButtonAdd(new JButton(game.getJobMap().get(Enum.jobType.Villager).toString()), numberPanel);
+        setButtonHelper(new JButton(game.getJobMap().get(Enum.jobType.Villager).toString()), Helper.normalFont, null, numberPanel, null);
         numberPanel.repaint();
     }
 
@@ -284,7 +218,7 @@ public class GameUI implements Observer{
             for (int i = 0; i < agenda.size(); i++) {
                 temp = new JButton(agenda.get(i).toString());
                 dailyTasksButtons.add(temp);
-                addDailyTasksButton(temp, "delete_" + agenda.get(i).toString());
+                setButtonHelper(temp, Helper.normalFont, deleteAgendaHandler, dailyTaskPanel, "delete_" + agenda.get(i).toString());
             }
         }
     }
@@ -294,16 +228,6 @@ public class GameUI implements Observer{
             dailyTaskPanel.remove(dailyTasksButtons.get(0));
             dailyTasksButtons.remove(0);
         }
-    }
-
-    public void addDailyTasksButton(JButton button, String command){
-        button.setBackground(Color.black);
-        button.setForeground(Color.white);
-        button.setFont(normalFont);
-        button.setFocusPainted(false);
-        button.addActionListener(deleteAgendaHandler);
-        button.setActionCommand(command);
-        dailyTaskPanel.add(button);
     }
     public void login(){
         mapPanel.setVisible(false);
@@ -315,25 +239,21 @@ public class GameUI implements Observer{
     public void setEventAnnouncerPanel(String events){
         eventAnnouncerPanel = new JPanel();
         eventAnnouncerPanel.setBounds(50, 100, 300, 1000);
-        eventAnnouncerPanel.setBackground(Color.black);
         announcer = new JTextArea(events);
         announcer.setBounds(50, 100, 300, 1000);
-        announcer.setForeground(Color.white);
-        announcer.setBackground(Color.black);
-        announcer.setFont(annoucerFont);
+        setTextAreaColor(announcer, Helper.announcerFont);
+        announcer.setFont(Helper.announcerFont);
         announcer.setEditable(false);
         announcer.setLineWrap(true);
         announcer.setWrapStyleWord(true);
         eventAnnouncerPanel.add(announcer);
-        con.add(eventAnnouncerPanel);
+        setPanelHelper(eventAnnouncerPanel);
     }
     public void gamePlayScreen(){
 
         resourcesPanel = new JPanel();
         resourcesPanel.setBounds(1000, 100, 300, 300);
-        resourcesPanel.setBackground(Color.BLACK);
-
-        con.add(resourcesPanel);
+        setPanelHelper(resourcesPanel);
         resources = new JTextArea();
 
         resources.setBounds(1000,100,300,300);
@@ -349,9 +269,7 @@ public class GameUI implements Observer{
 
         buildingPanel = new JPanel();
         buildingPanel.setBounds(1000, 500, 300, 300);
-        buildingPanel.setBackground(Color.black);
-
-        con.add(buildingPanel);
+        setPanelHelper(buildingPanel);
 
         buildings = new JTextArea();
         buildings.setBounds(1000,500,300,300);
@@ -365,9 +283,7 @@ public class GameUI implements Observer{
 
         healthPanel = new JPanel();
         healthPanel.setBounds(1300, 100, 300, 300);
-        healthPanel.setBackground(Color.black);
-
-        con.add(healthPanel);
+        setPanelHelper(healthPanel);
 
         health = new JTextArea();
         health.setBounds(1300,100,300,300);
@@ -440,60 +356,9 @@ public class GameUI implements Observer{
         arrowPanel.setVisible(true);
     }
 
-    public void userActionButtons(JButton button, String command){
-        button.setBackground(Color.black);
-        button.setForeground(Color.white);
-        button.setFont(normalFont);
-        button.setFocusPainted(false);
-        button.addActionListener(userActionHandler);
-        button.setActionCommand(command);
-        userActionPanel.add(button);
-    }
-
-    public void mapButtonAdd(JButton button, String command){
-        button.setBackground(Color.black);
-        button.setForeground(Color.white);
-        button.setFont(normalFont);
-        button.setFocusPainted(false);
-        button.addActionListener(mapNavigationHandler);
-        button.setActionCommand(command);
-        mapPanel.add(button);
-    }
-
-    public void arrowButtonAdd(JButton button, String command){
-        button.setBackground(Color.black);
-        button.setForeground(Color.white);
-        button.setFont(arrowFont);
-        button.setFocusPainted(false);
-        button.addActionListener(villagerAssignmentHandler);
-        button.setActionCommand(command);
-        arrowPanel.add(button);
-    }
-
-    public void noActionButtonAdd(JButton button, JPanel panel){
-        button.setBackground(Color.black);
-        button.setForeground(Color.white);
-        button.setFont(normalFont);
-        button.setFocusPainted(false);
-        panel.add(button);
-    }
-
     public void textColorHelper(JTextArea area){
-        area.setForeground(Color.white);
-        area.setBackground(Color.black);
-        area.setFont(normalFont);
+        setTextAreaColor(area, Helper.normalFont);
         area.setEditable(false);
-
-    }
-
-    public void buttonHelper(JButton button, String command){
-        button.setBackground(Color.black);
-        button.setForeground(Color.white);
-        button.setFont(normalFont);
-        button.setFocusPainted(false);
-        button.addActionListener(choiceHandler);
-        button.setActionCommand(command);
-        buildingButtonPanel.add(button);
     }
 
     @Override
@@ -810,5 +675,37 @@ public class GameUI implements Observer{
             }
             dailyRepaint();
         }
+    }
+
+    public void setPanelHelper(JPanel panel){
+        panel.setBackground(Color.black);
+        panel.setForeground(Color.white);
+        con.add(panel);
+    }
+
+    public void setLabelHelper(JLabel label, Font font){
+        label.setBackground(Color.black);
+        label.setForeground(Color.white);
+        label.setFont(font);
+    }
+
+    public void setButtonHelper(JButton button, Font font, ActionListener actionListener, JPanel panel, String command){
+        button.setBackground(Color.black);
+        button.setForeground(Color.white);
+        button.setFocusPainted(false);
+        button.setFont(font);
+        if(command != null) {
+            button.setActionCommand(command);
+        }
+        if(actionListener != null) {
+            button.addActionListener(actionListener);
+        }
+        panel.add(button);
+    }
+
+    public void setTextAreaColor(JTextArea textArea, Font font){
+        textArea.setBackground(Color.black);
+        textArea.setForeground(Color.white);
+        textArea.setFont(font);
     }
 }
